@@ -7,394 +7,360 @@
 <title>Beauty and Beyond Studio | Med Spa in Prosper, TX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: {
-        head: ['Outfit', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif']
-      },
+      fontFamily: { sans: ['Jost', 'sans-serif'] },
       colors: {
         brand: '#a6603a',
-        brandDark: '#8a4e2d',
-        cream: '#faf5ea',
-        tint: '#f3e9d6',
-        ink: '#1f1a17'
+        brandDark: '#2b1a10',
+        cream: '#faf5ec',
+        sand: '#efe3b8',
+        tint: '#f3ebdd',
+        ink: '#1d1612'
       },
-      borderRadius: { DEFAULT: '4px' }
+      borderRadius: { DEFAULT: '6px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; color: #1f1a17; background: #fff; font-size: 17px; line-height: 1.6; }
-  h1, h2, h3, h4, .font-head { font-family: 'Outfit', sans-serif; letter-spacing: -0.01em; }
-  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  body { font-family: 'Jost', sans-serif; color: #1d1612; background: #faf5ec; line-height: 1.6; font-size: 17px; }
+  h1, h2, h3 { line-height: 1.08; letter-spacing: -0.01em; }
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .field { width: 100%; min-height: 52px; padding: 12px 16px; border: 1px solid #d9cdb8; background: #fff; border-radius: 4px; font-size: 16px; color: #1f1a17; transition: border-color .2s, box-shadow .2s; }
-  .field:focus { outline: none; border-color: #a6603a; box-shadow: 0 0 0 3px rgba(166,96,58,.2); }
-  textarea.field { min-height: 130px; resize: vertical; }
-  .label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; color: #1f1a17; }
   .vlabel { writing-mode: vertical-rl; transform: rotate(180deg); }
-  .hero-shade { background: linear-gradient(90deg, rgba(20,12,8,.78) 0%, rgba(20,12,8,.45) 55%, rgba(20,12,8,.2) 100%); }
-  .vline > * + * { border-left: 1px solid rgba(255,255,255,.14); }
-  @media (max-width: 1023px) { .vline > * + * { border-left: 0; border-top: 1px solid rgba(255,255,255,.14); padding-top: 32px; } }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 </style>
 </head>
-<body class="font-body antialiased">
+<body>
 
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[#eadfca]">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
-    <a href="#top" class="font-head font-600 text-[19px] sm:text-[22px] tracking-wide uppercase text-ink leading-none" style="font-weight:600">
-      Beauty <span class="text-brand">&amp;</span> Beyond <span class="hidden sm:inline">Studio</span>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-brand/15">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="leading-none">
+      <span class="block text-xl lg:text-2xl font-semibold tracking-[0.12em] uppercase text-brand">Beauty &amp; Beyond</span>
+      <span class="block text-[11px] tracking-[0.42em] uppercase text-ink/60 mt-1">Studio</span>
     </a>
     <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
       <a href="#packages" class="hover:text-brand transition">Packages</a>
       <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#about" class="hover:text-brand transition">About</a>
+      <a href="#charlene" class="hover:text-brand transition">Charlene</a>
       <a href="#visit" class="hover:text-brand transition">Visit</a>
       <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+14695343718" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-brandDark text-white px-5 h-11 rounded text-[15px] font-semibold transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <a href="tel:+14695343718" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white px-5 py-2.5 rounded text-[15px] font-medium hover:bg-brandDark transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (469) 534-3718
       </a>
-      <a href="tel:+14695343718" aria-label="Call Beauty and Beyond Studio" class="sm:hidden inline-flex items-center justify-center w-11 h-11 bg-brand text-white rounded">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </a>
-      <button id="menuBtn" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center w-11 h-11 border border-[#d9cdb8] rounded">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileNav" class="hidden lg:hidden border-t border-[#eadfca] bg-white">
-    <div class="px-5 py-4 flex flex-col text-[17px] font-medium">
-      <a href="#packages" class="py-3 border-b border-[#f0e7d6]">Packages</a>
-      <a href="#services" class="py-3 border-b border-[#f0e7d6]">Services</a>
-      <a href="#about" class="py-3 border-b border-[#f0e7d6]">About</a>
-      <a href="#visit" class="py-3 border-b border-[#f0e7d6]">Visit</a>
-      <a href="#contact" class="py-3">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-brand/15 bg-cream">
+    <div class="px-5 py-5 flex flex-col gap-4 text-lg font-medium">
+      <a href="#packages">Packages</a>
+      <a href="#services">Services</a>
+      <a href="#charlene">Charlene</a>
+      <a href="#visit">Visit</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+14695343718" class="inline-flex justify-center bg-brand text-white px-5 py-3 rounded">Call (469) 534-3718</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1. Hero -->
-<section class="relative min-h-[640px] lg:min-h-[760px] flex">
-  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/beauty-and-beyond-studio/21921/photo-5.jpg" alt="Facial treatment at Beauty and Beyond Studio" class="absolute inset-0 w-full h-full object-cover object-right">
-  <div class="absolute inset-0 hero-shade"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 w-full flex flex-col justify-between py-14 lg:py-20">
-    <h1 class="text-white uppercase font-bold leading-[0.98] text-[44px] sm:text-[64px] lg:text-[92px] max-w-3xl" style="font-weight:700">
+<!-- HERO -->
+<section class="relative min-h-[640px] lg:min-h-[760px] flex items-stretch overflow-hidden">
+  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/beauty-and-beyond-studio/21926/photo-5.jpg" alt="Esthetician giving a facial massage" class="absolute inset-0 w-full h-full object-cover object-[70%_center]">
+  <div class="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/70 to-transparent lg:via-cream/40"></div>
+  <div class="relative max-w-7xl mx-auto w-full px-5 lg:px-8 py-16 lg:py-24 flex flex-col justify-between">
+    <h1 class="text-5xl sm:text-6xl lg:text-8xl font-semibold uppercase text-brand max-w-3xl">
       Glowing<br>skin is<br>always<br>in.
     </h1>
     <div class="mt-16 max-w-md">
-      <p class="text-white/90 text-[17px] mb-6">Facials, cryo treatments and injectables from Charlene, an esthetician in Prosper, Texas.</p>
-      <div class="flex flex-wrap gap-3">
-        <a href="#contact" class="inline-flex items-center justify-center bg-brand hover:bg-brandDark text-white h-12 px-6 rounded font-semibold text-[15px] transition">Book a visit</a>
-        <a href="#packages" class="inline-flex items-center justify-center border border-white/70 hover:bg-white hover:text-ink text-white h-12 px-6 rounded font-semibold text-[15px] transition">See packages</a>
+      <p class="text-lg text-ink/85">Facials, microneedling, cryo and injectables at our med spa in Prosper, Texas.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#contact" class="bg-brand text-white px-6 py-3 rounded font-medium hover:bg-brandDark transition">Book a visit</a>
+        <a href="#packages" class="border border-ink/70 px-6 py-3 rounded font-medium hover:bg-ink hover:text-white transition">See packages</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Packages -->
+<!-- PACKAGES -->
 <section id="packages" class="bg-cream py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
     <div class="lg:col-span-5 reveal">
-      <p class="text-[13px] tracking-[0.2em] uppercase text-brand font-semibold mb-4">VIP Med Spa Packages</p>
-      <h2 class="text-brand text-[36px] sm:text-[48px] font-semibold leading-[1.05] mb-5">Pick the package that fits your skin.</h2>
-      <p class="text-[#4d433c] mb-10 max-w-md">Each package includes a facial of your choice, with more advanced options as you move up. Cryo treatments are part of the top tier.</p>
-      <div class="grid grid-cols-2 gap-4">
-        <div class="aspect-[3/4] overflow-hidden rounded">
-          <img src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Client resting during a facial" class="w-full h-full object-cover">
-        </div>
-        <div class="aspect-[3/4] overflow-hidden rounded mt-10">
-          <img src="https://images.unsplash.com/photo-1775642548902-2f60a0aa1405?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sheet mask skincare" class="w-full h-full object-cover">
-        </div>
+      <p class="text-xs tracking-[0.3em] uppercase text-ink/60 mb-4">VIP Med Spa Packages</p>
+      <h2 class="text-4xl lg:text-6xl font-semibold text-brand">Pick the facial level that fits your skin.</h2>
+      <p class="mt-6 text-ink/75 max-w-md">Three packages, each built around the facial of your choice. Start with a single treatment or step up to cryo sculpting.</p>
+      <div class="mt-10 grid grid-cols-2 gap-4">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Facial mask being applied" class="w-full aspect-[4/5] object-cover rounded">
+        <img src="https://images.unsplash.com/photo-1785852790570-0d2858068c70?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Esthetician performing a facial in a treatment room" class="w-full aspect-[4/5] object-cover rounded mt-8">
       </div>
     </div>
-    <div class="lg:col-span-7 flex flex-col gap-5 reveal">
-      <article class="bg-brand text-white rounded p-7 lg:p-9">
+
+    <div class="lg:col-span-7 flex flex-col gap-5">
+      <!-- Card 1 filled -->
+      <article class="reveal bg-brand text-white rounded p-7 lg:p-9">
         <div class="flex items-start justify-between gap-4">
           <div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4"><polyline points="20 6 9 17 4 12"/></svg>
-            <h3 class="text-[26px] font-semibold">VIP Package</h3>
+            <h3 class="text-2xl lg:text-3xl font-semibold">Package One</h3>
+            <p class="text-white/80 mt-1">1 hour</p>
           </div>
-          <p class="font-head text-[28px] font-semibold whitespace-nowrap">$120 <span class="text-[15px] font-normal opacity-80">1 hour</span></p>
+          <p class="text-3xl lg:text-4xl font-semibold">$120</p>
         </div>
-        <p class="mt-4 text-white/90">One facial of your choice: Brightening, Signature (with red light therapy) or Skin Bright Medi Facial. Good for first visits and monthly upkeep.</p>
+        <p class="mt-5 text-white/90">One facial of your choice: Brightening, Signature or Skin Bright Medi Facial.</p>
+        <p class="mt-3 text-sm text-white/75">Good for first-timers, monthly maintenance and glow-up prep.</p>
       </article>
-      <article class="border border-brand/50 rounded p-7 lg:p-9 bg-white/40">
+      <!-- Card 2 -->
+      <article class="reveal border border-brand/40 rounded p-7 lg:p-9">
         <div class="flex items-start justify-between gap-4">
           <div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a6603a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4"><polyline points="20 6 9 17 4 12"/></svg>
-            <h3 class="text-[26px] font-semibold text-ink">Gold Package</h3>
+            <h3 class="text-2xl lg:text-3xl font-semibold text-brand">Gold</h3>
+            <p class="text-ink/60 mt-1">1 hour 30 minutes</p>
           </div>
-          <p class="font-head text-[28px] font-semibold text-brand whitespace-nowrap">$175 <span class="text-[15px] font-normal text-[#6b5d52]">1 hr 30 min</span></p>
+          <p class="text-3xl lg:text-4xl font-semibold text-brand">$175</p>
         </div>
-        <p class="mt-4 text-[#4d433c]">One upgraded facial: Oxygen, Anti-Aging, Brightening, BB Glow, Dermaplaning, Microdermabrasion or Nano Infusion.</p>
+        <p class="mt-5 text-ink/80">One upgraded facial: Oxygen, Anti-Aging, Brightening, BB Glow, Dermaplaning, Microdermabrasion or Nano Infusion.</p>
+        <p class="mt-3 text-sm text-ink/60">Good for anti-aging, smoother skin and a radiant finish.</p>
       </article>
-      <article class="border border-brand/50 rounded p-7 lg:p-9 bg-white/40">
+      <!-- Card 3 -->
+      <article class="reveal border border-brand/40 rounded p-7 lg:p-9">
         <div class="flex items-start justify-between gap-4">
           <div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a6603a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4"><polyline points="20 6 9 17 4 12"/></svg>
-            <h3 class="text-[26px] font-semibold text-ink">Platinum Package</h3>
+            <h3 class="text-2xl lg:text-3xl font-semibold text-brand">Platinum</h3>
+            <p class="text-ink/60 mt-1">2 hours</p>
           </div>
-          <p class="font-head text-[28px] font-semibold text-brand whitespace-nowrap">$300 <span class="text-[15px] font-normal text-[#6b5d52]">2 hours</span></p>
+          <p class="text-3xl lg:text-4xl font-semibold text-brand">$300</p>
         </div>
-        <p class="mt-4 text-[#4d433c]">A Gold or Platinum facial plus a Cryo Face or Body Treatment for contouring, collagen and circulation.</p>
+        <p class="mt-5 text-ink/80">A luxury facial plus a Cryo Face or Body Treatment for fat reduction and skin rejuvenation through cold therapy.</p>
+        <p class="mt-3 text-sm text-ink/60">Good for sculpting, collagen boost and circulation.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 3. Services -->
+<!-- SERVICES LIST -->
 <section id="services" class="bg-tint py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl mb-14 reveal">
-      <p class="text-[13px] tracking-[0.2em] uppercase text-brand font-semibold mb-4">Services</p>
-      <h2 class="text-[36px] sm:text-[48px] font-semibold leading-[1.05]">Facials, cryo and injectables.</h2>
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.3em] uppercase text-ink/60 mb-4">Luxury services</p>
+      <h2 class="text-4xl lg:text-6xl font-semibold text-brand">Facials, cryo and injectables.</h2>
     </div>
-    <div class="grid md:grid-cols-3 gap-6 reveal">
-      <article class="bg-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/beauty-and-beyond-studio/21921/photo-5.jpg" alt="Facial treatment" class="w-full h-full object-cover"></div>
-        <div class="p-7 flex-1">
-          <h3 class="text-[24px] font-semibold mb-4">Facial &amp; skin treatments</h3>
-          <ul class="text-[16px] text-[#4d433c] divide-y divide-[#efe5d2]">
-            <li class="flex justify-between py-2"><span>Teen Facial</span><span class="font-semibold text-ink">$85</span></li>
-            <li class="flex justify-between py-2"><span>Microdermabrasion</span><span class="font-semibold text-ink">$120</span></li>
-            <li class="flex justify-between py-2"><span>Nano Infusion</span><span class="font-semibold text-ink">$150</span></li>
-            <li class="flex justify-between py-2"><span>Chemical Peel</span><span class="font-semibold text-ink">From $150</span></li>
-            <li class="flex justify-between py-2"><span>Microneedling + Signature Facial</span><span class="font-semibold text-ink">$375</span></li>
-            <li class="flex justify-between py-2"><span>Oxygen, Anti-Aging, BB Glow, Dermaplaning</span><span class="font-semibold text-ink whitespace-nowrap">Varies</span></li>
-          </ul>
-        </div>
-      </article>
-      <article class="bg-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1761819921158-c3fa28f39bf0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Light therapy treatment" class="w-full h-full object-cover"></div>
-        <div class="p-7 flex-1">
-          <h3 class="text-[24px] font-semibold mb-4">Cryo face &amp; body</h3>
-          <p class="text-[#4d433c] mb-4">Next-gen fat reduction and skin rejuvenation through cold therapy. It helps contour the face and body, tighten skin, boost circulation and calm inflammation.</p>
-          <p class="text-[16px]"><span class="font-semibold text-ink">Pricing varies</span> <span class="text-[#4d433c]">with your custom treatment plan.</span></p>
-        </div>
-      </article>
-      <article class="bg-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Client relaxing before treatment" class="w-full h-full object-cover"></div>
-        <div class="p-7 flex-1">
-          <h3 class="text-[24px] font-semibold mb-4">Injectables</h3>
-          <ul class="text-[16px] text-[#4d433c] divide-y divide-[#efe5d2]">
-            <li class="flex justify-between py-2"><span>Botox</span><span class="font-semibold text-ink">$9 / unit</span></li>
-            <li class="flex justify-between py-2"><span>Lip Flip</span><span class="font-semibold text-ink">$99</span></li>
-            <li class="flex justify-between py-2"><span>Lip Filler</span><span class="font-semibold text-ink">$500</span></li>
-            <li class="flex justify-between py-2"><span>Full Botox Facelift</span><span class="font-semibold text-ink">$1,000</span></li>
-          </ul>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl mb-12 reveal">
-      <p class="text-[13px] tracking-[0.2em] uppercase text-brand font-semibold mb-4">Inside the studio</p>
-      <h2 class="text-[36px] sm:text-[48px] font-semibold leading-[1.05]">Calm rooms, careful hands.</h2>
-    </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 reveal">
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/beauty-and-beyond-studio/21921/photo-5.jpg" alt="Facial massage" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Client resting on the treatment bed" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1761819921158-c3fa28f39bf0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red light therapy session" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1775642548902-2f60a0aa1405?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sheet mask routine" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/beauty-and-beyond-studio/21921/photo-5.jpg" alt="Hands during a facial" class="w-full h-full object-cover object-left"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Relaxed client" class="w-full h-full object-cover object-top"></div>
-    </div>
-  </div>
-</section>
-
-<!-- 4. About -->
-<section id="about" class="bg-tint py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-6 flex gap-5 reveal">
-      <p class="vlabel hidden sm:block text-[13px] tracking-[0.25em] uppercase text-brand font-semibold self-center">Meet Charlene</p>
-      <div class="aspect-[4/5] flex-1 overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1761819921158-c3fa28f39bf0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Treatment room at Beauty and Beyond Studio" class="w-full h-full object-cover">
+    <div class="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+      <div class="lg:col-span-4 reveal">
+        <h3 class="text-xl font-semibold uppercase tracking-wide border-b border-brand/40 pb-3 mb-5">Facial &amp; skin treatments</h3>
+        <ul class="space-y-3 text-[16px]">
+          <li class="flex justify-between gap-4"><span>Brightening Facial</span><span class="text-ink/60 shrink-0">In Gold</span></li>
+          <li class="flex justify-between gap-4"><span>Skin Bright Medi Facial</span><span class="text-ink/60 shrink-0">In Gold</span></li>
+          <li class="flex justify-between gap-4"><span>Signature Facial</span><span class="text-ink/60 shrink-0">In Gold</span></li>
+          <li class="flex justify-between gap-4"><span>Oxygen Facial</span><span class="text-ink/60 shrink-0">Varies</span></li>
+          <li class="flex justify-between gap-4"><span>Anti-Aging Facial</span><span class="text-ink/60 shrink-0">Varies</span></li>
+          <li class="flex justify-between gap-4"><span>BB Glow Facial</span><span class="text-ink/60 shrink-0">Varies</span></li>
+          <li class="flex justify-between gap-4"><span>Microneedling with Signature Facial</span><span class="font-semibold shrink-0">$375</span></li>
+          <li class="flex justify-between gap-4"><span>Chemical Peel</span><span class="font-semibold shrink-0">From $150</span></li>
+          <li class="flex justify-between gap-4"><span>Teen Facial</span><span class="font-semibold shrink-0">$85</span></li>
+          <li class="flex justify-between gap-4"><span>Dermaplaning</span><span class="text-ink/60 shrink-0">Varies</span></li>
+          <li class="flex justify-between gap-4"><span>Microdermabrasion</span><span class="font-semibold shrink-0">$120</span></li>
+          <li class="flex justify-between gap-4"><span>Nano Infusion</span><span class="font-semibold shrink-0">$150</span></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4 reveal">
+        <h3 class="text-xl font-semibold uppercase tracking-wide border-b border-brand/40 pb-3 mb-5">Cryo face &amp; body</h3>
+        <img src="https://images.unsplash.com/photo-1664549761426-6a1cb1032854?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Hands performing a facial treatment" class="w-full aspect-[4/3] object-cover rounded mb-5">
+        <p class="text-ink/80">Sculpt, tone and refresh. Cryo is a next-generation fat reduction and skin rejuvenation treatment that uses cold therapy to contour the face and body, tighten skin, boost circulation and calm inflammation.</p>
+        <p class="mt-3 text-ink/60 text-sm">Pricing varies with your custom treatment plan.</p>
+      </div>
+      <div class="lg:col-span-4 reveal">
+        <h3 class="text-xl font-semibold uppercase tracking-wide border-b border-brand/40 pb-3 mb-5">Injectables</h3>
+        <ul class="space-y-3 text-[16px]">
+          <li class="flex justify-between gap-4"><span>Botox Injectables</span><span class="font-semibold shrink-0">$9 / unit</span></li>
+          <li class="flex justify-between gap-4"><span>Lip Filler</span><span class="font-semibold shrink-0">$500</span></li>
+          <li class="flex justify-between gap-4"><span>Lip Flip</span><span class="font-semibold shrink-0">$99</span></li>
+          <li class="flex justify-between gap-4"><span>Full Botox Facelift</span><span class="font-semibold shrink-0">$1,000</span></li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1677682692769-e7250eda8a8b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Facial mask treatment at the spa" class="w-full aspect-[4/3] object-cover rounded mt-8">
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MEET CHARLENE -->
+<section id="charlene" class="bg-cream py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 flex gap-5 reveal">
+      <p class="vlabel hidden sm:block text-xs tracking-[0.35em] uppercase text-ink/60 self-center">Your esthetician</p>
+      <img src="https://images.unsplash.com/photo-1785852790570-0d2858068c70?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Esthetician giving a facial in a dark, modern treatment room" class="w-full aspect-[4/5] object-cover rounded">
+    </div>
     <div class="lg:col-span-6 reveal">
-      <p class="sm:hidden text-[13px] tracking-[0.2em] uppercase text-brand font-semibold mb-4">Meet Charlene</p>
-      <h2 class="text-[36px] sm:text-[48px] font-semibold leading-[1.05] mb-6">Skin care that starts with listening.</h2>
-      <p class="text-[#4d433c] mb-5">Charlene is a skilled esthetician with a passion for helping clients achieve radiant, healthy skin. She takes the time to listen to each client's skin concerns and tailors treatments to individual needs.</p>
-      <p class="text-[#4d433c] mb-8">She specializes in facials, microdermabrasion and non-invasive rejuvenation services. The goal is simple: your skin gets the care it deserves, and you leave feeling refreshed and confident.</p>
-      <a href="#contact" class="inline-flex items-center gap-2 bg-brand hover:bg-brandDark text-white h-12 px-6 rounded font-semibold text-[15px] transition">
-        Book with Charlene
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
+      <h2 class="text-4xl lg:text-6xl font-semibold text-brand">Meet Charlene.</h2>
+      <p class="mt-7 text-ink/85">Charlene is a skilled esthetician with a passion for helping clients achieve radiant, healthy skin. She takes the time to listen to each client's unique skin concerns and tailors treatments to individual needs.</p>
+      <p class="mt-5 text-ink/85">Specializing in facials, microdermabrasion and non-invasive rejuvenation services, her personalized approach makes sure your skin gets the care it truly deserves, leaving you feeling refreshed and confident.</p>
+      <a href="#contact" class="inline-block mt-8 bg-brand text-white px-6 py-3 rounded font-medium hover:bg-brandDark transition">Book with Charlene</a>
     </div>
   </div>
 </section>
 
-<!-- 5. Location -->
-<section id="visit" class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 items-start">
-    <div class="lg:col-span-5 reveal">
-      <p class="text-[13px] tracking-[0.2em] uppercase text-brand font-semibold mb-4">Visit</p>
-      <h2 class="text-[36px] sm:text-[48px] font-semibold leading-[1.05]">Find us in Prosper, Texas.</h2>
+<!-- GALLERY -->
+<section class="bg-tint py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <h2 class="text-3xl lg:text-5xl font-semibold text-brand max-w-xl reveal">Inside the treatment room.</h2>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/beauty-and-beyond-studio/21926/photo-5.jpg" alt="Facial massage" class="w-full aspect-square object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Clay mask facial" class="w-full aspect-square object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1677682692769-e7250eda8a8b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Green mask facial" class="w-full aspect-square object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1785852790570-0d2858068c70?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fHNwYSUyMGZhY2lhbCUyMHNraW5jYXJlJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTQyMjI0ODR8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Facial treatment in progress" class="w-full aspect-square object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1664549761426-6a1cb1032854?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Golden facial mask" class="w-full aspect-square object-cover rounded">
+      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/beauty-and-beyond-studio/21926/photo-5.jpg" alt="Relaxing facial care" class="w-full aspect-square object-cover object-left rounded">
     </div>
-    <div class="lg:col-span-7 reveal">
-      <p class="text-[#4d433c] mb-6 max-w-xl">The studio is at 2281 E University Dr in Prosper. Call to ask about a treatment, check pricing on a custom plan, or find a time that works for you.</p>
-      <p class="font-semibold mb-6">2281 E University Dr, Prosper, TX 75078</p>
-      <a href="tel:+14695343718" class="inline-flex items-center gap-2 font-head text-[28px] sm:text-[34px] font-semibold text-brand hover:text-brandDark transition">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="visit" class="bg-cream py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6 reveal">
+      <p class="text-xs tracking-[0.3em] uppercase text-ink/60 mb-4">Visit us</p>
+      <h2 class="text-4xl lg:text-6xl font-semibold text-brand">Your med spa in Prosper.</h2>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <p class="text-ink/85">We're at 2281 E University Dr in Prosper, Texas 75078. Call us to ask about a treatment, choose a package or set up your first visit.</p>
+      <a href="tel:+14695343718" class="inline-flex items-center gap-2 mt-6 text-2xl font-semibold text-brand hover:text-brandDark transition">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (469) 534-3718
       </a>
     </div>
   </div>
 </section>
 
-<!-- 6. Contact / final call -->
-<section id="contact" class="bg-white pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 reveal">
-    <div class="relative min-h-[320px] lg:min-h-full rounded-t lg:rounded-t-none lg:rounded-l overflow-hidden">
-      <img src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Client relaxing during a facial" class="absolute inset-0 w-full h-full object-cover">
+<!-- FINAL CALL -->
+<section class="bg-cream pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 rounded overflow-hidden">
+    <div class="lg:col-span-7">
+      <img src="https://images.unsplash.com/photo-1664549761426-6a1cb1032854?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8c3BhJTIwZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NDIyMjQ4NHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Golden facial treatment" class="w-full h-full min-h-[320px] aspect-[16/10] lg:aspect-auto object-cover">
     </div>
-    <div class="bg-tint p-7 sm:p-10 lg:p-14 rounded-b lg:rounded-b-none lg:rounded-r">
-      <p class="text-[13px] tracking-[0.2em] uppercase text-brand font-semibold mb-4">Contact</p>
-      <h2 class="text-[36px] sm:text-[46px] font-semibold leading-[1.05] mb-4">Ready to glow?</h2>
-      <p class="text-[#4d433c] mb-8">Tell us what you're interested in and we'll get back to you.</p>
-
-      <form id="contactForm" class="space-y-5">
-        <div class="grid sm:grid-cols-2 gap-5">
-          <div>
-            <label class="label" for="name">Name</label>
-            <input class="field" id="name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div>
-            <label class="label" for="phone">Phone</label>
-            <input class="field" id="phone" name="phone" type="tel" autocomplete="tel" required>
-          </div>
-        </div>
-        <div>
-          <label class="label" for="email">Email</label>
-          <input class="field" id="email" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div>
-          <label class="label" for="service">Service you need</label>
-          <select class="field" id="service" name="service" required>
-            <option value="">Choose a service</option>
-            <option>VIP Package ($120)</option>
-            <option>Gold Package ($175)</option>
-            <option>Platinum Package ($300)</option>
-            <option>Brightening Facial</option>
-            <option>Signature Facial</option>
-            <option>Skin Bright Medi Facial</option>
-            <option>Oxygen Facial</option>
-            <option>Anti-Aging Facial</option>
-            <option>BB Glow Facial</option>
-            <option>Dermaplaning</option>
-            <option>Microdermabrasion</option>
-            <option>Nano Infusion</option>
-            <option>Microneedling with Signature Facial</option>
-            <option>Chemical Peel</option>
-            <option>Teen Facial</option>
-            <option>Cryo Face or Body Treatment</option>
-            <option>Botox Injectables</option>
-            <option>Lip Filler</option>
-            <option>Lip Flip</option>
-            <option>Full Botox Facelift</option>
-          </select>
-        </div>
-        <div>
-          <label class="label" for="message">Message</label>
-          <textarea class="field" id="message" name="message"></textarea>
-        </div>
-        <button type="submit" class="w-full sm:w-auto bg-brand hover:bg-brandDark text-white h-[52px] px-9 rounded font-semibold text-[16px] transition">Send message</button>
-      </form>
-      <div id="thanks" class="hidden py-10">
-        <h3 class="text-[28px] font-semibold mb-2">Thanks, we'll be in touch soon.</h3>
-        <p class="text-[#4d433c]">You can also call us at <a href="tel:+14695343718" class="text-brand font-semibold">(469) 534-3718</a>.</p>
-      </div>
-
-      <div class="mt-10 pt-8 border-t border-[#dccfb6] grid sm:grid-cols-3 gap-6 text-[15px]">
-        <div>
-          <p class="font-semibold mb-1">Phone</p>
-          <a href="tel:+14695343718" class="text-[#4d433c] hover:text-brand">(469) 534-3718</a>
-        </div>
-        <div class="min-w-0">
-          <p class="font-semibold mb-1">Email</p>
-          <a href="mailto:beautyandbeyondstudio67@gmail.com" class="text-[#4d433c] hover:text-brand break-all">beautyandbeyondstudio67@gmail.com</a>
-        </div>
-        <div>
-          <p class="font-semibold mb-1">Location</p>
-          <p class="text-[#4d433c]">2281 E University Dr, Prosper, TX 75078</p>
-        </div>
-      </div>
+    <div class="lg:col-span-5 bg-sand p-9 lg:p-14 flex flex-col justify-center">
+      <h2 class="text-4xl lg:text-5xl font-semibold text-brand">Ready to glow?</h2>
+      <p class="mt-5 text-ink/85">Tell us about your skin and we'll help you pick the right package.</p>
+      <a href="#contact" class="self-start mt-7 bg-brand text-white px-6 py-3 rounded font-medium hover:bg-brandDark transition">Book your visit</a>
     </div>
   </div>
 </section>
 
+<!-- CONTACT PLACEHOLDER -->
+<section id="contact" class="lp-contact" style="background:#271a13;padding:clamp(80px,10vw,128px) 0">
+  <style>
+    .lp-contact{position:relative}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(166,96,58,0.10);color:#a6603a}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#d7b7a6}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#a6603a;box-shadow:0 0 0 4px rgba(166,96,58,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#a6603a;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
+    @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
+  <div class="lp-in"><div class="lp-grid">
+    <div style="color:#fff"><p class="lp-kick" style="color:#d7b7a6">Contact</p><h2 class="lp-h" style="color:#fff">Book your visit</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us what you're interested in and we'll get back to you about your appointment.</p><ul class="lp-info">
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Call</span><a href="tel:+14695343718" class="lp-v lp-v-d">(469) 534-3718</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k lp-k-d">Email</span><a href="mailto:beautyandbeyondstudio67@gmail.com" class="lp-v lp-v-d">beautyandbeyondstudio67@gmail.com</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Service area</span><span class="lp-v lp-v-d">Prosper, TX</span></span></li>
+        </ul></div>
+    <div class="lp-card">
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>VIP Med Spa Package</option><option>Gold Package</option><option>Platinum Package</option><option>Signature Facial</option><option>Brightening Facial</option><option>Oxygen Facial</option><option>Anti-Aging Facial</option><option>BB Glow Facial</option><option>Microneedling</option><option>Chemical Peel</option><option>Dermaplaning</option><option>Microdermabrasion</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
+          </form>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div>
+  </div></div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
+</section>
+
 </main>
 
-<!-- 7. Footer -->
-<footer class="bg-ink text-white/80">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
-    <div class="vline grid lg:grid-cols-3 gap-10 lg:gap-0">
-      <div class="lg:pr-10">
-        <p class="font-head uppercase text-white text-[22px] tracking-wide font-semibold mb-4">Beauty <span class="text-[#d9a37e]">&amp;</span> Beyond Studio</p>
-        <p class="text-[15px] max-w-xs">Med spa facials, cryo treatments and injectables in Prosper, Texas.</p>
-      </div>
-      <div class="lg:px-10">
-        <p class="text-white font-semibold mb-4 text-[15px] tracking-wide uppercase">Explore</p>
-        <ul class="space-y-2 text-[15px]">
-          <li><a href="#packages" class="hover:text-white">Packages</a></li>
-          <li><a href="#services" class="hover:text-white">Services</a></li>
-          <li><a href="#about" class="hover:text-white">Meet Charlene</a></li>
-          <li><a href="#contact" class="hover:text-white">Contact</a></li>
-        </ul>
-      </div>
-      <div class="lg:pl-10">
-        <p class="text-white font-semibold mb-4 text-[15px] tracking-wide uppercase">Contact</p>
-        <ul class="space-y-2 text-[15px]">
-          <li><a href="tel:+14695343718" class="hover:text-white">(469) 534-3718</a></li>
-          <li><a href="mailto:beautyandbeyondstudio67@gmail.com" class="hover:text-white break-all">beautyandbeyondstudio67@gmail.com</a></li>
-          <li>2281 E University Dr, Prosper, TX 75078</li>
-        </ul>
-      </div>
+<!-- FOOTER -->
+<footer class="bg-brandDark text-white/85">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-3">
+    <div class="md:pr-10 pb-10 md:pb-0">
+      <p class="text-xl font-semibold tracking-[0.12em] uppercase text-sand">Beauty &amp; Beyond</p>
+      <p class="text-[11px] tracking-[0.42em] uppercase text-white/60 mt-1">Studio</p>
+      <p class="mt-5 text-white/70 max-w-xs">Med spa facials, cryo treatments and injectables in Prosper, Texas.</p>
     </div>
-    <div class="mt-14 pt-6 border-t border-white/10 text-[13px] text-white/55 space-y-1">
+    <div class="md:px-10 py-10 md:py-0 border-t md:border-t-0 md:border-l border-white/15">
+      <h3 class="text-sm uppercase tracking-[0.25em] text-sand mb-5">Contact</h3>
+      <ul class="space-y-3">
+        <li><a href="tel:+14695343718" class="hover:text-white">(469) 534-3718</a></li>
+        <li><a href="mailto:beautyandbeyondstudio67@gmail.com" class="hover:text-white break-words text-[15px]">beautyandbeyondstudio67@gmail.com</a></li>
+        <li class="text-white/70">2281 E University Dr<br>Prosper, TX 75078</li>
+      </ul>
+    </div>
+    <div class="md:pl-10 pt-10 md:pt-0 border-t md:border-t-0 md:border-l border-white/15">
+      <h3 class="text-sm uppercase tracking-[0.25em] text-sand mb-5">Explore</h3>
+      <ul class="space-y-3">
+        <li><a href="#packages" class="hover:text-white">Packages</a></li>
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#charlene" class="hover:text-white">Meet Charlene</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/15">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/55 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Beauty and Beyond Studio website.</p>
-      <p>Some photos by Christian Agbede, Patient Perfect and Masum Rahimi on Unsplash.</p>
+      <p>Some photos by Rosa Rafael, Iwaria Inc., Sum Sum and Anuruddha Lokuhapuarachchi on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  var btn = document.getElementById('menuBtn');
-  var nav = document.getElementById('mobileNav');
-  btn.addEventListener('click', function(){ nav.classList.toggle('hidden'); });
-  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.add('hidden'); }); });
-
-  var els = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach(function(el){ io.observe(el); });
-  } else { els.forEach(function(el){ el.classList.add('in'); }); }
-
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    this.classList.add('hidden');
-    document.getElementById('thanks').classList.remove('hidden');
-  });
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
