@@ -1,0 +1,83 @@
+[
+  {
+    "id": "manifest",
+    "style": "Manifest Construction style",
+    "file": "templates/manifest.html",
+    "good_for": "remodeling, kitchens, bathrooms, custom homes, premium contractors",
+    "made_for": {
+      "name": "Design Difference",
+      "phone": "(830) 387-4253",
+      "email": "rjimenez@kitchentuneup.com",
+      "words_to_replace": [
+        "Kitchen Tune-Up",
+        "Design Difference",
+        "Rudy",
+        "Debra",
+        "Jimenez",
+        "New Braunfels"
+      ]
+    }
+  },
+  {
+    "id": "br-homes",
+    "style": "BR Homes style",
+    "file": "templates/br-homes.html",
+    "good_for": "handyman, general contractor, roofing, plumbing, bold trades",
+    "made_for": {
+      "name": "AR Handyman Services",
+      "phone": "(702) 408-7520",
+      "email": "arhandyman12@yahoo.com",
+      "words_to_replace": [
+        "AR Handyman",
+        "Las Vegas"
+      ]
+    }
+  },
+  {
+    "id": "zen",
+    "style": "Zen Barber Lounge style",
+    "file": "templates/zen.html",
+    "good_for": "med spa, salon, barber, beauty, wellness, lifestyle services",
+    "made_for": {
+      "name": "Beauty and Beyond Studio",
+      "phone": "(469) 534-3718",
+      "email": "beautyandbeyondstudio67@gmail.com",
+      "words_to_replace": [
+        "Beauty and Beyond",
+        "Beauty & Beyond",
+        "Charlene",
+        "Prosper"
+      ]
+    }
+  },
+  {
+    "id": "1330",
+    "style": "13Thirty Roofing style",
+    "file": "templates/1330.html",
+    "good_for": "roofing, exteriors, renovation, landscaping, local trades",
+    "made_for": {
+      "name": "Exact Renovations",
+      "phone": "(210) 383-7906",
+      "email": "roofersean1@gmail.com",
+      "words_to_replace": [
+        "Exact Renovations",
+        "San Antonio"
+      ]
+    }
+  },
+  {
+    "id": "elite",
+    "style": "Elite Concept Homes style",
+    "file": "templates/elite.html",
+    "good_for": "general contractor, home services, real estate, cleaning, clean modern brands",
+    "made_for": {
+      "name": "JYRA Home Solutions",
+      "phone": "(210) 419-8185",
+      "email": "seth@jyrahomesolutions.com",
+      "words_to_replace": [
+        "JYRA",
+        "Schertz"
+      ]
+    }
+  }
+]

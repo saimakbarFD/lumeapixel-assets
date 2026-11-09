@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>JYRA Home Solutions | General Contractor in Schertz, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+      colors: {
+        brand: '#1f3765',
+        ink: '#10151f',
+        paper: '#f6f5f2',
+        mist: '#eceef1'
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px; line-height: 1.6; color: #10151f; background: #fff; }
+  h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; font-weight: 600; }
+  .r { border-radius: 20px; }
+  .ph { position: relative; overflow: hidden; border-radius: 20px; background: #dfe2e6; }
+  .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .label { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: #1f3765; }
+  .sec { padding-top: 72px; padding-bottom: 72px; }
+  @media (min-width: 1024px) { .sec { padding-top: 112px; padding-bottom: 112px; } }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px; padding: 14px 24px; font-weight: 600; font-size: 15px; transition: background .2s, color .2s; white-space: nowrap; }
+  .btn-brand { background: #1f3765; color: #fff; }
+  .btn-brand:hover { background: #162849; }
+  .btn-light { background: #fff; color: #1f3765; border: 1px solid #1f3765; }
+  .btn-light:hover { background: #1f3765; color: #fff; }
+
+  /* collage */
+  .collage { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; gap: 14px; }
+  .collage .c-center { grid-column: span 2; grid-row: span 2; }
+  .collage .c-wide { grid-column: span 2; }
+  @media (min-width: 1024px) {
+    .collage { grid-template-columns: repeat(6, 1fr); grid-template-rows: 250px 250px; grid-auto-rows: auto; gap: 16px; }
+    .collage .c-center { grid-column: 3 / 5; grid-row: 1 / 3; }
+    .collage .a { grid-column: 1; grid-row: 1; }
+    .collage .b { grid-column: 2; grid-row: 1; }
+    .collage .w1 { grid-column: 1 / 3; grid-row: 2; }
+    .collage .w2 { grid-column: 5 / 7; grid-row: 1; }
+    .collage .e { grid-column: 5; grid-row: 2; }
+    .collage .f { grid-column: 6; grid-row: 2; }
+  }
+
+  .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body class="bg-white">
+
+<!-- concept bar -->
+<div class="bg-mist text-[#4b5563] text-xs text-center py-2 px-4 leading-snug">
+  Concept redesign by LumeaPixel. This is not the official JYRA Home Solutions website.
+</div>
+
+<!-- header -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-0 border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/logo-0.png" alt="JYRA Home Solutions" class="h-12 w-auto"></a>
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink">
+      <a href="#about" class="hover:text-brand">About</a>
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#process" class="hover:text-brand">How it works</a>
+      <a href="#why" class="hover:text-brand">Why JYRA</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:+12104198185" class="btn btn-brand !py-3 !px-4 sm:!px-6">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.19a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="hidden sm:inline">(210) 419-8185</span>
+        <span class="sm:hidden">Call</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-full border border-black/10" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
+    <nav class="px-5 py-4 flex flex-col text-base font-medium">
+      <a href="#about" class="py-3 border-b border-black/5">About</a>
+      <a href="#services" class="py-3 border-b border-black/5">Services</a>
+      <a href="#process" class="py-3 border-b border-black/5">How it works</a>
+      <a href="#why" class="py-3 border-b border-black/5">Why JYRA</a>
+      <a href="#contact" class="py-3">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. hero -->
+<section class="pt-12 lg:pt-20 pb-16 lg:pb-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <h1 class="lg:col-span-7 text-[40px] sm:text-5xl lg:text-[64px] font-medium">
+        Home projects in Schertz,<br class="hidden sm:block"> <span class="font-bold">finished</span> the way you wanted.
+      </h1>
+      <p class="lg:col-span-5 text-[17px] text-[#3f4756] lg:pb-2">
+        JYRA Home Solutions is a general contractor in Schertz, Texas. We deliver durable, cost-effective workmanship, keep you updated on the status of your job, and stay until you are satisfied.
+      </p>
+    </div>
+
+    <div class="mt-12 lg:mt-16 grid lg:grid-cols-12 gap-4 lg:gap-5">
+      <div class="lg:col-span-6 ph h-72 sm:h-96 lg:h-[500px]">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-1.jpg" alt="Dark craftsman front door with white trim and sidelights">
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-4 lg:h-[500px]">
+        <div class="ph flex-1 h-64 lg:h-auto">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-2.jpg" alt="Painter spraying white exterior railing">
+        </div>
+        <a href="tel:+12104198185" class="btn btn-brand w-full">Call (210) 419-8185</a>
+      </div>
+      <div class="lg:col-span-3 bg-mist r p-7 lg:p-8 flex flex-col justify-between gap-10 lg:h-[500px]">
+        <span class="label">Our standard</span>
+        <p class="text-2xl lg:text-[28px] font-medium leading-snug tracking-tight">We will not leave the job until it is finished and you are satisfied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. three columns -->
+<section id="about" class="pb-16 lg:pb-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-10 md:gap-12 border-t border-black/10 pt-10">
+      <div class="reveal">
+        <h3 class="label !text-ink mb-4">Reliable contractor experts</h3>
+        <p class="text-[#3f4756]">We are dedicated to premier customer service and to delivering quality on every assignment. Our wide range of services meets your project needs with durable, cost-effective workmanship.</p>
+      </div>
+      <div class="reveal">
+        <h3 class="label !text-ink mb-4">Communication is key</h3>
+        <p class="text-[#3f4756]">We work with you to meet deadlines and coordinate with other related projects. You get open communication and regular updates on the status of your job.</p>
+      </div>
+      <div class="reveal">
+        <h3 class="label !text-ink mb-4">Satisfaction guaranteed</h3>
+        <p class="text-[#3f4756]">Industry knowledge, high quality parts and equipment, and a commitment to exceptional service save you both time and money.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. mission -->
+<section class="sec bg-paper">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
+    <span class="label">What we stand for</span>
+    <p class="mt-6 text-3xl sm:text-4xl lg:text-[52px] font-medium tracking-tight !leading-[1.15]">
+      Quality work on every assignment.<br class="hidden sm:block">
+      Open communication from start to finish.<br class="hidden sm:block">
+      A job that is done when <span class="font-bold">you</span> are satisfied.
+    </p>
+  </div>
+</section>
+
+<!-- 4. collage -->
+<section class="sec">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="collage">
+      <div class="ph c-center"><img src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wood framed interior of a new build" loading="lazy"></div>
+      <div class="ph a"><img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior renovation in progress" loading="lazy"></div>
+      <div class="ph b"><img src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen covered and prepared for work" loading="lazy"></div>
+      <div class="ph c-wide w1"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-3.jpg" alt="Finished white kitchen with marble island" loading="lazy"></div>
+      <div class="ph c-wide w2"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-2.jpg" alt="Spray painting an exterior balcony" loading="lazy"></div>
+      <div class="ph e"><img src="https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Room being gutted for renovation" loading="lazy"></div>
+      <div class="ph f"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-4.jpg" alt="Finished interior with gray walls and wood-look floors" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. how it works -->
+<section id="process" class="sec bg-paper">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl mb-14">
+      <span class="label">How it works</span>
+      <h2 class="mt-4 text-4xl lg:text-5xl">From first call to finished job</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+      <div class="border-t border-ink/20 pt-6">
+        <div class="text-brand font-semibold text-lg mb-5">01</div>
+        <h3 class="text-xl mb-2">Call or email</h3>
+        <p class="text-[#3f4756]">Reach JYRA at (210) 419-8185 or by email and tell us about your project.</p>
+      </div>
+      <div class="border-t border-ink/20 pt-6">
+        <div class="text-brand font-semibold text-lg mb-5">02</div>
+        <h3 class="text-xl mb-2">Talk through the work</h3>
+        <p class="text-[#3f4756]">We learn what you need so the project is completed according to your preferences.</p>
+      </div>
+      <div class="border-t border-ink/20 pt-6">
+        <div class="text-brand font-semibold text-lg mb-5">03</div>
+        <h3 class="text-xl mb-2">Set deadlines</h3>
+        <p class="text-[#3f4756]">We work with you to meet deadlines and coordinate with other related projects.</p>
+      </div>
+      <div class="border-t border-ink/20 pt-6">
+        <div class="text-brand font-semibold text-lg mb-5">04</div>
+        <h3 class="text-xl mb-2">Build with quality materials</h3>
+        <p class="text-[#3f4756]">Industry knowledge and the highest quality parts and equipment, for durable work.</p>
+      </div>
+      <div class="border-t border-ink/20 pt-6">
+        <div class="text-brand font-semibold text-lg mb-5">05</div>
+        <h3 class="text-xl mb-2">Stay informed</h3>
+        <p class="text-[#3f4756]">Open communication keeps you up to date on the status of your job.</p>
+      </div>
+      <div class="border-t border-ink/20 pt-6">
+        <div class="text-brand font-semibold text-lg mb-5">06</div>
+        <h3 class="text-xl mb-2">Finish and sign off</h3>
+        <p class="text-[#3f4756]">We do not leave the job until it is finished and you are satisfied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. services -->
+<section id="services" class="sec">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div class="max-w-xl">
+        <span class="label">Services</span>
+        <h2 class="mt-4 text-4xl lg:text-5xl">Work we do around Schertz homes</h2>
+      </div>
+      <a href="tel:+12104198185" class="btn btn-light self-start">Ask about your project</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article>
+        <div class="ph aspect-[4/5]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-2.jpg" alt="Exterior painting" loading="lazy"></div>
+        <h3 class="text-xl mt-5 mb-1">Exterior painting</h3>
+        <p class="text-[#3f4756] text-[15px]">Clean, durable finishes for siding, railings and trim.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-3.jpg" alt="Kitchen remodeling" loading="lazy"></div>
+        <h3 class="text-xl mt-5 mb-1">Kitchen remodeling</h3>
+        <p class="text-[#3f4756] text-[15px]">Cabinets, counters and layouts that work every day.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-4.jpg" alt="Interior finishing" loading="lazy"></div>
+        <h3 class="text-xl mt-5 mb-1">Interior finishing</h3>
+        <p class="text-[#3f4756] text-[15px]">Trim, paint and flooring for rooms that feel complete.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1593786267440-550458cc882a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home addition under construction with scaffolding" loading="lazy"></div>
+        <h3 class="text-xl mt-5 mb-1">Additions and framing</h3>
+        <p class="text-[#3f4756] text-[15px]">Structural work built with careful coordination.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 8. why choose -->
+<section id="why" class="sec bg-paper">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div class="ph aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
+      <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two builders cutting lumber with a miter saw indoors" loading="lazy">
+    </div>
+    <div>
+      <span class="label">Why choose JYRA</span>
+      <h2 class="mt-4 text-4xl lg:text-5xl mb-12">Straightforward work, clear updates</h2>
+      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-10">
+        <div>
+          <svg class="text-brand mb-4" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3 class="text-lg mb-2">Quality on every assignment</h3>
+          <p class="text-[#3f4756] text-[15px]">Premier customer service and workmanship built to last.</p>
+        </div>
+        <div>
+          <svg class="text-brand mb-4" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3 class="text-lg mb-2">Open communication</h3>
+          <p class="text-[#3f4756] text-[15px]">You always know where your job stands.</p>
+        </div>
+        <div>
+          <svg class="text-brand mb-4" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3 class="text-lg mb-2">Time and money saved</h3>
+          <p class="text-[#3f4756] text-[15px]">Industry knowledge and quality parts and equipment, used well.</p>
+        </div>
+        <div>
+          <svg class="text-brand mb-4" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3 class="text-lg mb-2">Finished and satisfied</h3>
+          <p class="text-[#3f4756] text-[15px]">We stay on the job until you are happy with it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. contact -->
+<section id="contact" class="sec">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-5">
+      <div class="lg:col-span-7 bg-mist r p-8 lg:p-14 flex flex-col justify-between gap-12">
+        <div>
+          <span class="label">Contact</span>
+          <h2 class="mt-4 text-4xl lg:text-5xl mb-6">Call or email JYRA</h2>
+          <p class="text-[#3f4756] max-w-lg">Tell us what you need done. We will talk through the scope, deadlines and any related work, and keep you updated from start to finish.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="tel:+12104198185" class="btn btn-brand">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.19a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"/></svg>
+              Call (210) 419-8185
+            </a>
+            <a href="mailto:seth@jyrahomesolutions.com" class="btn btn-light">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              Send an email
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="tel:+12104198185" class="bg-white rounded-full px-5 py-2.5 text-sm font-medium">(210) 419-8185</a>
+          <a href="mailto:seth@jyrahomesolutions.com" class="bg-white rounded-full px-5 py-2.5 text-sm font-medium break-all">seth@jyrahomesolutions.com</a>
+          <span class="bg-white rounded-full px-5 py-2.5 text-sm font-medium">Schertz, TX</span>
+        </div>
+      </div>
+      <div class="lg:col-span-5 ph aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[560px]">
+        <img src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew installing flooring in a new hallway" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. final call -->
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-5">
+      <div class="ph aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/photo-5.jpg" alt="Front entry with black door and white trim" loading="lazy">
+      </div>
+      <div class="bg-mist r p-8 lg:p-14 flex flex-col justify-center">
+        <h2 class="text-4xl lg:text-5xl mb-5">Ready to start your project?</h2>
+        <p class="text-[#3f4756] mb-8 max-w-md">Call JYRA Home Solutions in Schertz and tell us what you have in mind.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:+12104198185" class="btn btn-brand">
+            Call (210) 419-8185
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="mailto:seth@jyrahomesolutions.com" class="btn btn-light">Email us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 11. footer -->
+<footer class="bg-brand text-white">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8 py-16 text-center">
+    <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/jyra-home-solutions/21910/logo-0.png" alt="JYRA Home Solutions" class="h-14 w-auto mx-auto">
+    <p class="mt-8 text-white/80 max-w-md mx-auto">General contractor in Schertz, Texas.</p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-[17px] font-medium">
+      <a href="tel:+12104198185" class="hover:underline">(210) 419-8185</a>
+      <a href="mailto:seth@jyrahomesolutions.com" class="hover:underline break-all">seth@jyrahomesolutions.com</a>
+    </div>
+    <nav class="mt-8 flex flex-wrap justify-center gap-x-7 gap-y-2 text-sm text-white/80">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#services" class="hover:text-white">Services</a>
+      <a href="#process" class="hover:text-white">How it works</a>
+      <a href="#why" class="hover:text-white">Why JYRA</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+    <div class="mt-12 pt-8 border-t border-white/15 text-xs text-white/65 space-y-2">
+      <p>Concept redesign by LumeaPixel. This is not the official JYRA Home Solutions website.</p>
+      <p>Some photos by Milivoj Kuhar, immo RENOVATION, Annie Gray, Stefan Lehner, Jessica Hearn, Brett Jordan and Samuel Cruz on Unsplash.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { menu.classList.add('hidden'); });
+  });
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
