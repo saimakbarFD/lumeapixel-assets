@@ -4,311 +4,313 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Exact Renovations | Handyman and Remodeling in San Antonio, TX</title>
+<title>Exact Renovations | General Contractor &amp; Handyman in San Antonio, TX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Manrope', 'sans-serif'] },
-      colors: { brand: '#56d284', ink: '#0e0f0e', paper: '#f5f5f2' }
+      fontFamily: {
+        heading: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif']
+      },
+      colors: {
+        brand: '#56d284',
+        brandDark: '#3fb86b',
+        ink: '#0e0f0f',
+        soft: '#f5f6f4'
+      },
+      borderRadius: { DEFAULT: '14px' }
     }
   }
 }
 </script>
 <style>
-  :root { --r: 12px; }
-  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-  body { font-family: 'Manrope', sans-serif; font-size: 17px; line-height: 1.6; color: #1b1d1c; background: #fff; -webkit-font-smoothing: antialiased; }
-  h1, h2, h3, h4 { line-height: 1.1; letter-spacing: -0.02em; font-weight: 600; }
-  .r { border-radius: var(--r); }
-  .label { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: var(--r); font-weight: 700; font-size: 16px; transition: background .2s, color .2s, transform .2s; }
-  .btn-brand { background: #56d284; color: #0e0f0e; }
-  .btn-brand:hover { background: #6fe099; }
-  .btn-white { background: #fff; color: #0e0f0e; }
-  .btn-white:hover { background: #e9ece9; }
-  .section { padding: 72px 0; }
-  @media (min-width: 1024px) { .section { padding: 120px 0; } }
-  .wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 20px; }
-  @media (min-width: 768px) { .wrap { padding: 0 40px; } }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #1c1e1d; font-size: 17px; line-height: 1.6; }
+  h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+  h1, h2, h3 { line-height: 1.1; letter-spacing: -0.01em; }
+  .r { border-radius: 14px; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .field label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #0e0f0e; }
-  .field input, .field select, .field textarea { width: 100%; min-height: 52px; padding: 12px 16px; border: 1px solid #cfd3cf; border-radius: var(--r); background: #fff; font: inherit; font-size: 16px; color: #0e0f0e; transition: border-color .2s, box-shadow .2s; }
-  .field textarea { min-height: 130px; resize: vertical; }
-  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: #2fae61; box-shadow: 0 0 0 3px rgba(86,210,132,.35); }
-  .card-img { transition: transform .5s ease; }
-  .svc:hover .card-img { transform: scale(1.04); }
-  .svc:hover .arrow { transform: translateX(4px); }
-  .arrow { transition: transform .2s; }
-  img { display: block; }
+  .field { width: 100%; min-height: 52px; padding: 14px 16px; border: 1px solid #d6d9d6; border-radius: 14px; background: #fff; font-size: 16px; color: #111; transition: border-color .15s, box-shadow .15s; }
+  .field:focus { outline: none; border-color: #56d284; box-shadow: 0 0 0 3px rgba(86,210,132,.28); }
+  textarea.field { min-height: 140px; resize: vertical; }
+  .section-pad { padding-top: 72px; padding-bottom: 72px; }
+  @media (min-width: 1024px) { .section-pad { padding-top: 120px; padding-bottom: 120px; } }
+  .card-img { aspect-ratio: 4/3; }
+  .nav-link { position: relative; }
+  .nav-link:hover { color: #56d284; }
 </style>
 </head>
-<body>
+<body class="bg-white">
 
 <!-- Top bar -->
-<div class="bg-brand text-ink text-[13px] sm:text-sm font-semibold">
-  <div class="wrap flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0 sm:gap-4 py-2">
+<div class="bg-brand text-ink text-sm font-medium">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row sm:justify-between gap-1">
     <span>Serving San Antonio, TX</span>
     <a href="mailto:roofersean1@gmail.com" class="hover:underline break-all">roofersean1@gmail.com</a>
   </div>
 </div>
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-ink text-white border-b border-white/10">
-  <div class="wrap flex items-center justify-between h-[72px] gap-3">
-    <a href="#top" class="text-[20px] sm:text-[22px] font-700 font-bold tracking-tight whitespace-nowrap">Exact Renovations</a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-white/85">
-      <a href="#about" class="hover:text-brand">About</a>
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#gallery" class="hover:text-brand">Gallery</a>
-      <a href="#contact" class="hover:text-brand">Contact</a>
+<header class="bg-ink text-white sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="font-heading font-semibold text-2xl tracking-tight leading-none">
+      Exact <span class="text-brand">Renovations</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
-    <div class="flex items-center gap-3">
-      <a href="tel:+12103837906" class="hidden md:flex flex-col leading-tight text-right">
-        <span class="text-[12px] text-white/60">Need help? Call us today</span>
-        <span class="font-bold text-[16px]">(210) 383-7906</span>
+    <div class="hidden lg:flex items-center gap-5">
+      <div class="text-right leading-tight">
+        <div class="text-xs text-white/60">Need help? Call us today</div>
+        <a href="tel:+12103837906" class="font-heading font-semibold text-lg">(210) 383-7906</a>
+      </div>
+      <a href="#contact" class="bg-brand text-ink font-semibold px-6 py-3 r hover:bg-brandDark transition">Get a Quote</a>
+    </div>
+    <div class="flex lg:hidden items-center gap-2">
+      <a href="tel:+12103837906" class="bg-brand text-ink font-semibold px-4 py-2.5 r text-sm flex items-center gap-2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
       </a>
-      <a href="tel:+12103837906" class="btn btn-brand !min-h-[44px] !px-4 sm:!px-5" aria-label="Call (210) 383-7906">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="hidden sm:inline">Call now</span>
-      </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center r border border-white/20" aria-label="Open menu" aria-expanded="false">
+      <button id="menuBtn" aria-label="Open menu" class="w-11 h-11 flex items-center justify-center r border border-white/20">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <nav id="mobileNav" class="hidden lg:hidden border-t border-white/10 bg-ink">
-    <div class="wrap py-4 flex flex-col text-[17px] font-medium">
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
+    <div class="px-5 py-4 flex flex-col gap-1 text-base font-medium">
       <a href="#about" class="py-3 border-b border-white/10">About</a>
       <a href="#services" class="py-3 border-b border-white/10">Services</a>
       <a href="#gallery" class="py-3 border-b border-white/10">Gallery</a>
       <a href="#contact" class="py-3">Contact</a>
     </div>
-  </nav>
+  </div>
 </header>
 
 <main id="top">
 
 <!-- Hero -->
-<section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/exact-renovations/21915/photo-1.jpg" alt="Handyman fitting a cabinet door hinge with a cordless drill" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/35"></div>
-  <div class="wrap relative py-24 sm:py-32 lg:py-44">
-    <div class="max-w-[680px]">
-      <h1 class="text-[40px] sm:text-6xl lg:text-[72px] font-semibold">Handyman and remodeling in San Antonio</h1>
-      <p class="mt-6 text-lg sm:text-xl text-white/85 max-w-[560px]">From kitchen and bathroom tiling to full house remodels, Exact Renovations takes care of your property. No job is too small.</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-3">
-        <a href="tel:+12103837906" class="btn btn-brand">Call (210) 383-7906</a>
-        <a href="#contact" class="btn btn-white">Send a message</a>
+<section class="relative bg-ink text-white">
+  <img src="https://images.unsplash.com/photo-1593012672015-4fabc32c67aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="House extension under construction with scaffolding" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/65"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 md:py-32 lg:py-44">
+    <div class="max-w-2xl">
+      <h1 class="font-heading font-semibold text-[40px] sm:text-5xl lg:text-[68px]">Remodels and repairs done right in San Antonio.</h1>
+      <p class="mt-6 text-lg text-white/85 max-w-xl">Exact Renovations is a handyman and general contractor team. We build, we design, and no job is too small. Honest work at a fair price.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="bg-brand text-ink font-semibold px-8 py-4 r text-center hover:bg-brandDark transition">Request a Quote</a>
+        <a href="tel:+12103837906" class="bg-white text-ink font-semibold px-8 py-4 text-center hover:bg-white/90 transition" style="border-radius:999px">Call (210) 383-7906</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Difference -->
-<section id="about" class="section bg-white">
-  <div class="wrap grid lg:grid-cols-2 gap-14 lg:gap-20">
+<!-- The difference -->
+<section id="about" class="section-pad bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 lg:gap-20">
     <div class="reveal">
-      <p class="label text-[#2a9b58]">The Exact Renovations difference</p>
-      <h2 class="mt-5 text-4xl sm:text-5xl lg:text-[56px] font-semibold">Honest work at a fair price, for San Antonio homes.</h2>
-      <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-        <img src="https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Carpenter cutting trim with a miter saw" class="r w-full aspect-[3/4] object-cover" loading="lazy">
-        <div class="col-span-2 sm:col-span-1 order-first sm:order-none flex flex-col gap-3 sm:gap-4">
-          <div class="r bg-brand text-ink p-6 flex-1 flex items-end min-h-[150px]">
-            <p class="text-2xl font-semibold leading-tight">No job is too small.</p>
-          </div>
-          <img src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen being prepared for renovation" class="r w-full aspect-square object-cover hidden sm:block" loading="lazy">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brandDark">The Exact Renovations difference</p>
+      <h2 class="mt-4 font-heading font-semibold text-4xl lg:text-[52px]">Your property is our property.</h2>
+      <div class="mt-12 grid grid-cols-3 gap-3 items-stretch">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/exact-renovations/21921/photo-1.jpg" alt="Handyman fitting a cabinet door hinge with a drill" class="r w-full h-full object-cover" style="aspect-ratio:3/4">
+        <div class="bg-brand text-ink r p-4 sm:p-6 flex items-end" style="aspect-ratio:3/4">
+          <p class="font-heading font-semibold text-lg sm:text-2xl leading-tight">No job is too small.</p>
         </div>
-        <img src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker laying flooring in a hallway" class="r w-full aspect-[3/4] object-cover" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Contractors cutting trim with a miter saw" class="r w-full h-full object-cover" style="aspect-ratio:3/4">
       </div>
     </div>
-
-    <div class="reveal lg:pt-10">
-      <p class="text-lg text-[#3b3f3d]">Based in San Antonio, our handyman services include house remodels, kitchen and bathroom tiling, painting, decorating and more. We build, and we design as well.</p>
-      <p class="mt-4 text-lg text-[#3b3f3d]">We can take care of all of your property's needs. We proudly supply an honest, exclusive service at a fair price.</p>
-
-      <div class="mt-10 divide-y divide-[#e3e5e2] border-y border-[#e3e5e2]">
-        <div class="py-6">
-          <h3 class="text-xl font-bold tracking-tight">Best Handyman in San Antonio</h3>
-          <p class="mt-2 text-[#4a4f4c]">House remodel, tiling, painting and decorating. If you need a handyman, we build and we design.</p>
+    <div class="reveal">
+      <p class="text-gray-700">Based in San Antonio, our handyman services cover house remodels, kitchen and bathroom tiling, painting, decorating and more. We help people who need a handyman, and we build and design as well.</p>
+      <p class="mt-4 text-gray-700">We supply an honest, exclusive service at a fair price, and we can take care of all of your property's needs.</p>
+      <div class="mt-9 space-y-7">
+        <div class="border-t border-gray-200 pt-6">
+          <h3 class="font-heading font-semibold text-xl">Quality Services</h3>
+          <p class="mt-2 text-gray-600">Whether it's a blocked pipe, a new kitchen or an overflowing gutter, we see it through. We keep you updated at every stage because we respect your home and your time.</p>
         </div>
-        <div class="py-6">
-          <h3 class="text-xl font-bold tracking-tight">Quality Services</h3>
-          <p class="mt-2 text-[#4a4f4c]">Your property is our property. We keep you updated at every stage, because we respect your home and your time.</p>
+        <div class="border-t border-gray-200 pt-6">
+          <h3 class="font-heading font-semibold text-xl">Professional Staff</h3>
+          <p class="mt-2 text-gray-600">Our handymen never perform unnecessary work. They respond quickly, adapt to each client, and don't stop until you're happy.</p>
         </div>
-        <div class="py-6">
-          <h3 class="text-xl font-bold tracking-tight">Professional Staff</h3>
-          <p class="mt-2 text-[#4a4f4c]">We never perform unnecessary work. We respond quickly and adapt to each client, from wardrobes to fencing.</p>
+        <div class="border-t border-gray-200 pt-6">
+          <h3 class="font-heading font-semibold text-xl">Best Handyman in San Antonio</h3>
+          <p class="mt-2 text-gray-600">From remodels to tiling, painting and decorating, one team handles it from start to finish.</p>
         </div>
       </div>
-
-      <a href="tel:+12103837906" class="mt-8 inline-flex items-center gap-4 group">
-        <span class="w-14 h-14 r bg-brand text-ink flex items-center justify-center">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+12103837906" class="mt-9 inline-flex items-center gap-4">
+        <span class="w-12 h-12 bg-brand text-ink r flex items-center justify-center">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </span>
-        <span>
-          <span class="block text-sm text-[#5a5f5c]">Have a problem? Give us a call</span>
-          <span class="block text-2xl font-bold tracking-tight group-hover:underline">(210) 383-7906</span>
-        </span>
+        <span class="font-heading font-semibold text-2xl">(210) 383-7906</span>
       </a>
     </div>
   </div>
 </section>
 
 <!-- Services -->
-<section id="services" class="relative bg-white pb-20 lg:pb-28">
-  <div class="absolute inset-x-0 top-0 h-[560px] lg:h-[460px] bg-brand"></div>
-  <div class="wrap relative pt-20 lg:pt-24">
-    <div class="grid lg:grid-cols-2 gap-6 lg:gap-20 items-end text-ink reveal">
+<section id="services" class="relative section-pad pt-0 lg:pt-0 bg-white">
+  <div class="absolute top-0 left-0 right-0 bg-brand" style="height: 440px;"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-20 lg:pt-28">
+    <div class="grid lg:grid-cols-2 gap-6 lg:gap-16 items-end reveal">
       <div>
-        <p class="label">What we do</p>
-        <h2 class="mt-4 text-4xl sm:text-5xl font-semibold">Remodeling and repairs, start to finish</h2>
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/70">What we do</p>
+        <h2 class="mt-4 font-heading font-semibold text-4xl lg:text-[52px] text-ink">Services for every corner of your home.</h2>
       </div>
-      <p class="text-lg text-ink/85">Whether it's a new kitchen that needs installing or a blocked pipe, you can count on us to see it through. We're proud of our craftsmanship and attention to detail.</p>
+      <p class="text-ink/80 lg:text-lg">From a single repair to a full remodel, Exact Renovations handles the work with attention to detail and honest updates along the way.</p>
     </div>
-
     <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <a href="#contact" class="svc block bg-white r p-3 reveal border border-black/5">
-        <div class="r overflow-hidden aspect-[4/3]"><img class="card-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior wall opened up during a house remodel" loading="lazy"></div>
+      <a href="#contact" class="reveal group bg-white r p-3 border border-gray-200 block">
+        <img src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen being prepared for renovation" class="r w-full object-cover card-img">
         <div class="px-2 pt-5 pb-3">
-          <div class="flex items-center justify-between gap-3"><h3 class="text-xl font-semibold">House remodel</h3>
-          <svg class="arrow shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-[15px] text-[#4a4f4c]">We build and we design, from opening up walls to the final finish.</p>
+          <h3 class="font-heading font-semibold text-xl flex items-center justify-between gap-2">House Remodel
+            <svg class="shrink-0 transition group-hover:translate-x-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </h3>
+          <p class="mt-2 text-gray-600 text-[15px]">Kitchens and living spaces rebuilt and designed around how you live.</p>
         </div>
       </a>
-      <a href="#contact" class="svc block bg-white r p-3 reveal border border-black/5">
-        <div class="r overflow-hidden aspect-[4/3]"><img class="card-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen counter and backsplash area under renovation" loading="lazy"></div>
+      <a href="#contact" class="reveal group bg-white r p-3 border border-gray-200 block">
+        <img src="https://images.unsplash.com/photo-1736182615481-3795ea557614?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior fit-out with lighting and carpentry in progress" class="r w-full object-cover card-img">
         <div class="px-2 pt-5 pb-3">
-          <div class="flex items-center justify-between gap-3"><h3 class="text-xl font-semibold">Kitchen and bathroom tiling</h3>
-          <svg class="arrow shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-[15px] text-[#4a4f4c]">Clean, careful tile work with attention to detail.</p>
+          <h3 class="font-heading font-semibold text-xl flex items-center justify-between gap-2">Kitchen &amp; Bathroom Tiling
+            <svg class="shrink-0 transition group-hover:translate-x-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </h3>
+          <p class="mt-2 text-gray-600 text-[15px]">Clean, careful tile work for floors, walls and backsplashes.</p>
         </div>
       </a>
-      <a href="#contact" class="svc block bg-white r p-3 reveal border border-black/5">
-        <div class="r overflow-hidden aspect-[4/3]"><img class="card-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Freshly finished hallway with walls ready for paint" loading="lazy"></div>
+      <a href="#contact" class="reveal group bg-white r p-3 border border-gray-200 block">
+        <img src="https://images.unsplash.com/photo-1783587354630-3300699c053c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Room prepared with new boards and tools ready for finishing" class="r w-full object-cover card-img">
         <div class="px-2 pt-5 pb-3">
-          <div class="flex items-center justify-between gap-3"><h3 class="text-xl font-semibold">Painting and decorating</h3>
-          <svg class="arrow shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-[15px] text-[#4a4f4c]">Fresh walls and finishes that make the house feel new.</p>
+          <h3 class="font-heading font-semibold text-xl flex items-center justify-between gap-2">Painting &amp; Decorating
+            <svg class="shrink-0 transition group-hover:translate-x-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </h3>
+          <p class="mt-2 text-gray-600 text-[15px]">Fresh finishes inside and out, prepped properly and done neatly.</p>
         </div>
       </a>
-      <a href="#contact" class="svc block bg-white r p-3 reveal border border-black/5">
-        <div class="r overflow-hidden aspect-[4/3]"><img class="card-img w-full h-full object-cover" src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@main/sites/exact-renovations/21915/photo-1.jpg" alt="Handyman installing kitchen cabinet hardware" loading="lazy"></div>
+      <a href="#contact" class="reveal group bg-white r p-3 border border-gray-200 block">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/exact-renovations/21921/photo-1.jpg" alt="Handyman repairing a kitchen cabinet" class="r w-full object-cover card-img">
         <div class="px-2 pt-5 pb-3">
-          <div class="flex items-center justify-between gap-3"><h3 class="text-xl font-semibold">Kitchen installation</h3>
-          <svg class="arrow shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-[15px] text-[#4a4f4c]">New kitchens fitted properly and seen through to the end.</p>
+          <h3 class="font-heading font-semibold text-xl flex items-center justify-between gap-2">Handyman Repairs
+            <svg class="shrink-0 transition group-hover:translate-x-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </h3>
+          <p class="mt-2 text-gray-600 text-[15px]">Blocked pipes, gutters, wardrobes, fencing and everything in between.</p>
         </div>
       </a>
     </div>
-    <p class="mt-8 text-[#4a4f4c]">We also handle wardrobes, fencing, blocked pipes and overflowing gutters. <a href="#contact" class="font-bold text-ink underline underline-offset-4 decoration-brand decoration-2">Tell us what you need.</a></p>
   </div>
 </section>
 
 <!-- Gallery -->
-<section id="gallery" class="section bg-paper">
-  <div class="wrap">
-    <div class="reveal max-w-[680px]">
-      <p class="label text-[#2a9b58]">Gallery</p>
-      <h2 class="mt-4 text-4xl sm:text-5xl font-semibold">Work in progress around San Antonio</h2>
+<section id="gallery" class="section-pad bg-soft">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="reveal max-w-2xl">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brandDark">Gallery</p>
+      <h2 class="mt-4 font-heading font-semibold text-4xl lg:text-[52px]">Work in progress, start to finish.</h2>
     </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-      <img class="r w-full aspect-[4/3] object-cover reveal" src="https://images.unsplash.com/photo-1593786267440-550458cc882a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="House extension with scaffolding and block walls" loading="lazy">
-      <img class="r w-full aspect-[4/3] object-cover reveal" src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Timber framing of a new interior" loading="lazy">
-      <img class="r w-full aspect-[4/3] object-cover reveal" src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two carpenters working at a miter saw" loading="lazy">
-      <img class="r w-full aspect-[4/3] object-cover reveal" src="https://images.unsplash.com/photo-1736182615481-3795ea557614?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMTA1NDl8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Room being fitted out with tools and materials" loading="lazy">
-      <img class="r w-full aspect-[4/3] object-cover reveal" src="https://images.unsplash.com/photo-1697967464378-1498c293e1aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Ladder and paint buckets in a room being renovated" loading="lazy">
-      <img class="r w-full aspect-[4/3] object-cover reveal" src="https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Carpenter measuring and cutting lumber" loading="lazy">
-      <img class="r w-full aspect-[4/3] object-cover reveal" src="https://images.unsplash.com/photo-1593012671976-1422185230fb?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Rear house extension under construction" loading="lazy">
-      <img class="r w-full aspect-[4/3] object-cover reveal" src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIxMDU0OXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Hallway with new flooring boards stacked ready to lay" loading="lazy">
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <img src="https://images.unsplash.com/photo-1786269691602-519fdaa112ea?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cement mixer and materials in a garden during a build" class="reveal r w-full object-cover" style="aspect-ratio:4/3">
+      <img src="https://images.unsplash.com/photo-1632214532406-40287aced8d6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open-plan renovation with bagged plaster and ladder" class="reveal r w-full object-cover" style="aspect-ratio:4/3">
+      <img src="https://images.unsplash.com/photo-1619191949276-8deafce6de19?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Blockwork and exposed joists inside a house under renovation" class="reveal r w-full object-cover" style="aspect-ratio:4/3">
+      <img src="https://images.unsplash.com/photo-1673978484281-e9370ac3b81c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bare concrete interior with support props" class="reveal r w-full object-cover" style="aspect-ratio:4/3">
+      <img src="https://images.unsplash.com/photo-1697967464378-1498c293e1aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Ladder and paint buckets beside a window in a stripped room" class="reveal r w-full object-cover" style="aspect-ratio:4/3">
+      <img src="https://images.unsplash.com/photo-1790767900092-38a519fef170?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wheelbarrow and tools on a floor being broken up" class="reveal r w-full object-cover" style="aspect-ratio:4/3">
     </div>
   </div>
 </section>
 
 <!-- Call band -->
-<section class="bg-ink text-white py-20 lg:py-24">
-  <div class="wrap flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-    <div class="max-w-[720px]">
-      <h2 class="text-4xl sm:text-5xl font-semibold text-brand">Have a problem? Give us a call.</h2>
-      <p class="mt-4 text-lg text-white/75">We respond quickly and we're ready to hear from you.</p>
-    </div>
-    <a href="tel:+12103837906" class="btn btn-brand self-start lg:self-auto">Call (210) 383-7906</a>
+<section class="bg-ink text-white py-20 lg:py-28">
+  <div class="max-w-5xl mx-auto px-5 text-center reveal">
+    <h2 class="font-heading font-semibold text-4xl lg:text-6xl text-brand">Have a problem? Give us a call.</h2>
+    <p class="mt-5 text-lg text-white/75 max-w-xl mx-auto">We respond quickly and adapt to every job. Tell us what your home needs.</p>
+    <a href="tel:+12103837906" class="mt-9 inline-block bg-brand text-ink font-semibold px-9 py-4 r hover:bg-brandDark transition">Call (210) 383-7906</a>
   </div>
 </section>
 
 <!-- Contact -->
-<section id="contact" class="section bg-white">
-  <div class="wrap grid lg:grid-cols-5 gap-12 lg:gap-20">
+<section id="contact" class="section-pad bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-5 gap-14 lg:gap-20">
     <div class="lg:col-span-2 reveal">
-      <p class="label text-[#2a9b58]">Contact</p>
-      <h2 class="mt-4 text-4xl sm:text-5xl font-semibold">Tell us about your project</h2>
-      <p class="mt-5 text-lg text-[#3b3f3d]">Send a message and tell us what you need done. You can also call or email us directly.</p>
-      <dl class="mt-10 space-y-6">
-        <div>
-          <dt class="label text-[#5a5f5c]">Phone</dt>
-          <dd class="mt-1"><a href="tel:+12103837906" class="text-xl font-bold hover:underline">(210) 383-7906</a></dd>
-        </div>
-        <div>
-          <dt class="label text-[#5a5f5c]">Email</dt>
-          <dd class="mt-1"><a href="mailto:roofersean1@gmail.com" class="text-xl font-bold hover:underline break-all">roofersean1@gmail.com</a></dd>
-        </div>
-        <div>
-          <dt class="label text-[#5a5f5c]">Service area</dt>
-          <dd class="mt-1 text-xl font-bold">San Antonio, TX</dd>
-        </div>
-        <div>
-          <dt class="label text-[#5a5f5c]">Hours</dt>
-          <dd class="mt-1 text-xl font-bold">All day, every day</dd>
-        </div>
-      </dl>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brandDark">Contact</p>
+      <h2 class="mt-4 font-heading font-semibold text-4xl lg:text-5xl">Tell us about your request.</h2>
+      <p class="mt-5 text-gray-600">Send a message and we'll get back to you. Or reach us directly.</p>
+      <ul class="mt-9 space-y-6">
+        <li class="flex gap-4">
+          <span class="w-11 h-11 bg-brand text-ink r flex items-center justify-center shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div>
+            <div class="text-sm text-gray-500">Phone</div>
+            <a href="tel:+12103837906" class="font-heading font-semibold text-xl">(210) 383-7906</a>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="w-11 h-11 bg-brand text-ink r flex items-center justify-center shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <div class="min-w-0">
+            <div class="text-sm text-gray-500">Email</div>
+            <a href="mailto:roofersean1@gmail.com" class="font-heading font-semibold text-xl break-all">roofersean1@gmail.com</a>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="w-11 h-11 bg-brand text-ink r flex items-center justify-center shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          <div>
+            <div class="text-sm text-gray-500">Service area</div>
+            <div class="font-heading font-semibold text-xl">San Antonio, TX</div>
+          </div>
+        </li>
+      </ul>
+      <div class="mt-10 border-t border-gray-200 pt-6">
+        <h3 class="font-heading font-semibold text-lg">Opening hours</h3>
+        <p class="mt-2 text-gray-600 text-[15px]">Open all day, every day of the week.</p>
+      </div>
     </div>
 
     <div class="lg:col-span-3 reveal">
-      <div class="bg-paper r p-6 sm:p-10">
-        <form id="contactForm" class="grid sm:grid-cols-2 gap-5" novalidate>
-          <div class="field">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
+      <div class="bg-soft r p-6 sm:p-10">
+        <form id="contactForm" class="space-y-5" novalidate>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-2">Your name</label>
+              <input id="name" name="name" type="text" required class="field" autocomplete="name">
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold mb-2">Your phone number</label>
+              <input id="phone" name="phone" type="tel" class="field" autocomplete="tel">
+            </div>
           </div>
-          <div class="field">
-            <label for="phone">Phone number</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-2">Your email</label>
+            <input id="email" name="email" type="email" required class="field" autocomplete="email">
           </div>
-          <div class="field sm:col-span-2">
-            <label for="email">Your email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field sm:col-span-2">
-            <label for="service">Service you need</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service</option>
-              <option>House remodel</option>
-              <option>Kitchen and bathroom tiling</option>
-              <option>Painting and decorating</option>
-              <option>Kitchen installation</option>
-              <option>Wardrobes</option>
-              <option>Fencing</option>
-              <option>Blocked pipes</option>
-              <option>Gutters</option>
-              <option>Other handyman work</option>
+          <div>
+            <label for="service" class="block text-sm font-semibold mb-2">Service you need</label>
+            <select id="service" name="service" class="field">
+              <option value="">Select a service</option>
+              <option>House Remodel</option>
+              <option>Kitchen &amp; Bathroom Tiling</option>
+              <option>Painting &amp; Decorating</option>
+              <option>Handyman Repairs</option>
+              <option>Other</option>
             </select>
           </div>
-          <div class="field sm:col-span-2">
-            <label for="message">Tell us about your request</label>
-            <textarea id="message" name="message"></textarea>
+          <div>
+            <label for="message" class="block text-sm font-semibold mb-2">Tell us about your request</label>
+            <textarea id="message" name="message" class="field"></textarea>
           </div>
-          <div class="sm:col-span-2">
-            <button type="submit" class="btn btn-brand w-full sm:w-auto">Send message</button>
-          </div>
+          <button type="submit" class="w-full sm:w-auto bg-brand text-ink font-semibold px-10 py-4 r hover:bg-brandDark transition">Send Message</button>
         </form>
-        <div id="thanks" class="hidden py-10">
-          <h3 class="text-2xl font-semibold">Thanks, we'll be in touch soon.</h3>
-          <p class="mt-3 text-[#4a4f4c]">Need us sooner? Call <a href="tel:+12103837906" class="font-bold underline">(210) 383-7906</a>.</p>
+        <div id="thanks" class="hidden py-10 text-center">
+          <h3 class="font-heading font-semibold text-2xl">Thanks, we'll be in touch soon.</h3>
         </div>
       </div>
     </div>
@@ -318,59 +320,55 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-ink text-white/80">
-  <div class="wrap py-16 grid md:grid-cols-3 gap-12">
+<footer class="bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-3 gap-12">
     <div>
-      <p class="text-2xl font-bold text-white tracking-tight">Exact Renovations</p>
-      <p class="mt-4 max-w-[320px]">Handyman and remodeling services in San Antonio, TX. An honest service at a fair price.</p>
+      <div class="font-heading font-semibold text-2xl">Exact <span class="text-brand">Renovations</span></div>
+      <p class="mt-4 text-white/65 text-[15px] max-w-xs">General contractor and handyman services in San Antonio, TX. Honest work at a fair price.</p>
     </div>
     <div>
-      <p class="label text-white">Contact</p>
-      <ul class="mt-5 space-y-3">
-        <li><a href="tel:+12103837906" class="hover:text-brand">(210) 383-7906</a></li>
-        <li><a href="mailto:roofersean1@gmail.com" class="hover:text-brand break-all">roofersean1@gmail.com</a></li>
-        <li>San Antonio, TX</li>
-        <li>Open all day, every day</li>
-      </ul>
-    </div>
-    <div>
-      <p class="label text-white">Explore</p>
-      <ul class="mt-5 space-y-3">
+      <h4 class="font-heading font-semibold text-lg">Explore</h4>
+      <ul class="mt-4 space-y-3 text-white/70 text-[15px]">
         <li><a href="#about" class="hover:text-brand">About</a></li>
         <li><a href="#services" class="hover:text-brand">Services</a></li>
         <li><a href="#gallery" class="hover:text-brand">Gallery</a></li>
         <li><a href="#contact" class="hover:text-brand">Contact</a></li>
       </ul>
     </div>
+    <div>
+      <h4 class="font-heading font-semibold text-lg">Contact</h4>
+      <ul class="mt-4 space-y-3 text-white/70 text-[15px]">
+        <li><a href="tel:+12103837906" class="hover:text-brand">(210) 383-7906</a></li>
+        <li><a href="mailto:roofersean1@gmail.com" class="hover:text-brand break-all">roofersean1@gmail.com</a></li>
+        <li>San Antonio, TX</li>
+      </ul>
+    </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="wrap py-6 text-[13px] text-white/55 space-y-1">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Exact Renovations website.</p>
-      <p>Some photos by Milivoj Kuhar, immo RENOVATION, Annie Gray, Stefan Lehner, Jessica Hearn, Brett Jordan, Samuel Cruz and Steffen Lemmerzahl on Unsplash.</p>
+      <p>Some photos by Brett Jordan, Annie Gray, Annie Spratt, Steffen Lemmerzahl, d c and immo RENOVATION on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  var mb = document.getElementById('menuBtn'), mn = document.getElementById('mobileNav');
-  mb.addEventListener('click', function () {
-    var open = mn.classList.toggle('hidden') === false;
-    mb.setAttribute('aria-expanded', open);
-  });
-  mn.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () { mn.classList.add('hidden'); mb.setAttribute('aria-expanded', false); });
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', function () { mobileMenu.classList.toggle('hidden'); });
+  mobileMenu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { mobileMenu.classList.add('hidden'); });
   });
 
-  var els = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    els.forEach(function (el) { io.observe(el); });
-  } else { els.forEach(function (el) { el.classList.add('in'); }); }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+  document.getElementById('contactForm').addEventListener('submit', function (ev) {
+    ev.preventDefault();
     this.classList.add('hidden');
     document.getElementById('thanks').classList.remove('hidden');
   });

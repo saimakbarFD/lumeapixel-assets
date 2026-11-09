@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AR Handyman Services LLC | Handyman in Las Vegas, NV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Outfit', 'system-ui', 'sans-serif'] },
+      colors: { brand: '#ff3131', brandDark: '#d91f1f', ink: '#0f1115', paper: '#f6f5f2' },
+      borderRadius: { DEFAULT: '10px' }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+  body { font-family: 'Outfit', sans-serif; color: #0f1115; font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { line-height: 1.05; letter-spacing: -0.02em; }
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .label { font-size: 13px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
+  .field { width: 100%; min-height: 52px; padding: 12px 16px; border: 1.5px solid #d6d4cf; border-radius: 10px; background: #fff; font: inherit; font-size: 16px; color: #0f1115; transition: border-color .15s, box-shadow .15s; }
+  .field:focus { outline: none; border-color: #ff3131; box-shadow: 0 0 0 4px rgba(255,49,49,.15); }
+  textarea.field { min-height: 130px; resize: vertical; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 10px; font-weight: 600; transition: background .15s, color .15s, border-color .15s; }
+  .btn-brand { background: #ff3131; color: #fff; }
+  .btn-brand:hover { background: #d91f1f; }
+  .btn-ghost { border: 1.5px solid rgba(255,255,255,.45); color: #fff; }
+  .btn-ghost:hover { background: #fff; color: #0f1115; }
+  .btn-dark { background: #0f1115; color: #fff; }
+  .btn-dark:hover { background: #2a2d34; }
+  .ba-wrap { position: relative; overflow: hidden; border-radius: 10px; user-select: none; touch-action: pan-y; }
+  .ba-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ba-top { clip-path: inset(0 50% 0 0); }
+  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; }
+  .ba-handle span { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 999px; background: #ff3131; transform: translate(-50%,-50%); display: flex; align-items: center; justify-content: center; color: #fff; }
+  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body class="bg-white">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between">
+    <a href="#top" class="flex flex-col leading-none">
+      <span class="text-[22px] font-extrabold tracking-tight">AR <span class="text-brand">HANDYMAN</span></span>
+      <span class="text-[10px] tracking-[.28em] font-semibold text-black/60 mt-1">SERVICES LLC · LAS VEGAS</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#process" class="hover:text-brand">How it works</a>
+      <a href="#work" class="hover:text-brand">Our work</a>
+      <a href="#about" class="hover:text-brand">About</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:7024087520" class="btn btn-brand !min-h-[44px] !px-4 sm:!px-5 text-[15px]">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="hidden sm:inline">(702) 408-7520</span><span class="sm:hidden">Call</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-black/15 rounded" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-lg font-medium">
+      <a href="#services" class="py-3 border-b border-black/5">Services</a>
+      <a href="#process" class="py-3 border-b border-black/5">How it works</a>
+      <a href="#work" class="py-3 border-b border-black/5">Our work</a>
+      <a href="#about" class="py-3 border-b border-black/5">About</a>
+      <a href="#contact" class="py-3">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. HERO -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-2.jpg" alt="Modern entry walkway with concrete steps and desert landscaping in Las Vegas" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/55"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7 reveal">
+      <p class="label text-brand mb-6">Handyman · Las Vegas, NV</p>
+      <h1 class="font-extrabold uppercase text-[44px] sm:text-6xl lg:text-[84px] leading-[.95]">Repairs.<br>Remodels.<br>Done right.</h1>
+      <p class="mt-8 text-lg sm:text-xl text-white/80 max-w-xl">A small, family-owned crew serving the Las Vegas community with honest estimates and meticulous results. For anything your home might need.</p>
+      <ul class="mt-8 space-y-3 text-[17px]">
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free estimates</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Family-owned and local to Las Vegas</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We don't leave until you're satisfied</li>
+      </ul>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#contact" class="btn btn-brand">Get a free estimate</a>
+        <a href="#work" class="btn btn-ghost">See our work</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5 reveal">
+      <div class="bg-paper text-ink rounded p-8 lg:p-9">
+        <p class="label text-brand">Free estimate</p>
+        <h2 class="mt-3 text-3xl font-bold">Get a free estimate</h2>
+        <p class="mt-3 text-black/65 text-[16px]">Call or write. We reply with an honest price for your project.</p>
+        <div class="mt-6 flex flex-col gap-3">
+          <a href="tel:7024087520" class="btn btn-brand w-full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            (702) 408-7520
+          </a>
+          <a href="mailto:arhandyman12@yahoo.com" class="btn btn-dark w-full text-[15px] sm:text-[16px] break-all">
+            <svg class="shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            arhandyman12@yahoo.com
+          </a>
+        </div>
+        <p class="mt-5 text-sm text-black/55">Open 24 hours, Monday to Saturday.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. SERVICE STRIP -->
+<section class="bg-ink text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[13px] sm:text-sm font-semibold uppercase tracking-[.16em]">
+    <span>Bathrooms</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Kitchens</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Flooring</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Exteriors</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Interiors</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Painting</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Wood decorations</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Outside works</span>
+  </div>
+</section>
+
+<!-- 3. SERVICES (brand section) -->
+<section id="services" class="bg-brand text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl">
+      <p class="label text-white/80 mb-4">Services</p>
+      <h2 class="font-extrabold uppercase text-4xl sm:text-5xl lg:text-6xl">Kitchens. Bathrooms. Floors.</h2>
+      <p class="mt-6 text-lg text-white/90 max-w-2xl">The jobs homeowners in Las Vegas call us for most, handled start to finish by the same crew.</p>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-9.jpg" alt="White remodeled kitchen with marble counters" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-2xl font-bold uppercase">Kitchens</h3>
+          <p class="mt-3 text-white/70 text-[16px]">Cabinets, counters, backsplash and finish work, built to match how you cook and live.</p>
+        </div>
+      </article>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-8.jpg" alt="Bathroom with herringbone tile shower and vanity" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-2xl font-bold uppercase">Bathrooms</h3>
+          <p class="mt-3 text-white/70 text-[16px]">Tile showers, vanities and fixtures installed cleanly, with attention to every seam.</p>
+        </div>
+      </article>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-6.jpg" alt="Kitchen with wood-look tile flooring" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-2xl font-bold uppercase">Flooring</h3>
+          <p class="mt-3 text-white/70 text-[16px]">New floors laid straight and level, from tile to plank, ready for daily use.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PROCESS -->
+<section id="process" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl">
+      <p class="label text-brand mb-4">How it works</p>
+      <h2 class="font-extrabold uppercase text-4xl sm:text-5xl lg:text-6xl">How your project runs</h2>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-6 lg:gap-8">
+      <div class="reveal border border-black/10 rounded p-8">
+        <div class="w-14 h-14 border-2 border-ink flex items-center justify-center text-xl font-bold rounded">01</div>
+        <h3 class="mt-6 text-2xl font-bold">Call for a free estimate</h3>
+        <p class="mt-3 text-black/65">Tell us what your home needs. We give you an honest estimate with no charge.</p>
+      </div>
+      <div class="reveal border border-black/10 rounded p-8">
+        <div class="w-14 h-14 border-2 border-ink flex items-center justify-center text-xl font-bold rounded">02</div>
+        <h3 class="mt-6 text-2xl font-bold">We do the work</h3>
+        <p class="mt-3 text-black/65">Meticulous craftsmanship, done according to your preferences, from start to finish.</p>
+      </div>
+      <div class="reveal border border-black/10 rounded p-8">
+        <div class="w-14 h-14 border-2 border-ink flex items-center justify-center text-xl font-bold rounded">03</div>
+        <h3 class="mt-6 text-2xl font-bold">We finish when you're satisfied</h3>
+        <p class="mt-3 text-black/65">We will not leave the job until it is finished and you are happy with the result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. BEFORE/AFTER style side-by-side -->
+<section class="bg-ink text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl">
+      <p class="label text-brand mb-4">Finished kitchens</p>
+      <h2 class="font-extrabold uppercase text-4xl sm:text-5xl lg:text-6xl">Clean lines. Solid finish.</h2>
+      <p class="mt-6 text-lg text-white/70 max-w-2xl">Two kitchens, same standard: straight cabinetry, tight tile work and surfaces ready to use.</p>
+    </div>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-6.jpg" alt="Kitchen with island, tile backsplash and plank-look floor" class="w-full h-full object-cover"></div>
+        <p class="mt-3 text-sm text-white/60 uppercase tracking-[.16em] font-semibold">Island kitchen with tile backsplash</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-9.jpg" alt="White shaker kitchen with marble counters and farmhouse sink" class="w-full h-full object-cover"></div>
+        <p class="mt-3 text-sm text-white/60 uppercase tracking-[.16em] font-semibold">White cabinets and marble counters</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. COMPARISON -->
+<section class="bg-paper py-24 lg:py-32">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl">
+      <p class="label text-brand mb-4">Why hire us</p>
+      <h2 class="font-extrabold uppercase text-4xl sm:text-5xl lg:text-6xl">Juggling trades vs one handyman</h2>
+    </div>
+    <div class="mt-14 grid md:grid-cols-2 gap-6">
+      <div class="reveal bg-white border border-black/10 rounded p-8 lg:p-10">
+        <h3 class="text-2xl font-bold">Doing it yourself</h3>
+        <ul class="mt-6 space-y-4 text-black/70">
+          <li class="flex gap-3"><span class="mt-[11px] w-3 h-[2px] bg-black/40 shrink-0"></span>Weekends lost to repairs</li>
+          <li class="flex gap-3"><span class="mt-[11px] w-3 h-[2px] bg-black/40 shrink-0"></span>Different people for each trade</li>
+          <li class="flex gap-3"><span class="mt-[11px] w-3 h-[2px] bg-black/40 shrink-0"></span>No one to answer for the result</li>
+          <li class="flex gap-3"><span class="mt-[11px] w-3 h-[2px] bg-black/40 shrink-0"></span>Jobs left half finished</li>
+        </ul>
+      </div>
+      <div class="reveal bg-white border-2 border-brand rounded p-8 lg:p-10">
+        <h3 class="text-2xl font-bold">AR Handyman Services</h3>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One family-owned crew for the whole job</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Honest estimates, free of charge</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Meticulous results, done to your preference</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We stay until the job is finished</li>
+        </ul>
+        <a href="#contact" class="btn btn-brand mt-8">Get a free estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. WHAT WE BUILD (bento) -->
+<section id="work" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl">
+      <p class="label text-brand mb-4">Our work</p>
+      <h2 class="font-extrabold uppercase text-4xl sm:text-5xl lg:text-6xl">What we build</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 lg:auto-rows-[220px]">
+      <figure class="reveal relative rounded overflow-hidden col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-2.jpg" alt="Floating concrete steps leading to a stone entry" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <figcaption class="absolute bottom-0 left-0 p-6 text-white text-2xl font-bold uppercase">Entry walkways</figcaption>
+      </figure>
+      <figure class="reveal relative rounded overflow-hidden aspect-square lg:aspect-auto">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-3.jpg" alt="Tiled shower with mosaic floor and built-in niche" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 text-white text-lg font-bold uppercase">Tile showers</figcaption>
+      </figure>
+      <figure class="reveal relative rounded overflow-hidden aspect-square lg:aspect-auto">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-8.jpg" alt="Bathroom with tub and herringbone tile" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 text-white text-lg font-bold uppercase">Bathrooms</figcaption>
+      </figure>
+      <figure class="reveal relative rounded overflow-hidden aspect-square lg:aspect-auto">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-9.jpg" alt="Kitchen with white cabinets and gas cooktop" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 text-white text-lg font-bold uppercase">Kitchens</figcaption>
+      </figure>
+      <figure class="reveal relative rounded overflow-hidden aspect-square lg:aspect-auto">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-6.jpg" alt="Kitchen island and wood-look tile floor" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 text-white text-lg font-bold uppercase">Flooring</figcaption>
+      </figure>
+      <figure class="reveal relative rounded overflow-hidden col-span-2 aspect-[2/1] lg:aspect-auto">
+        <img src="https://images.unsplash.com/photo-1595814432314-90095f342694?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8aGFuZHltYW4lMjBob21lJTIwcmVwYWlyfGVufDF8MHx8fDE3OTQyMjI0ODJ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior wall being painted" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <figcaption class="absolute bottom-0 left-0 p-5 text-white text-xl font-bold uppercase">Interior &amp; exterior painting</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8. ABOUT -->
+<section id="about" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <div class="reveal">
+      <p class="label text-brand mb-4">About us</p>
+      <h2 class="font-extrabold uppercase text-4xl sm:text-5xl lg:text-6xl">Family-owned in Las Vegas</h2>
+      <p class="mt-7 text-lg text-black/70">As a small, family-owned business proudly serving the Las Vegas community, we provide honest estimates with meticulous results. We do this to guarantee that your project is completed according to your preference.</p>
+      <p class="mt-4 text-lg text-black/70">We will not leave the job until it is finished and you are satisfied.</p>
+      <ul class="mt-7 space-y-3">
+        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Honest estimates</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Meticulous results</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quality craftsmanship and customer service</li>
+      </ul>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="tel:7024087520" class="btn btn-brand">Call (702) 408-7520</a>
+        <a href="#contact" class="btn btn-dark">Request an estimate</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="aspect-[4/5] rounded overflow-hidden">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@40593a739bd2bfbdff6ccb8690b60717f06e4cfc/sites/ar-handyman-services/21921/photo-3.jpg" alt="Finished tile shower with mosaic floor and marble bench" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. SERVICE AREA -->
+<section class="bg-white py-20 lg:py-24 border-t border-black/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5 reveal">
+      <p class="label text-brand mb-4">Service area</p>
+      <h2 class="font-extrabold uppercase text-4xl lg:text-5xl">Serving Las Vegas, NV</h2>
+      <p class="mt-5 text-black/65">Based at 1701 Kiwi Ln, Las Vegas, NV 89123. Open 24 hours Monday to Saturday, closed Sunday.</p>
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <div class="flex flex-wrap gap-3">
+        <span class="px-5 py-3 border border-black/15 rounded font-medium">Las Vegas</span>
+        <span class="px-5 py-3 border border-black/15 rounded font-medium">Las Vegas, NV 89123</span>
+        <span class="px-5 py-3 border border-black/15 rounded font-medium">Surrounding Las Vegas community</span>
+      </div>
+      <a href="https://www.google.com/maps/place/1701+Kiwi+Ln,+Las+Vegas,+NV+89123" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-8 font-semibold text-brand hover:underline">
+        View our location on Google Maps
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16">
+    <div class="lg:col-span-5 reveal">
+      <p class="label text-brand mb-4">Contact</p>
+      <h2 class="font-extrabold uppercase text-4xl sm:text-5xl lg:text-6xl">Tell us about your project</h2>
+      <p class="mt-6 text-lg text-black/70">Call for a free estimate, or send a note and we'll get back to you.</p>
+      <dl class="mt-10 space-y-6">
+        <div>
+          <dt class="label text-black/50">Phone</dt>
+          <dd class="mt-1 text-2xl font-bold"><a href="tel:7024087520" class="hover:text-brand">(702) 408-7520</a></dd>
+        </div>
+        <div>
+          <dt class="label text-black/50">Email</dt>
+          <dd class="mt-1 text-xl font-semibold break-all"><a href="mailto:arhandyman12@yahoo.com" class="hover:text-brand">arhandyman12@yahoo.com</a></dd>
+        </div>
+        <div>
+          <dt class="label text-black/50">Service area</dt>
+          <dd class="mt-1 text-lg">Las Vegas, NV and the surrounding community</dd>
+        </div>
+        <div>
+          <dt class="label text-black/50">Hours</dt>
+          <dd class="mt-1 text-lg">Monday to Saturday, open 24 hours. Sunday closed.</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <div class="bg-white border border-black/10 rounded p-6 sm:p-10">
+        <form id="contactForm" class="space-y-5" novalidate>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+              <input id="name" name="name" type="text" required class="field" autocomplete="name">
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold mb-2">Phone</label>
+              <input id="phone" name="phone" type="tel" required class="field" autocomplete="tel">
+            </div>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+            <input id="email" name="email" type="email" class="field" autocomplete="email">
+          </div>
+          <div>
+            <label for="service" class="block text-sm font-semibold mb-2">Service you need</label>
+            <select id="service" name="service" class="field">
+              <option value="">Select a service</option>
+              <option>Bathrooms</option>
+              <option>Kitchens</option>
+              <option>Flooring</option>
+              <option>Exteriors</option>
+              <option>Interiors</option>
+              <option>Painting (interior &amp; exterior)</option>
+              <option>Wood decorations</option>
+              <option>Outside works</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" class="field" placeholder="Tell us what you need done"></textarea>
+          </div>
+          <button type="submit" class="btn btn-brand w-full sm:w-auto">Send request</button>
+        </form>
+        <div id="thanks" class="hidden py-10 text-center">
+          <h3 class="text-3xl font-bold">Thanks, we'll be in touch soon.</h3>
+          <p class="mt-3 text-black/65">Need us sooner? Call <a href="tel:7024087520" class="font-semibold text-brand">(702) 408-7520</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. FINAL CALL -->
+<section class="bg-ink text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+    <div class="reveal max-w-2xl">
+      <h2 class="font-extrabold uppercase text-4xl sm:text-5xl lg:text-6xl">Call for a free estimate</h2>
+      <p class="mt-5 text-lg text-white/70">For anything your home might need in Las Vegas.</p>
+    </div>
+    <div class="reveal flex flex-col sm:flex-row gap-4">
+      <a href="tel:7024087520" class="btn btn-brand text-lg">(702) 408-7520</a>
+      <a href="mailto:arhandyman12@yahoo.com" class="btn btn-ghost">Email us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white/70">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex flex-col leading-none text-white">
+        <span class="text-[22px] font-extrabold tracking-tight">AR <span class="text-brand">HANDYMAN</span></span>
+        <span class="text-[10px] tracking-[.28em] font-semibold text-white/60 mt-1">SERVICES LLC · LAS VEGAS</span>
+      </div>
+      <p class="mt-5 text-[15px]">Quality craftsmanship and customer service for homes across Las Vegas.</p>
+    </div>
+    <div class="text-[15px] space-y-2">
+      <p class="label text-white/50 mb-3">Contact</p>
+      <p><a href="tel:7024087520" class="hover:text-white">(702) 408-7520</a></p>
+      <p><a href="mailto:arhandyman12@yahoo.com" class="hover:text-white break-all">arhandyman12@yahoo.com</a></p>
+      <p>1701 Kiwi Ln, Las Vegas, NV 89123</p>
+    </div>
+    <div class="text-[15px] space-y-2">
+      <p class="label text-white/50 mb-3">Hours</p>
+      <p>Monday to Saturday: open 24 hours</p>
+      <p>Sunday: closed</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-[13px] text-white/50 space-y-1">
+      <p>Concept redesign by LumeaPixel. This is not the official AR Handyman Services website.</p>
+      <p>Some photos by Roselyn Tirado on Unsplash.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // contact form thank-you
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    this.classList.add('hidden');
+    document.getElementById('thanks').classList.remove('hidden');
+  });
+</script>
+</body>
+</html>
