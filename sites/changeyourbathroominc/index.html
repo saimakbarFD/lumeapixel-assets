@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Change Your Bathroom, Inc. | Bathroom Remodeling in Atlanta, GA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Roboto', 'system-ui', 'sans-serif'] },
+      colors: {
+        brand: '#6cbe2b',
+        brandDark: '#0f1a0a',
+        sky: '#6aaedb',
+        ink: '#111411',
+        paper: '#f6f7f4'
+      },
+      borderRadius: { DEFAULT: '10px' }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Roboto', system-ui, sans-serif; color: #1c211b; background: #fff; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { letter-spacing: -0.015em; line-height: 1.1; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .hero-shade { background: linear-gradient(90deg, rgba(10,14,9,.88) 0%, rgba(10,14,9,.62) 48%, rgba(10,14,9,.25) 100%); }
+  @media (max-width: 767px) { .hero-shade { background: rgba(10,14,9,.72); } }
+  .card-img { transition: transform .6s ease; }
+  .card:hover .card-img { transform: scale(1.04); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .card-img { transition: none; } }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Top bar -->
+<div class="bg-brand text-ink text-sm">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <span class="font-medium">Serving Atlanta, GA &mdash; bathroom design + build only</span>
+    <a href="mailto:michelle@changeyourbathroom.com" class="hover:underline break-words">michelle@changeyourbathroom.com</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0 bg-white rounded px-3 py-1.5 flex items-center">
+      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/logo-0.png" alt="Change Your Bathroom, Inc." class="h-10 sm:h-11 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/85">
+      <a href="#difference" class="hover:text-brand transition-colors">About</a>
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="#process" class="hover:text-brand transition-colors">Process</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <div class="hidden xl:block text-right leading-tight">
+        <div class="text-xs text-white/60">Need help? Call us today</div>
+        <a href="tel:+17702724614" class="font-medium text-white hover:text-brand">(770) 272-4614</a>
+      </div>
+      <a href="tel:+17702724614" class="hidden sm:inline-flex xl:hidden items-center gap-2 bg-brand text-ink font-medium px-5 py-2.5 rounded hover:bg-white transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        (770) 272-4614
+      </a>
+      <a href="#contact" class="hidden xl:inline-flex bg-brand text-ink font-medium px-5 py-2.5 rounded hover:bg-white transition-colors">Start with design</a>
+      <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
+    <div class="px-5 py-5 flex flex-col gap-4 text-lg">
+      <a href="#difference" class="mnav">About</a>
+      <a href="#services" class="mnav">Services</a>
+      <a href="#projects" class="mnav">Projects</a>
+      <a href="#process" class="mnav">Process</a>
+      <a href="#contact" class="mnav">Contact</a>
+      <a href="tel:+17702724614" class="mt-2 inline-flex justify-center bg-brand text-ink font-medium px-5 py-3 rounded">Call (770) 272-4614</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-6.jpg" alt="Remodeled Atlanta bathroom with freestanding tub, reclaimed wood wall and blue double vanity" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-shade"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold">Atlanta's bathroom remodeling specialists.</h1>
+      <p class="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-xl">Design and build for luxury bathrooms and steam showers, with a dust-free process that protects your home and family.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-flex justify-center items-center bg-brand text-ink font-medium px-7 py-3.5 rounded hover:bg-white transition-colors">Start with design</a>
+        <a href="#projects" class="inline-flex justify-center items-center bg-white text-ink font-medium px-7 py-3.5 rounded-full hover:bg-brand transition-colors">View our portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The difference -->
+<section id="difference" class="py-24 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+      <div class="lg:col-span-6 reveal">
+        <p class="text-xs uppercase tracking-[0.2em] text-brand font-medium">The Change Your Bathroom difference</p>
+        <h2 class="mt-4 text-4xl md:text-5xl font-bold text-ink">Our name reflects our passion: bathrooms.</h2>
+
+        <div class="mt-12 grid grid-cols-3 gap-3 sm:gap-4 items-center">
+          <div class="aspect-[3/4] overflow-hidden rounded">
+            <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-1.jpg" alt="Gray inset cabinetry bathroom with marble steam shower" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-brand text-ink rounded p-4 sm:p-6 flex flex-col justify-center aspect-[3/4]">
+            <p class="text-lg sm:text-2xl font-bold leading-tight">A safe, dust-free remodel.</p>
+            <p class="mt-2 text-xs sm:text-sm font-medium opacity-80">It's kind of a big deal.</p>
+          </div>
+          <div class="aspect-[3/4] overflow-hidden rounded">
+            <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-5.jpg" alt="Reclaimed wood wall with towel niches and gold shower fixtures" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 reveal">
+        <p class="text-lg text-neutral-700 leading-relaxed">We are professional bathroom remodelers at the cutting edge of today's popular design trends. We are the oldest luxury Atlanta bathroom remodeler, with skilled tradesmen and designers for everything from copper finishes to amazing mosaics.</p>
+        <p class="mt-4 text-neutral-700 leading-relaxed">We only do Atlanta bathroom remodeling and design, so if you are looking for a bathroom design + build firm in Atlanta, we make the process simple.</p>
+
+        <div class="mt-10 divide-y divide-neutral-200 border-y border-neutral-200">
+          <div class="py-5">
+            <h3 class="text-lg font-bold text-ink">Remodeling experts</h3>
+            <p class="mt-1 text-neutral-600">Master bath, guest bathroom or a shower replacement. Steam showers, copper bathtubs, exquisite mosaic tile: we have done every type of installation.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="text-lg font-bold text-ink">Bathroom design</h3>
+            <p class="mt-1 text-neutral-600">From material selection to elevations to 3D renderings, delivered as a ready-to-install packet.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="text-lg font-bold text-ink">Dust Defense System</h3>
+            <p class="mt-1 text-neutral-600">360 degrees of containment on every bath remodel, sealing the project room off from the rest of your home.</p>
+          </div>
+        </div>
+
+        <a href="tel:+17702724614" class="mt-8 inline-flex items-center gap-3 group">
+          <span class="w-12 h-12 rounded-full bg-brand text-ink flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          </span>
+          <span>
+            <span class="block text-xs uppercase tracking-widest text-neutral-500">Call us</span>
+            <span class="block text-2xl font-bold text-ink group-hover:text-brand transition-colors">(770) 272-4614</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="relative">
+  <div class="absolute inset-x-0 top-0 h-[55%] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-24 md:pt-28 pb-24 md:pb-32">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end">
+      <div class="lg:col-span-6 reveal">
+        <p class="text-xs uppercase tracking-[0.2em] text-ink/70 font-medium">Our services</p>
+        <h2 class="mt-4 text-4xl md:text-5xl font-bold text-ink">From first sketch to the last tile.</h2>
+      </div>
+      <div class="lg:col-span-6 reveal">
+        <p class="text-ink/85 text-lg leading-relaxed">We are committed to our craft, proud of our ability to deliver a professional, quality bathroom remodel every time. Whether you need a bath remodeler or a complete redesign, we make it simple.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#contact" class="card group block bg-white rounded p-3 reveal">
+        <div class="aspect-[4/3] overflow-hidden rounded">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-1.jpg" alt="Luxury bathroom with steam shower" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-bold text-ink">Bathroom remodeling</h3>
+            <svg class="shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-2 text-neutral-600 text-[15px] leading-relaxed">Master baths, guest baths, steam showers and shower replacements.</p>
+        </div>
+      </a>
+      <a href="#contact" class="card group block bg-white rounded p-3 reveal">
+        <div class="aspect-[4/3] overflow-hidden rounded">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-9.jpg" alt="Narrow bathroom with skylight, stone wall and soaking tub" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-bold text-ink">Bathroom design</h3>
+            <svg class="shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-2 text-neutral-600 text-[15px] leading-relaxed">Layouts, elevations and 3D renderings in a ready-to-install packet.</p>
+        </div>
+      </a>
+      <a href="#contact" class="card group block bg-white rounded p-3 reveal">
+        <div class="aspect-[4/3] overflow-hidden rounded">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-5.jpg" alt="Tile, wood and gold fixtures selected for a bathroom" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-bold text-ink">Material selection</h3>
+            <svg class="shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-2 text-neutral-600 text-[15px] leading-relaxed">Flooring, fixtures, vanity, countertop, tub and grab bars, chosen with care.</p>
+        </div>
+      </a>
+      <a href="#contact" class="card group block bg-white rounded p-3 reveal">
+        <div class="aspect-[4/3] overflow-hidden rounded">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-6.jpg" alt="Finished bathroom kept clean through the remodel" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-bold text-ink">Dust Defense System</h3>
+            <svg class="shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-2 text-neutral-600 text-[15px] leading-relaxed">Full containment from the project room to your front door, every day.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Dust section -->
+<section class="py-24 md:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] overflow-hidden rounded">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-1.jpg" alt="Clean finished bathroom with gray cabinetry and glass steam shower" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <p class="text-xs uppercase tracking-[0.2em] text-brand font-medium">Let's take a moment to think about dust</p>
+      <h2 class="mt-4 text-4xl md:text-5xl font-bold text-ink">Your family needs protection.</h2>
+      <p class="mt-6 text-neutral-700 text-lg leading-relaxed">Bath remodeling is a very dusty process. Dust, mildew, mold, silica and other hazards can come out of a newly demoed bath. Sealing the room off keeps them from being spread through your house by the HVAC system.</p>
+      <p class="mt-4 text-neutral-700 leading-relaxed">We use the Dust Defense Containment System on every bath remodel. It gives your home 360 degrees of protection and gives us direct access from the entrance to the project room, from setup to completion.</p>
+      <p class="mt-4 text-neutral-700 leading-relaxed">Even for something as simple as a bathtub replacement, runners and plastic sheeting aren't enough.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects gallery -->
+<section id="projects" class="py-24 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end">
+      <div class="lg:col-span-6 reveal">
+        <p class="text-xs uppercase tracking-[0.2em] text-brand font-medium">Our projects</p>
+        <h2 class="mt-4 text-4xl md:text-5xl font-bold text-ink">Bathrooms built for Atlanta homes.</h2>
+      </div>
+      <div class="lg:col-span-6 reveal">
+        <p class="text-neutral-700 text-lg leading-relaxed">Browse for inspiration. Whether you are defining your style or ready for a fresh look, a bathroom remodel can change your everyday routine.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div class="col-span-2 lg:col-span-2 aspect-[16/10] overflow-hidden rounded reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-6.jpg" alt="Freestanding tub beside reclaimed wood wall and illuminated round mirrors" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 lg:col-span-1 aspect-square overflow-hidden rounded reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-5.jpg" alt="Wood wall with plants and marble shower" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 lg:col-span-1 aspect-square overflow-hidden rounded reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-9.jpg" alt="Narrow bathroom with walnut vanity and black fixtures" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 lg:col-span-1 aspect-square overflow-hidden rounded reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-1.jpg" alt="Gray cabinetry with LED accent lighting" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 lg:col-span-1 aspect-square overflow-hidden rounded reveal">
+        <img src="https://images.unsplash.com/photo-1682888813913-e13f18692019?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright open kitchen with marble waterfall island" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-2 lg:col-span-2 aspect-[16/10] overflow-hidden rounded reveal">
+        <img src="https://images.unsplash.com/photo-1682888813789-c39fe30921e2?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open living space with white cabinetry and marble island" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section id="process" class="py-24 md:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs uppercase tracking-[0.2em] text-brand font-medium">A little about our process</p>
+      <h2 class="mt-4 text-4xl md:text-5xl font-bold text-ink">Simple steps to a new bathroom.</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded p-8 reveal">
+        <div class="text-4xl font-bold text-brand">01</div>
+        <h3 class="mt-4 text-xl font-bold text-ink">Design</h3>
+        <p class="mt-2 text-neutral-600 leading-relaxed">First we look at floor plan changes or structural changes.</p>
+      </div>
+      <div class="bg-white rounded p-8 reveal">
+        <div class="text-4xl font-bold text-brand">02</div>
+        <h3 class="mt-4 text-xl font-bold text-ink">Material selection</h3>
+        <p class="mt-2 text-neutral-600 leading-relaxed">We pull together suggestions for your entire project, then take care of all the ordering.</p>
+      </div>
+      <div class="bg-white rounded p-8 reveal">
+        <div class="text-4xl font-bold text-brand">03</div>
+        <h3 class="mt-4 text-xl font-bold text-ink">3D renderings</h3>
+        <p class="mt-2 text-neutral-600 leading-relaxed">Visualize your bathroom with your new materials in photo-like images.</p>
+      </div>
+      <div class="bg-white rounded p-8 reveal">
+        <div class="text-4xl font-bold text-brand">04</div>
+        <h3 class="mt-4 text-xl font-bold text-ink">Elevations and final documents</h3>
+        <p class="mt-2 text-neutral-600 leading-relaxed">Once materials and renderings are approved, we create the final elevations and specs for the install.</p>
+      </div>
+    </div>
+    <p class="mt-10 max-w-3xl text-neutral-700 leading-relaxed reveal">Then comes construction. Your materials are inspected at our warehouse first, and the Dust Defense System stays up from the first day until the last. Get ready to take before pictures.</p>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="ti-reviews">
+  <style>
+    .ti-reviews{background:#fff;padding:88px 0;font-family:'Poppins','Inter',system-ui,sans-serif;color:#111}
+    .ti-reviews .ti-wrap{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:28px}
+    .ti-reviews .ti-sum{flex:none;width:230px;text-align:center}
+    .ti-reviews .ti-label{font-size:22px;font-weight:700;letter-spacing:.01em;margin-bottom:6px}
+    .ti-reviews .ti-based{font-size:15px;margin-top:6px;color:#111}
+    .ti-reviews .ti-google{display:block;margin-top:6px;font-size:40px;font-weight:500;letter-spacing:-1px;line-height:1.1;font-family:'Product Sans','Roboto','Poppins',Arial,sans-serif}
+    .ti-reviews .ti-stars{position:relative;display:inline-block;line-height:0}
+    .ti-reviews .ti-stars-fill{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap}
+    .ti-reviews .ti-slider{position:relative;flex:1;min-width:0}
+    .ti-reviews .ti-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:14px 4px 18px;scrollbar-width:none}
+    .ti-reviews .ti-track::-webkit-scrollbar{display:none}
+    .ti-reviews .ti-card{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;background:#fff;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.09);padding:20px 22px 18px;display:flex;flex-direction:column}
+    .ti-reviews .ti-head{display:flex;align-items:center;gap:12px}
+    .ti-reviews .ti-avatar{flex:none;width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}
+    .ti-reviews .ti-who{min-width:0;flex:1;display:flex;flex-direction:column}
+    .ti-reviews .ti-name{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ti-reviews .ti-date{font-size:13px;color:#8a8a8a}
+    .ti-reviews .ti-g{flex:none;align-self:flex-start}
+    .ti-reviews .ti-rate{display:flex;align-items:center;gap:6px;margin-top:12px}
+    .ti-reviews .ti-text{margin-top:10px;font-size:15px;line-height:1.5;color:#111;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+    .ti-reviews .ti-card.open .ti-text{-webkit-line-clamp:unset;display:block}
+    .ti-reviews .ti-more{margin-top:auto;padding-top:10px;align-self:flex-start;font-size:14px;color:#8a8a8a;background:none;border:0;cursor:pointer}
+    .ti-reviews .ti-more:hover{color:#111}
+    .ti-reviews .ti-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid #ddd;box-shadow:0 1px 4px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#555;z-index:2}
+    .ti-reviews .ti-prev{left:-14px}.ti-reviews .ti-next{right:-14px}
+    @media (max-width:1023px){.ti-reviews .ti-card{flex-basis:calc((100% - 16px)/2)}}
+    @media (max-width:767px){.ti-reviews{padding:64px 0}.ti-reviews .ti-wrap{flex-direction:column;gap:12px}.ti-reviews .ti-sum{width:auto}.ti-reviews .ti-slider{width:100%}.ti-reviews .ti-card{flex-basis:86%}.ti-reviews .ti-prev{left:-6px}.ti-reviews .ti-next{right:-6px}}
+  </style>
+  <div class="ti-wrap">
+        <div class="ti-sum">
+          <div class="ti-label">EXCELLENT</div>
+          <div><span class="ti-stars" role="img" aria-label="4.8 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:96%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span></div>
+          <div class="ti-based">Based on <b>18 reviews</b></div>
+          
+        </div>
+    <div class="ti-slider">
+      <button type="button" class="ti-arrow ti-prev" aria-label="Previous reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="ti-track">
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#3949ab">T</span>
+            <span class="ti-who"><span class="ti-name">Trisha Oldfield</span></span>
+            
+          </div>
+          
+          <p class="ti-text">The overall process and the results we obtained are unbelievable!! Michelle took a look at our bathroom and came up with real solutions. We knew it was dated and we knew it was not functional but we really didn’t know what to change!! Michelle and her team know bathrooms and had great solutions and suggestions!!…</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#1e88e5">P</span>
+            <span class="ti-who"><span class="ti-name">Patricia Hand</span></span>
+            
+          </div>
+          
+          <p class="ti-text">We needed someone who could work with pre-existing structure and think a bit “outside the box.” They did a fabulous job and we could not be happier with the results. Incredible dust control system, and icing on the cake — when they left, we had absolutely NO clean-up to do behind them. Could not recommend…</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#7b1fa2">W</span>
+            <span class="ti-who"><span class="ti-name">William Kitchens</span></span>
+            
+          </div>
+          
+          <p class="ti-text">The dust mitigation system they used (a plastic tunnel that was put up and taken down each day, running from our bathroom directly to our front door) was incredible, and allowed us to sleep in the adjacent bedroom throughout the entire construction. Our bathroom remodel employed extensive tilework, and I was extremely impressed with the…</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+      </div>
+      <button type="button" class="ti-arrow ti-next" aria-label="Next reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <script>(function(){var s=document.currentScript.closest('section'),t=s.querySelector('.ti-track');
+  function step(d){var c=t.querySelector('.ti-card');t.scrollBy({left:d*(c?c.offsetWidth+16:300),behavior:'smooth'});}
+  s.querySelector('.ti-prev').onclick=function(){step(-1)};s.querySelector('.ti-next').onclick=function(){step(1)};
+  function arrows(){var max=t.scrollWidth-t.clientWidth-2;s.querySelector('.ti-prev').style.display=t.scrollLeft>12?'flex':'none';s.querySelector('.ti-next').style.display=t.scrollLeft<max-10?'flex':'none';}
+  t.addEventListener('scroll',arrows);window.addEventListener('resize',arrows);arrows();
+  s.querySelectorAll('.ti-card').forEach(function(c){var p=c.querySelector('.ti-text'),b=c.querySelector('.ti-more');
+    if(p.scrollHeight<=p.clientHeight+2){b.style.visibility='hidden';}
+    b.onclick=function(){c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Hide':'Read more';};});
+  })();</script>
+</section>
+
+<!-- Call band -->
+<section class="bg-ink text-white py-20 md:py-24">
+  <div class="max-w-7xl mx-auto px-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-5xl font-bold text-brand">Call us for your luxury bathroom remodel.</h2>
+      <p class="mt-4 text-white/75 text-lg">We are your bathroom specialists.</p>
+    </div>
+    <a href="tel:+17702724614" class="inline-flex justify-center items-center gap-3 bg-brand text-ink font-bold text-lg px-8 py-4 rounded hover:bg-white transition-colors shrink-0">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      770.272.4614
+    </a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="lp-contact" style="background:#fff">
+  <style>
+    .lp-contact{position:relative}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(108,190,43,0.10);color:#6cbe2b}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#6cbe2b}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:10px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#6cbe2b;box-shadow:0 0 0 4px rgba(108,190,43,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:10px;background:#6cbe2b;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-split{display:grid}
+    @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/photo-5.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
+    .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
+    .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
+    .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
+  <div class="lp-split">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#6cbe2b">Contact</p><h2 class="lp-h" style="color:#fff">Start with design</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your bathroom and we will get back to you about your remodel.</p><ul class="lp-info">
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Call</span><a href="tel:+17702724614" class="lp-v lp-v-d">(770) 272-4614</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k lp-k-d">Email</span><a href="mailto:michelle@changeyourbathroom.com" class="lp-v lp-v-d">michelle@changeyourbathroom.com</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Service area</span><span class="lp-v lp-v-d">Atlanta, GA</span></span></li>
+        </ul></div></div>
+    <div class="lp-panel"><div><p class="lp-kick" style="color:#737373;margin-bottom:20px">Send us a message</p>
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Bathroom remodeling</option><option>Bathroom design</option><option>Material selection</option><option>Steam shower</option><option>Shower or tub replacement</option><option>Dust Defense containment</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
+          </form>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div></div>
+  </div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-ink text-white/75">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <a href="#top" class="inline-block bg-white rounded px-3 py-1.5">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/change-your-bathroom-inc/21927/logo-0.png" alt="Change Your Bathroom, Inc." class="h-10 w-auto">
+      </a>
+      <p class="mt-5 max-w-sm leading-relaxed">Atlanta's bathroom remodelers. Design and build for luxury bathrooms and steam showers.</p>
+    </div>
+    <div class="md:col-span-3">
+      <h3 class="text-white font-bold mb-4">Explore</h3>
+      <ul class="space-y-2.5">
+        <li><a href="#difference" class="hover:text-brand">About</a></li>
+        <li><a href="#services" class="hover:text-brand">Services</a></li>
+        <li><a href="#projects" class="hover:text-brand">Projects</a></li>
+        <li><a href="#process" class="hover:text-brand">Process</a></li>
+        <li><a href="#contact" class="hover:text-brand">Contact</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h3 class="text-white font-bold mb-4">Contact</h3>
+      <ul class="space-y-2.5">
+        <li><a href="tel:+17702724614" class="hover:text-brand">(770) 272-4614</a></li>
+        <li><a href="mailto:michelle@changeyourbathroom.com" class="hover:text-brand break-words text-[15px]">michelle@changeyourbathroom.com</a></li>
+        <li>Atlanta, GA</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-sm text-white/55 space-y-1">
+      <p>Concept redesign by LumeaPixel. This is not the official Change Your Bathroom, Inc. website.</p>
+      <p>Some photos by Zac Gudakov, Clay Banks and Brian Wangenheim on Unsplash.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => {
+    const open = menu.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => {
+    menu.classList.add('hidden'); btn.setAttribute('aria-expanded', false);
+  }));
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else { els.forEach(el => el.classList.add('in')); }
+</script>
+</body>
+</html>

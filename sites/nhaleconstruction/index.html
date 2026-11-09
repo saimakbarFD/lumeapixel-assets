@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NHale Construction | Custom Home Builders in Atlanta, GA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: '#0f5999',
+        brandDark: '#0a3a63',
+        ink: '#121417',
+        paper: '#f6f5f2'
+      },
+      fontFamily: {
+        heading: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif']
+      },
+      borderRadius: { DEFAULT: '14px' }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #121417; font-size: 17px; line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.01em; line-height: 1.1; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .logo-img { height: 52px; width: auto; }
+  .card-img { transition: transform .6s ease; }
+  .svc-card:hover .card-img { transform: scale(1.04); }
+  .svc-card:hover .arrow { transform: translateX(4px); }
+  .arrow { transition: transform .3s ease; }
+</style>
+</head>
+<body class="bg-white">
+
+<!-- Top bar -->
+<div class="bg-brand text-white text-sm">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <span>Serving Atlanta, GA and surrounding areas</span>
+    <a href="mailto:contact@nhaleconstruction.com" class="hover:underline break-words">contact@nhaleconstruction.com</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink text-white border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
+    <a href="#top" class="flex-shrink-0 bg-white rounded px-3 py-1.5">
+      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/logo-0.png" alt="NHale Construction" class="logo-img">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
+      <a href="#about" class="hover:text-white/70">About</a>
+      <a href="#services" class="hover:text-white/70">Services</a>
+      <a href="#projects" class="hover:text-white/70">Projects</a>
+      <a href="#contact" class="hover:text-white/70">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <div class="hidden xl:block text-right leading-tight">
+        <div class="text-xs text-white/60">Need help? Call us today</div>
+        <a href="tel:+17704302240" class="font-heading font-semibold text-lg">(770) 430-2240</a>
+      </div>
+      <a href="tel:+17704302240" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-[#0c4a80] text-white font-medium px-5 py-3 rounded-full text-sm transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call (770) 430-2240
+      </a>
+      <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
+    <div class="px-5 py-4 flex flex-col gap-4 text-base">
+      <a href="#about" class="menu-link">About</a>
+      <a href="#services" class="menu-link">Services</a>
+      <a href="#projects" class="menu-link">Projects</a>
+      <a href="#contact" class="menu-link">Contact</a>
+      <a href="tel:+17704302240" class="bg-brand text-center font-medium px-5 py-3 rounded-full">Call (770) 430-2240</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/photo-2.jpg" alt="Home under construction with blueprints and hard hat" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-ink/40"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold">Modernizing lifestyles, one build at a time</h1>
+      <p class="mt-6 text-lg md:text-xl text-white/80 max-w-xl">Custom home builders in Atlanta. Allow us to bring your visions into reality.</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href="#contact" class="bg-brand hover:bg-[#0c4a80] text-white font-medium px-7 py-3.5 rounded-full transition">Start your project</a>
+        <a href="tel:+17704302240" class="bg-white text-ink hover:bg-white/90 font-medium px-7 py-3.5 rounded-full transition">Call (770) 430-2240</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The NHale difference -->
+<section id="about" class="py-24 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14">
+    <div class="lg:col-span-6 reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">The NHale difference</p>
+      <h2 class="mt-4 text-4xl md:text-5xl font-semibold">Modern and contemporary living spaces, built around you</h2>
+
+      <div class="mt-12 grid grid-cols-2 gap-4">
+        <div class="col-span-1 aspect-[3/4] rounded overflow-hidden">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/photo-3.jpg" alt="Modern bathroom with freestanding tub and double vanity" class="w-full h-full object-cover">
+        </div>
+        <div class="col-span-1 flex flex-col gap-4">
+          <div class="bg-brand text-white rounded p-6 flex-1 flex items-end">
+            <p class="font-heading text-xl md:text-2xl font-medium leading-snug">Your needs and preferences come first.</p>
+          </div>
+          <div class="aspect-[4/3] rounded overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Carpenters cutting lumber on a miter saw" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-6 reveal">
+      <p class="text-gray-600">NHale Construction is an emerging leader in creating modern and contemporary living spaces. Our client-focused approach puts your needs and preferences at the center of everything we do.</p>
+      <p class="mt-4 text-gray-600">We don't just build structures. We create spaces that inspire. Let us bring your modern and contemporary construction plans to life as custom home builders in Atlanta.</p>
+
+      <div class="mt-10 divide-y divide-gray-200 border-y border-gray-200">
+        <div class="py-6">
+          <h3 class="text-xl font-semibold">Construction consulting and pre-construction</h3>
+          <p class="mt-2 text-gray-600 text-base">Planning and guidance before the first nail goes in, so the build starts on solid ground.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="text-xl font-semibold">Bathroom and kitchen remodeling</h3>
+          <p class="mt-2 text-gray-600 text-base">Updated rooms with modern finishes, built with a focus on workmanship.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="text-xl font-semibold">New construction and renovations</h3>
+          <p class="mt-2 text-gray-600 text-base">Ground-up homes and full renovations, managed from start to finish.</p>
+        </div>
+      </div>
+
+      <a href="tel:+17704302240" class="mt-10 inline-flex items-center gap-4 group">
+        <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        </span>
+        <span>
+          <span class="block text-sm text-gray-500">Call us today</span>
+          <span class="block font-heading text-2xl font-semibold group-hover:text-brand transition">(770) 430-2240</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="relative pb-24 md:pb-32">
+  <div class="absolute inset-x-0 top-0 h-[420px] md:h-[380px] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-20 md:pt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end text-white reveal">
+      <div class="lg:col-span-6">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/70">What we do</p>
+        <h2 class="mt-4 text-4xl md:text-5xl font-semibold">Construction management in Atlanta</h2>
+      </div>
+      <div class="lg:col-span-6">
+        <p class="text-white/85">NHale Construction is an Atlanta-based construction management firm. Among custom home builders in Atlanta, we are known for our dedication to workmanship and customer satisfaction.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#contact" class="svc-card block bg-white rounded overflow-hidden border border-gray-200 reveal">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/photo-2.jpg" alt="Blueprints and hard hat on a job site" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-semibold">Consulting and pre-construction</h3>
+            <svg class="arrow flex-shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-3 text-base text-gray-600">Planning, scope and preparation before construction begins.</p>
+        </div>
+      </a>
+      <a href="#contact" class="svc-card block bg-white rounded overflow-hidden border border-gray-200 reveal">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/photo-3.jpg" alt="Remodeled modern bathroom" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-semibold">Bathroom and kitchen remodeling</h3>
+            <svg class="arrow flex-shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-3 text-base text-gray-600">Modern, contemporary rooms built with careful workmanship.</p>
+        </div>
+      </a>
+      <a href="#contact" class="svc-card block bg-white rounded overflow-hidden border border-gray-200 reveal">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/photo-1.jpg" alt="Modern contemporary home at dusk" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-semibold">New construction</h3>
+            <svg class="arrow flex-shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-3 text-base text-gray-600">Custom homes designed around how you want to live.</p>
+        </div>
+      </a>
+      <a href="#contact" class="svc-card block bg-white rounded overflow-hidden border border-gray-200 reveal">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1593012671976-1422185230fb?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home extension under construction with scaffolding" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-semibold">Renovations</h3>
+            <svg class="arrow flex-shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-3 text-base text-gray-600">Updates and additions to the home you already have.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="pb-24 md:pb-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end reveal">
+      <div class="lg:col-span-7">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Projects</p>
+        <h2 class="mt-4 text-4xl md:text-5xl font-semibold">Spaces we build, remodel and renovate</h2>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="text-gray-600">From modern new builds to gutted-and-rebuilt interiors, here is a look at the work that goes into a finished home.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="col-span-2 aspect-[16/10] rounded overflow-hidden reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/photo-1.jpg" alt="Modern two-story home with glass walls at dusk" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-square lg:aspect-auto rounded overflow-hidden reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/photo-3.jpg" alt="Spa-style bathroom with wood tile" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-square lg:aspect-auto rounded overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior gutted with support posts ahead of renovation" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-square rounded overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1593012672105-42e6d13af5ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Steel beams supporting a home extension" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-square rounded overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1606383446056-eb3fc3cde97b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="House extension framed in scaffolding" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-2 aspect-[2/1] rounded overflow-hidden reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/photo-2.jpg" alt="House frame under construction with plans in the foreground" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call band -->
+<section class="bg-ink text-white py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-8 reveal">
+      <h2 class="text-4xl md:text-5xl font-semibold text-[#4a9be0]">Discover modern and contemporary building</h2>
+      <p class="mt-5 text-lg text-white/75 max-w-2xl">Challenge us with your aspirations, and let us create something extraordinary together. Contact us now to begin.</p>
+    </div>
+    <div class="lg:col-span-4 flex lg:justify-end reveal">
+      <a href="tel:+17704302240" class="inline-flex items-center gap-3 bg-brand hover:bg-[#0c4a80] text-white font-medium px-8 py-4 rounded-full transition">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (770) 430-2240
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="lp-contact" style="background:#fff">
+  <style>
+    .lp-contact{position:relative}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(15,89,153,0.10);color:#0f5999}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#93b4d1}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#0f5999;box-shadow:0 0 0 4px rgba(15,89,153,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#0f5999;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-split{display:grid}
+    @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1785484267229-a9ceb2eee58d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
+    .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
+    .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
+    .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
+  <div class="lp-split">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#93b4d1">Contact</p><h2 class="lp-h" style="color:#fff">Start your project with NHale Construction</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your build or remodel and we will get back to you.</p><ul class="lp-info">
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Call</span><a href="tel:+17704302240" class="lp-v lp-v-d">(770) 430-2240</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k lp-k-d">Email</span><a href="mailto:contact@nhaleconstruction.com" class="lp-v lp-v-d">contact@nhaleconstruction.com</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Service area</span><span class="lp-v lp-v-d">Atlanta, GA</span></span></li>
+        </ul></div></div>
+    <div class="lp-panel"><div><p class="lp-kick" style="color:#737373;margin-bottom:20px">Send us a message</p>
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Construction consulting</option><option>Pre-construction services</option><option>Bathroom remodeling</option><option>Kitchen remodeling</option><option>New construction</option><option>Renovations</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
+          </form>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div></div>
+  </div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-ink text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <a href="#top" class="inline-block bg-white rounded px-3 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/nhale-construction/21927/logo-0.png" alt="NHale Construction" style="height:48px;width:auto">
+      </a>
+      <p class="mt-5 text-white/65 max-w-sm text-base">An Atlanta-based construction management firm creating modern and contemporary living spaces.</p>
+    </div>
+    <div class="md:col-span-3">
+      <h4 class="text-sm font-semibold tracking-[0.15em] uppercase text-white/50">Explore</h4>
+      <ul class="mt-5 space-y-3 text-base">
+        <li><a href="#about" class="hover:text-white/70">About</a></li>
+        <li><a href="#services" class="hover:text-white/70">Services</a></li>
+        <li><a href="#projects" class="hover:text-white/70">Projects</a></li>
+        <li><a href="#contact" class="hover:text-white/70">Contact</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h4 class="text-sm font-semibold tracking-[0.15em] uppercase text-white/50">Contact</h4>
+      <ul class="mt-5 space-y-3 text-base">
+        <li><a href="tel:+17704302240" class="hover:text-white/70">(770) 430-2240</a></li>
+        <li><a href="mailto:contact@nhaleconstruction.com" class="hover:text-white/70 break-words text-[15px]">contact@nhaleconstruction.com</a></li>
+        <li class="text-white/65">Atlanta, GA</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50 space-y-1">
+      <p>Concept redesign by LumeaPixel. This is not the official NHale Construction website.</p>
+      <p>Some photos by Brett Jordan, Annie Spratt, Annie Gray, Brands&amp;People and Stefan Lehner on Unsplash.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  document.querySelectorAll('.menu-link').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
