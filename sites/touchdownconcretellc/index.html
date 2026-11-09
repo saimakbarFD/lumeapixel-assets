@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Touch Down Concrete LLC | Concrete Contractor in Atlanta, GA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+      colors: {
+        brand: '#E8751A',
+        'brand-dark': '#C85F0F',
+        ink: '#0E1118',
+        night: '#151A24',
+        stone: '#F3F1EE',
+        line: '#E4E0DA'
+      },
+      borderRadius: { DEFAULT: '10px' }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #151A24; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { letter-spacing: -0.02em; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  .card-img { transition: transform .6s ease; }
+  .card:hover .card-img { transform: scale(1.04); }
+  .card:hover .arrow { transform: translateX(4px); }
+  .arrow { transition: transform .25s ease; }
+  .hero-shade { background: linear-gradient(90deg, rgba(14,17,24,.92) 0%, rgba(14,17,24,.72) 45%, rgba(14,17,24,.35) 100%); }
+</style>
+</head>
+<body class="bg-white">
+
+<!-- Top bar -->
+<div class="bg-brand text-white text-[13px] font-medium">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <span>Serving all of Georgia within 2 hours of metro Atlanta</span>
+    <a href="mailto:qcservices2024@outlook.com" class="hover:underline break-words">qcservices2024@outlook.com</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[76px] flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0 flex items-center">
+      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/logo-0.png" alt="Touch Down Concrete LLC" class="h-12 md:h-14 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/80 font-medium">
+      <a href="#difference" class="hover:text-brand transition-colors">About</a>
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="#reviews" class="hover:text-brand transition-colors">Reviews</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-5">
+      <a href="tel:+14706952178" class="flex items-center gap-3 text-white leading-tight">
+        <svg class="w-5 h-5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span><span class="block text-[11px] text-white/60 font-normal">Need help? Call us today</span><span class="block text-[15px] font-semibold">(470) 695-2178</span></span>
+      </a>
+      <a href="#contact" class="bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-5 py-3 rounded transition-colors">Request a Quote</a>
+    </div>
+    <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 pb-6">
+    <nav class="flex flex-col text-white/90 font-medium">
+      <a href="#difference" class="py-3 border-b border-white/10">About</a>
+      <a href="#services" class="py-3 border-b border-white/10">Services</a>
+      <a href="#projects" class="py-3 border-b border-white/10">Projects</a>
+      <a href="#reviews" class="py-3 border-b border-white/10">Reviews</a>
+      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
+    </nav>
+    <a href="tel:+14706952178" class="mt-5 flex items-center justify-center gap-2 bg-brand text-white font-semibold py-3.5 rounded">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (470) 695-2178
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="relative bg-ink">
+  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-1.jpg" alt="New concrete driveway leading to a stone-faced home in Georgia" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-shade"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-24 md:py-32 lg:py-44">
+    <div class="max-w-2xl">
+      <p class="text-brand text-xs font-semibold tracking-[0.22em] uppercase mb-5">Concrete contractor &middot; Atlanta, GA</p>
+      <h1 class="text-white text-4xl sm:text-5xl lg:text-[4rem] font-semibold leading-[1.05]">Driveways, patios and slabs poured right.</h1>
+      <p class="mt-6 text-white/80 text-lg leading-relaxed max-w-xl">Over 20 years of concrete experience. Luxury driveways, custom patios, stamped concrete, retaining walls and high-end residential concrete across Georgia.</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold px-7 py-4 rounded transition-colors">
+          Request a Quote
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#projects" class="inline-flex items-center bg-white hover:bg-stone text-ink font-semibold px-7 py-4 rounded-full transition-colors">View Gallery</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="bg-night border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4">
+    <div class="flex items-start gap-3 text-white/90 text-[15px]"><svg class="w-5 h-5 text-brand shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Over 20 years of concrete experience</div>
+    <div class="flex items-start gap-3 text-white/90 text-[15px]"><svg class="w-5 h-5 text-brand shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Workers' comp coverage for our crews</div>
+    <div class="flex items-start gap-3 text-white/90 text-[15px]"><svg class="w-5 h-5 text-brand shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Free, no-obligation quotes</div>
+    <div class="flex items-start gap-3 text-white/90 text-[15px]"><svg class="w-5 h-5 text-brand shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Serving all of Georgia within 2 hours of metro Atlanta</div>
+  </div>
+</section>
+
+<!-- The Touch Down difference -->
+<section id="difference" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+    <div class="lg:col-span-7 reveal">
+      <p class="text-brand text-xs font-semibold tracking-[0.22em] uppercase mb-5">The Touch Down difference</p>
+      <h2 class="text-4xl md:text-5xl font-semibold leading-[1.08] text-ink max-w-xl">Built on trust, backed by results.</h2>
+      <div class="mt-12 grid grid-cols-6 gap-4 items-stretch">
+        <div class="col-span-3 sm:col-span-2 rounded overflow-hidden aspect-[3/4] sm:aspect-[3/4]">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-3.jpg" alt="Stamped concrete patio with a natural flagstone pattern" class="w-full h-full object-cover">
+        </div>
+        <div class="col-span-3 sm:col-span-2 bg-brand text-white rounded p-5 sm:p-6 flex flex-col justify-between aspect-[3/4] sm:aspect-auto">
+          <p class="text-xs font-semibold tracking-[0.18em] uppercase text-white/80">Our promise</p>
+          <p class="text-xl sm:text-2xl font-semibold leading-snug">Built Strong. Built Right. Built to Last.</p>
+        </div>
+        <div class="col-span-6 sm:col-span-2 rounded overflow-hidden aspect-[4/3] sm:aspect-[3/4]">
+          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-5.jpg" alt="Freshly finished concrete slab with clean control joints" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 reveal">
+      <p class="text-lg text-ink/80 leading-relaxed">Touch Down Concrete LLC is based in metro Atlanta and serves homeowners and businesses across Georgia within a 2-hour radius. Our skilled professionals bring precision, quality and care to every project.</p>
+      <p class="mt-4 text-lg text-ink/80 leading-relaxed">We keep training and updating our knowledge so clients get the best solution for the job.</p>
+      <div class="mt-9 divide-y divide-line border-y border-line">
+        <div class="py-5"><h3 class="font-semibold text-ink text-lg">Workers' comp coverage</h3><p class="text-ink/65 mt-1">Our crews are protected on every job site.</p></div>
+        <div class="py-5"><h3 class="font-semibold text-ink text-lg">Free estimates</h3><p class="text-ink/65 mt-1">No-obligation quotes on every project.</p></div>
+        <div class="py-5"><h3 class="font-semibold text-ink text-lg">Workmanship warranty</h3><p class="text-ink/65 mt-1">We stand behind every pour we make.</p></div>
+        <div class="py-5"><h3 class="font-semibold text-ink text-lg">On-time delivery</h3><p class="text-ink/65 mt-1">Clear timelines and reliable crews.</p></div>
+      </div>
+      <a href="tel:+14706952178" class="mt-9 inline-flex items-center gap-4 group">
+        <span class="w-12 h-12 rounded-full bg-brand flex items-center justify-center text-white">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <span><span class="block text-xs text-ink/55 uppercase tracking-[0.15em]">Call for a free quote</span><span class="block text-2xl font-semibold text-ink group-hover:text-brand transition-colors">(470) 695-2178</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="relative bg-white pb-24 lg:pb-32">
+  <div class="absolute top-0 inset-x-0 h-[420px] md:h-[400px] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-20 lg:pt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
+      <div class="lg:col-span-6">
+        <p class="text-white/85 text-xs font-semibold tracking-[0.22em] uppercase mb-4">Our expertise</p>
+        <h2 class="text-4xl md:text-5xl font-semibold leading-[1.08] text-white">Premium concrete services.</h2>
+      </div>
+      <p class="lg:col-span-6 text-white/90 text-lg leading-relaxed">From new installations to repairs, we handle residential and commercial concrete projects of all sizes.</p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#contact" class="card block group reveal">
+        <div class="rounded overflow-hidden aspect-[4/5] bg-stone"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-2.jpg" alt="Poured concrete driveway" class="card-img w-full h-full object-cover"></div>
+        <div class="pt-5 flex items-center justify-between gap-3">
+          <h3 class="text-xl font-semibold text-ink">Driveways</h3>
+          <svg class="arrow w-5 h-5 text-brand shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="text-ink/65 mt-2 leading-relaxed">New drives and full replacements, cleanly formed and finished.</p>
+      </a>
+      <a href="#contact" class="card block group reveal">
+        <div class="rounded overflow-hidden aspect-[4/5] bg-stone"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-3.jpg" alt="Stamped concrete patio" class="card-img w-full h-full object-cover"></div>
+        <div class="pt-5 flex items-center justify-between gap-3">
+          <h3 class="text-xl font-semibold text-ink">Stamped Concrete</h3>
+          <svg class="arrow w-5 h-5 text-brand shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="text-ink/65 mt-2 leading-relaxed">Patterned patios and walkways with the look of natural stone.</p>
+      </a>
+      <a href="#contact" class="card block group reveal">
+        <div class="rounded overflow-hidden aspect-[4/5] bg-stone"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-5.jpg" alt="Concrete slab and patio" class="card-img w-full h-full object-cover"></div>
+        <div class="pt-5 flex items-center justify-between gap-3">
+          <h3 class="text-xl font-semibold text-ink">Patios and Slabs</h3>
+          <svg class="arrow w-5 h-5 text-brand shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="text-ink/65 mt-2 leading-relaxed">Custom patios and flatwork for homes and businesses.</p>
+      </a>
+      <a href="#contact" class="card block group reveal">
+        <div class="rounded overflow-hidden aspect-[4/5] bg-stone"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-4.jpg" alt="Reinforced foundation slab ready for the pour" class="card-img w-full h-full object-cover"></div>
+        <div class="pt-5 flex items-center justify-between gap-3">
+          <h3 class="text-xl font-semibold text-ink">Foundations and Walls</h3>
+          <svg class="arrow w-5 h-5 text-brand shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="text-ink/65 mt-2 leading-relaxed">Reinforced slabs and retaining walls built to hold.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-24 lg:py-32 bg-stone">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
+      <div class="lg:col-span-6">
+        <p class="text-brand text-xs font-semibold tracking-[0.22em] uppercase mb-4">Recent work</p>
+        <h2 class="text-4xl md:text-5xl font-semibold leading-[1.08] text-ink">Recent projects around Atlanta.</h2>
+      </div>
+      <p class="lg:col-span-6 text-ink/70 text-lg leading-relaxed">A few of our completed concrete installations across the Atlanta area.</p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-6 gap-4">
+      <div class="col-span-2 lg:col-span-4 rounded overflow-hidden aspect-[16/9] reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-7.jpg" alt="Large concrete driveway at a stone home" class="w-full h-full object-cover"></div>
+      <div class="col-span-1 lg:col-span-2 rounded overflow-hidden aspect-[3/4] lg:aspect-auto reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-9.jpg" alt="Stamped flagstone pattern concrete" class="w-full h-full object-cover"></div>
+      <div class="col-span-1 lg:col-span-2 rounded overflow-hidden aspect-[3/4] reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-8.jpg" alt="Curved residential concrete driveway" class="w-full h-full object-cover"></div>
+      <div class="col-span-2 lg:col-span-2 rounded overflow-hidden aspect-[4/3] lg:aspect-[3/4] reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-5.jpg" alt="Finished concrete pad with formed edges" class="w-full h-full object-cover"></div>
+      <div class="col-span-2 lg:col-span-2 rounded overflow-hidden aspect-[4/3] lg:aspect-[3/4] reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/photo-10.jpg" alt="Rebar and vapor barrier prepared for a slab pour" class="w-full h-full object-cover"></div>
+    </div>
+
+    <div class="mt-10 reveal">
+      <a href="#contact" class="inline-flex items-center gap-2 text-ink font-semibold border-b-2 border-brand pb-1 hover:text-brand transition-colors">
+        Start your project
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal">
+      <p class="text-brand text-xs font-semibold tracking-[0.22em] uppercase mb-4">Reviews</p>
+      <h2 class="text-4xl md:text-5xl font-semibold leading-[1.08] text-ink max-w-2xl">What Georgia homeowners say.</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <figure class="reveal border border-line rounded p-8 flex flex-col justify-between">
+        <blockquote class="text-lg text-ink leading-relaxed">&ldquo;Touch Down Concrete transformed our backyard. The patio looks incredible and the crew was professional from start to finish.&rdquo;</blockquote>
+        <figcaption class="mt-8 pt-6 border-t border-line"><span class="block font-semibold text-ink">Sarah M.</span><span class="block text-sm text-ink/60">Metro Atlanta, GA</span></figcaption>
+      </figure>
+      <figure class="reveal border border-line rounded p-8 flex flex-col justify-between">
+        <blockquote class="text-lg text-ink leading-relaxed">&ldquo;They replaced our old cracked driveway in two days. Fair price, clean work, and it looks brand new.&rdquo;</blockquote>
+        <figcaption class="mt-8 pt-6 border-t border-line"><span class="block font-semibold text-ink">James T.</span><span class="block text-sm text-ink/60">Chamblee, GA</span></figcaption>
+      </figure>
+      <figure class="reveal border border-line rounded p-8 flex flex-col justify-between">
+        <blockquote class="text-lg text-ink leading-relaxed">&ldquo;Highly recommend for stamped concrete. The detail and craftsmanship exceeded our expectations.&rdquo;</blockquote>
+        <figcaption class="mt-8 pt-6 border-t border-line"><span class="block font-semibold text-ink">Maria L.</span><span class="block text-sm text-ink/60">Norcross, GA</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Call band -->
+<section class="bg-ink py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-8">
+      <h2 class="text-brand text-3xl md:text-5xl font-semibold leading-[1.1]">Ready to start your concrete project?</h2>
+      <p class="mt-5 text-white/75 text-lg max-w-2xl">Tell us about your project and we'll get back to you with a free, no-obligation quote.</p>
+    </div>
+    <div class="lg:col-span-4 flex flex-wrap lg:justify-end gap-3">
+      <a href="#contact" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold px-7 py-4 rounded transition-colors">Request a Quote</a>
+      <a href="tel:+14706952178" class="inline-flex items-center bg-white hover:bg-stone text-ink font-semibold px-7 py-4 rounded-full transition-colors">Call (470) 695-2178</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact (auto-filled) -->
+<section id="contact" class="lp-contact py-24 md:py-32 bg-[#f6f5f2]">
+  <style>
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(232,117,26,0.10);color:#E8751A}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 12px 32px -12px rgba(16,24,40,.10)}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:10px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#E8751A;box-shadow:0 0 0 4px rgba(232,117,26,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border-radius:10px;background:#E8751A;color:#111111;font-weight:600;font-size:16px;transition:filter .15s,transform .15s}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+  </style>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div class="lg:col-span-5">
+        <p class="text-[13px] font-semibold uppercase tracking-[.16em]" style="color:#E8751A">Contact</p>
+        <h2 class="mt-4 text-4xl md:text-5xl font-semibold leading-[1.08] tracking-tight text-neutral-900">Request a free estimate</h2>
+        <p class="mt-5 text-lg leading-relaxed text-neutral-600 max-w-md">Tell us about your concrete project and we'll get back to you with a free, no-obligation quote.</p>
+        <ul class="mt-10 space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Call</span>
+            <a href="tel:+14706952178" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">(470) 695-2178</a></span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Email</span>
+            <a href="mailto:qcservices2024@outlook.com" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">qcservices2024@outlook.com</a></span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Service area</span>
+            <span class="text-lg font-medium text-neutral-900">Atlanta, GA</span></span>
+          </li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7">
+        <div class="lp-card p-6 sm:p-8 md:p-10">
+          <form id="lp-form" novalidate class="grid sm:grid-cols-2 gap-x-5 gap-y-6">
+            <div class="">
+              <label for="lp-name" class="lp-label">Full name</label>
+              <input id="lp-name" name="name" type="text" required class="lp-input">
+            </div>
+            <div class="">
+              <label for="lp-phone" class="lp-label">Phone</label>
+              <input id="lp-phone" name="phone" type="tel" required class="lp-input">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="lp-email" class="lp-label">Email</label>
+              <input id="lp-email" name="email" type="email" required class="lp-input">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input">
+                <option value="">Choose a service</option><option>Driveways</option><option>Stamped Concrete</option><option>Patios and Slabs</option><option>Foundations</option><option>Retaining Walls</option><option>Repairs</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea>
+            </div>
+            <div class="sm:col-span-2 pt-2">
+              <button type="submit" class="lp-btn w-full sm:w-auto">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button>
+            </div>
+          </form>
+          <div id="lp-thanks" class="hidden py-16 text-center">
+            <span class="lp-ic mx-auto" style="width:56px;height:56px"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span>
+            <p class="mt-5 text-2xl font-semibold text-neutral-900">Thanks, we'll be in touch soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('hidden');document.getElementById('lp-thanks').classList.remove('hidden');});</script>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-ink text-white/75 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+    <div class="md:col-span-5">
+      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/touch-down-concrete-llc/21924/logo-0.png" alt="Touch Down Concrete LLC" class="h-14 w-auto">
+      <p class="mt-6 max-w-sm leading-relaxed">Professional concrete services across Georgia within 2 hours of metro Atlanta. Over 20 years of experience.</p>
+    </div>
+    <div class="md:col-span-3">
+      <h3 class="text-white font-semibold mb-5">Explore</h3>
+      <ul class="space-y-3">
+        <li><a href="#difference" class="hover:text-brand transition-colors">About</a></li>
+        <li><a href="#services" class="hover:text-brand transition-colors">Services</a></li>
+        <li><a href="#projects" class="hover:text-brand transition-colors">Projects</a></li>
+        <li><a href="#reviews" class="hover:text-brand transition-colors">Reviews</a></li>
+        <li><a href="#contact" class="hover:text-brand transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h3 class="text-white font-semibold mb-5">Contact</h3>
+      <ul class="space-y-3">
+        <li><a href="tel:+14706952178" class="hover:text-brand transition-colors">(470) 695-2178</a></li>
+        <li><a href="mailto:qcservices2024@outlook.com" class="hover:text-brand transition-colors break-words text-[15px]">qcservices2024@outlook.com</a></li>
+        <li>Atlanta, GA</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/55 space-y-1">
+      <p>&copy; 2026 Touch Down Concrete LLC. All rights reserved.</p>
+      <p>Concept redesign by LumeaPixel. This is not the official Touch Down Concrete LLC website.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else {
+    els.forEach(el => el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
