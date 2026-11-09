@@ -254,67 +254,82 @@ tailwind.config = {
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-0 items-stretch">
-    <div class="lg:col-span-5 reveal">
-      <div class="relative h-full min-h-[320px] lg:min-h-[640px] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1719569019031-ca8fb2911e2d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright kitchen with painted cabinets and a window over the sink" class="absolute inset-0 w-full h-full object-cover">
+<section id="contact" class="lp-contact py-24 md:py-32 bg-[#f6f5f2]">
+  <style>
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(248,151,29,0.10);color:#f8971d}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 12px 32px -12px rgba(16,24,40,.10)}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#f8971d;box-shadow:0 0 0 4px rgba(248,151,29,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border-radius:6px;background:#f8971d;color:#111111;font-weight:600;font-size:16px;transition:filter .15s,transform .15s}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+  </style>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div class="lg:col-span-5">
+        <p class="text-[13px] font-semibold uppercase tracking-[.16em]" style="color:#f8971d">Contact</p>
+        <h2 class="mt-4 text-4xl md:text-5xl font-semibold leading-[1.08] tracking-tight text-neutral-900">Request a free in-home consultation</h2>
+        <p class="mt-5 text-lg leading-relaxed text-neutral-600 max-w-md">Tell us about your kitchen and we will set up a time to visit, measure and talk through options.</p>
+        <ul class="mt-10 space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Call</span>
+            <a href="tel:+18303874253" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">(830) 387-4253</a></span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Email</span>
+            <a href="mailto:rjimenez@kitchentuneup.com" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">rjimenez@kitchentuneup.com</a></span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Service area</span>
+            <span class="text-lg font-medium text-neutral-900">New Braunfels, TX</span></span>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="lg:col-span-7 lg:-ml-16 lg:my-12 relative z-10 reveal">
-      <div class="bg-brand rounded p-7 sm:p-10 lg:p-12 text-ink">
-        <p class="text-xs font-semibold tracking-[0.22em] uppercase text-ink/70 mb-3">Contact</p>
-        <h2 class="text-3xl sm:text-4xl font-bold leading-[1.1] tracking-tight">Request a free in-home consultation</h2>
-        <p class="mt-4 text-ink/80 text-lg leading-relaxed">Send us your details and we will reach out to schedule your consultation.</p>
-
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-3 text-[15px] font-semibold">
-          <a href="tel:+18303874253" class="hover:underline">(830) 387-4253</a>
-          <a href="mailto:rjimenez@kitchentuneup.com" class="hover:underline break-words sm:col-span-2">rjimenez@kitchentuneup.com</a>
-          <p class="sm:col-span-3 font-medium text-ink/80">Serving New Braunfels, TX and the surrounding area.</p>
-        </div>
-
-        <div class="mt-8 bg-white rounded p-6 sm:p-8">
-          <form id="contactForm" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label for="name" class="block text-sm font-bold mb-2">Name</label>
-              <input id="name" name="name" type="text" required class="field" autocomplete="name">
+      <div class="lg:col-span-7">
+        <div class="lp-card p-6 sm:p-8 md:p-10">
+          <form id="lp-form" novalidate class="grid sm:grid-cols-2 gap-x-5 gap-y-6">
+            <div class="">
+              <label for="lp-name" class="lp-label">Full name</label>
+              <input id="lp-name" name="name" type="text" required class="lp-input">
             </div>
-            <div>
-              <label for="phone" class="block text-sm font-bold mb-2">Phone</label>
-              <input id="phone" name="phone" type="tel" required class="field" autocomplete="tel">
+            <div class="">
+              <label for="lp-phone" class="lp-label">Phone</label>
+              <input id="lp-phone" name="phone" type="tel" required class="lp-input">
             </div>
             <div class="sm:col-span-2">
-              <label for="email" class="block text-sm font-bold mb-2">Email</label>
-              <input id="email" name="email" type="email" required class="field" autocomplete="email">
+              <label for="lp-email" class="lp-label">Email</label>
+              <input id="lp-email" name="email" type="email" required class="lp-input">
             </div>
             <div class="sm:col-span-2">
-              <label for="service" class="block text-sm font-bold mb-2">Service you need</label>
-              <select id="service" name="service" class="field">
-                <option>The Original Tune-Up</option>
-                <option>Cabinet Redooring</option>
-                <option>Cabinet Painting</option>
-                <option>Cabinet Refacing</option>
-                <option>Custom Cabinets</option>
-                <option>Countertops</option>
-                <option>Accessories &amp; Organizers</option>
-                <option>Outdoor Kitchens</option>
+              <label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input">
+                <option value="">Choose a service</option><option>The Original Tune-Up</option><option>Cabinet Painting</option><option>Cabinet Refacing</option><option>Cabinet Redooring</option><option>Countertops</option><option>Custom Cabinets</option>
+                <option>Something else</option>
               </select>
             </div>
             <div class="sm:col-span-2">
-              <label for="message" class="block text-sm font-bold mb-2">Message</label>
-              <textarea id="message" name="message" class="field" placeholder="Tell us about your kitchen"></textarea>
+              <label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea>
             </div>
-            <div class="sm:col-span-2">
-              <button type="submit" class="w-full sm:w-auto h-14 px-10 bg-ink hover:bg-cocoa text-white font-bold rounded transition-colors focus:outline-none focus:ring-4 focus:ring-brand/40">Request my consultation</button>
+            <div class="sm:col-span-2 pt-2">
+              <button type="submit" class="lp-btn w-full sm:w-auto">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button>
             </div>
           </form>
-          <div id="thanks" class="hidden py-10 text-center">
-            <p class="text-2xl font-bold">Thanks, we'll be in touch soon.</p>
+          <div id="lp-thanks" class="hidden py-16 text-center">
+            <span class="lp-ic mx-auto" style="width:56px;height:56px"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span>
+            <p class="mt-5 text-2xl font-semibold text-neutral-900">Thanks, we'll be in touch soon.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('hidden');document.getElementById('lp-thanks').classList.remove('hidden');});</script>
 </section>
 
 </main>
