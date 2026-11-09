@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Western Specialty Contractors | Concrete Restoration in Atlanta, GA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
+      colors: {
+        brand: '#1f4aa8',
+        brandDark: '#0c1a3a',
+        ink: '#0d0f14',
+        paper: '#f5f4f1'
+      },
+      borderRadius: { DEFAULT: '14px' }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: #1a1d24; -webkit-font-smoothing: antialiased; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .svc-card img { transition: transform .6s ease; }
+  .svc-card:hover img { transform: scale(1.04); }
+  .svc-card:hover .arrow { transform: translateX(4px); }
+  .arrow { transition: transform .3s ease; }
+  .rounded-r { border-radius: 14px; }
+</style>
+</head>
+<body class="bg-white">
+
+<!-- Top bar -->
+<div class="bg-brand text-white text-sm">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+    <span class="font-medium">Serving Atlanta and the surrounding Georgia area</span>
+    <a href="mailto:mikek1@westerngroup.com" class="break-words hover:underline">mikek1@westerngroup.com</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="shrink-0 bg-white rounded-r px-3 py-1.5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/western-specialty-contractors/21935/logo-0.png" alt="Western Specialty Contractors" class="h-9 sm:h-11 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <a href="#about" class="hover:text-white/70 transition">About</a>
+      <a href="#services" class="hover:text-white/70 transition">Services</a>
+      <a href="#projects" class="hover:text-white/70 transition">Projects</a>
+      <a href="#contact" class="hover:text-white/70 transition">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-5">
+      <div class="text-right leading-tight">
+        <div class="text-xs text-white/60">Need help? Call us today</div>
+        <a href="tel:+16785530170" class="font-semibold">(678) 553-0170</a>
+      </div>
+      <a href="#contact" class="bg-brand hover:bg-white hover:text-ink transition px-5 py-3 rounded-r text-sm font-semibold">Request an estimate</a>
+    </div>
+    <div class="flex md:hidden items-center gap-3">
+      <a href="tel:+16785530170" class="bg-brand px-3.5 py-2.5 rounded-r text-sm font-semibold flex items-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+      <button id="menuBtn" aria-label="Menu" class="p-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
+    <div class="px-5 py-4 flex flex-col gap-4 text-base font-medium">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1694580511884-7de02841ac2b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of an Atlanta street lined with older masonry and concrete buildings" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-ink/75"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 sm:py-32 lg:py-44">
+    <div class="max-w-3xl">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/70 mb-5">Atlanta Branch</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">Concrete restoration for Atlanta's parking structures and buildings.</h1>
+      <p class="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">Concrete repairs, epoxy injection, waterproofing and specialty fixes for garages, campuses and churches across Georgia.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="bg-brand hover:bg-white hover:text-ink transition px-7 py-4 rounded-r font-semibold text-center">Request an estimate</a>
+        <a href="tel:+16785530170" class="bg-white text-ink hover:bg-white/85 transition px-7 py-4 rounded-r font-semibold text-center">Call (678) 553-0170</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The difference -->
+<section id="about" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+      <div class="lg:col-span-6 reveal">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">The Western difference</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-ink">Problem-solving crews who find a way when the standard method won't hold.</h2>
+
+        <div class="mt-12 grid grid-cols-6 gap-3 items-stretch">
+          <div class="col-span-3 sm:col-span-2 rounded-r overflow-hidden aspect-[3/4]">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/western-specialty-contractors/21935/photo-1.jpg" alt="Two Western crew members reviewing plans on a tablet on a high-rise rooftop" class="w-full h-full object-cover">
+          </div>
+          <div class="col-span-3 sm:col-span-2 rounded-r bg-brand text-white p-5 flex flex-col justify-between aspect-[3/4] sm:aspect-auto">
+            <p class="text-sm font-semibold tracking-wide uppercase text-white/70">On site</p>
+            <p class="text-xl font-bold leading-snug">6,200 sq ft of overhead concrete repair at Zion Hill.</p>
+          </div>
+          <div class="col-span-6 sm:col-span-2 rounded-r overflow-hidden aspect-[3/2] sm:aspect-[3/4]">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/western-specialty-contractors/21935/photo-3.jpg" alt="Western crew working from a lift beneath a parking garage slab" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 reveal">
+        <p class="text-lg text-neutral-700 leading-relaxed">The Atlanta Branch of Western Specialty Contractors restores the concrete structures that people drive, park and worship in every day. Whether the job is a university garage or a church deck, we plan the work around the owner's timeline and the engineer's requirements.</p>
+        <p class="mt-5 text-lg text-neutral-700 leading-relaxed">When a specified method won't work in the field, our crews test it, explain why, and propose a better one. On the KSU West Deck, that meant re-tensioning barrier cables with turnbuckles instead of pulling them from the end caps.</p>
+
+        <div class="mt-10 divide-y divide-neutral-200 border-y border-neutral-200">
+          <div class="py-5">
+            <h3 class="font-bold text-ink">Concrete repair</h3>
+            <p class="text-neutral-600 mt-1">Overhead and deck repairs, planned for production speed and tight owner schedules.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="font-bold text-ink">Waterproofing and sealing</h3>
+            <p class="text-neutral-600 mt-1">Routing and sealing of deck surfaces to keep water out of the structure.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="font-bold text-ink">Epoxy injection</h3>
+            <p class="text-neutral-600 mt-1">Crack repair that restores strength to garage slabs and structural members.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="font-bold text-ink">Specialty work</h3>
+            <p class="text-neutral-600 mt-1">Barrier cable retensioning and other custom fixes built to the engineer's requirements.</p>
+          </div>
+        </div>
+
+        <a href="tel:+16785530170" class="mt-8 inline-flex items-center gap-4 group">
+          <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span>
+            <span class="block text-xs text-neutral-500">Call the Atlanta branch</span>
+            <span class="block text-xl font-bold text-ink group-hover:text-brand transition">(678) 553-0170</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="relative pb-24 lg:pb-32">
+  <div class="absolute top-0 left-0 right-0 h-[330px] sm:h-[300px] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-20 lg:pt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end text-white reveal">
+      <div class="lg:col-span-7">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/70 mb-4">What we do</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">Restoration work for structures that carry weight.</h2>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="text-white/85 text-lg leading-relaxed">From minor leaks to full capital restoration, we repair and protect the concrete your property depends on.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#contact" class="svc-card block reveal">
+        <div class="rounded-r overflow-hidden aspect-[4/3] bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1673978484328-40359db01843?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew members working across a reinforced concrete pour" class="w-full h-full object-cover">
+        </div>
+        <div class="mt-4 flex items-center justify-between gap-3">
+          <h3 class="text-lg font-bold text-ink">Concrete repair</h3>
+          <svg class="arrow shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="mt-1.5 text-neutral-600 text-[15px] leading-relaxed">Deck and overhead slab repairs for garages and structures.</p>
+      </a>
+      <a href="#contact" class="svc-card block reveal">
+        <div class="rounded-r overflow-hidden aspect-[4/3] bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1760243875440-3556238664d6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker pressure washing concrete stadium steps" class="w-full h-full object-cover">
+        </div>
+        <div class="mt-4 flex items-center justify-between gap-3">
+          <h3 class="text-lg font-bold text-ink">Waterproofing and sealing</h3>
+          <svg class="arrow shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="mt-1.5 text-neutral-600 text-[15px] leading-relaxed">Routing, sealing and maintenance to stop leaks and slow deterioration.</p>
+      </a>
+      <a href="#contact" class="svc-card block reveal">
+        <div class="rounded-r overflow-hidden aspect-[4/3] bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1761805574493-87d5d07ac282?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Damaged concrete floors with exposed rebar on a structure" class="w-full h-full object-cover">
+        </div>
+        <div class="mt-4 flex items-center justify-between gap-3">
+          <h3 class="text-lg font-bold text-ink">Epoxy injection</h3>
+          <svg class="arrow shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="mt-1.5 text-neutral-600 text-[15px] leading-relaxed">Crack repair that restores structural integrity to damaged concrete.</p>
+      </a>
+      <a href="#contact" class="svc-card block reveal">
+        <div class="rounded-r overflow-hidden aspect-[4/3] bg-neutral-200">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/western-specialty-contractors/21935/photo-2.jpg" alt="Parking garage barrier cables and brick exterior at Kennesaw State University" class="w-full h-full object-cover">
+        </div>
+        <div class="mt-4 flex items-center justify-between gap-3">
+          <h3 class="text-lg font-bold text-ink">Specialty repairs</h3>
+          <svg class="arrow shrink-0 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="mt-1.5 text-neutral-600 text-[15px] leading-relaxed">Barrier cable retensioning and custom fixes built to the engineer's spec.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-24 lg:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end reveal">
+      <div class="lg:col-span-7">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Recent work</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-ink">Garages restored across Georgia.</h2>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="text-neutral-600 text-lg leading-relaxed">Two recent Atlanta Branch projects, from a university campus to a historic church.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <article class="reveal bg-white rounded-r overflow-hidden">
+        <div class="aspect-[3/2] overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/western-specialty-contractors/21935/photo-2.jpg" alt="KSU West Parking Garage barrier cables and brick, Kennesaw, GA" class="w-full h-full object-cover">
+        </div>
+        <div class="p-7">
+          <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Kennesaw, GA</p>
+          <h3 class="mt-2 text-2xl font-bold text-ink">KSU West Parking Garage</h3>
+          <p class="mt-3 text-neutral-600 leading-relaxed">General maintenance, repairs and waterproofing at Kennesaw State University's West Deck, 48 Campus Loop Road. Work covered concrete repairs, epoxy injection, and routing and sealing of the deck surface. When the specified method risked pulling end caps out of the columns, the crew re-tensioned the barrier cables with turnbuckles instead. Hired by Ian Tierney-Walker Consultants; engineer of record Walker Consultants.</p>
+          <a href="https://westernspecialtycontractors.com/ksu-parking-garage/" class="mt-5 inline-flex items-center gap-2 font-semibold text-brand hover:text-ink transition">
+            Read the full project
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="reveal bg-white rounded-r overflow-hidden">
+        <div class="aspect-[3/2] overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/western-specialty-contractors/21935/photo-3.jpg" alt="Western crew on a lift repairing the overhead slab at Zion Hill parking garage, Atlanta" class="w-full h-full object-cover">
+        </div>
+        <div class="p-7">
+          <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Atlanta, GA</p>
+          <h3 class="mt-2 text-2xl font-bold text-ink">Zion Hill Parking Garage</h3>
+          <p class="mt-3 text-neutral-600 leading-relaxed">Concrete restoration at Zion Hill Baptist Church, 6175 Campbellton Road SW. The hardest part was the overhead slab, with 6,200 sq ft of repairs completed on a short owner timeline. Attaching chipping hammers to air jacks let the crew keep production moving.</p>
+          <a href="https://westernspecialtycontractors.com/zion-hill-parking-garage/" class="mt-5 inline-flex items-center gap-2 font-semibold text-brand hover:text-ink transition">
+            Read the full project
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+      <div class="rounded-r overflow-hidden aspect-[4/3]"><img src="https://images.unsplash.com/photo-1673978484328-40359db01843?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete pour over steel reinforcement" class="w-full h-full object-cover"></div>
+      <div class="rounded-r overflow-hidden aspect-[4/3]"><img src="https://images.unsplash.com/photo-1694358338222-2fe5226bc713?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Looking up at concrete and glass buildings" class="w-full h-full object-cover"></div>
+      <div class="rounded-r overflow-hidden aspect-[4/3]"><img src="https://images.unsplash.com/photo-1774031159721-aec9230f38db?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete office building corner against a blue sky" class="w-full h-full object-cover"></div>
+      <div class="rounded-r overflow-hidden aspect-[4/3]"><img src="https://images.unsplash.com/photo-1784790413716-a4c4e9acffdb?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Steel and concrete underside of an elevated station" class="w-full h-full object-cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Call band -->
+<section class="bg-ink">
+  <div class="max-w-7xl mx-auto px-5 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-8 reveal">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-brand">Contact us today about your next project.</h2>
+      <p class="mt-5 text-white/75 text-lg leading-relaxed max-w-2xl">Minor leaks, a full capital restoration proposal, or an educational presentation to make your exterior maintenance more cost effective. We'd love to connect.</p>
+    </div>
+    <div class="lg:col-span-4 flex lg:justify-end reveal">
+      <a href="tel:+16785530170" class="bg-brand hover:bg-white hover:text-ink text-white transition px-8 py-4 rounded-r font-semibold text-center w-full sm:w-auto">Call (678) 553-0170</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="lp-contact" style="background:#fff">
+  <style>
+    .lp-contact{position:relative}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(31,74,168,0.10);color:#1f4aa8}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#9aaed8}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#1f4aa8;box-shadow:0 0 0 4px rgba(31,74,168,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#1f4aa8;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-split{display:grid}
+    @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1784790413716-a4c4e9acffdb?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
+    .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
+    .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
+    .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
+  <div class="lp-split">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#9aaed8">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your parking structure or building and the Atlanta Branch team will get back to you.</p><ul class="lp-info">
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Call</span><a href="tel:+16785530170" class="lp-v lp-v-d">(678) 553-0170</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k lp-k-d">Email</span><a href="mailto:mikek1@westerngroup.com" class="lp-v lp-v-d">mikek1@westerngroup.com</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Service area</span><span class="lp-v lp-v-d">Atlanta, GA</span></span></li>
+        </ul></div></div>
+    <div class="lp-panel"><div><p class="lp-kick" style="color:#737373;margin-bottom:20px">Send us a message</p>
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Concrete repair</option><option>Waterproofing and sealing</option><option>Epoxy injection</option><option>Barrier cable retensioning</option><option>Parking garage restoration</option><option>Not sure yet</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
+          </form>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div></div>
+  </div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-ink text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <a href="#top" class="inline-block bg-white rounded-r px-3 py-2">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/western-specialty-contractors/21935/logo-0.png" alt="Western Specialty Contractors" class="h-10 w-auto">
+      </a>
+      <p class="mt-5 text-white/60 leading-relaxed max-w-sm">Concrete restoration, waterproofing and specialty repair from the Atlanta Branch.</p>
+    </div>
+    <div class="md:col-span-3">
+      <h4 class="text-xs font-semibold tracking-[0.2em] uppercase text-white/50 mb-4">Explore</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="#about" class="hover:text-white">About</a></li>
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#projects" class="hover:text-white">Projects</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h4 class="text-xs font-semibold tracking-[0.2em] uppercase text-white/50 mb-4">Contact</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="tel:+16785530170" class="hover:text-white">(678) 553-0170</a></li>
+        <li><a href="mailto:mikek1@westerngroup.com" class="hover:text-white break-words text-[15px]">mikek1@westerngroup.com</a></li>
+        <li>Atlanta, GA</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50 space-y-1.5">
+      <p>Concept redesign by LumeaPixel. This is not the official Western Specialty Contractors website.</p>
+      <p>Some photos by Saif71.com, boris misevic, Infinara, PJH, Jens Aber, Chad Nathan, Rose Galloway Green and d c on Unsplash.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  if (btn) {
+    btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { menu.classList.add('hidden'); });
+    });
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+</script>
+</body>
+</html>

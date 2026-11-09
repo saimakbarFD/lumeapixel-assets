@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ImproveIT! of Atlanta | Roofing for Metro Atlanta Homeowners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+      colors: {
+        brand: '#2f7fc1',
+        brandDark: '#0f2a40',
+        leaf: '#4caf34',
+        ink: '#12171c',
+        cream: '#f6f3ed'
+      },
+      borderRadius: { DEFAULT: '10px' }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Montserrat', sans-serif; color: #12171c; -webkit-font-smoothing: antialiased; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .tile-shade { background: linear-gradient(to top, rgba(10,22,32,.82) 0%, rgba(10,22,32,.15) 55%, rgba(10,22,32,0) 100%); }
+  .hero-shade { background: linear-gradient(180deg, rgba(10,22,32,.62) 0%, rgba(10,22,32,.55) 50%, rgba(10,22,32,.78) 100%); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body class="bg-white">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white border-b border-black/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/logo-0.png" alt="ImproveIT! of Atlanta" class="h-12 w-auto"></a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#about" class="hover:text-brand transition-colors">About</a>
+      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="#reviews" class="hover:text-brand transition-colors">Reviews</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:6784985075" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-5 py-3 rounded hover:bg-brandDark transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (678) 498-5075
+      </a>
+      <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-white">
+    <div class="px-5 py-5 flex flex-col gap-4 text-base font-medium">
+      <a href="#services" class="mnav">Services</a>
+      <a href="#about" class="mnav">About</a>
+      <a href="#projects" class="mnav">Projects</a>
+      <a href="#reviews" class="mnav">Reviews</a>
+      <a href="#contact" class="mnav">Contact</a>
+      <a href="tel:6784985075" class="bg-brand text-white font-semibold text-center px-5 py-3 rounded">Call (678) 498-5075</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="relative">
+  <div class="relative min-h-[640px] lg:min-h-[720px] flex items-center">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/photo-6.jpg" alt="Charcoal shingle roof on a white home" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 hero-shade"></div>
+    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-16 pb-40">
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-white/80 mb-5">Roofing in Metro Atlanta</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">A roof built right.<br>For Atlanta homes.</h1>
+      <p class="mt-6 text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">Roof replacement, repair and insurance restoration from a locally owned team. Free inspections for homeowners across Metro Atlanta.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contact" class="bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-white hover:text-brandDark transition-colors">Request a Free Estimate</a>
+        <a href="tel:6784985075" class="border border-white text-white font-semibold px-8 py-4 rounded hover:bg-white hover:text-brandDark transition-colors">Call (678) 498-5075</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust strip -->
+  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-24">
+    <div class="bg-white rounded border border-black/10 shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-black/10">
+      <div class="p-6 flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <div><p class="font-semibold text-sm">Georgia's only Guildmaster</p><p class="text-sm text-black/60 mt-1">Award winner 2020, 2022, 2023, 2024</p></div>
+      </div>
+      <div class="p-6 flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <div><p class="font-semibold text-sm">Atlanta's first TAMKO PRO Diamond Dealer</p><p class="text-sm text-black/60 mt-1">Atlanta region's first and only</p></div>
+      </div>
+      <div class="p-6 flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <div><p class="font-semibold text-sm">Factory-certified</p><p class="text-sm text-black/60 mt-1">GAF and CertainTeed</p></div>
+      </div>
+      <div class="p-6 flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <div><p class="font-semibold text-sm">Licensed adjusters on staff</p><p class="text-sm text-black/60 mt-1">Help with your insurance claim</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl mb-14 reveal">
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Services</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">What we do for roofs in Atlanta</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+      <a href="#contact" class="reveal relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden group block">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/photo-4.jpg" alt="New shingle roof and gutters" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 tile-shade"></div>
+        <p class="absolute left-6 bottom-6 text-white text-xl font-semibold">Roof Replacement</p>
+      </a>
+      <a href="#contact" class="reveal relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden group block">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/photo-5.jpg" alt="Brown shingle roof with dormers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 tile-shade"></div>
+        <p class="absolute left-6 bottom-6 text-white text-xl font-semibold">Asphalt Shingles</p>
+      </a>
+      <a href="#contact" class="reveal relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden group block">
+        <img src="https://images.unsplash.com/photo-1788616051964-19e17fe8e0b3?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers fastening decking" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 tile-shade"></div>
+        <p class="absolute left-6 bottom-6 text-white text-xl font-semibold">Roof Repairs</p>
+      </a>
+      <a href="#contact" class="reveal relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden group block">
+        <img src="https://images.unsplash.com/photo-1770044001869-12315d4d6884?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Weathered shingle roof with dormers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 tile-shade"></div>
+        <p class="absolute left-6 bottom-6 text-white text-xl font-semibold">Roof Inspections</p>
+      </a>
+      <a href="#contact" class="reveal relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden group block">
+        <img src="https://images.unsplash.com/photo-1789683037479-44602dbee028?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home with a standing seam metal roof" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 tile-shade"></div>
+        <p class="absolute left-6 bottom-6 text-white text-xl font-semibold">Insurance Restoration</p>
+      </a>
+      <a href="#contact" class="reveal relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden group block">
+        <img src="https://images.unsplash.com/photo-1727777266423-6a33048e4894?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof surface under open sky" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 tile-shade"></div>
+        <p class="absolute left-6 bottom-6 text-white text-xl font-semibold">Wind and Hail Damage</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Split: about -->
+<section id="about" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/5] rounded overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/photo-5.jpg" alt="Roof with three dormers on a yellow home" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">About ImproveIT!</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Locally owned. Roofing is all we do.</h2>
+      <p class="mt-6 text-lg leading-relaxed text-black/70">ImproveIT! of Atlanta is a locally owned and operated company offering residential roofing. Our team has a combined 40+ years of experience in roof repair, replacement, insurance restoration and storm damage repair.</p>
+      <p class="mt-4 text-lg leading-relaxed text-black/70">We have replaced roofs for over 7,000 homeowners. As a factory-certified GAF and CertainTeed contractor, we install quality materials with craftsmanship you can count on.</p>
+      <a href="#contact" class="inline-block mt-8 bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-brandDark transition-colors">Book a Free Inspection</a>
+    </div>
+  </div>
+</section>
+
+<!-- Reverse split: insurance -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Insurance claims</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Storm damage? We work with your adjuster.</h2>
+      <p class="mt-6 text-lg leading-relaxed text-black/70">If wind, hail or a storm has hit your roof, we help you file the claim and get the compensation your project needs. We have licensed insurance adjusters on staff to help minimize your out-of-pocket expenses.</p>
+      <p class="mt-4 text-lg leading-relaxed text-black/70">We partner with your insurance adjuster through every step, from the first inspection to the finished roof.</p>
+      <a href="#contact" class="inline-block mt-8 bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-brandDark transition-colors">Start Your Claim</a>
+    </div>
+    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
+      <div class="aspect-[4/5] rounded overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/photo-6.jpg" alt="Gabled home with charcoal shingles" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects gallery -->
+<section id="projects" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl mb-12 reveal">
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Projects</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Roofs across Metro Atlanta</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4">
+      <div class="reveal col-span-2 lg:col-span-6 aspect-[16/9] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/photo-4.jpg" alt="Tan siding with brown shingle roof" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-3 aspect-square lg:aspect-auto rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1775508199661-718c1d16da5a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Clay tile roof and dormer" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-3 aspect-square lg:aspect-auto rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1756832849050-ed4e24eaa42f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red roof with two dormer windows" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-3 aspect-square lg:aspect-auto lg:h-full rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red tile roof against blue sky" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-3 aspect-square lg:aspect-auto rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1787672358119-25cb4c768d14?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Brick home with metal roof" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-2 lg:col-span-6 aspect-[16/9] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/photo-6.jpg" alt="White home with dark shingle roof" class="w-full h-full object-cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews placeholder -->
+<section id="reviews" class="ti-reviews">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <style>
+    .ti-reviews{background:#fff;padding:88px 0;font-family:'Poppins','Inter',system-ui,sans-serif;color:#111}
+    .ti-reviews .ti-wrap{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:28px}
+    .ti-reviews .ti-sum{flex:none;width:230px;text-align:center}
+    .ti-reviews .ti-label{font-size:22px;font-weight:700;letter-spacing:.01em;margin-bottom:6px}
+    .ti-reviews .ti-based{font-size:15px;margin-top:6px;color:#111}
+    .ti-reviews .ti-google{display:block;margin-top:6px;font-size:40px;font-weight:500;letter-spacing:-1px;line-height:1.1;font-family:'Product Sans','Roboto','Poppins',Arial,sans-serif}
+    .ti-reviews .ti-stars{position:relative;display:inline-block;line-height:0}
+    .ti-reviews .ti-stars-fill{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap}
+    .ti-reviews .ti-slider{position:relative;flex:1;min-width:0}
+    .ti-reviews .ti-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:14px 4px 18px;scrollbar-width:none}
+    .ti-reviews .ti-track::-webkit-scrollbar{display:none}
+    .ti-reviews .ti-card{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;background:#fff;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.09);padding:20px 22px 18px;display:flex;flex-direction:column}
+    .ti-reviews .ti-head{display:flex;align-items:center;gap:12px}
+    .ti-reviews .ti-avatar{flex:none;width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}
+    .ti-reviews .ti-who{min-width:0;flex:1;display:flex;flex-direction:column}
+    .ti-reviews .ti-name{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ti-reviews .ti-date{font-size:13px;color:#8a8a8a}
+    .ti-reviews .ti-g{flex:none;align-self:flex-start}
+    .ti-reviews .ti-rate{display:flex;align-items:center;gap:6px;margin-top:12px}
+    .ti-reviews .ti-text{margin-top:10px;font-size:15px;line-height:1.5;color:#111;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+    .ti-reviews .ti-card.open .ti-text{-webkit-line-clamp:unset;display:block}
+    .ti-reviews .ti-more{margin-top:auto;padding-top:10px;align-self:flex-start;font-size:14px;color:#8a8a8a;background:none;border:0;cursor:pointer}
+    .ti-reviews .ti-more:hover{color:#111}
+    .ti-reviews .ti-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid #ddd;box-shadow:0 1px 4px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#555;z-index:2}
+    .ti-reviews .ti-prev{left:-14px}.ti-reviews .ti-next{right:-14px}
+    @media (max-width:1023px){.ti-reviews .ti-card{flex-basis:calc((100% - 16px)/2)}}
+    @media (max-width:767px){.ti-reviews{padding:64px 0}.ti-reviews .ti-wrap{flex-direction:column;gap:12px}.ti-reviews .ti-sum{width:auto}.ti-reviews .ti-slider{width:100%}.ti-reviews .ti-card{flex-basis:86%}.ti-reviews .ti-prev{left:-6px}.ti-reviews .ti-next{right:-6px}}
+  </style>
+  <div class="ti-wrap">
+        <div class="ti-sum">
+          <div class="ti-label">EXCELLENT</div>
+          <div><span class="ti-stars" role="img" aria-label="4.8 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:96%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span></div>
+          <div class="ti-based">Based on <b>459 reviews</b></div>
+          <span class="ti-google" aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+        </div>
+    <div class="ti-slider">
+      <button type="button" class="ti-arrow ti-prev" aria-label="Previous reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="ti-track">
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#00897b">P</span>
+            <span class="ti-who"><span class="ti-name">Pat Desamours</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Sonja Smith provided excellent customer service. She went the extra mile to make sure I understood everything and that I was totally satisfied with the job. My new roof is...</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#3949ab">G</span>
+            <span class="ti-who"><span class="ti-name">Garnette S</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Excellent work,speed,quality and price. I do recommend their services.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#00897b">D</span>
+            <span class="ti-who"><span class="ti-name">Dwayne S.</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Improve it of Atlanta did a great job! I am very satisfied with my new roof. Sonja Smith was knowledgeable, professional and polite. I would definitely recommend this roofing company...</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#1e88e5">S</span>
+            <span class="ti-who"><span class="ti-name">Salethea Graham</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Improve It did a wonderful job with my roof. Great work!!</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#00897b">H</span>
+            <span class="ti-who"><span class="ti-name">Henriette Martineau</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Customer service is exceptional, especially Sandra Smith. Always pleasant, with a smile/laugh that put me at ease. The roof is exactly what I ordered, and my yard was left clean....</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+      </div>
+      <button type="button" class="ti-arrow ti-next" aria-label="Next reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <script>(function(){var s=document.currentScript.closest('section'),t=s.querySelector('.ti-track');
+  function step(d){var c=t.querySelector('.ti-card');t.scrollBy({left:d*(c?c.offsetWidth+16:300),behavior:'smooth'});}
+  s.querySelector('.ti-prev').onclick=function(){step(-1)};s.querySelector('.ti-next').onclick=function(){step(1)};
+  function arrows(){var max=t.scrollWidth-t.clientWidth-2;s.querySelector('.ti-prev').style.display=t.scrollLeft>12?'flex':'none';s.querySelector('.ti-next').style.display=t.scrollLeft<max-10?'flex':'none';}
+  t.addEventListener('scroll',arrows);window.addEventListener('resize',arrows);arrows();
+  s.querySelectorAll('.ti-card').forEach(function(c){var p=c.querySelector('.ti-text'),b=c.querySelector('.ti-more');
+    if(p.scrollHeight<=p.clientHeight+2){b.style.visibility='hidden';}
+    b.onclick=function(){c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Hide':'Read more';};});
+  })();</script>
+</section>
+
+<!-- Cream panel -->
+<section class="py-24 lg:py-28 bg-cream">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Quality you can count on</p>
+    <h2 class="text-3xl sm:text-4xl font-bold leading-tight tracking-tight">Skilled professionals, affordable services, premium materials.</h2>
+    <p class="mt-6 text-lg leading-relaxed text-black/70">We repay your trust by running our business with professionalism, honesty and integrity. Our mission is to improve homes, one project at a time.</p>
+    <a href="#contact" class="inline-block mt-8 bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-brandDark transition-colors">Get Your Free Roofing Estimate</a>
+  </div>
+</section>
+
+<!-- Final call -->
+<section class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 items-center">
+    <div class="lg:col-span-6 lg:col-start-1 lg:row-start-1 aspect-[16/10] lg:aspect-[16/11] rounded overflow-hidden">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/photo-4.jpg" alt="Finished roof with white gutters" class="w-full h-full object-cover">
+    </div>
+    <div class="lg:col-span-6 lg:col-start-7 lg:row-start-1 bg-brandDark text-white rounded p-8 sm:p-10 lg:p-12 -mt-10 mx-4 sm:mx-8 lg:mx-0 lg:mt-0 relative">
+      <h2 class="text-3xl sm:text-4xl font-bold leading-tight tracking-tight">Ready for a free roof inspection?</h2>
+      <p class="mt-5 text-lg text-white/80 leading-relaxed">Call our friendly team or send a request online. We will schedule a time that works for you.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:6784985075" class="bg-brand text-white font-semibold px-7 py-4 rounded text-center hover:bg-white hover:text-brandDark transition-colors">(678) 498-5075</a>
+        <a href="#contact" class="border border-white/70 text-white font-semibold px-7 py-4 rounded text-center hover:bg-white hover:text-brandDark transition-colors">Request an Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact placeholder -->
+<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
+  <style>
+    .lp-contact{position:relative}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(47,127,193,0.10);color:#2f7fc1}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#2f7fc1}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:10px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#2f7fc1;box-shadow:0 0 0 4px rgba(47,127,193,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:10px;background:#2f7fc1;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
+    @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
+  <div class="lp-in"><div class="lp-grid">
+    <div><p class="lp-kick" style="color:#2f7fc1">Contact</p><h2 class="lp-h" style="color:#171717">Request a free roofing estimate</h2><p class="lp-p" style="color:#525252">Tell us about your roof and we will get back to you to schedule a free inspection.</p><ul class="lp-info">
+          <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k">Call</span><a href="tel:+16784985075" class="lp-v">(678) 498-5075</a></span></li>
+          <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k">Email</span><a href="mailto:info@improveitatl.com" class="lp-v">info@improveitatl.com</a></span></li>
+          <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k">Service area</span><span class="lp-v">Atlanta, GA</span></span></li>
+        </ul></div>
+    <div class="lp-card">
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof Replacement</option><option>Roof Repairs</option><option>Roof Inspection</option><option>Asphalt Shingles</option><option>Insurance Claims</option><option>Wind and Hail Damage</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
+          </form>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div>
+  </div></div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-brandDark text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-4">
+      <div class="inline-block bg-white rounded p-3"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/improveit-of-atlanta/21935/logo-0.png" alt="ImproveIT! of Atlanta" class="h-12 w-auto"></div>
+      <p class="mt-6 text-white/70 leading-relaxed max-w-sm">Locally owned residential roofing for Metro Atlanta homeowners.</p>
+    </div>
+    <div class="lg:col-span-3">
+      <h3 class="text-sm font-semibold tracking-[0.18em] uppercase text-white/60 mb-5">Contact</h3>
+      <ul class="space-y-3 text-white/85">
+        <li><a href="tel:6784985075" class="hover:text-white">(678) 498-5075</a></li>
+        <li><a href="tel:7706375093" class="hover:text-white">(770) 637-5093</a></li>
+        <li><a href="mailto:info@improveitatl.com" class="hover:text-white break-words text-sm sm:text-base">info@improveitatl.com</a></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-3">
+      <h3 class="text-sm font-semibold tracking-[0.18em] uppercase text-white/60 mb-5">Office</h3>
+      <p class="text-white/85 leading-relaxed">3525 Piedmont Rd. NE., Bldg. 7<br>Ste. 210<br>Atlanta, GA 30305</p>
+      <p class="text-white/70 text-sm mt-4 leading-relaxed">Mon to Thu: 9:00 AM to 7:00 PM<br>Fri: 9:00 AM to 3:00 PM<br>Sat, Sun: Closed</p>
+    </div>
+    <div class="lg:col-span-2">
+      <h3 class="text-sm font-semibold tracking-[0.18em] uppercase text-white/60 mb-5">Explore</h3>
+      <ul class="space-y-3 text-white/85">
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#about" class="hover:text-white">About</a></li>
+        <li><a href="#projects" class="hover:text-white">Projects</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/55 space-y-1.5">
+      <p>Concept redesign by LumeaPixel. This is not the official ImproveIT! of Atlanta website.</p>
+      <p>Some photos by LXS Photography, Divaris Shirichena, Roger Starnes Sr, Christian Harb, Trương Tuyết Ly, Reinis Brūzītis, Patrick Wadden and Verstappen Photography on Unsplash.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
