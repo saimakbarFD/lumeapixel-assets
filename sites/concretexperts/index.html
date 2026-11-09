@@ -7,18 +7,21 @@
 <title>Concrete Xperts | Concrete Contractors in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
       colors: {
         brand: '#f0b512',
-        brandDark: '#3a2a08',
-        ink: '#14110a',
-        paper: '#f6f4ef'
+        brandDeep: '#2a1f05',
+        ink: '#161411',
+        stone: { 50:'#f7f6f3', 100:'#efede8', 200:'#e0ddd5', 500:'#7a756a', 700:'#3f3b33' }
+      },
+      fontFamily: {
+        head: ['Outfit','sans-serif'],
+        body: ['Inter','sans-serif']
       },
       borderRadius: { DEFAULT: '6px' }
     }
@@ -27,91 +30,93 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Manrope', system-ui, sans-serif; color: #14110a; -webkit-font-smoothing: antialiased; }
-  h1, h2, h3, h4 { line-height: 1.05; letter-spacing: -0.02em; }
+  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #161411; background:#fff; }
+  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
-  .ba-after { position: absolute; inset: 0; clip-path: inset(0 0 0 50%); }
-  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #f0b512; }
-  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; background: #f0b512; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
-  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  .hero-shade { background: linear-gradient(90deg, rgba(22,20,17,.92) 0%, rgba(22,20,17,.78) 55%, rgba(22,20,17,.55) 100%); }
+  .tile-shade { background: linear-gradient(180deg, rgba(22,20,17,0) 40%, rgba(22,20,17,.88) 100%); }
+  .cmp { position: relative; user-select: none; touch-action: pan-y; }
+  .cmp-handle { position:absolute; top:0; bottom:0; width:3px; background:#f0b512; left:50%; transform:translateX(-50%); pointer-events:none; }
+  .cmp-knob { position:absolute; top:50%; left:50%; width:44px; height:44px; border-radius:6px; background:#f0b512; transform:translate(-50%,-50%); display:flex; align-items:center; justify-content:center; color:#161411; font-weight:700; }
+  .cmp input[type=range] { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; margin:0; }
+  details > summary { list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker { display:none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .2s ease; }
 </style>
 </head>
-<body class="bg-white">
+<body class="antialiased">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-sm border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 h-[72px] flex items-center justify-between">
-    <a href="#top" class="text-white font-extrabold text-xl tracking-tight uppercase">Concrete <span class="text-brand">Xperts</span></a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/80">
+<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between gap-4">
+    <a href="#top" class="font-head font-700 text-white text-xl sm:text-2xl tracking-tight font-bold uppercase">Concrete <span class="text-brand">Xperts</span></a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
       <a href="#services" class="hover:text-brand transition">Services</a>
       <a href="#process" class="hover:text-brand transition">Process</a>
       <a href="#work" class="hover:text-brand transition">Our work</a>
-      <a href="#crew" class="hover:text-brand transition">The crew</a>
-      <a href="#reviews" class="hover:text-brand transition">Reviews</a>
+      <a href="#about" class="hover:text-brand transition">About</a>
+      <a href="#faq" class="hover:text-brand transition">FAQ</a>
       <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+14044742999" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-bold text-sm px-5 py-3 rounded hover:bg-white transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+14044742999" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-semibold px-5 py-2.5 rounded text-sm hover:bg-white transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         (404) 474-2999
       </a>
-      <a href="tel:+14044742999" class="sm:hidden inline-flex items-center justify-center bg-brand text-ink rounded w-11 h-11" aria-label="Call (404) 474-2999">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      </a>
-      <button id="menuBtn" class="lg:hidden text-white w-11 h-11 flex items-center justify-center" aria-label="Menu">
+      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="px-5 py-4 flex flex-col gap-1 text-white font-semibold">
+    <div class="px-5 py-4 flex flex-col gap-1 text-white/90">
       <a href="#services" class="py-3 border-b border-white/10">Services</a>
       <a href="#process" class="py-3 border-b border-white/10">Process</a>
       <a href="#work" class="py-3 border-b border-white/10">Our work</a>
-      <a href="#crew" class="py-3 border-b border-white/10">The crew</a>
-      <a href="#reviews" class="py-3 border-b border-white/10">Reviews</a>
-      <a href="#contact" class="py-3 text-brand">Contact</a>
+      <a href="#about" class="py-3 border-b border-white/10">About</a>
+      <a href="#faq" class="py-3 border-b border-white/10">FAQ</a>
+      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
+      <a href="tel:+14044742999" class="mt-3 bg-brand text-ink font-semibold text-center py-3 rounded">Call (404) 474-2999</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1. HERO -->
-<section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-1.jpg" alt="Crew finishing a new concrete driveway in Atlanta" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-ink/80"></div>
-  <div class="relative max-w-7xl mx-auto px-5 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-7">
-      <p class="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-6">Metro Atlanta, Georgia</p>
-      <h1 class="font-extrabold uppercase text-[2.6rem] sm:text-6xl lg:text-7xl leading-[0.95]">Concrete that is still flat in ten years.</h1>
-      <p class="mt-7 text-lg text-white/80 max-w-xl leading-relaxed">Driveways, patios, stamped concrete and retaining walls across metro Atlanta. Poured on a compacted base and jointed the same day, because that is what decides whether it cracks.</p>
-      <ul class="mt-8 space-y-3 text-white/90 font-semibold">
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed &amp; insured</li>
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free written estimate</li>
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1-year workmanship warranty</li>
+<!-- HERO -->
+<section class="relative bg-ink overflow-hidden">
+  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-1.jpg" alt="Concrete crew finishing a curved driveway slab beside a stone wall in Atlanta" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-shade"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7 text-white">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-5">Metro Atlanta, Georgia</p>
+      <h1 class="font-head font-bold uppercase text-[2.6rem] sm:text-6xl lg:text-7xl leading-[0.95]">Concrete that is still flat in ten years.</h1>
+      <p class="mt-7 text-lg text-white/80 max-w-xl">Driveways, patios, stamped concrete and retaining walls across metro Atlanta, poured on a compacted base and jointed the same day, because that is what decides whether it cracks.</p>
+      <ul class="mt-7 space-y-3 text-white/90">
+        <li class="flex items-center gap-3"><svg class="shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed and insured</li>
+        <li class="flex items-center gap-3"><svg class="shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free written estimate</li>
+        <li class="flex items-center gap-3"><svg class="shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1-year workmanship warranty</li>
       </ul>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-brand text-ink font-bold px-7 py-4 rounded hover:bg-white transition">Get a free estimate</a>
-        <a href="#work" class="border border-white/40 text-white font-bold px-7 py-4 rounded hover:border-brand hover:text-brand transition">See our work</a>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="bg-brand text-ink font-semibold px-7 py-4 rounded text-center hover:bg-white transition">Get a free estimate</a>
+        <a href="#work" class="border border-white/40 text-white font-semibold px-7 py-4 rounded text-center hover:border-brand hover:text-brand transition">See our work</a>
       </div>
     </div>
     <div class="lg:col-span-5">
-      <div class="bg-paper text-ink rounded p-8">
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brandDark/70">Free written estimate</p>
-        <h2 class="mt-3 text-3xl font-extrabold">Get a free estimate</h2>
-        <p class="mt-3 text-ink/70 leading-relaxed">We measure on site and send a written price with every line itemized. No obligation.</p>
+      <div class="bg-stone-50 rounded p-7 sm:p-9 text-ink">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-stone-500">Free estimate</p>
+        <h2 class="font-head font-semibold text-3xl mt-2 leading-tight">Get a free estimate</h2>
+        <p class="text-stone-700 mt-3">We measure on site and send one written number, with tear-out, base, reinforcement and haul-off each on their own line.</p>
         <div class="mt-6 space-y-3">
-          <a href="tel:+14044742999" class="flex items-center justify-center gap-3 bg-ink text-white font-bold py-4 rounded hover:bg-brandDark transition">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            (404) 474-2999
+          <a href="tel:+14044742999" class="flex items-center justify-between bg-brand text-ink font-semibold px-5 py-4 rounded hover:bg-ink hover:text-white transition">
+            <span>(404) 474-2999</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a href="mailto:info@concretexperts.com" class="flex items-center justify-center gap-3 border-2 border-ink text-ink font-bold py-4 rounded hover:bg-brand hover:border-brand transition text-sm sm:text-base">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            info@concretexperts.com
+          <a href="mailto:info@concretexperts.com" class="flex items-center justify-between border border-ink/20 px-5 py-4 rounded font-semibold hover:border-ink transition text-[15px] sm:text-base">
+            <span class="break-words min-w-0">info@concretexperts.com</span>
+            <svg class="shrink-0 ml-2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg>
           </a>
         </div>
       </div>
@@ -119,255 +124,385 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- 2. SERVICES STRIP -->
+<!-- SERVICES STRIP -->
 <section class="bg-ink border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-white/80 text-sm font-semibold uppercase tracking-wider">
-    <span>Driveways</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Stamped Concrete</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Patios &amp; Walkways</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Retaining Walls</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Commercial</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Concrete Repair</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Drainage</span>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs sm:text-sm font-medium uppercase tracking-[0.14em] text-white/80">
+    <span>Driveways</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+    <span>Stamped concrete</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+    <span>Patios &amp; walkways</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+    <span>Retaining walls</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+    <span>Commercial concrete</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+    <span>Concrete repair</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
+    <span>Garage floors</span>
   </div>
 </section>
 
-<!-- 3. BASE / POUR / FINISH -->
-<section id="services" class="bg-brand py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5">
+<!-- BASE / FORM / FINISH -->
+<section id="services" class="bg-brand py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-ink/70 mb-4">What we do</p>
-      <h2 class="text-4xl lg:text-5xl font-extrabold uppercase text-ink">Base. Pour. Finish.</h2>
-      <p class="mt-5 text-ink/80 text-lg leading-relaxed">Everything is poured by our own crew, not brokered out to whoever is free that week.</p>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/70 mb-3">What we do</p>
+      <h2 class="font-head font-bold uppercase text-4xl sm:text-5xl leading-[1.02] text-ink">Base. Pour. Finish.</h2>
+      <p class="mt-5 text-ink/80 text-lg">Everything is poured by our own crew, not brokered out to whoever is free that week.</p>
     </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
       <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-9.jpg" alt="Excavated trench with graded aggregate and rebar before a pour" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-9.jpg" alt="Excavated and graded stone base with rebar in place ready for a concrete pour" class="w-full h-full object-cover"></div>
         <div class="p-7 text-white">
-          <h3 class="text-2xl font-extrabold uppercase">The base</h3>
-          <p class="mt-3 text-white/70 leading-relaxed">Old slab out and hauled away. Graded aggregate compacted in lifts, steel set on chairs. The day nobody photographs.</p>
+          <h3 class="font-head font-semibold text-2xl">The base comes first</h3>
+          <p class="mt-3 text-white/75">Graded aggregate, compacted in lifts, before a truck is ever called. The day of the job you will never see, and the reason the slab lasts.</p>
         </div>
       </article>
       <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-8.jpg" alt="Crew placing and finishing a concrete slab" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-8.jpg" alt="Crew members screeding and troweling a fresh concrete floor" class="w-full h-full object-cover"></div>
         <div class="p-7 text-white">
-          <h3 class="text-2xl font-extrabold uppercase">The pour</h3>
-          <p class="mt-3 text-white/70 leading-relaxed">Forms set to the fall we agreed, then placed, screeded and floated in one continuous pour by our own crew.</p>
+          <h3 class="font-head font-semibold text-2xl">One crew, one pour</h3>
+          <p class="mt-3 text-white/75">Forms set to the agreed fall, steel up on chairs, then placed, screeded and floated in one continuous pour by the same people who did the prep.</p>
         </div>
       </article>
       <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-3.jpg" alt="Finished concrete walkway with clean control joints" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-3.jpg" alt="Finished concrete walkway with clean control joints" class="w-full h-full object-cover"></div>
         <div class="p-7 text-white">
-          <h3 class="text-2xl font-extrabold uppercase">The finish</h3>
-          <p class="mt-3 text-white/70 leading-relaxed">Control joints cut the same day to depth, curing and sealing explained, and the site washed down before we leave.</p>
+          <h3 class="font-head font-semibold text-2xl">Jointed the same day</h3>
+          <p class="mt-3 text-white/75">Control joints cut to depth on the day of the pour, the site washed down, and clear instructions on when you can walk and drive on it.</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 4. HOW IT RUNS -->
-<section id="process" class="bg-white py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brandDark/70 mb-4">How it works</p>
-      <h2 class="text-4xl lg:text-5xl font-extrabold uppercase">How your project runs</h2>
-      <p class="mt-5 text-ink/70 text-lg leading-relaxed">Concrete is a one-shot material. Everything that decides how it ages happens before and during a single day.</p>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-extrabold">01</div>
-        <h3 class="mt-6 text-2xl font-extrabold">We measure on site</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">We walk the job, check the fall, look at where the water goes, and send a written price with each part on its own line.</p>
+<!-- HOW IT RUNS -->
+<section id="process" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-4 reveal">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-stone-500 mb-3">How it works</p>
+        <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05]">How your project runs</h2>
+        <p class="mt-5 text-stone-700">Concrete is a one-shot material. Everything that decides how it ages happens before and during a single day.</p>
       </div>
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-extrabold">02</div>
-        <h3 class="mt-6 text-2xl font-extrabold">Tear-out, base, then the pour</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">The old slab goes on a truck. Graded aggregate is compacted in lifts, forms and steel go in, then one continuous pour.</p>
-      </div>
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-extrabold">03</div>
-        <h3 class="mt-6 text-2xl font-extrabold">Joint, cure, clean</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Control joints cut the same day, the site washed down, and clear instructions on when you can walk and drive on it.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. BEFORE / AFTER -->
-<section class="bg-ink text-white py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand mb-4">From prep to finished</p>
-      <h2 class="text-4xl lg:text-5xl font-extrabold uppercase">Same driveway job, start to finish</h2>
-      <p class="mt-5 text-white/70 text-lg leading-relaxed">On the left, the base is graded, compacted and reinforced. Drag the slider to see a finished slab.</p>
-    </div>
-    <div class="mt-12 reveal">
-      <div class="ba-wrap rounded aspect-[4/3] sm:aspect-[16/9]" id="ba">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-9.jpg" alt="Prepared base with rebar before the pour" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="ba-after" id="baAfter">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-1.jpg" alt="Freshly poured and finished concrete driveway" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+      <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-12">
+        <div class="reveal">
+          <div class="w-12 h-12 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-lg">01</div>
+          <h3 class="font-head font-semibold text-2xl mt-5">We measure on site</h3>
+          <p class="mt-2 text-stone-700">We walk the job, check the fall, look at where the water goes, and send a written price with each part on its own line.</p>
         </div>
-        <span class="absolute top-4 left-4 bg-ink/85 text-white text-xs font-bold uppercase tracking-widest px-3 py-2 rounded">Prepped base</span>
-        <span class="absolute top-4 right-4 bg-brand text-ink text-xs font-bold uppercase tracking-widest px-3 py-2 rounded">Poured slab</span>
-        <div class="ba-handle" id="baHandle"><div class="ba-knob">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14110a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
-        </div></div>
-        <input type="range" min="0" max="100" value="50" class="ba-range" id="baRange" aria-label="Compare before and after">
+        <div class="reveal">
+          <div class="w-12 h-12 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-lg">02</div>
+          <h3 class="font-head font-semibold text-2xl mt-5">Tear-out and base</h3>
+          <p class="mt-2 text-stone-700">The old slab comes out and goes on a truck. Then graded aggregate, compacted in lifts. This is the day that decides the next ten years.</p>
+        </div>
+        <div class="reveal">
+          <div class="w-12 h-12 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-lg">03</div>
+          <h3 class="font-head font-semibold text-2xl mt-5">Form, steel, pour</h3>
+          <p class="mt-2 text-stone-700">Forms set to the fall we agreed, mesh or rebar up on chairs, then placed, screeded and floated in one continuous pour.</p>
+        </div>
+        <div class="reveal">
+          <div class="w-12 h-12 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-lg">04</div>
+          <h3 class="font-head font-semibold text-2xl mt-5">Joint, cure, clean</h3>
+          <p class="mt-2 text-stone-700">Control joints cut the same day to the right depth, the site washed down, and clear instructions on when you can walk and drive on it.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 6. COMPARISON -->
-<section class="bg-paper py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5">
+<!-- BEFORE / AFTER SIDE BY SIDE -->
+<section class="bg-ink py-24 lg:py-32 text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brandDark/70 mb-4">Before you hire</p>
-      <h2 class="text-4xl lg:text-5xl font-extrabold uppercase">The cheap quote vs. the written one</h2>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-3">On the job</p>
+      <h2 class="font-head font-bold uppercase text-4xl sm:text-5xl leading-[1.02]">From prepared ground to finished slab</h2>
+      <p class="mt-5 text-white/75 text-lg">What goes under the concrete is half the job. The other half is how it looks when we leave.</p>
     </div>
     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white rounded border border-ink/10 p-8 lg:p-10 reveal">
-        <h3 class="text-2xl font-extrabold">The usual underbid</h3>
-        <p class="mt-3 text-ink/60">Looks identical the day it is finished.</p>
-        <ul class="mt-7 space-y-4 text-ink/75">
-          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>Poured at three inches on unprepared clay</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>No steel in the slab</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>A verbal number over the phone</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>Shows up in year three, and the fix is a full replacement</li>
+      <figure class="reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-9.jpg" alt="Graded stone base with rebar grid before pouring" class="w-full h-full object-cover"></div>
+        <figcaption class="mt-3 text-sm uppercase tracking-[0.16em] text-white/60">Base and steel in place</figcaption>
+      </figure>
+      <figure class="reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-10.jpg" alt="Finished concrete driveway with a stamped terracotta border" class="w-full h-full object-cover"></div>
+        <figcaption class="mt-3 text-sm uppercase tracking-[0.16em] text-white/60">Finished driveway with stamped borders</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- DIY vs ONE CONTRACTOR -->
+<section class="bg-stone-50 py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-stone-500 mb-3">Why homeowners choose us</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05]">The part that goes under, done right.</h2>
+      <p class="mt-5 text-stone-700 text-lg">Anyone can screed a slab flat on the day. Whether it is still flat in ten years is decided before the concrete arrives.</p>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border border-stone-200 rounded p-8 sm:p-10 reveal">
+        <h3 class="font-head font-semibold text-2xl">The cheap quote</h3>
+        <p class="mt-2 text-stone-500">A slab that looks the same on day one.</p>
+        <ul class="mt-7 space-y-4 text-stone-700">
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-stone-500 shrink-0"></span>Poured thin, straight onto unprepared clay</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-stone-500 shrink-0"></span>No steel, or steel pulled to the bottom of the slab</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-stone-500 shrink-0"></span>Joints cut late, or not at all</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-stone-500 shrink-0"></span>One lump-sum number you cannot compare</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-stone-500 shrink-0"></span>The fix in year three is a full replacement</li>
         </ul>
       </div>
-      <div class="bg-white rounded border-2 border-brand p-8 lg:p-10 reveal">
-        <h3 class="text-2xl font-extrabold">Concrete Xperts</h3>
-        <p class="mt-3 text-ink/60">Quoted in writing, line by line.</p>
-        <ul class="mt-7 space-y-4 text-ink/85 font-medium">
-          <li class="flex gap-3"><svg class="text-brandDark shrink-0 mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Graded aggregate base, compacted in lifts</li>
-          <li class="flex gap-3"><svg class="text-brandDark shrink-0 mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rebar or mesh, set on chairs</li>
-          <li class="flex gap-3"><svg class="text-brandDark shrink-0 mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tear-out, base, reinforcement, thickness and haul-off each on their own line</li>
-          <li class="flex gap-3"><svg class="text-brandDark shrink-0 mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Control joints cut the same day, to depth</li>
-          <li class="flex gap-3"><svg class="text-brandDark shrink-0 mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed, fully insured, 1-year workmanship warranty in writing</li>
+      <div class="bg-white border-2 border-brand rounded p-8 sm:p-10 reveal">
+        <h3 class="font-head font-semibold text-2xl">Concrete Xperts, on every job</h3>
+        <p class="mt-2 text-stone-500">Included, not extra.</p>
+        <ul class="mt-7 space-y-3.5 text-ink">
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free written estimate, itemized line by line</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Old slab broken out and hauled away</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Graded aggregate base, compacted in lifts</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rebar or mesh, set on chairs rather than pulled up later</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Control joints cut the same day, to depth</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Graded to drain away from the house</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed and fully insured, permits handled where needed</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1-year workmanship warranty, in writing</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 7. WHAT WE BUILD / GALLERY -->
-<section id="work" class="bg-white py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5">
+<!-- WHAT WE BUILD BENTO -->
+<section id="work" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
       <div class="max-w-2xl">
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brandDark/70 mb-4">Recent projects</p>
-        <h2 class="text-4xl lg:text-5xl font-extrabold uppercase">What we build</h2>
-        <p class="mt-5 text-ink/70 text-lg leading-relaxed">Driveways, patios, walls. Every photograph is a job this crew poured in metro Atlanta.</p>
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-stone-500 mb-3">Recent projects</p>
+        <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05]">What we build</h2>
+        <p class="mt-5 text-stone-700 text-lg">Driveways, patios, walls and floors, poured across metro Atlanta.</p>
       </div>
-      <a href="https://www.concretexperts.com/gallery/" class="font-bold underline underline-offset-4 decoration-brand decoration-2 hover:text-brandDark">See all projects</a>
+      <a href="#contact" class="inline-flex items-center gap-2 font-semibold border-b-2 border-brand pb-1 self-start md:self-auto">Start your project
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:grid-rows-2">
-      <figure class="relative col-span-2 lg:col-span-2 lg:row-span-2 rounded overflow-hidden aspect-[4/3] lg:aspect-auto lg:min-h-[520px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-2.jpg" alt="Flagstone patio with stone fire pit and seat wall" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/90 to-transparent"></div>
-        <figcaption class="absolute bottom-0 left-0 p-6 text-white"><span class="text-xl font-extrabold">Outdoor living</span><br><span class="text-sm text-white/75">Patio, seat wall and fire pit</span></figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden aspect-square lg:aspect-auto reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-5.jpg" alt="Stamped concrete patio with Adirondack chairs" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/90 to-transparent"></div>
-        <figcaption class="absolute bottom-0 left-0 p-4 text-white font-extrabold">Stamped patios</figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden aspect-square lg:aspect-auto reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-7.jpg" alt="Segmental block retaining wall beside a gravel drive" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/90 to-transparent"></div>
-        <figcaption class="absolute bottom-0 left-0 p-4 text-white font-extrabold">Retaining walls</figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden aspect-square lg:aspect-auto reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-10.jpg" alt="Concrete driveway with stamped terracotta borders" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/90 to-transparent"></div>
-        <figcaption class="absolute bottom-0 left-0 p-4 text-white font-extrabold">Stamped borders</figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden aspect-square lg:aspect-auto reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-4.jpg" alt="Dark stamped slate concrete walkway and patio" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/90 to-transparent"></div>
-        <figcaption class="absolute bottom-0 left-0 p-4 text-white font-extrabold">Stamped walkways</figcaption>
-      </figure>
-      <figure class="relative col-span-2 rounded overflow-hidden aspect-[2/1] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-6.jpg" alt="Stamped concrete pad leading to a lakeside dock" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/90 to-transparent"></div>
-        <figcaption class="absolute bottom-0 left-0 p-4 text-white font-extrabold">Lakeside stamped concrete</figcaption>
-      </figure>
+
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
+      <!-- Large -->
+      <div class="relative col-span-2 lg:col-span-6 lg:row-span-2 rounded overflow-hidden aspect-[4/3] lg:aspect-auto lg:min-h-[560px] reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-1.jpg" alt="Curved concrete driveway being finished beside a stone wall" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-shade"></div>
+        <div class="absolute bottom-0 p-6 text-white">
+          <h3 class="font-head font-semibold text-2xl">Concrete driveways</h3>
+          <p class="text-white/80 text-sm mt-1">Tear-out, graded base, reinforcement and a jointed pour.</p>
+        </div>
+      </div>
+      <div class="relative col-span-1 lg:col-span-3 rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-5.jpg" alt="Stamped concrete patio with ashlar slate pattern and blue chairs" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-shade"></div>
+        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Stamped patios</h3></div>
+      </div>
+      <div class="relative col-span-1 lg:col-span-3 rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-7.jpg" alt="Segmental block retaining wall beside a gravel drive" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-shade"></div>
+        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Retaining walls</h3></div>
+      </div>
+      <div class="relative col-span-1 lg:col-span-3 rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-6.jpg" alt="Wet-look stamped concrete platform beside a lake" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-shade"></div>
+        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Decorative concrete</h3></div>
+      </div>
+      <div class="relative col-span-1 lg:col-span-3 rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-2.jpg" alt="Flagstone patio with fire pit, seat wall and outdoor seating" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-shade"></div>
+        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Outdoor living</h3></div>
+      </div>
+      <!-- Row 2 wide -->
+      <div class="relative col-span-2 lg:col-span-6 rounded overflow-hidden aspect-[16/9] reveal">
+        <img src="https://images.unsplash.com/photo-1772306814076-ff65f53ac438?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Large commercial warehouse floor with a coated concrete slab" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-shade"></div>
+        <div class="absolute bottom-0 p-6 text-white">
+          <h3 class="font-head font-semibold text-2xl">Commercial concrete</h3>
+          <p class="text-white/80 text-sm mt-1">Slabs and floors poured to the thickness the traffic needs.</p>
+        </div>
+      </div>
+      <div class="relative col-span-1 lg:col-span-3 rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-4.jpg" alt="Gray stamped concrete walkway and patio with fire pit" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-shade"></div>
+        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Stamped walkways</h3></div>
+      </div>
+      <div class="relative col-span-1 lg:col-span-3 rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-10.jpg" alt="Concrete driveway with stamped border bands near front steps" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-shade"></div>
+        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Stamped borders</h3></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 8. OWNER-LED SPLIT -->
-<section id="crew" class="bg-paper py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- ABOUT SPLIT -->
+<section id="about" class="bg-stone-50 py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
     <div class="lg:col-span-6 reveal">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brandDark/70 mb-4">Who we are</p>
-      <h2 class="text-4xl lg:text-5xl font-extrabold uppercase">Metro Atlanta's concrete crew, from the base up</h2>
-      <p class="mt-6 text-ink/75 text-lg leading-relaxed">Concrete Xperts is a locally owned concrete contractor working across metro Atlanta: driveways, patios, walkways, stamped and decorative work, retaining walls and commercial slabs. The same crew pours it and the same standard applies.</p>
-      <p class="mt-4 text-ink/75 text-lg leading-relaxed">Most concrete in Georgia does not fail because of the concrete. It fails because of what was underneath it. Red clay holds water, swells, and shrinks back in a dry August. We spend the first day on the part nobody photographs.</p>
-      <ul class="mt-7 space-y-3 font-semibold">
-        <li class="flex items-center gap-3"><svg class="text-brandDark shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free written estimates</li>
-        <li class="flex items-center gap-3"><svg class="text-brandDark shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed &amp; fully insured</li>
-        <li class="flex items-center gap-3"><svg class="text-brandDark shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Old slab removed and hauled</li>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-stone-500 mb-3">Who we are</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05]">Metro Atlanta's concrete crew, from the base up.</h2>
+      <p class="mt-6 text-stone-700">Concrete Xperts is a locally owned concrete contractor working across metro Atlanta: driveways, patios, walkways, stamped and decorative work, retaining walls and commercial slabs. Residential or commercial, the same crew pours it and the same standard applies.</p>
+      <p class="mt-4 text-stone-700">Most concrete in Georgia does not fail because of the concrete. It fails because of what was underneath it. Red clay holds water, swells, shrinks back in a dry August, and takes an unsupported slab with it. We spend the first day of your job on the part nobody photographs.</p>
+      <ul class="mt-7 space-y-3">
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free written estimates</li>
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed and fully insured</li>
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Old slab removed and hauled</li>
       </ul>
-      <div class="mt-9 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-brand text-ink font-bold px-7 py-4 rounded hover:bg-ink hover:text-white transition">Get a free estimate</a>
-        <a href="tel:+14044742999" class="border-2 border-ink font-bold px-7 py-4 rounded hover:bg-ink hover:text-white transition">(404) 474-2999</a>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="bg-brand text-ink font-semibold px-7 py-4 rounded text-center hover:bg-ink hover:text-white transition">Request an estimate</a>
+        <a href="tel:+14044742999" class="border border-ink/25 font-semibold px-7 py-4 rounded text-center hover:border-ink transition">Call (404) 474-2999</a>
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
       <div class="aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] rounded overflow-hidden">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/concrete-xperts/21924/photo-1.jpg" alt="Concrete Xperts crew working a large driveway pour" class="w-full h-full object-cover" loading="lazy">
+        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/concrete-xperts/21925/photo-1.jpg" alt="The Concrete Xperts crew finishing a driveway pour" class="w-full h-full object-cover object-[30%_50%]">
       </div>
     </div>
   </div>
 </section>
 
-<!-- REVIEWS (real, quoted as written) -->
-<section id="reviews" class="bg-white py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brandDark/70 mb-4">What customers say</p>
-      <h2 class="text-4xl lg:text-5xl font-extrabold uppercase">Quoted word for word</h2>
-      <p class="mt-5 text-ink/70 text-lg leading-relaxed">Left on Google by homeowners across metro Atlanta.</p>
+<!-- REVIEWS -->
+<section id="reviews" class="ti-reviews">
+  <style>
+    .ti-reviews{background:#fff;padding:88px 0;font-family:'Poppins','Inter',system-ui,sans-serif;color:#111}
+    .ti-reviews .ti-wrap{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:28px}
+    .ti-reviews .ti-sum{flex:none;width:230px;text-align:center}
+    .ti-reviews .ti-label{font-size:22px;font-weight:700;letter-spacing:.01em;margin-bottom:6px}
+    .ti-reviews .ti-based{font-size:15px;margin-top:6px;color:#111}
+    .ti-reviews .ti-google{display:block;margin-top:6px;font-size:40px;font-weight:500;letter-spacing:-1px;line-height:1.1;font-family:'Product Sans','Roboto','Poppins',Arial,sans-serif}
+    .ti-reviews .ti-stars{position:relative;display:inline-block;line-height:0}
+    .ti-reviews .ti-stars-fill{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap}
+    .ti-reviews .ti-slider{position:relative;flex:1;min-width:0}
+    .ti-reviews .ti-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:14px 4px 18px;scrollbar-width:none}
+    .ti-reviews .ti-track::-webkit-scrollbar{display:none}
+    .ti-reviews .ti-card{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;background:#fff;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.09);padding:20px 22px 18px;display:flex;flex-direction:column}
+    .ti-reviews .ti-head{display:flex;align-items:center;gap:12px}
+    .ti-reviews .ti-avatar{flex:none;width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}
+    .ti-reviews .ti-who{min-width:0;flex:1;display:flex;flex-direction:column}
+    .ti-reviews .ti-name{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ti-reviews .ti-date{font-size:13px;color:#8a8a8a}
+    .ti-reviews .ti-g{flex:none;align-self:flex-start}
+    .ti-reviews .ti-rate{display:flex;align-items:center;gap:6px;margin-top:12px}
+    .ti-reviews .ti-text{margin-top:10px;font-size:15px;line-height:1.5;color:#111;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+    .ti-reviews .ti-card.open .ti-text{-webkit-line-clamp:unset;display:block}
+    .ti-reviews .ti-more{margin-top:auto;padding-top:10px;align-self:flex-start;font-size:14px;color:#8a8a8a;background:none;border:0;cursor:pointer}
+    .ti-reviews .ti-more:hover{color:#111}
+    .ti-reviews .ti-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid #ddd;box-shadow:0 1px 4px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#555;z-index:2}
+    .ti-reviews .ti-prev{left:-14px}.ti-reviews .ti-next{right:-14px}
+    @media (max-width:1023px){.ti-reviews .ti-card{flex-basis:calc((100% - 16px)/2)}}
+    @media (max-width:767px){.ti-reviews{padding:64px 0}.ti-reviews .ti-wrap{flex-direction:column;gap:12px}.ti-reviews .ti-sum{width:auto}.ti-reviews .ti-slider{width:100%}.ti-reviews .ti-card{flex-basis:86%}.ti-reviews .ti-prev{left:-6px}.ti-reviews .ti-next{right:-6px}}
+  </style>
+  <div class="ti-wrap">
+        <div class="ti-sum">
+          <div class="ti-label">EXCELLENT</div>
+          <div><span class="ti-stars" role="img" aria-label="4.7 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:94%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span></div>
+          <div class="ti-based">Based on <b>15 reviews</b></div>
+          <span class="ti-google" aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+        </div>
+    <div class="ti-slider">
+      <button type="button" class="ti-arrow ti-prev" aria-label="Previous reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="ti-track">
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#00897b">M</span>
+            <span class="ti-who"><span class="ti-name">Mars Renee</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Working with Eli and his crew was a pleasure. We hired concrete experts to do installation of new concrete patio and walkway in our backyard, they exceeded our expectations every step of the way. He deserves five stars all the way.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#7b1fa2">H</span>
+            <span class="ti-who"><span class="ti-name">Haji Khairullah</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">We just had our driveway finished last month, we are so happy and amazed, Aviv and his team worked really hard, with joy, passion and professionalism. I highly recommend Concrete Xperts for your concrete needs in Alpharetta.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#c2185b">A</span>
+            <span class="ti-who"><span class="ti-name">Angela F. Thomas</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Called concrete experts and the next day they came over to give me an estimate for my concrete floor. They replaced my garage floor and resurface the concrete driveway. It looks great now. Thanks to them I saved a lot of money. I highly recommend them. Great and local company to work with.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+      </div>
+      <button type="button" class="ti-arrow ti-next" aria-label="Next reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <figure class="bg-paper rounded p-8 flex flex-col reveal">
-        <blockquote class="text-ink/85 leading-relaxed">"Working with Eli and his crew was a pleasure. We hired concrete experts to do installation of new concrete patio and walkway in our backyard, they exceeded our expectations every step of the way. He deserves five stars all the way."</blockquote>
-        <figcaption class="mt-6 font-extrabold">Mars Renee<span class="block text-sm font-medium text-ink/55">Left on Google</span></figcaption>
-      </figure>
-      <figure class="bg-paper rounded p-8 flex flex-col reveal">
-        <blockquote class="text-ink/85 leading-relaxed">"We just had our driveway finished last month, we are so happy and amazed, Aviv and his team worked really hard, with joy, passion and professionalism. I highly recommend Concrete Xperts for your concrete needs in Alpharetta."</blockquote>
-        <figcaption class="mt-6 font-extrabold">Haji Khairullah<span class="block text-sm font-medium text-ink/55">Left on Google</span></figcaption>
-      </figure>
-      <figure class="bg-paper rounded p-8 flex flex-col reveal">
-        <blockquote class="text-ink/85 leading-relaxed">"Called concrete experts and the next day they came over to give me an estimate for my concrete floor. They replaced my garage floor and resurface the concrete driveway. It looks great now. Thanks to them I saved a lot of money. I highly recommend them. Great and local company to work with."</blockquote>
-        <figcaption class="mt-6 font-extrabold">Angela F. Thomas<span class="block text-sm font-medium text-ink/55">Left on Google</span></figcaption>
-      </figure>
+  </div>
+  <script>(function(){var s=document.currentScript.closest('section'),t=s.querySelector('.ti-track');
+  function step(d){var c=t.querySelector('.ti-card');t.scrollBy({left:d*(c?c.offsetWidth+16:300),behavior:'smooth'});}
+  s.querySelector('.ti-prev').onclick=function(){step(-1)};s.querySelector('.ti-next').onclick=function(){step(1)};
+  function arrows(){var max=t.scrollWidth-t.clientWidth-2;s.querySelector('.ti-prev').style.display=t.scrollLeft>12?'flex':'none';s.querySelector('.ti-next').style.display=t.scrollLeft<max-10?'flex':'none';}
+  t.addEventListener('scroll',arrows);window.addEventListener('resize',arrows);arrows();
+  s.querySelectorAll('.ti-card').forEach(function(c){var p=c.querySelector('.ti-text'),b=c.querySelector('.ti-more');
+    if(p.scrollHeight<=p.clientHeight+2){b.style.visibility='hidden';}
+    b.onclick=function(){c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Hide':'Read more';};});
+  })();</script>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+    <div class="lg:col-span-5 reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-stone-500 mb-3">Where we work</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05]">Concrete contractors across metro Atlanta</h2>
+      <p class="mt-5 text-stone-700">Based at 3878 Roswell Rd NE, Atlanta, GA 30342, pouring across the north and east metro, from inside the Perimeter out to Gwinnett and North Fulton.</p>
+      <p class="mt-4 text-stone-700">Not listed but nearby? Call. If we are already pouring on your side of town that week, we will come and look.</p>
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <div class="flex flex-wrap gap-3">
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Atlanta</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Buckhead</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Sandy Springs</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Dunwoody</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Roswell</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Alpharetta</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Johns Creek</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Marietta</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Decatur</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Brookhaven</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Chamblee</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">Gwinnett County</span>
+        <span class="border border-stone-200 bg-stone-50 rounded px-4 py-2 text-sm font-medium">North Fulton</span>
+      </div>
+      <div class="mt-10 aspect-[16/9] rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1772298783095-be38fa901232?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working across a large coated concrete slab" class="w-full h-full object-cover">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 9. SERVICE AREA -->
-<section class="bg-paper py-24 lg:py-28 border-t border-ink/10">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+<!-- PRICE / FAQ -->
+<section id="faq" class="bg-stone-50 py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
     <div class="lg:col-span-5 reveal">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brandDark/70 mb-4">Where we work</p>
-      <h2 class="text-4xl lg:text-5xl font-extrabold uppercase">Concrete contractors across metro Atlanta</h2>
-      <p class="mt-5 text-ink/70 text-lg leading-relaxed">Based at 3878 Roswell Rd NE, Atlanta, GA 30342 and pouring across the north and east metro, from inside the Perimeter out to Gwinnett and North Fulton.</p>
-      <p class="mt-4 text-ink/70 text-lg leading-relaxed">Not listed but nearby? Call. If we are already pouring on your side of town that week, we will come and look.</p>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-stone-500 mb-3">Before you call</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05]">Straight answers on price</h2>
+      <p class="mt-5 text-stone-700">Concrete is quoted by the square foot, and that number on its own tells you almost nothing. Our written quote lists tear-out, base, reinforcement, thickness and haul-off separately, so you can hold it next to anyone else's and compare like with like.</p>
+      <a href="tel:+14044742999" class="mt-7 inline-flex items-center gap-2 bg-brand text-ink font-semibold px-6 py-3.5 rounded hover:bg-ink hover:text-white transition">Ask us: (404) 474-2999</a>
     </div>
     <div class="lg:col-span-7 reveal">
-      <div class="flex flex-wrap gap-3">
-        <span class="bg-white border border-ink/15 rounded px-4 py-2.5 font-semibold">Atlanta</span>
-        <span class="bg-white border border-ink/15 rounded px-4 py-2.5 font-semibold">Alpharetta</span>
-        <span class="bg-white border border-ink/15 rounded px-4 py-2.5 font-semibold">North Fulton</span>
-        <span class="bg-white border border-ink/15 rounded px-4 py-2.5 font-semibold">Gwinnett</span>
-        <span class="bg-white border border-ink/15 rounded px-4 py-2.5 font-semibold">Inside the Perimeter</span>
-        <span class="bg-white border border-ink/15 rounded px-4 py-2.5 font-semibold">North metro</span>
-        <span class="bg-white border border-ink/15 rounded px-4 py-2.5 font-semibold">East metro</span>
-        <span class="bg-brand rounded px-4 py-2.5 font-bold">21 metro Atlanta towns</span>
+      <div class="border-t border-stone-200">
+        <details class="border-b border-stone-200 py-5">
+          <summary class="flex items-center justify-between gap-4 font-head font-semibold text-xl">How much does a concrete driveway cost?<span class="plus text-2xl text-brand shrink-0">+</span></summary>
+          <p class="mt-3 text-stone-700">It is priced by the square foot, but the rate depends on thickness, reinforcement, how much demolition and haul-off comes first, and whether a truck can reach the pour. A flat drive a mixer can back onto and a steep one that has to be barrowed are very different jobs at the same size. We measure on site and put it in writing.</p>
+        </details>
+        <details class="border-b border-stone-200 py-5">
+          <summary class="flex items-center justify-between gap-4 font-head font-semibold text-xl">How do I choose a concrete contractor in Atlanta?<span class="plus text-2xl text-brand shrink-0">+</span></summary>
+          <p class="mt-3 text-stone-700">Ask every contractor the same four things: how thick, and with what reinforcement; what they do about the base, which on Georgia red clay is most of the job; when the control joints get cut; and for a certificate of insurance before anyone starts. The written quote should show demolition and haul-off as their own line.</p>
+        </details>
+        <details class="border-b border-stone-200 py-5">
+          <summary class="flex items-center justify-between gap-4 font-head font-semibold text-xl">Why do you price after a site visit?<span class="plus text-2xl text-brand shrink-0">+</span></summary>
+          <p class="mt-3 text-stone-700">Access decides whether a truck can reach the pour or whether it has to be barrowed, and that single fact can change the labor on a job more than the size does. It costs you nothing to have us come and look.</p>
+        </details>
+        <details class="border-b border-stone-200 py-5">
+          <summary class="flex items-center justify-between gap-4 font-head font-semibold text-xl">Do you pour stamped concrete?<span class="plus text-2xl text-brand shrink-0">+</span></summary>
+          <p class="mt-3 text-stone-700">Yes. We pour stamped concrete across metro Atlanta: patios, walkways, pool decks, driveways and stamped overlays on sound existing slabs, with the color mixed through the concrete on new pours and the joints planned into the pattern.</p>
+        </details>
       </div>
     </div>
   </div>
@@ -375,161 +510,123 @@ tailwind.config = {
 
 <!-- CALL BAND -->
 <section class="bg-ink text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-7 reveal">
-      <h2 class="text-4xl lg:text-6xl font-extrabold uppercase leading-[0.98]">Ready to get it poured?</h2>
-      <p class="mt-5 text-white/70 text-lg max-w-xl leading-relaxed">We come out, measure, and put a written number in your hands with every line itemized. No obligation.</p>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <h2 class="font-head font-bold uppercase text-4xl sm:text-5xl leading-[1.02]">Ready to get it poured?</h2>
+      <p class="mt-4 text-white/75 text-lg max-w-xl">Call or email. We will come out, measure, and put a written number in your hands.</p>
     </div>
-    <div class="lg:col-span-5 flex flex-col gap-3 reveal">
-      <a href="tel:+14044742999" class="flex items-center justify-center gap-3 bg-brand text-ink font-extrabold text-xl py-5 rounded hover:bg-white transition">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (404) 474-2999
-      </a>
-      <a href="mailto:info@concretexperts.com" class="flex items-center justify-center gap-3 border border-white/40 font-bold py-4 rounded hover:border-brand hover:text-brand transition text-sm sm:text-base">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        info@concretexperts.com
-      </a>
+    <div class="lg:col-span-5 flex flex-col gap-3">
+      <a href="tel:+14044742999" class="bg-brand text-ink font-semibold px-6 py-4 rounded text-center text-lg hover:bg-white transition">(404) 474-2999</a>
+      <a href="mailto:info@concretexperts.com" class="border border-white/30 px-6 py-4 rounded text-center font-semibold hover:border-brand hover:text-brand transition break-words">info@concretexperts.com</a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT PLACEHOLDER -->
-<section id="contact" class="lp-contact py-24 md:py-32 bg-[#f6f5f2]">
+<section id="contact" class="lp-contact" style="background:#221c0c;padding:clamp(80px,10vw,128px) 0">
   <style>
+    .lp-contact{position:relative}
     .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(240,181,18,0.10);color:#f0b512}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 12px 32px -12px rgba(16,24,40,.10)}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#f0b512}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#f0b512;box-shadow:0 0 0 4px rgba(240,181,18,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border-radius:6px;background:#f0b512;color:#111111;font-weight:600;font-size:16px;transition:filter .15s,transform .15s}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#f0b512;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
-  </style>
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-      <div class="lg:col-span-5">
-        <p class="text-[13px] font-semibold uppercase tracking-[.16em]" style="color:#f0b512">Contact</p>
-        <h2 class="mt-4 text-4xl md:text-5xl font-semibold leading-[1.08] tracking-tight text-neutral-900">Request a free estimate</h2>
-        <p class="mt-5 text-lg leading-relaxed text-neutral-600 max-w-md">Tell us about your project and we will come out, measure, and send a written, itemized price.</p>
-        <ul class="mt-10 space-y-6">
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Call</span>
-            <a href="tel:+14044742999" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">(404) 474-2999</a></span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Email</span>
-            <a href="mailto:info@concretexperts.com" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">info@concretexperts.com</a></span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Service area</span>
-            <span class="text-lg font-medium text-neutral-900">Atlanta, GA</span></span>
-          </li>
-        </ul>
-      </div>
-      <div class="lg:col-span-7">
-        <div class="lp-card p-6 sm:p-8 md:p-10">
-          <form id="lp-form" novalidate class="grid sm:grid-cols-2 gap-x-5 gap-y-6">
-            <div class="">
-              <label for="lp-name" class="lp-label">Full name</label>
-              <input id="lp-name" name="name" type="text" required class="lp-input">
-            </div>
-            <div class="">
-              <label for="lp-phone" class="lp-label">Phone</label>
-              <input id="lp-phone" name="phone" type="tel" required class="lp-input">
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-email" class="lp-label">Email</label>
-              <input id="lp-email" name="email" type="email" required class="lp-input">
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input">
-                <option value="">Choose a service</option><option>Concrete Driveways</option><option>Stamped Concrete</option><option>Patios &amp; Walkways</option><option>Stamped Concrete Driveways</option><option>Retaining Walls</option><option>Commercial Concrete</option><option>Commercial Concrete Repair</option><option>Decorative Concrete</option><option>Garage Floor Coating</option><option>Concrete Repair</option><option>Concrete Resurfacing</option><option>Concrete Cleaning &amp; Sealing</option>
-                <option>Something else</option>
-              </select>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-message" class="lp-label">Project details</label>
-              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea>
-            </div>
-            <div class="sm:col-span-2 pt-2">
-              <button type="submit" class="lp-btn w-full sm:w-auto">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button>
-            </div>
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
+    @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
+  <div class="lp-in"><div class="lp-grid">
+    <div style="color:#fff"><p class="lp-kick" style="color:#f0b512">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your project and we will come out, measure, and send a written, itemized price.</p><ul class="lp-info">
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Call</span><a href="tel:+14044742999" class="lp-v lp-v-d">(404) 474-2999</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k lp-k-d">Email</span><a href="mailto:info@concretexperts.com" class="lp-v lp-v-d">info@concretexperts.com</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Service area</span><span class="lp-v lp-v-d">Atlanta, GA</span></span></li>
+        </ul></div>
+    <div class="lp-card">
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Concrete Driveways</option><option>Stamped Concrete</option><option>Patios &amp; Walkways</option><option>Stamped Concrete Driveways</option><option>Retaining Walls</option><option>Commercial Concrete</option><option>Commercial Concrete Repair</option><option>Decorative Concrete</option><option>Garage Floor Coating</option><option>Concrete Repair</option><option>Concrete Resurfacing</option><option>Concrete Cleaning &amp; Sealing</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
           </form>
-          <div id="lp-thanks" class="hidden py-16 text-center">
-            <span class="lp-ic mx-auto" style="width:56px;height:56px"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span>
-            <p class="mt-5 text-2xl font-semibold text-neutral-900">Thanks, we'll be in touch soon.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('hidden');document.getElementById('lp-thanks').classList.remove('hidden');});</script>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div>
+  </div></div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-ink text-white/75 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+<footer class="bg-ink text-white/80 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
     <div class="md:col-span-5">
-      <a href="#top" class="text-white font-extrabold text-2xl uppercase tracking-tight">Concrete <span class="text-brand">Xperts</span></a>
-      <p class="mt-4 max-w-sm leading-relaxed">Driveways, patios, stamped concrete and retaining walls across metro Atlanta.</p>
+      <p class="font-head font-bold uppercase text-2xl text-white tracking-tight">Concrete <span class="text-brand">Xperts</span></p>
+      <p class="mt-4 max-w-sm text-white/65">Locally owned concrete contractor serving metro Atlanta: driveways, patios, stamped and decorative concrete, retaining walls and commercial slabs.</p>
     </div>
     <div class="md:col-span-4">
-      <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-4">Contact</h3>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Contact</p>
       <ul class="space-y-2">
-        <li><a href="tel:+14044742999" class="hover:text-brand">(404) 474-2999</a></li>
-        <li><a href="mailto:info@concretexperts.com" class="hover:text-brand break-words">info@concretexperts.com</a></li>
-        <li>3878 Roswell Rd NE<br>Atlanta, GA 30342</li>
+        <li><a href="tel:+14044742999" class="hover:text-brand transition">(404) 474-2999</a></li>
+        <li><a href="mailto:info@concretexperts.com" class="hover:text-brand transition break-words">info@concretexperts.com</a></li>
+        <li>3878 Roswell Rd NE, Atlanta, GA 30342</li>
       </ul>
     </div>
     <div class="md:col-span-3">
-      <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-4">Explore</h3>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Explore</p>
       <ul class="space-y-2">
-        <li><a href="#services" class="hover:text-brand">Services</a></li>
-        <li><a href="#process" class="hover:text-brand">Process</a></li>
-        <li><a href="#work" class="hover:text-brand">Our work</a></li>
-        <li><a href="#reviews" class="hover:text-brand">Reviews</a></li>
-        <li><a href="#contact" class="hover:text-brand">Contact</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Services</a></li>
+        <li><a href="#process" class="hover:text-brand transition">Process</a></li>
+        <li><a href="#work" class="hover:text-brand transition">Our work</a></li>
+        <li><a href="#faq" class="hover:text-brand transition">FAQ</a></li>
+        <li><a href="#contact" class="hover:text-brand transition">Contact</a></li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50">
-      Concept redesign by LumeaPixel. This is not the official Concrete Xperts website.
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/50 space-y-1">
+      <p>Concept redesign by LumeaPixel. This is not the official Concrete Xperts website.</p>
+      <p>Some photos by Craftsman Concrete Floors on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  // mobile menu
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
 
-  // reveal on scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // before/after slider
-  const range = document.getElementById('baRange');
-  const after = document.getElementById('baAfter');
-  const handle = document.getElementById('baHandle');
-  function setPos(v) {
-    after.style.clipPath = 'inset(0 0 0 ' + v + '%)';
-    handle.style.left = v + '%';
-  }
-  range.addEventListener('input', e => setPos(e.target.value));
-  setPos(50);
 </script>
 </body>
 </html>

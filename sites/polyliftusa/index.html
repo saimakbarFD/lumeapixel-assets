@@ -7,71 +7,71 @@
 <title>Poly Lift USA | Concrete Lifting & Leveling in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Roboto', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#e4202e',
-        navy: '#0b1a6b',
-        ink: '#10131f',
-        paper: '#f6f5f2',
-        mist: '#ececea'
+        brand: '#061588',
+        ink: '#0b1020',
+        deep: '#040c4d',
+        paper: '#f6f6f3',
+        mist: '#ecece8'
       },
-      borderRadius: { tile: '20px' }
+      fontFamily: {
+        head: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif']
+      },
+      borderRadius: { DEFAULT: '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Roboto', system-ui, sans-serif; color: #10131f; background: #ffffff; line-height: 1.6; }
-  h1, h2, h3, h4 { line-height: 1.1; letter-spacing: -0.02em; }
+  body { font-family: 'Inter', sans-serif; color: #0b1020; background: #fff; line-height: 1.6; font-size: 17px; }
+  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; line-height: 1.08; }
+  .r { border-radius: 20px; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; }
-  img { display: block; }
-  .tile { border-radius: 20px; overflow: hidden; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  .label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; }
+  .sec { padding-top: 88px; padding-bottom: 88px; }
+  @media (min-width: 1024px) { .sec { padding-top: 120px; padding-bottom: 120px; } }
 </style>
 </head>
-<body class="antialiased">
+<body class="bg-white">
 
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/logo-0.png" alt="Poly Lift USA" class="h-12 w-auto">
-    </a>
-    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#process" class="hover:text-brand transition">How it works</a>
-      <a href="#why" class="hover:text-brand transition">Why Poly Lift</a>
-      <a href="#reviews" class="hover:text-brand transition">Reviews</a>
-      <a href="#faq" class="hover:text-brand transition">FAQ</a>
-      <a href="#contact" class="hover:text-brand transition">Contact</a>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="font-head text-2xl font-semibold tracking-tight text-brand">Poly Lift <span class="font-bold">USA</span></a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink/80">
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#process" class="hover:text-brand">How it works</a>
+      <a href="#why" class="hover:text-brand">Why Poly Lift</a>
+      <a href="#projects" class="hover:text-brand">Projects</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18447659872" class="inline-flex items-center gap-2 bg-brand text-white font-medium text-sm sm:text-[15px] px-4 sm:px-5 py-3 rounded-full hover:bg-ink transition">
+      <a href="tel:+18447659872" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-medium text-[15px] px-5 py-3 rounded-full hover:bg-deep transition">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="hidden sm:inline">(844) 765-9872</span><span class="sm:hidden">Call</span>
+        (844) 765-9872
       </a>
-      <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-full border border-black/10" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
-    <div class="px-5 py-4 flex flex-col gap-1 text-base font-medium">
-      <a href="#services" class="py-3 border-b border-black/5">Services</a>
-      <a href="#process" class="py-3 border-b border-black/5">How it works</a>
-      <a href="#why" class="py-3 border-b border-black/5">Why Poly Lift</a>
-      <a href="#reviews" class="py-3 border-b border-black/5">Reviews</a>
-      <a href="#faq" class="py-3 border-b border-black/5">FAQ</a>
-      <a href="#contact" class="py-3">Contact</a>
+    <div class="px-5 py-5 flex flex-col gap-4 text-base font-medium">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#why">Why Poly Lift</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+18447659872" class="bg-brand text-white text-center py-3 rounded-full">Call (844) 765-9872</a>
     </div>
   </div>
 </header>
@@ -79,36 +79,36 @@ tailwind.config = {
 <main id="top">
 
 <!-- 1. Hero -->
-<section class="pt-14 lg:pt-20 pb-24 lg:pb-32">
+<section class="pt-12 pb-16 lg:pt-20 lg:pb-24">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
       <div class="lg:col-span-7">
-        <p class="label text-brand mb-5">Concrete lifting &amp; leveling</p>
-        <h1 class="text-4xl sm:text-5xl lg:text-[68px] font-medium">Sinking concrete,<br>made <strong class="font-bold">level</strong> again.</h1>
+        <p class="label text-brand mb-5">Concrete lifting · Atlanta, GA</p>
+        <h1 class="text-[44px] sm:text-6xl lg:text-[76px] font-medium text-ink">Sinking concrete,<br>lifted <span class="font-bold">level</span> again.</h1>
       </div>
       <div class="lg:col-span-5">
-        <p class="text-lg text-ink/75">Poly Lift USA provides concrete lifting, leveling and stabilization across Georgia, Florida, Texas, Tennessee and Alabama. Polyjacking and slabjacking done by full-time crews, with a quick turnaround and no tear-out.</p>
+        <p class="text-ink/70 text-lg mb-7">Poly Lift USA lifts, levels and stabilizes sunken concrete with polyurethane foam, in Georgia, Florida, Texas, Tennessee and Alabama. Most projects finish in less than a day.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="bg-brand text-white font-medium px-7 py-3.5 rounded-full hover:bg-deep transition">Request a free estimate</a>
+          <a href="tel:+18447659872" class="border border-ink/20 font-medium px-7 py-3.5 rounded-full hover:bg-mist transition">(844) 765-9872</a>
+        </div>
       </div>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5">
-      <div class="md:col-span-6 tile aspect-[4/3] md:aspect-auto md:h-[460px]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-3.jpg" alt="Measuring the gap under a settled concrete step" class="w-full h-full object-cover">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mt-14">
+      <div class="md:col-span-7 r overflow-hidden aspect-[4/3] md:aspect-auto md:h-[460px]">
+        <img src="https://images.unsplash.com/photo-1582540730843-f4418d96ccbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker laying rebar for a concrete slab" class="w-full h-full object-cover">
       </div>
-      <div class="md:col-span-3 flex flex-col gap-5">
-        <div class="tile aspect-[4/3] md:aspect-auto md:flex-1">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-7.jpg" alt="Drilling a small injection hole in a concrete slab" class="w-full h-full object-cover">
+      <div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5">
+        <div class="r overflow-hidden aspect-[16/10] md:aspect-auto md:h-[220px]">
+          <img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete driveway slab at a garage" class="w-full h-full object-cover">
         </div>
-        <a href="tel:+18447659872" class="inline-flex items-center justify-center gap-2 bg-brand text-white font-medium px-6 py-4 rounded-full hover:bg-ink transition">
-          Call (844) 765-9872
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-      <div class="md:col-span-3 tile bg-mist p-7 flex flex-col justify-between min-h-[220px]">
-        <p class="label text-ink/60">Our warranty</p>
-        <div>
-          <p class="text-6xl font-bold text-navy leading-none">10 year</p>
-          <p class="mt-3 text-ink/75">Industry-leading warranty on every Foamjection repair.</p>
+        <div class="r bg-mist p-8 flex flex-col justify-between md:h-[220px] min-h-[200px]">
+          <p class="label text-ink/55">Warranty</p>
+          <div>
+            <p class="font-head text-5xl font-semibold text-brand">10 year</p>
+            <p class="text-ink/70 mt-1">Industry-leading warranty on Foamjection repairs.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -116,334 +116,393 @@ tailwind.config = {
 </section>
 
 <!-- 2. Three columns -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-black/10 pt-12">
-      <div class="reveal">
-        <h3 class="label text-brand mb-4">Fast</h3>
-        <p class="text-ink/75">Most projects are finished in less than a day. The slab is ready to use within one hour of completion.</p>
-      </div>
-      <div class="reveal">
-        <h3 class="label text-brand mb-4">Durable</h3>
-        <p class="text-ink/75">We compact the weak subgrade underneath, then stabilize and lift the slab. Backed by a 10 year warranty.</p>
-      </div>
-      <div class="reveal">
-        <h3 class="label text-brand mb-4">Clean</h3>
-        <p class="text-ink/75">Penny-size holes instead of demolition. Our polyurethane foam is EPA-tested and approved, with little waste.</p>
-      </div>
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-ink/10 pt-12">
+    <div class="reveal">
+      <h3 class="label text-brand mb-3">Fast</h3>
+      <p class="text-ink/75">Most projects are completed in less than a day, and the slab is ready for use within one hour of completion.</p>
+    </div>
+    <div class="reveal">
+      <h3 class="label text-brand mb-3">Affordable</h3>
+      <p class="text-ink/75">Lifting the slab you already have costs less than tearing out and replacing it, with no compromise on quality.</p>
+    </div>
+    <div class="reveal">
+      <h3 class="label text-brand mb-3">Eco-friendly</h3>
+      <p class="text-ink/75">Our polyurethane foam is EPA-tested and approved, uses minimal material and produces little waste.</p>
     </div>
   </div>
 </section>
 
-<!-- 3. Mission statement -->
-<section class="pb-24 lg:pb-32 bg-white">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
-    <h2 class="text-3xl sm:text-4xl lg:text-6xl font-medium reveal">Lift it, don't replace it.<br>Stabilize the ground beneath.<br>Get back to using your space.</h2>
+<!-- 3. Statement -->
+<section class="sec bg-paper">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="label text-brand mb-6">What we do</p>
+    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-medium text-ink">We fix the soil beneath the slab, then lift the slab back to where it belongs.</h2>
+    <p class="mt-8 text-lg text-ink/70 max-w-2xl mx-auto">Poly Lift USA provides concrete lifting, leveling and stabilization through polyjacking, slabjacking and concrete raising. Our quick turnaround and professionalism are why customers rely on us for concrete repair.</p>
   </div>
 </section>
 
 <!-- 4. Collage -->
-<section class="pb-24 lg:pb-32">
+<section id="projects" class="sec">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-12 gap-4 lg:gap-5 grid-flow-row-dense">
-      <div class="md:col-span-3 tile aspect-square md:aspect-[3/4]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-8.jpg" alt="Foam injection nozzle at the slab joint" class="w-full h-full object-cover">
-      </div>
-      <div class="col-span-2 md:col-span-6 md:row-span-2 tile aspect-[4/3] md:aspect-auto order-first md:order-none">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-3.jpg" alt="Settled paver step measured with a tape" class="w-full h-full object-cover">
-      </div>
-      <div class="md:col-span-3 tile aspect-square md:aspect-[3/4]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-7.jpg" alt="Drill bit set into a concrete slab" class="w-full h-full object-cover">
-      </div>
-      <div class="md:col-span-3 tile aspect-square md:aspect-[4/3] bg-white">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-6.jpg" alt="Void filling diagram" class="w-full h-full object-contain p-4">
-      </div>
-      <div class="md:col-span-3 tile aspect-square md:aspect-[4/3] bg-white">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-4.jpg" alt="10 year warranty seal" class="w-full h-full object-contain p-5">
-      </div>
+    <div class="max-w-2xl mb-12">
+      <p class="label text-brand mb-4">Concrete work</p>
+      <h2 class="text-4xl lg:text-5xl font-medium">Slabs, steps, floors and walkways.</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 auto-rows-[160px] sm:auto-rows-[200px] lg:auto-rows-[220px] grid-flow-row-dense">
+      <div class="r overflow-hidden"><img src="https://images.unsplash.com/photo-1714562601537-59d75f2e7d3d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew member working with a concrete mixer" class="w-full h-full object-cover"></div>
+      <div class="r overflow-hidden col-span-2 row-span-2 lg:col-span-2"><img src="https://images.unsplash.com/photo-1772306814076-ff65f53ac438?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Large smooth commercial concrete floor" class="w-full h-full object-cover"></div>
+      <div class="r overflow-hidden"><img src="https://images.unsplash.com/photo-1761805574493-87d5d07ac282?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cracked concrete walkway with a utility cover" class="w-full h-full object-cover"></div>
+      <div class="r overflow-hidden"><img src="https://images.unsplash.com/photo-1788809168827-d2527518da26?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete pad with bollards" class="w-full h-full object-cover"></div>
+      <div class="r overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/poly-lift-usa/21925/photo-3.jpg" alt="Measuring the height of a concrete step" class="w-full h-full object-cover"></div>
+      <div class="r overflow-hidden"><img src="https://images.unsplash.com/photo-1792517705942-77e88045dd38?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Level concrete pad with enclosure" class="w-full h-full object-cover"></div>
     </div>
   </div>
 </section>
 
 <!-- 5. How it works -->
-<section id="process" class="py-24 lg:py-32 bg-paper">
+<section id="process" class="sec bg-brand text-white">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 mb-14">
-      <div class="lg:col-span-5">
-        <p class="label text-brand mb-4">How it works</p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium">Foamjection, step by step</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14">
+      <div class="lg:col-span-6">
+        <p class="label text-white/60 mb-4">How it works</p>
+        <h2 class="text-4xl lg:text-5xl font-medium">Foamjection in four steps.</h2>
       </div>
-      <div class="lg:col-span-7 lg:pt-8">
-        <p class="text-lg text-ink/75">Foamjection compacts weak or sinking subgrade, stabilizes the slab above and, if needed, lifts it to remove unlevel surfaces and trip hazards.</p>
+      <div class="lg:col-span-6 lg:pt-8">
+        <p class="text-white/75 text-lg">Foamjection compacts weak or sinking subgrade, stabilizes the slab above and, when needed, lifts it to remove uneven surfaces and trip hazards.</p>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-bold text-lg mb-6">01</p>
-        <h3 class="text-xl font-medium mb-3">Drill</h3>
-        <p class="text-ink/75">Penny-size holes are drilled through the slab where the damage exists, about five feet apart.</p>
+      <div class="r border border-white/20 p-8">
+        <p class="font-head text-4xl font-semibold text-white/40 mb-5">01</p>
+        <h3 class="text-xl font-semibold mb-3">Drill</h3>
+        <p class="text-white/75">Penny-size holes are drilled through the slab where the damage exists, about five feet apart.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-bold text-lg mb-6">02</p>
-        <h3 class="text-xl font-medium mb-3">Inject</h3>
-        <p class="text-ink/75">Ports are installed and hot liquid polyurethane foam is injected under pressure. It expands to compact the subgrade and stabilize the slab.</p>
+      <div class="r border border-white/20 p-8">
+        <p class="font-head text-4xl font-semibold text-white/40 mb-5">02</p>
+        <h3 class="text-xl font-semibold mb-3">Inject and compact</h3>
+        <p class="text-white/75">Ports are installed and hot liquid polyurethane foam is injected under pressure. It expands to compact the subgrade and stabilize the slab, and pressure gauges show when it is fully compacted.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-bold text-lg mb-6">03</p>
-        <h3 class="text-xl font-medium mb-3">Gauge</h3>
-        <p class="text-ink/75">Pressure gauges tell the installer when the subgrade is fully compacted and the slab is stabilized.</p>
+      <div class="r border border-white/20 p-8">
+        <p class="font-head text-4xl font-semibold text-white/40 mb-5">03</p>
+        <h3 class="text-xl font-semibold mb-3">Lift</h3>
+        <p class="text-white/75">If lift is desired, more foam is injected very slowly to raise the slab as close as possible to its original position.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-bold text-lg mb-6">04</p>
-        <h3 class="text-xl font-medium mb-3">Lift</h3>
-        <p class="text-ink/75">If lift is desired, more foam is injected very slowly to raise the slab as close as possible to its original position.</p>
+      <div class="r border border-white/20 p-8">
+        <p class="font-head text-4xl font-semibold text-white/40 mb-5">04</p>
+        <h3 class="text-xl font-semibold mb-3">Fill and clean</h3>
+        <p class="text-white/75">Injection sites are filled and leveled with sanded concrete, and the work area is cleaned.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-bold text-lg mb-6">05</p>
-        <h3 class="text-xl font-medium mb-3">Patch</h3>
-        <p class="text-ink/75">The injection sites are filled and leveled using sanded concrete.</p>
+      <div class="r border border-white/20 p-8">
+        <p class="font-head text-4xl font-semibold text-white/40 mb-5">05</p>
+        <h3 class="text-xl font-semibold mb-3">Back in use</h3>
+        <p class="text-white/75">Most projects are completed in less than a day. The slab is ready for use within one hour of completion.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-bold text-lg mb-6">06</p>
-        <h3 class="text-xl font-medium mb-3">Clean up</h3>
-        <p class="text-ink/75">The work area is cleaned. Most projects are done in less than a day, and the slab is ready for use within one hour.</p>
+      <div class="r bg-white text-ink p-8 flex flex-col justify-between">
+        <p class="font-head text-4xl font-semibold text-brand mb-5">06</p>
+        <div>
+          <h3 class="text-xl font-semibold mb-3">Full-time crews</h3>
+          <p class="text-ink/70">All Poly Lift teams are full-time employees led by experienced crew chiefs.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 6. Services -->
-<section id="services" class="py-24 lg:py-32">
+<section id="services" class="sec">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-      <div>
-        <p class="label text-brand mb-4">Services</p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium max-w-xl">Concrete leveling solutions</h2>
-      </div>
-      <p class="text-lg text-ink/75 max-w-md">Long-lasting, eco-friendly and quick-drying, for homes and commercial properties.</p>
+    <div class="max-w-2xl mb-12">
+      <p class="label text-brand mb-4">Services</p>
+      <h2 class="text-4xl lg:text-5xl font-medium">Concrete leveling for every surface.</h2>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <article class="reveal">
-        <div class="tile aspect-[4/5] mb-5">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-3.jpg" alt="Sunken concrete step" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-medium mb-2">Steps &amp; walkways</h3>
-        <p class="text-ink/75 text-[15px]">Uneven steps, sidewalks and walkways are trip hazards. We restore them quickly so they are safe again.</p>
-      </article>
-      <article class="reveal">
-        <div class="tile aspect-[4/5] mb-5">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-7.jpg" alt="Drilling into a concrete slab" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-medium mb-2">Driveways &amp; slabs</h3>
-        <p class="text-ink/75 text-[15px]">Smooth, stable and long-lasting surfaces without the cost of replacement. Also garage floors and patios.</p>
-      </article>
-      <article class="reveal">
-        <div class="tile aspect-[4/5] mb-5">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-8.jpg" alt="Foam injection nozzle on a pool deck slab" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-medium mb-2">Pool decks &amp; porches</h3>
-        <p class="text-ink/75 text-[15px]">We level sinking pool decks and porches to fix drainage problems and safety hazards.</p>
-      </article>
-      <article class="reveal">
-        <div class="tile aspect-[4/5] mb-5 bg-white border border-black/10">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-6.jpg" alt="Void filling" class="w-full h-full object-contain p-6">
-        </div>
-        <h3 class="text-xl font-medium mb-2">Void filling &amp; seawalls</h3>
-        <p class="text-ink/75 text-[15px]">Voids beneath concrete lead to sinking and cracking. We fill them to prevent future settling. Seawall repair and commercial work too.</p>
-      </article>
+      <a href="#contact" class="group block">
+        <div class="r overflow-hidden aspect-[4/5]"><img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Driveway slab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <h3 class="text-xl font-semibold mt-5 mb-2">Driveway leveling</h3>
+        <p class="text-ink/70 text-[15px]">Uneven, cracked or sinking driveways made smooth and stable without costly replacement.</p>
+      </a>
+      <a href="#contact" class="group block">
+        <div class="r overflow-hidden aspect-[4/5]"><img src="https://images.unsplash.com/photo-1772306814076-ff65f53ac438?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete floor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <h3 class="text-xl font-semibold mt-5 mb-2">Garage and slab floors</h3>
+        <p class="text-ink/70 text-[15px]">Sinking garage floors and concrete slabs lifted to level in just a few hours.</p>
+      </a>
+      <a href="#contact" class="group block">
+        <div class="r overflow-hidden aspect-[4/5]"><img src="https://images.unsplash.com/photo-1761805574493-87d5d07ac282?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cracked sidewalk" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <h3 class="text-xl font-semibold mt-5 mb-2">Sidewalks and walkways</h3>
+        <p class="text-ink/70 text-[15px]">Remove trip hazards with quick, efficient leveling that makes walkways safe again.</p>
+      </a>
+      <a href="#contact" class="group block">
+        <div class="r overflow-hidden aspect-[4/5]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@3f8f6871874e9b41fa408de9cca2c0c432b3d3b0/sites/poly-lift-usa/21925/photo-3.jpg" alt="Concrete step measurement" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <h3 class="text-xl font-semibold mt-5 mb-2">Steps and porches</h3>
+        <p class="text-ink/70 text-[15px]">Uneven concrete steps and porches restored for safety, stability and a clean appearance.</p>
+      </a>
     </div>
-    <p class="mt-10 text-ink/60 text-[15px]">Also: garage floor leveling, concrete slab leveling, commercial parking lots and warehouse floors.</p>
+    <div class="mt-12 r bg-paper p-8 lg:p-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+      <div class="md:col-span-5">
+        <h3 class="text-2xl font-semibold">Also available</h3>
+      </div>
+      <p class="md:col-span-7 text-ink/75">Patio leveling, pool deck leveling, void filling, seawall repair and commercial services, including sidewalks, parking lots and warehouse floors.</p>
+    </div>
   </div>
 </section>
 
-<!-- 7. Reviews (real) -->
-<section id="reviews" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="label text-brand mb-4">Customer reviews</p>
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium mb-14 max-w-2xl">What customers say</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <figure class="bg-white rounded-tile p-8 flex flex-col justify-between reveal">
-        <blockquote class="text-lg leading-relaxed">“Excellent experience with Poly Lift. They leveled an extremely cracked and sinking 20 year old patio.”</blockquote>
-        <figcaption class="mt-8 text-sm font-medium text-ink/60">Ron</figcaption>
-      </figure>
-      <figure class="bg-white rounded-tile p-8 flex flex-col justify-between reveal">
-        <blockquote class="text-lg leading-relaxed">“Excellent customer service, friendly staff, and very reasonable pricing. Service delivered precisely as advertised!”</blockquote>
-        <figcaption class="mt-8 text-sm font-medium text-ink/60">Isaac</figcaption>
-      </figure>
-      <figure class="bg-white rounded-tile p-8 flex flex-col justify-between reveal">
-        <blockquote class="text-lg leading-relaxed">“Guillermo and Alberto did an amazing job on our patio. Highly recommended.”</blockquote>
-        <figcaption class="mt-8 text-sm font-medium text-ink/60">Dave</figcaption>
-      </figure>
+<!-- Reviews -->
+<section id="reviews" class="ti-reviews">
+  <style>
+    .ti-reviews{background:#fff;padding:88px 0;font-family:'Poppins','Inter',system-ui,sans-serif;color:#111}
+    .ti-reviews .ti-wrap{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:28px}
+    .ti-reviews .ti-sum{flex:none;width:230px;text-align:center}
+    .ti-reviews .ti-label{font-size:22px;font-weight:700;letter-spacing:.01em;margin-bottom:6px}
+    .ti-reviews .ti-based{font-size:15px;margin-top:6px;color:#111}
+    .ti-reviews .ti-google{display:block;margin-top:6px;font-size:40px;font-weight:500;letter-spacing:-1px;line-height:1.1;font-family:'Product Sans','Roboto','Poppins',Arial,sans-serif}
+    .ti-reviews .ti-stars{position:relative;display:inline-block;line-height:0}
+    .ti-reviews .ti-stars-fill{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap}
+    .ti-reviews .ti-slider{position:relative;flex:1;min-width:0}
+    .ti-reviews .ti-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:14px 4px 18px;scrollbar-width:none}
+    .ti-reviews .ti-track::-webkit-scrollbar{display:none}
+    .ti-reviews .ti-card{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;background:#fff;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.09);padding:20px 22px 18px;display:flex;flex-direction:column}
+    .ti-reviews .ti-head{display:flex;align-items:center;gap:12px}
+    .ti-reviews .ti-avatar{flex:none;width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}
+    .ti-reviews .ti-who{min-width:0;flex:1;display:flex;flex-direction:column}
+    .ti-reviews .ti-name{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ti-reviews .ti-date{font-size:13px;color:#8a8a8a}
+    .ti-reviews .ti-g{flex:none;align-self:flex-start}
+    .ti-reviews .ti-rate{display:flex;align-items:center;gap:6px;margin-top:12px}
+    .ti-reviews .ti-text{margin-top:10px;font-size:15px;line-height:1.5;color:#111;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+    .ti-reviews .ti-card.open .ti-text{-webkit-line-clamp:unset;display:block}
+    .ti-reviews .ti-more{margin-top:auto;padding-top:10px;align-self:flex-start;font-size:14px;color:#8a8a8a;background:none;border:0;cursor:pointer}
+    .ti-reviews .ti-more:hover{color:#111}
+    .ti-reviews .ti-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid #ddd;box-shadow:0 1px 4px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#555;z-index:2}
+    .ti-reviews .ti-prev{left:-14px}.ti-reviews .ti-next{right:-14px}
+    @media (max-width:1023px){.ti-reviews .ti-card{flex-basis:calc((100% - 16px)/2)}}
+    @media (max-width:767px){.ti-reviews{padding:64px 0}.ti-reviews .ti-wrap{flex-direction:column;gap:12px}.ti-reviews .ti-sum{width:auto}.ti-reviews .ti-slider{width:100%}.ti-reviews .ti-card{flex-basis:86%}.ti-reviews .ti-prev{left:-6px}.ti-reviews .ti-next{right:-6px}}
+  </style>
+  <div class="ti-wrap">
+        <div class="ti-sum">
+          <div class="ti-label">EXCELLENT</div>
+          <div><span class="ti-stars" role="img" aria-label="4.8 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:96%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span></div>
+          <div class="ti-based">Based on <b>34 reviews</b></div>
+          
+        </div>
+    <div class="ti-slider">
+      <button type="button" class="ti-arrow ti-prev" aria-label="Previous reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="ti-track">
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#6d4c41">P</span>
+            <span class="ti-who"><span class="ti-name">Paul</span></span>
+            
+          </div>
+          
+          <p class="ti-text">My pool deck was starting to sink due to water erosion from my roof gutters. 6 months ago, one... read more</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#f4511e">C</span>
+            <span class="ti-who"><span class="ti-name">Charles</span></span>
+            
+          </div>
+          
+          <p class="ti-text">PolyLift Usa did a great job lifting my pooldeck I would highly recommend PolyLift Usa.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#6d4c41">R</span>
+            <span class="ti-who"><span class="ti-name">Ron</span></span>
+            
+          </div>
+          
+          <p class="ti-text">They do a great job, he knows his information and was not trying to rip me off on pricing. He... read more</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#6d4c41">S</span>
+            <span class="ti-who"><span class="ti-name">Steve</span></span>
+            
+          </div>
+          
+          <p class="ti-text">on time..efficient..professional...would recommend to neighbors..</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#6d4c41">D</span>
+            <span class="ti-who"><span class="ti-name">Dave</span></span>
+            
+          </div>
+          
+          <p class="ti-text">Guillermo and Alberto did an amazing job on our patio. Highly recommended.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#1e88e5">S</span>
+            <span class="ti-who"><span class="ti-name">Susan</span></span>
+            
+          </div>
+          
+          <p class="ti-text">They did an amazing job on my pool deck</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#00897b">T</span>
+            <span class="ti-who"><span class="ti-name">Terry</span></span>
+            
+          </div>
+          
+          <p class="ti-text">Excellent customer service, friendly staff, and very reasonable pricing. Service delivered precisely as advertised!</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#c2185b">M</span>
+            <span class="ti-who"><span class="ti-name">Melissa</span></span>
+            
+          </div>
+          
+          <p class="ti-text">The scheduling process was remarkably straightforward and convenient following a sales call that set the stage for today's work. My... read more</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#6d4c41">E</span>
+            <span class="ti-who"><span class="ti-name">ellen</span></span>
+            
+          </div>
+          
+          <p class="ti-text">Poly lift did a great job on my cracked driveway. The office staff were detailed and the two foams... read more</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+      </div>
+      <button type="button" class="ti-arrow ti-next" aria-label="Next reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
   </div>
+  <script>(function(){var s=document.currentScript.closest('section'),t=s.querySelector('.ti-track');
+  function step(d){var c=t.querySelector('.ti-card');t.scrollBy({left:d*(c?c.offsetWidth+16:300),behavior:'smooth'});}
+  s.querySelector('.ti-prev').onclick=function(){step(-1)};s.querySelector('.ti-next').onclick=function(){step(1)};
+  function arrows(){var max=t.scrollWidth-t.clientWidth-2;s.querySelector('.ti-prev').style.display=t.scrollLeft>12?'flex':'none';s.querySelector('.ti-next').style.display=t.scrollLeft<max-10?'flex':'none';}
+  t.addEventListener('scroll',arrows);window.addEventListener('resize',arrows);arrows();
+  s.querySelectorAll('.ti-card').forEach(function(c){var p=c.querySelector('.ti-text'),b=c.querySelector('.ti-more');
+    if(p.scrollHeight<=p.clientHeight+2){b.style.visibility='hidden';}
+    b.onclick=function(){c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Hide':'Read more';};});
+  })();</script>
 </section>
 
 <!-- 8. Why choose -->
-<section id="why" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-      <div class="lg:col-span-5">
-        <div class="tile aspect-[4/5]">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-2.jpg" alt="Slab repair" class="w-full h-full object-cover" onerror="this.src='https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-3.jpg'">
-        </div>
-      </div>
-      <div class="lg:col-span-7">
-        <p class="label text-brand mb-4">Why Poly Lift USA</p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium mb-12">The benefits of Foamjection</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
-          <div>
-            <div class="w-9 h-9 rounded-full bg-brand text-white flex items-center justify-center mb-4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            </div>
-            <h3 class="text-xl font-medium mb-2">10 year warranty</h3>
-            <p class="text-ink/75">Durable repairs with an industry-leading warranty.</p>
-          </div>
-          <div>
-            <div class="w-9 h-9 rounded-full bg-brand text-white flex items-center justify-center mb-4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            </div>
-            <h3 class="text-xl font-medium mb-2">Full-time crews</h3>
-            <p class="text-ink/75">Every Poly Lift team is made up of full-time employees led by experienced crew chiefs.</p>
-          </div>
-          <div>
-            <div class="w-9 h-9 rounded-full bg-brand text-white flex items-center justify-center mb-4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            </div>
-            <h3 class="text-xl font-medium mb-2">Eco-friendly foam</h3>
-            <p class="text-ink/75">EPA-tested and approved, with minimal material and little waste.</p>
-          </div>
-          <div>
-            <div class="w-9 h-9 rounded-full bg-brand text-white flex items-center justify-center mb-4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            </div>
-            <h3 class="text-xl font-medium mb-2">Back in use within hours</h3>
-            <p class="text-ink/75">Most projects finish in under a day, and the slab can be used within one hour.</p>
-          </div>
-        </div>
+<section id="why" class="sec bg-paper">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-5">
+      <div class="r overflow-hidden aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1714562601537-59d75f2e7d3d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete crew at work" class="w-full h-full object-cover">
       </div>
     </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-4xl mx-auto px-5 lg:px-8">
-    <p class="label text-brand mb-4">FAQ</p>
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium mb-12">Common questions</h2>
-    <div class="divide-y divide-black/10 border-y border-black/10">
-      <details class="group py-6">
-        <summary class="flex justify-between items-center cursor-pointer list-none text-lg font-medium gap-4">What is concrete leveling?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-4 text-ink/75">A cost-effective way to lift and level sunken, uneven or cracked concrete. Polyurethane foam is injected under the slab to fill voids, stabilize the soil and raise the concrete back to its original position, with no costly replacement.</p>
-      </details>
-      <details class="group py-6">
-        <summary class="flex justify-between items-center cursor-pointer list-none text-lg font-medium gap-4">How long does it take?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-4 text-ink/75">Most residential projects like driveways, sidewalks or patios are completed in just a few hours. The foam cures in about half an hour, so you can walk or drive on the surface the same day.</p>
-      </details>
-      <details class="group py-6">
-        <summary class="flex justify-between items-center cursor-pointer list-none text-lg font-medium gap-4">Is the foam eco-friendly?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-4 text-ink/75">Yes. Our polyurethane foam is EPA-tested and approved, uses minimal material, produces little waste and avoids removing and replacing old concrete.</p>
-      </details>
-      <details class="group py-6">
-        <summary class="flex justify-between items-center cursor-pointer list-none text-lg font-medium gap-4">How does the process work?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-4 text-ink/75">First we compact the subgrade underneath the slab, the root cause of sinking and cracking. Next we stabilize the slab, then lift it to reduce unlevel surfaces and trip hazards. Finally we patch the holes with sanded concrete.</p>
-      </details>
+    <div class="lg:col-span-7">
+      <p class="label text-brand mb-4">Why Poly Lift USA</p>
+      <h2 class="text-4xl lg:text-5xl font-medium mb-10">The benefits of Foamjection.</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-9">
+        <div>
+          <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3 class="text-xl font-semibold mb-2">Durable</h3>
+          <p class="text-ink/70">Backed by an industry-leading 10 year warranty.</p>
+        </div>
+        <div>
+          <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3 class="text-xl font-semibold mb-2">Quick-drying</h3>
+          <p class="text-ink/70">Foam cures in about half an hour, so you can use the surface the same day.</p>
+        </div>
+        <div>
+          <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3 class="text-xl font-semibold mb-2">Eco-friendly</h3>
+          <p class="text-ink/70">EPA-tested and approved, with less waste than removing and replacing concrete.</p>
+        </div>
+        <div>
+          <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <h3 class="text-xl font-semibold mb-2">Residential and commercial</h3>
+          <p class="text-ink/70">Homes, parking lots, warehouse floors and municipal work, with minimal disruption.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Contact placeholder -->
-<section id="contact" class="lp-contact py-24 md:py-32 bg-[#f6f5f2]">
+<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(228,32,46,0.10);color:#e4202e}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 12px 32px -12px rgba(16,24,40,.10)}
+    .lp-contact{position:relative}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(6,21,136,0.10);color:#061588}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#8f96c9}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:20px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:16px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#e4202e;box-shadow:0 0 0 4px rgba(228,32,46,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border-radius:8px;background:#e4202e;color:#ffffff;font-weight:600;font-size:16px;transition:filter .15s,transform .15s}
+    .lp-contact .lp-input:focus{outline:none;border-color:#061588;box-shadow:0 0 0 4px rgba(6,21,136,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:16px;background:#061588;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
-  </style>
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-      <div class="lg:col-span-5">
-        <p class="text-[13px] font-semibold uppercase tracking-[.16em]" style="color:#e4202e">Contact</p>
-        <h2 class="mt-4 text-4xl md:text-5xl font-semibold leading-[1.08] tracking-tight text-neutral-900">Request a free estimate</h2>
-        <p class="mt-5 text-lg leading-relaxed text-neutral-600 max-w-md">Tell us what is sinking and we will get back to you about lifting and leveling it.</p>
-        <ul class="mt-10 space-y-6">
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Call</span>
-            <a href="tel:+18447659872" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">(844) 765-9872</a></span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Email</span>
-            <a href="mailto:info@polyliftusa.com" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">info@polyliftusa.com</a></span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Service area</span>
-            <span class="text-lg font-medium text-neutral-900">Atlanta, GA</span></span>
-          </li>
-        </ul>
-      </div>
-      <div class="lg:col-span-7">
-        <div class="lp-card p-6 sm:p-8 md:p-10">
-          <form id="lp-form" novalidate class="grid sm:grid-cols-2 gap-x-5 gap-y-6">
-            <div class="">
-              <label for="lp-name" class="lp-label">Full name</label>
-              <input id="lp-name" name="name" type="text" required class="lp-input">
-            </div>
-            <div class="">
-              <label for="lp-phone" class="lp-label">Phone</label>
-              <input id="lp-phone" name="phone" type="tel" required class="lp-input">
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-email" class="lp-label">Email</label>
-              <input id="lp-email" name="email" type="email" required class="lp-input">
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input">
-                <option value="">Choose a service</option><option>Driveway Leveling</option><option>Garage Floor Leveling</option><option>Sidewalk &amp; Walkway Leveling</option><option>Patio Leveling</option><option>Pool Deck Leveling</option><option>Porch Leveling</option><option>Concrete Slab Leveling</option><option>Concrete Steps Leveling</option><option>Void Filling</option><option>Seawall Repair</option><option>Commercial Services</option>
-                <option>Something else</option>
-              </select>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-message" class="lp-label">Project details</label>
-              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea>
-            </div>
-            <div class="sm:col-span-2 pt-2">
-              <button type="submit" class="lp-btn w-full sm:w-auto">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button>
-            </div>
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-center{max-width:48rem;margin:0 auto;text-align:center}
+    .lp-contact .lp-center .lp-p{margin-left:auto;margin-right:auto}
+    .lp-contact .lp-tiles{margin:40px auto 0;display:grid;gap:12px;max-width:56rem}
+    @media (min-width:768px){.lp-contact .lp-tiles{grid-template-columns:repeat(3,1fr)}}
+    .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:20px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
+    .lp-contact .lp-tile .lp-v{font-size:16px}
+    .lp-contact .lp-formwrap{max-width:48rem;margin:28px auto 0}</style>
+  <div class="lp-in">
+    <div class="lp-center"><p class="lp-kick" style="color:#061588">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us what is sinking and where, and Poly Lift USA will get back to you about lifting and leveling it.</p></div>
+    <div class="lp-tiles"><a href="tel:+18447659872" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(844) 765-9872</span></span></a><a href="mailto:info@polyliftusa.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">info@polyliftusa.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Atlanta, GA</span></span></div></div>
+    <div class="lp-formwrap lp-card">
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Driveway Leveling</option><option>Garage Floor Leveling</option><option>Sidewalk &amp; Walkway Leveling</option><option>Patio Leveling</option><option>Pool Deck Leveling</option><option>Porch Leveling</option><option>Concrete Slab Leveling</option><option>Concrete Steps Leveling</option><option>Void Filling</option><option>Seawall Repair</option><option>Commercial Services</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
           </form>
-          <div id="lp-thanks" class="hidden py-16 text-center">
-            <span class="lp-ic mx-auto" style="width:56px;height:56px"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span>
-            <p class="mt-5 text-2xl font-semibold text-neutral-900">Thanks, we'll be in touch soon.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div>
   </div>
-  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('hidden');document.getElementById('lp-thanks').classList.remove('hidden');});</script>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
 <!-- 10. Final call card -->
-<section class="py-24 lg:py-32">
+<section class="pb-24 lg:pb-32 pt-4">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-      <div class="lg:col-span-6 tile aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/photo-3.jpg" alt="Checking the level of a concrete step" class="w-full h-full object-cover">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+      <div class="md:col-span-5 r overflow-hidden aspect-[4/3] md:aspect-auto md:min-h-[380px]">
+        <img src="https://images.unsplash.com/photo-1582540730843-f4418d96ccbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker on a reinforced concrete slab" class="w-full h-full object-cover">
       </div>
-      <div class="lg:col-span-6 tile bg-mist p-8 sm:p-12 flex flex-col justify-center">
-        <p class="label text-brand mb-4">Get started</p>
-        <h2 class="text-3xl sm:text-4xl font-medium mb-5">Need concrete repair?</h2>
-        <p class="text-lg text-ink/75 mb-8">Call Poly Lift USA today and see why thousands of customers rely on us for concrete lifting and soil stabilization.</p>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="tel:+18447659872" class="inline-flex items-center justify-center bg-brand text-white font-medium px-7 py-4 rounded-full hover:bg-ink transition">(844) 765-9872</a>
-          <a href="#contact" class="inline-flex items-center justify-center border border-ink/20 font-medium px-7 py-4 rounded-full hover:border-ink transition">Request an estimate</a>
+      <div class="md:col-span-7 r bg-mist p-8 lg:p-14 flex flex-col justify-center">
+        <p class="label text-brand mb-4">Need concrete repair?</p>
+        <h2 class="text-3xl lg:text-5xl font-medium mb-5">Call and see why customers rely on Poly Lift USA.</h2>
+        <p class="text-ink/70 mb-8 max-w-lg">Affordable concrete lifting and soil stabilization, with a quick turnaround.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="tel:+18447659872" class="bg-brand text-white font-medium px-7 py-3.5 rounded-full hover:bg-deep transition">Call (844) 765-9872</a>
+          <a href="mailto:info@polyliftusa.com" class="border border-ink/20 font-medium px-7 py-3.5 rounded-full hover:bg-white transition">Email us</a>
         </div>
       </div>
     </div>
@@ -452,38 +511,33 @@ tailwind.config = {
 
 </main>
 
-<!-- 11. Footer -->
-<footer class="bg-brand text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 text-center">
-    <div class="inline-block bg-white rounded-tile px-5 py-3 mb-8">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/poly-lift-usa/21924/logo-0.png" alt="Poly Lift USA" class="h-12 w-auto">
+<!-- Footer -->
+<footer class="bg-brand text-white text-center">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8 py-16 lg:py-20">
+    <p class="font-head text-3xl font-semibold mb-3">Poly Lift <span class="font-bold">USA</span></p>
+    <p class="text-white/70 mb-8">Concrete lifting, leveling and stabilization in Atlanta, Georgia, and across Florida, Texas, Tennessee and Alabama.</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 mb-10">
+      <a href="tel:+18447659872" class="font-medium hover:underline">(844) 765-9872</a>
+      <a href="mailto:info@polyliftusa.com" class="font-medium hover:underline break-words">info@polyliftusa.com</a>
     </div>
-    <p class="max-w-xl mx-auto text-white/90 mb-8">Concrete lifting, leveling and stabilization in Atlanta, GA and across Florida, Georgia, Texas, Tennessee and Alabama.</p>
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-10 text-lg font-medium">
-      <a href="tel:+18447659872" class="hover:underline">(844) 765-9872</a>
-      <a href="mailto:info@polyliftusa.com" class="hover:underline break-words">info@polyliftusa.com</a>
-    </div>
-    <nav class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-white/85">
-      <a href="#services" class="hover:underline">Services</a>
-      <a href="#process" class="hover:underline">How it works</a>
-      <a href="#why" class="hover:underline">Why Poly Lift</a>
-      <a href="#reviews" class="hover:underline">Reviews</a>
-      <a href="#faq" class="hover:underline">FAQ</a>
-      <a href="#contact" class="hover:underline">Contact</a>
+    <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/70 mb-10">
+      <a href="#services" class="hover:text-white">Services</a>
+      <a href="#process" class="hover:text-white">How it works</a>
+      <a href="#why" class="hover:text-white">Why Poly Lift</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
-    <p class="mt-12 pt-8 border-t border-white/25 text-xs text-white/80">Concept redesign by LumeaPixel. This is not the official Poly Lift USA website.</p>
+    <p class="text-xs text-white/55">Concept redesign by LumeaPixel. This is not the official Poly Lift USA website.</p>
+    <p class="text-xs text-white/55 mt-2">Some photos by Ricardo Gomez Angel, Darrel Louise Almanzor, Craftsman Concrete Floors, Chad Nathan, Wolf Lieff, Rachel Tolander and web seo on Unsplash.</p>
   </div>
 </footer>
 
 <script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', function(){ mm.classList.toggle('hidden'); });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.add('hidden'); }); });
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 </script>
 </body>
 </html>
