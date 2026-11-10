@@ -4,58 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>MK Construction LLC | Construction & Remodeling in Tampa, FL</title>
+<title>MK Construction LLC | Remodeling, Custom Homes &amp; Construction in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: {
-        brand: '#4f6f8f',
-        'brand-dark': '#1b2a38',
-        ink: '#10161d',
-        paper: '#f5f4f1'
+        brand: '#4a6f94',
+        brandDark: '#1b2b3b',
+        ink: '#12171d',
+        paper: '#f6f4f0',
+        stone: '#e9e5de'
       },
       fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
+        heading: ['Jost', 'sans-serif'],
+        body: ['Manrope', 'sans-serif']
       },
-      borderRadius: { DEFAULT: '14px' }
+      borderRadius: { DEFAULT: '10px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #10161d; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
+  body { font-family: 'Manrope', sans-serif; font-size: 17px; line-height: 1.6; color: #12171d; }
+  h1, h2, h3, h4 { font-family: 'Jost', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .card-img { transition: transform .6s ease; }
-  .card:hover .card-img { transform: scale(1.04); }
-  .card:hover .arrow { transform: translateX(4px); }
-  .arrow { transition: transform .3s ease; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  .r10 { border-radius: 10px; }
+  .photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .scroll-offset { scroll-margin-top: 90px; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
 <!-- Top bar -->
 <div class="bg-brand text-white text-sm">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-    <span>Serving Tampa, Florida and the surrounding area</span>
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <span>Serving Tampa, Florida</span>
     <a href="mailto:admin@mkconstructionllc.com" class="hover:underline break-words">admin@mkconstructionllc.com</a>
   </div>
 </div>
 
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-ink text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0 bg-white rounded px-3 py-1.5 flex items-center">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/mk-construction-llc/21943/logo-0.png" alt="MK Construction, LLC" class="h-10 md:h-11 w-auto">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0 bg-white rounded px-3 py-1.5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/logo-0.png" alt="MK Construction, LLC" class="h-11 w-auto block">
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
       <a href="#about" class="hover:text-white/70 transition">About</a>
@@ -69,21 +68,24 @@ tailwind.config = {
         <div class="text-xs text-white/60">Need help? Call us today</div>
         <a href="tel:+18138768365" class="font-heading font-semibold text-lg">(813) 876-8365</a>
       </div>
-      <a href="tel:+18138768365" class="xl:hidden font-heading font-semibold">(813) 876-8365</a>
-      <a href="#contact" class="bg-brand hover:bg-white hover:text-ink transition rounded px-5 py-3 text-[15px] font-semibold">Get an estimate</a>
+      <a href="tel:+18138768365" class="xl:hidden inline-flex items-center gap-2 font-heading font-semibold">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (813) 876-8365
+      </a>
+      <a href="#contact" class="bg-brand hover:bg-[#3d5e80] transition text-white font-semibold px-5 py-3 r10 text-[15px]">Get an estimate</a>
     </div>
-    <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="px-5 py-5 flex flex-col gap-4 text-lg font-medium">
-      <a href="#about" class="mlink">About</a>
-      <a href="#services" class="mlink">Services</a>
-      <a href="#projects" class="mlink">Projects</a>
-      <a href="#values" class="mlink">Values</a>
-      <a href="#contact" class="mlink">Contact</a>
-      <a href="tel:+18138768365" class="bg-brand rounded px-5 py-3 text-center font-semibold">Call (813) 876-8365</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
+    <div class="px-5 py-5 flex flex-col gap-4 text-base">
+      <a href="#about" class="mm">About</a>
+      <a href="#services" class="mm">Services</a>
+      <a href="#projects" class="mm">Projects</a>
+      <a href="#values" class="mm">Values</a>
+      <a href="#contact" class="mm">Contact</a>
+      <a href="tel:+18138768365" class="bg-brand text-white font-semibold px-5 py-3 r10 text-center">Call (813) 876-8365</a>
     </div>
   </div>
 </header>
@@ -92,185 +94,221 @@ tailwind.config = {
 
 <!-- Hero -->
 <section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1606383446056-eb3fc3cde97b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home addition under construction in Tampa" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/30"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-24 md:py-32 lg:py-44">
-    <div class="max-w-2xl">
-      <p class="text-sm tracking-[0.2em] uppercase text-white/70 mb-5">Tampa, Florida Construction & Remodeling</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold">Where vision<br>meets craftsmanship</h1>
-      <p class="mt-6 text-lg text-white/80 max-w-xl">MK Construction is Tampa's trusted construction firm, founded by Mason and Kylee Smith to build exceptional spaces for the families who make this city extraordinary.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="bg-brand hover:bg-white hover:text-ink transition rounded px-7 py-3.5 font-semibold text-center">Start your project</a>
-        <a href="tel:+18138768365" class="bg-white text-ink hover:bg-white/85 transition rounded-full px-7 py-3.5 font-semibold text-center">Call (813) 876-8365</a>
+  <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-15.jpg" alt="Remodeled open kitchen with island and hardwood floors" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-ink/70"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.2em] text-white/70 mb-6">Construction &amp; Remodeling in Tampa, Florida</p>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-semibold">Where vision meets craftsmanship</h1>
+      <p class="mt-7 text-lg md:text-xl text-white/85 max-w-2xl">MK Construction is a Tampa construction firm founded by Mason and Kylee Smith. We build and remodel spaces for the families who make this city what it is.</p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-brand hover:bg-[#3d5e80] transition text-white font-semibold px-7 py-4 r10 text-center">Start your project</a>
+        <a href="tel:+18138768365" class="bg-white text-ink hover:bg-stone transition font-semibold px-7 py-4 r10 text-center">Call (813) 876-8365</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- The MK difference -->
-<section id="about" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
-    <div class="lg:col-span-6 reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-brand font-semibold mb-5">The MK difference</p>
-      <h2 class="text-4xl md:text-5xl font-semibold">Quality, innovation and personalized solutions</h2>
-
-      <div class="mt-12 grid grid-cols-12 gap-3 md:gap-4 items-end">
-        <div class="col-span-4">
-          <img src="https://images.unsplash.com/photo-1593012672105-42e6d13af5ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Steel beam framing during a home addition" class="w-full aspect-[3/4] object-cover rounded">
-        </div>
-        <div class="col-span-4 bg-brand text-white rounded p-4 md:p-6 aspect-[3/4] flex flex-col justify-end">
-          <p class="font-heading text-xl md:text-2xl font-semibold leading-tight">Trust, built into every detail.</p>
-        </div>
-        <div class="col-span-4">
-          <img src="https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior renovation with temporary support posts" class="w-full aspect-[3/4] object-cover rounded">
-        </div>
-      </div>
-    </div>
-
-    <div class="lg:col-span-6 reveal">
-      <p class="text-gray-700">MK Construction was founded by Mason and Kylee Smith with a singular purpose: building exceptional spaces for Tampa families. We combine years of industry expertise with a commitment to trust, transparency and thoughtful design.</p>
-      <p class="mt-4 text-gray-700">This isn't just construction. It's your legacy, and we don't take that lightly.</p>
-
-      <div class="mt-10 divide-y divide-gray-200 border-y border-gray-200">
-        <div class="py-6">
-          <h3 class="text-xl font-semibold">Remodeling</h3>
-          <p class="mt-2 text-gray-600">Kitchens, bathrooms or your entire home, updated with thoughtful design and quality craftsmanship from design to completion.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl font-semibold">Custom Homes</h3>
-          <p class="mt-2 text-gray-600">Mindfully designed and built homes that reflect individual lifestyles, with collaboration at every step.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl font-semibold">Construction</h3>
-          <p class="mt-2 text-gray-600">Home expansions, ADUs, structural enhancements and larger projects, guided from concept to completion.</p>
+<section id="about" class="scroll-offset py-24 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+      <div class="lg:col-span-6 reveal">
+        <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-5">The MK difference</p>
+        <h2 class="text-4xl md:text-5xl font-semibold">Quality, innovation and personalized solutions</h2>
+        <div class="mt-12 grid grid-cols-6 gap-4">
+          <div class="col-span-3 aspect-[3/4] r10 overflow-hidden">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-2.jpg" alt="Bathroom with freestanding tub and brass fixtures" class="photo">
+          </div>
+          <div class="col-span-3 flex flex-col gap-4">
+            <div class="bg-brand text-white r10 p-6 flex-1 flex flex-col justify-end min-h-[150px]">
+              <p class="font-heading text-2xl font-medium leading-tight">Your legacy, and we don’t take that lightly.</p>
+            </div>
+            <div class="aspect-[4/3] r10 overflow-hidden">
+              <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-12.jpg" alt="Dining area with brass pendant light" class="photo">
+            </div>
+          </div>
         </div>
       </div>
-
-      <a href="tel:+18138768365" class="mt-8 inline-flex items-center gap-4 group">
-        <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        <span>
-          <span class="block text-sm text-gray-500">Call or text</span>
-          <span class="block font-heading text-2xl font-semibold group-hover:text-brand transition">(813) 876-8365</span>
-        </span>
-      </a>
+      <div class="lg:col-span-6 reveal">
+        <p class="text-lg text-ink/80">MK Construction is Tampa’s trusted construction firm, founded by Mason and Kylee Smith with a singular purpose: building exceptional spaces for the families who make this city extraordinary.</p>
+        <p class="mt-5 text-ink/70">We combine years of industry expertise with an unwavering commitment to trust, transparency and elevated design. This isn’t just construction, it’s your legacy.</p>
+        <div class="mt-10 divide-y divide-stone border-t border-stone">
+          <div class="py-6">
+            <h3 class="text-xl font-semibold">Remodeling</h3>
+            <p class="mt-2 text-ink/70">From design to completion, expertly crafted remodeling and renovation. Kitchens, bathrooms or your entire home.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-xl font-semibold">Custom Homes</h3>
+            <p class="mt-2 text-ink/70">Mindfully designed and built homes that reflect individual lifestyles, with collaboration and quality craftsmanship.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-xl font-semibold">Construction</h3>
+            <p class="mt-2 text-ink/70">Home expansions, ADUs, structural enhancements and large-scale projects, from concept to completion.</p>
+          </div>
+        </div>
+        <a href="tel:+18138768365" class="mt-6 inline-flex items-center gap-3 font-heading text-2xl font-semibold text-brandDark hover:text-brand transition">
+          <span class="w-11 h-11 rounded-full bg-brand text-white inline-flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          (813) 876-8365
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Services -->
-<section id="services" class="relative pb-24 lg:pb-32">
-  <div class="absolute inset-x-0 top-0 h-[420px] lg:h-[460px] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-20 lg:pt-24">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end text-white reveal">
-      <div class="lg:col-span-7">
-        <p class="text-sm tracking-[0.2em] uppercase text-white/75 font-semibold mb-4">What we build</p>
-        <h2 class="text-4xl md:text-5xl font-semibold">Build. Expand. Transform.</h2>
+<section id="services" class="scroll-offset relative pb-24 md:pb-32">
+  <div class="absolute top-0 left-0 right-0 h-[58%] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-24 md:pt-28">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 text-white reveal">
+      <div class="lg:col-span-6">
+        <p class="text-xs uppercase tracking-[0.2em] text-white/75 font-semibold mb-5">What we build</p>
+        <h2 class="text-4xl md:text-5xl font-semibold">Three ways we build for Tampa homes</h2>
       </div>
-      <p class="lg:col-span-5 text-white/85">From a single room to a ground-up home, MK Construction manages the work with expert guidance and craftsmanship from concept to completion.</p>
+      <div class="lg:col-span-6 lg:pt-9">
+        <p class="text-lg text-white/90">Whether you’re updating a single room, building from the ground up or expanding what you have, we bring the same craftsmanship and the same attention to detail.</p>
+      </div>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <a href="#contact" class="card reveal group block bg-white rounded overflow-hidden">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior remodel in progress" class="card-img w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-center justify-between gap-3"><h3 class="text-xl font-semibold">Remodeling</h3><svg class="arrow shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-gray-600 text-base">Kitchens, bathrooms and whole-home updates built with thoughtful design.</p>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="#contact" class="group block bg-white r10 p-3 border border-stone reveal">
+        <div class="aspect-[4/5] r10 overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-5.jpg" alt="Remodeled kitchen with marble island and pendant lights" class="photo group-hover:scale-[1.03] transition duration-500">
+        </div>
+        <div class="px-3 pt-5 pb-4">
+          <h3 class="flex items-center justify-between text-2xl font-semibold">Remodeling
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </h3>
+          <p class="mt-2 text-ink/70 text-[16px]">Elevate your space with thoughtful design and quality craftsmanship, kitchen to whole home.</p>
         </div>
       </a>
-      <a href="#contact" class="card reveal group block bg-white rounded overflow-hidden">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1601303981778-0f61e3d2da64?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home under renovation with scaffolding" class="card-img w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-center justify-between gap-3"><h3 class="text-xl font-semibold">Custom Homes</h3><svg class="arrow shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-gray-600 text-base">Homes designed and built around how you live, with you involved throughout.</p>
+      <a href="#contact" class="group block bg-white r10 p-3 border border-stone reveal">
+        <div class="aspect-[4/5] r10 overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-11.jpg" alt="Front porch with timber posts and gray siding on a new home" class="photo group-hover:scale-[1.03] transition duration-500">
+        </div>
+        <div class="px-3 pt-5 pb-4">
+          <h3 class="flex items-center justify-between text-2xl font-semibold">Custom Homes
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </h3>
+          <p class="mt-2 text-ink/70 text-[16px]">Build your dream with a home designed around how you live, from first sketch to final detail.</p>
         </div>
       </a>
-      <a href="#contact" class="card reveal group block bg-white rounded overflow-hidden">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1593786267440-550458cc882a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Block-built home extension" class="card-img w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-center justify-between gap-3"><h3 class="text-xl font-semibold">Additions & ADUs</h3><svg class="arrow shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-gray-600 text-base">Expand your home's footprint or add an ADU, planned and built to last.</p>
+      <a href="#contact" class="group block bg-white r10 p-3 border border-stone reveal">
+        <div class="aspect-[4/5] r10 overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-7.jpg" alt="Living room feature wall with blue mosaic tile and ocean view" class="photo group-hover:scale-[1.03] transition duration-500">
         </div>
-      </a>
-      <a href="#contact" class="card reveal group block bg-white rounded overflow-hidden">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1593012672105-42e6d13af5ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Structural steel beams in a renovation" class="card-img w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-center justify-between gap-3"><h3 class="text-xl font-semibold">Structural Work</h3><svg class="arrow shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-gray-600 text-base">Structural enhancements and larger projects managed from concept to completion.</p>
+        <div class="px-3 pt-5 pb-4">
+          <h3 class="flex items-center justify-between text-2xl font-semibold">Construction
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </h3>
+          <p class="mt-2 text-ink/70 text-[16px]">Additions, ADUs, structural work and large-scale projects. Build, expand, transform.</p>
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Projects gallery -->
-<section id="projects" class="pb-24 lg:pb-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end reveal">
+<!-- Projects -->
+<section id="projects" class="scroll-offset py-24 md:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
       <div class="lg:col-span-7">
-        <p class="text-sm tracking-[0.2em] uppercase text-brand font-semibold mb-4">Projects</p>
-        <h2 class="text-4xl md:text-5xl font-semibold">Work in progress across Tampa</h2>
+        <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-5">Recent work</p>
+        <h2 class="text-4xl md:text-5xl font-semibold">Kitchens, baths and homes built across Tampa</h2>
       </div>
-      <p class="lg:col-span-5 text-gray-600">126 projects completed and 23 in development since 2022. Here is a look at the work on site.</p>
+      <div class="lg:col-span-5">
+        <p class="text-ink/70">A look at spaces we’ve remodeled and built. Every project starts with a conversation about how you want to live in it.</p>
+      </div>
     </div>
 
-    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-      <img src="https://images.unsplash.com/photo-1593012671976-1422185230fb?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Rear home extension with scaffolding" class="reveal col-span-2 w-full aspect-[16/10] md:aspect-auto md:h-full object-cover rounded md:row-span-2 min-h-[240px]">
-      <img src="https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior prepared for renovation" class="reveal col-span-1 w-full aspect-square object-cover rounded">
-      <img src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Hallway being finished with new flooring" class="reveal col-span-1 w-full aspect-square object-cover rounded">
-      <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working inside a gutted room" class="reveal col-span-1 w-full aspect-square object-cover rounded">
-      <img src="https://images.unsplash.com/photo-1673978484281-e9370ac3b81c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete structure with shoring supports" class="reveal col-span-1 w-full aspect-square object-cover rounded">
-      <img src="https://images.unsplash.com/photo-1783587354630-3300699c053c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sunroom wall framed with sheathing boards" class="reveal col-span-1 w-full aspect-square object-cover rounded">
-      <img src="https://images.unsplash.com/photo-1616179283726-e96f7aa16a56?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Contractor removing drywall during demolition" class="reveal col-span-1 w-full aspect-square object-cover rounded">
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+      <div class="col-span-2 aspect-[16/10] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-15.jpg" alt="Open kitchen with beadboard island and checkered floor" class="photo">
+      </div>
+      <div class="col-span-1 aspect-[4/5] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-10.jpg" alt="Kitchen island with woven counter stools and stone backsplash" class="photo">
+      </div>
+      <div class="col-span-1 aspect-[4/5] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-2.jpg" alt="Soaking tub with brass floor-mount faucet" class="photo">
+      </div>
+      <div class="col-span-1 aspect-[4/5] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-11.jpg" alt="Exterior porch and concrete steps" class="photo">
+      </div>
+      <div class="col-span-1 aspect-[4/5] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-7.jpg" alt="Media wall with tile and wood paneling" class="photo">
+      </div>
+      <div class="col-span-2 aspect-[16/10] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-13.jpg" alt="Primary bath with marble floor, walk-in shower and double vanity" class="photo">
+      </div>
+      <div class="col-span-2 aspect-[16/10] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-3.jpg" alt="Freestanding tub against patterned wallpaper wall" class="photo">
+      </div>
+      <div class="col-span-2 aspect-[16/10] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-1.jpg" alt="Double vanity with brass fixtures and sconces" class="photo">
+      </div>
+      <div class="col-span-2 aspect-[16/10] r10 overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-6.jpg" alt="White kitchen with brass pulls and stainless appliances" class="photo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Milestones -->
+<section class="py-20 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-8 reveal">MK milestones</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 border-t border-stone pt-10 reveal">
+      <div>
+        <div class="font-heading text-6xl font-semibold text-brandDark">2022</div>
+        <p class="mt-2 text-ink/70">Business established</p>
+      </div>
+      <div>
+        <div class="font-heading text-6xl font-semibold text-brandDark">126</div>
+        <p class="mt-2 text-ink/70">Projects completed</p>
+      </div>
+      <div>
+        <div class="font-heading text-6xl font-semibold text-brandDark">23</div>
+        <p class="mt-2 text-ink/70">Projects in development</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Values -->
-<section id="values" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14">
-    <div class="lg:col-span-5 reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-brand font-semibold mb-4">Our values</p>
-      <h2 class="text-4xl md:text-5xl font-semibold">Trust. Reliability. Excellence. Family. Community.</h2>
-      <img src="https://images.unsplash.com/photo-1593012671976-1422185230fb?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home extension taking shape in a Tampa neighborhood" class="mt-10 w-full aspect-[4/3] object-cover rounded">
-    </div>
-    <div class="lg:col-span-7 reveal">
-      <ul class="divide-y divide-gray-300 border-y border-gray-300">
-        <li class="py-6 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
-          <h3 class="sm:col-span-4 text-2xl font-semibold">Trust</h3>
-          <p class="sm:col-span-8 text-gray-700">Built into every conversation, contract and detail we deliver.</p>
-        </li>
-        <li class="py-6 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
-          <h3 class="sm:col-span-4 text-2xl font-semibold">Reliability</h3>
-          <p class="sm:col-span-8 text-gray-700">We honor our commitments the way we'd want ours honored.</p>
-        </li>
-        <li class="py-6 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
-          <h3 class="sm:col-span-4 text-2xl font-semibold">Excellence</h3>
-          <p class="sm:col-span-8 text-gray-700">Good enough has never been our standard.</p>
-        </li>
-        <li class="py-6 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
-          <h3 class="sm:col-span-4 text-2xl font-semibold">Family</h3>
-          <p class="sm:col-span-8 text-gray-700">We treat your home with the reverence it deserves, because we know what it holds.</p>
-        </li>
-        <li class="py-6 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
-          <h3 class="sm:col-span-4 text-2xl font-semibold">Community</h3>
-          <p class="sm:col-span-8 text-gray-700">Tampa isn't just our market, it's our home, and we're proud to build it up.</p>
-        </li>
-      </ul>
-
-      <div class="mt-10 grid grid-cols-3 gap-4">
-        <div class="bg-white rounded p-5">
-          <div class="font-heading text-3xl md:text-4xl font-semibold text-brand">2022</div>
-          <div class="mt-1 text-sm text-gray-600">Business established</div>
+<section id="values" class="scroll-offset py-24 md:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      <div class="lg:col-span-4 reveal">
+        <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-5">Our values</p>
+        <h2 class="text-4xl md:text-5xl font-semibold">Trust. Reliability. Excellence. Family. Community.</h2>
+        <div class="mt-10 aspect-[4/3] r10 overflow-hidden hidden lg:block">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-12.jpg" alt="Round dining table beneath a brass and rope pendant" class="photo">
         </div>
-        <div class="bg-white rounded p-5">
-          <div class="font-heading text-3xl md:text-4xl font-semibold text-brand">126</div>
-          <div class="mt-1 text-sm text-gray-600">Projects completed</div>
-        </div>
-        <div class="bg-white rounded p-5">
-          <div class="font-heading text-3xl md:text-4xl font-semibold text-brand">23</div>
-          <div class="mt-1 text-sm text-gray-600">Projects in development</div>
+      </div>
+      <div class="lg:col-span-8 reveal">
+        <div class="divide-y divide-stone border-t border-stone">
+          <div class="py-7 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
+            <h3 class="sm:col-span-4 text-2xl font-semibold">Trust</h3>
+            <p class="sm:col-span-8 text-ink/75">Built into every conversation, contract and detail we deliver.</p>
+          </div>
+          <div class="py-7 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
+            <h3 class="sm:col-span-4 text-2xl font-semibold">Reliability</h3>
+            <p class="sm:col-span-8 text-ink/75">We honor our commitments the way we’d want ours honored.</p>
+          </div>
+          <div class="py-7 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
+            <h3 class="sm:col-span-4 text-2xl font-semibold">Excellence</h3>
+            <p class="sm:col-span-8 text-ink/75">Good enough has never been our standard.</p>
+          </div>
+          <div class="py-7 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6">
+            <h3 class="sm:col-span-4 text-2xl font-semibold">Family</h3>
+            <p class="sm:col-span-8 text-ink/75">We treat your home with the reverence it deserves, because we know what it holds.</p>
+          </div>
+          <div class="py-7 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 border-b border-stone">
+            <h3 class="sm:col-span-4 text-2xl font-semibold">Community</h3>
+            <p class="sm:col-span-8 text-ink/75">Tampa isn’t just our market, it’s our home, and we’re proud to build it up.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -278,15 +316,15 @@ tailwind.config = {
 </section>
 
 <!-- Call band -->
-<section class="bg-ink text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+<section class="bg-ink text-white py-20 md:py-24">
+  <div class="max-w-7xl mx-auto px-5 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
     <div class="max-w-2xl">
-      <h2 class="text-4xl md:text-5xl font-semibold text-brand" style="color:#8fb0cf">Ready to elevate your home?</h2>
-      <p class="mt-4 text-white/75">Connect with MK Construction today to begin your project. We're dedicated to bringing your vision to life with quality craftsmanship and a personalized building experience.</p>
+      <h2 class="text-4xl md:text-5xl font-semibold text-brand">Ready to elevate your home?</h2>
+      <p class="mt-4 text-white/75 text-lg">Connect with MK Construction to begin your project.</p>
     </div>
-    <div class="flex flex-col sm:flex-row gap-3 shrink-0">
-      <a href="tel:+18138768365" class="bg-brand hover:bg-white hover:text-ink transition rounded px-7 py-3.5 font-semibold text-center">Call (813) 876-8365</a>
-      <a href="#contact" class="border border-white/40 hover:bg-white hover:text-ink transition rounded px-7 py-3.5 font-semibold text-center">Request an estimate</a>
+    <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+      <a href="#contact" class="bg-brand hover:bg-[#3d5e80] transition text-white font-semibold px-7 py-4 r10 text-center">Request an estimate</a>
+      <a href="tel:+18138768365" class="border border-white/30 hover:bg-white hover:text-ink transition font-semibold px-7 py-4 r10 text-center">(813) 876-8365</a>
     </div>
   </div>
 </section>
@@ -294,8 +332,8 @@ tailwind.config = {
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(79,111,143,0.10);color:#4f6f8f}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#b0becd}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(74,111,148,0.10);color:#4a6f94}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#aebecf}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -306,16 +344,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:10px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#4f6f8f;box-shadow:0 0 0 4px rgba(79,111,143,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#4f6f8f;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#4a6f94;box-shadow:0 0 0 4px rgba(74,111,148,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:10px;background:#4a6f94;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -325,13 +363,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1616179283726-e96f7aa16a56?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/photo-5.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#b0becd">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your project and the MK Construction team in Tampa will get back to you.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#aebecf">Contact</p><h2 class="lp-h" style="color:#fff">Start your project with MK Construction</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your remodel, custom home or construction project in Tampa and we will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18138768365" class="lp-v lp-v-d">(813) 876-8365</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -345,7 +383,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Remodeling</option><option>Custom Homes</option><option>Additions &amp; ADUs</option><option>Structural Work</option><option>Other</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Remodeling</option><option>Custom Homes</option><option>Construction</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -359,15 +397,15 @@ tailwind.config = {
 
 <!-- Footer -->
 <footer class="bg-ink text-white border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
     <div class="md:col-span-5">
-      <div class="inline-block bg-white rounded px-3 py-2">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/mk-construction-llc/21943/logo-0.png" alt="MK Construction, LLC" class="h-12 w-auto">
-      </div>
-      <p class="mt-5 text-white/65 max-w-sm text-base">Tampa's trusted construction firm, founded by Mason and Kylee Smith. Remodeling, custom homes and construction.</p>
+      <a href="#top" class="inline-block bg-white rounded px-3 py-2">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/mk-construction-llc/21949/logo-0.png" alt="MK Construction, LLC" class="h-12 w-auto block">
+      </a>
+      <p class="mt-6 text-white/65 max-w-sm">Tampa’s trusted construction firm, founded by Mason and Kylee Smith. Remodeling, custom homes and construction.</p>
     </div>
     <div class="md:col-span-3">
-      <h4 class="text-sm tracking-[0.2em] uppercase text-white/50 mb-5">Explore</h4>
+      <h4 class="text-sm uppercase tracking-[0.18em] text-white/50 mb-5 font-semibold">Explore</h4>
       <ul class="space-y-3 text-white/85">
         <li><a href="#about" class="hover:text-white">About</a></li>
         <li><a href="#services" class="hover:text-white">Services</a></li>
@@ -377,18 +415,17 @@ tailwind.config = {
       </ul>
     </div>
     <div class="md:col-span-4">
-      <h4 class="text-sm tracking-[0.2em] uppercase text-white/50 mb-5">Contact</h4>
+      <h4 class="text-sm uppercase tracking-[0.18em] text-white/50 mb-5 font-semibold">Contact</h4>
       <ul class="space-y-3 text-white/85">
-        <li><a href="tel:+18138768365" class="hover:text-white font-heading text-xl font-semibold">(813) 876-8365</a></li>
-        <li><a href="mailto:admin@mkconstructionllc.com" class="hover:text-white break-words text-base">admin@mkconstructionllc.com</a></li>
-        <li class="text-white/65 text-base">Tampa, Florida</li>
+        <li><a href="tel:+18138768365" class="hover:text-white font-heading text-xl">(813) 876-8365</a></li>
+        <li><a href="mailto:admin@mkconstructionllc.com" class="hover:text-white break-words text-[15px]">admin@mkconstructionllc.com</a></li>
+        <li class="text-white/65">Tampa, Florida</li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/50 space-y-1">
-      <p>Concept redesign by LumeaPixel. This is not the official MK Construction LLC website.</p>
-      <p>Some photos by d c, Brett Jordan, Milivoj Kuhar, Annie Spratt, Stefan Lehner, Jessica Hearn and Brands&amp;People on Unsplash.</p>
+    <div class="max-w-7xl mx-auto px-5 py-6 text-sm text-white/50">
+      Concept redesign by LumeaPixel. This is not the official MK Construction LLC website.
     </div>
   </div>
 </footer>
@@ -397,7 +434,7 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  document.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
+  document.querySelectorAll('.mm').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

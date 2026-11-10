@@ -7,280 +7,354 @@
 <title>Level Up Tiling LLC | Tile & Remodeling in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#2b3fa6',
-        brandDark: '#10173f',
-        aqua: '#35c6d8',
-        ink: '#12141c',
-        paper: '#f6f6f4',
-        mist: '#ececea'
+        brand: '#2b3fb0',
+        brandlight: '#3fc8d6',
+        brandink: '#0b1233',
+        ink: '#0d0f14',
+        paper: '#f6f7f9',
+        mist: '#e6e9ef'
       },
-      borderRadius: { tile: '20px' }
+      fontFamily: {
+        heading: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif']
+      }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #12141c; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #0d0f14; }
+  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.05; letter-spacing: -0.01em; }
+  .rad { border-radius: 6px; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .ph { position: relative; overflow: hidden; border-radius: 20px; background: #e4e4e1; }
-  .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  h1, h2, h3 { letter-spacing: -0.02em; }
+  .tile-grad { background: linear-gradient(to top, rgba(8,10,24,.92) 0%, rgba(8,10,24,.35) 55%, rgba(8,10,24,0) 100%); }
+  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
+  .dot { width: 6px; height: 6px; border-radius: 999px; background: #3fc8d6; display: inline-block; flex: none; }
+  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .ba-wrap img { pointer-events: none; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; }
+  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; background: #fff; border-radius: 999px; display: flex; align-items: center; justify-content: center; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white font-sans text-ink">
+<body class="bg-white">
 
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/level-up-tiling-llc/21943/logo-0.png" alt="Level Up Tiling, LLC" class="h-12 w-auto"></a>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-mist">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="flex-none">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/logo-0.png" alt="Level Up Tiling, LLC" class="h-12 md:h-14 w-auto">
+    </a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
-      <a href="#about" class="hover:text-brand">About</a>
+      <a href="#services" class="hover:text-brand">Services</a>
       <a href="#process" class="hover:text-brand">Process</a>
       <a href="#work" class="hover:text-brand">Our work</a>
-      <a href="#why" class="hover:text-brand">Why us</a>
+      <a href="#about" class="hover:text-brand">About</a>
       <a href="#contact" class="hover:text-brand">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:8136480710" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white text-[15px] font-semibold px-5 py-3 rounded-full hover:bg-brandDark transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+18136480710" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-heading font-semibold px-5 py-3 rad hover:bg-brandink transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (813) 648-0710
       </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full border border-black/10 flex items-center justify-center" aria-label="Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
-    <div class="px-5 py-5 flex flex-col gap-4 text-base font-medium">
-      <a href="#about">About</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-mist bg-white">
+    <div class="px-5 py-5 flex flex-col gap-4 font-medium">
+      <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#work">Our work</a>
-      <a href="#why">Why us</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="tel:8136480710" class="inline-flex justify-center bg-brand text-white font-semibold px-5 py-3 rounded-full">Call (813) 648-0710</a>
+      <a href="tel:+18136480710" class="bg-brand text-white font-heading font-semibold px-5 py-3 rad text-center">Call (813) 648-0710</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1. Hero -->
-<section class="pt-14 pb-20 lg:pt-20 lg:pb-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-      <h1 class="lg:col-span-8 text-4xl sm:text-5xl lg:text-[68px] font-medium leading-[1.05]">
-        Tile and remodeling,<br>done <span class="font-bold">right</span> in Tampa.
-      </h1>
-      <p class="lg:col-span-4 text-lg text-ink/70 leading-relaxed">
-        Level Up Tiling is a small, veteran owned and operated company. We do the work ourselves, keep your home clean, and treat your needs with respect from first call to final grout line.
-      </p>
+<!-- HERO -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-10.jpg" alt="Kitchen remodel with new tile flooring in Tampa" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-ink/80"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7">
+      <p class="label text-brandlight mb-6">Veteran owned &amp; operated · Tampa, FL</p>
+      <h1 class="font-heading font-bold uppercase text-5xl sm:text-6xl lg:text-7xl leading-[0.98]">Tile and remodeling,<br>done right.<br>In Tampa.</h1>
+      <p class="mt-7 text-lg text-white/80 max-w-xl">Level Up Tiling is a small, owner-led company. We do the work ourselves, keep the job site clean and treat your home with respect from the first call to the final walkthrough.</p>
+      <ul class="mt-8 space-y-3">
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-none text-brandlight" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Florida certified building contractor, CBC# 1264838</span></li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-none text-brandlight" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>We perform the work ourselves instead of sub-contracting it out</span></li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-none text-brandlight" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Clean job sites and close attention to detail</span></li>
+      </ul>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-brand text-white font-heading font-semibold px-7 py-4 rad text-center hover:bg-white hover:text-brand transition">Get a free estimate</a>
+        <a href="#work" class="border border-white/40 text-white font-heading font-semibold px-7 py-4 rad text-center hover:bg-white/10 transition">See our work</a>
+      </div>
     </div>
-
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-12 gap-5">
-      <div class="md:col-span-6 ph aspect-[4/3] md:aspect-auto md:min-h-[460px] reveal">
-        <img src="https://images.unsplash.com/photo-1652918320907-f9ec8623ab30?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled kitchen with marble counters and tile backsplash">
-      </div>
-      <div class="md:col-span-3 flex flex-col gap-5 reveal">
-        <div class="ph aspect-[4/3] md:aspect-auto md:flex-1 md:min-h-[300px]">
-          <img src="https://images.unsplash.com/photo-1601760561441-16420502c7e0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with hexagon floor tile and subway backsplash">
-        </div>
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold px-6 py-4 rounded-full hover:bg-brandDark transition">
-          Schedule an appointment
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-      <div class="md:col-span-3 bg-mist rounded-tile p-7 flex flex-col justify-between min-h-[240px] reveal">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/55">Licensed in Florida</p>
-        <div>
-          <p class="text-3xl font-semibold leading-tight">CBC# 1264838</p>
-          <p class="mt-3 text-ink/70">Veteran owned and operated, with a certified construction license in the state of Florida.</p>
+    <div class="lg:col-span-5">
+      <div class="bg-white text-ink p-8 rad">
+        <h2 class="font-heading font-semibold text-3xl">Get a free estimate</h2>
+        <p class="mt-3 text-ink/70">Tell us about your project. Call, email or send a request and we will get back to you.</p>
+        <div class="mt-6 flex flex-col gap-3">
+          <a href="tel:+18136480710" class="bg-brand text-white font-heading font-semibold px-5 py-4 rad text-center hover:bg-brandink transition">Call (813) 648-0710</a>
+          <a href="mailto:leveluptilingllc@gmail.com" class="border border-ink/20 font-heading font-semibold px-5 py-4 rad text-center hover:border-brand hover:text-brand transition text-[15px] break-words">leveluptilingllc@gmail.com</a>
+          <a href="#contact" class="text-center text-brand font-semibold pt-2 hover:underline">Send a request online</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Three columns -->
-<section id="about" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-black/10 pt-12">
-      <div class="reveal">
-        <h3 class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Customer satisfaction</h3>
-        <p class="mt-4 text-lg text-ink/75 leading-relaxed">Working with contractors isn't always a good experience. We don't make empty promises or put you on the back burner. We execute with respect for what you need.</p>
-      </div>
-      <div class="reveal">
-        <h3 class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Cleanliness</h3>
-        <p class="mt-4 text-lg text-ink/75 leading-relaxed">Construction is messy. We use the right products and techniques to keep your remodel as clean as possible.</p>
-      </div>
-      <div class="reveal">
-        <h3 class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Attention to detail</h3>
-        <p class="mt-4 text-lg text-ink/75 leading-relaxed">We don't believe in sloppy work. We perform the work ourselves rather than handing it to a sub-contractor, unless it's outside our license or you have a specialist in mind.</p>
-      </div>
-    </div>
+<!-- SERVICES STRIP -->
+<section class="bg-ink text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-heading font-medium text-[15px] uppercase tracking-wider">
+    <span>Tile installation</span><span class="dot"></span>
+    <span>Kitchen remodels</span><span class="dot"></span>
+    <span>Stone fireplace walls</span><span class="dot"></span>
+    <span>Backsplashes</span><span class="dot"></span>
+    <span>Shower niches</span><span class="dot"></span>
+    <span>Cabinetry</span><span class="dot"></span>
+    <span>Barn doors</span>
   </div>
 </section>
 
-<!-- 3. Mission statement -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
-    <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/55 mb-6">Our mission</p>
-    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-medium leading-[1.12]">
-      Delivering excellence<br>to the customer,<br>on every <span class="font-bold">project.</span>
-    </h2>
-  </div>
-</section>
-
-<!-- 4. Collage -->
-<section id="work" class="pb-24 lg:pb-32">
+<!-- PLAN / BUILD / FINISH -->
+<section id="services" class="bg-brand text-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-5 grid-flow-row-dense">
-      <div class="ph aspect-[4/5] md:col-span-3 md:aspect-[3/4] reveal">
-        <img src="https://images.unsplash.com/photo-1682888818650-0a7cbb35287d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Herringbone tile backsplash with marble island">
-      </div>
-      <div class="ph aspect-[16/10] col-span-2 md:col-span-6 md:row-span-2 md:aspect-auto md:min-h-[560px] order-first md:order-none reveal">
-        <img src="https://images.unsplash.com/photo-1682888813913-e13f18692019?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open kitchen with waterfall marble island">
-      </div>
-      <div class="ph aspect-[4/5] md:col-span-3 md:aspect-[3/4] reveal">
-        <img src="https://images.unsplash.com/photo-1613545564245-62b2c9ef8055?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with mosaic tile backsplash">
-      </div>
-      <div class="ph aspect-[4/5] md:col-span-3 md:aspect-[3/4] reveal">
-        <img src="https://images.unsplash.com/photo-1560185127-1902ccdc5094?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with butcher block island and granite counters">
-      </div>
-      <div class="ph aspect-[4/5] md:col-span-3 md:aspect-[3/4] reveal">
-        <img src="https://images.unsplash.com/photo-1649083048198-f57bd8fb7a3b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright kitchen with white subway tile">
-      </div>
+    <div class="max-w-2xl reveal">
+      <p class="label text-white/70 mb-4">What we do</p>
+      <h2 class="font-heading font-bold text-4xl sm:text-5xl">Plan. Build. Finish.</h2>
+      <p class="mt-5 text-white/80">One licensed contractor carries your project from the first conversation to the last grout line.</p>
     </div>
-  </div>
-</section>
-
-<!-- 5. Process -->
-<section id="process" class="bg-paper py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
-      <h2 class="lg:col-span-7 text-4xl sm:text-5xl font-medium leading-[1.1]">How a project with us works</h2>
-      <p class="lg:col-span-5 text-lg text-ink/70 leading-relaxed">We work with you to shape the remodel you want, so you finish happy with the result and glad you chose us.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-semibold text-sm tracking-widest">01</p>
-        <h3 class="mt-5 text-xl font-semibold">Schedule an appointment</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Call, email or book online. Tell us about the space you want to change.</p>
-      </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-semibold text-sm tracking-widest">02</p>
-        <h3 class="mt-5 text-xl font-semibold">Talk through your needs</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">We listen to what you want and look at the space together, with your own specialist if you have one.</p>
-      </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-semibold text-sm tracking-widest">03</p>
-        <h3 class="mt-5 text-xl font-semibold">Shape the plan</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">We help you develop the remodel, drawing on current products and proven methods.</p>
-      </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-semibold text-sm tracking-widest">04</p>
-        <h3 class="mt-5 text-xl font-semibold">We do the work</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Our own crew performs the work, with attention to every detail and no hand-off to unknown subs.</p>
-      </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-semibold text-sm tracking-widest">05</p>
-        <h3 class="mt-5 text-xl font-semibold">Keep it clean</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">We use the right products and techniques so your home stays as clean as possible.</p>
-      </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="text-brand font-semibold text-sm tracking-widest">06</p>
-        <h3 class="mt-5 text-xl font-semibold">Walk through the result</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">We finish the project and make sure you're happy with the new space.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. Photo cards -->
-<section class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
-      <h2 class="text-4xl sm:text-5xl font-medium leading-[1.1]">Spaces we remodel</h2>
-      <a href="#contact" class="text-brand font-semibold inline-flex items-center gap-2">Ask about your project
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <article class="reveal">
-        <div class="ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1560185008-37a6ea85a4d4?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with stone tile backsplash and island seating"></div>
-        <h3 class="mt-5 text-xl font-semibold">Kitchens</h3>
-        <p class="mt-2 text-ink/70">Backsplashes, floors and full kitchen remodels.</p>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="reveal bg-brandink rad overflow-hidden">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-12.jpg" alt="Mosaic backsplash being laid out behind a cooktop" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="font-heading font-semibold text-2xl">Plan</h3>
+          <p class="mt-3 text-white/75">We sit down with you, look at the space and choose materials and layouts that suit your home and your budget.</p>
+        </div>
       </article>
-      <article class="reveal">
-        <div class="ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1552155235-a68a6c02d512?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open plan kitchen with tiled backsplash and wood floors"></div>
-        <h3 class="mt-5 text-xl font-semibold">Floors</h3>
-        <p class="mt-2 text-ink/70">Tile and flooring for open living areas.</p>
+      <article class="reveal bg-brandink rad overflow-hidden">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-9.jpg" alt="Kitchen cabinets masked and protected during construction" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="font-heading font-semibold text-2xl">Build</h3>
+          <p class="mt-3 text-white/75">Our own crew does the work. We protect your floors and cabinets and keep the site as clean as construction allows.</p>
+        </div>
       </article>
-      <article class="reveal">
-        <div class="ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open kitchen and living area with feature fireplace wall"></div>
-        <h3 class="mt-5 text-xl font-semibold">Feature walls</h3>
-        <p class="mt-2 text-ink/70">Fireplace surrounds and accent walls.</p>
-      </article>
-      <article class="reveal">
-        <div class="ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1772016127953-19bb88908950?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with mosaic tile backsplash behind the range"></div>
-        <h3 class="mt-5 text-xl font-semibold">Home remodels</h3>
-        <p class="mt-2 text-ink/70">Residential remodeling from licensed professionals.</p>
+      <article class="reveal bg-brandink rad overflow-hidden">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-7.jpg" alt="Finished living room with stone feature wall and built-in cabinets" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="font-heading font-semibold text-2xl">Finish</h3>
+          <p class="mt-3 text-white/75">We walk the job with you and do not call it done until the details are right and you are happy with the result.</p>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 8. Why choose -->
-<section id="why" class="pb-24 lg:pb-32">
+<!-- HOW IT RUNS -->
+<section id="process" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-      <div class="lg:col-span-6 ph aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] reveal">
-        <img src="https://images.unsplash.com/photo-1719569019031-ca8fb2911e2d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled kitchen with a bright window over the sink">
+    <div class="max-w-2xl reveal">
+      <p class="label text-brand mb-4">Process</p>
+      <h2 class="font-heading font-bold text-4xl sm:text-5xl">How your project runs</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="reveal border border-mist rad p-8">
+        <div class="w-14 h-14 border-2 border-brand text-brand rad flex items-center justify-center font-heading font-bold text-2xl">1</div>
+        <h3 class="mt-6 font-heading font-semibold text-2xl">Call or schedule</h3>
+        <p class="mt-3 text-ink/70">Phone us, email us or request an appointment. We talk through what you want done.</p>
       </div>
-      <div class="lg:col-span-6">
-        <h2 class="text-4xl sm:text-5xl font-medium leading-[1.1]">Why choose Level Up Tiling</h2>
-        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-9">
-          <div>
-            <span class="w-9 h-9 rounded-full bg-brand text-white inline-flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>
-            <h3 class="mt-4 text-lg font-semibold">Veteran owned</h3>
-            <p class="mt-2 text-ink/70 leading-relaxed">A small company run by its owner, who stays involved in the work.</p>
-          </div>
-          <div>
-            <span class="w-9 h-9 rounded-full bg-brand text-white inline-flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>
-            <h3 class="mt-4 text-lg font-semibold">Licensed in Florida</h3>
-            <p class="mt-2 text-ink/70 leading-relaxed">Certified construction license, CBC# 1264838, for residential work.</p>
-          </div>
-          <div>
-            <span class="w-9 h-9 rounded-full bg-brand text-white inline-flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>
-            <h3 class="mt-4 text-lg font-semibold">We do the work ourselves</h3>
-            <p class="mt-2 text-ink/70 leading-relaxed">No hand-off to sub-contractors we've never used before.</p>
-          </div>
-          <div>
-            <span class="w-9 h-9 rounded-full bg-brand text-white inline-flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>
-            <h3 class="mt-4 text-lg font-semibold">Always learning</h3>
-            <p class="mt-2 text-ink/70 leading-relaxed">We study new products and keep the proven methods of the past.</p>
+      <div class="reveal border border-mist rad p-8">
+        <div class="w-14 h-14 border-2 border-brand text-brand rad flex items-center justify-center font-heading font-bold text-2xl">2</div>
+        <h3 class="mt-6 font-heading font-semibold text-2xl">Free estimate</h3>
+        <p class="mt-3 text-ink/70">We look at the space together and walk you through the scope, the materials and the next steps.</p>
+      </div>
+      <div class="reveal border border-mist rad p-8">
+        <div class="w-14 h-14 border-2 border-brand text-brand rad flex items-center justify-center font-heading font-bold text-2xl">3</div>
+        <h3 class="mt-6 font-heading font-semibold text-2xl">We do the work</h3>
+        <p class="mt-3 text-ink/70">Level Up crews handle the job from start to finish, and we stay in touch as it moves along.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="bg-ink text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="label text-brandlight mb-4">From the job site</p>
+      <h2 class="font-heading font-bold text-4xl sm:text-5xl">Cabinets in. Counters on.</h2>
+      <p class="mt-5 text-white/70">The same Tampa kitchen at two stages of the build. Drag the handle to compare.</p>
+    </div>
+    <div class="mt-12 reveal">
+      <div id="ba" class="ba-wrap rad aspect-[4/3] md:aspect-[16/9] cursor-ew-resize">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-11.jpg" alt="Kitchen build with cabinets and counters" class="absolute inset-0 w-full h-full object-cover">
+        <div id="baTop" class="absolute inset-0" style="clip-path: inset(0 50% 0 0);">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-10.jpg" alt="Same kitchen from another angle" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+        <div id="baHandle" class="ba-handle" style="left:50%;">
+          <div class="ba-knob text-brand">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
           </div>
         </div>
+        <span class="absolute left-4 bottom-4 bg-ink/80 text-white text-xs font-semibold tracking-wider uppercase px-3 py-2 rad">Front view</span>
+        <span class="absolute right-4 bottom-4 bg-ink/80 text-white text-xs font-semibold tracking-wider uppercase px-3 py-2 rad">Side view</span>
+      </div>
+      <input id="baRange" type="range" min="0" max="100" value="50" class="w-full mt-5 accent-brandlight" aria-label="Compare photos">
+    </div>
+  </div>
+</section>
+
+<!-- DIY vs CONTRACTOR -->
+<section class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="label text-brand mb-4">Why Level Up</p>
+      <h2 class="font-heading font-bold text-4xl sm:text-5xl">Managed by middlemen, or built by one contractor</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="reveal bg-white border border-mist rad p-8 lg:p-10">
+        <h3 class="font-heading font-semibold text-2xl">Typical remodeling contractor</h3>
+        <ul class="mt-6 space-y-4 text-ink/70">
+          <li class="flex gap-3"><span class="mt-2 w-3 h-[2px] bg-ink/40 flex-none"></span>Work is often sub-contracted to a company they may never have used</li>
+          <li class="flex gap-3"><span class="mt-2 w-3 h-[2px] bg-ink/40 flex-none"></span>Your project can land on the back burner behind empty promises</li>
+          <li class="flex gap-3"><span class="mt-2 w-3 h-[2px] bg-ink/40 flex-none"></span>The contractor mainly manages while others build</li>
+          <li class="flex gap-3"><span class="mt-2 w-3 h-[2px] bg-ink/40 flex-none"></span>Sloppy work and messy sites</li>
+        </ul>
+      </div>
+      <div class="reveal bg-white border-2 border-brand rad p-8 lg:p-10">
+        <h3 class="font-heading font-semibold text-2xl text-brand">Level Up Tiling</h3>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>We perform all the work unless it is outside our license or you have your own specialist in mind</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Respect for your needs from first call to finish</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Protection products and techniques for the cleanest remodel possible</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Attention to detail on every joint, line and edge</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 9. Contact placeholder -->
-<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
+<!-- WHAT WE BUILD / BENTO -->
+<section id="work" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="label text-brand mb-4">Our work</p>
+      <h2 class="font-heading font-bold text-4xl sm:text-5xl">What we build</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <figure class="reveal relative rad overflow-hidden sm:col-span-2 lg:col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[560px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-7.jpg" alt="Stone feature wall with built-in white cabinets" class="absolute inset-0 w-full h-full object-cover">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-6 text-white"><h3 class="font-heading font-semibold text-2xl">Stone feature wall and built-ins</h3><p class="text-white/80 text-sm mt-1">Stacked stone, mantel and full-wall cabinetry</p></figcaption>
+      </figure>
+      <figure class="reveal relative rad overflow-hidden aspect-[4/3]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-8.jpg" alt="Stacked stone fireplace wall with linear fireplace" class="absolute inset-0 w-full h-full object-cover">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Stone fireplace</h3></figcaption>
+      </figure>
+      <figure class="reveal relative rad overflow-hidden aspect-[4/3]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-13.jpg" alt="White shaker kitchen with tile backsplash" class="absolute inset-0 w-full h-full object-cover">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Kitchen and backsplash</h3></figcaption>
+      </figure>
+      <figure class="reveal relative rad overflow-hidden aspect-[4/3]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-12.jpg" alt="Scalloped mosaic tile backsplash behind a cooktop" class="absolute inset-0 w-full h-full object-cover">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Mosaic accent tile</h3></figcaption>
+      </figure>
+      <figure class="reveal relative rad overflow-hidden aspect-[4/3]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-18.jpg" alt="Tiled shower niche in white subway tile" class="absolute inset-0 w-full h-full object-cover">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Shower niches</h3></figcaption>
+      </figure>
+      <figure class="reveal relative rad overflow-hidden sm:col-span-2 aspect-[16/9]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-11.jpg" alt="Open kitchen build with island and gray cabinets" class="absolute inset-0 w-full h-full object-cover">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Full kitchen builds</h3></figcaption>
+      </figure>
+      <figure class="reveal relative rad overflow-hidden aspect-[4/3] sm:aspect-[3/4] lg:aspect-[4/3]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-16.jpg" alt="Double barn doors on a black rail" class="absolute inset-0 w-full h-full object-cover">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Barn doors</h3></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER-LED -->
+<section id="about" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <p class="label text-brand mb-4">About us</p>
+      <h2 class="font-heading font-bold text-4xl sm:text-5xl">A small company that does the work itself</h2>
+      <p class="mt-6 text-ink/75">Our mission is simple: delivering excellence to the customer. Level Up Tiling is veteran owned and operated, and the owner holds a Florida certified building contractor license so we can deliver quality workmanship on all your residential needs.</p>
+      <p class="mt-4 text-ink/75">We stay small on purpose. We keep learning new products and the proven methods behind them, and we work with you to shape a remodel you will enjoy living with.</p>
+      <ul class="mt-8 space-y-3">
+        <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Customer satisfaction.</strong> Respect for your needs, no empty promises.</span></li>
+        <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Cleanliness.</strong> The right products and techniques for a clean remodel.</span></li>
+        <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Attention to detail.</strong> We do not believe in sloppy work.</span></li>
+      </ul>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-brand text-white font-heading font-semibold px-7 py-4 rad text-center hover:bg-brandink transition">Schedule an appointment</a>
+        <a href="tel:+18136480710" class="border border-ink/20 font-heading font-semibold px-7 py-4 rad text-center hover:border-brand hover:text-brand transition">(813) 648-0710</a>
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/5] rad overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-13.jpg" alt="White kitchen cabinets and tile backsplash installed by Level Up Tiling" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="bg-white py-20 lg:py-24 border-t border-mist">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 reveal">
+    <p class="label text-brand mb-4">Service area</p>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl">Serving Tampa, Florida</h2>
+    <p class="mt-4 text-ink/70 max-w-2xl">Based in Tampa, FL. Call to ask whether we can take on a project at your address.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <span class="border border-mist px-5 py-3 rad font-medium">Tampa</span>
+      <span class="border border-mist px-5 py-3 rad font-medium">Hillsborough County</span>
+      <span class="border border-mist px-5 py-3 rad font-medium">Greater Tampa Bay</span>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CALL BAND -->
+<section class="bg-ink text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <h2 class="font-heading font-bold uppercase text-4xl sm:text-5xl leading-[1.02]">Ready to level up your space?</h2>
+      <p class="mt-5 text-white/70 max-w-xl">Call or email Level Up Tiling for a free estimate on your Tampa project.</p>
+    </div>
+    <div class="lg:col-span-5 flex flex-col gap-4">
+      <a href="tel:+18136480710" class="bg-brand text-white font-heading font-semibold px-7 py-4 rad text-center text-lg hover:bg-white hover:text-brand transition">Call (813) 648-0710</a>
+      <a href="mailto:leveluptilingllc@gmail.com" class="border border-white/40 font-heading font-semibold px-7 py-4 rad text-center hover:bg-white/10 transition break-words text-[15px]">leveluptilingllc@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:0 0 clamp(80px,10vw,128px)">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(43,63,166,0.10);color:#2b3fa6}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#a0a9d7}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(43,63,176,0.10);color:#2b3fb0}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#a0a9db}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -299,8 +373,8 @@ tailwind.config = {
     .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#2b3fa6;box-shadow:0 0 0 4px rgba(43,63,166,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#2b3fa6;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#2b3fb0;box-shadow:0 0 0 4px rgba(43,63,176,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#2b3fb0;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -308,6 +382,10 @@ tailwind.config = {
     .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
     .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-band{position:relative;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/photo-3.jpg') center/cover no-repeat;padding:clamp(80px,10vw,128px) 0 clamp(150px,16vw,200px)}
+    .lp-contact .lp-band:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.72))}
+    .lp-contact .lp-band>.lp-in{position:relative}
+    .lp-contact .lp-up{margin-top:-120px;position:relative}
     .lp-contact .lp-center{max-width:48rem;margin:0 auto;text-align:center}
     .lp-contact .lp-center .lp-p{margin-left:auto;margin-right:auto}
     .lp-contact .lp-tiles{margin:40px auto 0;display:grid;gap:12px;max-width:56rem}
@@ -315,16 +393,17 @@ tailwind.config = {
     .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:12px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
     .lp-contact .lp-tile .lp-v{font-size:16px}
     .lp-contact .lp-formwrap{max-width:48rem;margin:28px auto 0}</style>
-  <div class="lp-in">
-    <div class="lp-center"><p class="lp-kick" style="color:#2b3fa6">Contact</p><h2 class="lp-h" style="color:#171717">Schedule an appointment</h2><p class="lp-p" style="color:#525252">Tell us about your tile or remodeling project in Tampa and we'll get back to you.</p></div>
-    <div class="lp-tiles"><a href="tel:+18136480710" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(813) 648-0710</span></span></a><a href="mailto:leveluptilingllc@gmail.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">leveluptilingllc@gmail.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Tampa, FL</span></span></div></div>
+  <div class="lp-band"><div class="lp-in"><div class="lp-center"><p class="lp-kick" style="color:#a0a9db">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.82)">Tell us about your tile or remodeling project and we will get back to you.</p></div></div></div>
+  <div class="lp-in lp-up">
+    
+    <div class="lp-tiles" style="margin-top:0"><a href="tel:+18136480710" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(813) 648-0710</span></span></a><a href="mailto:leveluptilingllc@gmail.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">leveluptilingllc@gmail.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Tampa, FL</span></span></div></div>
     <div class="lp-formwrap lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Tile installation</option><option>Kitchen remodeling</option><option>Backsplashes</option><option>Flooring</option><option>Waterproofing</option><option>Home remodeling</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Tile installation</option><option>Kitchen remodel</option><option>Stone fireplace wall</option><option>Backsplash</option><option>Shower niche</option><option>Cabinetry</option><option>Barn doors</option><option>Other</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -334,61 +413,69 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-<!-- 10. Final call card -->
-<section class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-      <div class="lg:col-span-6 ph aspect-[4/3] lg:aspect-auto lg:min-h-[440px]">
-        <img src="https://images.unsplash.com/photo-1649083048198-f57bd8fb7a3b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright finished kitchen and dining area">
-      </div>
-      <div class="lg:col-span-6 bg-mist rounded-tile p-8 sm:p-12 flex flex-col justify-center">
-        <h2 class="text-3xl sm:text-4xl font-medium leading-[1.15]">Ready to level up your space?</h2>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">Call or email Level Up Tiling and tell us what you have in mind.</p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="tel:8136480710" class="inline-flex justify-center items-center bg-brand text-white font-semibold px-7 py-4 rounded-full hover:bg-brandDark transition">Call (813) 648-0710</a>
-          <a href="mailto:leveluptilingllc@gmail.com" class="inline-flex justify-center items-center border border-ink/20 font-semibold px-7 py-4 rounded-full hover:bg-white transition">Send an email</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 </main>
 
-<!-- 11. Footer -->
-<footer class="bg-brandDark text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 text-center">
-    <div class="inline-block bg-white rounded-tile px-6 py-4">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/level-up-tiling-llc/21943/logo-0.png" alt="Level Up Tiling, LLC" class="h-14 w-auto">
+<!-- FOOTER -->
+<footer class="bg-brandink text-white/80 pt-16 pb-10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <div class="inline-block bg-white rad p-3">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/level-up-tiling-llc/21949/logo-0.png" alt="Level Up Tiling, LLC" class="h-12 w-auto">
+      </div>
+      <p class="mt-5 max-w-sm">Veteran owned and operated tile and remodeling in Tampa, FL. CBC# 1264838.</p>
     </div>
-    <p class="mt-8 text-white/70">Tampa, FL &middot; CBC# 1264838 &middot; Veteran owned and operated</p>
-    <div class="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-lg">
-      <a href="tel:8136480710" class="font-semibold hover:text-aqua">(813) 648-0710</a>
-      <a href="mailto:leveluptilingllc@gmail.com" class="font-semibold break-words hover:text-aqua">leveluptilingllc@gmail.com</a>
+    <div class="md:col-span-3">
+      <h4 class="font-heading font-semibold text-white text-lg mb-4">Explore</h4>
+      <ul class="space-y-2">
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#process" class="hover:text-white">Process</a></li>
+        <li><a href="#work" class="hover:text-white">Our work</a></li>
+        <li><a href="#about" class="hover:text-white">About</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
     </div>
-    <nav class="mt-8 flex flex-wrap justify-center gap-x-7 gap-y-2 text-sm text-white/70">
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#process" class="hover:text-white">Process</a>
-      <a href="#work" class="hover:text-white">Our work</a>
-      <a href="#why" class="hover:text-white">Why us</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
-    </nav>
-    <div class="mt-10 pt-8 border-t border-white/15 text-xs text-white/55 space-y-2">
-      <p>Concept redesign by LumeaPixel. This is not the official Level Up Tiling LLC website.</p>
-      <p>Some photos by Decima Athens, Clay Elliot, Zac Gudakov, Francesca Tosolini, Christa Grover, Bailey Alexander, Clay Banks and Smart Renovations on Unsplash.</p>
+    <div class="md:col-span-4">
+      <h4 class="font-heading font-semibold text-white text-lg mb-4">Contact</h4>
+      <ul class="space-y-2">
+        <li><a href="tel:+18136480710" class="hover:text-white">(813) 648-0710</a></li>
+        <li><a href="mailto:leveluptilingllc@gmail.com" class="hover:text-white break-words">leveluptilingllc@gmail.com</a></li>
+        <li>Tampa, FL</li>
+        <li class="pt-2 flex gap-5">
+          <a href="https://www.facebook.com/profile.php?id=100075958509736" class="hover:text-white">Facebook</a>
+          <a href="https://www.instagram.com/leveluptilingllc/" class="hover:text-white">Instagram</a>
+        </li>
+      </ul>
     </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 mt-12 pt-6 border-t border-white/15 text-sm text-white/60">
+    Concept redesign by LumeaPixel. This is not the official Level Up Tiling LLC website.
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
+  // mobile menu
+  const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', () => mm.classList.toggle('hidden'));
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.add('hidden')));
+
+  // reveal on scroll
+  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // before/after slider
+  const ba = document.getElementById('ba'), top = document.getElementById('baTop'), handle = document.getElementById('baHandle'), range = document.getElementById('baRange');
+  function setPos(p) {
+    p = Math.max(0, Math.min(100, p));
+    top.style.clipPath = 'inset(0 ' + (100 - p) + '% 0 0)';
+    handle.style.left = p + '%';
+    range.value = p;
+  }
+  range.addEventListener('input', e => setPos(parseFloat(e.target.value)));
+  let dragging = false;
+  function move(x) { const r = ba.getBoundingClientRect(); setPos(((x - r.left) / r.width) * 100); }
+  ba.addEventListener('pointerdown', e => { dragging = true; move(e.clientX); });
+  window.addEventListener('pointermove', e => { if (dragging) move(e.clientX); });
+  window.addEventListener('pointerup', () => dragging = false);
 </script>
 </body>
 </html>

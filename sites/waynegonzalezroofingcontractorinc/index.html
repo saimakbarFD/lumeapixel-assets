@@ -15,268 +15,267 @@ tailwind.config = {
     extend: {
       colors: {
         brand: '#f4313f',
-        brandDark: '#2a0d10',
-        ink: '#141012',
-        cream: '#f7f2ee',
-        stone: '#e9e3de'
+        ink: '#0e0e10',
+        deep: '#2a0a0d',
+        paper: '#f7f5f3',
+        stone2: '#ebe7e3'
       },
       fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
+        head: ['Outfit', 'sans-serif'],
         body: ['Inter', 'sans-serif']
       },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '16px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #141012; background: #fff; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.015em; }
+  body { font-family: 'Inter', sans-serif; color: #1c1c1f; background: #fff; font-size: 17px; line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile img { transition: transform .8s ease; }
-  .tile:hover img { transform: scale(1.04); }
-  .tile-shade { background: linear-gradient(to top, rgba(20,16,18,.82) 0%, rgba(20,16,18,.1) 55%, rgba(20,16,18,0) 100%); }
-  details > summary { list-style: none; cursor: pointer; }
-  details > summary::-webkit-details-marker { display: none; }
-  details[open] .plus { transform: rotate(45deg); }
-  .plus { transition: transform .25s ease; }
+  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
+  .card-arrow { transition: transform .25s ease; }
+  .svc:hover .card-arrow { transform: translateX(4px); }
+  .svc img { transition: transform .6s ease; }
+  .svc:hover img { transform: scale(1.04); }
+  .hero-overlay { background: linear-gradient(90deg, rgba(10,10,12,.88) 0%, rgba(10,10,12,.62) 55%, rgba(10,10,12,.35) 100%); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .svc img { transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="antialiased">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/wayne-gonzalez-roofing-contractor-inc/21943/logo-0.png" alt="Wayne Gonzalez Roofing Inc. logo" class="h-12 md:h-14 w-auto">
-    </a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/85 font-medium">
+<!-- Top bar -->
+<div class="bg-brand text-white text-sm">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+    <span>Serving Tampa, Brandon, Riverview, Lakeland and the Tampa Bay area</span>
+    <a href="mailto:sgonzalez@waynegonzalezroofing.com" class="font-medium hover:underline break-words">sgonzalez@waynegonzalezroofing.com</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink text-white border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/logo-0.png" alt="Wayne Gonzalez Roofing Inc." class="h-12 w-auto"></a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-white/85">
+      <a href="#difference" class="hover:text-white">About</a>
       <a href="#services" class="hover:text-white">Services</a>
-      <a href="#about" class="hover:text-white">About</a>
       <a href="#process" class="hover:text-white">Process</a>
-      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#work" class="hover:text-white">Our Work</a>
       <a href="#faq" class="hover:text-white">FAQ</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
-    <div class="flex items-center gap-3">
-      <a href="tel:+18136532279" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-[#d9232f] text-white font-heading font-semibold px-5 py-3 rounded transition-colors">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (813) 653-2279
+    <div class="flex items-center gap-4">
+      <a href="tel:+18136532279" class="hidden md:block text-right leading-tight">
+        <span class="block text-[11px] text-white/60 uppercase tracking-wider">Need help? Call us today</span>
+        <span class="font-head font-semibold text-lg">(813) 653-2279</span>
       </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <a href="#contact" class="hidden sm:inline-flex bg-brand hover:bg-[#d92431] text-white font-semibold text-sm px-5 py-3 rounded transition">Free Estimate</a>
+      <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="px-5 py-5 flex flex-col gap-4 text-white/90 font-medium">
-      <a href="#services" class="mnav">Services</a>
-      <a href="#about" class="mnav">About</a>
-      <a href="#process" class="mnav">Process</a>
-      <a href="#projects" class="mnav">Projects</a>
-      <a href="#faq" class="mnav">FAQ</a>
-      <a href="#contact" class="mnav">Contact</a>
-      <a href="tel:+18136532279" class="bg-brand text-white font-heading font-semibold px-5 py-3 rounded text-center">Call (813) 653-2279</a>
-    </div>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 py-5 space-y-4 text-white/90">
+    <a href="#difference" class="block">About</a>
+    <a href="#services" class="block">Services</a>
+    <a href="#process" class="block">Process</a>
+    <a href="#work" class="block">Our Work</a>
+    <a href="#faq" class="block">FAQ</a>
+    <a href="#contact" class="block">Contact</a>
+    <a href="tel:+18136532279" class="inline-flex bg-brand text-white font-semibold px-5 py-3 rounded">Call (813) 653-2279</a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
-<section class="relative bg-ink">
-  <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red tile roof against a clear blue sky" class="w-full h-full object-cover">
-    <div class="absolute inset-0 bg-ink/65"></div>
-  </div>
-  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 pt-24 md:pt-32 pb-44 md:pb-56 text-center">
-    <p class="text-white/80 text-sm font-medium tracking-[0.18em] uppercase mb-6">Roofing with a Conscience since 1981</p>
-    <h1 class="text-white font-semibold text-5xl sm:text-6xl md:text-7xl">Protecting<br>what matters.</h1>
-    <p class="mt-7 text-white/85 text-lg md:text-xl max-w-2xl mx-auto">Family owned roofers serving Tampa and Hillsborough County. Honest advice, quality workmanship, and you deal directly with the owners, never a salesperson.</p>
-    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#contact" class="bg-brand hover:bg-[#d9232f] text-white font-heading font-semibold px-8 py-4 rounded transition-colors">Get a free estimate</a>
-      <a href="#about" class="border border-white/80 text-white hover:bg-white hover:text-ink font-heading font-semibold px-8 py-4 rounded transition-colors">Our story</a>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST STRIP -->
-<section class="relative z-10 px-5 lg:px-8">
-  <div class="max-w-6xl mx-auto -mt-24 md:-mt-28 bg-white rounded border border-stone shadow-sm">
-    <div class="grid grid-cols-2 lg:grid-cols-4">
-      <div class="p-6 md:p-8 border-b lg:border-b-0 border-r border-stone">
-        <svg class="text-brand mb-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
-        <h3 class="font-heading font-semibold text-lg">Family owned</h3>
-        <p class="text-[15px] text-ink/70 mt-1">Since 1981</p>
+<!-- Hero -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata" poster="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-4.jpg">
+    <source src="https://waynegonzalezroofing.com/wp-content/uploads/2026/10/wg-hero-drone-720p.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-28 md:py-40 lg:py-48">
+    <div class="max-w-2xl">
+      <p class="label text-white/70 mb-5">Roofing with a Conscience since 1981</p>
+      <h1 class="font-head font-semibold text-5xl sm:text-6xl lg:text-7xl text-white">Protecting<br>what matters.</h1>
+      <p class="mt-6 text-lg md:text-xl text-white/85 max-w-xl">Family owned. Honest advice. Quality workmanship. You deal directly with the owners, never a salesperson.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-flex justify-center items-center bg-brand hover:bg-[#d92431] text-white font-semibold px-8 py-4 rounded transition">Get a Free Estimate</a>
+        <a href="#difference" class="inline-flex justify-center items-center bg-white text-ink hover:bg-stone2 font-semibold px-8 py-4 rounded-full transition">Our Story</a>
       </div>
-      <div class="p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-stone">
-        <svg class="text-brand mb-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <h3 class="font-heading font-semibold text-lg">No sales team</h3>
-        <p class="text-[15px] text-ink/70 mt-1">You deal directly with the owners</p>
-      </div>
-      <div class="p-6 md:p-8 border-r border-stone">
-        <svg class="text-brand mb-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.500-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
-        <h3 class="font-heading font-semibold text-lg">Fully insured</h3>
-        <p class="text-[15px] text-ink/70 mt-1">Workers' comp and general liability</p>
-      </div>
-      <div class="p-6 md:p-8">
-        <svg class="text-brand mb-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
-        <h3 class="font-heading font-semibold text-lg">Work guaranteed</h3>
-        <p class="text-[15px] text-ink/70 mt-1">2 years on repairs, 10 years on replacements</p>
-      </div>
+      <ul class="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-8 text-sm text-white/80">
+        <li class="flex items-center gap-2"><svg width="18" height="18" fill="none" stroke="#f4313f" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Owens Corning Preferred Contractor</li>
+        <li class="flex items-center gap-2"><svg width="18" height="18" fill="none" stroke="#f4313f" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>2-yr repair &amp; 10-yr replacement guarantee</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-24 md:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl mb-14 reveal">
-      <p class="text-brand text-sm font-semibold tracking-[0.18em] uppercase mb-4">Our services</p>
-      <h2 class="text-4xl md:text-5xl font-semibold">What we build and repair in Tampa Bay</h2>
-      <p class="mt-5 text-ink/70">From roof repairs to full replacements, gutters to permanent lighting.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-5 reveal">
-      <a href="#contact" class="tile group relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden block">
-        <img src="https://images.unsplash.com/photo-1715207422537-2549c75846b7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aged slate roof with dormer windows" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <div class="absolute left-6 bottom-6 right-6">
-          <h3 class="text-white text-2xl font-semibold">Roof Repairs</h3>
-          <p class="text-white/80 text-[15px] mt-1">Fast, reliable repairs with a 2-year guarantee.</p>
+<!-- Difference -->
+<section id="difference" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+      <div class="lg:col-span-6 reveal">
+        <p class="label text-brand mb-4">The Wayne Gonzalez difference</p>
+        <h2 class="font-head font-semibold text-4xl md:text-5xl text-ink">Honest roofing from the owners of Tampa Bay roofs since 1981.</h2>
+        <div class="mt-12 grid grid-cols-2 gap-4">
+          <div class="rounded overflow-hidden aspect-[4/5]">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-1.jpg" alt="Home in Tampa Bay with a new architectural shingle roof" class="w-full h-full object-cover">
+          </div>
+          <div class="grid grid-rows-2 gap-4">
+            <div class="bg-brand text-white rounded p-6 flex flex-col justify-end">
+              <p class="font-head font-semibold text-2xl leading-tight">Roofing with a Conscience since 1981</p>
+            </div>
+            <div class="rounded overflow-hidden">
+              <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-2.jpg" alt="Close-up of a new gray shingle roof" class="w-full h-full object-cover">
+            </div>
+          </div>
         </div>
-      </a>
-      <a href="#contact" class="tile group relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden block">
-        <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Brick home with a new standing seam metal roof" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <div class="absolute left-6 bottom-6 right-6">
-          <h3 class="text-white text-2xl font-semibold">Roof Replacements</h3>
-          <p class="text-white/80 text-[15px] mt-1">Built to last, with a 10-year guarantee.</p>
-        </div>
-      </a>
-      <a href="#contact" class="tile group relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden block">
-        <img src="https://images.unsplash.com/photo-1643155316153-bce5d5f55d34?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="White gabled roofline with dormers" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <div class="absolute left-6 bottom-6 right-6">
-          <h3 class="text-white text-2xl font-semibold">Gutters</h3>
-          <p class="text-white/80 text-[15px] mt-1">Installation, replacement, repair and extensions.</p>
-        </div>
-      </a>
-      <a href="#contact" class="tile group relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden block">
-        <img src="https://images.unsplash.com/photo-1789684290015-1231896d5549?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Gable end glowing in evening light" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <div class="absolute left-6 bottom-6 right-6">
-          <h3 class="text-white text-2xl font-semibold">Permanent Lighting</h3>
-          <p class="text-white/80 text-[15px] mt-1">Year-round beauty and security.</p>
-        </div>
-      </a>
-      <a href="#contact" class="tile group relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden block">
-        <img src="https://images.unsplash.com/photo-1681365957051-08bd5c9a0286?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Terracotta tile roof planes" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <div class="absolute left-6 bottom-6 right-6">
-          <h3 class="text-white text-2xl font-semibold">Roof Inspection and Maintenance</h3>
-          <p class="text-white/80 text-[15px] mt-1">Catch small problems before they become big ones.</p>
-        </div>
-      </a>
-      <a href="#contact" class="tile group relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] rounded overflow-hidden block">
-        <img src="https://images.unsplash.com/photo-1751066007385-392d684fd7c6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Dark tile hip roof on a stucco home" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <div class="absolute left-6 bottom-6 right-6">
-          <h3 class="text-white text-2xl font-semibold">Shingle, Metal and Flat Roofing</h3>
-          <p class="text-white/80 text-[15px] mt-1">Asphalt, architectural, metal and flat systems.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT SPLIT -->
-<section id="about" class="pb-24 md:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1625512208347-8b6e3423b174?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers working on a roof against a blue sky" class="w-full h-full object-cover">
       </div>
-    </div>
-    <div class="lg:col-span-6 reveal">
-      <p class="text-brand text-sm font-semibold tracking-[0.18em] uppercase mb-4">About us</p>
-      <h2 class="text-4xl md:text-5xl font-semibold">Roofing with a conscience, since 1981</h2>
-      <p class="mt-6 text-ink/75">Wayne Gonzalez Roofing is a family owned company serving Tampa and the surrounding communities. When you call, you reach the owners, and the owners are the ones who look at your roof and give you straight advice.</p>
-      <p class="mt-4 text-ink/75">We use proper materials and proper installation methods, we clean up before we leave, and we stand behind the work. Repairs carry a 2-year guarantee and full replacements carry 10 years. We are an Owens Corning Preferred Contractor.</p>
-      <a href="#contact" class="inline-block mt-8 bg-brand hover:bg-[#d9232f] text-white font-heading font-semibold px-8 py-4 rounded transition-colors">Talk to the owners</a>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS SPLIT (reverse) -->
-<section id="process" class="pb-24 md:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <p class="text-brand text-sm font-semibold tracking-[0.18em] uppercase mb-4">Our process</p>
-      <h2 class="text-4xl md:text-5xl font-semibold">Simple. Honest. Professional.</h2>
-      <p class="mt-6 text-ink/75">Clear communication, honest advice and expert workmanship from the first call to the final walk-around.</p>
-      <ol class="mt-10 space-y-7">
-        <li class="flex gap-5">
-          <span class="font-heading font-semibold text-brand text-xl w-8 shrink-0">01</span>
-          <div><h3 class="font-heading font-semibold text-xl">Consultation</h3><p class="text-ink/70 mt-1">We look at your roof and listen to what you need.</p></div>
-        </li>
-        <li class="flex gap-5">
-          <span class="font-heading font-semibold text-brand text-xl w-8 shrink-0">02</span>
-          <div><h3 class="font-heading font-semibold text-xl">Free estimate</h3><p class="text-ink/70 mt-1">Detailed, transparent pricing. No pressure.</p></div>
-        </li>
-        <li class="flex gap-5">
-          <span class="font-heading font-semibold text-brand text-xl w-8 shrink-0">03</span>
-          <div><h3 class="font-heading font-semibold text-xl">Expert installation</h3><p class="text-ink/70 mt-1">Proper materials and proper installation methods.</p></div>
-        </li>
-        <li class="flex gap-5">
-          <span class="font-heading font-semibold text-brand text-xl w-8 shrink-0">04</span>
-          <div><h3 class="font-heading font-semibold text-xl">Final inspection</h3><p class="text-ink/70 mt-1">We check the work and clean up before we leave.</p></div>
-        </li>
-      </ol>
-      <a href="#contact" class="inline-block mt-10 bg-brand hover:bg-[#d9232f] text-white font-heading font-semibold px-8 py-4 rounded transition-colors">Start my estimate</a>
-    </div>
-    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/5] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1777919393762-2be32d198c62?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a roof deck with water in the background" class="w-full h-full object-cover">
+      <div class="lg:col-span-6 reveal">
+        <p class="text-lg text-neutral-700">Wayne Gonzalez Roofing is a family-owned company that has been roofing Tampa Bay since 1981. There is no sales team. When you call, you talk to the owners, and they explain what your roof needs and what it doesn't.</p>
+        <p class="mt-4 text-neutral-700">Clear communication, honest advice and expert workmanship carry you from the first call to the final walk-around. The company is fully insured with workers' comp and general liability, and all work is guaranteed.</p>
+        <div class="mt-9 divide-y divide-stone2 border-t border-stone2">
+          <div class="py-5">
+            <h3 class="font-head font-semibold text-xl text-ink">Roof repair and replacement</h3>
+            <p class="mt-1 text-neutral-600">A 2-year guarantee on repairs and a 10-year guarantee on full replacements.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="font-head font-semibold text-xl text-ink">Gutters</h3>
+            <p class="mt-1 text-neutral-600">Installation, replacement, repair and extensions to move water away from your home.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="font-head font-semibold text-xl text-ink">Permanent lighting</h3>
+            <p class="mt-1 text-neutral-600">Roofline and landscape lighting for year-round beauty and security.</p>
+          </div>
+        </div>
+        <a href="tel:+18136532279" class="mt-6 inline-flex items-center gap-3 group">
+          <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          </span>
+          <span><span class="block text-sm text-neutral-500">Call the owners</span><span class="font-head font-semibold text-2xl text-ink group-hover:text-brand transition">(813) 653-2279</span></span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FACTS PANEL -->
-<section class="px-5 lg:px-8 pb-24 md:pb-32">
-  <div class="max-w-5xl mx-auto bg-cream rounded px-6 md:px-16 py-16 md:py-20 text-center reveal">
-    <p class="text-brand text-sm font-semibold tracking-[0.18em] uppercase mb-4">Good to know</p>
-    <h2 class="text-3xl md:text-5xl font-semibold">Facts, not hype.</h2>
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-left md:text-center">
-      <p class="text-ink/80">Most roof replacements are finished in 1 to 3 days.</p>
-      <p class="text-ink/80">Roofs 15 to 25+ years old are usually due for a replacement.</p>
-      <p class="text-ink/80">Repairs carry a 2-year workmanship guarantee.</p>
+<!-- Services -->
+<section id="services" class="relative pb-24 lg:pb-32">
+  <div class="absolute inset-x-0 top-0 h-[360px] md:h-[300px] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-20 lg:pt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end text-white reveal">
+      <div class="lg:col-span-6">
+        <p class="label text-white/75 mb-4">Our services</p>
+        <h2 class="font-head font-semibold text-4xl md:text-5xl">Complete roofing solutions</h2>
+      </div>
+      <p class="lg:col-span-6 text-white/90 text-lg">From roof repairs to full replacements, gutters to permanent lighting, one family-owned company handles the whole project.</p>
     </div>
-    <a href="#contact" class="inline-block mt-12 bg-brand hover:bg-[#d9232f] text-white font-heading font-semibold px-8 py-4 rounded transition-colors">Get a free estimate</a>
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#contact" class="svc block bg-white rounded p-3 shadow-sm reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-2.jpg" alt="Roof repair on gray shingles" class="w-full h-full object-cover"></div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="font-head font-semibold text-xl text-ink flex items-center justify-between">Roof Repairs <svg class="card-arrow text-brand" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+          <p class="mt-2 text-neutral-600 text-[15px]">Fast, reliable repairs backed by a 2-year guarantee.</p>
+        </div>
+      </a>
+      <a href="#contact" class="svc block bg-white rounded p-3 shadow-sm reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-1.jpg" alt="Tampa home with a newly replaced roof" class="w-full h-full object-cover"></div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="font-head font-semibold text-xl text-ink flex items-center justify-between">Roof Replacements <svg class="card-arrow text-brand" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+          <p class="mt-2 text-neutral-600 text-[15px]">Built to last, with a 10-year guarantee on the work.</p>
+        </div>
+      </a>
+      <a href="#contact" class="svc block bg-white rounded p-3 shadow-sm reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1718411774135-c7168b3ca794?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofline and gutter edge of a home" class="w-full h-full object-cover"></div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="font-head font-semibold text-xl text-ink flex items-center justify-between">Gutters <svg class="card-arrow text-brand" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+          <p class="mt-2 text-neutral-600 text-[15px]">Installation, replacement, repair and extensions.</p>
+        </div>
+      </a>
+      <a href="#contact" class="svc block bg-white rounded p-3 shadow-sm reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-4.jpg" alt="Home exterior with roofline lighting at night" class="w-full h-full object-cover"></div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="font-head font-semibold text-xl text-ink flex items-center justify-between">Permanent Lighting <svg class="card-arrow text-brand" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+          <p class="mt-2 text-neutral-600 text-[15px]">Year-round beauty and security for your home.</p>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- PROJECTS GALLERY -->
-<section id="projects" class="pb-24 md:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl mb-12 reveal">
-      <p class="text-brand text-sm font-semibold tracking-[0.18em] uppercase mb-4">Roof types</p>
-      <h2 class="text-4xl md:text-5xl font-semibold">Roofs we work on across Tampa Bay</h2>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 reveal">
-      <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1597245289444-700c59bce206?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Slate roof with dormers" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1787672358119-25cb4c768d14?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof over a brick home" class="w-full h-full object-cover"></div>
-      <div class="col-span-2 md:col-span-1 aspect-[2/1] md:aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1715207422537-2549c75846b7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Weathered slate roof against blue sky" class="w-full h-full object-cover"></div>
-      <div class="col-span-2 md:col-span-1 aspect-[2/1] md:aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Clay tile roof ridge line" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1751066007385-392d684fd7c6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Dark tile roof on a pitched hip" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1643155316153-bce5d5f55d34?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Gabled dormers with shutters" class="w-full h-full object-cover"></div>
+<!-- Facts + Process -->
+<section id="process" class="py-24 lg:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-start">
+      <div class="lg:col-span-5 reveal">
+        <p class="label text-brand mb-4">Our process</p>
+        <h2 class="font-head font-semibold text-4xl md:text-5xl text-ink">Simple. Honest. Professional.</h2>
+        <p class="mt-5 text-neutral-700">Clear communication, honest advice and expert workmanship from the first call to the final walk-around.</p>
+        <ul class="mt-8 space-y-3 text-neutral-700">
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Most roof replacements are finished in 1 to 3 days</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Roofs 15 to 25+ years old are usually due for a replacement</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Repairs carry a 2-year workmanship guarantee</li>
+        </ul>
+        <a href="#contact" class="mt-9 inline-flex bg-brand hover:bg-[#d92431] text-white font-semibold px-8 py-4 rounded transition">Start my estimate</a>
+        <div class="mt-10 rounded overflow-hidden aspect-[16/10]">
+          <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers installing roof tiles on a new roof" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 reveal">
+        <div class="bg-white rounded p-8">
+          <span class="font-head font-semibold text-brand text-4xl">01</span>
+          <h3 class="mt-4 font-head font-semibold text-2xl text-ink">Consultation</h3>
+          <p class="mt-2 text-neutral-600">We look at your roof and listen to what you need.</p>
+        </div>
+        <div class="bg-white rounded p-8">
+          <span class="font-head font-semibold text-brand text-4xl">02</span>
+          <h3 class="mt-4 font-head font-semibold text-2xl text-ink">Free Estimate</h3>
+          <p class="mt-2 text-neutral-600">Detailed, transparent pricing. No pressure.</p>
+        </div>
+        <div class="bg-white rounded p-8">
+          <span class="font-head font-semibold text-brand text-4xl">03</span>
+          <h3 class="mt-4 font-head font-semibold text-2xl text-ink">Expert Installation</h3>
+          <p class="mt-2 text-neutral-600">Proper materials and proper installation methods.</p>
+        </div>
+        <div class="bg-white rounded p-8">
+          <span class="font-head font-semibold text-brand text-4xl">04</span>
+          <h3 class="mt-4 font-head font-semibold text-2xl text-ink">Final Inspection</h3>
+          <p class="mt-2 text-neutral-600">We check the work and clean up before we leave.</p>
+        </div>
+        <div class="sm:col-span-2 bg-ink text-white rounded p-8 grid grid-cols-2 gap-6">
+          <div><p class="font-head font-semibold text-4xl text-brand">1981</p><p class="mt-1 text-white/70 text-sm">Roofing Tampa Bay since</p></div>
+          <div><p class="font-head font-semibold text-4xl text-brand">10-yr</p><p class="mt-1 text-white/70 text-sm">Guarantee on every roof replacement</p></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- Work gallery -->
+<section id="work" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
+      <div class="lg:col-span-6">
+        <p class="label text-brand mb-4">Our work</p>
+        <h2 class="font-head font-semibold text-4xl md:text-5xl text-ink">Roofs across Tampa Bay</h2>
+      </div>
+      <p class="lg:col-span-6 text-neutral-600 text-lg">Homes in Tampa, Brandon, Riverview and beyond, from shingle replacements to roofline lighting.</p>
+    </div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+      <div class="col-span-2 aspect-[16/10] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-4.jpg" alt="Tampa home with new dark shingle roof and palm trees" class="w-full h-full object-cover"></div>
+      <div class="aspect-square rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-2.jpg" alt="Aerial view of a new shingle roof" class="w-full h-full object-cover"></div>
+      <div class="aspect-square rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof on a brick home" class="w-full h-full object-cover"></div>
+      <div class="aspect-square rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1597245289444-700c59bce206?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Slate roof with dormer windows and chimney" class="w-full h-full object-cover"></div>
+      <div class="aspect-square rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-3.jpg" alt="Roof deployment project for Habitat for Humanity" class="w-full h-full object-cover"></div>
+      <div class="col-span-2 aspect-[16/10] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1715596636360-c47539cbfbbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home under construction with roof in place" class="w-full h-full object-cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -364,66 +363,57 @@ tailwind.config = {
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="py-24 md:py-32 bg-cream">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<section id="faq" class="py-24 lg:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
     <div class="lg:col-span-4 reveal">
-      <p class="text-brand text-sm font-semibold tracking-[0.18em] uppercase mb-4">Questions</p>
-      <h2 class="text-4xl md:text-5xl font-semibold">Got questions? Straight answers.</h2>
-      <p class="mt-5 text-ink/70">Or call the owners at <a href="tel:+18136532279" class="text-brand font-semibold">(813) 653-2279</a>.</p>
+      <p class="label text-brand mb-4">Frequently asked questions</p>
+      <h2 class="font-head font-semibold text-4xl md:text-5xl text-ink">Got questions? We have answers.</h2>
+      <p class="mt-5 text-neutral-700">Prefer to talk it through? Call the owners at <a href="tel:+18136532279" class="font-semibold text-brand hover:underline">(813) 653-2279</a>.</p>
     </div>
+    <div class="lg:col-span-8 space-y-3 reveal">
+      <details class="group bg-white rounded p-6">
+        <summary class="cursor-pointer list-none flex justify-between items-center gap-4 font-head font-semibold text-lg text-ink">How do I know if I need a roof repair or a full replacement?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-neutral-600">If your roof is over 15 to 25 years old, has widespread damage, or you're dealing with recurring leaks, it may be time for a replacement. Smaller, isolated issues can often be repaired. The best way to know for sure is a professional inspection.</p>
+      </details>
+      <details class="group bg-white rounded p-6">
+        <summary class="cursor-pointer list-none flex justify-between items-center gap-4 font-head font-semibold text-lg text-ink">How long does a roof replacement take?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-neutral-600">Most residential roof replacements are completed in 1 to 3 days, depending on the size of the roof, materials and weather.</p>
+      </details>
+      <details class="group bg-white rounded p-6">
+        <summary class="cursor-pointer list-none flex justify-between items-center gap-4 font-head font-semibold text-lg text-ink">What types of roofing do you install?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-neutral-600">Asphalt shingles, architectural shingles, metal roofing and flat roofing systems.</p>
+      </details>
+      <details class="group bg-white rounded p-6">
+        <summary class="cursor-pointer list-none flex justify-between items-center gap-4 font-head font-semibold text-lg text-ink">What warranties do you offer?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-neutral-600">A 2-year warranty on repairs and a 10-year warranty on full roof replacements, plus manufacturer warranties on many materials.</p>
+      </details>
+      <details class="group bg-white rounded p-6">
+        <summary class="cursor-pointer list-none flex justify-between items-center gap-4 font-head font-semibold text-lg text-ink">Do you offer free estimates?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-neutral-600">Yes. We inspect your roof, explain what we find, and walk you through options, timeline and pricing with no pressure.</p>
+      </details>
+      <details class="group bg-white rounded p-6">
+        <summary class="cursor-pointer list-none flex justify-between items-center gap-4 font-head font-semibold text-lg text-ink">Do you offer financing?<span class="text-brand text-2xl group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-3 text-neutral-600">Yes. Financing options are available. Call us or send a message and we will walk you through them.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Call band -->
+<section class="bg-ink text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
     <div class="lg:col-span-8 reveal">
-      <div class="border-t border-ink/15">
-        <details class="border-b border-ink/15 py-6">
-          <summary class="flex items-center justify-between gap-6 font-heading font-semibold text-xl">How do I know if I need a repair or a full replacement?<span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
-          <p class="mt-4 text-ink/75">If your roof is over 15 to 25 years old, has widespread damage, or you're dealing with recurring leaks, it may be time for a replacement. Smaller, isolated issues can often be repaired. The best way to know for sure is a professional inspection.</p>
-        </details>
-        <details class="border-b border-ink/15 py-6">
-          <summary class="flex items-center justify-between gap-6 font-heading font-semibold text-xl">How long does a roof replacement take?<span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
-          <p class="mt-4 text-ink/75">Most residential roof replacements are completed in 1 to 3 days, depending on the size of the roof, materials and weather.</p>
-        </details>
-        <details class="border-b border-ink/15 py-6">
-          <summary class="flex items-center justify-between gap-6 font-heading font-semibold text-xl">What types of roofing do you install?<span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
-          <p class="mt-4 text-ink/75">Asphalt shingles, architectural shingles, metal roofing and flat roofing systems.</p>
-        </details>
-        <details class="border-b border-ink/15 py-6">
-          <summary class="flex items-center justify-between gap-6 font-heading font-semibold text-xl">What warranties do you offer?<span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
-          <p class="mt-4 text-ink/75">A 2-year warranty on repairs and a 10-year warranty on full roof replacements, plus manufacturer warranties on many materials.</p>
-        </details>
-        <details class="border-b border-ink/15 py-6">
-          <summary class="flex items-center justify-between gap-6 font-heading font-semibold text-xl">Do you offer free estimates?<span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
-          <p class="mt-4 text-ink/75">Yes. We inspect your roof, explain what we find, and walk you through options, timeline and pricing with no pressure.</p>
-        </details>
-        <details class="border-b border-ink/15 py-6">
-          <summary class="flex items-center justify-between gap-6 font-heading font-semibold text-xl">Do you offer financing?<span class="plus text-brand text-3xl leading-none shrink-0">+</span></summary>
-          <p class="mt-4 text-ink/75">Yes. Financing options are available. Call or send a message and we will walk you through them.</p>
-        </details>
-      </div>
+      <h2 class="font-head font-semibold text-4xl md:text-5xl text-brand">Let's talk about your roofing project.</h2>
+      <p class="mt-4 text-white/75 text-lg">Contact us today for a free, no-obligation estimate. Mon to Fri, 7:00 AM to 5:00 PM.</p>
+    </div>
+    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 lg:items-end reveal">
+      <a href="tel:+18136532279" class="inline-flex justify-center items-center bg-brand hover:bg-[#d92431] text-white font-semibold px-8 py-4 rounded transition">Call (813) 653-2279</a>
+      <a href="#contact" class="inline-flex justify-center items-center bg-white text-ink hover:bg-stone2 font-semibold px-8 py-4 rounded-full transition">Request an estimate</a>
     </div>
   </div>
 </section>
 
-<!-- FINAL CALL -->
-<section class="py-24 md:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 items-center">
-    <div class="lg:col-span-7 reveal">
-      <div class="aspect-[4/3] lg:aspect-[5/4] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished metal roof on a brick home" class="w-full h-full object-cover">
-      </div>
-    </div>
-    <div class="lg:col-span-5 lg:-ml-24 relative z-10 -mt-12 lg:mt-0 mx-4 lg:mx-0 reveal">
-      <div class="bg-brand text-white rounded p-8 md:p-12">
-        <h2 class="text-3xl md:text-4xl font-semibold">Let's talk about your roofing project.</h2>
-        <p class="mt-5 text-white/90">Contact us today for a free, no-obligation estimate. Mon to Fri, 7:00 AM to 5:00 PM.</p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="tel:+18136532279" class="bg-white text-ink hover:bg-ink hover:text-white font-heading font-semibold px-7 py-4 rounded text-center transition-colors">(813) 653-2279</a>
-          <a href="#contact" class="border border-white text-white hover:bg-white hover:text-brand font-heading font-semibold px-7 py-4 rounded text-center transition-colors">Send a message</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
+<!-- Contact -->
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
@@ -439,16 +429,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:20px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:16px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#f4313f;box-shadow:0 0 0 4px rgba(244,49,63,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#f4313f;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:16px;background:#f4313f;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -459,21 +449,21 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#f4313f">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your roof and the owners will get back to you.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#f4313f">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your roof and the owners will get back to you with a free, no-obligation estimate.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+18136532279" class="lp-v">(813) 653-2279</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:sgonzalez@waynegonzalezroofing.com" class="lp-v">sgonzalez@waynegonzalezroofing.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Tampa, FL</span></span></li>
-        </ul></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:20px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/photo-9.jpg') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof Repairs</option><option>Roof Replacement</option><option>Roof Inspection</option><option>Gutters</option><option>Permanent Lighting</option><option>Other</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof Repairs</option><option>Roof Replacements</option><option>Roof Inspection</option><option>Gutters</option><option>Permanent Lighting</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -485,41 +475,41 @@ tailwind.config = {
 
 </main>
 
-<!-- FOOTER -->
-<footer class="bg-brandDark text-white/80">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-20 pb-10">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
-      <div class="lg:col-span-4">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/wayne-gonzalez-roofing-contractor-inc/21943/logo-0.png" alt="Wayne Gonzalez Roofing Inc." class="h-14 w-auto mb-6">
-        <p class="text-[15px]">Roofing with a Conscience since 1981. Family owned, serving Tampa Bay.</p>
-      </div>
-      <div class="lg:col-span-3">
-        <h4 class="font-heading font-semibold text-white text-lg mb-5">Contact</h4>
-        <ul class="space-y-3 text-[15px]">
-          <li><a href="tel:+18136532279" class="hover:text-white">(813) 653-2279</a></li>
-          <li><a href="mailto:sgonzalez@waynegonzalezroofing.com" class="hover:text-white break-words">sgonzalez@waynegonzalezroofing.com</a></li>
-          <li>5625 Patterson Rd<br>Riverview, FL 33578</li>
-          <li>Mon to Fri, 7:00 AM to 5:00 PM</li>
-        </ul>
-      </div>
-      <div class="lg:col-span-2">
-        <h4 class="font-heading font-semibold text-white text-lg mb-5">Services</h4>
-        <ul class="space-y-3 text-[15px]">
-          <li><a href="#services" class="hover:text-white">Roof Repairs</a></li>
-          <li><a href="#services" class="hover:text-white">Roof Replacements</a></li>
-          <li><a href="#services" class="hover:text-white">Gutters</a></li>
-          <li><a href="#services" class="hover:text-white">Permanent Lighting</a></li>
-        </ul>
-      </div>
-      <div class="lg:col-span-3">
-        <h4 class="font-heading font-semibold text-white text-lg mb-5">Service areas</h4>
-        <p class="text-[15px] leading-7">Tampa, Brandon, Riverview, Valrico, Apollo Beach, Ruskin, Sun City Center, Wimauma, Lakeland, Bartow</p>
-      </div>
+<!-- Footer -->
+<footer class="bg-ink text-white/75 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+    <div class="md:col-span-5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/wayne-gonzalez-roofing-contractor-inc/21949/logo-0.png" alt="Wayne Gonzalez Roofing Inc." class="h-14 w-auto">
+      <p class="mt-5 max-w-sm">Roofing with a Conscience since 1981. Family owned, serving Tampa Bay.</p>
+      <ul class="mt-6 space-y-2 text-sm">
+        <li>5625 Patterson Rd, Riverview, FL 33578</li>
+        <li><a href="tel:+18136532279" class="hover:text-white">(813) 653-2279</a> &middot; Mon to Fri 7:00 AM to 5:00 PM</li>
+        <li><a href="mailto:sgonzalez@waynegonzalezroofing.com" class="hover:text-white break-words">sgonzalez@waynegonzalezroofing.com</a></li>
+      </ul>
     </div>
-    <div class="mt-16 pt-8 border-t border-white/15 text-sm text-white/60 space-y-2">
-      <p>© 2026 Wayne Gonzalez Roofing Contractor, Inc. All rights reserved.</p>
+    <div class="md:col-span-4">
+      <h4 class="font-head font-semibold text-white text-lg mb-4">Service areas</h4>
+      <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+        <li>Apollo Beach</li><li>Bartow</li><li>Brandon</li><li>Lakeland</li><li>Riverview</li><li>Ruskin</li><li>Sun City Center</li><li>Tampa</li><li>Valrico</li><li>Wimauma</li>
+      </ul>
+    </div>
+    <div class="md:col-span-3">
+      <h4 class="font-head font-semibold text-white text-lg mb-4">Quick links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#difference" class="hover:text-white">About</a></li>
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#process" class="hover:text-white">Process</a></li>
+        <li><a href="#work" class="hover:text-white">Our Work</a></li>
+        <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/55 space-y-1">
+      <p>&copy; 2026 Wayne Gonzalez Roofing Contractor, Inc. All rights reserved.</p>
       <p>Concept redesign by LumeaPixel. This is not the official Wayne Gonzalez Roofing Contractor, Inc. website.</p>
-      <p>Some photos by Verstappen Photography, Robert Katzki, Gallant Haykan, Divaris Shirichena, Ben Koorengevel, Mr Xerty, Hedwin Hu, Phil Desforges, Mario Amé and Srinivasan Venkataraman on Unsplash.</p>
+      <p>Some photos by Allen Y, Divaris Shirichena, Aleksi Partanen, Mr Xerty and Sergej on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -528,7 +518,7 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

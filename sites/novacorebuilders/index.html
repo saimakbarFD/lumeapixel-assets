@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Novacore Builders | Licensed Building Contractor in Tampa, FL</title>
+<title>Novacore Builders | General Contractor in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,296 +13,346 @@
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Manrope', 'sans-serif'] },
+      fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#d9a53a',
-        brandDark: '#b9871f',
-        ink: '#14233a',
-        inkDeep: '#0d1829',
-        paper: '#f6f4ef'
+        brand: '#c9a04e',
+        navy: '#1b3550',
+        ink: '#0f1c2b',
+        paper: '#f6f4ef',
+        mist: '#eceae4'
       },
-      borderRadius: { DEFAULT: '14px' }
+      borderRadius: { DEFAULT: '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Manrope', sans-serif; color: #14233a; background: #fff; }
-  h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.1; }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: #0f1c2b; background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { line-height: 1.1; letter-spacing: -0.02em; }
+  .r { border-radius: 20px; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .photo { object-fit: cover; width: 100%; height: 100%; display: block; }
-  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
+  .eyebrow { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
+  .ph { overflow: hidden; border-radius: 20px; }
+  .ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
+  .ph:hover img { transform: scale(1.03); }
+  #contact { scroll-margin-top: 90px; }
+  section[id] { scroll-margin-top: 80px; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .ph img { transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="antialiased">
+<body class="bg-white">
 
-<!-- Top bar -->
-<div class="bg-brand text-inkDeep text-sm font-semibold">
-  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-    <span>Serving Tampa, St. Pete, Clearwater &amp; Hillsborough County</span>
-    <a href="mailto:info@novacorebuilders.com" class="hover:underline break-words">info@novacorebuilders.com</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white border-b border-black/10">
-  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/novacore-builders/21943/logo-0.png" alt="NovaCore Builders" class="h-12 w-auto"></a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-semibold">
-      <a href="#difference" class="hover:text-brandDark">About</a>
-      <a href="#services" class="hover:text-brandDark">Services</a>
-      <a href="#projects" class="hover:text-brandDark">Projects</a>
-      <a href="#process" class="hover:text-brandDark">Process</a>
-      <a href="#faq" class="hover:text-brandDark">FAQ</a>
-      <a href="#contact" class="hover:text-brandDark">Contact</a>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/logo-0.png" alt="NovaCore Builders" class="h-14 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink/80">
+      <a href="#about" class="hover:text-ink">About</a>
+      <a href="#services" class="hover:text-ink">Services</a>
+      <a href="#process" class="hover:text-ink">Process</a>
+      <a href="#projects" class="hover:text-ink">Projects</a>
+      <a href="#contact" class="hover:text-ink">Contact</a>
     </nav>
-    <div class="hidden md:flex items-center gap-4">
-      <a href="tel:+18134343834" class="inline-flex items-center gap-2 bg-brand text-inkDeep font-bold px-5 py-3 rounded hover:bg-brandDark transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+    <div class="flex items-center gap-3">
+      <a href="tel:+18134343834" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-semibold text-[15px] px-5 py-3 rounded-full hover:brightness-95 transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (813) 434-3834
       </a>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full border border-black/10 flex items-center justify-center" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
-    <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-white">
-    <div class="px-5 py-4 flex flex-col gap-4 font-semibold">
-      <a href="#difference" class="mnav">About</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
+    <div class="px-5 py-5 flex flex-col gap-4 text-base font-medium">
+      <a href="#about" class="mnav">About</a>
       <a href="#services" class="mnav">Services</a>
-      <a href="#projects" class="mnav">Projects</a>
       <a href="#process" class="mnav">Process</a>
-      <a href="#faq" class="mnav">FAQ</a>
+      <a href="#projects" class="mnav">Projects</a>
       <a href="#contact" class="mnav">Contact</a>
-      <a href="tel:+18134343834" class="inline-flex justify-center bg-brand text-inkDeep font-bold px-5 py-3 rounded">Call (813) 434-3834</a>
+      <a href="tel:+18134343834" class="inline-flex justify-center bg-brand text-ink font-semibold px-5 py-3 rounded-full">Call (813) 434-3834</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- Hero -->
-<section class="relative bg-inkDeep">
-  <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1606383446056-eb3fc3cde97b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home addition under construction with scaffolding" class="photo">
-    <div class="absolute inset-0 bg-inkDeep/75"></div>
+<!-- HERO -->
+<section class="pt-12 lg:pt-20 pb-16 lg:pb-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <div class="lg:col-span-8">
+        <p class="eyebrow text-navy/70 mb-5">General contractor · Tampa, FL</p>
+        <h1 class="text-[40px] sm:text-6xl lg:text-[76px] font-semibold text-ink">Remodeling and building across <span class="font-bold">Tampa Bay</span>, done right.</h1>
+      </div>
+      <div class="lg:col-span-4">
+        <p class="text-lg text-ink/70">The contractor who quotes your project is the one who manages it. Kitchens, bathrooms, additions and new homes in Tampa, St. Pete, Clearwater and Hillsborough County.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <div class="md:col-span-7 ph aspect-[4/3] md:aspect-auto md:h-[520px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-4.jpg" alt="Bright living room with floor-to-ceiling windows">
+      </div>
+      <div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5">
+        <div class="flex flex-col gap-4">
+          <div class="ph aspect-[16/10] md:aspect-[16/9]">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-5.jpg" alt="Custom wood kitchen with under-cabinet lighting">
+          </div>
+          <a href="#contact" class="inline-flex justify-center items-center gap-2 bg-brand text-ink font-semibold px-6 py-4 rounded-full hover:brightness-95 transition">
+            Request an estimate
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="bg-mist r p-7 lg:p-8 flex flex-col justify-between min-h-[200px]">
+          <p class="eyebrow text-navy/60">Licensed in Florida</p>
+          <div>
+            <p class="text-3xl lg:text-4xl font-semibold text-ink">CBC1269188</p>
+            <p class="mt-2 text-ink/65 text-[15px]">Florida Certified Building Contractor. Verify it any time at myfloridalicense.com.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="relative max-w-7xl mx-auto px-5 py-24 lg:py-36">
-    <div class="max-w-3xl">
-      <p class="label text-brand mb-5">Florida-Certified CBC1269188</p>
-      <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold">Tampa Bay's licensed contractor for kitchens, baths and whole-home builds</h1>
-      <p class="mt-6 text-lg text-white/80 max-w-2xl leading-relaxed">The contractor who quotes your project is the one who manages it. Permitted, priced in writing and built to current Florida Building Code across Tampa, St. Pete, Clearwater and Hillsborough County.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="inline-flex justify-center items-center bg-brand text-inkDeep font-bold px-7 py-4 rounded hover:bg-brandDark transition">Request a free estimate</a>
-        <a href="#services" class="inline-flex justify-center items-center bg-white text-ink font-bold px-7 py-4 rounded-full hover:bg-paper transition">See our services</a>
+</section>
+
+<!-- THREE COLUMNS -->
+<section id="about" class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-black/10 pt-12">
+      <div class="reveal">
+        <h3 class="eyebrow text-navy mb-4">Unmatched experience</h3>
+        <p class="text-ink/70">An organized, clear process built on communication. Crews arrive on time, respect your home, clean up daily and keep you informed about what happens next.</p>
+      </div>
+      <div class="reveal">
+        <h3 class="eyebrow text-navy mb-4">Locally owned</h3>
+        <p class="text-ink/70">We live and work in the Tampa Bay area. Our reputation is built on trust, word of mouth and results that hold up for the homeowners next door.</p>
+      </div>
+      <div class="reveal">
+        <h3 class="eyebrow text-navy mb-4">Top quality</h3>
+        <p class="text-ink/70">From kitchen tile to bathroom finishes, every detail is done with care. Remodels built to last, held to a simple standard: if it's not perfect, it's not finished.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Difference -->
-<section id="difference" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14">
-    <div class="lg:col-span-6 reveal">
-      <p class="label text-brandDark mb-4">The Novacore difference</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">We show up early, stay late and build it right</h2>
-      <div class="mt-12 grid grid-cols-2 gap-4">
-        <div class="aspect-[3/4] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior renovation with temporary support posts" class="photo"></div>
-        <div class="aspect-[3/4] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working during a home renovation" class="photo"></div>
-      </div>
-      <div class="mt-4 bg-brand rounded p-7">
-        <p class="text-inkDeep text-xl font-bold leading-snug">Every project is permitted, priced in writing and built to current Florida Building Code.</p>
-      </div>
-    </div>
-    <div class="lg:col-span-6 reveal">
-      <p class="text-lg leading-relaxed text-ink/80">Novacore Builders is a South Tampa remodeling and construction company built around a simple idea: the contractor who quotes your project is the one who manages it. Since 2020, under founder Moe Salehian, we have remodeled kitchens and bathrooms, built additions and constructed new homes across Tampa Bay.</p>
-      <div class="mt-10 space-y-8">
-        <div class="border-t border-black/10 pt-6">
-          <h3 class="text-xl font-bold">Unmatched experience</h3>
-          <p class="mt-2 text-ink/75 leading-relaxed">An organized, clear process. Crews arrive on time, treat your home with respect, clean up daily and keep you informed on what happens next.</p>
-        </div>
-        <div class="border-t border-black/10 pt-6">
-          <h3 class="text-xl font-bold">Locally owned</h3>
-          <p class="mt-2 text-ink/75 leading-relaxed">We live here, work here and care about the same community you do. Our reputation is built on trust, word of mouth and results.</p>
-        </div>
-        <div class="border-t border-black/10 pt-6">
-          <h3 class="text-xl font-bold">Top quality</h3>
-          <p class="mt-2 text-ink/75 leading-relaxed">From kitchen tile to bathroom finishes, every detail is done with care. If it is not perfect, it is not finished.</p>
-        </div>
-      </div>
-      <a href="tel:+18134343834" class="mt-10 inline-flex items-center gap-4 group">
-        <span class="w-12 h-12 rounded-full bg-ink text-white flex items-center justify-center">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        <span>
-          <span class="block text-sm text-ink/60 font-semibold">Talk to us directly</span>
-          <span class="block text-2xl font-bold group-hover:text-brandDark">(813) 434-3834</span>
-        </span>
-      </a>
+<!-- MISSION STATEMENT -->
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
+    <p class="eyebrow text-navy/60 mb-6">Our approach</p>
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-ink leading-[1.15]">We show up early, stay late and build it right. Clear communication, honest pricing and careful craftsmanship on every job.</h2>
+  </div>
+</section>
+
+<!-- COLLAGE -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
+      <div class="col-span-1 lg:col-span-3 ph aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-6.jpg" alt="Green tiled shower with brass fixtures"></div>
+      <div class="col-span-1 lg:col-span-3 ph aspect-[4/5] lg:mt-12"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-7.jpg" alt="Entry hall with staircase and wood double doors"></div>
+      <div class="col-span-2 lg:col-span-6 ph aspect-[16/10] lg:aspect-auto lg:row-span-2"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-2.jpg" alt="Modern living room with skylights and dark plaster walls"></div>
+      <div class="col-span-1 lg:col-span-3 ph aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-14.jpg" alt="Hardwood flooring being installed"></div>
+      <div class="col-span-1 lg:col-span-3 ph aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-8.jpg" alt="Paneled dark blue wall and hardwood floor"></div>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="relative pb-24 lg:pb-32">
-  <div class="absolute top-0 left-0 right-0 h-[420px] lg:h-[360px] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5 pt-20">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end reveal">
-      <div class="lg:col-span-6">
-        <p class="label text-inkDeep/70 mb-4">What we build</p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-inkDeep">Remodeling and building services done right</h2>
+<!-- PROCESS -->
+<section id="process" class="py-20 lg:py-28 bg-paper">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
+      <div class="lg:col-span-7">
+        <p class="eyebrow text-navy/60 mb-4">How it works</p>
+        <h2 class="text-4xl lg:text-5xl font-semibold text-ink">What to expect when you remodel with us</h2>
       </div>
-      <div class="lg:col-span-6">
-        <p class="text-inkDeep/85 text-lg leading-relaxed">Known for clear communication, honest pricing and craftsmanship that lasts. From kitchen and bathroom remodels to full home renovations, concrete, painting and more.</p>
+      <div class="lg:col-span-5 lg:pt-8">
+        <p class="text-ink/70 text-lg">Simple, clear and organized, so you always know what is happening next.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white r p-8 reveal">
+        <p class="text-brand font-semibold text-sm tracking-widest mb-8">01</p>
+        <h3 class="text-xl font-semibold mb-3">Consultation</h3>
+        <p class="text-ink/70 text-[15px]">A friendly visit at your home to talk through your vision and goals, look at the space and share design ideas.</p>
+      </div>
+      <div class="bg-white r p-8 reveal">
+        <p class="text-brand font-semibold text-sm tracking-widest mb-8">02</p>
+        <h3 class="text-xl font-semibold mb-3">Written estimate</h3>
+        <p class="text-ink/70 text-[15px]">A detailed proposal that shows where your budget goes, so you can make informed decisions on materials and scope.</p>
+      </div>
+      <div class="bg-white r p-8 reveal">
+        <p class="text-brand font-semibold text-sm tracking-widest mb-8">03</p>
+        <h3 class="text-xl font-semibold mb-3">Permits and preparation</h3>
+        <p class="text-ink/70 text-[15px]">Once you approve the design, we handle the permits and prepare the site. Every project is permitted and built to current Florida Building Code.</p>
+      </div>
+      <div class="bg-white r p-8 reveal">
+        <p class="text-brand font-semibold text-sm tracking-widest mb-8">04</p>
+        <h3 class="text-xl font-semibold mb-3">Construction</h3>
+        <p class="text-ink/70 text-[15px]">Our crew works on schedule, treats your home with care, keeps a clean workspace and gives regular updates.</p>
+      </div>
+      <div class="bg-white r p-8 reveal">
+        <p class="text-brand font-semibold text-sm tracking-widest mb-8">05</p>
+        <h3 class="text-xl font-semibold mb-3">Final inspections</h3>
+        <p class="text-ink/70 text-[15px]">A full walkthrough together to confirm everything meets our standards and yours.</p>
+      </div>
+      <div class="bg-navy r p-8 text-white reveal flex flex-col justify-between">
+        <p class="text-brand font-semibold text-sm tracking-widest mb-8">06</p>
+        <div>
+          <h3 class="text-xl font-semibold mb-3">Enjoy your space</h3>
+          <p class="text-white/75 text-[15px]">A kitchen, bathroom or home that looks right, works well and was built the right way from day one.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
+      <div class="lg:col-span-7">
+        <p class="eyebrow text-navy/60 mb-4">Services</p>
+        <h2 class="text-4xl lg:text-5xl font-semibold text-ink">Remodeling and building services in Tampa Bay</h2>
+      </div>
+      <div class="lg:col-span-5 lg:pt-8">
+        <p class="text-ink/70 text-lg">From kitchens and bathrooms to new homes, concrete, painting and flooring, one team handles every detail.</p>
       </div>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <article class="bg-white rounded p-4 reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1616179283726-e96f7aa16a56?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew member removing old drywall" class="photo"></div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="text-xl font-bold flex items-center justify-between gap-2">Kitchen Remodeling <span aria-hidden="true">&rarr;</span></h3>
-          <p class="mt-2 text-ink/70 leading-relaxed text-[15px]">New cabinets, countertops, lighting and flooring, fitted to your style, budget and daily routine.</p>
-        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article>
+        <div class="ph aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-5.jpg" alt="Kitchen remodel"></div>
+        <h3 class="text-lg font-semibold mb-2">Kitchen remodeling</h3>
+        <p class="text-ink/65 text-[15px]">New cabinets, countertops, lighting and flooring, designed around your style, budget and daily routine.</p>
       </article>
-      <article class="bg-white rounded p-4 reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1768321902290-54497eeb9cf6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bathroom framed and insulated during a remodel" class="photo"></div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="text-xl font-bold flex items-center justify-between gap-2">Bathroom Remodeling <span aria-hidden="true">&rarr;</span></h3>
-          <p class="mt-2 text-ink/70 leading-relaxed text-[15px]">Walk-in showers, tile upgrades or a complete redesign, built to look good and last.</p>
-        </div>
+      <article>
+        <div class="ph aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-6.jpg" alt="Bathroom remodel"></div>
+        <h3 class="text-lg font-semibold mb-2">Bathroom remodeling</h3>
+        <p class="text-ink/65 text-[15px]">Walk-in showers, tile upgrades and full redesigns for bathrooms that look good and last.</p>
       </article>
-      <article class="bg-white rounded p-4 reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1593012671976-1422185230fb?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Rear home addition with block walls and scaffold" class="photo"></div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="text-xl font-bold flex items-center justify-between gap-2">Home Additions <span aria-hidden="true">&rarr;</span></h3>
-          <p class="mt-2 text-ink/70 leading-relaxed text-[15px]">Master suites, family rooms and offices. We handle design, permitting and construction.</p>
-        </div>
+      <article>
+        <div class="ph aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-2.jpg" alt="Home renovation"></div>
+        <h3 class="text-lg font-semibold mb-2">Home renovations</h3>
+        <p class="text-ink/65 text-[15px]">Whole-house updates coordinated step by step, on schedule and within budget.</p>
       </article>
-      <article class="bg-white rounded p-4 reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wood framing of a new custom home interior" class="photo"></div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="text-xl font-bold flex items-center justify-between gap-2">Custom Homes <span aria-hidden="true">&rarr;</span></h3>
-          <p class="mt-2 text-ink/70 leading-relaxed text-[15px]">From design and permitting to the final walkthrough, a home built around your lifestyle.</p>
-        </div>
+      <article>
+        <div class="ph aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-9.jpg" alt="Home addition framing"></div>
+        <h3 class="text-lg font-semibold mb-2">Home additions</h3>
+        <p class="text-ink/65 text-[15px]">Master suites, family rooms and offices, with design, permitting and construction handled for you.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-7.jpg" alt="Custom home interior"></div>
+        <h3 class="text-lg font-semibold mb-2">Custom home building</h3>
+        <p class="text-ink/65 text-[15px]">From design and permitting to the final walkthrough, a home built around your lifestyle.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-10.jpg" alt="Concrete pouring"></div>
+        <h3 class="text-lg font-semibold mb-2">Concrete and driveways</h3>
+        <p class="text-ink/65 text-[15px]">Driveways, patios and walkways with proper prep and clean lines that handle Tampa Bay weather.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-11.jpg" alt="Demolition excavator"></div>
+        <h3 class="text-lg font-semibold mb-2">Demolition</h3>
+        <p class="text-ink/65 text-[15px]">Safe, efficient demolition and cleanup that leaves the site ready for construction.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-12.jpg" alt="Drywall finishing"></div>
+        <h3 class="text-lg font-semibold mb-2">Drywall installation and finish</h3>
+        <p class="text-ink/65 text-[15px]">Smooth, paint-ready walls for remodels and new construction.</p>
       </article>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-0 reveal">
-      <div class="border-t border-black/10 py-5"><h3 class="font-bold text-lg">Home Renovations</h3><p class="text-ink/70 text-[15px] mt-1">Whole-house updates coordinated on schedule and within budget.</p></div>
-      <div class="border-t border-black/10 py-5"><h3 class="font-bold text-lg">Concrete Pouring &amp; Driveways</h3><p class="text-ink/70 text-[15px] mt-1">Driveways, patios and walkways that stand up to Tampa Bay weather.</p></div>
-      <div class="border-t border-black/10 py-5"><h3 class="font-bold text-lg">Demolition</h3><p class="text-ink/70 text-[15px] mt-1">Safe removal, cleanup and site prep before construction starts.</p></div>
-      <div class="border-t border-black/10 py-5"><h3 class="font-bold text-lg">Drywall Installation &amp; Finish</h3><p class="text-ink/70 text-[15px] mt-1">Smooth, paint-ready walls for remodels and new builds.</p></div>
-      <div class="border-t border-black/10 py-5"><h3 class="font-bold text-lg">Interior &amp; Exterior Painting</h3><p class="text-ink/70 text-[15px] mt-1">Careful prep and clean, lasting finishes.</p></div>
-      <div class="border-t border-black/10 py-5"><h3 class="font-bold text-lg">Flooring</h3><p class="text-ink/70 text-[15px] mt-1">Hardwood, tile and luxury vinyl plank installed with precision.</p></div>
-      <div class="border-t border-black/10 py-5"><h3 class="font-bold text-lg">Window Installation</h3><p class="text-ink/70 text-[15px] mt-1">Energy-efficient windows with an airtight, clean fit.</p></div>
-      <div class="border-t border-black/10 py-5"><h3 class="font-bold text-lg">Interior &amp; Exterior Doors</h3><p class="text-ink/70 text-[15px] mt-1">Security, efficiency and style, installed with care.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Call band -->
-<section class="bg-inkDeep py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-    <div class="max-w-2xl">
-      <h2 class="text-brand text-3xl sm:text-4xl lg:text-5xl font-bold">Ready to start your remodel?</h2>
-      <p class="mt-4 text-white/75 text-lg">Tell us about your project and get a clear, written estimate from the contractor who will run the job.</p>
-    </div>
-    <div class="flex flex-col sm:flex-row gap-4">
-      <a href="#contact" class="inline-flex justify-center items-center bg-brand text-inkDeep font-bold px-7 py-4 rounded hover:bg-brandDark transition">Request a free estimate</a>
-      <a href="tel:+18134343834" class="inline-flex justify-center items-center border border-white/30 text-white font-bold px-7 py-4 rounded hover:bg-white/10 transition">(813) 434-3834</a>
-    </div>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="max-w-2xl reveal">
-      <p class="label text-brandDark mb-4">Work in progress</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Builds across Tampa Bay</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="col-span-2 aspect-[16/10] rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1593012672015-4fabc32c67aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two-storey rear extension being built" class="photo"></div>
-      <div class="col-span-1 aspect-square rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1783587354630-3300699c053c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sheathing panels fitted beside a sunlit window" class="photo"></div>
-      <div class="col-span-1 aspect-square rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1790767900092-38a519fef170?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wheelbarrow and tools during floor demolition" class="photo"></div>
-      <div class="col-span-1 aspect-square rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1786269691602-519fdaa112ea?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cement mixer on a backyard job site" class="photo"></div>
-      <div class="col-span-1 aspect-square rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1601303981778-0f61e3d2da64?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home exterior renovation with scaffolding and skip" class="photo"></div>
-      <div class="col-span-2 aspect-[16/10] rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open framed interior of a new build" class="photo"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Process -->
-<section id="process" class="bg-paper py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14">
-    <div class="lg:col-span-5 reveal">
-      <p class="label text-brandDark mb-4">How it works</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">What to expect when you remodel with us</h2>
-      <p class="mt-6 text-lg text-ink/75 leading-relaxed">Simple, clear and organized, so you always know what happens next.</p>
-      <div class="mt-10 aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Renovation underway inside a home" class="photo"></div>
-    </div>
-    <div class="lg:col-span-7 reveal">
-      <ol class="space-y-0">
-        <li class="flex gap-6 border-t border-black/15 py-8">
-          <span class="text-brandDark font-bold text-xl w-10 shrink-0">01</span>
-          <div><h3 class="text-xl font-bold">Consultation &amp; estimate</h3><p class="mt-2 text-ink/75 leading-relaxed">A friendly visit to your home to discuss your vision and goals, assess the space and choose materials. Then a detailed plan and a clear written proposal.</p></div>
-        </li>
-        <li class="flex gap-6 border-t border-black/15 py-8">
-          <span class="text-brandDark font-bold text-xl w-10 shrink-0">02</span>
-          <div><h3 class="text-xl font-bold">Permits and preparation</h3><p class="mt-2 text-ink/75 leading-relaxed">Once you approve the design, we handle the permits and prepare your site, so you do not have to worry about it.</p></div>
-        </li>
-        <li class="flex gap-6 border-t border-black/15 py-8">
-          <span class="text-brandDark font-bold text-xl w-10 shrink-0">03</span>
-          <div><h3 class="text-xl font-bold">Construction &amp; remodeling</h3><p class="mt-2 text-ink/75 leading-relaxed">Our crew treats your home with care, stays on schedule, keeps a clean workspace and gives regular updates.</p></div>
-        </li>
-        <li class="flex gap-6 border-t border-b border-black/15 py-8">
-          <span class="text-brandDark font-bold text-xl w-10 shrink-0">04</span>
-          <div><h3 class="text-xl font-bold">Final inspections</h3><p class="mt-2 text-ink/75 leading-relaxed">A full walkthrough together to make sure everything meets our standards and yours. We are not satisfied until you are thrilled.</p></div>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14">
-    <div class="lg:col-span-4 reveal">
-      <p class="label text-brandDark mb-4">Common questions</p>
-      <h2 class="text-3xl sm:text-4xl font-bold">What Tampa homeowners ask us</h2>
-      <p class="mt-6 text-ink/75 leading-relaxed">Licensed Florida Certified Building Contractor, license CBC1269188.</p>
-    </div>
-    <div class="lg:col-span-8 reveal">
-      <div class="space-y-0">
-        <details class="border-t border-black/15 py-6 group">
-          <summary class="cursor-pointer font-bold text-lg flex justify-between gap-4 list-none">How do I verify that Novacore Builders is licensed in Florida? <span class="text-brandDark">+</span></summary>
-          <p class="mt-4 text-ink/75 leading-relaxed">Check directly on the Florida Department of Business and Professional Regulation website at myfloridalicense.com. Search for license number CBC1269188 to see our active status, license type and coverage area. We encourage every homeowner to check before hiring any contractor, including us.</p>
-        </details>
-        <details class="border-t border-black/15 py-6">
-          <summary class="cursor-pointer font-bold text-lg flex justify-between gap-4 list-none">How much does a home remodel cost in Tampa, St. Pete and Clearwater? <span class="text-brandDark">+</span></summary>
-          <p class="mt-4 text-ink/75 leading-relaxed">Costs vary with the size of the project, materials and design. After your consultation we provide a detailed written estimate so you can see exactly where your budget is going.</p>
-        </details>
-        <details class="border-t border-black/15 py-6">
-          <summary class="cursor-pointer font-bold text-lg flex justify-between gap-4 list-none">Why is hiring a licensed contractor important? <span class="text-brandDark">+</span></summary>
-          <p class="mt-4 text-ink/75 leading-relaxed">It helps ensure your remodel is legal, safe, insured and built to last, protecting your home and its resale value.</p>
-        </details>
-        <details class="border-t border-b border-black/15 py-6">
-          <summary class="cursor-pointer font-bold text-lg flex justify-between gap-4 list-none">Do you also build custom homes? <span class="text-brandDark">+</span></summary>
-          <p class="mt-4 text-ink/75 leading-relaxed">Yes. Along with remodeling and additions, Novacore Builders is a licensed custom home builder serving Tampa, St. Pete and Clearwater, guiding you from design and permitting through the final walkthrough.</p>
-        </details>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <div class="md:col-span-4 bg-paper r p-8">
+        <div class="ph aspect-[16/10] mb-6"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-13.jpg" alt="Interior painter on a ladder"></div>
+        <h3 class="text-lg font-semibold mb-2">Interior and exterior painting</h3>
+        <p class="text-ink/65 text-[15px]">Careful prep, protected surfaces and clean, lasting finishes.</p>
+      </div>
+      <div class="md:col-span-4 bg-paper r p-8">
+        <div class="ph aspect-[16/10] mb-6"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-14.jpg" alt="Hardwood flooring installation"></div>
+        <h3 class="text-lg font-semibold mb-2">Flooring: hardwood, tile, LVP</h3>
+        <p class="text-ink/65 text-[15px]">Materials matched to your space and lifestyle, installed with precision.</p>
+      </div>
+      <div class="md:col-span-4 bg-paper r p-8">
+        <div class="ph aspect-[16/10] mb-6"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-4.jpg" alt="Large energy-efficient windows"></div>
+        <h3 class="text-lg font-semibold mb-2">Windows and doors</h3>
+        <p class="text-ink/65 text-[15px]">Energy-efficient windows and interior or exterior doors, installed for a clean, airtight fit.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="py-20 lg:py-28 bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
+      <div class="lg:col-span-7">
+        <p class="eyebrow text-brand mb-4">Projects</p>
+        <h2 class="text-4xl lg:text-5xl font-semibold">A look at the work</h2>
+      </div>
+      <div class="lg:col-span-5 lg:pt-8">
+        <p class="text-white/70 text-lg">Interiors, finishes and job sites from across our remodeling and construction work.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+      <div class="col-span-2 ph aspect-[16/10]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-2.jpg" alt="Living room with skylights"></div>
+      <div class="col-span-1 ph aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-6.jpg" alt="Green tile bathroom"></div>
+      <div class="col-span-1 ph aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-7.jpg" alt="Staircase and entry doors"></div>
+      <div class="col-span-1 ph aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-5.jpg" alt="Wood kitchen cabinetry"></div>
+      <div class="col-span-1 ph aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-8.jpg" alt="Paneled wall with hardwood floor"></div>
+      <div class="col-span-2 ph aspect-[16/10]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-9.jpg" alt="Wood-framed new construction"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="ph aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-4.jpg" alt="Sunlit living room finished by Novacore"></div>
+      </div>
+      <div class="lg:col-span-7">
+        <p class="eyebrow text-navy/60 mb-4">Why choose Novacore Builders</p>
+        <h2 class="text-4xl lg:text-5xl font-semibold text-ink mb-6">What makes us different from other Tampa contractors</h2>
+        <p class="text-ink/70 text-lg mb-10">Remodels done the right way, with communication, transparency and quality materials. Outdated homes become modern, functional spaces.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-9">
+          <div>
+            <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>
+            <h3 class="font-semibold mb-1.5">Licensed and permitted</h3>
+            <p class="text-ink/65 text-[15px]">Florida Certified Building Contractor CBC1269188. Every project is permitted and built to current code.</p>
+          </div>
+          <div>
+            <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>
+            <h3 class="font-semibold mb-1.5">Priced in writing</h3>
+            <p class="text-ink/65 text-[15px]">A detailed written estimate shows exactly where your budget is going.</p>
+          </div>
+          <div>
+            <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>
+            <h3 class="font-semibold mb-1.5">One point of contact</h3>
+            <p class="text-ink/65 text-[15px]">The contractor who quotes your project manages it, under founder Moe Salehian.</p>
+          </div>
+          <div>
+            <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>
+            <h3 class="font-semibold mb-1.5">Tidy, respectful crews</h3>
+            <p class="text-ink/65 text-[15px]">On time, clean daily and clear about what happens next.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT PLACEHOLDER -->
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(217,165,58,0.10);color:#d9a53a}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#d9a53a}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(201,160,78,0.10);color:#c9a04e}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#c9a04e}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -313,16 +363,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:20px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:16px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#d9a53a;box-shadow:0 0 0 4px rgba(217,165,58,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#d9a53a;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#c9a04e;box-shadow:0 0 0 4px rgba(201,160,78,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:16px;background:#c9a04e;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -332,13 +382,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1606383446056-eb3fc3cde97b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-9.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#d9a53a">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your project and we will get back to you with the next steps.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#c9a04e">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your kitchen, bathroom, addition or new build in Tampa Bay and we'll get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18134343834" class="lp-v lp-v-d">(813) 434-3834</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -352,7 +402,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen Remodeling</option><option>Bathroom Remodeling</option><option>Home Renovations</option><option>Home Additions</option><option>Custom Home Building</option><option>Concrete &amp;amp; Driveways</option><option>Demolition</option><option>Drywall</option><option>Painting</option><option>Flooring</option><option>Window Installation</option><option>Doors</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen remodeling</option><option>Bathroom remodeling</option><option>Home renovations</option><option>Home additions</option><option>Custom home building</option><option>Concrete and driveways</option><option>Demolition</option><option>Drywall</option><option>Painting</option><option>Flooring</option><option>Windows and doors</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -362,40 +412,48 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-</main>
-
-<!-- Footer -->
-<footer class="bg-inkDeep text-white/80">
-  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
-    <div class="md:col-span-5">
-      <div class="inline-block bg-white rounded p-3"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/novacore-builders/21943/logo-0.png" alt="NovaCore Builders" class="h-12 w-auto"></div>
-      <p class="mt-6 leading-relaxed max-w-sm">South Tampa remodeling and construction company. Florida Certified Building Contractor, license CBC1269188.</p>
-    </div>
-    <div class="md:col-span-3">
-      <h3 class="text-white font-bold mb-4 text-base">Explore</h3>
-      <ul class="space-y-3 text-[15px]">
-        <li><a href="#difference" class="hover:text-brand">About</a></li>
-        <li><a href="#services" class="hover:text-brand">Services</a></li>
-        <li><a href="#projects" class="hover:text-brand">Projects</a></li>
-        <li><a href="#process" class="hover:text-brand">Process</a></li>
-        <li><a href="#contact" class="hover:text-brand">Contact</a></li>
-      </ul>
-    </div>
-    <div class="md:col-span-4">
-      <h3 class="text-white font-bold mb-4 text-base">Contact</h3>
-      <ul class="space-y-3 text-[15px]">
-        <li><a href="tel:+18134343834" class="hover:text-brand">(813) 434-3834</a></li>
-        <li><a href="mailto:info@novacorebuilders.com" class="hover:text-brand break-words">info@novacorebuilders.com</a></li>
-        <li>Tampa, FL</li>
-        <li>Serving Tampa, St. Pete, Clearwater &amp; Hillsborough County</li>
-      </ul>
+<!-- FINAL CALL -->
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <div class="lg:col-span-5 ph aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/photo-5.jpg" alt="Finished kitchen with wood cabinetry">
+      </div>
+      <div class="lg:col-span-7 bg-mist r p-8 lg:p-14 flex flex-col justify-center">
+        <p class="eyebrow text-navy/60 mb-4">Ready to start your remodel?</p>
+        <h2 class="text-3xl lg:text-5xl font-semibold text-ink mb-5">Talk to a Tampa contractor who answers for the work.</h2>
+        <p class="text-ink/70 text-lg mb-8 max-w-xl">Call or email and we'll set up a consultation at your home and follow with a clear written estimate.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:+18134343834" class="inline-flex justify-center items-center bg-brand text-ink font-semibold px-7 py-4 rounded-full hover:brightness-95 transition">Call (813) 434-3834</a>
+          <a href="mailto:info@novacorebuilders.com" class="inline-flex justify-center items-center border border-ink/20 text-ink font-semibold px-7 py-4 rounded-full hover:bg-white transition">Email us</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/55 space-y-1">
-      <p>Concept redesign by LumeaPixel. This is not the official Novacore Builders website.</p>
-      <p>Some photos by Brett Jordan, Annie Spratt, Stefan Lehner, Olek Buzunov, Milivoj Kuhar, Samuel Cruz and Brands&amp;People on Unsplash.</p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 flex flex-col items-center text-center">
+    <div class="bg-white r px-5 py-3 mb-8">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/novacore-builders/21949/logo-0.png" alt="NovaCore Builders" class="h-12 w-auto">
     </div>
+    <p class="text-white/70 max-w-xl mb-8">Remodeling and construction across Tampa, St. Petersburg, Clearwater and Hillsborough County. Florida Certified Building Contractor CBC1269188.</p>
+    <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-[15px] mb-8">
+      <a href="#about" class="text-white/80 hover:text-brand">About</a>
+      <a href="#services" class="text-white/80 hover:text-brand">Services</a>
+      <a href="#process" class="text-white/80 hover:text-brand">Process</a>
+      <a href="#projects" class="text-white/80 hover:text-brand">Projects</a>
+      <a href="#contact" class="text-white/80 hover:text-brand">Contact</a>
+    </nav>
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-8 text-[15px] mb-10">
+      <a href="tel:+18134343834" class="text-brand font-semibold">(813) 434-3834</a>
+      <a href="mailto:info@novacorebuilders.com" class="text-brand font-semibold break-words">info@novacorebuilders.com</a>
+      <span class="text-white/70">Tampa, FL</span>
+    </div>
+    <p class="text-white/45 text-sm border-t border-white/10 pt-8 w-full">Concept redesign by LumeaPixel. This is not the official Novacore Builders website.</p>
   </div>
 </footer>
 
@@ -404,7 +462,9 @@ tailwind.config = {
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
   document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>

@@ -5,276 +5,306 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Tampa Asphalt Kings | Asphalt Paving Contractors in Tampa, FL</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: {
-        brand: '#ffd400',
-        ink: '#121212',
-        coal: '#1b1b1b',
-        cream: '#f6f3ea',
-        paper: '#fbfaf6'
+        brand: '#FFE600',
+        ink: '#111111',
+        night: '#161616',
+        paper: '#F6F5F1',
+        mist: '#ECEBE6'
       },
       fontFamily: {
         heading: ['Outfit', 'sans-serif'],
         body: ['Inter', 'sans-serif']
       },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { 'k': '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; color: #1b1b1b; background: #fbfaf6; line-height: 1.6; font-size: 17px; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.015em; }
+  body { font-family: 'Inter', sans-serif; color: #111; background: #fff; font-size: 17px; line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; line-height: 1.08; }
+  .label { font-family: 'Outfit', sans-serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile-shade { background: linear-gradient(to top, rgba(10,10,10,.85) 0%, rgba(10,10,10,.1) 55%, rgba(10,10,10,0) 100%); }
-  .hero-shade { background: linear-gradient(to bottom, rgba(10,10,10,.72), rgba(10,10,10,.6) 60%, rgba(10,10,10,.8)); }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 999px; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; transition: transform .2s ease, background .2s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-brand { background: #FFE600; color: #111; }
+  .btn-brand:hover { background: #f2d900; }
+  .btn-dark { background: #111; color: #fff; }
+  .btn-dark:hover { background: #2a2a2a; }
+  .photo { overflow: hidden; border-radius: 20px; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #mobileMenu { display: none; }
+  #mobileMenu.open { display: block; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="antialiased">
+<body>
 
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="flex items-center shrink-0" aria-label="Tampa Asphalt Kings home">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-asphalt-kings/21943/logo-0.png" alt="Tampa Asphalt Kings" class="h-12 w-auto">
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center bg-brand rounded-xl px-3 py-1.5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/logo-0.png" alt="Tampa Asphalt Kings" class="h-10 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/85 font-medium">
-      <a href="#services" class="hover:text-brand transition-colors">Services</a>
-      <a href="#about" class="hover:text-brand transition-colors">About</a>
-      <a href="#process" class="hover:text-brand transition-colors">Process</a>
-      <a href="#areas" class="hover:text-brand transition-colors">Service Areas</a>
-      <a href="#faq" class="hover:text-brand transition-colors">FAQ</a>
-      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+    <nav class="hidden lg:flex items-center gap-9 font-heading font-medium text-[15px]">
+      <a href="#services" class="hover:opacity-60 transition">Services</a>
+      <a href="#process" class="hover:opacity-60 transition">Process</a>
+      <a href="#work" class="hover:opacity-60 transition">Our work</a>
+      <a href="#about" class="hover:opacity-60 transition">About</a>
+      <a href="#areas" class="hover:opacity-60 transition">Service areas</a>
+      <a href="#contact" class="hover:opacity-60 transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18135188316" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-semibold px-5 py-2.5 rounded hover:bg-white transition-colors">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        (813) 518-8316
+      <a href="tel:+18135188316" class="btn btn-brand !py-2.5 !px-5 text-[15px]">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="hidden sm:inline">(813) 518-8316</span><span class="sm:hidden">Call</span>
       </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu" aria-expanded="false">
+      <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="px-5 py-5 flex flex-col gap-4 text-white/90 font-medium">
-      <a href="#services" class="mlink">Services</a>
-      <a href="#about" class="mlink">About</a>
-      <a href="#process" class="mlink">Process</a>
-      <a href="#areas" class="mlink">Service Areas</a>
-      <a href="#faq" class="mlink">FAQ</a>
-      <a href="#contact" class="mlink">Contact</a>
-      <a href="tel:+18135188316" class="inline-flex justify-center items-center bg-brand text-ink font-semibold px-5 py-3 rounded">Call (813) 518-8316</a>
+  <div id="mobileMenu" class="lg:hidden border-t border-black/5 bg-white">
+    <div class="px-5 py-4 flex flex-col gap-4 font-heading font-medium">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#work">Our work</a>
+      <a href="#about">About</a>
+      <a href="#areas">Service areas</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- Hero -->
-<section class="relative">
-  <div class="relative min-h-[640px] lg:min-h-[760px] flex items-center">
-    <img src="https://images.unsplash.com/photo-1693019108329-1889fb170f2e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paving crew laying fresh asphalt with a paver and roller" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 hero-shade"></div>
-    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center pt-20 pb-40 lg:pb-48">
-      <p class="text-brand text-sm font-semibold tracking-[0.2em] uppercase mb-5">Asphalt Paving Contractors · Tampa, FL</p>
-      <h1 class="text-white font-semibold text-4xl sm:text-5xl lg:text-7xl">Driveways and parking lots<br class="hidden sm:block"> built to last in Tampa</h1>
-      <p class="mt-7 text-white/85 text-lg lg:text-xl max-w-2xl mx-auto">Tampa Asphalt Kings handles asphalt paving, repair, sealcoating and resurfacing for homeowners and businesses across Hillsborough County.</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="bg-brand text-ink font-semibold px-8 py-4 rounded hover:bg-white transition-colors">Get a free estimate</a>
-        <a href="tel:+18135188316" class="border border-white text-white font-semibold px-8 py-4 rounded hover:bg-white hover:text-ink transition-colors">Call (813) 518-8316</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Trust strip -->
-  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20 z-10">
-    <div class="bg-white rounded shadow-sm border border-black/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-black/10">
-      <div class="p-6 flex items-start gap-4">
-        <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><h3 class="font-semibold text-lg">Free estimates</h3><p class="text-sm text-black/65">Priced after we look at your property.</p></div>
-      </div>
-      <div class="p-6 flex items-start gap-4">
-        <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><h3 class="font-semibold text-lg">Residential and commercial</h3><p class="text-sm text-black/65">Driveways to full parking lots.</p></div>
-      </div>
-      <div class="p-6 flex items-start gap-4">
-        <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><h3 class="font-semibold text-lg">Premium materials</h3><p class="text-sm text-black/65">Quality equipment and proven methods.</p></div>
-      </div>
-      <div class="p-6 flex items-start gap-4">
-        <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><h3 class="font-semibold text-lg">Hillsborough County</h3><p class="text-sm text-black/65">Tampa and surrounding communities.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
-<section id="services" class="pt-24 lg:pt-32 pb-24 lg:pb-32">
+<!-- HERO -->
+<section class="bg-paper pt-14 pb-16 lg:pt-20 lg:pb-24">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl mb-14 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-black/55 mb-4">Our services</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">What we pave and repair in Tampa</h2>
-      <p class="mt-5 text-black/70">From residential driveways to commercial parking lots, we handle paving, resurfacing, sealcoating, repairs and pavement maintenance.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <div class="lg:col-span-7">
+        <p class="label mb-5 text-ink/60">Asphalt paving contractors · Tampa, FL</p>
+        <h1 class="font-heading font-semibold text-[42px] sm:text-6xl lg:text-[76px]">Smooth pavement,<br>built for <span class="font-bold">Tampa.</span></h1>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="text-lg text-ink/75 mb-7">New driveways, parking lots, repairs, sealcoating and ADA-compliant improvements. Durable asphalt built for Florida's climate, with honest communication from first visit to final walkthrough.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="btn btn-dark">Get your free estimate</a>
+          <a href="tel:+18135188316" class="btn border border-ink/20 hover:bg-white">(813) 518-8316</a>
+        </div>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-      <a href="#contact" class="group relative block md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded reveal">
-        <img src="https://images.unsplash.com/photo-1772852364756-cb89bbfa2aa8?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paving machine operator on an asphalt job" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Asphalt Driveways</h3>
-      </a>
-      <a href="#contact" class="group relative block md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded reveal">
-        <img src="https://images.unsplash.com/photo-1595734939818-f4e0d44957df?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Double drum roller compacting new asphalt" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Commercial Asphalt Paving</h3>
-      </a>
-      <a href="#contact" class="group relative block md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded reveal">
-        <img src="https://images.unsplash.com/photo-1772852327572-d6344152e6ba?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roller compacting a new asphalt road surface" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Asphalt Repair and Resurfacing</h3>
-      </a>
-      <a href="#contact" class="group relative block md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded reveal">
-        <img src="https://images.unsplash.com/photo-1774274951965-3828c5cea7c9?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Distributor truck spraying liquid asphalt tack coat" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Asphalt Sealcoating</h3>
-      </a>
-      <a href="#contact" class="group relative block md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded reveal">
-        <img src="https://images.unsplash.com/photo-1772852327572-d6344152e6ba?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worn and cracked pavement marking on asphalt" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Parking Lot Striping</h3>
-      </a>
-      <a href="#contact" class="group relative block md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded reveal">
-        <img src="https://images.unsplash.com/photo-1792478874068-3b1c961ccb5c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Milling machine loading old asphalt into a truck" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Asphalt Milling</h3>
-      </a>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mt-12 lg:mt-16">
+      <div class="md:col-span-6 photo aspect-[4/5] md:aspect-auto md:h-[560px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-12.jpg" alt="Paving crew raking fresh asphalt behind a paver on a Tampa street">
+      </div>
+      <div class="md:col-span-3 flex flex-col gap-5 reveal">
+        <div class="photo aspect-[4/5] md:aspect-auto md:flex-1 md:min-h-0">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-13.jpg" alt="Asphalt paver laying a new commercial parking lot">
+        </div>
+        <a href="#services" class="btn btn-brand justify-center">See our services</a>
+      </div>
+      <div class="md:col-span-3 bg-mist rounded-k p-7 flex flex-col justify-between min-h-[260px] reveal">
+        <p class="label text-ink/60">Our standard</p>
+        <div>
+          <p class="font-heading font-semibold text-3xl leading-tight mb-3">Residential and commercial, one crew.</p>
+          <p class="text-ink/70 text-[15px]">Driveways, parking lots, HOAs, retail centers and industrial sites across Hillsborough County.</p>
+        </div>
+      </div>
     </div>
-    <p class="mt-8 text-black/65 reveal">Also available: concrete driveway installation and ADA compliance paving services.</p>
   </div>
 </section>
 
-<!-- Split: About -->
+<!-- THREE COLUMNS -->
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+    <div class="reveal border-t-2 border-ink pt-6">
+      <h3 class="label mb-4">Experienced crews</h3>
+      <p class="text-ink/75">Skilled craftsmanship, professional equipment and proven installation techniques on every residential and commercial project.</p>
+    </div>
+    <div class="reveal border-t-2 border-ink pt-6">
+      <h3 class="label mb-4">Premium materials</h3>
+      <p class="text-ink/75">Professional-grade asphalt and methods chosen to hold up against Florida's heat, rain and heavy daily traffic.</p>
+    </div>
+    <div class="reveal border-t-2 border-ink pt-6">
+      <h3 class="label mb-4">Honest communication</h3>
+      <p class="text-ink/75">Clear recommendations, transparent pricing and responsive updates, from your first consultation to the final walkthrough.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
+    <p class="label text-ink/60 mb-6">What we stand for</p>
+    <h2 class="font-heading font-medium text-3xl sm:text-5xl lg:text-6xl leading-[1.12]">Quality workmanship, dependable communication, and surfaces that last.</h2>
+  </div>
+</section>
+
+<!-- COLLAGE -->
+<section id="work" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5 grid-flow-row-dense">
+      <div class="col-span-1 lg:col-span-3 photo aspect-[4/5] reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-4.jpg" alt="Crew member applying sealcoat to a parking lot"></div>
+      <div class="col-span-2 lg:col-span-6 lg:row-span-2 photo aspect-[16/10] lg:aspect-auto lg:min-h-[560px] order-first lg:order-none reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-15.jpg" alt="Fresh asphalt driveway at a Florida estate while a crew works behind"></div>
+      <div class="col-span-1 lg:col-span-3 photo aspect-[4/5] reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-14.jpg" alt="Project manager reviewing the job with a client on site"></div>
+      <div class="col-span-1 lg:col-span-3 photo aspect-[4/5] reveal"><img src="https://images.unsplash.com/photo-1772852311587-329719989e2b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paver laying fresh asphalt along a road edge"></div>
+      <div class="col-span-1 lg:col-span-3 photo aspect-[4/5] reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-11.jpg" alt="Tampa street project from base preparation to finished asphalt"></div>
+      <div class="col-span-2 lg:col-span-12 photo aspect-[16/8] lg:aspect-[16/6] reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-8.jpg" alt="Milling machine loading old asphalt into a dump truck in a commercial parking lot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="bg-paper py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
+      <div class="lg:col-span-6">
+        <p class="label text-ink/60 mb-4">How it works</p>
+        <h2 class="font-heading font-semibold text-4xl lg:text-5xl">From first call to final walkthrough.</h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end">
+        <p class="text-ink/70">A proven process that keeps every residential and commercial paving project clear, on schedule and built to last.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="bg-white rounded-k p-8 reveal"><p class="font-heading font-semibold text-5xl text-ink/20 mb-6">01</p><h3 class="font-heading font-semibold text-2xl mb-3">Free consultation and estimate</h3><p class="text-ink/70 text-[15px]">We assess your property, discuss your goals and give you an honest recommendation with a detailed, no-obligation estimate.</p></div>
+      <div class="bg-white rounded-k p-8 reveal"><p class="font-heading font-semibold text-5xl text-ink/20 mb-6">02</p><h3 class="font-heading font-semibold text-2xl mb-3">Planning and preparation</h3><p class="text-ink/70 text-[15px]">We build a project plan around your timeline and prepare the site for efficient installation with minimal disruption.</p></div>
+      <div class="bg-white rounded-k p-8 reveal"><p class="font-heading font-semibold text-5xl text-ink/20 mb-6">03</p><h3 class="font-heading font-semibold text-2xl mb-3">Professional installation</h3><p class="text-ink/70 text-[15px]">Premium materials and proven paving techniques, completed with precision and attention to detail.</p></div>
+      <div class="bg-white rounded-k p-8 reveal"><p class="font-heading font-semibold text-5xl text-ink/20 mb-6">04</p><h3 class="font-heading font-semibold text-2xl mb-3">Final inspection</h3><p class="text-ink/70 text-[15px]">Before we call the job complete, we inspect every detail against our standards and walk the finished work with you.</p></div>
+      <div class="bg-brand rounded-k p-8 md:col-span-2 flex flex-col justify-between reveal">
+        <p class="font-heading font-semibold text-3xl lg:text-4xl leading-tight">Ready to start? Your estimate is free.</p>
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="#contact" class="btn btn-dark">Request an estimate</a>
+          <a href="tel:+18135188316" class="btn border border-ink/30 hover:bg-black/5">Call (813) 518-8316</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
+      <div class="lg:col-span-6">
+        <p class="label text-ink/60 mb-4">Our services</p>
+        <h2 class="font-heading font-semibold text-4xl lg:text-5xl">Paving and pavement solutions.</h2>
+      </div>
+      <div class="lg:col-span-5 lg:col-start-8 flex items-end">
+        <p class="text-ink/70">From residential driveways to commercial parking lots: paving, resurfacing, sealcoating, repair and maintenance.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article class="reveal">
+        <div class="photo aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-15.jpg" alt="New asphalt driveway"></div>
+        <h3 class="font-heading font-semibold text-xl mb-2">Asphalt driveways</h3>
+        <p class="text-ink/70 text-[15px]">Expert driveway paving, resurfacing and repair that lifts your home's curb appeal.</p>
+      </article>
+      <article class="reveal">
+        <div class="photo aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-13.jpg" alt="Commercial asphalt paving"></div>
+        <h3 class="font-heading font-semibold text-xl mb-2">Commercial paving</h3>
+        <p class="text-ink/70 text-[15px]">Retail centers, offices, industrial facilities and HOAs, with minimal downtime.</p>
+      </article>
+      <article class="reveal">
+        <div class="photo aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-4.jpg" alt="Asphalt sealcoating"></div>
+        <h3 class="font-heading font-semibold text-xl mb-2">Sealcoating</h3>
+        <p class="text-ink/70 text-[15px]">Protection against oxidation, moisture damage and cracking, plus a cleaner finish.</p>
+      </article>
+      <article class="reveal">
+        <div class="photo aspect-[4/5] mb-5"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-8.jpg" alt="Asphalt milling"></div>
+        <h3 class="font-heading font-semibold text-xl mb-2">Asphalt milling</h3>
+        <p class="text-ink/70 text-[15px]">Precision milling that removes damaged pavement and prepares a smooth overlay.</p>
+      </article>
+    </div>
+    <ul class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-3 border-t border-ink/10 pt-8 font-heading font-medium">
+      <li>Tampa asphalt repair</li>
+      <li>Parking lot paving and repair</li>
+      <li>Concrete driveway installation</li>
+      <li>ADA compliance services</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
 <section id="about" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-5 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-asphalt-kings/21943/photo-4.jpg" alt="Worker spreading sealcoat across a commercial parking lot" class="w-full h-full object-cover">
-      </div>
-    </div>
-    <div class="lg:col-span-7 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-black/55 mb-4">Why Tampa Asphalt Kings</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Trusted asphalt paving experts in Tampa, Florida</h2>
-      <p class="mt-6 text-black/75">We serve homeowners and businesses throughout the Hillsborough area with careful workmanship, honest communication and asphalt that holds up.</p>
-      <p class="mt-4 text-black/75">Our crews combine skilled craftsmanship, premium equipment and proven installation techniques on every residential and commercial project, from the first walkthrough to the final inspection.</p>
-      <a href="#contact" class="inline-block mt-8 bg-ink text-white font-semibold px-8 py-4 rounded hover:bg-brand hover:text-ink transition-colors">Request an estimate</a>
-    </div>
-  </div>
-</section>
-
-<!-- Reverse split: Process -->
-<section id="process" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-7 order-2 lg:order-1 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-black/55 mb-4">Our process</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Quality work from first call to final walkthrough</h2>
-      <p class="mt-6 text-black/75">Every project follows the same clear process, so you know what is happening and what comes next.</p>
-      <ol class="mt-8 divide-y divide-black/10 border-y border-black/10">
-        <li class="py-4 flex gap-5"><span class="font-heading font-semibold text-black/40 w-8">01</span><span class="font-medium">Free consultation and estimate</span></li>
-        <li class="py-4 flex gap-5"><span class="font-heading font-semibold text-black/40 w-8">02</span><span class="font-medium">Planning and preparation</span></li>
-        <li class="py-4 flex gap-5"><span class="font-heading font-semibold text-black/40 w-8">03</span><span class="font-medium">Professional installation</span></li>
-        <li class="py-4 flex gap-5"><span class="font-heading font-semibold text-black/40 w-8">04</span><span class="font-medium">Final inspection and customer satisfaction</span></li>
-      </ol>
-      <a href="tel:+18135188316" class="inline-block mt-8 bg-ink text-white font-semibold px-8 py-4 rounded hover:bg-brand hover:text-ink transition-colors">Call (813) 518-8316</a>
-    </div>
-    <div class="lg:col-span-5 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1772852311587-329719989e2b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Asphalt paver laying a fresh road surface" class="w-full h-full object-cover">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl mb-12 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-black/55 mb-4">On the job</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Pavement work, start to finish</h2>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 reveal">
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1706922942734-55cd441ed755?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sealing a roadway with a distributor truck" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1783753444935-18d863bc7611?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Milling machine removing old asphalt" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded col-span-2 md:col-span-1"><img src="https://images.unsplash.com/photo-1772852331753-fc11e83a7288?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paver and crew working on a residential street" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1772852364756-cb89bbfa2aa8?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Operator seated on a paving machine" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1693019108329-1889fb170f2e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew with paver and roller on a neighborhood street" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded col-span-2 md:col-span-1"><img src="https://images.unsplash.com/photo-1772852311587-329719989e2b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Fresh asphalt being placed beside a roadway" class="w-full h-full object-cover"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Service areas cream panel -->
-<section id="areas" class="pb-24 lg:pb-32">
-  <div class="max-w-6xl mx-auto px-5 lg:px-8">
-    <div class="bg-cream rounded px-6 sm:px-12 py-16 lg:py-20 text-center reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-black/55 mb-4">Service areas</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold max-w-3xl mx-auto">Proudly serving Tampa and surrounding communities</h2>
-      <p class="mt-8 text-black/75 max-w-3xl mx-auto leading-8">Tampa · Brandon · Riverview · Carrollwood · Temple Terrace · Davis Islands · Odessa · Valrico · Port Tampa City · Hyde Park · Lutz · Seminole Heights · Palmetto Beach · East Tampa · South Tampa · Tampa Heights · Citrus Park · Town 'n' Country · Seffner · Thonotosassa · Gibsonton · Progress Village</p>
-      <p class="mt-6 text-black/65">Not sure we cover your location? Call and we will confirm.</p>
-      <a href="tel:+18135188316" class="inline-block mt-8 bg-ink text-white font-semibold px-8 py-4 rounded hover:bg-brand hover:text-ink transition-colors">Call (813) 518-8316</a>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-    <div class="lg:col-span-4 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-black/55 mb-4">FAQ</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Questions Tampa property owners ask</h2>
-    </div>
-    <div class="lg:col-span-8 divide-y divide-black/10 border-y border-black/10 reveal">
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-heading text-xl font-medium gap-4">What paving services do you offer?<span class="text-2xl leading-none group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-black/70">Asphalt driveway installation, concrete driveway services, commercial paving, asphalt sealcoating, asphalt repair, parking lot striping and asphalt milling, for homes and businesses.</p>
-      </details>
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-heading text-xl font-medium gap-4">How do I get a free quote?<span class="text-2xl leading-none group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-black/70">Call (813) 518-8316 or send us your details through the contact form. We will get back to you promptly to talk through your project.</p>
-      </details>
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-heading text-xl font-medium gap-4">How long does a paving project take?<span class="text-2xl leading-none group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-black/70">Parking lot striping and sealcoating are usually done within a day or two. Residential driveways typically take a few days to a week. Repairs depend on the damage, and commercial timelines depend on size and complexity. Call us for an estimate on your project.</p>
-      </details>
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-heading text-xl font-medium gap-4">Should I repair, resurface or replace?<span class="text-2xl leading-none group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-black/70">Minor cracks and potholes can often be patched. Resurfacing fits worn pavement with a stable base. Full replacement is usually best when there is widespread structural failure, drainage problems or a deteriorated foundation. We inspect the property and recommend the option with the best long-term value.</p>
-      </details>
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-heading text-xl font-medium gap-4">What does asphalt paving cost in Tampa?<span class="text-2xl leading-none group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-black/70">It depends on project size, pavement thickness, access, grading, drainage, base preparation and the condition of the existing surface. We price after evaluating your property, based on the actual scope of work.</p>
-      </details>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-5 photo aspect-[4/5] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-14.jpg" alt="Tampa Asphalt Kings project manager walking a client through the job">
+      </div>
+      <div class="lg:col-span-7">
+        <p class="label text-ink/60 mb-4">Why choose Tampa Asphalt Kings</p>
+        <h2 class="font-heading font-semibold text-4xl lg:text-5xl mb-6">Trusted asphalt experts in Tampa.</h2>
+        <p class="text-ink/70 mb-10 max-w-2xl">We serve homeowners and businesses across the Hillsborough area, bringing exceptional workmanship and long-lasting asphalt solutions to every property.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
+          <div>
+            <svg class="mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <h3 class="font-heading font-semibold text-xl mb-2">Experienced paving contractors</h3>
+            <p class="text-ink/70 text-[15px]">Skilled crews and proven techniques for durable residential and commercial paving.</p>
+          </div>
+          <div>
+            <svg class="mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <h3 class="font-heading font-semibold text-xl mb-2">Premium materials and equipment</h3>
+            <p class="text-ink/70 text-[15px]">Professional-grade equipment and asphalt for smooth pavement that handles Florida conditions.</p>
+          </div>
+          <div>
+            <svg class="mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <h3 class="font-heading font-semibold text-xl mb-2">Customer-focused service</h3>
+            <p class="text-ink/70 text-[15px]">Honest recommendations, transparent pricing and responsive communication throughout.</p>
+          </div>
+          <div>
+            <svg class="mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <h3 class="font-heading font-semibold text-xl mb-2">Outstanding results</h3>
+            <p class="text-ink/70 text-[15px]">Precision and attention to detail that enhance curb appeal and stand the test of time.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Contact placeholder -->
+<!-- SERVICE AREAS -->
+<section id="areas" class="bg-night text-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-5">
+        <p class="label text-brand mb-4">Service areas</p>
+        <h2 class="font-heading font-semibold text-4xl lg:text-5xl mb-6">Tampa and the communities around it.</h2>
+        <p class="text-white/70">Asphalt paving, parking lot paving, driveway installation, sealcoating and repair throughout Hillsborough County and nearby communities.</p>
+      </div>
+      <div class="lg:col-span-7">
+        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 font-heading font-medium text-[17px]">
+          <li>Tampa</li><li>South Tampa</li><li>Brandon</li>
+          <li>Riverview</li><li>Carrollwood</li><li>Temple Terrace</li>
+          <li>Davis Islands</li><li>Hyde Park</li><li>Lutz</li>
+          <li>Odessa</li><li>Valrico</li><li>Seffner</li>
+          <li>Thonotosassa</li><li>Gibsonton</li><li>Citrus Park</li>
+          <li>Town 'n' Country</li><li>East Tampa</li><li>Tampa Heights</li>
+          <li>Seminole Heights</li><li>Progress Village</li><li>Palm River-Clair Mel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT PLACEHOLDER -->
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(255,212,0,0.10);color:#ffd400}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#ffd400}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(255,230,0,0.10);color:#FFE600}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#FFE600}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -285,16 +315,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#ffd400;box-shadow:0 0 0 4px rgba(255,212,0,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#ffd400;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#FFE600;box-shadow:0 0 0 4px rgba(255,230,0,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#FFE600;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -305,21 +335,21 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#ffd400">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your driveway or parking lot and Tampa Asphalt Kings will get back to you promptly.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#FFE600">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your driveway, parking lot or repair and we'll get back to you with an honest, no-obligation estimate.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+18135188316" class="lp-v">(813) 518-8316</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:tampaasphaltkings@gmail.com" class="lp-v">tampaasphaltkings@gmail.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Tampa, FL</span></span></li>
-        </ul></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:12px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-15.jpg') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Asphalt Repair</option><option>Asphalt Driveways</option><option>Concrete Driveways</option><option>Commercial Asphalt Paving</option><option>ADA Compliance Paving</option><option>Asphalt Sealcoating</option><option>Parking Lot Striping</option><option>Asphalt Milling</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Asphalt repair</option><option>Asphalt driveways</option><option>Concrete driveways</option><option>Commercial asphalt paving</option><option>ADA compliance services</option><option>Asphalt sealcoating</option><option>Parking lot striping</option><option>Asphalt milling</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -329,80 +359,71 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-<!-- Final call -->
-<section class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 items-center">
-    <div class="lg:col-span-7 lg:col-start-1 lg:row-start-1 aspect-[16/10] lg:aspect-auto lg:h-[520px] overflow-hidden rounded reveal">
-      <img src="https://images.unsplash.com/photo-1782223912502-93f29f26012b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cracked and worn pavement marking on dark asphalt" class="w-full h-full object-cover">
-    </div>
-    <div class="lg:col-span-5 lg:col-start-8 lg:row-start-1 bg-brand text-ink rounded p-8 sm:p-10 lg:p-12 -mt-10 lg:mt-0 mx-4 lg:mx-0 relative reveal">
-      <h2 class="text-3xl sm:text-4xl font-semibold">Let's build pavement that lasts</h2>
-      <p class="mt-5 text-ink/80">Need fast, reliable paving or repair? Call for a free estimate on your driveway or lot.</p>
-      <a href="tel:+18135188316" class="inline-block mt-8 bg-ink text-white font-semibold px-8 py-4 rounded hover:bg-white hover:text-ink transition-colors">Call (813) 518-8316</a>
+<!-- FINAL CTA -->
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <div class="lg:col-span-5 photo aspect-[4/3] lg:aspect-auto lg:min-h-[460px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/photo-12.jpg" alt="Tampa Asphalt Kings crew paving a residential street">
+      </div>
+      <div class="lg:col-span-7 bg-mist rounded-k p-8 lg:p-14 flex flex-col justify-center reveal">
+        <p class="label text-ink/60 mb-4">Get started</p>
+        <h2 class="font-heading font-semibold text-4xl lg:text-5xl mb-5">Let's talk about your pavement.</h2>
+        <p class="text-ink/70 mb-8 max-w-xl">Contact Tampa Asphalt Kings for a free estimate and let's discuss how we can bring your project to life.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="tel:+18135188316" class="btn btn-dark">Call (813) 518-8316</a>
+          <a href="mailto:tampaasphaltkings@gmail.com" class="btn border border-ink/20 hover:bg-white">Email us</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- Footer -->
-<footer class="bg-ink text-white/80">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-    <div>
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-asphalt-kings/21943/logo-0.png" alt="Tampa Asphalt Kings" class="h-12 w-auto mb-5">
-      <p class="text-sm text-white/65">Asphalt paving contractor in Tampa, FL for residential and commercial properties.</p>
+<!-- FOOTER -->
+<footer class="bg-brand text-ink">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 text-center">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/tampa-asphalt-kings/21949/logo-0.png" alt="Tampa Asphalt Kings" class="h-14 w-auto mx-auto mb-6">
+    <p class="font-heading font-semibold text-2xl mb-6">Tampa Asphalt Kings</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 font-medium mb-8">
+      <a href="tel:+18135188316" class="hover:underline">(813) 518-8316</a>
+      <a href="mailto:tampaasphaltkings@gmail.com" class="hover:underline break-words">tampaasphaltkings@gmail.com</a>
+      <span>Tampa, FL</span>
     </div>
-    <div>
-      <h4 class="text-white font-semibold text-lg mb-4">Services</h4>
-      <ul class="space-y-2 text-sm">
-        <li>Asphalt Repair</li>
-        <li>Asphalt Driveways</li>
-        <li>Concrete Driveways</li>
-        <li>Commercial Asphalt Paving</li>
-        <li>Asphalt Sealcoating</li>
-        <li>Parking Lot Striping</li>
-        <li>Asphalt Milling</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-white font-semibold text-lg mb-4">Company</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#about" class="hover:text-brand">About</a></li>
-        <li><a href="#process" class="hover:text-brand">Our process</a></li>
-        <li><a href="#areas" class="hover:text-brand">Service areas</a></li>
-        <li><a href="#faq" class="hover:text-brand">FAQ</a></li>
-        <li><a href="#contact" class="hover:text-brand">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-white font-semibold text-lg mb-4">Contact</h4>
-      <ul class="space-y-3 text-sm">
-        <li><a href="tel:+18135188316" class="hover:text-brand">(813) 518-8316</a></li>
-        <li><a href="mailto:tampaasphaltkings@gmail.com" class="hover:text-brand break-words">tampaasphaltkings@gmail.com</a></li>
-        <li>Tampa, FL</li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/55 space-y-1">
+    <nav class="flex flex-wrap justify-center gap-x-7 gap-y-2 font-heading font-medium text-[15px] mb-10">
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#process" class="hover:underline">Process</a>
+      <a href="#work" class="hover:underline">Our work</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#areas" class="hover:underline">Service areas</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+    <div class="border-t border-ink/20 pt-6 text-[13px] text-ink/70 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Tampa Asphalt Kings website.</p>
-      <p>Some photos by Brian J. Tromp, Ray Donnelly, Rynco Maekawa, Tom Shamberger, Michael Evans, Vadym Alyekseyenko and Wolfgang Weiser on Unsplash.</p>
+      <p>Some photos by Brian J. Tromp on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => {
-    const open = menu.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', open);
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function () { menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { menu.classList.remove('open'); });
   });
-  document.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
+  }
 </script>
 </body>
 </html>

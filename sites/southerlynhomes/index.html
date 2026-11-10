@@ -7,82 +7,79 @@
 <title>Southerlyn Homes | Custom Home Builder in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Outfit', 'sans-serif'] },
       colors: {
         brand: '#2f6f8f',
-        'brand-dark': '#12303f',
-        ink: '#0f1417',
-        paper: '#f6f4ef'
+        ink: '#0e1a21',
+        deep: '#12303f',
+        tint: '#e4eff4',
+        paper: '#f6f5f2'
       },
-      fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { DEFAULT: '14px' }
+      borderRadius: { DEFAULT: '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1d2328; }
-  h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; letter-spacing: -0.01em; }
+  body { font-family: 'Outfit', sans-serif; color: #0e1a21; background: #fff; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
-  .photo { position: relative; overflow: hidden; border-radius: 14px; }
-  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
-  .photo:hover img { transform: scale(1.04); }
-  .card-arrow { transition: transform .25s ease; }
-  .svc:hover .card-arrow { transform: translateX(4px); }
+  .marquee-wrap { overflow: hidden; }
+  .marquee { display: flex; gap: 12px; width: max-content; }
+  .marquee-a { animation: slideL 45s linear infinite; }
+  .marquee-b { animation: slideR 50s linear infinite; }
+  @keyframes slideL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes slideR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .25s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-a, .marquee-b { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white antialiased">
-
-<!-- Top bar -->
-<div class="bg-brand text-white text-sm">
-  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
-    <span>Custom homes across Tampa Bay, FL</span>
-    <a href="mailto:team@southerlynhomes.com" class="hover:underline break-words">team@southerlynhomes.com</a>
-  </div>
-</div>
+<body class="antialiased text-[17px] leading-[1.6]">
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-ink text-white">
-  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="font-heading font-semibold text-2xl tracking-tight leading-none">Southerlyn <span class="font-medium text-white/70">Homes</span></a>
+<header class="sticky top-0 z-50 bg-ink">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/logo-0.png" alt="Southerlyn Homes" class="h-12 w-auto">
+    </a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/80">
+      <a href="#process" class="hover:text-white">How we build</a>
+      <a href="#homes" class="hover:text-white">Homes</a>
       <a href="#about" class="hover:text-white">About</a>
-      <a href="#homes" class="hover:text-white">Our Homes</a>
-      <a href="#builder" class="hover:text-white">The Builders</a>
-      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#faq" class="hover:text-white">Questions</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
-    <div class="flex items-center gap-4">
-      <div class="hidden xl:block text-right leading-tight">
-        <div class="text-xs text-white/60">Need help? Call us today</div>
-        <a href="tel:+18136000970" class="font-heading font-semibold">(813) 600-0970</a>
-      </div>
-      <a href="tel:+18136000970" class="bg-brand hover:bg-white hover:text-ink transition text-white font-medium text-sm sm:text-[15px] px-4 sm:px-5 py-3 rounded-full whitespace-nowrap">
-        <span class="xl:hidden">Call (813) 600-0970</span><span class="hidden xl:inline">Call Now</span>
+    <div class="flex items-center gap-3">
+      <a href="tel:+18136000970" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-[#3a82a6] text-white font-medium px-5 py-2.5 rounded-full text-[15px] transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (813) 600-0970
       </a>
-      <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu">
+      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
-    <div class="px-5 py-4 flex flex-col gap-4 text-white/90">
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
+    <div class="px-5 py-5 flex flex-col gap-4 text-white/90">
+      <a href="#process" class="mm">How we build</a>
+      <a href="#homes" class="mm">Homes</a>
       <a href="#about" class="mm">About</a>
-      <a href="#homes" class="mm">Our Homes</a>
-      <a href="#builder" class="mm">The Builders</a>
-      <a href="#projects" class="mm">Projects</a>
+      <a href="#faq" class="mm">Questions</a>
       <a href="#contact" class="mm">Contact</a>
+      <a href="tel:+18136000970" class="inline-flex justify-center items-center bg-brand text-white font-medium px-5 py-3 rounded-full">Call (813) 600-0970</a>
     </div>
   </div>
 </header>
@@ -90,142 +87,141 @@ tailwind.config = {
 <main id="top">
 
 <!-- Hero -->
-<section class="relative bg-ink text-white">
-  <img src="https://images.unsplash.com/photo-1556156657-b2925b706f19?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of a custom home being framed" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/30"></div>
-  <div class="relative max-w-7xl mx-auto px-5 py-28 md:py-40 lg:py-48">
-    <div class="max-w-2xl">
-      <h1 class="font-heading font-semibold text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">If you can dream it,<br>we can build it.</h1>
-      <p class="mt-6 text-lg text-white/85 max-w-xl">One-of-a-kind residences in Tampa Bay, built on your lot by a team of architects, designers, engineers and artisans. Timeless design, careful craftsmanship, a home made around the way you live.</p>
-      <div class="mt-9 flex flex-wrap gap-3">
-        <a href="#contact" class="bg-brand hover:bg-white hover:text-ink transition px-7 py-3.5 rounded-full font-medium">Start your build</a>
-        <a href="#homes" class="bg-white text-ink hover:bg-brand hover:text-white transition px-7 py-3.5 rounded-full font-medium">See our homes</a>
+<section class="px-3 sm:px-5 pt-3 sm:pt-5">
+  <div class="relative rounded-[24px] overflow-hidden min-h-[640px] lg:min-h-[720px] flex">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-4.jpg" alt="Custom coastal home built by Southerlyn Homes in Tampa Bay" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/10"></div>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16 flex flex-col justify-between gap-12">
+      <div class="max-w-2xl">
+        <h1 class="text-white text-[40px] sm:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight">If you can dream it, we can build it.</h1>
+        <p class="mt-6 text-white/85 text-lg max-w-xl">One-of-a-kind custom homes in Tampa Bay, built by a family-owned team that walks with you through every step of design and construction.</p>
+      </div>
+      <div class="bg-white rounded-[20px] p-6 sm:p-7 max-w-md">
+        <p class="text-xl font-semibold">Get a free estimate</p>
+        <div class="mt-4 flex flex-col sm:flex-row gap-3">
+          <a href="tel:+18136000970" class="inline-flex justify-center items-center gap-2 bg-brand hover:bg-[#3a82a6] text-white font-medium px-5 py-3 rounded-full transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            (813) 600-0970
+          </a>
+          <a href="#contact" class="inline-flex justify-center items-center border border-ink/20 hover:border-ink text-ink font-medium px-5 py-3 rounded-full transition-colors">Request online</a>
+        </div>
+        <p class="mt-4 text-sm text-ink/60">Building in Tampa, St. Petersburg, Belleair Beach, Seminole, Riverview and beyond.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- The Southerlyn difference -->
-<section id="about" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-12 lg:gap-16">
-    <div class="lg:col-span-6 reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold">The Southerlyn difference</p>
-      <h2 class="mt-4 font-heading font-semibold text-4xl lg:text-5xl leading-[1.08]">Family owned. Built on faith, integrity and craft.</h2>
-      <div class="mt-12 grid grid-cols-2 gap-4">
-        <div class="photo aspect-[3/4]">
-          <img src="https://images.unsplash.com/photo-1672627170267-fca17bb54156?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home framed and wrapped on a new build" loading="lazy">
-        </div>
-        <div class="flex flex-col gap-4">
-          <div class="bg-brand text-white rounded p-6 flex-1 flex flex-col justify-end">
-            <p class="font-heading text-2xl font-semibold leading-tight">2026 Parade of Homes winner</p>
-            <p class="mt-2 text-sm text-white/80">4311 W. Sevilla, South Tampa</p>
-          </div>
-          <div class="photo flex-1 min-h-[180px]">
-            <img src="https://images.unsplash.com/photo-1690719095815-549c60090c9f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof trusses on a home under construction" loading="lazy">
-          </div>
-        </div>
+<!-- Process -->
+<section id="process" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <p class="text-xs tracking-[0.2em] uppercase text-brand font-medium">The process</p>
+    <h2 class="mt-3 text-4xl lg:text-5xl font-medium tracking-tight leading-tight max-w-3xl">How Southerlyn Homes works</h2>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-17.jpg" alt="Brett and Ashley Russell with their family" class="w-full aspect-[4/3] object-cover object-top rounded">
+        <h3 class="mt-6 text-xl font-semibold">1. Call or reach out</h3>
+        <p class="mt-2 text-ink/70">Talk with Brett and Ashley about your lot, your plans and what you want your home to do for your family.</p>
       </div>
-    </div>
-
-    <div class="lg:col-span-6 reveal">
-      <p>Southerlyn Homes was founded by husband and wife Brett and Ashley Russell, who walk every client through each step of design and construction. Brett is a licensed contractor with over 10 years of residential building experience across South Tampa, St Petersburg, Belleair Beach, Seminole, Riverview, Redington Shores and Odessa. Ashley is a licensed Realtor with over 10 years of business and finance experience.</p>
-      <p class="mt-4">The name honors their Southern roots, their favorite style to build, Southern Coastal, and their oldest daughter, Rozalynn.</p>
-
-      <div class="mt-10 space-y-7 border-t border-neutral-200 pt-8">
-        <div>
-          <h3 class="font-heading font-semibold text-xl">Custom homes on your lot</h3>
-          <p class="mt-1 text-neutral-600">Bring the land. We bring the design and build team to turn your plans into a finished home.</p>
-        </div>
-        <div>
-          <h3 class="font-heading font-semibold text-xl">Design and engineering in-house</h3>
-          <p class="mt-1 text-neutral-600">Architects, designers, engineers and artisans working together on one personalized vision.</p>
-        </div>
-        <div>
-          <h3 class="font-heading font-semibold text-xl">Open communication</h3>
-          <p class="mt-1 text-neutral-600">Transparency and teamwork from first estimate to final walkthrough.</p>
-        </div>
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-14.jpg" alt="Custom kitchen with blue cabinetry and island" class="w-full aspect-[4/3] object-cover rounded">
+        <h3 class="mt-6 text-xl font-semibold">2. Design with the team</h3>
+        <p class="mt-2 text-ink/70">Architects, designers and engineers shape a personalized plan, with clear estimates and options that fit how you live.</p>
       </div>
-
-      <a href="tel:+18136000970" class="mt-10 inline-flex items-center gap-4">
-        <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        <span class="leading-tight"><span class="block text-sm text-neutral-500">Call Southerlyn Homes</span><span class="font-heading font-semibold text-2xl">(813) 600-0970</span></span>
-      </a>
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-12.jpg" alt="Open kitchen with vaulted beamed ceiling" class="w-full aspect-[4/3] object-cover rounded">
+        <h3 class="mt-6 text-xl font-semibold">3. We build it</h3>
+        <p class="mt-2 text-ink/70">Craftsmen build your home with open communication from start to finish, whether on your lot or ours.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Our homes (services-style cards over brand band) -->
-<section id="homes" class="relative pb-24 lg:pb-32">
-  <div class="absolute inset-x-0 top-0 h-[55%] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5 pt-24 lg:pt-28">
-    <div class="grid lg:grid-cols-12 gap-6 lg:gap-16 items-end text-white reveal">
-      <div class="lg:col-span-6">
-        <p class="text-xs uppercase tracking-[0.2em] font-semibold text-white/80">Our homes</p>
-        <h2 class="mt-4 font-heading font-semibold text-4xl lg:text-5xl leading-[1.08]">Luxury homes across Tampa Bay</h2>
+<!-- More than just: tiles -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <h2 class="text-4xl lg:text-5xl font-medium tracking-tight leading-tight max-w-3xl">More than just a house</h2>
+    <p class="mt-4 text-ink/70 max-w-2xl">Kitchens, baths, outdoor living and the details in between, designed and built under one roof.</p>
+    <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-5">
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-5.jpg" alt="Coastal two-story home exterior" class="w-full aspect-square object-cover rounded">
+        <p class="mt-3 text-sm font-medium">Custom homes</p>
       </div>
-      <div class="lg:col-span-6">
-        <p class="text-white/90">From waterfront retreats in St. Petersburg to South Tampa residences in top school zones, every Southerlyn home is designed around the people who live in it.</p>
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-12.jpg" alt="Kitchen with gold chandelier and wood beams" class="w-full aspect-square object-cover rounded">
+        <p class="mt-3 text-sm font-medium">Kitchens</p>
       </div>
-    </div>
-
-    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <a href="#contact" class="svc block bg-white rounded p-3 reveal">
-        <div class="photo aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1778164920913-dbcf62cca52f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Completed custom home with board and batten exterior" loading="lazy">
-        </div>
-        <div class="p-3 pt-5">
-          <h3 class="font-heading font-semibold text-xl flex items-center justify-between gap-2">Riviera Bay Luxury <svg class="card-arrow shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
-          <p class="mt-2 text-[15px] text-neutral-600">220 90th Avenue NE, St. Petersburg. 4 bed, 4 bath, 3,673 SF with 54 feet of direct waterfront.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc block bg-white rounded p-3 reveal">
-        <div class="photo aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1749883278588-837f6fc6c93c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two-story custom home with roof going on" loading="lazy">
-        </div>
-        <div class="p-3 pt-5">
-          <h3 class="font-heading font-semibold text-xl flex items-center justify-between gap-2">4311 W. Sevilla <svg class="card-arrow shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
-          <p class="mt-2 text-[15px] text-neutral-600">Elevated living in South Tampa. 4,988 SF, 5 bedrooms, Southern Coastal style.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc block bg-white rounded p-3 reveal">
-        <div class="photo aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1785585508606-36e0b82f4887?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wood framing of a new home against the sky" loading="lazy">
-        </div>
-        <div class="p-3 pt-5">
-          <h3 class="font-heading font-semibold text-xl flex items-center justify-between gap-2">Build on your lot <svg class="card-arrow shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
-          <p class="mt-2 text-[15px] text-neutral-600">A custom design and full construction on land you already own.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc block bg-white rounded p-3 reveal">
-        <div class="photo aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1683372101362-2efc3e75650e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home renovation with an addition underway" loading="lazy">
-        </div>
-        <div class="p-3 pt-5">
-          <h3 class="font-heading font-semibold text-xl flex items-center justify-between gap-2">Renovations <svg class="card-arrow shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
-          <p class="mt-2 text-[15px] text-neutral-600">Additions and enclosures, like the French-door sunroom clients still get compliments on.</p>
-        </div>
-      </a>
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-11.jpg" alt="Bathroom with blue herringbone shower tile" class="w-full aspect-square object-cover rounded">
+        <p class="mt-3 text-sm font-medium">Bathrooms</p>
+      </div>
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-15.jpg" alt="Covered patio and pool behind a custom home" class="w-full aspect-square object-cover rounded">
+        <p class="mt-3 text-sm font-medium">Outdoor living</p>
+      </div>
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-18.jpg" alt="Living room with gas fireplace" class="w-full aspect-square object-cover rounded">
+        <p class="mt-3 text-sm font-medium">Living spaces</p>
+      </div>
+      <div class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-13.jpg" alt="Primary bath with freestanding tub" class="w-full aspect-square object-cover rounded">
+        <p class="mt-3 text-sm font-medium">Primary suites</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Meet the builder -->
-<section id="builder" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <div class="photo aspect-[4/3]">
-        <img src="https://images.unsplash.com/photo-1741121647933-10714e7b13d3?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Inside a framed home with tools and materials on site" loading="lazy">
-      </div>
+<!-- Photo band -->
+<section class="px-3 sm:px-5">
+  <div class="max-w-7xl mx-auto">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-15.jpg" alt="Backyard pool and covered outdoor kitchen" class="w-full aspect-[4/3] sm:aspect-[21/9] object-cover rounded-[24px]">
+  </div>
+</section>
+
+<!-- Statement -->
+<section class="py-24 lg:py-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
+    <p class="text-3xl sm:text-4xl lg:text-5xl font-light leading-[1.2] tracking-tight">We build more than houses. We craft one-of-a-kind homes that reflect each client's dreams, lifestyle and legacy.</p>
+  </div>
+</section>
+
+<!-- Marquee -->
+<section class="pb-24 lg:pb-32 space-y-3">
+  <div class="marquee-wrap">
+    <div class="marquee marquee-a">
+      <span class="pill-b">Faith</span><span class="pill-t">Integrity</span><span class="pill-b">Craftsmanship</span><span class="pill-t">Innovation</span><span class="pill-b">Transparency</span><span class="pill-t">Teamwork</span><span class="pill-b">Family owned and operated</span><span class="pill-t">Licensed contractor</span>
+      <span class="pill-b">Faith</span><span class="pill-t">Integrity</span><span class="pill-b">Craftsmanship</span><span class="pill-t">Innovation</span><span class="pill-b">Transparency</span><span class="pill-t">Teamwork</span><span class="pill-b">Family owned and operated</span><span class="pill-t">Licensed contractor</span>
     </div>
-    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold">Meet the builder</p>
-      <h2 class="mt-4 font-heading font-semibold text-4xl lg:text-5xl leading-[1.08]">Walk through a Southerlyn build with Brett</h2>
-      <p class="mt-6 text-neutral-700">Owner Brett Russell takes you inside our latest custom build, highlighting the design, craftsmanship and attention to detail behind every home. See the modern architecture, high-end finishes and functional living spaces that set Southerlyn apart in Tampa's luxury market.</p>
-      <p class="mt-4 text-neutral-700">Our mission: guided by faith, integrity, craftsmanship and innovation, we build homes that reflect each client's dreams, lifestyle and legacy.</p>
-      <a href="https://youtu.be/GGWy6YE1ci0?si=eLXIRcvzFRxN8cXS" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 bg-ink text-white hover:bg-brand transition px-7 py-3.5 rounded-full font-medium">
-        Watch the tour
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee marquee-b">
+      <span class="pill-t">Building on your lot</span><span class="pill-b">Southern coastal style</span><span class="pill-t">South Tampa</span><span class="pill-b">St. Petersburg</span><span class="pill-t">Belleair Beach</span><span class="pill-b">Seminole</span><span class="pill-t">Riverview</span><span class="pill-b">Odessa</span><span class="pill-t">Redington Shores</span>
+      <span class="pill-t">Building on your lot</span><span class="pill-b">Southern coastal style</span><span class="pill-t">South Tampa</span><span class="pill-b">St. Petersburg</span><span class="pill-t">Belleair Beach</span><span class="pill-b">Seminole</span><span class="pill-t">Riverview</span><span class="pill-b">Odessa</span><span class="pill-t">Redington Shores</span>
+    </div>
+  </div>
+</section>
+<style>
+  .pill-b, .pill-t { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; font-size: 16px; font-weight: 500; white-space: nowrap; }
+  .pill-b { background: #2f6f8f; color: #fff; }
+  .pill-t { background: #e4eff4; color: #0e1a21; }
+  .pill-b::before, .pill-t::before { content: ""; width: 14px; height: 14px; flex: none; background: center / contain no-repeat; }
+  .pill-b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E"); }
+  .pill-t::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f6f8f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E"); }
+</style>
+
+<!-- About / Family -->
+<section id="about" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-17.jpg" alt="Brett and Ashley Russell with their children" class="w-full aspect-[4/5] object-cover rounded">
+    </div>
+    <div class="lg:col-span-7">
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-medium">Family owned and operated</p>
+      <h2 class="mt-3 text-4xl lg:text-5xl font-medium tracking-tight leading-tight">Meet Brett and Ashley Russell</h2>
+      <p class="mt-6 text-ink/75">Southerlyn Homes was founded by husband and wife team Brett and Ashley Russell. They have a passion for working with clients and walking them through every step of the design and construction process.</p>
+      <p class="mt-4 text-ink/75">Brett is a Licensed Contractor with over 10 years of residential building experience. Before founding Southerlyn Homes, he built and renovated homes in South Tampa, St Petersburg, Belleair Beach, Seminole, Riverview, Redington Shores and Odessa. Ashley is a licensed Realtor and brings over 10 years of business and finance experience.</p>
+      <p class="mt-4 text-ink/75">The name Southerlyn represents Brett and Ashley's Southern roots and favorite style of home to build, Southern Coastal, as well as a tribute to their oldest daughter, Rozalynn.</p>
+      <a href="#contact" class="mt-8 inline-flex items-center gap-2 bg-ink hover:bg-deep text-white font-medium px-6 py-3 rounded-full transition-colors">
+        Start a conversation
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
@@ -319,43 +315,94 @@ tailwind.config = {
   })();</script>
 </section>
 
-<!-- Construction progress / gallery -->
-<section id="projects" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="grid lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
-      <div class="lg:col-span-6">
-        <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold">Construction progress</p>
-        <h2 class="mt-4 font-heading font-semibold text-4xl lg:text-5xl leading-[1.08]">From foundation to finished home</h2>
-      </div>
-      <div class="lg:col-span-6">
-        <p class="text-neutral-700">Want a closer look at current projects? Follow Southerlyn Homes on Facebook and Instagram for regular construction updates and the latest photos of our finished work.</p>
-      </div>
-    </div>
-
-    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="photo aspect-square col-span-2 lg:col-span-2 lg:row-span-2 lg:aspect-auto lg:min-h-[480px]"><img src="https://images.unsplash.com/photo-1556156653-e5a7c69cc263?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Overhead view of a home's roof trusses" loading="lazy"></div>
-      <div class="photo aspect-square"><img src="https://images.unsplash.com/photo-1777105939822-21228c81916d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Framed home on a new lot" loading="lazy"></div>
-      <div class="photo aspect-square"><img src="https://images.unsplash.com/photo-1785597470626-d2d7bd4ddcae?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Homes under construction with scaffolding" loading="lazy"></div>
-      <div class="photo aspect-square"><img src="https://images.unsplash.com/photo-1672626881472-b96d3eb5445e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Row of new townhomes nearing completion" loading="lazy"></div>
-      <div class="photo aspect-square"><img src="https://images.unsplash.com/photo-1556156657-b2925b706f19?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home framing at sunset from above" loading="lazy"></div>
+<!-- FAQ -->
+<section id="faq" class="py-24 lg:py-32 bg-paper">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8">
+    <h2 class="text-4xl lg:text-5xl font-medium tracking-tight leading-tight text-center">Questions, answered</h2>
+    <div class="mt-12 space-y-3">
+      <details class="bg-white rounded p-6 group">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">
+          Can you build on my lot?
+          <span class="plus text-2xl text-brand leading-none">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70">Yes. We build on your lot and turn your vision into reality with a full-scale team of architects, designers, engineers and artisans.</p>
+      </details>
+      <details class="bg-white rounded p-6">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">
+          Who will I work with?
+          <span class="plus text-2xl text-brand leading-none">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70">Southerlyn Homes is family owned and operated. Brett Russell, a Licensed Contractor with over 10 years of residential building experience, and his wife Ashley walk clients through every step of the design and construction process.</p>
+      </details>
+      <details class="bg-white rounded p-6">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">
+          Where do you build?
+          <span class="plus text-2xl text-brand leading-none">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70">Across Tampa Bay. Brett has built and renovated homes in South Tampa, St Petersburg, Belleair Beach, Seminole, Riverview, Redington Shores and Odessa.</p>
+      </details>
+      <details class="bg-white rounded p-6">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">
+          What style of home do you build?
+          <span class="plus text-2xl text-brand leading-none">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70">Southern Coastal is our favorite, but every home is one of a kind and personalized to the way you live, from timeless coastal design to sleek modern architecture.</p>
+      </details>
+      <details class="bg-white rounded p-6">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">
+          How do I get an estimate?
+          <span class="plus text-2xl text-brand leading-none">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70">Call (813) 600-0970, email team@southerlynhomes.com, or use the contact form below. Past clients describe the estimate process as quick and easy.</p>
+      </details>
+      <details class="bg-white rounded p-6">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">
+          Can I see your current projects?
+          <span class="plus text-2xl text-brand leading-none">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70">Yes. We post regular construction updates and photos of finished work on Facebook and Instagram.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- Call band -->
-<section class="bg-ink py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-8 items-center">
-    <div class="lg:col-span-8">
-      <h2 class="font-heading font-semibold text-4xl lg:text-5xl leading-[1.08] text-brand">Ready to build your Tampa Bay home?</h2>
-      <p class="mt-4 text-white/75 max-w-2xl">Call Brett and Ashley, or send a note and we'll set up a time to talk about your lot and your plans.</p>
+<!-- Featured homes -->
+<section id="homes" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <p class="text-xs tracking-[0.2em] uppercase text-brand font-medium">Our work</p>
+    <h2 class="mt-3 text-4xl lg:text-5xl font-medium tracking-tight leading-tight max-w-3xl">Homes built in Tampa Bay</h2>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <article class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-4.jpg" alt="Elevated waterfront-style home with palm in front" class="w-full aspect-[4/3] object-cover rounded">
+        <p class="mt-6 text-xs tracking-[0.18em] uppercase text-brand font-medium">Riviera Bay, St. Petersburg</p>
+        <h3 class="mt-2 text-2xl font-semibold">Riviera Bay Luxury</h3>
+        <p class="mt-2 text-ink/70">4 bedrooms, 4 bathrooms and 3,673 square feet, with 54 feet of waterfrontage and private boating access to Tampa Bay.</p>
+      </article>
+      <article class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-5.jpg" alt="Southern coastal home with teal front door" class="w-full aspect-[4/3] object-cover rounded">
+        <p class="mt-6 text-xs tracking-[0.18em] uppercase text-brand font-medium">South Tampa</p>
+        <h3 class="mt-2 text-2xl font-semibold">4311 W. Sevilla</h3>
+        <p class="mt-2 text-ink/70">A 4,988 SF custom home with 5 bedrooms and exceptional outdoor living. 2026 Parade of Homes winner.</p>
+      </article>
+      <article class="reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-8.jpg" alt="" class="hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-18.jpg" alt="Finished living room with fireplace" class="w-full aspect-[4/3] object-cover rounded">
+        <p class="mt-6 text-xs tracking-[0.18em] uppercase text-brand font-medium">Available homes</p>
+        <h3 class="mt-2 text-2xl font-semibold">Ready for your family</h3>
+        <p class="mt-2 text-ink/70">Browse our available homes, or call to talk about building something new on your lot.</p>
+      </article>
     </div>
-    <div class="lg:col-span-4 flex flex-wrap lg:justify-end gap-3">
-      <a href="tel:+18136000970" class="bg-brand hover:bg-white hover:text-ink text-white transition px-7 py-3.5 rounded-full font-medium">Call (813) 600-0970</a>
-      <a href="#contact" class="bg-white text-ink hover:bg-brand hover:text-white transition px-7 py-3.5 rounded-full font-medium">Send a message</a>
+
+    <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-16.jpg" alt="Pass-through window bar looking into the kitchen" class="w-full aspect-[4/3] object-cover rounded">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-14.jpg" alt="Blue and white kitchen with pendant lights" class="w-full aspect-[4/3] object-cover rounded">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-13.jpg" alt="Primary bath with freestanding tub and dual vanity" class="w-full aspect-[4/3] object-cover rounded">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-11.jpg" alt="Guest bath with round mirrors and blue tile" class="w-full aspect-[4/3] object-cover rounded">
     </div>
   </div>
 </section>
 
+<!-- Contact placeholder -->
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
@@ -371,16 +418,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:20px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:16px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#2f6f8f;box-shadow:0 0 0 4px rgba(47,111,143,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#2f6f8f;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:16px;background:#2f6f8f;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -390,13 +437,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1690719095815-549c60090c9f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/photo-8.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#a1becd">Contact</p><h2 class="lp-h" style="color:#fff">Start your custom home</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your lot and your plans, and Brett and Ashley will get back to you.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#a1becd">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your lot and your plans, and Brett and Ashley will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18136000970" class="lp-v lp-v-d">(813) 600-0970</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -410,7 +457,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Custom home on your lot</option><option>Luxury waterfront home</option><option>Home renovation or addition</option><option>Estimate for an existing project</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Custom home on your lot</option><option>Custom home design and build</option><option>Waterfront home</option><option>Southern coastal home</option><option>Kitchen and bath design</option><option>Outdoor living</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -423,34 +470,45 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-ink text-white/75 pt-20 pb-10">
-  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-12 gap-12">
-    <div class="md:col-span-5">
-      <a href="#top" class="font-heading font-semibold text-2xl text-white tracking-tight">Southerlyn <span class="font-medium text-white/70">Homes</span></a>
-      <p class="mt-4 max-w-sm">Family owned and operated custom home builder serving Tampa Bay. If you can dream it, we can build it.</p>
+<footer class="bg-ink text-white/80">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/southerlyn-homes/21949/logo-0.png" alt="Southerlyn Homes" class="h-12 w-auto">
+        <a href="tel:+18136000970" class="mt-6 block text-2xl font-medium text-white">(813) 600-0970</a>
+        <a href="mailto:team@southerlynhomes.com" class="mt-2 block text-white/70 hover:text-white break-words">team@southerlynhomes.com</a>
+        <p class="mt-2 text-white/60">Tampa, FL</p>
+      </div>
+      <div class="md:col-span-2">
+        <p class="text-white font-medium mb-4">Explore</p>
+        <ul class="space-y-2 text-white/70">
+          <li><a href="#process" class="hover:text-white">How we build</a></li>
+          <li><a href="#homes" class="hover:text-white">Homes</a></li>
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#faq" class="hover:text-white">Questions</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <p class="text-white font-medium mb-4">Where we build</p>
+        <ul class="space-y-2 text-white/70">
+          <li>South Tampa</li>
+          <li>St. Petersburg</li>
+          <li>Belleair Beach</li>
+          <li>Seminole</li>
+          <li>Riverview</li>
+          <li>Redington Shores</li>
+          <li>Odessa</li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <p class="text-white font-medium mb-4">Follow our builds</p>
+        <p class="text-white/70">We post regular construction updates and finished-work photos on Facebook and Instagram.</p>
+      </div>
     </div>
-    <div class="md:col-span-3">
-      <h4 class="font-heading font-semibold text-white mb-4">Explore</h4>
-      <ul class="space-y-2">
-        <li><a href="#about" class="hover:text-white">About</a></li>
-        <li><a href="#homes" class="hover:text-white">Our Homes</a></li>
-        <li><a href="#builder" class="hover:text-white">The Builders</a></li>
-        <li><a href="#projects" class="hover:text-white">Construction Progress</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact</a></li>
-      </ul>
+    <div class="mt-14 pt-6 border-t border-white/10 text-sm text-white/50">
+      Concept redesign by LumeaPixel. This is not the official Southerlyn Homes website.
     </div>
-    <div class="md:col-span-4">
-      <h4 class="font-heading font-semibold text-white mb-4">Contact</h4>
-      <ul class="space-y-2">
-        <li><a href="tel:+18136000970" class="hover:text-white">(813) 600-0970</a></li>
-        <li><a href="mailto:team@southerlynhomes.com" class="hover:text-white break-words">team@southerlynhomes.com</a></li>
-        <li>Tampa, FL</li>
-      </ul>
-    </div>
-  </div>
-  <div class="max-w-7xl mx-auto px-5 mt-14 pt-6 border-t border-white/10 text-sm text-white/50 space-y-1">
-    <p>Concept redesign by LumeaPixel. This is not the official Southerlyn Homes website.</p>
-    <p>Some photos by Avel Chuklanov, Troy Mortier, Roger Starnes Sr, Ernie Journeys, W. D. and Samuel Cruz on Unsplash.</p>
   </div>
 </footer>
 
@@ -459,7 +517,6 @@ tailwind.config = {
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
   document.querySelectorAll('.mm').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

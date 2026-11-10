@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Marc Anthony Builders, Inc. | Custom Home Builder in Tampa, FL</title>
+<title>Marc Anthony Builders | Custom Home Builder in Tampa Bay, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,256 +14,245 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        brand: '#5e7a1f',
-        'brand-dark': '#1b2310',
-        ink: '#121410',
-        paper: '#f6f5f0',
-        stone: '#e7e5dc'
+        brand: '#4f7a1e',
+        'brand-dark': '#1b2a0c',
+        'brand-deep': '#243812',
+        cream: '#f6f3ec',
+        ink: '#141812'
       },
       fontFamily: {
         heading: ['Outfit', 'sans-serif'],
         body: ['Inter', 'sans-serif']
       },
-      borderRadius: { DEFAULT: '14px' }
+      borderRadius: { DEFAULT: '6px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #2a2d24; background: #fff; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
-  .r { border-radius: 14px; }
+  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #2b2f26; background: #fff; }
+  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.12; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
-  .arrow-link:hover .arr { transform: translateX(4px); }
-  .arr { transition: transform .25s ease; }
-  img { display: block; }
+  .tile-shade::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,14,6,.78) 0%, rgba(10,14,6,0) 55%); }
+  .tile img { transition: transform .8s ease; }
+  .tile:hover img { transform: scale(1.04); }
+  .section-pad { padding-top: 80px; padding-bottom: 80px; }
+  @media (min-width: 1024px) { .section-pad { padding-top: 120px; padding-bottom: 120px; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white">
+<body class="antialiased">
 
-<!-- Top bar -->
-<div class="bg-brand text-white text-sm">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
-    <span>Serving the Tampa Bay area</span>
-    <a href="mailto:info@marcanthonybuilders.com" class="hover:underline break-words">info@marcanthonybuilders.com</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-ink text-white border-b border-white/10">
+<!-- HEADER -->
+<header id="top" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0 bg-white rounded px-3 py-1.5">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/marc-anthony-builders-inc/21943/logo-0.png" alt="Marc Anthony Builders" class="h-11 w-auto">
-    </a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/80">
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#services" class="hover:text-white">Services</a>
-      <a href="#projects" class="hover:text-white">Projects</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
+    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/logo-0.png" alt="Marc Anthony Builders" class="h-12 w-auto"></a>
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink">
+      <a href="#about" class="hover:text-brand transition">About</a>
+      <a href="#services" class="hover:text-brand transition">Services</a>
+      <a href="#projects" class="hover:text-brand transition">Projects</a>
+      <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
-    <div class="hidden md:flex items-center gap-5">
-      <div class="text-right leading-tight hidden xl:block">
-        <div class="text-xs text-white/60">Need help? Call us today</div>
-        <a href="tel:8136954760" class="font-heading font-semibold text-lg">(813) 695-4760</a>
-      </div>
-      <a href="tel:8136954760" class="xl:hidden font-heading font-semibold">(813) 695-4760</a>
-      <a href="#contact" class="bg-brand hover:bg-[#6d8d25] transition text-white font-medium px-5 py-2.5 r text-[15px]">Get a Free Estimate</a>
+    <div class="flex items-center gap-3">
+      <a href="tel:8136954760" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-heading font-medium px-5 py-3 rounded hover:bg-brand-deep transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (813) 695-4760
+      </a>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center rounded border border-black/10" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </div>
-    <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 pb-6">
-    <div class="flex flex-col py-3 text-white/90">
-      <a href="#about" class="py-3 border-b border-white/10">About</a>
-      <a href="#services" class="py-3 border-b border-white/10">Services</a>
-      <a href="#projects" class="py-3 border-b border-white/10">Projects</a>
-      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
+    <div class="px-5 py-5 flex flex-col gap-4 font-medium text-ink">
+      <a href="#about" class="mm">About</a>
+      <a href="#services" class="mm">Services</a>
+      <a href="#projects" class="mm">Projects</a>
+      <a href="#contact" class="mm">Contact</a>
+      <a href="tel:8136954760" class="bg-brand text-white text-center font-heading px-5 py-3 rounded">Call (813) 695-4760</a>
     </div>
-    <a href="tel:8136954760" class="mt-3 block text-center bg-brand text-white font-medium px-5 py-3 r">Call (813) 695-4760</a>
   </div>
 </header>
 
-<main id="top">
+<!-- HERO -->
+<section class="relative">
+  <div class="relative min-h-[620px] lg:min-h-[760px] flex items-center">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-9.jpg" alt="Custom waterfront home built by Marc Anthony Builders" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-ink/60"></div>
+    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-20 pb-40 lg:pb-48">
+      <h1 class="font-heading font-semibold text-4xl sm:text-5xl lg:text-7xl">We build homes.<br>We build relationships.</h1>
+      <p class="mt-7 text-lg lg:text-xl text-white/85 max-w-2xl mx-auto">Plan, design, build. Custom homes, additions and remodels across the Tampa Bay area, with the architect, project manager and designer working beside you from day one.</p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-brand text-white font-heading font-medium px-8 py-4 rounded hover:bg-brand-deep transition">Get a free estimate</a>
+        <a href="#projects" class="border border-white/80 text-white font-heading font-medium px-8 py-4 rounded hover:bg-white hover:text-ink transition">See finished projects</a>
+      </div>
+    </div>
+  </div>
 
-<!-- Hero -->
-<section class="relative bg-ink text-white">
-  <img src="https://images.unsplash.com/photo-1556156653-e5a7c69cc263?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of a custom home framing in progress" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-ink/75"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-24 md:py-32 lg:py-40">
-    <div class="max-w-3xl">
-      <p class="label text-white/70 mb-5">Custom homes, additions &amp; remodeling</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold">We build homes.<br>We build relationships.</h1>
-      <p class="mt-6 text-lg md:text-xl text-white/80 max-w-xl">Plan, design, build. Marc Anthony Builders is an award-winning custom builder serving the Tampa Bay area with value, creative design and attention to detail.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="bg-brand hover:bg-[#6d8d25] transition text-white font-medium px-7 py-3.5 r text-center">Get a Free Estimate</a>
-        <a href="tel:8136954760" class="bg-white text-ink hover:bg-stone transition font-medium px-7 py-3.5 r text-center">Call (813) 695-4760</a>
+  <!-- trust strip -->
+  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20">
+    <div class="bg-white rounded shadow-sm border border-black/5 grid grid-cols-2 lg:grid-cols-4 gap-0">
+      <div class="p-6 lg:p-8 flex items-start gap-4 border-b lg:border-b-0 border-r border-black/5">
+        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <div><p class="font-heading font-semibold text-ink leading-tight">New custom homes</p></div>
+      </div>
+      <div class="p-6 lg:p-8 flex items-start gap-4 border-b lg:border-b-0 lg:border-r border-black/5">
+        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V9l6-5 6 5v11M10 20v-6h4v6"/></svg>
+        <div><p class="font-heading font-semibold text-ink leading-tight">Additions and remodels</p></div>
+      </div>
+      <div class="p-6 lg:p-8 flex items-start gap-4 border-r border-black/5">
+        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>
+        <div><p class="font-heading font-semibold text-ink leading-tight">Award-winning builder</p></div>
+      </div>
+      <div class="p-6 lg:p-8 flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div><p class="font-heading font-semibold text-ink leading-tight">Serving Tampa Bay</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About -->
-<section id="about" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-    <div class="lg:col-span-6 reveal">
-      <p class="label text-brand mb-4">The Marc Anthony difference</p>
-      <h2 class="text-4xl md:text-5xl font-semibold text-ink">Relationships come before the blueprints.</h2>
-
-      <div class="mt-12 grid grid-cols-6 gap-4 items-stretch">
-        <div class="col-span-3 r overflow-hidden aspect-[3/4]">
-          <img src="https://images.unsplash.com/photo-1647579350413-a6ada4e480ed?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished two-story home with covered porch" class="w-full h-full object-cover">
-        </div>
-        <div class="col-span-3 flex flex-col gap-4">
-          <div class="bg-brand text-white r p-6 flex-1 flex items-center">
-            <p class="font-heading text-xl font-medium leading-snug">Plan ~ Design ~ Build, with you at every step.</p>
-          </div>
-          <div class="r overflow-hidden aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1778164920913-dbcf62cca52f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="New custom home with board and batten siding" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lg:col-span-6 reveal">
-      <p class="text-lg text-[#3c4032]">Marc Anthony Builders believes in details. We make history, deliver dreams, and create futures one home at a time.</p>
-      <p class="mt-4 text-[#3c4032]">Building a new home is an intimate connection between dreams, concepts and reality, which is why our buyers work closely with the architect, project manager and designer. Relationships with customers come before the design and construction of your home.</p>
-
-      <div class="mt-10 divide-y divide-stone border-t border-stone">
-        <div class="py-6">
-          <h3 class="text-xl font-semibold text-ink">New custom homes</h3>
-          <p class="mt-1 text-[#4b5040]">Designed around your family and built with care, from first sketch to final walkthrough.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl font-semibold text-ink">Home additions</h3>
-          <p class="mt-1 text-[#4b5040]">More room where you need it, matched to the home you already have.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl font-semibold text-ink">Home remodeling</h3>
-          <p class="mt-1 text-[#4b5040]">Kitchens, bathrooms and full interior remodels with clean, detailed work.</p>
-        </div>
-      </div>
-
-      <a href="tel:8136954760" class="mt-4 inline-flex items-center gap-3 font-heading text-2xl font-semibold text-ink">
-        <span class="w-11 h-11 rounded-full bg-brand text-white flex items-center justify-center">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        (813) 695-4760
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
-<section id="services" class="relative pb-24 lg:pb-32">
-  <div class="absolute inset-x-0 top-0 h-[430px] md:h-[400px] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-20 lg:pt-24">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end text-white reveal">
-      <div class="lg:col-span-6">
-        <p class="label text-white/70 mb-4">What we build</p>
-        <h2 class="text-4xl md:text-5xl font-semibold">Homes, additions and remodels across Tampa Bay.</h2>
-      </div>
-      <p class="lg:col-span-6 text-white/85 text-lg">From a ground-up custom home to a new kitchen, every project is planned with you and managed by a team that answers the phone.</p>
-    </div>
-
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="#contact" class="reveal group arrow-link bg-white r p-3 border border-stone shadow-sm">
-        <div class="r overflow-hidden aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1693639056346-49cd9529378a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="New home under construction" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="text-xl font-semibold text-ink flex items-center justify-between">New Custom Homes <span class="arr">&rarr;</span></h3>
-          <p class="mt-2 text-[15px] text-[#4b5040]">Plan, design and build under one roof, shaped around your lot and your family.</p>
-        </div>
-      </a>
-      <a href="#contact" class="reveal group arrow-link bg-white r p-3 border border-stone shadow-sm">
-        <div class="r overflow-hidden aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1683372101362-2efc3e75650e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home addition work underway" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="text-xl font-semibold text-ink flex items-center justify-between">Home Additions <span class="arr">&rarr;</span></h3>
-          <p class="mt-2 text-[15px] text-[#4b5040]">Add space that fits the existing home, inside and out.</p>
-        </div>
-      </a>
-      <a href="#contact" class="reveal group arrow-link bg-white r p-3 border border-stone shadow-sm">
-        <div class="r overflow-hidden aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1672627170267-fca17bb54156?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home with new windows being installed" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="text-xl font-semibold text-ink flex items-center justify-between">Interior Remodeling <span class="arr">&rarr;</span></h3>
-          <p class="mt-2 text-[15px] text-[#4b5040]">Update the rooms you live in with careful, detailed work.</p>
-        </div>
-      </a>
-      <a href="#contact" class="reveal group arrow-link bg-white r p-3 border border-stone shadow-sm">
-        <div class="r overflow-hidden aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1676802037786-3697d60497ae?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof trusses on a home framing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="text-xl font-semibold text-ink flex items-center justify-between">Kitchens &amp; Bathrooms <span class="arr">&rarr;</span></h3>
-          <p class="mt-2 text-[15px] text-[#4b5040]">Remodels that make the most-used rooms work better for you.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects" class="pb-24 lg:pb-32 bg-white">
+<!-- SERVICES -->
+<section id="services" class="section-pad">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
-      <div class="lg:col-span-7">
-        <p class="label text-brand mb-4">Projects</p>
-        <h2 class="text-4xl md:text-5xl font-semibold text-ink">Finished and in progress.</h2>
-      </div>
-      <p class="lg:col-span-5 text-[#4b5040]">Past builds include Polynesian Resort, Bay Point View, West Indies Style and Key West Coastal Style homes.</p>
+    <div class="max-w-2xl reveal">
+      <p class="text-sm uppercase tracking-[0.18em] text-brand font-semibold">What we build</p>
+      <h2 class="mt-4 font-heading font-semibold text-3xl lg:text-5xl text-ink">What we build in Tampa Bay</h2>
     </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] tile-shade reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-1.jpg" alt="New custom home with stone accent and palm landscaping" class="w-full h-full object-cover">
+        <span class="absolute left-6 bottom-5 z-10 font-heading font-semibold text-2xl text-white">New custom homes</span>
+      </a>
+      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] tile-shade reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-3.jpg" alt="Custom kitchen with cream cabinets and granite island" class="w-full h-full object-cover">
+        <span class="absolute left-6 bottom-5 z-10 font-heading font-semibold text-2xl text-white">Kitchens</span>
+      </a>
+      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] tile-shade reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-4.jpg" alt="Primary bathroom with freestanding tub and dual vanities" class="w-full h-full object-cover">
+        <span class="absolute left-6 bottom-5 z-10 font-heading font-semibold text-2xl text-white">Bathrooms</span>
+      </a>
+      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] tile-shade reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-5.jpg" alt="Open living room with wood ceiling and water views" class="w-full h-full object-cover">
+        <span class="absolute left-6 bottom-5 z-10 font-heading font-semibold text-2xl text-white">Interior remodeling</span>
+      </a>
+      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] tile-shade reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-13.jpg" alt="Coastal home entry with blue Bahama shutters" class="w-full h-full object-cover">
+        <span class="absolute left-6 bottom-5 z-10 font-heading font-semibold text-2xl text-white">Home additions</span>
+      </a>
+      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] tile-shade reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-14.jpg" alt="Rooftop terrace overlooking the bay" class="w-full h-full object-cover">
+        <span class="absolute left-6 bottom-5 z-10 font-heading font-semibold text-2xl text-white">Plan, design, build</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-12 gap-4">
-      <div class="col-span-2 lg:col-span-6 r overflow-hidden aspect-[16/10] reveal">
-        <img src="https://images.unsplash.com/photo-1647579350413-a6ada4e480ed?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished home with three-car garage" class="w-full h-full object-cover">
+<!-- ABOUT SPLIT -->
+<section id="about" class="pb-20 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-12.jpg" alt="Waterfront home with metal roof and blue shutters" class="w-full h-full object-cover">
       </div>
-      <div class="col-span-1 lg:col-span-3 r overflow-hidden aspect-square reveal">
-        <img src="https://images.unsplash.com/photo-1626385785701-a0d3b879de2c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sheathed walls rising against the sky" class="w-full h-full object-cover">
-      </div>
-      <div class="col-span-1 lg:col-span-3 r overflow-hidden aspect-square reveal">
-        <img src="https://images.unsplash.com/photo-1777105939822-21228c81916d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Framed home with roof structure complete" class="w-full h-full object-cover">
-      </div>
-      <div class="col-span-1 lg:col-span-3 r overflow-hidden aspect-square reveal">
-        <img src="https://images.unsplash.com/photo-1693639385915-d7a7ddefe8e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Timber framing with safety rails" class="w-full h-full object-cover">
-      </div>
-      <div class="col-span-1 lg:col-span-3 r overflow-hidden aspect-square reveal">
-        <img src="https://images.unsplash.com/photo-1785585508606-36e0b82f4887?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Upper floor wall framing" class="w-full h-full object-cover">
-      </div>
-      <div class="col-span-2 lg:col-span-6 r overflow-hidden aspect-[16/10] reveal">
-        <img src="https://images.unsplash.com/photo-1785585508861-ba57d25e633c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Homes under construction on a residential street" class="w-full h-full object-cover">
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <p class="text-sm uppercase tracking-[0.18em] text-brand font-semibold">About us</p>
+      <h2 class="mt-4 font-heading font-semibold text-3xl lg:text-5xl text-ink">Value, creative design and attention to detail</h2>
+      <p class="mt-6 text-ink/80">Marc Anthony Builders is an award-winning Plan, Design, Build custom builder serving the Tampa Bay area. We specialize in new custom homes, home additions and home remodeling.</p>
+      <p class="mt-4 text-ink/80">Building a home is an intimate connection between dreams, concepts and reality. That is why our clients work closely with the architect, project manager and designer. We believe the relationship with the customer comes before the design and construction of the home.</p>
+      <a href="#contact" class="mt-8 inline-flex items-center gap-2 bg-brand text-white font-heading font-medium px-8 py-4 rounded hover:bg-brand-deep transition">
+        Talk to our team
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REVERSE SPLIT -->
+<section class="pb-20 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
+      <p class="text-sm uppercase tracking-[0.18em] text-brand font-semibold">Your dream home</p>
+      <h2 class="mt-4 font-heading font-semibold text-3xl lg:text-5xl text-ink">Have a home in mind but no place to put it?</h2>
+      <p class="mt-6 text-ink/80">Contact us and one of our professionals can help you find the right location for you and your family.</p>
+      <p class="mt-4 text-ink/80">From there we plan, design and build with you, keeping the details, the schedule and the conversation in the open.</p>
+      <a href="#contact" class="mt-8 inline-flex items-center gap-2 border border-ink text-ink font-heading font-medium px-8 py-4 rounded hover:bg-ink hover:text-white transition">
+        Start the conversation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
+      <div class="aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-10.jpg" alt="Backyard pool and dock at sunset on the water" class="w-full h-full object-cover">
       </div>
     </div>
   </div>
 </section>
 
-<!-- Call band -->
-<section class="bg-brand-dark py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-    <div class="lg:col-span-8">
-      <h2 class="text-3xl md:text-5xl font-semibold text-[#9bbd3f]">Have a dream home in mind but no place to put it?</h2>
-      <p class="mt-5 text-white/75 text-lg max-w-2xl">Contact us today and one of our professionals can help you find the right location for you and your family.</p>
+<!-- PROJECTS -->
+<section id="projects" class="section-pad bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="text-sm uppercase tracking-[0.18em] text-brand font-semibold">Finished projects</p>
+      <h2 class="mt-4 font-heading font-semibold text-3xl lg:text-5xl text-ink">Homes we have built</h2>
+      <p class="mt-5 text-ink/75">Polynesian Resort, Bay Point View, West Indies Style and Key West Coastal Style, among others.</p>
     </div>
-    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
-      <a href="#contact" class="bg-brand hover:bg-[#6d8d25] transition text-white font-medium px-7 py-3.5 r text-center">Contact Us</a>
-      <a href="tel:8136954760" class="text-white font-heading text-xl font-semibold text-center lg:text-right">(813) 695-4760</a>
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-12 gap-4 lg:gap-5">
+      <div class="col-span-2 md:col-span-8 aspect-[16/9] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-6.jpg" alt="Two-story stucco home with palms" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 md:col-span-4 aspect-[4/5] md:aspect-auto overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-8.jpg" alt="Primary bath with soaking tub and glass shower" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 md:col-span-4 aspect-[4/5] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-11.jpg" alt="Kitchen and dining with wine wall and beamed ceiling" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-2 md:col-span-8 aspect-[16/9] md:aspect-auto overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-9.jpg" alt="Mediterranean-style waterfront home with paver drive" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-2 md:col-span-6 aspect-[16/9] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-5.jpg" alt="Living room opening to a bayfront balcony" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-2 md:col-span-6 aspect-[16/9] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-12.jpg" alt="Bayfront home with Bahama shutters from above" class="w-full h-full object-cover">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Contact placeholder -->
+<!-- CREAM CTA PANEL -->
+<section class="section-pad">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8 text-center reveal">
+    <h2 class="font-heading font-semibold text-3xl lg:text-5xl text-ink">Tell us about your project</h2>
+    <p class="mt-6 text-ink/75">Kitchens, bathrooms, interior remodeling, an addition or a new home. Send us a few details and we will get back to you with a free estimate.</p>
+    <a href="#contact" class="mt-9 inline-flex bg-brand text-white font-heading font-medium px-8 py-4 rounded hover:bg-brand-deep transition">Get a free estimate</a>
+  </div>
+</section>
+
+<!-- FINAL CALL -->
+<section class="pb-20 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+      <div class="lg:col-span-8 aspect-[16/10] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-14.jpg" alt="Terrace with two chairs facing the bay" class="w-full h-full object-cover">
+      </div>
+      <div class="lg:col-span-4 lg:-ml-24 mt-[-48px] lg:mt-0 mx-4 lg:mx-0 relative z-10 bg-brand text-white rounded p-8 lg:p-10 reveal">
+        <h2 class="font-heading font-semibold text-2xl lg:text-3xl">Create your dream home.</h2>
+        <p class="mt-4 text-white/90">Call John Tortorigi or send a note. We will talk through your plans and your lot.</p>
+        <a href="tel:8136954760" class="mt-6 inline-block font-heading font-semibold text-xl underline underline-offset-4">(813) 695-4760</a>
+        <a href="#contact" class="mt-6 block bg-white text-brand-dark font-heading font-medium text-center px-6 py-3.5 rounded hover:bg-cream transition">Request an estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(94,122,31,0.10);color:#5e7a1f}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#b7c39a}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(79,122,30,0.10);color:#4f7a1e}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#b0c39a}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -274,16 +263,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#5e7a1f;box-shadow:0 0 0 4px rgba(94,122,31,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#5e7a1f;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#4f7a1e;box-shadow:0 0 0 4px rgba(79,122,30,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#4f7a1e;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -293,13 +282,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1693639385915-d7a7ddefe8e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/photo-13.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#b7c39a">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your new home, addition or remodel and we will get back to you.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#b0c39a">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your home, addition or remodel and we will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18136954760" class="lp-v lp-v-d">(813) 695-4760</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -313,7 +302,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>New custom home</option><option>Home addition</option><option>Home remodeling</option><option>Kitchen remodel</option><option>Bathroom remodel</option><option>Interior remodeling</option><option>Help finding a lot</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>New custom home</option><option>Home addition</option><option>Kitchen remodel</option><option>Bathroom remodel</option><option>Interior remodeling</option><option>Other</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -323,40 +312,45 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-</main>
-
-<!-- Footer -->
-<footer class="bg-ink text-white/75">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-5">
-      <div class="inline-block bg-white rounded px-3 py-2">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/marc-anthony-builders-inc/21943/logo-0.png" alt="Marc Anthony Builders" class="h-12 w-auto">
-      </div>
-      <p class="mt-5 max-w-sm text-[15px]">Award-winning Plan ~ Design ~ Build custom builder serving the Tampa Bay area.</p>
+<!-- FOOTER -->
+<footer class="bg-brand-dark text-white/80">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="bg-white rounded inline-block p-3"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/marc-anthony-builders-inc/21949/logo-0.png" alt="Marc Anthony Builders" class="h-12 w-auto"></div>
+      <p class="mt-5 text-sm text-white/70">Plan, design, build. Custom homes, additions and remodeling across the Tampa Bay area.</p>
     </div>
-    <div class="md:col-span-3">
-      <h4 class="text-white font-semibold text-lg mb-4">Explore</h4>
-      <ul class="space-y-2 text-[15px]">
+    <div>
+      <h4 class="font-heading font-semibold text-white text-lg">Explore</h4>
+      <ul class="mt-4 space-y-2 text-sm">
         <li><a href="#about" class="hover:text-white">About</a></li>
         <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#projects" class="hover:text-white">Projects</a></li>
+        <li><a href="#projects" class="hover:text-white">Finished projects</a></li>
         <li><a href="#contact" class="hover:text-white">Contact</a></li>
       </ul>
     </div>
-    <div class="md:col-span-4">
-      <h4 class="text-white font-semibold text-lg mb-4">Contact</h4>
-      <ul class="space-y-2 text-[15px]">
+    <div>
+      <h4 class="font-heading font-semibold text-white text-lg">Services</h4>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li>New custom homes</li>
+        <li>Home additions</li>
+        <li>Kitchens</li>
+        <li>Bathrooms</li>
+        <li>Interior remodeling</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-heading font-semibold text-white text-lg">Contact</h4>
+      <ul class="mt-4 space-y-2 text-sm">
         <li>Owner: John Tortorigi</li>
         <li><a href="tel:8136954760" class="hover:text-white">(813) 695-4760</a></li>
         <li><a href="mailto:info@marcanthonybuilders.com" class="hover:text-white break-words">info@marcanthonybuilders.com</a></li>
-        <li>P.O. Box 8531, Madeira Beach, FL</li>
+        <li>P.O. Box 8531<br>Madeira Beach, FL</li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/55 space-y-1">
-      <p>Concept redesign by LumeaPixel. This is not the official Marc Anthony Builders, Inc. website.</p>
-      <p>Some photos by Troy Mortier, Kier in Sight Archives, Ernie Journeys, Eric Ardito, Roger Starnes Sr, Samuel Cruz and Avel Chuklanov on Unsplash.</p>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/55">
+      Concept redesign by LumeaPixel. This is not the official Marc Anthony Builders, Inc. website.
     </div>
   </div>
 </footer>
@@ -365,7 +359,7 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  document.querySelectorAll('.mm').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

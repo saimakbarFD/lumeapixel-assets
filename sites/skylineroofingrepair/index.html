@@ -4,78 +4,78 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Skyline Roofing Repair | Roof Repair & Replacement in Tampa, FL</title>
+<title>Skyline Roofing Repair | Roof Repair and Replacement in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#1e3a8a',
-        'brand-dark': '#12255c',
-        'brand-deep': '#0b1a45',
-        ink: '#0f172a',
-        cream: '#f6f3ec',
-        mist: '#f4f6fa'
+        brand: '#0b4f8f',
+        ink: '#0a2540',
+        tint: '#e8f0f8',
+        paper: '#f6f7f8'
       },
-      fontFamily: {
-        heading: ['Montserrat', 'sans-serif'],
-        body: ['Poppins', 'sans-serif']
-      },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { 'site': '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Poppins', sans-serif; color: #0f172a; font-size: 16px; line-height: 1.6; }
-  h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; line-height: 1.12; letter-spacing: -0.01em; }
+  body { font-family: 'Poppins', sans-serif; color: #0a2540; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile img { transition: transform .8s ease; }
-  .tile:hover img { transform: scale(1.04); }
-  section[id] { scroll-margin-top: 84px; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .tile img { transition: none; } }
+  @keyframes scrollLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes scrollRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .marquee-left { animation: scrollLeft 50s linear infinite; }
+  .marquee-right { animation: scrollRight 56s linear infinite; }
+  .marquee-wrap:hover .marquee-left, .marquee-wrap:hover .marquee-right { animation-play-state: paused; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .25s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-left, .marquee-right { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white antialiased">
+<body class="bg-white">
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between">
-    <a href="#top" class="font-heading font-bold text-brand text-lg sm:text-xl tracking-tight leading-none">
-      Skyline <span class="text-ink">Roofing Repair</span>
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/skyline-roofing-repair/21949/logo-0.png" alt="Skyline Roofing Repair" class="h-14 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-slate-700">
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-ink/80">
+      <a href="#how" class="hover:text-brand">How it works</a>
       <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#faq" class="hover:text-brand">Questions</a>
       <a href="#projects" class="hover:text-brand">Projects</a>
-      <a href="#about" class="hover:text-brand">Why Us</a>
-      <a href="#areas" class="hover:text-brand">Areas</a>
       <a href="#contact" class="hover:text-brand">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:8137763425" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white text-[15px] font-semibold px-5 py-3 rounded transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        (813) 776-3425
+      <a href="tel:8137763425" class="inline-flex items-center gap-2 bg-brand text-white text-sm font-medium px-4 sm:px-5 py-3 rounded-full hover:bg-ink transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="hidden sm:inline">(813) 776-3425</span><span class="sm:hidden">Call</span>
       </a>
-      <a href="tel:8137763425" class="sm:hidden inline-flex items-center justify-center bg-brand text-white w-11 h-11 rounded" aria-label="Call (813) 776-3425">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 inline-flex items-center justify-center border border-slate-300 rounded" aria-label="Open menu" aria-expanded="false">
+      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full border border-black/10 flex items-center justify-center" aria-label="Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileNav" class="hidden lg:hidden border-t border-slate-200 bg-white">
-    <div class="px-5 py-4 flex flex-col gap-1 text-[16px] font-medium">
-      <a href="#services" class="py-3 border-b border-slate-100">Services</a>
-      <a href="#projects" class="py-3 border-b border-slate-100">Projects</a>
-      <a href="#about" class="py-3 border-b border-slate-100">Why Us</a>
-      <a href="#areas" class="py-3 border-b border-slate-100">Areas</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-base">
+      <a href="#how" class="py-3">How it works</a>
+      <a href="#services" class="py-3">Services</a>
+      <a href="#faq" class="py-3">Questions</a>
+      <a href="#projects" class="py-3">Projects</a>
       <a href="#contact" class="py-3">Contact</a>
     </div>
   </div>
@@ -84,181 +84,107 @@ tailwind.config = {
 <main id="top">
 
 <!-- Hero -->
-<section class="relative">
-  <div class="relative min-h-[640px] lg:min-h-[720px] flex items-center">
-    <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers laying new roof tiles on a house" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-ink/65"></div>
-    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-20 pb-40 lg:pb-44">
-      <p class="text-sm tracking-[0.2em] uppercase text-white/80 mb-6">Tampa, Florida</p>
-      <h1 class="font-heading font-semibold text-4xl sm:text-5xl lg:text-6xl">Roof repair and replacement<br class="hidden sm:block"> for Tampa Bay homes</h1>
-      <p class="mt-6 text-lg text-white/85 max-w-2xl mx-auto">Repairs, installations and maintenance for residential and commercial roofs, with 24/7 emergency response when a storm hits.</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="bg-brand hover:bg-brand-dark text-white font-semibold px-8 py-4 rounded transition border border-brand">Get a free inspection</a>
-        <a href="tel:8137763425" class="border border-white text-white hover:bg-white hover:text-ink font-semibold px-8 py-4 rounded transition">Call (813) 776-3425</a>
+<section class="px-3 sm:px-5 pt-3 sm:pt-5">
+  <div class="relative max-w-[1400px] mx-auto rounded-site overflow-hidden bg-ink">
+    <img src="https://images.unsplash.com/photo-1728257471500-4bacef65a2c6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Residential roofs with dormer windows under a clear sky" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/10"></div>
+    <div class="relative px-6 sm:px-10 lg:px-16 py-14 sm:py-20 lg:py-24 min-h-[640px] flex flex-col justify-between gap-12">
+      <div class="max-w-2xl">
+        <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-medium leading-[1.08] tracking-tight">Roof repair that<br>holds up in Tampa<br>Bay weather.</h1>
+        <p class="mt-6 text-white/85 text-lg max-w-md">Repairs, replacements and 24/7 emergency service for homes and businesses across Tampa Bay.</p>
       </div>
-    </div>
-  </div>
-  <!-- Trust strip -->
-  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20 z-10">
-    <div class="bg-white border border-slate-200 rounded shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="flex items-start gap-4 p-6 border-b sm:border-r border-slate-200 lg:border-b-0">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
-        <div><p class="font-heading font-semibold">Licensed &amp; insured</p><p class="text-sm text-slate-600">Bonded for your protection</p></div>
-      </div>
-      <div class="flex items-start gap-4 p-6 border-b lg:border-r border-slate-200 lg:border-b-0">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <div><p class="font-heading font-semibold">24/7 emergency repairs</p><p class="text-sm text-slate-600">Storm damage and leaks</p></div>
-      </div>
-      <div class="flex items-start gap-4 p-6 border-b sm:border-r border-slate-200 sm:border-b-0">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
-        <div><p class="font-heading font-semibold">15+ years of experience</p><p class="text-sm text-slate-600">Florida weather, handled</p></div>
-      </div>
-      <div class="flex items-start gap-4 p-6">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        <div><p class="font-heading font-semibold">Serving all of Tampa Bay</p><p class="text-sm text-slate-600">Free roof inspection</p></div>
+      <div class="bg-white rounded-site p-6 sm:p-7 max-w-md">
+        <p class="text-xl font-medium">Get a free estimate</p>
+        <div class="mt-4 flex flex-col sm:flex-row gap-3">
+          <a href="tel:8137763425" class="inline-flex items-center justify-center gap-2 bg-brand text-white font-medium px-5 py-3.5 rounded-full hover:bg-ink transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            (813) 776-3425
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center bg-tint text-ink font-medium px-5 py-3.5 rounded-full hover:bg-brand hover:text-white transition-colors">Request online</a>
+        </div>
+        <p class="mt-4 text-sm text-ink/60">24/7 emergency repairs. Serving Tampa and the Tampa Bay area.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="py-24 lg:py-32">
+<!-- How it works -->
+<section id="how" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.18em] uppercase text-brand font-semibold mb-4">Services</p>
-      <h2 class="font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl">What we roof in Tampa</h2>
-      <p class="mt-5 text-lg text-slate-600">Roofing solutions for homes and commercial properties, from a single leak to a full replacement.</p>
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-medium">The process</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">How Skyline Roofing Repair works</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5">
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1643155316153-bce5d5f55d34?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Gabled home roofs with dormer windows" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Residential Roofing</h3><p class="text-sm text-white/85 mt-1">Installation, repair and replacement</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1777919393762-2be32d198c62?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a flat roof structure" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Commercial Roofing</h3><p class="text-sm text-white/85 mt-1">Businesses, warehouses and commercial properties</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Workers on a house roof under grey skies" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Emergency Repairs</h3><p class="text-sm text-white/85 mt-1">24/7 response for storm damage and leaks</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1597245289444-700c59bce206?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Slate roof with dormers against a blue sky" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Roof Replacement</h3><p class="text-sm text-white/85 mt-1">Complete tear-off and new roof</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1681365957051-08bd5c9a0286?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Clay tile roof sections seen from above" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Tile Roofing</h3><p class="text-sm text-white/85 mt-1">Quality materials, expert craftsmanship</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1789684290015-1231896d5549?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof peak and skylight at sunset" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Maintenance &amp; Inspection</h3><p class="text-sm text-white/85 mt-1">Free roof inspection and estimate</p></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Split: about -->
-<section id="about" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two roofers installing tiles on a new roof frame" class="w-full h-full object-cover">
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-site overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1787672358119-25cb4c768d14?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof on a brick home" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <h3 class="mt-5 text-xl font-semibold">1. Call us</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">Tell us what is going on with your roof. We respond quickly for inspections and emergency repairs.</p>
       </div>
-    </div>
-    <div class="lg:col-span-6 reveal">
-      <p class="text-sm tracking-[0.18em] uppercase text-brand font-semibold mb-4">Why Skyline</p>
-      <h2 class="font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl">Why Tampa homeowners choose Skyline</h2>
-      <p class="mt-6 text-lg text-slate-600">We are fully licensed, bonded and insured, with more than 15 years of experience protecting Tampa homes from Florida's weather.</p>
-      <p class="mt-4 text-lg text-slate-600">Our team responds quickly for inspections and emergency repairs, and we install premium, manufacturer-approved materials backed by strong warranties.</p>
-      <a href="#contact" class="inline-block mt-8 bg-brand hover:bg-brand-dark text-white font-semibold px-8 py-4 rounded transition">Request an inspection</a>
-    </div>
-  </div>
-</section>
-
-<!-- Reverse split: process / response -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <p class="text-sm tracking-[0.18em] uppercase text-brand font-semibold mb-4">Fast response</p>
-      <h2 class="font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl">Storm damage can't wait</h2>
-      <p class="mt-6 text-lg text-slate-600">When a heavy storm leaves a leak or missing shingles, a quick response protects the rest of your home. We are available around the clock for urgent roof repairs across Tampa Bay.</p>
-      <ul class="mt-6 space-y-3 text-slate-700">
-        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>24/7 emergency roof repair</li>
-        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Leak and storm damage repair</li>
-        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Free roof inspection and estimate</li>
-      </ul>
-      <a href="tel:8137763425" class="inline-block mt-8 bg-brand hover:bg-brand-dark text-white font-semibold px-8 py-4 rounded transition">Call (813) 776-3425</a>
-    </div>
-    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1751066007385-392d684fd7c6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Tiled roof ridge and eaves of a house" class="w-full h-full object-cover">
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-site overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two workers inspecting a house roof" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <h3 class="mt-5 text-xl font-semibold">2. Free inspection and estimate</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">We look over the roof and give you a free estimate, so you know what needs fixing and what it takes.</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-site overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1643155316153-bce5d5f55d34?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished roof with white trim and dormers" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <h3 class="mt-5 text-xl font-semibold">3. We do the work</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">Our crew repairs or replaces the roof with manufacturer-approved materials and cleans up when the job is done.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="pb-24 lg:pb-32">
+<!-- Services tiles -->
+<section id="services" class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.18em] uppercase text-brand font-semibold mb-4">Recent projects</p>
-      <h2 class="font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl">Roofs we've finished across Tampa</h2>
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-medium">Services</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">More than just roof repair</h2>
     </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-      <figure class="tile relative overflow-hidden rounded aspect-[4/5] reveal">
-        <img src="https://images.unsplash.com/photo-1643155316153-bce5d5f55d34?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Modern home roof" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 right-4 text-white"><p class="font-heading font-semibold">Modern Home Roof</p><p class="text-sm text-white/80">Tampa Palms</p></figcaption>
-      </figure>
-      <figure class="tile relative overflow-hidden rounded aspect-[4/5] reveal">
-        <img src="https://images.unsplash.com/photo-1715207422537-2549c75846b7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Beach house roof gable" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 right-4 text-white"><p class="font-heading font-semibold">Beach House Roof</p><p class="text-sm text-white/80">Clearwater Beach</p></figcaption>
-      </figure>
-      <figure class="tile relative overflow-hidden rounded aspect-[4/5] reveal col-span-2 lg:col-span-1 !aspect-[16/10] lg:!aspect-[4/5]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/skyline-roofing-repair/21943/photo-4.jpg" alt="Commercial building interior corridor" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 right-4 text-white"><p class="font-heading font-semibold">Commercial Building</p><p class="text-sm text-white/80">Downtown Tampa</p></figcaption>
-      </figure>
-      <figure class="tile relative overflow-hidden rounded aspect-[4/5] reveal">
-        <img src="https://images.unsplash.com/photo-1777919393762-2be32d198c62?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Office complex roof work" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 right-4 text-white"><p class="font-heading font-semibold">Office Complex</p><p class="text-sm text-white/80">Westshore District</p></figcaption>
-      </figure>
-      <figure class="tile relative overflow-hidden rounded aspect-[4/5] reveal">
-        <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Storm damage repair in progress" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 right-4 text-white"><p class="font-heading font-semibold">Storm Damage Repair</p><p class="text-sm text-white/80">Brandon, FL</p></figcaption>
-      </figure>
-      <figure class="tile relative overflow-hidden rounded aspect-[4/5] reveal">
-        <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Complete roof replacement underway" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 right-4 text-white"><p class="font-heading font-semibold">Complete Replacement</p><p class="text-sm text-white/80">Wesley Chapel</p></figcaption>
-      </figure>
+    <div class="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
+      <div class="reveal">
+        <div class="aspect-square rounded-site overflow-hidden"><img src="https://images.unsplash.com/photo-1789683037479-44602dbee028?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Residential roofing" class="w-full h-full object-cover" loading="lazy"></div>
+        <p class="mt-3 text-sm font-medium">Residential roofing</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-square rounded-site overflow-hidden"><img src="https://images.unsplash.com/photo-1727777266423-6a33048e4894?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof installation" class="w-full h-full object-cover" loading="lazy"></div>
+        <p class="mt-3 text-sm font-medium">Roof installation</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-square rounded-site overflow-hidden"><img src="https://images.unsplash.com/photo-1787672358119-25cb4c768d14?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Commercial roofing" class="w-full h-full object-cover" loading="lazy"></div>
+        <p class="mt-3 text-sm font-medium">Commercial roofing</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-square rounded-site overflow-hidden"><img src="https://images.unsplash.com/photo-1653870258161-0293fcefa31b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Emergency repairs" class="w-full h-full object-cover" loading="lazy"></div>
+        <p class="mt-3 text-sm font-medium">Emergency repairs</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-square rounded-site overflow-hidden"><img src="https://images.unsplash.com/photo-1718411774135-c7168b3ca794?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof replacement" class="w-full h-full object-cover" loading="lazy"></div>
+        <p class="mt-3 text-sm font-medium">Roof replacement</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-square rounded-site overflow-hidden"><img src="https://images.unsplash.com/photo-1727777266423-6a33048e4894?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof maintenance" class="w-full h-full object-cover object-top" loading="lazy"></div>
+        <p class="mt-3 text-sm font-medium">Roof maintenance</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Service areas cream panel -->
-<section id="areas" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="bg-cream rounded px-6 py-16 lg:py-20 text-center reveal">
-      <p class="text-sm tracking-[0.18em] uppercase text-brand font-semibold mb-4">Service areas</p>
-      <h2 class="font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl max-w-3xl mx-auto">Serving all of Tampa Bay</h2>
-      <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">Tampa, St. Petersburg, Clearwater, Brandon, Riverview, Wesley Chapel, Lakeland and many more.</p>
-      <a href="#contact" class="inline-block mt-8 bg-brand hover:bg-brand-dark text-white font-semibold px-8 py-4 rounded transition">Check your area</a>
-    </div>
+<!-- Photo band -->
+<section class="px-3 sm:px-5 pb-24 lg:pb-32">
+  <div class="max-w-[1400px] mx-auto aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] rounded-site overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1768123927068-06de1b3a323e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Tile roof gable against a blue sky" class="w-full h-full object-cover" loading="lazy">
   </div>
 </section>
 
-<!-- Reviews -->
+<!-- Reviews placeholder -->
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -301,8 +227,18 @@ tailwind.config = {
       <div class="ti-track">
         <article class="ti-card">
           <div class="ti-head">
-            <span class="ti-avatar" style="background:#f4511e">J</span>
-            <span class="ti-who"><span class="ti-name">James T., Clearwater</span></span>
+            <span class="ti-avatar" style="background:#f4511e">C</span>
+            <span class="ti-who"><span class="ti-name">Customer</span></span>
+            
+          </div>
+          
+          <p class="ti-text">Skyline Roofing Repair did an outstanding job replacing our roof after hurricane damage. Professional, efficient, and the quality is exceptional. Highly recommend!</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#7b1fa2">J</span>
+            <span class="ti-who"><span class="ti-name">James T.</span></span>
             
           </div>
           
@@ -311,8 +247,8 @@ tailwind.config = {
         </article>
         <article class="ti-card">
           <div class="ti-head">
-            <span class="ti-avatar" style="background:#1e88e5">R</span>
-            <span class="ti-who"><span class="ti-name">Robert K., St. Petersburg</span></span>
+            <span class="ti-avatar" style="background:#7b1fa2">R</span>
+            <span class="ti-who"><span class="ti-name">Robert K.</span></span>
             
           </div>
           
@@ -334,17 +270,130 @@ tailwind.config = {
   })();</script>
 </section>
 
-<!-- Final call -->
+<!-- Statement -->
 <section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 items-center">
-    <div class="lg:col-span-7 aspect-[4/3] lg:aspect-auto lg:h-[520px] overflow-hidden rounded">
-      <img src="https://images.unsplash.com/photo-1597245289444-700c59bce206?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Slate roof with chimney and dormer windows" class="w-full h-full object-cover">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-3xl sm:text-4xl lg:text-6xl font-light leading-[1.15] tracking-tight text-ink">Professional roofing repairs, installations and maintenance for homes and businesses across Tampa Bay.</p>
+  </div>
+</section>
+
+<!-- Marquee pills -->
+<section class="pb-24 lg:pb-32">
+  <div class="marquee-wrap overflow-hidden space-y-4">
+    <div class="flex w-max marquee-left gap-3 pr-3">
+      <div class="flex gap-3 shrink-0">
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Residential roofing</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Commercial roofing</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24/7 emergency repairs</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Storm damage repair</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Complete roof replacement</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free roof inspection</span>
+      </div>
+      <div class="flex gap-3 shrink-0" aria-hidden="true">
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Residential roofing</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Commercial roofing</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24/7 emergency repairs</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Storm damage repair</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Complete roof replacement</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free roof inspection</span>
+      </div>
     </div>
-    <div class="lg:col-span-5 relative z-10 bg-brand text-white rounded p-8 lg:p-12 lg:-ml-24 -mt-10 mx-4 lg:mx-0 lg:mt-0">
-      <h2 class="font-heading font-semibold text-3xl lg:text-4xl">Get a free roof inspection</h2>
-      <p class="mt-5 text-white/85 text-lg">Tell us about your roof and we'll come out, take a look and give you a clear estimate.</p>
-      <a href="tel:8137763425" class="block mt-8 font-heading font-semibold text-2xl">(813) 776-3425</a>
-      <a href="#contact" class="inline-block mt-6 bg-white text-brand hover:bg-cream font-semibold px-8 py-4 rounded transition">Request an estimate</a>
+    <div class="flex w-max marquee-right gap-3 pr-3">
+      <div class="flex gap-3 shrink-0">
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>15+ years of experience</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed, bonded and insured</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fast response times</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Manufacturer-approved materials</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Serving Tampa Bay</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free estimates</span>
+      </div>
+      <div class="flex gap-3 shrink-0" aria-hidden="true">
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>15+ years of experience</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed, bonded and insured</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fast response times</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Manufacturer-approved materials</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Serving Tampa Bay</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3.5 text-sm whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free estimates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5 reveal">
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-medium">FAQ</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">Questions, answered</h2>
+      <p class="mt-5 text-ink/70 text-lg max-w-md">Something else on your mind? Call <a href="tel:8137763425" class="text-brand font-medium">(813) 776-3425</a>.</p>
+    </div>
+    <div class="lg:col-span-7 space-y-3 reveal">
+      <details class="group bg-paper rounded-site px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Do you offer emergency roof repairs?<span class="plus text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70 leading-relaxed">Yes. We handle 24/7 emergency roof repairs for storm damage, leaks and other urgent roofing issues in the Tampa area.</p>
+      </details>
+      <details class="group bg-paper rounded-site px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Do you work on both homes and businesses?<span class="plus text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70 leading-relaxed">Yes. We do residential roofing as well as commercial roofing for businesses, warehouses and commercial properties throughout Tampa Bay.</p>
+      </details>
+      <details class="group bg-paper rounded-site px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Is the inspection and estimate free?<span class="plus text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70 leading-relaxed">Yes. Get in touch for a free roof inspection and estimate.</p>
+      </details>
+      <details class="group bg-paper rounded-site px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Are you licensed and insured?<span class="plus text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70 leading-relaxed">Yes. We are fully licensed, bonded and insured for your complete protection and peace of mind.</p>
+      </details>
+      <details class="group bg-paper rounded-site px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">What materials do you use?<span class="plus text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70 leading-relaxed">We use only premium, manufacturer-approved materials with strong warranties.</p>
+      </details>
+      <details class="group bg-paper rounded-site px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Which areas do you serve?<span class="plus text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70 leading-relaxed">We serve Tampa, St. Petersburg, Clearwater, Brandon, Riverview, Wesley Chapel, Lakeland and many more areas across Tampa Bay.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-medium">Recent projects</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">Roofs we have worked on across Tampa</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="bg-paper rounded-site overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1789683037479-44602dbee028?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Modern home with a metal roof" class="w-full h-full object-cover" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Tampa Palms</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Modern Home Roof</h3>
+          <p class="mt-2 text-ink/70">Residential roofing in Tampa Palms.</p>
+        </div>
+      </article>
+      <article class="bg-paper rounded-site overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1787672358119-25cb4c768d14?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof on a large building" class="w-full h-full object-cover" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Downtown Tampa</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Commercial Building</h3>
+          <p class="mt-2 text-ink/70">Durable roofing for commercial properties.</p>
+        </div>
+      </article>
+      <article class="bg-paper rounded-site overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a damaged roof" class="w-full h-full object-cover" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Brandon, FL</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Storm Damage Repair</h3>
+          <p class="mt-2 text-ink/70">Fast repairs after severe weather.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -353,8 +402,8 @@ tailwind.config = {
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(30,58,138,0.10);color:#1e3a8a}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#9aa6ca}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(11,79,143,0.10);color:#0b4f8f}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#91b0cd}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -365,16 +414,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#1e3a8a;box-shadow:0 0 0 4px rgba(30,58,138,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#1e3a8a;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#0b4f8f;box-shadow:0 0 0 4px rgba(11,79,143,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#0b4f8f;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -385,21 +434,21 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#1e3a8a">Contact</p><h2 class="lp-h" style="color:#171717">Request a free roof inspection</h2><p class="lp-p" style="color:#525252">Tell us what's going on with your roof and we'll get back to you with a free inspection and estimate.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#0b4f8f">Contact</p><h2 class="lp-h" style="color:#171717">Request a free roof inspection and estimate</h2><p class="lp-p" style="color:#525252">Tell us about your roof and we will get back to you about a free inspection.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+18137763425" class="lp-v">(813) 776-3425</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:info@skylineroofingrepair.com" class="lp-v">info@skylineroofingrepair.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Tampa, FL</span></span></li>
-        </ul></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:12px;background:#ddd url('https://images.unsplash.com/photo-1718411774135-c7168b3ca794?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Residential Roofing</option><option>Commercial Roofing</option><option>Emergency Repairs</option><option>Roof Replacement</option><option>Tile Roofing</option><option>Maintenance &amp; Inspection</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Residential Roofing</option><option>Commercial Roofing</option><option>Emergency Repairs</option><option>Roof Replacement</option><option>Roof Maintenance</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -412,52 +461,59 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-brand-deep text-white/80">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-20 pb-10">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-      <div>
-        <p class="font-heading font-bold text-white text-xl leading-tight">Skyline Roofing Repair</p>
-        <p class="mt-4 text-sm leading-relaxed">Roof repair, installation and maintenance for homes and businesses across Tampa Bay.</p>
+<footer class="bg-paper border-t border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/skyline-roofing-repair/21949/logo-0.png" alt="Skyline Roofing Repair" class="h-14 w-auto">
+        <p class="mt-6"><a href="tel:8137763425" class="text-xl font-medium text-brand">(813) 776-3425</a></p>
+        <p class="mt-2 text-sm"><a href="mailto:info@skylineroofingrepair.com" class="text-ink/70 break-words">info@skylineroofingrepair.com</a></p>
+        <p class="mt-2 text-sm text-ink/70">Tampa, FL</p>
       </div>
-      <div>
-        <p class="font-heading font-semibold text-white mb-4">Services</p>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#services" class="hover:text-white">Residential Roofing</a></li>
-          <li><a href="#services" class="hover:text-white">Commercial Roofing</a></li>
-          <li><a href="#services" class="hover:text-white">Emergency Repairs</a></li>
-          <li><a href="#services" class="hover:text-white">Roof Replacement</a></li>
+      <div class="lg:col-span-2">
+        <p class="text-sm font-semibold mb-4">Company</p>
+        <ul class="space-y-3 text-sm text-ink/70">
+          <li><a href="#how" class="hover:text-brand">How it works</a></li>
+          <li><a href="#services" class="hover:text-brand">Services</a></li>
+          <li><a href="#projects" class="hover:text-brand">Projects</a></li>
+          <li><a href="#faq" class="hover:text-brand">Questions</a></li>
         </ul>
       </div>
-      <div>
-        <p class="font-heading font-semibold text-white mb-4">Areas</p>
-        <ul class="space-y-2 text-sm">
-          <li>Tampa</li><li>St. Petersburg</li><li>Clearwater</li><li>Brandon</li><li>Wesley Chapel</li>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold mb-4">Services</p>
+        <ul class="space-y-3 text-sm text-ink/70">
+          <li>Residential roofing</li>
+          <li>Commercial roofing</li>
+          <li>Emergency repairs</li>
+          <li><a href="#contact" class="hover:text-brand">Free estimate</a></li>
         </ul>
       </div>
-      <div>
-        <p class="font-heading font-semibold text-white mb-4">Contact</p>
-        <ul class="space-y-2 text-sm">
-          <li><a href="tel:8137763425" class="hover:text-white">(813) 776-3425</a></li>
-          <li><a href="mailto:info@skylineroofingrepair.com" class="hover:text-white break-words">info@skylineroofingrepair.com</a></li>
-          <li>Tampa, FL</li>
+      <div class="lg:col-span-3">
+        <p class="text-sm font-semibold mb-4">Service areas</p>
+        <ul class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-ink/70">
+          <li>Tampa</li>
+          <li>St. Petersburg</li>
+          <li>Clearwater</li>
+          <li>Brandon</li>
+          <li>Riverview</li>
+          <li>Wesley Chapel</li>
+          <li>Lakeland</li>
+          <li>And many more</li>
         </ul>
       </div>
     </div>
-    <div class="mt-14 pt-8 border-t border-white/15 text-xs text-white/60 space-y-2">
+    <div class="mt-14 pt-6 border-t border-black/10 text-xs text-ink/55 space-y-2">
       <p>Concept redesign by LumeaPixel. This is not the official Skyline Roofing Repair website.</p>
-      <p>Some photos by Srinivasan Venkataraman, Phil Desforges, Mr Xerty, Mario Amé, Ben Koorengevel, Hedwin Hu, Christian Miranda, Gallant Haykan and Sergej on Unsplash.</p>
+      <p>Some photos by Tory Hoffman, Christian Miranda, Divaris Shirichena, Christian Harb, Mario Amé, Roger Starnes Sr, Norbert Buduczki and Allen Y on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
   const btn = document.getElementById('menuBtn');
-  const nav = document.getElementById('mobileNav');
-  btn.addEventListener('click', () => {
-    const open = nav.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', open);
-  });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.add('hidden'); btn.setAttribute('aria-expanded', false); }));
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

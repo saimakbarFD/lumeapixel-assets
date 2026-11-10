@@ -7,204 +7,220 @@
 <title>Bay To Bay Paving LLC | Asphalt Paving in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { head: ['Outfit','sans-serif'], body: ['Inter','sans-serif'] },
+      fontFamily: { sans: ['Outfit', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#e4579f',
-        ink: '#14101a',
-        plum: '#2a1033',
-        sky: '#4fb4e6',
-        paper: '#f6f4f5',
-        mist: '#ebe8ea'
+        brand: '#d9479b',
+        brandDark: '#2a1226',
+        ink: '#0f0d10',
+        sky: '#4fc8ef'
       },
-      borderRadius: { DEFAULT: '20px' }
+      borderRadius: { DEFAULT: '14px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #14101a; }
-  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
+  body { font-family: 'Outfit', sans-serif; color: #1c1a1d; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .r { border-radius: 20px; }
-  .photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .r { border-radius: 14px; }
+  .arrow-link:hover svg { transform: translateX(4px); }
+  .arrow-link svg { transition: transform .2s ease; }
   section[id] { scroll-margin-top: 90px; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-mist">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="flex items-center shrink-0">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/bay-to-bay-paving-llc/21943/logo-0.png" alt="Bay To Bay Paving" class="h-14 w-auto">
-    </a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#process" class="hover:text-brand transition">How it works</a>
-      <a href="#gallery" class="hover:text-brand transition">Gallery</a>
-      <a href="#about" class="hover:text-brand transition">About</a>
-      <a href="#contact" class="hover:text-brand transition">Contact</a>
-    </nav>
-    <div class="flex items-center gap-3">
-      <a href="tel:+18134007135" class="inline-flex items-center gap-2 bg-brand text-white font-semibold px-4 sm:px-5 py-3 r hover:bg-plum transition text-sm sm:text-[15px]">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span>(813) 400-7135</span>
-      </a>
-      <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
+<!-- Top bar -->
+<div class="bg-brand text-white text-sm">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <span>Serving Tampa, FL and surrounding areas</span>
+    <a href="mailto:info@baytobaypavingfl.com" class="hover:underline break-words">info@baytobaypavingfl.com</a>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-mist bg-white">
-    <div class="px-5 py-4 flex flex-col gap-4 font-medium">
-      <a href="#services">Services</a>
-      <a href="#process">How it works</a>
-      <a href="#gallery">Gallery</a>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/logo-0.png" alt="Bay To Bay Paving" class="h-14 w-auto"></a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-white/85">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#services" class="hover:text-white">Services</a>
+      <a href="#gallery" class="hover:text-white">Gallery</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-5">
+      <div class="text-right leading-tight hidden xl:block">
+        <div class="text-xs text-white/60">Need help? Call us today</div>
+        <a href="tel:+18134007135" class="font-semibold">(813) 400-7135</a>
+      </div>
+      <a href="tel:+18134007135" class="xl:hidden font-semibold">(813) 400-7135</a>
+      <a href="#contact" class="bg-brand hover:bg-[#c23a89] transition text-white font-semibold px-5 py-3 rounded-full text-[15px]">Free estimate</a>
+    </div>
+    <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
+    <div class="px-5 py-5 flex flex-col gap-4 text-lg">
       <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
+      <a href="tel:+18134007135" class="bg-brand text-white font-semibold text-center py-3 rounded-full">Call (813) 400-7135</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1. Hero -->
-<section class="pt-14 lg:pt-20 pb-16 lg:pb-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-      <div class="lg:col-span-7">
-        <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-5">Tampa, Florida</p>
-        <h1 class="text-[2.6rem] sm:text-6xl lg:text-7xl font-medium">Paving done right,<br>across <strong class="font-bold">Tampa</strong> Bay.</h1>
-      </div>
-      <div class="lg:col-span-5">
-        <p class="text-lg text-ink/75">Asphalt paving, sealcoating, base and grading, and striping for homes, businesses and industrial sites. Family owned, with more than 20 years of experience in the asphalt trade.</p>
+<!-- Hero -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-19.jpg" alt="Freshly sealcoated residential street in Florida" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/75 to-ink/30"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.08] tracking-tight">Asphalt paving for Tampa, done right the first time.</h1>
+      <p class="mt-6 text-lg md:text-xl text-white/80 leading-relaxed">Asphalt paving, sealcoating, base and grading, and striping for homes and businesses in Tampa and the surrounding areas.</p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="#contact" class="bg-brand hover:bg-[#c23a89] transition text-white font-semibold px-7 py-4 rounded-full">Get a free estimate</a>
+        <a href="#services" class="bg-white hover:bg-white/90 transition text-ink font-semibold px-7 py-4 rounded-full">Our services</a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mt-12">
-      <div class="md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[460px] overflow-hidden r">
-        <img src="https://images.unsplash.com/photo-1693019108329-1889fb170f2e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paving crew with paver and roller on a Tampa street" class="photo">
-      </div>
-      <div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5 md:h-[460px]">
-        <div class="grid grid-rows-[1fr_auto] gap-4">
-          <div class="aspect-[16/10] md:aspect-auto md:min-h-0 overflow-hidden r">
-            <img src="https://images.unsplash.com/photo-1779384896076-51cbd33c36ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roller compacting fresh asphalt" class="photo">
-          </div>
-          <a href="#contact" class="bg-brand text-white font-semibold text-center py-4 r hover:bg-plum transition">Get a free estimate</a>
+<!-- Difference / About -->
+<section id="about" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+    <div class="lg:col-span-6 reveal">
+      <p class="text-sm font-semibold tracking-[0.18em] uppercase text-brand">The Bay To Bay difference</p>
+      <h2 class="mt-4 text-4xl md:text-5xl font-semibold leading-[1.1] tracking-tight text-ink">Family owned asphalt pros with over 20 years of experience.</h2>
+
+      <div class="mt-12 grid grid-cols-6 gap-4 items-center">
+        <div class="col-span-3">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-16.jpg" alt="Crew preparing a road surface" class="r w-full aspect-[4/5] object-cover">
         </div>
-        <div class="bg-paper r p-7 flex flex-col justify-between">
-          <p class="text-xs uppercase tracking-[0.2em] text-ink/60 font-semibold">Hours of operation</p>
-          <div>
-            <p class="font-head text-3xl font-medium">Mon – Sun</p>
-            <p class="font-head text-3xl font-medium text-brand">9:00 AM – 5:00 PM</p>
+        <div class="col-span-3 grid gap-4">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-11.jpg" alt="Measuring fresh asphalt depth" class="r w-full aspect-[4/3] object-cover">
+          <div class="r bg-brand text-white p-6 min-h-[140px] flex items-end">
+            <p class="text-xl md:text-2xl font-semibold leading-snug">No job too big or too small.</p>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="lg:col-span-6 reveal">
+      <p class="text-lg text-neutral-600 leading-relaxed">Bay To Bay Paving is family owned and operated. We serve residential, commercial and industrial clients, with high quality materials and workmanship and a goal of long lasting relationships.</p>
+      <p class="mt-4 text-lg text-neutral-600 leading-relaxed">Whether you need a small asphalt repair, a pothole fixed, or a brand new driveway, call for a free estimate.</p>
+
+      <div class="mt-10 divide-y divide-neutral-200 border-y border-neutral-200">
+        <div class="py-6">
+          <h3 class="text-xl font-semibold text-ink">Asphalt and paving</h3>
+          <p class="mt-1 text-neutral-600">We specialize in everything asphalt and paving in the Tampa area.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="text-xl font-semibold text-ink">Safety first</h3>
+          <p class="mt-1 text-neutral-600">Safety is always the top priority. Attention to small details lets us work safely and confidently.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="text-xl font-semibold text-ink">Modern equipment</h3>
+          <p class="mt-1 text-neutral-600">Regularly maintained, up-to-date equipment helps us finish efficiently and on time.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="text-xl font-semibold text-ink">Experienced workers</h3>
+          <p class="mt-1 text-neutral-600">Twenty years in the industry, and an experienced crew on every paving project.</p>
+        </div>
+      </div>
+
+      <a href="tel:+18134007135" class="mt-8 inline-flex items-center gap-4">
+        <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        </span>
+        <span>
+          <span class="block text-sm text-neutral-500">Call for a free estimate</span>
+          <span class="block text-2xl font-semibold text-ink">(813) 400-7135</span>
+        </span>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- 2. Three columns -->
-<section class="py-16 lg:py-24 border-t border-mist">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+<!-- Services -->
+<section id="services" class="relative pb-24 lg:pb-32">
+  <div class="absolute inset-x-0 top-0 h-[430px] md:h-[400px] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-20 lg:pt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end text-white reveal">
+      <div class="lg:col-span-6">
+        <p class="text-sm font-semibold tracking-[0.18em] uppercase text-white/80">Services</p>
+        <h2 class="mt-3 text-4xl md:text-5xl font-semibold leading-[1.1] tracking-tight">Services we provide</h2>
+      </div>
+      <p class="lg:col-span-6 text-lg text-white/90 leading-relaxed">From a single pothole to a full driveway, we handle the whole surface. Call us or send a request and we will walk you through the options.</p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#contact" class="arrow-link group block reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-16.jpg" alt="Asphalt paving on a residential road" class="r w-full aspect-[4/3] object-cover">
+        <div class="mt-5 flex items-center justify-between gap-3">
+          <h3 class="text-xl font-semibold text-ink">Asphalt Paving</h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-brand shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="mt-2 text-neutral-600">New asphalt driveways, roads and lots, plus pothole and small repairs.</p>
+      </a>
+      <a href="#contact" class="arrow-link group block reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-19.jpg" alt="Freshly sealcoated street" class="r w-full aspect-[4/3] object-cover">
+        <div class="mt-5 flex items-center justify-between gap-3">
+          <h3 class="text-xl font-semibold text-ink">Asphalt Sealcoating</h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-brand shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="mt-2 text-neutral-600">Commercial grade sealer to bring tired asphalt back to life.</p>
+      </a>
+      <a href="#contact" class="arrow-link group block reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-18.jpg" alt="Asphalt layer over a prepared base" class="r w-full aspect-[4/3] object-cover">
+        <div class="mt-5 flex items-center justify-between gap-3">
+          <h3 class="text-xl font-semibold text-ink">Base &amp; Grading</h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-brand shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="mt-2 text-neutral-600">Crushed asphalt and other base materials for a solid, mess-free surface.</p>
+      </a>
+      <a href="#contact" class="arrow-link group block reveal">
+        <img src="https://images.unsplash.com/photo-1706922685061-e346647bde61?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Fresh asphalt being applied on a road" class="r w-full aspect-[4/3] object-cover">
+        <div class="mt-5 flex items-center justify-between gap-3">
+          <h3 class="text-xl font-semibold text-ink">Striping &amp; Pavement Markings</h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-brand shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <p class="mt-2 text-neutral-600">Clean lines and markings to finish the job and keep lots organized.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5">
     <div class="reveal">
-      <h3 class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-4">Asphalt &amp; paving</h3>
-      <p class="text-ink/75">Everything asphalt and paving in the Tampa area, from pothole repair to new driveways and parking lots.</p>
+      <p class="text-sm font-semibold tracking-[0.18em] uppercase text-brand">Gallery</p>
+      <h2 class="mt-3 text-4xl md:text-5xl font-semibold leading-[1.1] tracking-tight text-ink max-w-2xl">Work from around Tampa</h2>
     </div>
-    <div class="reveal">
-      <h3 class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-4">Safety first</h3>
-      <p class="text-ink/75">Safety is the top priority on every job. Experience and attention to small details let the crew work safely and with confidence.</p>
-    </div>
-    <div class="reveal">
-      <h3 class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-4">Modern equipment</h3>
-      <p class="text-ink/75">Up-to-date machines that are regularly maintained, so jobs are finished efficiently and on time.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 3. Mission statement -->
-<section class="py-20 lg:py-28 bg-paper">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
-    <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-6">Our mission</p>
-    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-medium">Long-lasting relationships with our clients, built on quality materials and workmanship.</h2>
-  </div>
-</section>
-
-<!-- 4. Collage -->
-<section id="gallery" class="py-16 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-      <h2 class="text-3xl sm:text-5xl font-medium">Work in progress</h2>
-      <p class="text-ink/70 max-w-md">Paving, rolling and sealing: a look at the kind of jobs we take on.</p>
-    </div>
-    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5 grid-flow-row-dense">
-      <div class="col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden r reveal"><img src="https://images.unsplash.com/photo-1693019108307-25453cd99978?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roller on a residential street" class="photo"></div>
-      <div class="col-span-1 lg:col-span-6 lg:row-span-2 aspect-[4/5] lg:aspect-auto overflow-hidden r reveal order-first lg:order-none col-span-2"><img src="https://images.unsplash.com/photo-1783582315652-e2e8676f622f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paver and roller laying asphalt on a road" class="photo"></div>
-      <div class="col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden r reveal"><img src="https://images.unsplash.com/photo-1706752095478-4d759dc68846?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Asphalt distributor applying a tack coat" class="photo"></div>
-      <div class="col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden r reveal"><img src="https://images.unsplash.com/photo-1706712637075-f47fb47548f2?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Freshly sprayed road surface" class="photo"></div>
-      <div class="col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden r reveal"><img src="https://images.unsplash.com/photo-1724648179736-fef1ae010d6b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Yellow roller compacting a city street" class="photo"></div>
-      <div class="col-span-2 lg:col-span-12 aspect-[16/9] lg:aspect-[21/8] overflow-hidden r reveal"><img src="https://images.unsplash.com/photo-1772852311587-329719989e2b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paver laying fresh asphalt on a rural road" class="photo"></div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-19.jpg" alt="Sealcoating a neighborhood street" class="r w-full aspect-square object-cover reveal">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-16.jpg" alt="Crew and equipment on a rural road" class="r w-full aspect-square object-cover reveal">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-11.jpg" alt="Checking asphalt thickness with a tape measure" class="r w-full aspect-square object-cover reveal">
+      <img src="https://images.unsplash.com/photo-1779384896076-51cbd33c36ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roller compacting new asphalt" class="r w-full aspect-square object-cover reveal">
+      <img src="https://images.unsplash.com/photo-1792478874068-3b1c961ccb5c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Milling machine removing old asphalt" class="r w-full aspect-square object-cover reveal">
+      <img src="https://images.unsplash.com/photo-1706922685061-e346647bde61?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Applying asphalt tack coat on a road" class="r w-full aspect-square object-cover reveal">
     </div>
   </div>
 </section>
 
-<!-- 5. How it works -->
-<section id="process" class="py-16 lg:py-24 bg-plum text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-4">How it works</p>
-    <h2 class="text-3xl sm:text-5xl font-medium max-w-2xl mb-14">From first call to finished surface</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
-      <div class="border-t border-white/20 pt-6"><p class="font-head text-brand text-lg font-semibold mb-3">01</p><h3 class="text-xl font-semibold mb-2">Call or request an estimate</h3><p class="text-white/70">Reach us by phone, email or the contact form. Estimates are free.</p></div>
-      <div class="border-t border-white/20 pt-6"><p class="font-head text-brand text-lg font-semibold mb-3">02</p><h3 class="text-xl font-semibold mb-2">Review your options</h3><p class="text-white/70">We walk through the choices for your driveway or lot and what each one costs.</p></div>
-      <div class="border-t border-white/20 pt-6"><p class="font-head text-brand text-lg font-semibold mb-3">03</p><h3 class="text-xl font-semibold mb-2">Get it in writing</h3><p class="text-white/70">You receive a written estimate before any work is scheduled.</p></div>
-      <div class="border-t border-white/20 pt-6"><p class="font-head text-brand text-lg font-semibold mb-3">04</p><h3 class="text-xl font-semibold mb-2">Schedule around the weather</h3><p class="text-white/70">Florida rain happens. We keep you updated while we wait for the right window.</p></div>
-      <div class="border-t border-white/20 pt-6"><p class="font-head text-brand text-lg font-semibold mb-3">05</p><h3 class="text-xl font-semibold mb-2">Prep and pave</h3><p class="text-white/70">Careful surface prep, then paving, base work or sealcoating with commercial-grade materials.</p></div>
-      <div class="border-t border-white/20 pt-6"><p class="font-head text-brand text-lg font-semibold mb-3">06</p><h3 class="text-xl font-semibold mb-2">Final walk-through</h3><p class="text-white/70">We check the finished work and make sure you are happy with the result.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. Services -->
-<section id="services" class="py-16 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-      <h2 class="text-3xl sm:text-5xl font-medium">Services we provide</h2>
-      <p class="text-ink/70 max-w-md">Residential, commercial and industrial. No job too big or too small.</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <a href="#contact" class="group block">
-        <div class="aspect-[4/5] overflow-hidden r"><img src="https://images.unsplash.com/photo-1706751611986-0c9e561e9a78?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Asphalt paving machine" class="photo group-hover:scale-105 transition duration-500"></div>
-        <h3 class="text-xl font-semibold mt-4">Asphalt Paving</h3>
-        <p class="text-ink/65 text-[15px] mt-1">New driveways, lots and pothole repair.</p>
-      </a>
-      <a href="#contact" class="group block">
-        <div class="aspect-[4/5] overflow-hidden r"><img src="https://images.unsplash.com/photo-1706922942734-55cd441ed755?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sealcoat being sprayed on pavement" class="photo group-hover:scale-105 transition duration-500"></div>
-        <h3 class="text-xl font-semibold mt-4">Asphalt Sealcoating</h3>
-        <p class="text-ink/65 text-[15px] mt-1">Commercial-grade sealer to revive old asphalt.</p>
-      </a>
-      <a href="#contact" class="group block">
-        <div class="aspect-[4/5] overflow-hidden r"><img src="https://images.unsplash.com/photo-1786742593319-a97fbeda2ef5?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Rollers working on a road base" class="photo group-hover:scale-105 transition duration-500"></div>
-        <h3 class="text-xl font-semibold mt-4">Base &amp; Grading</h3>
-        <p class="text-ink/65 text-[15px] mt-1">Crushed asphalt and base materials for a solid foundation.</p>
-      </a>
-      <a href="#contact" class="group block">
-        <div class="aspect-[4/5] overflow-hidden r"><img src="https://images.unsplash.com/photo-1560339335-c0b0e3c8cbfa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Workers spreading fresh asphalt by hand" class="photo group-hover:scale-105 transition duration-500"></div>
-        <h3 class="text-xl font-semibold mt-4">Striping &amp; Pavement Markings</h3>
-        <p class="text-ink/65 text-[15px] mt-1">Clean lines and markings to finish the job.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- 7. Reviews -->
+<!-- Reviews -->
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -305,48 +321,23 @@ I highly recommend BayToBay and will use them next time I have to seal the drive
   })();</script>
 </section>
 
-<!-- 8. Why choose -->
-<section id="about" class="py-16 lg:py-24 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-6 aspect-[4/5] lg:aspect-auto lg:h-[600px] overflow-hidden r">
-      <img src="https://images.unsplash.com/photo-1693019108329-1889fb170f2e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bay To Bay crew paving a neighborhood street" class="photo">
+<!-- Call band -->
+<section class="bg-ink text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-5xl font-semibold leading-[1.1] tracking-tight text-brand">Call for a free estimate today.</h2>
+      <p class="mt-4 text-lg text-white/75">Open Monday to Sunday, 9:00AM to 5:00PM. Pave with confidence knowing the work is in experienced hands.</p>
     </div>
-    <div class="lg:col-span-6">
-      <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-4">About us</p>
-      <h2 class="text-3xl sm:text-5xl font-medium mb-5">Why choose Bay To Bay Paving</h2>
-      <p class="text-ink/75 mb-10">Bay To Bay Paving is family owned and operated: asphalt pros with over 20 years of experience, proudly serving Tampa, FL and surrounding areas.</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
-        <div>
-          <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <h3 class="text-lg font-semibold mb-1">Experienced workers</h3>
-          <p class="text-ink/70 text-[15px]">20 years in the industry, and it shows in every project.</p>
-        </div>
-        <div>
-          <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <h3 class="text-lg font-semibold mb-1">Residential to industrial</h3>
-          <p class="text-ink/70 text-[15px]">Small repairs or large lots, we take the work seriously.</p>
-        </div>
-        <div>
-          <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <h3 class="text-lg font-semibold mb-1">Quality materials</h3>
-          <p class="text-ink/70 text-[15px]">High quality materials and commercial-grade sealers.</p>
-        </div>
-        <div>
-          <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <h3 class="text-lg font-semibold mb-1">Safety first</h3>
-          <p class="text-ink/70 text-[15px]">Careful, safe work on every site.</p>
-        </div>
-      </div>
-    </div>
+    <a href="tel:+18134007135" class="self-start lg:self-auto shrink-0 bg-brand hover:bg-[#c23a89] transition text-white font-semibold px-8 py-4 rounded-full text-lg">Call (813) 400-7135</a>
   </div>
 </section>
 
-<!-- 9. Contact -->
-<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
+<!-- Contact -->
+<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:0 0 clamp(80px,10vw,128px)">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(228,87,159,0.10);color:#e4579f}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#e4579f}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(217,71,155,0.10);color:#d9479b}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#d9479b}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -357,16 +348,16 @@ I highly recommend BayToBay and will use them next time I have to seal the drive
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:20px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:16px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#e4579f;box-shadow:0 0 0 4px rgba(228,87,159,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:16px;background:#e4579f;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#d9479b;box-shadow:0 0 0 4px rgba(217,71,155,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#d9479b;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -374,16 +365,21 @@ I highly recommend BayToBay and will use them next time I have to seal the drive
     .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
     .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-band{position:relative;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/photo-18.jpg') center/cover no-repeat;padding:clamp(80px,10vw,128px) 0 clamp(150px,16vw,200px)}
+    .lp-contact .lp-band:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.72))}
+    .lp-contact .lp-band>.lp-in{position:relative}
+    .lp-contact .lp-up{margin-top:-120px;position:relative}
     .lp-contact .lp-center{max-width:48rem;margin:0 auto;text-align:center}
     .lp-contact .lp-center .lp-p{margin-left:auto;margin-right:auto}
     .lp-contact .lp-tiles{margin:40px auto 0;display:grid;gap:12px;max-width:56rem}
     @media (min-width:768px){.lp-contact .lp-tiles{grid-template-columns:repeat(3,1fr)}}
-    .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:20px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
+    .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:18px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
     .lp-contact .lp-tile .lp-v{font-size:16px}
     .lp-contact .lp-formwrap{max-width:48rem;margin:28px auto 0}</style>
-  <div class="lp-in">
-    <div class="lp-center"><p class="lp-kick" style="color:#e4579f">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your paving project in Tampa and we will get back to you with a written estimate.</p></div>
-    <div class="lp-tiles"><a href="tel:+18134007135" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(813) 400-7135</span></span></a><a href="mailto:info@baytobaypavingfl.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">info@baytobaypavingfl.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Tampa, FL</span></span></div></div>
+  <div class="lp-band"><div class="lp-in"><div class="lp-center"><p class="lp-kick" style="color:#d9479b">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.82)">Tell us about your paving project in Tampa and we will get back to you with a free estimate.</p></div></div></div>
+  <div class="lp-in lp-up">
+    
+    <div class="lp-tiles" style="margin-top:0"><a href="tel:+18134007135" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(813) 400-7135</span></span></a><a href="mailto:info@baytobaypavingfl.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">info@baytobaypavingfl.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Tampa, FL</span></span></div></div>
     <div class="lp-formwrap lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
@@ -400,48 +396,38 @@ I highly recommend BayToBay and will use them next time I have to seal the drive
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-<!-- 10. Final call card -->
-<section class="py-16 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-5">
-    <div class="lg:col-span-5 aspect-[4/3] lg:aspect-auto lg:min-h-[420px] overflow-hidden r">
-      <img src="https://images.unsplash.com/photo-1779384896076-51cbd33c36ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roller on freshly paved asphalt" class="photo">
-    </div>
-    <div class="lg:col-span-7 bg-mist r p-8 sm:p-12 flex flex-col justify-center">
-      <p class="text-xs uppercase tracking-[0.2em] text-brand font-semibold mb-4">Call for a free estimate</p>
-      <h2 class="text-3xl sm:text-5xl font-medium mb-5">Ready to pave with confidence?</h2>
-      <p class="text-ink/75 mb-8 max-w-lg">Need a small asphalt repair, a new driveway or a fresh seal coat? Call Bay To Bay Paving today.</p>
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a href="tel:+18134007135" class="bg-brand text-white font-semibold px-7 py-4 r text-center hover:bg-plum transition">Call (813) 400-7135</a>
-        <a href="#contact" class="bg-white text-ink font-semibold px-7 py-4 r text-center hover:bg-ink hover:text-white transition">Request an estimate</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 </main>
 
-<!-- 11. Footer -->
-<footer class="bg-plum text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 text-center">
-    <div class="inline-block bg-white r px-6 py-4 mb-8">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/bay-to-bay-paving-llc/21943/logo-0.png" alt="Bay To Bay Paving" class="h-14 w-auto mx-auto">
+<!-- Footer -->
+<footer class="bg-ink text-white/75 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+    <div class="md:col-span-5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/bay-to-bay-paving-llc/21949/logo-0.png" alt="Bay To Bay Paving" class="h-14 w-auto">
+      <p class="mt-6 max-w-sm leading-relaxed">Family owned and operated. Asphalt paving, sealcoating, base and grading, and striping in Tampa, FL and surrounding areas.</p>
     </div>
-    <p class="text-white/70 max-w-xl mx-auto mb-8">Family owned asphalt pros serving Tampa, FL and surrounding areas.</p>
-    <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3 font-medium mb-10">
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#process" class="hover:text-brand transition">How it works</a>
-      <a href="#gallery" class="hover:text-brand transition">Gallery</a>
-      <a href="#about" class="hover:text-brand transition">About</a>
-      <a href="#contact" class="hover:text-brand transition">Contact</a>
-    </nav>
-    <div class="flex flex-col items-center gap-2 text-white/85">
-      <a href="tel:+18134007135" class="font-head text-2xl font-medium hover:text-brand transition">(813) 400-7135</a>
-      <a href="mailto:info@baytobaypavingfl.com" class="text-[15px] break-words hover:text-brand transition">info@baytobaypavingfl.com</a>
-      <p class="text-[15px]">Tampa, FL &middot; Mon – Sun, 9:00 AM – 5:00 PM</p>
+    <div class="md:col-span-3">
+      <h4 class="text-white font-semibold mb-4">Services</h4>
+      <ul class="space-y-2">
+        <li><a href="#services" class="hover:text-white">Asphalt Paving</a></li>
+        <li><a href="#services" class="hover:text-white">Asphalt Sealcoating</a></li>
+        <li><a href="#services" class="hover:text-white">Base &amp; Grading</a></li>
+        <li><a href="#services" class="hover:text-white">Striping &amp; Pavement Markings</a></li>
+      </ul>
     </div>
-    <div class="border-t border-white/15 mt-12 pt-8 space-y-2 text-xs text-white/55">
+    <div class="md:col-span-4">
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
+      <ul class="space-y-2">
+        <li><a href="tel:+18134007135" class="hover:text-white">(813) 400-7135</a></li>
+        <li><a href="mailto:info@baytobaypavingfl.com" class="hover:text-white break-words text-[15px]">info@baytobaypavingfl.com</a></li>
+        <li>Tampa, FL</li>
+        <li>Mon – Sun: 9:00AM – 5:00PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-sm text-white/50 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Bay To Bay Paving LLC website.</p>
-      <p>Some photos by Ray Donnelly, Gautam Ganguly, Nadin Nandin, Tom Shamberger, Wolfgang Weiser, Collab Media, Brian J. Tromp and Evan Porter on Unsplash.</p>
+      <p>Some photos by Wolfgang Weiser, Evan Porter and Tom Shamberger on Unsplash.</p>
     </div>
   </div>
 </footer>
