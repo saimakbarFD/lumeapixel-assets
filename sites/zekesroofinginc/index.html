@@ -4,21 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Zeke's Roofing Inc | Roofing & Siding in Tampa, FL</title>
+<title>Zeke's Roofing Inc | Roofing, Siding and Gutters in Tampa Bay, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+      fontFamily: { sans: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#f36c21',
-        navy: '#05266f',
-        ink: '#0c1020',
-        paper: '#f6f4f1'
+        brand: '#05266f',
+        brandDark: '#031a4d',
+        brandDeep: '#020f2e',
+        ink: '#0b0f1a',
+        paper: '#f6f5f1',
+        stone2: '#e9e7e0'
       },
       borderRadius: { DEFAULT: '14px' }
     }
@@ -27,206 +29,201 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Montserrat', sans-serif; color: #1c2030; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Montserrat', sans-serif; color: #0b0f1a; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { line-height: 1.12; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .hero-overlay { background: linear-gradient(90deg, rgba(8,12,24,.88) 0%, rgba(8,12,24,.62) 55%, rgba(8,12,24,.35) 100%); }
+  .r14 { border-radius: 14px; }
+  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
 <!-- Top bar -->
-<div class="bg-brand text-white text-xs sm:text-sm">
-  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-    <p class="font-medium">Serving Hillsborough, Pinellas, Pasco and Hernando Counties, FL</p>
-    <a href="mailto:info@callzeke.com" class="font-semibold hover:underline break-words">info@callzeke.com</a>
+<div class="bg-brand text-white text-[13px]">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <span>Serving Hillsborough, Pinellas, Pasco and Hernando Counties, FL</span>
+    <a href="mailto:info@callzeke.com" class="hover:underline break-words">info@callzeke.com</a>
   </div>
 </div>
 
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-ink text-white">
   <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="leading-none" aria-label="Zeke's Roofing Inc">
-      <span class="block text-2xl font-bold tracking-tight">Zeke's <span class="text-brand">Roofing</span></span>
-      <span class="block text-[10px] tracking-[0.28em] uppercase text-white/60 mt-1">Inc · Tampa, FL</span>
+    <a href="#top" class="shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/logo-0.png" alt="Zeke's Roofing" class="h-12 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/85">
-      <a href="#difference" class="hover:text-brand transition">About</a>
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#projects" class="hover:text-brand transition">Projects</a>
-      <a href="#contact" class="hover:text-brand transition">Contact</a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <a href="#about" class="hover:text-white/70">About</a>
+      <a href="#services" class="hover:text-white/70">Services</a>
+      <a href="#projects" class="hover:text-white/70">Projects</a>
+      <a href="#financing" class="hover:text-white/70">Financing</a>
+      <a href="#contact" class="hover:text-white/70">Contact</a>
     </nav>
-    <div class="flex items-center gap-4">
-      <div class="hidden xl:block text-right leading-tight">
-        <p class="text-[11px] text-white/60">Need help? Call us today</p>
-        <a href="tel:+18137765368" class="text-base font-semibold hover:text-brand transition">(813) 776-5368</a>
+    <div class="hidden md:flex items-center gap-5">
+      <div class="text-right leading-tight">
+        <div class="text-[11px] text-white/60">Need help? Call us today</div>
+        <a href="tel:8137765368" class="font-semibold">(813) 776-5368</a>
       </div>
-      <a href="tel:+18137765368" class="inline-flex items-center gap-2 bg-brand hover:bg-[#d95a14] text-white text-sm font-semibold px-5 py-3 rounded transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="hidden sm:inline">(813) 776-5368</span><span class="sm:hidden">Call</span>
+      <a href="#contact" class="bg-white text-brand font-semibold text-sm px-5 py-3 r14 hover:bg-stone2 transition">Free estimate</a>
+    </div>
+    <div class="flex items-center gap-3 md:hidden">
+      <a href="tel:8137765368" aria-label="Call Zeke's Roofing" class="bg-white text-brand p-3 r14">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
       </a>
-      <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" aria-label="Open menu" class="p-2">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
-    <nav class="px-5 py-4 flex flex-col gap-1 text-sm font-medium">
-      <a href="#difference" class="py-3 border-b border-white/10">About</a>
-      <a href="#services" class="py-3 border-b border-white/10">Services</a>
-      <a href="#projects" class="py-3 border-b border-white/10">Projects</a>
-      <a href="#contact" class="py-3">Contact</a>
-    </nav>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
+    <div class="px-5 py-4 flex flex-col gap-4 text-base font-medium">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#financing">Financing</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:8137765368" class="font-semibold">(813) 776-5368</a>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
 <!-- Hero -->
-<section class="relative isolate overflow-hidden bg-ink">
-  <img src="https://images.unsplash.com/photo-1755114203680-d39d95efa82c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of a home with a new shingle roof" class="absolute inset-0 w-full h-full object-cover -z-10">
-  <div class="absolute inset-0 hero-overlay -z-10"></div>
-  <div class="max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
-    <div class="max-w-2xl text-white">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-5">Roofing and siding in Tampa Bay</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">Got a leak?<br>Don't freak. Call Zeke.</h1>
-      <p class="mt-6 text-lg text-white/85 leading-relaxed max-w-xl">Licensed and insured roofers serving West Central Florida. Every job starts with a thorough inspection, so you know exactly where your roof stands.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="inline-flex justify-center items-center bg-brand hover:bg-[#d95a14] text-white font-semibold px-7 py-4 rounded transition">Schedule your estimate</a>
-        <a href="tel:+18137765368" class="inline-flex justify-center items-center bg-white hover:bg-paper text-ink font-semibold px-7 py-4 rounded-full transition">Call (813) 776-5368</a>
+<section class="relative bg-ink text-white">
+  <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof on a single-story home" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/40"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
+    <div class="max-w-2xl">
+      <p class="label text-white/70 mb-5">Roofing in Tampa Bay</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold">Got a leak? Don't freak. Call Zeke.</h1>
+      <p class="mt-6 text-lg text-white/85 leading-relaxed max-w-xl">Roof repair, replacement, metal roofing, siding and gutters for homes across West Central Florida. Every job starts with a thorough inspection and a straight answer.</p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="#contact" class="bg-white text-brand font-semibold px-7 py-4 r14 hover:bg-stone2 transition">Schedule your estimate</a>
+        <a href="tel:8137765368" class="border border-white/60 text-white font-semibold px-7 py-4 rounded-full hover:bg-white/10 transition">Call (813) 776-5368</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- The difference -->
-<section id="difference" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+<!-- Difference -->
+<section id="about" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-14 lg:gap-16">
     <div class="lg:col-span-6 reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">The Zeke's difference</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[1.1] tracking-tight text-ink">Clear answers and honest craftsmanship for Florida homes.</h2>
+      <p class="label text-brand mb-5">The Zeke's Roofing difference</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Clear answers, solid work, and a roof built for Florida.</h2>
 
-      <div class="mt-12 grid grid-cols-2 gap-4">
-        <div class="col-span-1 space-y-4">
-          <img src="https://images.unsplash.com/photo-1788616051964-19e17fe8e0b3?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers fastening roof decking with drills" class="w-full aspect-[4/5] object-cover rounded">
-          <div class="bg-brand text-white rounded p-6">
-            <p class="text-xs font-semibold tracking-[0.18em] uppercase text-white/80">Free to ask</p>
-            <p class="mt-2 text-xl font-bold leading-snug">Don't Freak, Call Zeke!</p>
-          </div>
+      <div class="mt-12 grid grid-cols-6 gap-4">
+        <div class="col-span-3 aspect-[4/5] r14 overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/photo-14.jpg" alt="Home with a new standing seam metal roof" class="w-full h-full object-cover">
         </div>
-        <div class="col-span-1 space-y-4 pt-10">
-          <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew installing dark roof tiles" class="w-full aspect-square object-cover rounded">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/zeke-s-roofing-inc/21948/photo-3.jpg" alt="Gray shingle roof with dormer" class="w-full aspect-[16/10] object-cover rounded">
+        <div class="col-span-3 flex flex-col gap-4">
+          <div class="aspect-[4/3] r14 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1755114203680-d39d95efa82c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of a shingle roof" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1 bg-brand text-white r14 p-5 flex items-center">
+            <p class="text-lg font-semibold leading-snug">20+ years in business. Licensed and insured.</p>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="lg:col-span-6 reveal">
-      <p class="text-lg text-slate-700 leading-relaxed">When you need a roofing and siding company you can trust, experience and transparency matter. We believe homeowners deserve clear answers, quality work and straightforward guidance when it comes to protecting their homes.</p>
-      <p class="mt-5 text-slate-700 leading-relaxed">Every project begins with an inspection so you understand the condition of your roof and the options available. From repairs to full replacements and exterior upgrades, our goal is reliable workmanship and a stress-free experience from start to finish.</p>
+      <p class="text-lg leading-relaxed text-ink/80">When you need a roofing and siding company you can trust, experience and transparency matter. Homeowners deserve clear answers, quality craftsmanship and straightforward guidance when it comes to protecting their homes.</p>
+      <p class="mt-5 text-lg leading-relaxed text-ink/80">Every project begins with a thorough inspection so you understand the condition of your roof and the options in front of you. From repairs to full replacements and exterior upgrades, the goal is simple: reliable workmanship and clear communication from start to finish.</p>
 
-      <div class="mt-10 divide-y divide-slate-200 border-y border-slate-200">
-        <div class="py-6">
-          <h3 class="text-lg font-bold text-ink">Roof repair and replacement</h3>
-          <p class="mt-1.5 text-slate-600">Leaks, flashing issues and aging materials fixed right. Replacements use durable Owens Corning shingles.</p>
+      <div class="mt-10 divide-y divide-stone2 border-y border-stone2">
+        <div class="py-5">
+          <h3 class="font-bold text-lg">Roofing</h3>
+          <p class="mt-1 text-ink/70">Repair, replacement, shingle repair, storm damage and inspections, using durable Owens Corning shingles.</p>
         </div>
-        <div class="py-6">
-          <h3 class="text-lg font-bold text-ink">Storm damage and inspections</h3>
-          <p class="mt-1.5 text-slate-600">Shingle repair after wind and hurricanes, plus roof inspections that catch problems early.</p>
+        <div class="py-5">
+          <h3 class="font-bold text-lg">Metal roofing</h3>
+          <p class="mt-1 text-ink/70">Installation, replacement and repairs with in-house fabricated metal roofing systems.</p>
         </div>
-        <div class="py-6">
-          <h3 class="text-lg font-bold text-ink">Metal roofing</h3>
-          <p class="mt-1.5 text-slate-600">Installation, replacement and repairs with in-house fabricated metal roofing systems.</p>
+        <div class="py-5">
+          <h3 class="font-bold text-lg">Siding, soffit, fascia and gutters</h3>
+          <p class="mt-1 text-ink/70">Exterior components that keep moisture out and keep the roof working as a complete system.</p>
         </div>
-        <div class="py-6">
-          <h3 class="text-lg font-bold text-ink">Siding, soffit, fascia and gutters</h3>
-          <p class="mt-1.5 text-slate-600">Exterior components that protect against moisture and finish the job.</p>
+        <div class="py-5">
+          <h3 class="font-bold text-lg">Commercial roofing</h3>
+          <p class="mt-1 text-ink/70">Flat and low-slope roof work for commercial buildings.</p>
         </div>
       </div>
 
-      <a href="tel:+18137765368" class="mt-8 inline-flex items-center gap-4 group">
-        <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center shrink-0">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        <span>
-          <span class="block text-xs text-slate-500 font-medium">Call Zeke</span>
-          <span class="block text-xl font-bold text-ink group-hover:text-brand transition">(813) 776-5368</span>
-        </span>
+      <a href="tel:8137765368" class="mt-8 inline-flex items-center gap-3 font-bold text-xl text-brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (813) 776-5368
       </a>
     </div>
   </div>
 </section>
 
 <!-- Services -->
-<section id="services" class="relative pb-24 lg:pb-32">
-  <div class="absolute inset-x-0 top-0 h-[430px] sm:h-[400px] lg:h-[440px] bg-brand -z-0"></div>
-  <div class="relative max-w-7xl mx-auto px-5 pt-20 lg:pt-24">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-14 items-end text-white reveal">
+<section id="services" class="relative bg-paper">
+  <div class="absolute inset-x-0 top-0 h-[55%] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-24 lg:pt-28 pb-24 lg:pb-32">
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-16 items-end text-white reveal">
       <div class="lg:col-span-6">
-        <p class="text-xs font-semibold tracking-[0.22em] uppercase text-white/80 mb-4">What we do</p>
-        <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[1.1] tracking-tight">Roofing and exterior services for West Central Florida.</h2>
+        <p class="label text-white/70 mb-5">Services</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Everything the outside of your home needs.</h2>
       </div>
-      <p class="lg:col-span-6 text-lg text-white/90 leading-relaxed">Your roof and exterior systems work together to protect your home from moisture and structural damage. We provide complete services built for coastal weather and local building codes.</p>
+      <div class="lg:col-span-6">
+        <p class="text-lg text-white/85 leading-relaxed">Your roof and exterior systems work together to protect your home from moisture and structural damage. We handle each one with the same inspection-first approach.</p>
+      </div>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <a href="#contact" class="group bg-white rounded p-3 shadow-sm reveal block">
-        <img src="https://images.unsplash.com/photo-1751066007385-392d684fd7c6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Tile roof on a residential home" class="w-full aspect-[4/3] object-cover rounded">
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#contact" class="group block bg-white r14 p-3 reveal">
+        <div class="aspect-[4/3] r14 overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/photo-2.jpg" alt="Shingle roof with dormer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
         <div class="px-2 pt-5 pb-3">
           <div class="flex items-center justify-between gap-3">
-            <h3 class="text-lg font-bold text-ink">Residential Roofing</h3>
-            <svg class="shrink-0 text-brand transition group-hover:translate-x-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <h3 class="font-bold text-lg">Roofing</h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Repair, replacement, shingle and storm damage work, plus roof inspections.</p>
+          <p class="mt-2 text-sm text-ink/70 leading-relaxed">Repair, replacement, storm damage and inspections for Florida homes.</p>
         </div>
       </a>
-      <a href="#contact" class="group bg-white rounded p-3 shadow-sm reveal block">
-        <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home with a standing seam metal roof" class="w-full aspect-[4/3] object-cover rounded">
+      <a href="#contact" class="group block bg-white r14 p-3 reveal">
+        <div class="aspect-[4/3] r14 overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/photo-5.jpg" alt="Installing vinyl siding" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
         <div class="px-2 pt-5 pb-3">
           <div class="flex items-center justify-between gap-3">
-            <h3 class="text-lg font-bold text-ink">Metal Roofing</h3>
-            <svg class="shrink-0 text-brand transition group-hover:translate-x-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <h3 class="font-bold text-lg">Siding</h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Installation, replacement and repairs using in-house fabricated metal systems.</p>
+          <p class="mt-2 text-sm text-ink/70 leading-relaxed">Vinyl and Hardie siding that guards against moisture and lifts curb appeal.</p>
         </div>
       </a>
-      <a href="#contact" class="group bg-white rounded p-3 shadow-sm reveal block">
-        <img src="https://images.unsplash.com/photo-1762363146144-ed6c31d722f1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wood-clad gable with trim" class="w-full aspect-[4/3] object-cover rounded">
+      <a href="#contact" class="group block bg-white r14 p-3 reveal">
+        <div class="aspect-[4/3] r14 overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/photo-4.jpg" alt="Seamless gutter and downspout" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
         <div class="px-2 pt-5 pb-3">
           <div class="flex items-center justify-between gap-3">
-            <h3 class="text-lg font-bold text-ink">Siding, Soffit and Fascia</h3>
-            <svg class="shrink-0 text-brand transition group-hover:translate-x-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <h3 class="font-bold text-lg">Gutters</h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Hardie and vinyl siding that protects against moisture and lifts curb appeal.</p>
+          <p class="mt-2 text-sm text-ink/70 leading-relaxed">Gutter installation that moves water away from your roofline and foundation.</p>
         </div>
       </a>
-      <a href="#contact" class="group bg-white rounded p-3 shadow-sm reveal block">
-        <img src="https://images.unsplash.com/photo-1787504543471-c95423873995?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofline with gutters and dormer windows" class="w-full aspect-[4/3] object-cover rounded">
+      <a href="#contact" class="group block bg-white r14 p-3 reveal">
+        <div class="aspect-[4/3] r14 overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/photo-3.jpg" alt="Soffit panel being installed" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
         <div class="px-2 pt-5 pb-3">
           <div class="flex items-center justify-between gap-3">
-            <h3 class="text-lg font-bold text-ink">Gutters and Commercial</h3>
-            <svg class="shrink-0 text-brand transition group-hover:translate-x-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <h3 class="font-bold text-lg">Soffit and fascia</h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Gutter installation for homes, and roofing services for commercial properties.</p>
+          <p class="mt-2 text-sm text-ink/70 leading-relaxed">Ventilated soffit and clean fascia that finish the roofline and protect it.</p>
         </div>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- Financing -->
-<section class="bg-paper py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-7 reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Financing</p>
-      <h2 class="text-3xl sm:text-4xl font-bold leading-[1.1] tracking-tight text-ink">Get the roof. Keep your cash.</h2>
-      <p class="mt-5 text-lg text-slate-700 leading-relaxed max-w-xl">0% for 18 months, no payment, all credit welcome. Convenient financing options so you can get the protection your home needs with payments that fit your budget.</p>
-      <p class="mt-3 text-sm text-slate-500">With approved credit. Call for details.</p>
-      <a href="#contact" class="mt-8 inline-flex items-center bg-ink hover:bg-navy text-white font-semibold px-7 py-4 rounded transition">Ask about financing</a>
-    </div>
-    <div class="lg:col-span-5 reveal">
-      <img src="https://images.unsplash.com/photo-1768123927068-06de1b3a323e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Terracotta tile roof under a clear sky" class="w-full aspect-[4/3] object-cover rounded">
     </div>
   </div>
 </section>
@@ -235,38 +232,67 @@ tailwind.config = {
 <section id="projects" class="py-24 lg:py-32 bg-white">
   <div class="max-w-7xl mx-auto px-5">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Roofs and rooflines</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[1.1] tracking-tight text-ink">Built to handle Tampa Bay weather.</h2>
+      <p class="label text-brand mb-5">Projects</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Roofs and exteriors, finished right.</h2>
     </div>
     <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <img src="https://images.unsplash.com/photo-1775508199661-718c1d16da5a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red tile roof with dormer" class="w-full aspect-[4/5] object-cover rounded reveal">
-      <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew laying new roof tiles" class="w-full aspect-[4/5] object-cover rounded reveal">
-      <img src="https://images.unsplash.com/photo-1787504543471-c95423873995?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Dark tile roof with dormer windows" class="w-full aspect-[4/5] object-cover rounded reveal">
-      <img src="https://images.unsplash.com/photo-1751066007385-392d684fd7c6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Tiled hip roof in warm light" class="w-full aspect-[4/5] object-cover rounded reveal">
-      <img src="https://images.unsplash.com/photo-1768123927068-06de1b3a323e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Gable with decorative wood trim" class="w-full aspect-[4/5] object-cover rounded reveal">
-      <img src="https://images.unsplash.com/photo-1653870258161-0293fcefa31b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof ridge against a blue sky" class="w-full aspect-[4/5] object-cover rounded reveal">
-      <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Workers on a roof" class="w-full aspect-[4/5] object-cover rounded reveal">
-      <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof on a brick home" class="w-full aspect-[4/5] object-cover rounded reveal">
+      <div class="col-span-2 lg:col-span-2 aspect-[16/10] r14 overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/photo-14.jpg" alt="Standing seam metal roof on a stucco home" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-square r14 overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1755114203680-d39d95efa82c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of an asphalt shingle roof" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-square r14 overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1756832849050-ed4e24eaa42f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red corrugated roof with dormers" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-square r14 overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1775508567950-137d8cc57040?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Tile roof in warm evening light" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-square r14 overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/photo-6.jpg" alt="Commercial flat roof with rooftop units" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-2 aspect-[16/10] r14 overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Gray metal roof on a brick home" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Financing -->
+<section id="financing" class="py-24 lg:py-28 bg-paper">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-5 aspect-[16/10] r14 overflow-hidden reveal">
+      <img src="https://images.unsplash.com/photo-1755114203680-d39d95efa82c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home with a new gray shingle roof" class="w-full h-full object-cover">
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <p class="label text-brand mb-5">Financing</p>
+      <h2 class="text-3xl sm:text-4xl font-bold">Get the roof. Keep your cash.</h2>
+      <p class="mt-5 text-lg text-ink/80 leading-relaxed max-w-xl">0% for 18 months with no payment, all credit welcome. Convenient financing so you can get the protection your home needs, with payments that fit your budget.</p>
+      <p class="mt-3 text-sm text-ink/60">With approved credit. Call for details.</p>
+      <a href="#contact" class="mt-8 inline-block bg-brand text-white font-semibold px-7 py-4 r14 hover:bg-brandDark transition">Ask about financing</a>
     </div>
   </div>
 </section>
 
 <!-- Call band -->
-<section class="bg-ink py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 reveal">
+<section class="bg-ink text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
     <div class="max-w-2xl">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.08] text-brand">Don't freak, call Zeke.</h2>
-      <p class="mt-4 text-lg text-white/75">Licensed and insured. Serving Hillsborough, Pinellas, Pasco and Hernando Counties.</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Don't freak, call Zeke.</h2>
+      <p class="mt-4 text-lg text-white/75">Tell us what's going on with your roof and we'll set up an inspection.</p>
     </div>
-    <a href="tel:+18137765368" class="inline-flex justify-center items-center bg-brand hover:bg-[#d95a14] text-white font-semibold px-8 py-4 rounded transition shrink-0">Call (813) 776-5368</a>
+    <div class="flex flex-wrap gap-4">
+      <a href="tel:8137765368" class="bg-white text-brand font-semibold px-7 py-4 r14 hover:bg-stone2 transition">Call (813) 776-5368</a>
+      <a href="#contact" class="border border-white/50 font-semibold px-7 py-4 r14 hover:bg-white/10 transition">Request an estimate</a>
+    </div>
   </div>
 </section>
 
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(243,108,33,0.10);color:#f36c21}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#f36c21}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(5,38,111,0.10);color:#05266f}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#8f9dbe}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -285,8 +311,8 @@ tailwind.config = {
     .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#f36c21;box-shadow:0 0 0 4px rgba(243,108,33,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#f36c21;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#05266f;box-shadow:0 0 0 4px rgba(5,38,111,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#05266f;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -296,13 +322,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1768123927068-06de1b3a323e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1775508567950-137d8cc57040?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#f36c21">Contact</p><h2 class="lp-h" style="color:#fff">Schedule your estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your roof and we'll get back to you to set up an inspection.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#8f9dbe">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your roof or exterior project and Zeke's team will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18137765368" class="lp-v lp-v-d">(813) 776-5368</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -316,7 +342,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof repair</option><option>Roof replacement</option><option>Roof inspection</option><option>Storm damage roof repair</option><option>Shingle repair</option><option>Metal roofing</option><option>Siding</option><option>Soffit and fascia</option><option>Gutters</option><option>Commercial roofing</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof repair</option><option>Roof replacement</option><option>Metal roofing</option><option>Roof inspection</option><option>Storm damage repair</option><option>Siding</option><option>Gutters</option><option>Soffit and fascia</option><option>Commercial roofing</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -329,38 +355,37 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-ink text-white/75 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+<footer class="bg-brandDeep text-white">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-12 gap-10">
     <div class="md:col-span-5">
-      <span class="block text-2xl font-bold tracking-tight text-white">Zeke's <span class="text-brand">Roofing</span></span>
-      <span class="block text-[10px] tracking-[0.28em] uppercase text-white/50 mt-1">Inc · Tampa, FL</span>
-      <p class="mt-5 max-w-sm leading-relaxed">Roofing and siding for homeowners across West Central Florida. Clear answers, quality work, no surprises.</p>
+      <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/zeke-s-roofing-inc/21952/logo-0.png" alt="Zeke's Roofing" class="h-14 w-auto">
+      <p class="mt-5 text-white/70 max-w-sm leading-relaxed">Roofing and exterior services for homeowners across West Central Florida.</p>
     </div>
     <div class="md:col-span-3">
-      <h3 class="text-sm font-semibold text-white tracking-wide uppercase mb-4">Services</h3>
-      <ul class="space-y-2.5 text-sm">
-        <li>Residential Roofing</li>
-        <li>Metal Roofing</li>
+      <h3 class="font-semibold mb-4">Services</h3>
+      <ul class="space-y-2 text-white/70 text-sm">
+        <li>Roof repair and replacement</li>
+        <li>Metal roofing</li>
         <li>Siding</li>
-        <li>Soffit and Fascia</li>
         <li>Gutters</li>
-        <li>Commercial</li>
+        <li>Soffit and fascia</li>
+        <li>Commercial roofing</li>
       </ul>
     </div>
     <div class="md:col-span-4">
-      <h3 class="text-sm font-semibold text-white tracking-wide uppercase mb-4">Contact</h3>
-      <ul class="space-y-2.5 text-sm">
-        <li><a href="tel:+18137765368" class="hover:text-brand transition">(813) 776-5368</a></li>
-        <li><a href="mailto:info@callzeke.com" class="hover:text-brand transition break-words">info@callzeke.com</a></li>
+      <h3 class="font-semibold mb-4">Contact</h3>
+      <ul class="space-y-2 text-white/70 text-sm">
+        <li><a href="tel:8137765368" class="hover:text-white">(813) 776-5368</a></li>
+        <li><a href="mailto:info@callzeke.com" class="hover:text-white break-words">info@callzeke.com</a></li>
         <li>Tampa, FL</li>
-        <li class="pt-2 text-white/55">Hillsborough, Pinellas, Pasco and Hernando Counties</li>
+        <li>Hillsborough, Pinellas, Pasco and Hernando Counties</li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50 space-y-1.5">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/55 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Zeke's Roofing Inc website.</p>
-      <p>Some photos by Paragon Exterior, Trương Tuyết Ly, Compagnons, Gallant Haykan, Norbert Buduczki, LXS Photography, Divaris Shirichena, Dániel Ács-Kurucz, Sergej, Se. Tsuchiya and Christian Miranda on Unsplash.</p>
+      <p>Some photos by Divaris Shirichena, Paragon Exterior, Trương Tuyết Ly and Reinis Brūzītis on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -368,14 +393,8 @@ tailwind.config = {
 <script>
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => {
-    const open = menu.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', open);
-  });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    menu.classList.add('hidden');
-    btn.setAttribute('aria-expanded', 'false');
-  }));
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

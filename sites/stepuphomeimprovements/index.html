@@ -7,103 +7,103 @@
 <title>Step Up Home Improvements | Kitchen & Bathroom Remodeling in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+      fontFamily: { sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
       colors: {
         brand: '#f11111',
         ink: '#0b0d1f',
         navy: '#050945',
         paper: '#f6f5f3',
-        mist: '#ececea'
+        stone: '#ebeae7'
       },
-      borderRadius: { tile: '20px' }
+      borderRadius: { xl2: '24px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Plus Jakarta Sans', sans-serif; color: #0b0d1f; background: #fff; -webkit-font-smoothing: antialiased; }
-  h1,h2,h3,h4 { letter-spacing: -0.02em; line-height: 1.08; }
+  body { font-family: 'Manrope', sans-serif; color: #0b0d1f; background: #fff; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .r { border-radius: 24px; }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body>
+<body class="bg-white">
 
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between gap-4">
-    <a href="#top" class="text-[19px] font-bold tracking-tight text-ink leading-none">Step Up <span class="text-brand">Home Improvements</span></a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink/80">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="text-xl font-bold tracking-tight leading-none">Step Up<span class="block text-[11px] font-semibold tracking-[.18em] uppercase text-brand mt-1">Home Improvements</span></a>
+    <nav class="hidden lg:flex items-center gap-9 text-sm font-semibold">
+      <a href="#about" class="hover:text-brand transition">Showroom</a>
       <a href="#services" class="hover:text-brand transition">Services</a>
       <a href="#process" class="hover:text-brand transition">Process</a>
-      <a href="#showroom" class="hover:text-brand transition">Showroom</a>
-      <a href="#work" class="hover:text-brand transition">Our work</a>
+      <a href="#projects" class="hover:text-brand transition">Projects</a>
       <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+15616600997" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white text-[15px] font-semibold px-5 h-11 rounded-full hover:bg-ink transition">
+      <a href="tel:+15616600997" class="inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-4 sm:px-5 h-11 r hover:bg-red-700 transition" style="border-radius:24px">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (561) 660-0997
+        <span class="hidden sm:inline">(561) 660-0997</span><span class="sm:hidden">Call</span>
       </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full border border-black/10 flex items-center justify-center" aria-label="Menu">
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-black/10" style="border-radius:24px" aria-label="Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
-    <div class="px-5 py-5 flex flex-col gap-4 text-[17px] font-medium">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#showroom">Showroom</a>
-      <a href="#work">Our work</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:+15616600997" class="inline-flex items-center justify-center bg-brand text-white font-semibold h-12 rounded-full">Call (561) 660-0997</a>
-    </div>
+    <nav class="px-5 py-4 flex flex-col gap-1 text-base font-semibold">
+      <a href="#about" class="py-3 border-b border-black/5">Showroom</a>
+      <a href="#services" class="py-3 border-b border-black/5">Services</a>
+      <a href="#process" class="py-3 border-b border-black/5">Process</a>
+      <a href="#projects" class="py-3 border-b border-black/5">Projects</a>
+      <a href="#contact" class="py-3">Contact</a>
+    </nav>
   </div>
 </header>
 
 <main id="top">
 
 <!-- 1. Hero -->
-<section class="pt-14 lg:pt-20 pb-20 lg:pb-28">
+<section class="pt-12 lg:pt-20 pb-16 lg:pb-24">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-end">
-      <div class="lg:col-span-8">
-        <p class="text-[13px] uppercase tracking-[0.18em] text-ink/60 font-semibold mb-6">Tampa Bay &amp; Fort Lauderdale</p>
-        <h1 class="text-[40px] sm:text-6xl lg:text-[76px] font-medium">Remodeling built around the way you <b class="font-bold">live.</b></h1>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <div class="lg:col-span-7">
+        <p class="eyebrow text-brand mb-5">Tampa Bay &amp; Fort Lauderdale</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-[64px] font-semibold tracking-tight leading-[1.04]">Remodeling built around <span class="font-bold">the way you live.</span></h1>
       </div>
-      <div class="lg:col-span-4">
-        <p class="text-[17px] text-ink/70 leading-relaxed">Thoughtfully designed kitchens, bathrooms, and complete renovations, supported by our dedicated showroom, design center, and experienced project team.</p>
+      <div class="lg:col-span-5">
+        <p class="text-lg text-black/65 leading-relaxed">Kitchens, bathrooms and whole-home renovations, supported by our Tampa showroom, design center and an experienced project team.</p>
       </div>
     </div>
 
-    <div class="mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-12 gap-5">
-      <div class="md:col-span-6 rounded-tile overflow-hidden aspect-[4/3] md:aspect-auto md:h-[520px]">
-        <img class="tile-img" src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/step-up-home-improvements/21948/photo-4.jpg" alt="Remodeled white kitchen with island and pendant light">
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <div class="md:col-span-7 overflow-hidden r aspect-[4/3] md:aspect-auto md:min-h-[460px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-11.jpg" alt="Remodeled living room with stone fireplace wall and built-in cabinets" class="w-full h-full object-cover">
       </div>
-      <div class="md:col-span-3 flex flex-col gap-5">
-        <div class="rounded-tile overflow-hidden aspect-[4/3] md:aspect-auto md:flex-1 md:min-h-0">
-          <img class="tile-img" src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/step-up-home-improvements/21948/photo-5.jpg" alt="Renovated bathroom with tiled tub surround">
+      <div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5">
+        <div class="flex flex-col gap-4">
+          <div class="overflow-hidden r aspect-[16/10]">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-12.jpg" alt="Installer measuring new flooring" class="w-full h-full object-cover">
+          </div>
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold h-12 px-6 hover:bg-red-700 transition" style="border-radius:24px">Get a free estimate
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold h-14 rounded-full hover:bg-ink transition">
-          Get a free estimate
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-      <div class="md:col-span-3 rounded-tile bg-mist p-7 flex flex-col justify-between min-h-[220px]">
-        <p class="text-[13px] uppercase tracking-[0.16em] text-ink/60 font-semibold">Licensed &amp; insured</p>
-        <div>
-          <p class="text-3xl font-semibold leading-tight">Florida contractor</p>
-          <p class="mt-2 text-ink/70">License CGC1537447</p>
+        <div class="bg-stone r p-7 flex flex-col justify-between min-h-[190px]">
+          <p class="eyebrow text-black/50">Licensed &amp; insured</p>
+          <div>
+            <p class="text-2xl font-semibold tracking-tight leading-snug">Florida contractor<br>CGC1537447</p>
+            <p class="text-sm text-black/60 mt-2">Free estimate within 24 hours.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -111,129 +111,124 @@ tailwind.config = {
 </section>
 
 <!-- 2. Three columns -->
-<section class="pb-20 lg:pb-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-ink/10 pt-12">
-      <div class="reveal">
-        <h3 class="text-[13px] uppercase tracking-[0.18em] font-bold mb-4">Project fit matters</h3>
-        <p class="text-ink/70 leading-relaxed">We focus on comprehensive renovations and construction, not small handyman repair calls.</p>
-      </div>
-      <div class="reveal">
-        <h3 class="text-[13px] uppercase tracking-[0.18em] font-bold mb-4">A showroom in Tampa</h3>
-        <p class="text-ink/70 leading-relaxed">See kitchen and bathroom displays, cabinetry, countertops, tile and finishes in person before construction starts.</p>
-      </div>
-      <div class="reveal">
-        <h3 class="text-[13px] uppercase tracking-[0.18em] font-bold mb-4">1-year workmanship warranty</h3>
-        <p class="text-ink/70 leading-relaxed">All kitchen, bathroom, flooring and commercial work is backed for a year. If something isn't right, we make it right.</p>
-      </div>
+<section id="about" class="py-16 lg:py-24 border-t border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+    <div>
+      <h2 class="eyebrow text-brand mb-4">Showroom &amp; design center</h2>
+      <p class="text-black/70 leading-relaxed">Visit our Tampa Bay or Fort Lauderdale showroom to see kitchen and bathroom displays, cabinetry, countertops, tile, flooring and finishes in person.</p>
+    </div>
+    <div>
+      <h2 class="eyebrow text-brand mb-4">Project fit matters</h2>
+      <p class="text-black/70 leading-relaxed">We focus on comprehensive renovations and construction, not small handyman repair calls.</p>
+    </div>
+    <div>
+      <h2 class="eyebrow text-brand mb-4">One team, start to finish</h2>
+      <p class="text-black/70 leading-relaxed">From focused upgrades to complete home renovations, one experienced team manages your project from the first conversation to completion.</p>
     </div>
   </div>
 </section>
 
 <!-- 3. Statement -->
-<section class="pb-20 lg:pb-28">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
-    <p class="text-[28px] sm:text-4xl lg:text-[52px] font-medium leading-[1.15] tracking-tight reveal">One experienced team for everything from focused upgrades to complete <b class="font-bold">home renovations.</b></p>
+<section class="py-20 lg:py-32 bg-paper">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.15]">Compare materials side by side.<br>Make your selections with confidence.<br>Begin <span class="font-bold">before construction starts.</span></p>
   </div>
 </section>
 
 <!-- 4. Collage -->
-<section id="work" class="pb-20 lg:pb-28">
+<section id="projects" class="py-20 lg:py-28">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-[13px] uppercase tracking-[0.18em] text-ink/60 font-semibold mb-3">Our work</p>
-    <h2 class="text-3xl lg:text-5xl font-semibold mb-10">Projects across Tampa Bay</h2>
-    <div class="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-5 grid-flow-row-dense">
-      <div class="col-span-1 md:col-span-3 rounded-tile overflow-hidden aspect-[4/5]"><img class="tile-img" src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Carpenter cutting trim with a miter saw" loading="lazy"></div>
-      <div class="col-span-1 md:col-span-3 rounded-tile overflow-hidden aspect-[4/5]"><img class="tile-img" src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Hallway interior under renovation" loading="lazy"></div>
-      <div class="col-span-2 md:col-span-6 rounded-tile overflow-hidden aspect-[16/10] md:aspect-auto md:row-span-2"><img class="tile-img" src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open framed interior of a whole-home renovation" loading="lazy"></div>
-      <div class="col-span-1 md:col-span-3 rounded-tile overflow-hidden aspect-[4/5]"><img class="tile-img" src="https://images.unsplash.com/photo-1593012672105-42e6d13af5ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Structural steel beams in a home extension" loading="lazy"></div>
-      <div class="col-span-1 md:col-span-3 rounded-tile overflow-hidden aspect-[4/5]"><img class="tile-img" src="https://images.unsplash.com/photo-1697967464378-1498c293e1aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Ladder and paint buckets inside a room being renovated" loading="lazy"></div>
-      <div class="col-span-1 md:col-span-4 rounded-tile overflow-hidden aspect-[4/3]"><img class="tile-img" src="https://images.unsplash.com/photo-1790767900092-38a519fef170?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Demolition of old tile flooring" loading="lazy"></div>
-      <div class="col-span-1 md:col-span-4 rounded-tile overflow-hidden aspect-[4/3]"><img class="tile-img" src="https://images.unsplash.com/photo-1593012672015-4fabc32c67aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home extension under construction with scaffolding" loading="lazy"></div>
-      <div class="col-span-2 md:col-span-4 rounded-tile overflow-hidden aspect-[16/9] md:aspect-[4/3]"><img class="tile-img" src="https://images.unsplash.com/photo-1601303981881-f630d27a7df5?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Second-story addition framed in block under blue sky" loading="lazy"></div>
+    <div class="max-w-2xl mb-12">
+      <p class="eyebrow text-brand mb-4">Recent work</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">Kitchens, baths and living spaces in Tampa Bay</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 grid-flow-row-dense">
+      <div class="overflow-hidden r aspect-[4/5] reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-4.jpg" alt="White kitchen with island" class="w-full h-full object-cover"></div>
+      <div class="col-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden r aspect-[4/3] lg:aspect-auto reveal order-first lg:order-none"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-11.jpg" alt="Living room with stone fireplace feature wall" class="w-full h-full object-cover"></div>
+      <div class="overflow-hidden r aspect-[4/5] reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-5.jpg" alt="Remodeled bathroom with tiled tub surround" class="w-full h-full object-cover"></div>
+      <div class="overflow-hidden r aspect-[4/5] reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-12.jpg" alt="Flooring installation" class="w-full h-full object-cover"></div>
+      <div class="overflow-hidden r aspect-[4/5] reveal"><img src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Hallway interior under renovation" class="w-full h-full object-cover"></div>
+      <div class="col-span-2 lg:col-span-4 overflow-hidden r aspect-[16/9] lg:aspect-[21/8] reveal"><img src="https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior gutted and shored up for renovation" class="w-full h-full object-cover"></div>
     </div>
   </div>
 </section>
 
 <!-- 5. How it works -->
-<section id="process" class="pb-20 lg:pb-28">
+<section id="process" class="py-20 lg:py-28 bg-paper">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
-      <div class="lg:col-span-6">
-        <p class="text-[13px] uppercase tracking-[0.18em] text-ink/60 font-semibold mb-3">How it works</p>
-        <h2 class="text-3xl lg:text-5xl font-semibold">From first call to finished project</h2>
-      </div>
-      <div class="lg:col-span-6 lg:pt-8">
-        <p class="text-ink/70 text-[17px] leading-relaxed">Free and accurate estimates within a timely manner, and a team that respects the timeframe while paying close attention to detail.</p>
-      </div>
+    <div class="max-w-2xl mb-14">
+      <p class="eyebrow text-brand mb-4">How it works</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">Five steps from first call to finished project</h2>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="rounded-tile bg-paper p-8">
-        <span class="text-brand font-bold text-sm tracking-widest">01</span>
-        <h3 class="text-xl font-semibold mt-4 mb-2">Tell us about your project</h3>
-        <p class="text-ink/70">Call, email or send a request. Share the rooms, the goals and your timing.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white r p-8">
+        <p class="text-brand font-bold text-sm tracking-widest">01</p>
+        <h3 class="text-xl font-semibold mt-6 mb-3">Tell us about your project</h3>
+        <p class="text-black/65 leading-relaxed">Call, email or send a request. Share what you want to change and we take it from there.</p>
       </div>
-      <div class="rounded-tile bg-paper p-8">
-        <span class="text-brand font-bold text-sm tracking-widest">02</span>
-        <h3 class="text-xl font-semibold mt-4 mb-2">Free estimate within 24 hours</h3>
-        <p class="text-ink/70">We estimate your project for free and get back to you within 24 hours.</p>
+      <div class="bg-white r p-8">
+        <p class="text-brand font-bold text-sm tracking-widest">02</p>
+        <h3 class="text-xl font-semibold mt-6 mb-3">Free estimate in 24 hours</h3>
+        <p class="text-black/65 leading-relaxed">We estimate your project at no cost and get back to you within 24 hours.</p>
       </div>
-      <div class="rounded-tile bg-paper p-8">
-        <span class="text-brand font-bold text-sm tracking-widest">03</span>
-        <h3 class="text-xl font-semibold mt-4 mb-2">We assemble the details</h3>
-        <p class="text-ink/70">Materials, finishes and scope are put together so you know what to expect.</p>
+      <div class="bg-white r p-8">
+        <p class="text-brand font-bold text-sm tracking-widest">03</p>
+        <h3 class="text-xl font-semibold mt-6 mb-3">We assemble the details</h3>
+        <p class="text-black/65 leading-relaxed">Layout, materials and finishes are pulled together into one clear plan for your project.</p>
       </div>
-      <div class="rounded-tile bg-paper p-8">
-        <span class="text-brand font-bold text-sm tracking-widest">04</span>
-        <h3 class="text-xl font-semibold mt-4 mb-2">We secure your project</h3>
-        <p class="text-ink/70">As soon as it is signed, your project is secured and scheduled.</p>
+      <div class="bg-white r p-8">
+        <p class="text-brand font-bold text-sm tracking-widest">04</p>
+        <h3 class="text-xl font-semibold mt-6 mb-3">We secure your project</h3>
+        <p class="text-black/65 leading-relaxed">As soon as the agreement is signed, we lock in your project and your start.</p>
       </div>
-      <div class="rounded-tile bg-paper p-8">
-        <span class="text-brand font-bold text-sm tracking-widest">05</span>
-        <h3 class="text-xl font-semibold mt-4 mb-2">We stay with you to completion</h3>
-        <p class="text-ink/70">Our team accompanies you through every stage until the work is done.</p>
+      <div class="bg-white r p-8">
+        <p class="text-brand font-bold text-sm tracking-widest">05</p>
+        <h3 class="text-xl font-semibold mt-6 mb-3">We stay with you to completion</h3>
+        <p class="text-black/65 leading-relaxed">Our team accompanies you until your project is complete, and we respect the timeframe.</p>
       </div>
-      <div class="rounded-tile bg-brand text-white p-8">
-        <span class="font-bold text-sm tracking-widest">06</span>
-        <h3 class="text-xl font-semibold mt-4 mb-2">1-year workmanship warranty</h3>
-        <p class="text-white/85">We stand behind every project we complete. If something isn't right, we make it right.</p>
+      <div class="bg-ink text-white r p-8 flex flex-col justify-between">
+        <p class="text-xl font-semibold leading-snug">Ready to revamp your home?</p>
+        <a href="#contact" class="mt-8 inline-flex items-center gap-2 font-semibold text-brand hover:text-white transition">Get started today
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 6. Services -->
-<section id="services" class="pb-20 lg:pb-28">
+<section id="services" class="py-20 lg:py-28">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-[13px] uppercase tracking-[0.18em] text-ink/60 font-semibold mb-3">Services</p>
-    <h2 class="text-3xl lg:text-5xl font-semibold mb-10">Kitchen, bathroom &amp; whole-home remodeling</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <a href="#contact" class="group block">
-        <div class="rounded-tile overflow-hidden aspect-[4/5]"><img class="tile-img group-hover:scale-[1.03] transition duration-500" src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/step-up-home-improvements/21948/photo-4.jpg" alt="Kitchen remodeling" loading="lazy"></div>
-        <h3 class="text-xl font-semibold mt-4">Kitchen Remodeling</h3>
-        <p class="text-ink/70 mt-1 text-[15px]">Full remodels and layout reconfiguration.</p>
-      </a>
-      <a href="#contact" class="group block">
-        <div class="rounded-tile overflow-hidden aspect-[4/5]"><img class="tile-img group-hover:scale-[1.03] transition duration-500" src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/step-up-home-improvements/21948/photo-5.jpg" alt="Bathroom remodeling" loading="lazy"></div>
-        <h3 class="text-xl font-semibold mt-4">Bathroom Remodeling</h3>
-        <p class="text-ink/70 mt-1 text-[15px]">Bathroom renovations and custom showers.</p>
-      </a>
-      <a href="#contact" class="group block">
-        <div class="rounded-tile overflow-hidden aspect-[4/5]"><img class="tile-img group-hover:scale-[1.03] transition duration-500" src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Whole-home remodeling" loading="lazy"></div>
-        <h3 class="text-xl font-semibold mt-4">Whole-Home Remodeling</h3>
-        <p class="text-ink/70 mt-1 text-[15px]">Complete interior renovations.</p>
-      </a>
-      <a href="#contact" class="group block">
-        <div class="rounded-tile overflow-hidden aspect-[4/5]"><img class="tile-img group-hover:scale-[1.03] transition duration-500" src="https://images.unsplash.com/photo-1790767900092-38a519fef170?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Flooring installation and condo remodeling" loading="lazy"></div>
-        <h3 class="text-xl font-semibold mt-4">Condo &amp; Flooring</h3>
-        <p class="text-ink/70 mt-1 text-[15px]">Condo remodeling and flooring installation.</p>
-      </a>
+    <div class="max-w-2xl mb-12">
+      <p class="eyebrow text-brand mb-4">Services</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">Remodeling and renovation, Tampa Bay and Fort Lauderdale</h2>
     </div>
-    <p class="mt-10 max-w-3xl text-ink/70 leading-relaxed">We also provide commercial construction, ADA accessibility improvements, tenant build-outs, facility renovations and new construction for businesses, property managers and public agencies throughout Florida.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article>
+        <div class="overflow-hidden r aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-4.jpg" alt="Kitchen remodel" class="w-full h-full object-cover"></div>
+        <h3 class="text-lg font-semibold mt-5">Kitchen Remodeling</h3>
+        <p class="text-black/65 mt-2 leading-relaxed">Full kitchen remodeling and layout reconfiguration.</p>
+      </article>
+      <article>
+        <div class="overflow-hidden r aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-5.jpg" alt="Bathroom remodel" class="w-full h-full object-cover"></div>
+        <h3 class="text-lg font-semibold mt-5">Bathroom Remodeling</h3>
+        <p class="text-black/65 mt-2 leading-relaxed">Bathroom renovations and custom showers.</p>
+      </article>
+      <article>
+        <div class="overflow-hidden r aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-11.jpg" alt="Whole-home renovation" class="w-full h-full object-cover"></div>
+        <h3 class="text-lg font-semibold mt-5">Whole-Home &amp; Condo</h3>
+        <p class="text-black/65 mt-2 leading-relaxed">Whole-home renovations and condo interior remodeling.</p>
+      </article>
+      <article>
+        <div class="overflow-hidden r aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-12.jpg" alt="Flooring installation" class="w-full h-full object-cover"></div>
+        <h3 class="text-lg font-semibold mt-5">Flooring Installation</h3>
+        <p class="text-black/65 mt-2 leading-relaxed">Professional flooring installation for your remodel.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- Reviews -->
+<!-- 7. Reviews -->
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -383,57 +378,58 @@ On top of showing a high level of professionalism and commitment, the quality of
 </section>
 
 <!-- 8. Why choose -->
-<section id="showroom" class="py-20 lg:py-28 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-      <div class="lg:col-span-5">
-        <div class="rounded-tile overflow-hidden aspect-[4/5]">
-          <img class="tile-img" src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Step Up crew member working on a renovation" loading="lazy">
-        </div>
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-5">
+      <div class="overflow-hidden r aspect-[4/5]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-11.jpg" alt="Finished living space by Step Up Home Improvements" class="w-full h-full object-cover">
       </div>
-      <div class="lg:col-span-7">
-        <p class="text-[13px] uppercase tracking-[0.18em] text-ink/60 font-semibold mb-3">Why choose Step Up</p>
-        <h2 class="text-3xl lg:text-5xl font-semibold mb-5">See your selections together before construction begins</h2>
-        <p class="text-ink/70 text-[17px] leading-relaxed mb-10">Visit our Tampa Bay or Fort Lauderdale showroom and design center to compare cabinetry, countertops, tile, flooring and finishes side by side, without traveling from store to store.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
-          <div class="flex gap-4">
-            <svg class="shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            <div><h3 class="font-semibold text-lg mb-1">Showroom &amp; Design Center</h3><p class="text-ink/70 text-[15px]">Explore completed kitchen and bathroom displays and get professional guidance.</p></div>
-          </div>
-          <div class="flex gap-4">
-            <svg class="shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            <div><h3 class="font-semibold text-lg mb-1">Licensed &amp; insured</h3><p class="text-ink/70 text-[15px]">Florida contractor, CGC1537447, committed to doing the project the right way.</p></div>
-          </div>
-          <div class="flex gap-4">
-            <svg class="shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            <div><h3 class="font-semibold text-lg mb-1">Free, accurate estimates</h3><p class="text-ink/70 text-[15px]">Delivered in a timely manner, with respect for your timeframe.</p></div>
-          </div>
-          <div class="flex gap-4">
-            <svg class="shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            <div><h3 class="font-semibold text-lg mb-1">Skilled professionals</h3><p class="text-ink/70 text-[15px]">An experienced team with close attention to detail on every job.</p></div>
-          </div>
+    </div>
+    <div class="lg:col-span-7">
+      <p class="eyebrow text-brand mb-4">Why choose Step Up</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight mb-12">A remodeling contractor you can rest easy with</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-9">
+        <div>
+          <div class="w-9 h-9 bg-brand/10 text-brand flex items-center justify-center mb-4" style="border-radius:24px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></div>
+          <h3 class="font-semibold text-lg mb-2">Licensed &amp; insured</h3>
+          <p class="text-black/65 leading-relaxed">Fully insured Florida contractor, license CGC1537447.</p>
+        </div>
+        <div>
+          <div class="w-9 h-9 bg-brand/10 text-brand flex items-center justify-center mb-4" style="border-radius:24px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></div>
+          <h3 class="font-semibold text-lg mb-2">Free, accurate estimates</h3>
+          <p class="text-black/65 leading-relaxed">Delivered in a timely manner, usually within 24 hours.</p>
+        </div>
+        <div>
+          <div class="w-9 h-9 bg-brand/10 text-brand flex items-center justify-center mb-4" style="border-radius:24px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></div>
+          <h3 class="font-semibold text-lg mb-2">1-year workmanship warranty</h3>
+          <p class="text-black/65 leading-relaxed">All remodeling work is backed by a 1-year workmanship warranty. If something isn’t right, we make it right.</p>
+        </div>
+        <div>
+          <div class="w-9 h-9 bg-brand/10 text-brand flex items-center justify-center mb-4" style="border-radius:24px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></div>
+          <h3 class="font-semibold text-lg mb-2">On time, close to the detail</h3>
+          <p class="text-black/65 leading-relaxed">Skilled professionals committed to the timeframe and thorough, careful work.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Community note -->
-<section class="py-20 lg:py-24">
+<!-- Community -->
+<section class="pb-20 lg:pb-28">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
+    <div class="bg-paper r p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
       <div class="lg:col-span-5">
-        <p class="text-[13px] uppercase tracking-[0.18em] text-ink/60 font-semibold mb-3">Community</p>
-        <h2 class="text-3xl lg:text-4xl font-semibold">Building more than homes</h2>
+        <p class="eyebrow text-brand mb-4">Building more than homes</p>
+        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">A safer bathroom for a Make-A-Wish family in Largo</h2>
       </div>
       <div class="lg:col-span-7">
-        <p class="text-ink/70 text-[17px] leading-relaxed">Step Up Home Improvements was honored to complete a bathroom renovation in support of a Make-A-Wish family in Largo, FL. We transformed an inaccessible bathtub into a safe, modern walk-in shower and managed the project from A to Z, including materials and coordination, to support the family during a challenging time.</p>
+        <p class="text-lg text-black/70 leading-relaxed">Step Up Home Improvements was honored to complete a bathroom renovation in support of a Make-A-Wish family in Largo, FL. We transformed an inaccessible bathtub into a safe, modern walk-in shower and managed the project A to Z, including materials and coordination, to support the family during a challenging time.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 9. Contact placeholder -->
+<!-- 9. Contact -->
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
@@ -468,13 +464,13 @@ On top of showing a high level of professionalism and commitment, the quality of
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1790767900092-38a519fef170?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1616179283726-e96f7aa16a56?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#f11111">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your kitchen, bathroom or renovation project and we will get back to you with a free estimate within 24 hours.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#f11111">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your kitchen, bathroom or renovation and we will get back to you with a free estimate within 24 hours.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+15616600997" class="lp-v lp-v-d">(561) 660-0997</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -488,7 +484,7 @@ On top of showing a high level of professionalism and commitment, the quality of
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen Remodeling</option><option>Bathroom Remodeling</option><option>Whole-Home Remodeling</option><option>Condo Remodeling</option><option>Flooring Installation</option><option>Commercial Construction</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen Remodeling</option><option>Bathroom Remodeling</option><option>Whole-Home Remodeling</option><option>Condo Remodeling</option><option>Flooring Installation</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -498,21 +494,19 @@ On top of showing a high level of professionalism and commitment, the quality of
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-<!-- 10. Final call card -->
-<section class="pb-20 lg:pb-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-      <div class="md:col-span-5 rounded-tile overflow-hidden aspect-[4/3] md:aspect-auto md:min-h-[420px]">
-        <img class="tile-img" src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/step-up-home-improvements/21948/photo-4.jpg" alt="Finished kitchen remodel" loading="lazy">
-      </div>
-      <div class="md:col-span-7 rounded-tile bg-mist p-8 lg:p-14 flex flex-col justify-center">
-        <p class="text-[13px] uppercase tracking-[0.18em] text-ink/60 font-semibold mb-4">Ready to revamp your home?</p>
-        <h2 class="text-3xl lg:text-5xl font-semibold mb-5">Get started today</h2>
-        <p class="text-ink/70 text-[17px] leading-relaxed mb-8">Discuss your goals with our remodeling team. We'll gladly answer your questions about our company or our services.</p>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="tel:+15616600997" class="inline-flex items-center justify-center bg-brand text-white font-semibold px-7 h-14 rounded-full hover:bg-ink transition">Call (561) 660-0997</a>
-          <a href="#contact" class="inline-flex items-center justify-center border border-ink/20 font-semibold px-7 h-14 rounded-full hover:bg-white transition">Request an estimate</a>
-        </div>
+<!-- 10. Final call -->
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-5">
+    <div class="md:col-span-6 overflow-hidden r aspect-[4/3] md:aspect-auto md:min-h-[420px]">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/step-up-home-improvements/21952/photo-12.jpg" alt="Installer laying new floor" class="w-full h-full object-cover">
+    </div>
+    <div class="md:col-span-6 bg-stone r p-8 sm:p-12 flex flex-col justify-center">
+      <p class="eyebrow text-brand mb-4">Start your remodeling project</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight mb-5">Your search for a trusted remodeling contractor ends here.</h2>
+      <p class="text-black/65 leading-relaxed mb-8">Discuss your goals with our team today. We’ll gladly answer your questions about our company and our remodeling services.</p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="tel:+15616600997" class="inline-flex items-center justify-center bg-brand text-white font-semibold h-12 px-6 hover:bg-red-700 transition" style="border-radius:24px">Call (561) 660-0997</a>
+        <a href="mailto:info@stepuphomeimprovements.com" class="inline-flex items-center justify-center bg-white font-semibold h-12 px-6 hover:bg-black hover:text-white transition" style="border-radius:24px">Email us</a>
       </div>
     </div>
   </div>
@@ -522,24 +516,17 @@ On top of showing a high level of professionalism and commitment, the quality of
 
 <!-- 11. Footer -->
 <footer class="bg-brand text-white">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8 py-16 text-center">
-    <p class="text-2xl font-bold tracking-tight">Step Up Home Improvements</p>
-    <p class="mt-3 text-white/85">Licensed &amp; Insured Florida Contractor · CGC1537447</p>
-    <p class="text-white/85">Serving Tampa Bay &amp; Fort Lauderdale</p>
-    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-[17px] font-medium">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 text-center">
+    <p class="text-3xl font-bold tracking-tight leading-none">Step Up<span class="block text-xs font-semibold tracking-[.2em] uppercase mt-2 text-white/80">Home Improvements</span></p>
+    <p class="mt-8 text-white/90">Kitchen, bathroom &amp; whole-home remodeling<br>Tampa Bay &amp; Fort Lauderdale, Florida</p>
+    <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-8 font-semibold">
       <a href="tel:+15616600997" class="hover:underline">(561) 660-0997</a>
-      <a href="mailto:info@stepuphomeimprovements.com" class="hover:underline break-words">info@stepuphomeimprovements.com</a>
+      <a href="mailto:info@stepuphomeimprovements.com" class="hover:underline break-words text-sm sm:text-base">info@stepuphomeimprovements.com</a>
     </div>
-    <nav class="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-[15px] text-white/90">
-      <a href="#services" class="hover:underline">Services</a>
-      <a href="#process" class="hover:underline">Process</a>
-      <a href="#showroom" class="hover:underline">Showroom</a>
-      <a href="#work" class="hover:underline">Our work</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-    </nav>
-    <div class="mt-10 pt-8 border-t border-white/25 text-[13px] text-white/80 space-y-2">
+    <p class="mt-6 text-sm text-white/80">Licensed &amp; insured Florida contractor · CGC1537447</p>
+    <div class="mt-12 pt-8 border-t border-white/25 text-xs text-white/80 space-y-1.5">
       <p>Concept redesign by LumeaPixel. This is not the official Step Up Home Improvements website.</p>
-      <p>Some photos by Steffen Lemmerzahl, Annie Spratt, Samuel Cruz, Annie Gray, Jessica Hearn and Brett Jordan on Unsplash.</p>
+      <p>Some photos by Jessica Hearn and Stefan Lehner on Unsplash.</p>
     </div>
   </div>
 </footer>

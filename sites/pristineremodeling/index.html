@@ -4,38 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Pristine Remodeling | Kitchen, Bath & Painting in Tampa, FL</title>
+<title>Pristine Remodeling | Kitchen, Bath, Flooring & Painting in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Outfit', 'sans-serif'] },
+      fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#1f6f8b',
-        ink: '#0f1a1f',
-        deep: '#0d2a35',
-        tint: '#e3f0f4',
-        paper: '#f6f5f2'
+        brand: '#8a6f4a',
+        brandtint: '#f1ebe1',
+        branddark: '#2a2218',
+        ink: '#17140f',
+        paper: '#faf8f4'
       },
-      borderRadius: { card: '24px' }
+      borderRadius: { xl2: '24px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Outfit', sans-serif; color: #0f1a1f; background: #fff; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: #17140f; background: #fff; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  @keyframes slideL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  @keyframes slideR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-  .track-l { animation: slideL 45s linear infinite; }
-  .track-r { animation: slideR 50s linear infinite; }
-  details > summary { list-style: none; cursor: pointer; }
+  @keyframes marqueeL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes marqueeR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .track-l { animation: marqueeL 45s linear infinite; }
+  .track-r { animation: marqueeR 50s linear infinite; }
+  details > summary { list-style: none; }
   details > summary::-webkit-details-marker { display: none; }
   details[open] .plus { transform: rotate(45deg); }
   .plus { transition: transform .25s ease; }
@@ -48,34 +48,34 @@ tailwind.config = {
 <body class="bg-white">
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between gap-4">
-    <a href="#top" class="text-[22px] font-semibold tracking-tight text-ink leading-none">Pristine <span class="text-brand">Remodeling</span></a>
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-0 border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between">
+    <a href="#top" class="text-xl font-semibold tracking-tight text-ink">Pristine <span class="text-brand">Remodeling</span></a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink/80">
       <a href="#how" class="hover:text-brand transition">How it works</a>
       <a href="#services" class="hover:text-brand transition">Services</a>
+      <a href="#faq" class="hover:text-brand transition">FAQ</a>
       <a href="#projects" class="hover:text-brand transition">Projects</a>
-      <a href="#faq" class="hover:text-brand transition">Questions</a>
       <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18636248558" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white text-[15px] font-medium px-5 h-11 rounded-full hover:bg-deep transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+18636248558" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white text-[15px] font-semibold px-5 py-2.5 rounded-xl2 hover:bg-branddark transition" style="border-radius:14px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         (863) 624-8558
       </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full border border-black/10 flex items-center justify-center" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl border border-black/10" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
-    <div class="px-5 py-5 flex flex-col gap-4 text-[17px] font-medium">
-      <a href="#how" class="mnav">How it works</a>
-      <a href="#services" class="mnav">Services</a>
-      <a href="#projects" class="mnav">Projects</a>
-      <a href="#faq" class="mnav">Questions</a>
-      <a href="#contact" class="mnav">Contact</a>
-      <a href="tel:+18636248558" class="inline-flex items-center justify-center bg-brand text-white h-12 rounded-full">Call (863) 624-8558</a>
+    <div class="px-5 py-4 flex flex-col gap-1 text-[16px] font-medium">
+      <a href="#how" class="py-3 border-b border-black/5">How it works</a>
+      <a href="#services" class="py-3 border-b border-black/5">Services</a>
+      <a href="#faq" class="py-3 border-b border-black/5">FAQ</a>
+      <a href="#projects" class="py-3 border-b border-black/5">Projects</a>
+      <a href="#contact" class="py-3 border-b border-black/5">Contact</a>
+      <a href="tel:+18636248558" class="mt-3 inline-flex justify-center bg-brand text-white font-semibold px-5 py-3" style="border-radius:14px">Call (863) 624-8558</a>
     </div>
   </div>
 </header>
@@ -83,218 +83,277 @@ tailwind.config = {
 <main id="top">
 
 <!-- Hero -->
-<section class="px-3 sm:px-5 pt-3 sm:pt-5">
-  <div class="relative rounded-card overflow-hidden min-h-[640px] lg:min-h-[700px]">
-    <img src="https://images.unsplash.com/photo-1649083048428-3d8ed23a3ce0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright remodeled kitchen with island and pendant lights" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/50 to-ink/10"></div>
-    <div class="relative z-10 h-full min-h-[640px] lg:min-h-[700px] p-6 sm:p-10 lg:p-14 flex flex-col justify-between gap-10">
+<section class="px-3 sm:px-5 lg:px-6 pt-3 sm:pt-5">
+  <div class="relative overflow-hidden min-h-[640px] lg:min-h-[700px] flex" style="border-radius:24px">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-14.jpg" alt="Remodeled white kitchen with green tile backsplash and quartz island" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0" style="background:linear-gradient(90deg, rgba(23,20,15,.88) 0%, rgba(23,20,15,.62) 45%, rgba(23,20,15,.12) 100%)"></div>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16 flex flex-col justify-between gap-12">
       <div class="max-w-2xl">
-        <h1 class="text-white text-[40px] sm:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight">Kitchens, baths and paint done right in Tampa.</h1>
-        <p class="mt-5 text-white/85 text-lg sm:text-xl max-w-lg leading-relaxed">Remodeling and painting for Tampa Bay homes, planned with you and handled like it's our own home.</p>
+        <h1 class="text-white text-4xl sm:text-5xl lg:text-[64px] font-medium leading-[1.06] tracking-tight">Kitchens, baths and finishes done right in Tampa.</h1>
+        <p class="mt-6 text-white/85 text-lg max-w-lg leading-relaxed">Remodeling and painting for Tampa Bay homes and businesses, managed by one team from first visit to final walkthrough.</p>
       </div>
-      <div class="bg-white rounded-card p-6 sm:p-7 w-full max-w-md">
-        <h2 class="text-2xl font-semibold tracking-tight">Get a free estimate</h2>
-        <p class="mt-1 text-ink/65 text-[15px]">No-obligation consultation. Photos help us give you a ballpark range.</p>
-        <div class="mt-5 flex flex-col sm:flex-row gap-3">
-          <a href="tel:+18636248558" class="flex-1 inline-flex items-center justify-center gap-2 bg-brand text-white font-medium h-12 rounded-full hover:bg-deep transition px-4">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <div class="bg-white p-6 sm:p-7 w-full max-w-md" style="border-radius:20px">
+        <p class="text-ink font-semibold text-xl">Get a free estimate</p>
+        <div class="mt-4 flex flex-col sm:flex-row gap-3">
+          <a href="tel:+18636248558" class="flex-1 inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold px-5 py-3.5 hover:bg-branddark transition" style="border-radius:14px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             (863) 624-8558
           </a>
-          <a href="#contact" class="flex-1 inline-flex items-center justify-center bg-tint text-deep font-medium h-12 rounded-full hover:bg-brand hover:text-white transition px-4">Send project details</a>
+          <a href="#contact" class="flex-1 inline-flex items-center justify-center bg-brandtint text-ink font-semibold px-5 py-3.5 hover:bg-[#e6dccb] transition" style="border-radius:14px">Send project details</a>
         </div>
-        <p class="mt-4 text-[13px] text-ink/55">Serving Tampa, Clearwater, Riverview, Brandon, Valrico, Apollo Beach, St. Pete, Lutz and Zephyrhills.</p>
+        <p class="mt-4 text-sm text-ink/60">Serving Tampa, Clearwater, Riverview, Brandon, Valrico, Apollo Beach, St. Pete, Lutz and Zephyrhills.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- How it works -->
-<section id="how" class="max-w-7xl mx-auto px-5 lg:px-8 pt-24 lg:pt-32">
-  <div class="reveal max-w-2xl">
-    <h2 class="text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1]">How Pristine Remodeling works</h2>
-    <p class="mt-4 text-lg text-ink/65 leading-relaxed">Thoughtful communication, quality workmanship and professional project management from start to finish.</p>
-  </div>
-  <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="reveal">
-      <div class="aspect-[4/3] rounded-card overflow-hidden bg-paper">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-17.jpg" alt="Open living and dining space with herringbone floors" class="w-full h-full object-cover">
-      </div>
-      <h3 class="mt-5 text-xl font-semibold">1. Call or send your project</h3>
-      <p class="mt-2 text-ink/65 leading-relaxed">Tell us what you have in mind and attach photos. We'll follow up with a no-obligation consultation.</p>
+<section id="how" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">The process</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">How Pristine Remodeling works</h2>
     </div>
-    <div class="reveal">
-      <div class="aspect-[4/3] rounded-card overflow-hidden bg-paper">
-        <img src="https://images.unsplash.com/photo-1601760561441-16420502c7e0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled kitchen with white cabinets and farmhouse sink" class="w-full h-full object-cover">
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+      <div class="reveal">
+        <div class="aspect-[4/3] overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-19.jpg" alt="Cabinet door and flooring sample wall in the Tampa Bay office" class="w-full h-full object-cover"></div>
+        <h3 class="mt-6 text-xl font-semibold">Talk it through</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">Call us or send photos and project details. Visit our Bayshore Drive area office to compare cabinets, finishes and flooring in person.</p>
       </div>
-      <h3 class="mt-5 text-xl font-semibold">2. Plan the details</h3>
-      <p class="mt-2 text-ink/65 leading-relaxed">Compare finishes and make selections at our Tampa Bay office off Bayshore Drive, with a ballpark price range up front.</p>
-    </div>
-    <div class="reveal">
-      <div class="aspect-[4/3] rounded-card overflow-hidden bg-paper">
-        <img src="https://images.unsplash.com/photo-1643034738686-d69e7bc047e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished white kitchen with quartz island" class="w-full h-full object-cover">
+      <div class="reveal">
+        <div class="aspect-[4/3] overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-13.jpg" alt="Open kitchen with new flooring seen through a doorway" class="w-full h-full object-cover"></div>
+        <h3 class="mt-6 text-xl font-semibold">Plan the project</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">We review your goals, give you an initial ballpark pricing range, and help you choose materials with confidence.</p>
       </div>
-      <h3 class="mt-5 text-xl font-semibold">3. We do the work</h3>
-      <p class="mt-2 text-ink/65 leading-relaxed">Our team handles the project and treats your home like it's our own, keeping you informed along the way.</p>
+      <div class="reveal">
+        <div class="aspect-[4/3] overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-10.jpg" alt="Finished entry hall with arched wood door and crown molding" class="w-full h-full object-cover object-center"></div>
+        <h3 class="mt-6 text-xl font-semibold">We do the work</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">Clear communication and professional project management from start to finish. We treat your home like it's our own.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- More than just remodeling: service tiles -->
-<section id="services" class="max-w-7xl mx-auto px-5 lg:px-8 pt-24 lg:pt-32">
-  <div class="reveal max-w-2xl">
-    <h2 class="text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1]">More than just remodeling</h2>
-    <p class="mt-4 text-lg text-ink/65 leading-relaxed">Remodeling and painting services for homes, plus commercial work.</p>
-  </div>
-  <div class="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 lg:gap-5">
-    <a href="#contact" class="reveal group block">
-      <div class="aspect-square rounded-card overflow-hidden bg-paper"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-6.jpg" alt="Bathroom double vanity with framed mirrors" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
-      <p class="mt-3 text-[15px] font-medium">Bathroom remodeling</p>
-    </a>
-    <a href="#contact" class="reveal group block">
-      <div class="aspect-square rounded-card overflow-hidden bg-paper"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-1.jpg" alt="Kitchen with white cabinets and wood floors" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
-      <p class="mt-3 text-[15px] font-medium">Kitchen remodeling</p>
-    </a>
-    <a href="#contact" class="reveal group block">
-      <div class="aspect-square rounded-card overflow-hidden bg-paper"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-17.jpg" alt="Herringbone plank flooring in living area" class="w-full h-full object-cover object-left group-hover:scale-105 transition duration-500"></div>
-      <p class="mt-3 text-[15px] font-medium">Flooring &amp; tile</p>
-    </a>
-    <a href="#contact" class="reveal group block">
-      <div class="aspect-square rounded-card overflow-hidden bg-paper"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-7.jpg" alt="Custom wood vanity cabinet with round mirror" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
-      <p class="mt-3 text-[15px] font-medium">Cabinetry &amp; storage</p>
-    </a>
-    <a href="#contact" class="reveal group block">
-      <div class="aspect-square rounded-card overflow-hidden bg-paper"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-2.jpg" alt="Navy and white cabinetry with brass hardware" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
-      <p class="mt-3 text-[15px] font-medium">Cabinet painting</p>
-    </a>
-    <a href="#contact" class="reveal group block">
-      <div class="aspect-square rounded-card overflow-hidden bg-paper"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-5.jpg" alt="Painted white walls and archway in kitchen" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
-      <p class="mt-3 text-[15px] font-medium">Interior &amp; exterior painting</p>
-    </a>
-    <a href="#contact" class="reveal group block col-span-2 md:col-span-1">
-      <div class="aspect-square md:aspect-square rounded-card overflow-hidden bg-paper"><img src="https://images.unsplash.com/photo-1649083048198-f57bd8fb7a3b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright open interior with dining area" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
-      <p class="mt-3 text-[15px] font-medium">Commercial &amp; tenant improvements</p>
-    </a>
+<!-- Services tiles -->
+<section id="services" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Our services</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">More than just remodeling</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-5">
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-14.jpg" alt="Kitchen remodeling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-semibold">Kitchen remodeling</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-11.jpg" alt="Bathroom remodeling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-semibold">Bathroom remodeling</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-16.jpg" alt="Flooring and tile" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-semibold">Flooring &amp; tile</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-1.jpg" alt="Cabinetry and storage" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-semibold">Cabinetry &amp; storage</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-17.jpg" alt="Interior painting" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-semibold">Interior painting</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square overflow-hidden" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-20.jpg" alt="Exterior painting" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-semibold">Exterior painting</p>
+      </a>
+    </div>
+    <p class="mt-8 text-ink/65 max-w-2xl">We also handle cabinet painting and commercial work, including commercial remodeling, painting, tenant improvements and facility improvements.</p>
   </div>
 </section>
 
 <!-- Photo band -->
-<section class="max-w-7xl mx-auto px-5 lg:px-8 pt-24 lg:pt-32">
-  <div class="reveal rounded-card overflow-hidden aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]">
-    <img src="https://images.unsplash.com/photo-1652918320939-47f66eb1b684?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled green and wood kitchen with island" class="w-full h-full object-cover">
+<section class="px-3 sm:px-5 lg:px-6">
+  <div class="max-w-[1500px] mx-auto aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] overflow-hidden" style="border-radius:24px">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-20.jpg" alt="Two-story Tampa office building with dormers and striped awning entry" class="w-full h-full object-cover object-center">
   </div>
 </section>
 
 <!-- Statement -->
-<section class="max-w-5xl mx-auto px-5 lg:px-8 py-24 lg:py-32 text-center">
-  <p class="reveal text-3xl sm:text-4xl lg:text-5xl font-light leading-[1.2] tracking-tight text-ink">We always treat your home like it's our own, so you have an excellent experience from the first call to the last day.</p>
+<section class="py-24 lg:py-36">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-3xl sm:text-4xl lg:text-6xl font-light leading-[1.15] tracking-tight text-ink">We always treat your home like it's our own, so you have an excellent experience.</p>
+  </div>
 </section>
 
-<!-- Scrolling pills -->
-<section class="overflow-hidden pb-24 lg:pb-32" aria-label="Services and areas">
-  <div class="flex w-max track-l gap-3 mb-3">
-    <div class="flex gap-3 shrink-0">
-      <span class="pill-a">Kitchen remodeling</span><span class="pill-b">Bathroom remodeling</span><span class="pill-a">Flooring &amp; tile</span><span class="pill-b">Cabinetry &amp; storage</span><span class="pill-a">Cabinet painting</span><span class="pill-b">Interior painting</span><span class="pill-a">Exterior painting</span><span class="pill-b">Tenant improvements</span>
+<!-- Pill marquee -->
+<section class="pb-24 lg:pb-32 overflow-hidden">
+  <div class="flex flex-col gap-4">
+    <div class="overflow-hidden">
+      <div class="flex w-max gap-3 track-l">
+        <!-- set 1 -->
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kitchen remodeling</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bathroom remodeling</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Flooring &amp; tile</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cabinetry &amp; custom carpentry</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cabinet painting</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Interior painting</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Exterior painting</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tenant improvements</span>
+        <!-- set 2 -->
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kitchen remodeling</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bathroom remodeling</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Flooring &amp; tile</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cabinetry &amp; custom carpentry</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cabinet painting</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Interior painting</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Exterior painting</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tenant improvements</span>
+      </div>
     </div>
-    <div class="flex gap-3 shrink-0" aria-hidden="true">
-      <span class="pill-a">Kitchen remodeling</span><span class="pill-b">Bathroom remodeling</span><span class="pill-a">Flooring &amp; tile</span><span class="pill-b">Cabinetry &amp; storage</span><span class="pill-a">Cabinet painting</span><span class="pill-b">Interior painting</span><span class="pill-a">Exterior painting</span><span class="pill-b">Tenant improvements</span>
-    </div>
-  </div>
-  <div class="flex w-max track-r gap-3">
-    <div class="flex gap-3 shrink-0">
-      <span class="pill-b">Condo &amp; HOA experience</span><span class="pill-a">Fully insured</span><span class="pill-b">Tampa</span><span class="pill-a">Clearwater</span><span class="pill-b">Riverview</span><span class="pill-a">Brandon</span><span class="pill-b">St. Pete</span><span class="pill-a">Lutz</span>
-    </div>
-    <div class="flex gap-3 shrink-0" aria-hidden="true">
-      <span class="pill-b">Condo &amp; HOA experience</span><span class="pill-a">Fully insured</span><span class="pill-b">Tampa</span><span class="pill-a">Clearwater</span><span class="pill-b">Riverview</span><span class="pill-a">Brandon</span><span class="pill-b">St. Pete</span><span class="pill-a">Lutz</span>
+    <div class="overflow-hidden">
+      <div class="flex w-max gap-3 track-r">
+        <!-- set 1 -->
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Experienced with condo and HOA remodeling</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Insured for your peace of mind</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Office at 610 W Horatio St., Tampa</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Expertise and communication</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reliability and timeliness</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No-obligation consultation</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Commercial remodeling and painting</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Facility improvements</span>
+        <!-- set 2 -->
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Experienced with condo and HOA remodeling</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Insured for your peace of mind</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Office at 610 W Horatio St., Tampa</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Expertise and communication</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reliability and timeliness</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No-obligation consultation</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brandtint text-ink px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Commercial remodeling and painting</span>
+        <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold" style="border-radius:999px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Facility improvements</span>
+      </div>
     </div>
   </div>
 </section>
-<style>
-  .pill-a, .pill-b { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; height: 52px; padding: 0 24px; border-radius: 999px; font-size: 16px; font-weight: 500; }
-  .pill-a { background: #1f6f8b; color: #fff; }
-  .pill-b { background: #e3f0f4; color: #0d2a35; }
-  .pill-a::before, .pill-b::before { content: ""; width: 14px; height: 14px; flex: none; background-repeat: no-repeat; background-position: center; background-size: contain; }
-  .pill-a::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E"); }
-  .pill-b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f6f8b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E"); }
-</style>
+
+<!-- Office / condo split -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/3] overflow-hidden" style="border-radius:20px">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-19.jpg" alt="Tampa Bay office with cabinet door and flooring sample shelves" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Visit our Tampa Bay office</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-medium leading-tight tracking-tight">Compare finishes in person before you decide</h2>
+      <p class="mt-5 text-lg text-ink/70 leading-relaxed">Our office off Bayshore Drive is a comfortable space to explore ideas, compare finishes and plan your remodeling project with confidence.</p>
+      <p class="mt-5 text-ink/90 font-semibold">610 W Horatio St., Suite 1, Tampa, FL 33606</p>
+      <p class="mt-6 text-ink/70 leading-relaxed">We also have experience working within Tampa condo associations and HOA guidelines, from approval processes and building access to noise and work-hour restrictions and coordination with property management.</p>
+      <a href="#contact" class="mt-8 inline-flex items-center justify-center bg-brand text-white font-semibold px-6 py-3.5 hover:bg-branddark transition" style="border-radius:14px">Request a consultation</a>
+    </div>
+  </div>
+</section>
 
 <!-- FAQ -->
-<section id="faq" class="max-w-4xl mx-auto px-5 lg:px-8 pb-24 lg:pb-32">
-  <div class="reveal text-center">
-    <h2 class="text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1]">Questions, answered</h2>
-  </div>
-  <div class="mt-12 space-y-3 reveal">
-    <details class="bg-paper rounded-card px-6 py-5">
-      <summary class="flex items-center justify-between gap-4 text-lg font-medium">Where do you work?
-        <span class="plus text-2xl text-brand leading-none">+</span></summary>
-      <p class="mt-3 text-ink/70 leading-relaxed">We remodel homes in Tampa, Clearwater, Riverview, Brandon, Valrico, Apollo Beach, St. Pete, Lutz and Zephyrhills.</p>
-    </details>
-    <details class="bg-paper rounded-card px-6 py-5">
-      <summary class="flex items-center justify-between gap-4 text-lg font-medium">Can you work in a condo or HOA community?
-        <span class="plus text-2xl text-brand leading-none">+</span></summary>
-      <p class="mt-3 text-ink/70 leading-relaxed">Yes. Our team has experience working within condo associations and HOA guidelines, including approval processes, building access and scheduling, noise and work-hour restrictions, material and plumbing considerations, and coordination with property management.</p>
-    </details>
-    <details class="bg-paper rounded-card px-6 py-5">
-      <summary class="flex items-center justify-between gap-4 text-lg font-medium">Can I get a price range before committing?
-        <span class="plus text-2xl text-brand leading-none">+</span></summary>
-      <p class="mt-3 text-ink/70 leading-relaxed">Photos and project details help us understand your goals and let us provide an initial ballpark pricing range. Consultations are no-obligation.</p>
-    </details>
-    <details class="bg-paper rounded-card px-6 py-5">
-      <summary class="flex items-center justify-between gap-4 text-lg font-medium">Are you insured?
-        <span class="plus text-2xl text-brand leading-none">+</span></summary>
-      <p class="mt-3 text-ink/70 leading-relaxed">Yes, we are highly experienced and insured for your peace of mind.</p>
-    </details>
-    <details class="bg-paper rounded-card px-6 py-5">
-      <summary class="flex items-center justify-between gap-4 text-lg font-medium">Where can I look at finishes and plan my project?
-        <span class="plus text-2xl text-brand leading-none">+</span></summary>
-      <p class="mt-3 text-ink/70 leading-relaxed">Our Tampa Bay office is at 610 W Horatio St., Suite 1, Tampa, FL 33606, off Bayshore Drive. It's a comfortable space to explore ideas, compare finishes and plan your project.</p>
-    </details>
+<section id="faq" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+    <div class="lg:col-span-4 reveal">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">FAQ</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">Questions, answered</h2>
+    </div>
+    <div class="lg:col-span-8 flex flex-col gap-3 reveal">
+      <details class="group bg-paper px-6 py-5" style="border-radius:16px">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer font-semibold text-lg">
+          Where is your Tampa Bay office?
+          <span class="plus shrink-0 text-2xl leading-none text-brand">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">610 W Horatio St., Suite 1, Tampa, FL 33606, off Bayshore Drive. It's a space to explore ideas, compare finishes and plan your project.</p>
+      </details>
+      <details class="group bg-paper px-6 py-5" style="border-radius:16px">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer font-semibold text-lg">
+          Which areas do you serve?
+          <span class="plus shrink-0 text-2xl leading-none text-brand">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Tampa, Clearwater, Riverview, Brandon, Valrico, Apollo Beach, St. Pete, Lutz and Zephyrhills.</p>
+      </details>
+      <details class="group bg-paper px-6 py-5" style="border-radius:16px">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer font-semibold text-lg">
+          Do you work in condos and HOA communities?
+          <span class="plus shrink-0 text-2xl leading-none text-brand">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Yes. Our team has experience with condo associations and HOA guidelines, including approval processes, building access and scheduling, noise and work-hour restrictions, material and plumbing considerations, and coordination with property management.</p>
+      </details>
+      <details class="group bg-paper px-6 py-5" style="border-radius:16px">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer font-semibold text-lg">
+          Can you give me a price before I commit?
+          <span class="plus shrink-0 text-2xl leading-none text-brand">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Photos and project details help us understand your goals and let us provide an initial ballpark pricing range. Consultations are no-obligation.</p>
+      </details>
+      <details class="group bg-paper px-6 py-5" style="border-radius:16px">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer font-semibold text-lg">
+          Do you handle commercial projects?
+          <span class="plus shrink-0 text-2xl leading-none text-brand">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Yes. We offer commercial remodeling, commercial painting, tenant improvements and facility improvements.</p>
+      </details>
+      <details class="group bg-paper px-6 py-5" style="border-radius:16px">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer font-semibold text-lg">
+          Are you insured?
+          <span class="plus shrink-0 text-2xl leading-none text-brand">+</span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">We are highly experienced and insured for your peace of mind, and we treat your home like it's our own.</p>
+      </details>
+    </div>
   </div>
 </section>
 
-<!-- Project type cards -->
-<section id="projects" class="bg-paper py-24 lg:py-32">
+<!-- Project cards -->
+<section id="projects" class="py-24 lg:py-32 bg-paper">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="reveal max-w-2xl">
-      <h2 class="text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1]">Recent kinds of projects</h2>
-      <p class="mt-4 text-lg text-ink/65 leading-relaxed">A look at the spaces we remodel across Tampa Bay.</p>
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Recent work</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">Projects from around Tampa Bay</h2>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <article class="reveal bg-white rounded-card overflow-hidden">
-        <div class="relative aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1649083048198-f57bd8fb7a3b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open kitchen with white cabinets and brass handles" class="w-full h-full object-cover">
-          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Kitchen</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold">Kitchen remodeling</h3>
-          <p class="mt-2 text-ink/65 leading-relaxed">New cabinets, counters and layouts planned around how you cook.</p>
-        </div>
-      </article>
-      <article class="reveal bg-white rounded-card overflow-hidden">
-        <div class="relative aspect-[4/3]">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-6.jpg" alt="Bathroom vanity with oval mirrors and soaking tub" class="w-full h-full object-cover object-top">
-          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Bathroom</span>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <article class="bg-white overflow-hidden reveal" style="border-radius:20px">
+        <div class="relative aspect-[4/5] overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-11.jpg" alt="Walk-in shower with marble-look tile and glass half wall" class="w-full h-full object-cover">
+          <span class="absolute left-4 top-4 bg-white text-ink text-xs font-semibold px-3 py-1.5" style="border-radius:999px">Bathroom</span>
         </div>
         <div class="p-6">
           <h3 class="text-xl font-semibold">Bathroom remodeling</h3>
-          <p class="mt-2 text-ink/65 leading-relaxed">Condo and single-family baths, handled with careful coordination.</p>
+          <p class="mt-2 text-ink/70">Walk-in showers, tile work and fresh vanities.</p>
         </div>
       </article>
-      <article class="reveal bg-white rounded-card overflow-hidden">
-        <div class="relative aspect-[4/3]">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-17.jpg" alt="Living and dining area with fresh paint and new flooring" class="w-full h-full object-cover">
-          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Whole home</span>
+      <article class="bg-white overflow-hidden reveal" style="border-radius:20px">
+        <div class="relative aspect-[4/5] overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-1.jpg" alt="Remodeled white kitchen with warm hardwood floors" class="w-full h-full object-cover">
+          <span class="absolute left-4 top-4 bg-white text-ink text-xs font-semibold px-3 py-1.5" style="border-radius:999px">Kitchen</span>
         </div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold">Flooring, paint and finishes</h3>
-          <p class="mt-2 text-ink/65 leading-relaxed">Interior and exterior painting, cabinet painting, flooring and tile.</p>
+          <h3 class="text-xl font-semibold">Kitchen remodeling</h3>
+          <p class="mt-2 text-ink/70">Cabinetry, counters and layouts built around how you cook.</p>
+        </div>
+      </article>
+      <article class="bg-white overflow-hidden reveal" style="border-radius:20px">
+        <div class="relative aspect-[4/5] overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-16.jpg" alt="Staircase with dark treads, white risers and black railing over new flooring" class="w-full h-full object-cover">
+          <span class="absolute left-4 top-4 bg-white text-ink text-xs font-semibold px-3 py-1.5" style="border-radius:999px">Flooring &amp; carpentry</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Flooring, stairs and custom carpentry</h3>
+          <p class="mt-2 text-ink/70">New floors, railings and finish carpentry throughout the home.</p>
         </div>
       </article>
     </div>
-    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
-      <div class="aspect-[3/4] rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-3.jpg" alt="Shower with black pebble floor and teak bench" class="w-full h-full object-cover"></div>
-      <div class="aspect-[3/4] rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-5.jpg" alt="Arched kitchen pantry nook" class="w-full h-full object-cover"></div>
-      <div class="aspect-[3/4] rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-7.jpg" alt="Wood vanity with lit round mirror" class="w-full h-full object-cover"></div>
-      <div class="aspect-[3/4] rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/pristine-remodeling/21948/photo-2.jpg" alt="Navy lower cabinets with brass pulls and glass uppers" class="w-full h-full object-cover"></div>
+
+    <!-- extra gallery row -->
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+      <div class="aspect-square overflow-hidden reveal" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-12.jpg" alt="Exposed wood beam ceiling with ceiling fan" class="w-full h-full object-cover"></div>
+      <div class="aspect-square overflow-hidden reveal" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-17.jpg" alt="Open living and dining room with herringbone floor" class="w-full h-full object-cover"></div>
+      <div class="aspect-square overflow-hidden reveal" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-18.jpg" alt="Wood entry door with sidelights and house number plaque" class="w-full h-full object-cover"></div>
+      <div class="aspect-square overflow-hidden reveal" style="border-radius:20px"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-15.jpg" alt="Renovated interior with chandelier and light wood floors" class="w-full h-full object-cover"></div>
     </div>
   </div>
 </section>
@@ -303,8 +362,8 @@ tailwind.config = {
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:0 0 clamp(80px,10vw,128px)">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(31,111,139,0.10);color:#1f6f8b}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#9abecb}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(138,111,74,0.10);color:#8a6f4a}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#cabeae}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -323,8 +382,8 @@ tailwind.config = {
     .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#1f6f8b;box-shadow:0 0 0 4px rgba(31,111,139,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#1f6f8b;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#8a6f4a;box-shadow:0 0 0 4px rgba(138,111,74,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#8a6f4a;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -332,7 +391,7 @@ tailwind.config = {
     .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
     .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
-    .lp-contact .lp-band{position:relative;background:#111 url('https://images.unsplash.com/photo-1601760561441-16420502c7e0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;padding:clamp(80px,10vw,128px) 0 clamp(150px,16vw,200px)}
+    .lp-contact .lp-band{position:relative;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/pristine-remodeling/21952/photo-10.jpg') center/cover no-repeat;padding:clamp(80px,10vw,128px) 0 clamp(150px,16vw,200px)}
     .lp-contact .lp-band:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.72))}
     .lp-contact .lp-band>.lp-in{position:relative}
     .lp-contact .lp-up{margin-top:-120px;position:relative}
@@ -343,7 +402,7 @@ tailwind.config = {
     .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:12px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
     .lp-contact .lp-tile .lp-v{font-size:16px}
     .lp-contact .lp-formwrap{max-width:48rem;margin:28px auto 0}</style>
-  <div class="lp-band"><div class="lp-in"><div class="lp-center"><p class="lp-kick" style="color:#9abecb">Contact</p><h2 class="lp-h" style="color:#fff">Tell us about your project</h2><p class="lp-p" style="color:rgba(255,255,255,.82)">Share a few details and photos, and our Tampa team will follow up with next steps and a ballpark range.</p></div></div></div>
+  <div class="lp-band"><div class="lp-in"><div class="lp-center"><p class="lp-kick" style="color:#cabeae">Contact</p><h2 class="lp-h" style="color:#fff">Tell us about your project</h2><p class="lp-p" style="color:rgba(255,255,255,.82)">Share a few details and photos and a member of our Tampa team will follow up as soon as possible.</p></div></div></div>
   <div class="lp-in lp-up">
     
     <div class="lp-tiles" style="margin-top:0"><a href="tel:+18636248558" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(863) 624-8558</span></span></a><a href="mailto:ax@pristinefl.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">ax@pristinefl.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Tampa, FL</span></span></div></div>
@@ -353,7 +412,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen remodeling</option><option>Bathroom remodeling</option><option>Flooring &amp; tile</option><option>Cabinetry &amp; storage</option><option>Cabinet painting</option><option>Interior painting</option><option>Exterior painting</option><option>Commercial remodeling</option><option>Tenant improvements</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen remodeling</option><option>Bathroom remodeling</option><option>Flooring &amp; tile</option><option>Cabinetry &amp; custom carpentry</option><option>Cabinet painting</option><option>Interior painting</option><option>Exterior painting</option><option>Commercial remodeling</option><option>Commercial painting</option><option>Tenant improvements</option><option>Facility improvements</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -366,57 +425,61 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-white border-t border-black/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-4">
-      <a href="#top" class="text-[22px] font-semibold tracking-tight leading-none">Pristine <span class="text-brand">Remodeling</span></a>
+<footer class="bg-paper border-t border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4">
+      <a href="#top" class="text-xl font-semibold tracking-tight text-ink">Pristine <span class="text-brand">Remodeling</span></a>
       <p class="mt-5 text-ink/70 leading-relaxed">610 W Horatio St., Suite 1<br>Tampa, FL 33606</p>
-      <p class="mt-3"><a href="tel:+18636248558" class="font-medium text-ink hover:text-brand">(863) 624-8558</a></p>
-      <p class="mt-1"><a href="mailto:ax@pristinefl.com" class="text-ink/70 hover:text-brand break-words">ax@pristinefl.com</a></p>
+      <a href="tel:+18636248558" class="mt-4 block text-lg font-semibold text-ink hover:text-brand transition">(863) 624-8558</a>
+      <a href="mailto:ax@pristinefl.com" class="mt-1 block text-ink/70 hover:text-brand transition break-words">ax@pristinefl.com</a>
     </div>
-    <div class="md:col-span-2">
-      <h4 class="text-sm font-semibold uppercase tracking-wider text-ink/50">Remodeling</h4>
-      <ul class="mt-4 space-y-2 text-ink/75">
-        <li>Kitchen remodeling</li><li>Bathroom remodeling</li><li>Flooring &amp; tile</li><li>Cabinetry &amp; storage</li>
+    <div class="lg:col-span-2">
+      <p class="text-sm font-semibold text-ink">Remodeling</p>
+      <ul class="mt-4 space-y-2.5 text-ink/70 text-[15px]">
+        <li><a href="#services" class="hover:text-brand transition">Kitchen remodeling</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Bathroom remodeling</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Flooring &amp; tile</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Cabinetry &amp; storage</a></li>
       </ul>
     </div>
-    <div class="md:col-span-2">
-      <h4 class="text-sm font-semibold uppercase tracking-wider text-ink/50">Painting</h4>
-      <ul class="mt-4 space-y-2 text-ink/75">
-        <li>Cabinet painting</li><li>Interior painting</li><li>Exterior painting</li>
+    <div class="lg:col-span-3">
+      <p class="text-sm font-semibold text-ink">Painting &amp; commercial</p>
+      <ul class="mt-4 space-y-2.5 text-ink/70 text-[15px]">
+        <li><a href="#services" class="hover:text-brand transition">Cabinet painting</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Interior painting</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Exterior painting</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Commercial remodeling &amp; painting</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Tenant improvements</a></li>
       </ul>
     </div>
-    <div class="md:col-span-2">
-      <h4 class="text-sm font-semibold uppercase tracking-wider text-ink/50">Commercial</h4>
-      <ul class="mt-4 space-y-2 text-ink/75">
-        <li>Commercial remodeling</li><li>Commercial painting</li><li>Tenant improvements</li><li>Facility improvements</li>
-      </ul>
-    </div>
-    <div class="md:col-span-2">
-      <h4 class="text-sm font-semibold uppercase tracking-wider text-ink/50">Service areas</h4>
-      <ul class="mt-4 space-y-2 text-ink/75">
-        <li>Tampa</li><li>Clearwater</li><li>Riverview</li><li>Brandon</li><li>Valrico</li><li>Apollo Beach</li><li>St. Pete</li><li>Lutz</li><li>Zephyrhills</li>
+    <div class="lg:col-span-3">
+      <p class="text-sm font-semibold text-ink">Service areas</p>
+      <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 text-ink/70 text-[15px]">
+        <li>Tampa</li>
+        <li>Clearwater</li>
+        <li>Riverview</li>
+        <li>Brandon</li>
+        <li>Valrico</li>
+        <li>Apollo Beach</li>
+        <li>St. Pete</li>
+        <li>Lutz</li>
+        <li>Zephyrhills</li>
       </ul>
     </div>
   </div>
-  <div class="border-t border-black/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-[13px] text-ink/55 space-y-1">
-      <p>Concept redesign by LumeaPixel. This is not the official Pristine Remodeling website.</p>
-      <p>Some photos by Clay Elliot, Decima Athens, Bailey Alexander and Lotus Design N Print on Unsplash.</p>
+  <div class="border-t border-black/5">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-ink/55">
+      Concept redesign by LumeaPixel. This is not the official Pristine Remodeling website.
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => {
-    const open = menu.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', open);
-  });
-  document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => {
-    menu.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false');
-  }));
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

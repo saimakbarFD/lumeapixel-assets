@@ -13,13 +13,13 @@
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+      fontFamily: { sans: ['Manrope', 'sans-serif'] },
       colors: {
         brand: '#171717',
         ink: '#0e0e0e',
         paper: '#f4f4f2',
-        stone: '#e6e6e2',
-        mute: '#6b6b66'
+        stone2: '#e7e6e2',
+        mute: '#6b6b68'
       },
       borderRadius: { DEFAULT: '4px' }
     }
@@ -31,443 +31,391 @@ tailwind.config = {
   body { font-family: 'Manrope', sans-serif; color: #171717; background: #fff; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .hero-title { letter-spacing: -0.03em; line-height: 0.98; }
-  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
-  .logo-img { height: 48px; width: auto; display: block; }
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 26px; font-weight: 700; font-size: 15px; border-radius: 4px; transition: background .2s, color .2s, border-color .2s; }
-  .btn-dark { background: #171717; color: #fff; border: 1px solid #171717; }
-  .btn-dark:hover { background: #000; }
-  .btn-light { background: #fff; color: #171717; border: 1px solid #fff; }
-  .btn-light:hover { background: #e6e6e2; }
-  .btn-ghost { border: 1px solid rgba(255,255,255,.4); color: #fff; }
-  .btn-ghost:hover { background: rgba(255,255,255,.1); }
-  .btn-outline { border: 1px solid #171717; color: #171717; }
-  .btn-outline:hover { background: #171717; color: #fff; }
-  .num-box { width: 56px; height: 56px; border: 1.5px solid #171717; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; border-radius: 4px; }
-  details > summary { list-style: none; cursor: pointer; }
-  details > summary::-webkit-details-marker { display: none; }
-  details[open] .plus { transform: rotate(45deg); }
-  .plus { transition: transform .2s; }
+  .hero-title { line-height: .98; letter-spacing: -0.02em; }
+  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .ba-top { position: absolute; inset: 0; width: 50%; overflow: hidden; }
+  .ba-top img { position: absolute; top: 0; left: 0; height: 100%; max-width: none; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #fff; transform: translateX(-1px); pointer-events: none; }
+  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; background: #fff; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #171717; }
+  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .dot::before { content: ""; display: inline-block; width: 6px; height: 6px; background: #fff; border-radius: 50%; margin-right: 14px; vertical-align: middle; opacity: .5; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-white/95 border-b border-stone backdrop-blur-0">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone2">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="flex-shrink-0">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/gilk-design-build/21948/logo-0.png" alt="Gilk Design Build" class="logo-img">
+    <a href="#top" class="shrink-0 flex items-center">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/gilk-design-build/21952/logo-0.png" alt="Gilk Design Build" class="h-12 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-semibold">
-      <a href="#approach" class="hover:text-mute">Approach</a>
-      <a href="#process" class="hover:text-mute">Process</a>
-      <a href="#work" class="hover:text-mute">Work</a>
-      <a href="#about" class="hover:text-mute">About</a>
-      <a href="#faq" class="hover:text-mute">FAQ</a>
-      <a href="#contact" class="hover:text-mute">Contact</a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+      <a href="#approach" class="hover:text-mute transition">Approach</a>
+      <a href="#how" class="hover:text-mute transition">How it runs</a>
+      <a href="#work" class="hover:text-mute transition">The work</a>
+      <a href="#about" class="hover:text-mute transition">About</a>
+      <a href="#contact" class="hover:text-mute transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18135389806" class="btn btn-dark !py-3 !px-4 sm:!px-5 text-sm">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span class="hidden sm:inline">(813) 538-9806</span>
-        <span class="sm:hidden">Call</span>
+      <a href="tel:+18135389806" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white text-sm font-bold px-5 py-3 rounded hover:bg-black transition">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (813) 538-9806
       </a>
-      <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-stone2 rounded" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-stone bg-white">
-    <div class="px-5 py-4 flex flex-col gap-4 text-base font-semibold">
-      <a href="#approach">Approach</a>
-      <a href="#process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-stone2 bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-base font-semibold">
+      <a href="#approach" class="py-3 border-b border-stone2">Approach</a>
+      <a href="#how" class="py-3 border-b border-stone2">How it runs</a>
+      <a href="#work" class="py-3 border-b border-stone2">The work</a>
+      <a href="#about" class="py-3 border-b border-stone2">About</a>
+      <a href="#contact" class="py-3 border-b border-stone2">Contact</a>
+      <a href="tel:+18135389806" class="mt-3 bg-brand text-white text-center font-bold px-5 py-4 rounded">Call (813) 538-9806</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1612296350203-7d4718f6ac65?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Custom home under construction on the water" class="absolute inset-0 w-full h-full object-cover">
+  <img src="https://images.unsplash.com/photo-1672627170267-fca17bb54156?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="" class="absolute inset-0 w-full h-full object-cover">
   <div class="absolute inset-0 bg-ink/80"></div>
   <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <p class="label text-white/70 mb-6">Design-build &middot; Tampa, Florida</p>
-      <h1 class="hero-title text-5xl sm:text-6xl lg:text-7xl font-extrabold uppercase">Design it.<br>Build it.<br>Get it right.</h1>
-      <p class="mt-8 text-lg text-white/80 max-w-xl leading-relaxed">Gilk is a boutique design-build studio in Tampa. We take on a small number of projects at a time and run each one from the first sketch to the last warranty walk, with one point of contact and every cost visible to you.</p>
-      <ul class="mt-8 space-y-3 text-[16px]">
-        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Design and construction under one roof</span></li>
-        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Open-book pricing, no surprises on signing day</span></li>
-        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>No decision that costs money without your written approval</span></li>
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-white/60 mb-6">Design-build &middot; Tampa, Florida</p>
+      <h1 class="hero-title text-5xl sm:text-6xl lg:text-7xl font-extrabold uppercase">
+        Design it.<br>Build it.<br>Get it right.
+      </h1>
+      <p class="mt-8 text-lg text-white/80 max-w-xl leading-relaxed">
+        Gilk is a boutique design-build studio for people building a home that has to be right. Design and construction under one roof, one point of contact, and every cost visible to you.
+      </p>
+      <ul class="mt-8 space-y-3 text-base">
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>One point of contact from first sketch to last warranty walk</span></li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Open-book pricing, with every invoice behind each draw</span></li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>No decision that costs money without your written approval</span></li>
       </ul>
       <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="btn btn-light">Get a free estimate</a>
-        <a href="#process" class="btn btn-ghost">See how we work</a>
+        <a href="#contact" class="bg-white text-brand font-bold px-7 py-4 rounded hover:bg-stone2 transition">Start a conversation</a>
+        <a href="#work" class="border border-white/40 text-white font-bold px-7 py-4 rounded hover:bg-white/10 transition">See the work</a>
       </div>
     </div>
     <div class="lg:col-span-5">
-      <div class="bg-paper text-brand p-8 lg:p-10 rounded">
-        <p class="label text-mute mb-3">Talk to Gilk</p>
-        <h2 class="text-3xl font-extrabold tracking-tight leading-tight">Get a free estimate</h2>
-        <p class="mt-3 text-mute leading-relaxed">Send the drawings if you have them, or just the address and an idea. You will hear back from someone who can make decisions.</p>
-        <div class="mt-8 space-y-3">
-          <a href="tel:+18135389806" class="btn btn-dark w-full">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            (813) 538-9806
+      <div class="bg-paper text-brand rounded p-8 lg:p-10">
+        <h2 class="text-2xl font-bold tracking-tight">Tell us what you are building</h2>
+        <p class="mt-3 text-mute leading-relaxed">Send the drawings if you have them, or the address and an idea if you do not. You will hear back from someone who can make decisions.</p>
+        <div class="mt-7 space-y-3">
+          <a href="tel:+18135389806" class="flex items-center justify-between bg-brand text-white font-bold px-6 py-4 rounded hover:bg-black transition">
+            <span>(813) 538-9806</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </a>
-          <a href="mailto:office@gilk.com" class="btn btn-outline w-full">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            office@gilk.com
+          <a href="mailto:office@gilk.com" class="flex items-center justify-between border border-brand text-brand font-bold px-6 py-4 rounded hover:bg-white transition">
+            <span class="break-words text-sm sm:text-base">office@gilk.com</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg>
           </a>
         </div>
-        <p class="mt-6 text-sm text-mute">3715 E 7th Ave, Tampa, FL 33605</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE STRIP -->
-<section class="bg-paper border-y border-stone">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[13px] sm:text-sm font-bold uppercase tracking-wider">
-    <span>Design-build</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
-    <span>Custom homes</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
-    <span>Whole-house renovations</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
-    <span>Owner's representation</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
-    <span>Pre-construction</span>
+<!-- 2. SERVICES STRIP -->
+<section class="bg-brand text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-bold uppercase tracking-wider">
+    <span>Design-build</span>
+    <span class="dot">Custom homes</span>
+    <span class="dot">Whole-house renovations</span>
+    <span class="dot">Owner's representation</span>
+    <span class="dot">Pre-construction</span>
   </div>
 </section>
 
-<!-- PLAN BUILD FINISH -->
-<section id="approach" class="bg-brand text-white py-24 lg:py-32">
+<!-- 3. TRACK RECORD -->
+<section id="approach" class="bg-paper py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-3xl reveal">
-      <p class="label text-white/60 mb-4">How we work</p>
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">Two contracts, on purpose.</h2>
-      <p class="mt-6 text-lg text-white/75 leading-relaxed">Pre-construction is its own engagement, so you know the real number before you commit to a build. Then the construction agreement is signed against it.</p>
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-mute mb-4">Track record</p>
+      <h2 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">A decade of building, and the numbers behind it.</h2>
     </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="reveal bg-ink rounded overflow-hidden">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Framed interior with open floor plan" class="w-full h-full object-cover"></div>
-        <div class="p-7">
-          <p class="label text-white/50 mb-2">01</p>
-          <h3 class="text-2xl font-extrabold uppercase tracking-tight">Plan</h3>
-          <p class="mt-3 text-white/70 leading-relaxed">Pre-construction on an hourly retainer: drawings coordinated with the architect, a line-item estimate, constructability review and trade bids. You keep the work product either way.</p>
-        </div>
-      </article>
-      <article class="reveal bg-ink rounded overflow-hidden">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1749883278588-837f6fc6c93c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home framing and roof going up" class="w-full h-full object-cover"></div>
-        <div class="p-7">
-          <p class="label text-white/50 mb-2">02</p>
-          <h3 class="text-2xl font-extrabold uppercase tracking-tight">Build</h3>
-          <p class="mt-3 text-white/70 leading-relaxed">Cost-plus with an open book, convertible to a guaranteed maximum if you want one. Eight gates take the project from kickoff to certificate of occupancy.</p>
-        </div>
-      </article>
-      <article class="reveal bg-ink rounded overflow-hidden">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1647579350413-a6ada4e480ed?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished two-story home with garage" class="w-full h-full object-cover"></div>
-        <div class="p-7">
-          <p class="label text-white/50 mb-2">03</p>
-          <h3 class="text-2xl font-extrabold uppercase tracking-tight">Finish</h3>
-          <p class="mt-3 text-white/70 leading-relaxed">Substantial completion, the punch list and the last warranty walk. Your Gilk lead is with you from the first sketch to the end.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- HOW YOUR PROJECT RUNS -->
-<section id="process" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-3xl reveal">
-      <p class="label text-mute mb-4">The process</p>
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">How your project runs.</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
-      <div class="reveal">
-        <div class="num-box">1</div>
-        <h3 class="mt-6 text-2xl font-extrabold tracking-tight">Every week</h3>
-        <p class="mt-3 text-mute leading-relaxed">A standing owner, architect and builder meeting. Your Gilk lead sits in every one of them with you.</p>
-      </div>
-      <div class="reveal">
-        <div class="num-box">2</div>
-        <h3 class="mt-6 text-2xl font-extrabold tracking-tight">Every day</h3>
-        <p class="mt-3 text-mute leading-relaxed">Daily logs and photos you can open any time, so you never have to wonder what happened on site.</p>
-      </div>
-      <div class="reveal">
-        <div class="num-box">3</div>
-        <h3 class="mt-6 text-2xl font-extrabold tracking-tight">Every month</h3>
-        <p class="mt-3 text-mute leading-relaxed">A draw package with every invoice behind it. The builder fee is the only profit in the job.</p>
-      </div>
-    </div>
-    <div class="mt-16 border-t border-stone pt-12 reveal">
-      <p class="label text-mute mb-6">Eight gates, kickoff to certificate of occupancy</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="bg-paper p-5 rounded"><p class="label text-mute">Gate 1</p><p class="mt-1 font-bold">Kickoff &amp; alignment</p></div>
-        <div class="bg-paper p-5 rounded"><p class="label text-mute">Gate 2</p><p class="mt-1 font-bold">Estimate reconciled to the drawings</p></div>
-        <div class="bg-paper p-5 rounded"><p class="label text-mute">Gate 3</p><p class="mt-1 font-bold">Buyout &amp; budget lock</p></div>
-        <div class="bg-paper p-5 rounded"><p class="label text-mute">Gate 4</p><p class="mt-1 font-bold">Foundation complete</p></div>
-        <div class="bg-paper p-5 rounded"><p class="label text-mute">Gate 5</p><p class="mt-1 font-bold">Dry-in: shell, roof &amp; windows</p></div>
-        <div class="bg-paper p-5 rounded"><p class="label text-mute">Gate 6</p><p class="mt-1 font-bold">Pre-drywall review</p></div>
-        <div class="bg-paper p-5 rounded"><p class="label text-mute">Gate 7</p><p class="mt-1 font-bold">Finish progress &amp; landing</p></div>
-        <div class="bg-paper p-5 rounded"><p class="label text-mute">Gate 8</p><p class="mt-1 font-bold">Substantial completion &amp; C.O.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STAGES SIDE BY SIDE (dark) -->
-<section class="bg-ink text-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-3xl reveal">
-      <p class="label text-white/60 mb-4">On site</p>
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">From dry-in to the finished house.</h2>
-      <p class="mt-6 text-lg text-white/70 leading-relaxed">Gate 5 is dry-in, when the shell, roof and windows are on. Gate 8 is substantial completion. You walk both with your Gilk lead.</p>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure class="reveal">
-        <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1672627170267-fca17bb54156?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="House wrapped and framed at dry-in stage" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-4 label text-white/60">Gate 5 &middot; Dry-in</figcaption>
-      </figure>
-      <figure class="reveal">
-        <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1722827908823-823af0bd191f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of foundation slabs on new home lots" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-4 label text-white/60">Gate 4 &middot; Foundation complete</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- DIY vs ONE CONTRACTOR -->
-<section class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-3xl reveal">
-      <p class="label text-mute mb-4">Compare</p>
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">Separate architect and builder, or one design-build team.</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="reveal bg-white border border-stone p-8 lg:p-10 rounded">
-        <h3 class="text-2xl font-extrabold tracking-tight">Design and build apart</h3>
-        <ul class="mt-6 space-y-4 text-mute">
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-mute rounded-full flex-shrink-0"></span>A lump sum guessed before the drawings exist, then the house is made to fit it</li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-mute rounded-full flex-shrink-0"></span>Architect and builder answer to different people</li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-mute rounded-full flex-shrink-0"></span>Real costs show up after the design is already set</li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-mute rounded-full flex-shrink-0"></span>You carry the coordination yourself</li>
-        </ul>
-      </div>
-      <div class="reveal bg-white border-2 border-brand p-8 lg:p-10 rounded">
-        <h3 class="text-2xl font-extrabold tracking-tight">Gilk design-build</h3>
-        <ul class="mt-6 space-y-4">
-          <li class="flex gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Estimate reconciled to the drawings, number locked at buyout before you sign</li>
-          <li class="flex gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>One team accountable for the whole house</li>
-          <li class="flex gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Open-book draw package every month</li>
-          <li class="flex gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>One point of contact who walks every gate with you</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT WE BUILD / BENTO -->
-<section id="work" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 reveal">
-      <div class="max-w-2xl">
-        <p class="label text-mute mb-4">What we take on</p>
-        <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">A few projects at a time, built the way we would build our own.</h2>
-      </div>
-      <a href="https://www.gilk.com/work/" class="btn btn-outline self-start sm:self-auto">See the work</a>
-    </div>
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 grid-flow-row-dense">
-      <article class="reveal relative overflow-hidden rounded sm:col-span-2 lg:col-span-2 lg:row-span-2 aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:min-h-[560px]">
-        <img src="https://images.unsplash.com/photo-1612296350203-7d4718f6ac65?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Custom waterfront home" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
-        <div class="absolute bottom-0 p-6 lg:p-8 text-white">
-          <h3 class="text-2xl lg:text-3xl font-extrabold tracking-tight">Design-build, start to finish</h3>
-          <p class="mt-2 text-white/80 max-w-md text-[15px]">Concept, drawings, pricing and construction under one roof.</p>
-        </div>
-      </article>
-      <article class="reveal relative overflow-hidden rounded aspect-[4/3] lg:col-span-2">
-        <img src="https://images.unsplash.com/photo-1778164920913-dbcf62cca52f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Craftsman style custom home" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 p-6 text-white">
-          <h3 class="text-xl font-extrabold tracking-tight">Custom homes</h3>
-        </div>
-      </article>
-      <article class="reveal relative overflow-hidden rounded aspect-[4/3]">
-        <img src="https://images.unsplash.com/photo-1785585508861-ba57d25e633c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Timber framing on a residential build" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 p-6 text-white"><h3 class="text-xl font-extrabold tracking-tight">Pre-construction</h3></div>
-      </article>
-      <article class="reveal relative overflow-hidden rounded aspect-[4/3]">
-        <img src="https://images.unsplash.com/photo-1687169503260-85f00f122398?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Scaffolding on a home renovation" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 p-6 text-white"><h3 class="text-xl font-extrabold tracking-tight">Whole-house renovations</h3></div>
-      </article>
-      <article class="reveal relative overflow-hidden rounded aspect-[4/3] sm:col-span-2 lg:col-span-2">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/gilk-design-build/21948/photo-2.jpg" alt="Restaurant entrance with blue awnings in downtown Tampa" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 p-6 text-white">
-          <h3 class="text-xl font-extrabold tracking-tight">Commercial fit-outs</h3>
-          <p class="mt-1 text-white/80 text-[15px]">Including a Michelin-starred restaurant in Tampa Heights.</p>
-        </div>
-      </article>
-      <article class="reveal relative overflow-hidden rounded aspect-[4/3] sm:col-span-2 lg:col-span-2">
-        <img src="https://images.unsplash.com/photo-1785585508861-ba57d25e633c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Residential build with trusses going up" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 p-6 text-white">
-          <h3 class="text-xl font-extrabold tracking-tight">Owner's representation</h3>
-          <p class="mt-1 text-white/80 text-[15px]">A builder on your side of the table, reading every number and every draw.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- TRACK RECORD -->
-<section class="bg-paper py-24 lg:py-28 border-y border-stone">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-3xl reveal">
-      <p class="label text-mute mb-4">Track record</p>
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">A decade of building, and the numbers behind it.</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div class="reveal border-t-2 border-brand pt-6">
+      <div class="bg-white rounded p-8 reveal">
         <p class="text-5xl font-extrabold tracking-tight">$60M+</p>
-        <p class="mt-3 text-mute leading-relaxed">of work delivered since 2015, including four straight years above $8 million.</p>
+        <p class="mt-4 text-mute leading-relaxed">of work delivered since 2015, including four straight years above $8 million.</p>
       </div>
-      <div class="reveal border-t-2 border-brand pt-6">
+      <div class="bg-white rounded p-8 reveal">
         <p class="text-5xl font-extrabold tracking-tight">100+</p>
-        <p class="mt-3 text-mute leading-relaxed">projects across Tampa Bay since 2015: new homes, whole-house renovations, additions and commercial fit-outs.</p>
+        <p class="mt-4 text-mute leading-relaxed">projects across Tampa Bay since 2015: new homes, whole-house renovations, additions and commercial fit-outs.</p>
       </div>
-      <div class="reveal border-t-2 border-brand pt-6">
+      <div class="bg-white rounded p-8 reveal">
         <p class="text-5xl font-extrabold tracking-tight">2 states</p>
-        <p class="mt-3 text-mute leading-relaxed">licensed and building: Florida and Colorado.</p>
+        <p class="mt-4 text-mute leading-relaxed">licensed and building: Florida and Colorado.</p>
+      </div>
+    </div>
+    <div class="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-6 reveal">
+        <h3 class="text-2xl font-bold tracking-tight">Tampa, at volume</h3>
+        <p class="mt-4 text-mute leading-relaxed">From a single crew in 2015 to a design-build firm delivering more than $11 million of work in its biggest year, with its own architecture and design team, across Bayshore, Hyde Park, Palma Ceia, Beach Park, Davis Islands, Seminole Heights and the Motor Enclave.</p>
+      </div>
+      <div class="lg:col-span-6 reveal">
+        <h3 class="text-2xl font-bold tracking-tight">A second market, built from scratch</h3>
+        <p class="mt-4 text-mute leading-relaxed">Gilk qualified to do business in Colorado, earned contractor licenses in Jefferson and Adams counties, and delivered a mountain custom home in Evergreen. Opening a market twelve hundred miles from home is its own kind of project, and the playbook for it is written down.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OWNER-LED / ABOUT -->
-<section id="about" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 reveal">
-      <p class="label text-mute mb-4">About Gilk</p>
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">Boutique design-build for people building a home that has to be right.</h2>
-      <p class="mt-6 text-lg text-mute leading-relaxed">Gilk is a Tampa design-build studio, founded in 2015. We have designed, built and renovated high-end homes across South Tampa, and a Michelin-starred restaurant in Tampa Heights. Today we take on a small number of projects at a time and work them from the first sketch to the last warranty walk.</p>
-      <ul class="mt-8 space-y-3">
-        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>One point of contact for the whole project</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Every cost visible to the owner</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Licensed Florida general contractor, CGC #1525373</li>
-      </ul>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="btn btn-dark">Start a conversation</a>
-        <a href="tel:+18135389806" class="btn btn-outline">(813) 538-9806</a>
-      </div>
-    </div>
-    <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1647579350413-a6ada4e480ed?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished white two-story home" class="w-full h-full object-cover">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPORTS & ENTERTAINMENT -->
+<!-- 4. HOW WE WORK: brand section with 3 cards -->
 <section class="bg-brand text-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-3xl reveal">
-      <p class="label text-white/60 mb-4">Sports &amp; entertainment</p>
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">Built by people who have lived the schedule.</h2>
-      <p class="mt-6 text-lg text-white/75 leading-relaxed">Gilk was founded by a former NFL player, and much of its work has come through the sports and entertainment world. We plan around your season, not ours.</p>
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-white/60 mb-4">How we work</p>
+      <h2 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">Two contracts, eight gates, and a number you can trust before you sign for it.</h2>
     </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="reveal bg-ink p-8 rounded">
-        <h3 class="text-xl font-extrabold tracking-tight">The calendar is real</h3>
-        <p class="mt-3 text-white/70 leading-relaxed">A trade in March and a family in a new city by August. A tour that decides when the house can be finished.</p>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Framed interior of a home under construction" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-xl font-bold">Two contracts, on purpose</h3>
+          <p class="mt-3 text-white/70 leading-relaxed">Pre-construction is its own engagement on an hourly retainer, and you keep the work product no matter what. Construction is signed only once trades are bought out.</p>
+        </div>
+      </article>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1693639385915-d7a7ddefe8e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Timber-framed home under construction" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-xl font-bold">Eight gates</h3>
+          <p class="mt-3 text-white/70 leading-relaxed">From kickoff to certificate of occupancy, eight decision points. At each one we assess, decide together, and you receive something in writing.</p>
+        </div>
+      </article>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1741121647933-10714e7b13d3?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Job site with tools and framing" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-xl font-bold">Every week, every month</h3>
+          <p class="mt-3 text-white/70 leading-relaxed">A standing owner, architect and builder meeting. Daily logs and photos any time. A monthly draw package with every invoice behind it.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. EIGHT GATES -->
+<section id="how" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl reveal">
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-mute mb-4">The eight gates</p>
+      <h2 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">How your project runs.</h2>
+      <p class="mt-5 text-lg text-mute leading-relaxed">Your Gilk lead walks every gate with you on site, from kickoff to certificate of occupancy.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+      <div class="reveal"><span class="inline-flex items-center justify-center w-12 h-12 border-2 border-brand rounded font-extrabold text-lg">1</span><h3 class="mt-4 text-lg font-bold">Kickoff &amp; alignment</h3></div>
+      <div class="reveal"><span class="inline-flex items-center justify-center w-12 h-12 border-2 border-brand rounded font-extrabold text-lg">2</span><h3 class="mt-4 text-lg font-bold">Estimate reconciled to the drawings</h3></div>
+      <div class="reveal"><span class="inline-flex items-center justify-center w-12 h-12 border-2 border-brand rounded font-extrabold text-lg">3</span><h3 class="mt-4 text-lg font-bold">Buyout &amp; budget lock</h3></div>
+      <div class="reveal"><span class="inline-flex items-center justify-center w-12 h-12 border-2 border-brand rounded font-extrabold text-lg">4</span><h3 class="mt-4 text-lg font-bold">Foundation complete</h3></div>
+      <div class="reveal"><span class="inline-flex items-center justify-center w-12 h-12 border-2 border-brand rounded font-extrabold text-lg">5</span><h3 class="mt-4 text-lg font-bold">Dry-in: shell, roof &amp; windows</h3></div>
+      <div class="reveal"><span class="inline-flex items-center justify-center w-12 h-12 border-2 border-brand rounded font-extrabold text-lg">6</span><h3 class="mt-4 text-lg font-bold">Pre-drywall review</h3></div>
+      <div class="reveal"><span class="inline-flex items-center justify-center w-12 h-12 border-2 border-brand rounded font-extrabold text-lg">7</span><h3 class="mt-4 text-lg font-bold">Finish progress &amp; landing</h3></div>
+      <div class="reveal"><span class="inline-flex items-center justify-center w-12 h-12 border-2 border-brand rounded font-extrabold text-lg">8</span><h3 class="mt-4 text-lg font-bold">Substantial completion &amp; C.O.</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. BEFORE / AFTER style slider (framing vs. finished interior) -->
+<section class="bg-ink text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-5 reveal">
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-white/60 mb-4">From structure to finish</p>
+      <h2 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">Every house starts as framing.</h2>
+      <p class="mt-6 text-white/75 text-lg leading-relaxed">Pre-construction, buyout, framing, dry-in and finishes, all under one team. Drag the slider to compare a house in its framing stage with a finished Gilk interior.</p>
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <div class="ba-wrap rounded aspect-[4/3] bg-black" id="ba">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/gilk-design-build/21952/photo-11.jpg" alt="Finished great room with stone fireplace and timber beams" class="absolute inset-0 w-full h-full object-cover">
+        <div class="ba-top" id="baTop">
+          <img src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior framing before finishes" id="baTopImg" class="object-cover">
+        </div>
+        <div class="ba-handle" id="baHandle"><div class="ba-knob"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/></svg></div></div>
+        <input type="range" min="0" max="100" value="50" class="ba-range" id="baRange" aria-label="Compare framing and finished interior">
       </div>
-      <div class="reveal bg-ink p-8 rounded">
-        <h3 class="text-xl font-extrabold tracking-tight">Your people, in the loop</h3>
-        <p class="mt-3 text-white/70 leading-relaxed">Agents, business managers and financial advisors get the same open book you do. Nothing that costs money moves without a written yes.</p>
+      <div class="mt-3 flex justify-between text-xs font-bold uppercase tracking-widest text-white/60"><span>Framing</span><span>Finished</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. DIY vs ONE CONTRACTOR -> Separate designers/builders vs Gilk -->
+<section class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl reveal">
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-mute mb-4">Why design-build</p>
+      <h2 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">Separate firms, or one team accountable for the whole house.</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded p-8 lg:p-10 border border-stone2 reveal">
+        <h3 class="text-xl font-bold">Designer and builder apart</h3>
+        <ul class="mt-6 space-y-4 text-mute">
+          <li class="flex gap-3"><span class="mt-2 w-2 h-2 bg-mute rounded-full shrink-0"></span>A lump sum guessed before the drawings exist</li>
+          <li class="flex gap-3"><span class="mt-2 w-2 h-2 bg-mute rounded-full shrink-0"></span>The design pushed to fit the number, or the number pushed to fit the design</li>
+          <li class="flex gap-3"><span class="mt-2 w-2 h-2 bg-mute rounded-full shrink-0"></span>Several parties, each pointing to the other when something slips</li>
+          <li class="flex gap-3"><span class="mt-2 w-2 h-2 bg-mute rounded-full shrink-0"></span>You learn the real cost after you have committed</li>
+        </ul>
       </div>
-      <div class="reveal bg-ink p-8 rounded">
-        <h3 class="text-xl font-extrabold tracking-tight">Discretion by default</h3>
-        <p class="mt-3 text-white/70 leading-relaxed">No project is announced, photographed or shared without your permission, before, during or after.</p>
+      <div class="bg-white rounded p-8 lg:p-10 border-2 border-brand reveal">
+        <h3 class="text-xl font-bold">Gilk design-build</h3>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Pre-construction first: draw, estimate, reconcile, buy out trades</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Cost-plus with an open book, convertible to a guaranteed maximum</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>One lead walks every gate with you</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>The builder fee is the only profit, never layered on labor or on material you buy yourself</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="py-24 lg:py-32 bg-white">
+<!-- 8. WHAT WE BUILD: bento -->
+<section id="work" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
+      <div class="max-w-2xl">
+        <p class="text-xs font-bold tracking-[0.2em] uppercase text-mute mb-4">Selected work</p>
+        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">What we take on.</h2>
+      </div>
+      <a href="https://www.gilk.com/work/" class="font-bold underline underline-offset-4 hover:text-mute transition">See the work</a>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-12 gap-5 grid-flow-row-dense">
+      <a href="#contact" class="relative md:col-span-7 md:row-span-2 rounded overflow-hidden block min-h-[320px] md:min-h-[560px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/gilk-design-build/21952/photo-11.jpg" alt="Custom mountain home great room" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-7 text-white">
+          <h3 class="text-2xl font-bold">Custom homes</h3>
+          <p class="mt-2 text-white/80 max-w-md">High-end, boutique and relationship-driven. South Tampa first, and a mountain home in Evergreen, Colorado.</p>
+        </div>
+      </a>
+      <a href="#contact" class="relative md:col-span-5 rounded overflow-hidden block aspect-[4/3] reveal">
+        <img src="https://images.unsplash.com/photo-1683372101362-2efc3e75650e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home renovation in progress" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 text-white"><h3 class="text-xl font-bold">Whole-house renovations</h3></div>
+      </a>
+      <a href="#contact" class="relative md:col-span-5 rounded overflow-hidden block aspect-[4/3] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/gilk-design-build/21952/photo-12.jpg" alt="Restaurant interior fit-out" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 text-white"><h3 class="text-xl font-bold">Commercial fit-outs</h3></div>
+      </a>
+      <a href="#contact" class="relative md:col-span-4 rounded overflow-hidden block aspect-[4/3] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/gilk-design-build/21952/photo-2.jpg" alt="Restaurant storefront at dusk in Tampa" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 text-white"><h3 class="text-xl font-bold">Restaurants</h3></div>
+      </a>
+      <a href="#contact" class="relative md:col-span-4 rounded overflow-hidden block aspect-[4/3] reveal">
+        <img src="https://images.unsplash.com/photo-1749883278588-837f6fc6c93c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="New home framed and roofed" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 text-white"><h3 class="text-xl font-bold">New construction</h3></div>
+      </a>
+      <a href="#contact" class="relative md:col-span-4 rounded overflow-hidden block aspect-[4/3] reveal">
+        <img src="https://images.unsplash.com/photo-1626385785701-a0d3b879de2c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8bmV3JTIwaG9tZSUyMGNvbnN0cnVjdGlvbnxlbnwxfDB8fHwxNzk0MjI5NTE2fDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wall sheathing on a new home" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 text-white"><h3 class="text-xl font-bold">Additions</h3></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. OWNER-LED SPLIT -->
+<section id="about" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-mute mb-4">A few projects at a time</p>
+      <h2 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">Designed and built the way we would do our own.</h2>
+      <p class="mt-6 text-lg text-mute leading-relaxed">Founded in 2015, Gilk takes on a small number of projects at a time and works them from the first sketch to the last warranty walk. Founded by a former NFL player, much of the work has come through the sports and entertainment world, where the calendar is real and discretion is the default.</p>
+      <ul class="mt-8 space-y-4">
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Owner's representation.</strong> A builder on your side of the table, reading every number and every draw.</span></li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Pre-construction on its own.</strong> Estimating, scheduling and buyout, whether or not we build it.</span></li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Relocation builds on a deadline.</strong> A home that is ready when the family lands.</span></li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Discretion by default.</strong> No project announced or photographed without your permission.</span></li>
+      </ul>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#contact" class="bg-brand text-white font-bold px-7 py-4 rounded hover:bg-black transition">Talk to Gilk</a>
+        <a href="tel:+18135389806" class="border border-brand font-bold px-7 py-4 rounded hover:bg-white transition">(813) 538-9806</a>
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/5] rounded overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/gilk-design-build/21952/photo-11.jpg" alt="Finished Gilk interior with stone fireplace and vaulted timber ceiling" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. FAQ -->
+<section class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
     <div class="lg:col-span-4 reveal">
-      <p class="label text-mute mb-4">Questions</p>
-      <h2 class="text-4xl font-extrabold tracking-tight leading-[1.05]">Straight answers on price and process.</h2>
-      <a href="https://www.gilk.com/faq/" class="btn btn-outline mt-8">All eight questions</a>
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-mute mb-4">Questions</p>
+      <h2 class="text-4xl font-bold tracking-tight leading-tight">What owners ask first.</h2>
+      <a href="https://www.gilk.com/faq/" class="mt-6 inline-block font-bold underline underline-offset-4 hover:text-mute transition">All eight questions</a>
     </div>
-    <div class="lg:col-span-8 reveal divide-y divide-stone border-y border-stone">
-      <details class="py-6">
-        <summary class="flex items-center justify-between gap-6 text-xl font-bold tracking-tight">How do you price a project?<span class="plus text-2xl leading-none">+</span></summary>
-        <p class="mt-4 text-mute leading-relaxed">In two contracts, on purpose. Pre-construction is its own engagement: we draw, estimate, reconcile the estimate to the drawings and buy out the trades. Only then is the construction agreement signed, cost-plus with an open book, convertible to a guaranteed maximum if you want one. The builder fee is the only profit in the job. It is never layered on labor and never applied to material you buy yourself.</p>
+    <div class="lg:col-span-8 divide-y divide-stone2 border-y border-stone2 reveal">
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-bold">How do you price a project?<span class="ml-4 text-2xl font-light group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-mute leading-relaxed">In two contracts, on purpose. Pre-construction is its own engagement: we draw, estimate, reconcile the estimate to the drawings and buy out the trades. Only then is the construction agreement signed, cost-plus with an open book, convertible to a guaranteed maximum if you want one. We do not guess a lump sum before the drawings exist and then make the house fit it.</p>
       </details>
-      <details class="py-6">
-        <summary class="flex items-center justify-between gap-6 text-xl font-bold tracking-tight">What does pre-construction cost and what do I get?<span class="plus text-2xl leading-none">+</span></summary>
-        <p class="mt-4 text-mute leading-relaxed">Pre-construction is paid on an hourly retainer agreed in writing before we start, billed against the hours actually worked. You get drawings coordinated with the architect, a line-item estimate reconciled to those drawings, a constructability review, a schedule, trade bids and the buyout. You keep all of that work product no matter what.</p>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-bold">What does pre-construction cost and what do I get?<span class="ml-4 text-2xl font-light group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-mute leading-relaxed">Pre-construction is paid on an hourly retainer agreed in writing before we start. You get drawings coordinated with the architect, a line-item estimate reconciled to those drawings, a constructability review, a schedule, trade bids and the buyout. You keep all of that work product no matter what.</p>
       </details>
-      <details class="py-6">
-        <summary class="flex items-center justify-between gap-6 text-xl font-bold tracking-tight">When do I know the real number?<span class="plus text-2xl leading-none">+</span></summary>
-        <p class="mt-4 text-mute leading-relaxed">At Gate 3, buyout and budget lock. By then every major trade has priced the actual drawings and the budget is built from their numbers, not ours. That is the figure the construction agreement is signed against. Before that you see the estimate at Gate 2 and watch it move as decisions are made.</p>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-bold">When do I know the real number?<span class="ml-4 text-2xl font-light group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-mute leading-relaxed">At Gate 3, buyout and budget lock. By then every major trade has priced the actual drawings and the budget is built from their numbers, not ours. Before that you see the estimate at Gate 2 and watch it move as decisions are made.</p>
       </details>
-      <details class="py-6">
-        <summary class="flex items-center justify-between gap-6 text-xl font-bold tracking-tight">What if I am unhappy with the initial design?<span class="plus text-2xl leading-none">+</span></summary>
-        <p class="mt-4 text-mute leading-relaxed">Say so. Gates 1 and 2 exist so the design is challenged early, while changing it costs hours rather than demolition. Because pre-construction is a separate engagement you are not locked into construction. If we part ways, you leave with the drawings, the estimate and the schedule, and no obligation to build with us.</p>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-bold">What if I am unhappy with the initial design?<span class="ml-4 text-2xl font-light group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-mute leading-relaxed">Say so. Gates 1 and 2 exist so the design is challenged early, while changing it costs hours rather than demolition. If we part ways at the end of pre-construction, you leave with the drawings, the estimate and the schedule, and no obligation to build with us.</p>
       </details>
-      <details class="py-6">
-        <summary class="flex items-center justify-between gap-6 text-xl font-bold tracking-tight">Who is my point of contact?<span class="plus text-2xl leading-none">+</span></summary>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-lg font-bold">Who is my point of contact?<span class="ml-4 text-2xl font-light group-open:rotate-45 transition">+</span></summary>
         <p class="mt-4 text-mute leading-relaxed">One person. Your Gilk lead walks every gate with you, from the first sketch to the last warranty walk, and sits in the standing weekly meeting with you and the architect.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- SERVICE AREA -->
-<section class="py-20 bg-paper border-t border-stone">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-3xl reveal">
-      <p class="label text-mute mb-4">Where we build</p>
-      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">South Tampa first, and Tampa Bay beyond it.</h2>
-    </div>
-    <div class="mt-8 flex flex-wrap gap-3 reveal">
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Bayshore</span>
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Hyde Park</span>
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Palma Ceia</span>
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Beach Park</span>
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Davis Islands</span>
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Seminole Heights</span>
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Motor Enclave</span>
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Tampa Heights</span>
-      <span class="px-4 py-2 bg-white border border-stone rounded text-sm font-semibold">Colorado: Jefferson &amp; Adams counties</span>
+<!-- 11. SERVICE AREA -->
+<section class="bg-paper py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 reveal">
+    <p class="text-xs font-bold tracking-[0.2em] uppercase text-mute mb-4">Where we build</p>
+    <h2 class="text-3xl lg:text-4xl font-bold tracking-tight">South Tampa first, and Colorado.</h2>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Bayshore</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Hyde Park</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Palma Ceia</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Beach Park</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Davis Islands</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Seminole Heights</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Motor Enclave</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Tampa Heights</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Evergreen, CO</span>
+      <span class="bg-white border border-stone2 rounded px-5 py-3 font-semibold">Denver to Pueblo West</span>
     </div>
   </div>
 </section>
 
-<!-- CALL BAND -->
+<!-- 12. CALL BAND -->
 <section class="bg-ink text-white py-20 lg:py-24">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
     <div class="lg:col-span-7">
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.05]">Tell us what you are building.</h2>
-      <p class="mt-5 text-lg text-white/70 max-w-xl leading-relaxed">Send the drawings if you have them, the address and an idea if you do not.</p>
+      <h2 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">Tell us what you are building.</h2>
+      <p class="mt-5 text-white/70 text-lg max-w-xl leading-relaxed">Send the drawings if you have them, the address and an idea if you do not, and a sentence about what matters most to you.</p>
     </div>
-    <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-4">
-      <a href="tel:+18135389806" class="btn btn-light">(813) 538-9806</a>
-      <a href="mailto:office@gilk.com" class="btn btn-ghost">office@gilk.com</a>
+    <div class="lg:col-span-5 flex flex-col gap-3">
+      <a href="tel:+18135389806" class="bg-white text-brand font-bold text-lg px-7 py-5 rounded text-center hover:bg-stone2 transition">(813) 538-9806</a>
+      <a href="mailto:office@gilk.com" class="border border-white/40 font-bold px-7 py-5 rounded text-center hover:bg-white/10 transition break-words">office@gilk.com</a>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
@@ -503,21 +451,21 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#171717">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about the project you are planning and someone at Gilk who can make decisions will get back to you.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#171717">Contact</p><h2 class="lp-h" style="color:#171717">Tell us what you are building</h2><p class="lp-p" style="color:#525252">Send the drawings, the address, or just an idea, and someone who can make decisions will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+18135389806" class="lp-v">(813) 538-9806</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:office@gilk.com" class="lp-v">office@gilk.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Tampa, FL</span></span></li>
-        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:8px;background:#ddd url('https://images.unsplash.com/photo-1787672358273-0efd8c6388e9?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat"></div></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:8px;background:#ddd url('https://images.unsplash.com/photo-1690719095815-549c60090c9f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fG5ldyUyMGhvbWUlMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Design-build</option><option>Custom homes</option><option>Whole-house renovations</option><option>Owner's representation</option><option>Pre-construction</option><option>Commercial fit-out</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Design-build</option><option>Custom homes</option><option>Whole-house renovations</option><option>Owner's representation</option><option>Pre-construction</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -530,44 +478,58 @@ tailwind.config = {
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-brand text-white pt-16 pb-10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
-      <div class="md:col-span-5">
-        <div class="bg-white inline-block p-3 rounded">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/gilk-design-build/21948/logo-0.png" alt="Gilk Design Build" class="logo-img">
-        </div>
-        <p class="mt-6 text-white/70 max-w-sm leading-relaxed">Boutique design-build for people building a home that has to be right.</p>
+<footer class="bg-brand text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <div class="inline-block bg-white rounded p-2">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/gilk-design-build/21952/logo-0.png" alt="Gilk Design Build" class="h-12 w-auto">
       </div>
-      <div class="md:col-span-4">
-        <p class="label text-white/50 mb-4">Contact</p>
-        <ul class="space-y-2 text-white/85">
-          <li><a href="tel:+18135389806" class="hover:text-white">(813) 538-9806</a></li>
-          <li><a href="mailto:office@gilk.com" class="hover:text-white break-words">office@gilk.com</a></li>
-          <li>3715 E 7th Ave<br>Tampa, FL 33605</li>
-        </ul>
-      </div>
-      <div class="md:col-span-3">
-        <p class="label text-white/50 mb-4">License</p>
-        <p class="text-white/85">Licensed Florida general contractor<br>CGC #1525373</p>
-      </div>
+      <p class="mt-6 text-white/70 max-w-sm leading-relaxed">Boutique design-build for people building a home that has to be right.</p>
     </div>
-    <div class="mt-14 pt-8 border-t border-white/15 text-sm text-white/55 space-y-2">
+    <div class="md:col-span-3">
+      <h3 class="text-xs font-bold tracking-[0.2em] uppercase text-white/60 mb-4">Contact</h3>
+      <ul class="space-y-2">
+        <li><a href="tel:+18135389806" class="hover:underline">(813) 538-9806</a></li>
+        <li><a href="mailto:office@gilk.com" class="hover:underline break-words">office@gilk.com</a></li>
+        <li class="text-white/70">3715 E 7th Ave<br>Tampa, FL 33605</li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h3 class="text-xs font-bold tracking-[0.2em] uppercase text-white/60 mb-4">Licensed</h3>
+      <p class="text-white/70">Licensed Florida general contractor<br>CGC #1525373</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/50 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Gilk Design Build website.</p>
-      <p>Some photos by gene yllanes, Samuel Cruz, Troy Mortier, Roger Starnes Sr, Eric Ardito, Iain, Ernie Journeys and Divaris Shirichena on Unsplash.</p>
+      <p>Some photos by Troy Mortier, Ernie Journeys, Kier in Sight Archives, W. D. and Samuel Cruz on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  // mobile menu
+  var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', function(){ mm.classList.toggle('hidden'); });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.add('hidden'); }); });
+
+  // reveal on scroll
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // before/after slider
+  (function(){
+    var wrap = document.getElementById('ba'), top = document.getElementById('baTop'),
+        img = document.getElementById('baTopImg'), handle = document.getElementById('baHandle'),
+        range = document.getElementById('baRange');
+    function sizeImg(){ img.style.width = wrap.offsetWidth + 'px'; }
+    function set(v){ top.style.width = v + '%'; handle.style.left = v + '%'; }
+    range.addEventListener('input', function(){ set(range.value); });
+    window.addEventListener('resize', sizeImg);
+    sizeImg(); set(50);
+  })();
 </script>
 </body>
 </html>

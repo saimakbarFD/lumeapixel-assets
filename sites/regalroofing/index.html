@@ -4,357 +4,480 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Regal Roofing | Roof Replacement and Storm Damage Recovery</title>
+<title>Regal Roofing | Roof Replacement & Storm Damage Recovery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Poppins', 'sans-serif'] },
       colors: {
         brand: '#fecd08',
-        ink: '#111111',
-        char: '#1c1c1a',
-        paper: '#f6f5f1',
-        stone: '#ebeae5'
+        ink: '#0b0b0c',
+        coal: '#17171a',
+        paper: '#f6f5f2',
+        mist: '#ecebe7'
       },
-      fontFamily: {
-        head: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { tile: '24px' }
+      borderRadius: { xl2: '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #111; background: #fff; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; line-height: 1.08; }
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  body { font-family: 'Poppins', sans-serif; color: #0b0b0c; background: #fff; -webkit-font-smoothing: antialiased; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .label { font-family: 'Outfit', sans-serif; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; padding: 14px 26px; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; transition: transform .2s ease, background .2s ease; }
-  .btn:hover { transform: translateY(-2px); }
-  .logo-img { height: 48px; width: auto; }
-  @media (max-width: 640px) { .logo-img { height: 40px; } }
+  .r { border-radius: 20px; }
+  .label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; }
+  details summary { list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .2s ease; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-ink border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0"><img src="https://regrs.com/wp-content/uploads/2025/01/regal-logo_nav.svg" alt="Regal Roofing" class="logo-img"></a>
-    <nav class="hidden lg:flex items-center gap-9 text-white/80 text-[15px] font-medium">
-      <a href="#about" class="hover:text-brand">About</a>
-      <a href="#process" class="hover:text-brand">Process</a>
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#why" class="hover:text-brand">Why Regal</a>
-      <a href="#faq" class="hover:text-brand">FAQ</a>
-      <a href="#contact" class="hover:text-brand">Contact</a>
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center">
+      <img src="https://regrs.com/wp-content/uploads/2025/01/regal-logo_nav.svg" alt="Regal Roofing" class="h-11 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm text-white/80">
+      <a href="#about" class="hover:text-brand transition">Why Regal</a>
+      <a href="#services" class="hover:text-brand transition">Services</a>
+      <a href="#inspection" class="hover:text-brand transition">Inspection</a>
+      <a href="#insurance" class="hover:text-brand transition">Insurance</a>
+      <a href="#faq" class="hover:text-brand transition">FAQ</a>
+      <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:8887342510" class="btn bg-brand text-ink !py-3 !px-5 text-[15px]">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="hidden sm:inline">(888) 734-2510</span><span class="sm:hidden">Call</span>
+      <a href="tel:8887342510" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-semibold text-sm px-5 py-3 r hover:bg-white transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (888) 734-2510
       </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Menu">
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center text-white" aria-label="Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 pb-6">
-    <nav class="flex flex-col text-white/90 font-medium">
-      <a href="#about" class="py-3 border-b border-white/10">About</a>
-      <a href="#process" class="py-3 border-b border-white/10">Process</a>
+    <nav class="flex flex-col text-white/90">
+      <a href="#about" class="py-3 border-b border-white/10">Why Regal</a>
       <a href="#services" class="py-3 border-b border-white/10">Services</a>
-      <a href="#why" class="py-3 border-b border-white/10">Why Regal</a>
+      <a href="#inspection" class="py-3 border-b border-white/10">Inspection</a>
+      <a href="#insurance" class="py-3 border-b border-white/10">Insurance</a>
       <a href="#faq" class="py-3 border-b border-white/10">FAQ</a>
-      <a href="#contact" class="py-3">Contact</a>
+      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
     </nav>
+    <a href="tel:8887342510" class="mt-5 flex items-center justify-center bg-brand text-ink font-semibold px-5 py-3 r">Call (888) 734-2510</a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
-<section class="bg-paper pt-14 lg:pt-20 pb-16 lg:pb-24">
+<!-- Hero -->
+<section class="bg-paper pt-14 pb-16 lg:pt-20 lg:pb-24">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-      <div class="lg:col-span-7">
-        <p class="label text-ink/60 mb-5">Roofing &middot; Atlanta, GA</p>
-        <h1 class="text-[44px] sm:text-6xl lg:text-[76px] font-medium">Building trust,<br>one <span class="font-bold">roof</span> at a time.</h1>
-      </div>
-      <div class="lg:col-span-5">
-        <p class="text-lg text-ink/75 mb-7">Regal Roofing is a local roof replacement and storm damage recovery team. Honest inspections, clear communication, and craftsmanship that holds up in the toughest weather.</p>
-        <div class="flex flex-wrap gap-3">
-          <a href="#contact" class="btn bg-brand text-ink">Get a free inspection</a>
-          <a href="tel:8887342510" class="btn border border-ink/20 text-ink hover:bg-white">(888) 734-2510</a>
-        </div>
+      <h1 class="lg:col-span-7 text-4xl sm:text-5xl lg:text-6xl font-medium leading-[1.08] tracking-tight reveal">
+        Building trust,<br>one <strong class="font-bold">roof</strong> at a time.
+      </h1>
+      <div class="lg:col-span-5 reveal">
+        <p class="text-lg text-ink/70 leading-relaxed">Regal Roofing is a local roof replacement and storm damage recovery company serving Kentucky and North Carolina. Free inspections, insurance claim help, and craftsmanship that holds up.</p>
       </div>
     </div>
 
-    <div class="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-5">
-      <div class="lg:col-span-6 rounded-tile overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[460px]">
-        <img src="https://images.unsplash.com/photo-1763665814538-8ba04597286c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers installing dark roof tiles" class="w-full h-full object-cover">
-      </div>
-      <div class="lg:col-span-3 flex flex-col gap-5">
-        <div class="rounded-tile overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[340px]">
-          <img src="https://images.unsplash.com/photo-1718411774135-c7168b3ca794?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Shingle roof against a clear sky" class="w-full h-full object-cover">
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <div class="md:col-span-6 reveal">
+        <div class="r overflow-hidden aspect-[4/3] md:aspect-auto md:h-full md:min-h-[420px]">
+          <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers installing roof tiles" class="w-full h-full object-cover">
         </div>
-        <a href="#contact" class="btn bg-ink text-white justify-center w-full">Request an estimate
+      </div>
+      <div class="md:col-span-3 flex flex-col gap-5 reveal">
+        <div class="r overflow-hidden aspect-[4/3] md:aspect-auto md:flex-1 md:min-h-[260px]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/regal-roofing/21952/photo-8.jpg" alt="Regal Roofing team member carrying a ladder" class="w-full h-full object-cover">
+        </div>
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brand text-ink font-semibold px-6 py-4 r hover:bg-ink hover:text-brand transition">
+          Book a free inspection
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
-      <div class="lg:col-span-3 rounded-tile bg-stone p-8 flex flex-col justify-between min-h-[260px]">
-        <p class="label text-ink/60">The Regal standard</p>
+      <div class="md:col-span-3 bg-mist r p-7 flex flex-col justify-between reveal min-h-[220px]">
+        <span class="label text-ink/60">Free inspections</span>
         <div>
-          <p class="font-head text-5xl font-semibold leading-none mb-3">20-point</p>
-          <p class="text-ink/75">roof inspection on every job, so nothing gets overlooked.</p>
+          <p class="text-2xl font-semibold leading-snug">No cost, no obligations, and we work around your schedule.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THREE COLUMNS -->
+<!-- Three columns -->
 <section id="about" class="py-20 lg:py-28 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
-    <div class="reveal">
-      <p class="label mb-4 pb-4 border-b border-ink/15">Residential</p>
-      <p class="text-ink/75">Repairs, replacements and storm restoration for homes, using quality materials and current techniques built to handle severe weather.</p>
-    </div>
-    <div class="reveal">
-      <p class="label mb-4 pb-4 border-b border-ink/15">Commercial</p>
-      <p class="text-ink/75">Durable, precise roofing for businesses, from new installations to repairs, so your building stays protected and operating.</p>
-    </div>
-    <div class="reveal">
-      <p class="label mb-4 pb-4 border-b border-ink/15">Insurance claims</p>
-      <p class="text-ink/75">We document the damage and work with your insurer and adjuster, so you get the coverage you are owed without the runaround.</p>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+      <div class="reveal border-t-2 border-ink pt-6">
+        <h3 class="label mb-4">Insurance experts</h3>
+        <p class="text-ink/70 leading-relaxed">Our team knows the insurance claims process and works directly with your insurer and adjuster, from documenting damage to final approval.</p>
+      </div>
+      <div class="reveal border-t-2 border-ink pt-6">
+        <h3 class="label mb-4">Licensed and trained</h3>
+        <p class="text-ink/70 leading-relaxed">Decades of combined experience across the team. Every crew member is licensed and highly trained in modern roofing methods.</p>
+      </div>
+      <div class="reveal border-t-2 border-ink pt-6">
+        <h3 class="label mb-4">Local with national scale</h3>
+        <p class="text-ink/70 leading-relaxed">As part of the RAFTRx family, you get the service of a local business with the resources of a national company.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- MISSION STATEMENT -->
+<!-- Mission statement -->
 <section class="pb-20 lg:pb-28 bg-white">
   <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
-    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-medium">Local experts. Best-in-class craftsmanship. A roof you never have to think about again.</h2>
+    <p class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.2] tracking-tight">
+      We protect homes and businesses with durable, precise roofing, <strong class="font-bold">repaired, replaced or built new</strong>, and we stand behind every roof.
+    </p>
   </div>
 </section>
 
-<!-- COLLAGE -->
-<section class="pb-24 lg:pb-32 bg-white">
+<!-- Collage -->
+<section class="pb-20 lg:pb-28 bg-white">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5 grid-flow-row-dense">
-      <div class="col-span-1 lg:col-span-3 rounded-tile overflow-hidden aspect-[4/5]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/regal-roofing/21947/photo-9.jpg" alt="Regal Roofing team member inspecting a home with a customer" class="w-full h-full object-cover">
+    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
+      <div class="col-span-1 lg:col-span-3 lg:pt-16 reveal">
+        <div class="r overflow-hidden aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1756832849050-ed4e24eaa42f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red corrugated roof with dormer windows" class="w-full h-full object-cover">
+        </div>
       </div>
-      <div class="col-span-1 lg:col-span-6 lg:row-span-2 rounded-tile overflow-hidden aspect-[4/5] lg:aspect-auto order-first lg:order-none col-span-2">
-        <img src="https://images.unsplash.com/photo-1787672358119-25cb4c768d14?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished metal roof on a brick home" class="w-full h-full object-cover min-h-[320px]">
+      <div class="col-span-1 lg:col-span-3 reveal">
+        <div class="r overflow-hidden aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1643155316153-bce5d5f55d34?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="White gabled dormers with shutters" class="w-full h-full object-cover">
+        </div>
       </div>
-      <div class="col-span-1 lg:col-span-3 rounded-tile overflow-hidden aspect-[4/5]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/regal-roofing/21947/photo-8.jpg" alt="Regal Roofing crew member carrying a ladder from a truck" class="w-full h-full object-cover">
+      <div class="col-span-2 lg:col-span-6 reveal order-first lg:order-none">
+        <div class="r overflow-hidden aspect-[16/10] lg:aspect-auto lg:h-full">
+          <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished metal roof on a brick home" class="w-full h-full object-cover">
+        </div>
       </div>
-      <div class="col-span-1 lg:col-span-3 rounded-tile overflow-hidden aspect-square">
-        <img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red tile roof" class="w-full h-full object-cover">
+      <div class="col-span-1 lg:col-span-4 reveal">
+        <div class="r overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1718411774135-c7168b3ca794?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Dark shingle roofline against blue sky" class="w-full h-full object-cover">
+        </div>
       </div>
-      <div class="col-span-1 lg:col-span-3 rounded-tile overflow-hidden aspect-square">
-        <img src="https://images.unsplash.com/photo-1727777266423-6a33048e4894?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wood shake roof ridge" class="w-full h-full object-cover">
+      <div class="col-span-1 lg:col-span-4 reveal">
+        <div class="r overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1681365957051-08bd5c9a0286?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Clay tile roof sections" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="col-span-2 lg:col-span-4 reveal">
+        <div class="r overflow-hidden aspect-[16/9] lg:aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1762363146144-ed6c31d722f1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cedar shingle gable roof" class="w-full h-full object-cover">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process" class="py-20 lg:py-28 bg-paper">
+<!-- How it works -->
+<section class="py-20 lg:py-28 bg-paper">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
-      <div class="lg:col-span-6">
+      <div class="lg:col-span-5 reveal">
         <p class="label text-ink/60 mb-4">How it works</p>
-        <h2 class="text-4xl lg:text-5xl font-medium">Six steps from first call to finished roof.</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight">From first call to finished roof.</h2>
       </div>
-      <div class="lg:col-span-6 lg:pt-8">
-        <p class="text-ink/75">No cost, no obligation, and we work around your schedule. Most residential replacements are finished in a single day.</p>
+      <div class="lg:col-span-7 lg:pl-12 flex items-end reveal">
+        <p class="text-lg text-ink/70 leading-relaxed">Here is what to expect when you reach out to Regal Roofing.</p>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="font-head text-5xl font-semibold text-brand mb-5 [text-shadow:0_0_0_#111] leading-none"><span class="bg-ink text-brand inline-block px-3 py-1 rounded-[12px] text-3xl">01</span></p>
-        <h3 class="text-xl font-semibold mb-2">Contact us</h3>
-        <p class="text-ink/70">Call (888) 734-2510 or send a request. A team member reaches out to you directly.</p>
+      <div class="bg-white r p-8 reveal">
+        <span class="text-brand bg-ink inline-block px-3 py-1 r text-sm font-semibold mb-6">01</span>
+        <h3 class="text-xl font-semibold mb-3">Contact us</h3>
+        <p class="text-ink/70 leading-relaxed">Call (888) 734-2510 or fill out our contact form. A team member reaches out to you directly.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="mb-5"><span class="font-head bg-ink text-brand inline-block px-3 py-1 rounded-[12px] text-3xl font-semibold leading-none">02</span></p>
-        <h3 class="text-xl font-semibold mb-2">We learn your situation</h3>
-        <p class="text-ink/70">A few questions to understand the damage, the age of your roof and what you need.</p>
+      <div class="bg-white r p-8 reveal">
+        <span class="text-brand bg-ink inline-block px-3 py-1 r text-sm font-semibold mb-6">02</span>
+        <h3 class="text-xl font-semibold mb-3">We listen</h3>
+        <p class="text-ink/70 leading-relaxed">We ask questions to understand the situation and what you need before anyone climbs a ladder.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="mb-5"><span class="font-head bg-ink text-brand inline-block px-3 py-1 rounded-[12px] text-3xl font-semibold leading-none">03</span></p>
-        <h3 class="text-xl font-semibold mb-2">20-point inspection</h3>
-        <p class="text-ink/70">Decking, flashing, shingles, gutters, ventilation and more, checked and documented.</p>
+      <div class="bg-white r p-8 reveal">
+        <span class="text-brand bg-ink inline-block px-3 py-1 r text-sm font-semibold mb-6">03</span>
+        <h3 class="text-xl font-semibold mb-3">Free 20-point inspection</h3>
+        <p class="text-ink/70 leading-relaxed">Every critical part of your roof is checked, so hidden storm damage does not get missed.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="mb-5"><span class="font-head bg-ink text-brand inline-block px-3 py-1 rounded-[12px] text-3xl font-semibold leading-none">04</span></p>
-        <h3 class="text-xl font-semibold mb-2">Insurance coordination</h3>
-        <p class="text-ink/70">We work with your insurance company and adjuster to make sure you are covered.</p>
+      <div class="bg-white r p-8 reveal">
+        <span class="text-brand bg-ink inline-block px-3 py-1 r text-sm font-semibold mb-6">04</span>
+        <h3 class="text-xl font-semibold mb-3">Insurance coordination</h3>
+        <p class="text-ink/70 leading-relaxed">We work with your insurance company to make sure you are covered, and we handle the documentation.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="mb-5"><span class="font-head bg-ink text-brand inline-block px-3 py-1 rounded-[12px] text-3xl font-semibold leading-none">05</span></p>
-        <h3 class="text-xl font-semibold mb-2">Repair or replacement</h3>
-        <p class="text-ink/70">Our licensed, trained crew completes the work and leaves your property clean and protected.</p>
+      <div class="bg-white r p-8 reveal">
+        <span class="text-brand bg-ink inline-block px-3 py-1 r text-sm font-semibold mb-6">05</span>
+        <h3 class="text-xl font-semibold mb-3">Repair or replacement</h3>
+        <p class="text-ink/70 leading-relaxed">Most residential replacements are completed in a single day, with your property left clean and protected.</p>
       </div>
-      <div class="bg-white rounded-tile p-8 reveal">
-        <p class="mb-5"><span class="font-head bg-ink text-brand inline-block px-3 py-1 rounded-[12px] text-3xl font-semibold leading-none">06</span></p>
-        <h3 class="text-xl font-semibold mb-2">Satisfaction guaranteed</h3>
-        <p class="text-ink/70">We back our work with strong labor warranties and a 100% customer satisfaction guarantee.</p>
+      <div class="bg-white r p-8 reveal">
+        <span class="text-brand bg-ink inline-block px-3 py-1 r text-sm font-semibold mb-6">06</span>
+        <h3 class="text-xl font-semibold mb-3">Satisfaction guaranteed</h3>
+        <p class="text-ink/70 leading-relaxed">We stand behind the work with a 100% customer satisfaction guarantee.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- Services cards -->
 <section id="services" class="py-20 lg:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="mb-12 max-w-2xl">
-      <p class="label text-ink/60 mb-4">Services</p>
-      <h2 class="text-4xl lg:text-5xl font-medium">Your full-service roofing contractor.</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
+      <div class="lg:col-span-6 reveal">
+        <p class="label text-ink/60 mb-4">Services</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight">Your full-service roofing contractor.</h2>
+      </div>
+      <div class="lg:col-span-6 lg:pl-12 flex items-end reveal">
+        <p class="text-lg text-ink/70 leading-relaxed">Residential, commercial and storm damage work, using quality materials and current techniques to withstand tough weather.</p>
+      </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <article class="group">
-        <div class="rounded-tile overflow-hidden aspect-[4/5] mb-5">
-          <img src="https://images.unsplash.com/photo-1763665814538-8ba04597286c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof replacement in progress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+      <a href="#contact" class="group reveal">
+        <div class="r overflow-hidden aspect-[4/5]">
+          <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="New roof installation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
         </div>
-        <h3 class="text-xl font-semibold mb-1">Roof replacement</h3>
-        <p class="text-ink/70 text-[15px]">Asphalt shingle, metal and flat roofing systems from top-rated manufacturers.</p>
-      </article>
-      <article class="group">
-        <div class="rounded-tile overflow-hidden aspect-[4/5] mb-5">
-          <img src="https://images.unsplash.com/photo-1718411774135-c7168b3ca794?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Shingle roof edge and siding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <h3 class="text-lg font-semibold mt-4">Roof replacement</h3>
+        <p class="text-ink/65 text-sm mt-1 leading-relaxed">Asphalt shingle, metal and flat roofing systems from top-rated manufacturers.</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="r overflow-hidden aspect-[4/5]">
+          <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Workers on a residential roof" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
         </div>
-        <h3 class="text-xl font-semibold mb-1">Roof repair</h3>
-        <p class="text-ink/70 text-[15px]">Lifted shingles, flashing, leaks and small problems fixed before they get expensive.</p>
-      </article>
-      <article class="group">
-        <div class="rounded-tile overflow-hidden aspect-[4/5] mb-5">
-          <img src="https://images.unsplash.com/photo-1787672358119-25cb4c768d14?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Standing seam metal roof on a home" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <h3 class="text-lg font-semibold mt-4">Roof repair</h3>
+        <p class="text-ink/65 text-sm mt-1 leading-relaxed">Lifted shingles, leaks and small cracks fixed early, before they become costly.</p>
+      </a>
+      <a href="#insurance" class="group reveal">
+        <div class="r overflow-hidden aspect-[4/5]">
+          <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a roof deck" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
         </div>
-        <h3 class="text-xl font-semibold mb-1">Storm damage recovery</h3>
-        <p class="text-ink/70 text-[15px]">Hidden hail and wind damage found and documented for your insurance claim.</p>
-      </article>
-      <article class="group">
-        <div class="rounded-tile overflow-hidden aspect-[4/5] mb-5">
-          <img src="https://images.unsplash.com/photo-1715596636360-c47539cbfbbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="New building under construction with dark roof" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <h3 class="text-lg font-semibold mt-4">Storm damage recovery</h3>
+        <p class="text-ink/65 text-sm mt-1 leading-relaxed">Inspection, documentation and restoration after hail, wind and heavy weather.</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="r overflow-hidden aspect-[4/5]">
+          <img src="https://images.unsplash.com/photo-1718411774135-c7168b3ca794?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Shingle roof detail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
         </div>
-        <h3 class="text-xl font-semibold mb-1">New installations</h3>
-        <p class="text-ink/70 text-[15px]">Precise installs for new residential and commercial construction.</p>
-      </article>
+        <h3 class="text-lg font-semibold mt-4">Residential and commercial</h3>
+        <p class="text-ink/65 text-sm mt-1 leading-relaxed">New installations and upgrades for homes and businesses.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- INSURANCE BAND -->
-<section class="bg-ink text-white py-20 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-6">
-      <p class="label text-brand mb-4">Insurance support</p>
-      <h2 class="text-4xl lg:text-5xl font-medium mb-6">A general contractor and an insurance advocate in one.</h2>
-      <p class="text-white/75 mb-5">Our detailed inspections often uncover damage others overlook. We have built strong relationships with major insurance providers, so working with adjusters goes smoothly.</p>
-      <p class="text-white/75 mb-8">We handle everything from documenting damage to coordinating with your insurer, and we work to secure the coverage you deserve, potentially saving you thousands on roof repairs.</p>
-      <a href="#contact" class="btn bg-brand text-ink">Start your claim review</a>
+<!-- 20-point inspection -->
+<section id="inspection" class="py-20 lg:py-28 bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
+      <div class="lg:col-span-6 reveal">
+        <p class="label text-brand mb-4">Inspection</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight">Regal's 20-point roof inspection.</h2>
+      </div>
+      <div class="lg:col-span-6 lg:pl-12 flex items-end reveal">
+        <p class="text-lg text-white/70 leading-relaxed">A complete inspection leaves no detail overlooked. We check every critical component and flag damage that could lead to costly repairs later.</p>
+      </div>
     </div>
-    <div class="lg:col-span-6">
-      <div class="rounded-tile overflow-hidden aspect-[4/3]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/regal-roofing/21947/photo-9.jpg" alt="Regal Roofing team member pointing out roof details to a homeowner" class="w-full h-full object-cover">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+      <div class="bg-coal r p-6 reveal">
+        <h3 class="label text-brand mb-4">Structure</h3>
+        <ul class="space-y-2 text-white/80 text-sm leading-relaxed">
+          <li>Roof decking condition</li>
+          <li>Attic ventilation</li>
+          <li>Roofing underlayment</li>
+          <li>Flashing integrity</li>
+          <li>Chimney condition</li>
+          <li>Skylight seals and frames</li>
+        </ul>
+      </div>
+      <div class="bg-coal r p-6 reveal">
+        <h3 class="label text-brand mb-4">Surface</h3>
+        <ul class="space-y-2 text-white/80 text-sm leading-relaxed">
+          <li>Shingle damage</li>
+          <li>Granule loss</li>
+          <li>Moss and algae growth</li>
+          <li>Nail pops and loose fasteners</li>
+          <li>Roof edge and drip edge</li>
+        </ul>
+      </div>
+      <div class="bg-coal r p-6 reveal">
+        <h3 class="label text-brand mb-4">Drainage</h3>
+        <ul class="space-y-2 text-white/80 text-sm leading-relaxed">
+          <li>Gutter system condition</li>
+          <li>Downspouts and water flow</li>
+          <li>Soffit and fascia</li>
+        </ul>
+      </div>
+      <div class="bg-coal r p-6 reveal">
+        <h3 class="label text-brand mb-4">Interior and details</h3>
+        <ul class="space-y-2 text-white/80 text-sm leading-relaxed">
+          <li>Interior ceiling and walls</li>
+          <li>Roof penetrations (vents, pipes, HVAC)</li>
+          <li>Ice dam prevention</li>
+        </ul>
+      </div>
+      <div class="bg-coal r p-6 reveal">
+        <h3 class="label text-brand mb-4">Assessment</h3>
+        <ul class="space-y-2 text-white/80 text-sm leading-relaxed">
+          <li>Storm damage inspection</li>
+          <li>Roof lifespan assessment</li>
+          <li>Warranty and maintenance review</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY CHOOSE -->
+<!-- Why choose -->
 <section id="why" class="py-20 lg:py-28 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-5">
-      <div class="rounded-tile overflow-hidden aspect-[4/5]">
-        <img src="https://images.unsplash.com/photo-1777919393762-2be32d198c62?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a roof structure" class="w-full h-full object-cover">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-5 reveal">
+        <div class="r overflow-hidden aspect-[4/5]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/regal-roofing/21952/photo-8.jpg" alt="Regal Roofing team member at a job site" class="w-full h-full object-cover object-left">
+        </div>
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <p class="label text-ink/60 mb-4">Why choose Regal Roofing</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight mb-10">Craftsmanship and service you can count on.</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
+          <div>
+            <div class="w-9 h-9 bg-brand r flex items-center justify-center mb-4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b0b0c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">Free, no-obligation estimates</h3>
+            <p class="text-ink/70 leading-relaxed text-sm">No cost, no pressure, and we work around your schedule.</p>
+          </div>
+          <div>
+            <div class="w-9 h-9 bg-brand r flex items-center justify-center mb-4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b0b0c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">Insurance claim support</h3>
+            <p class="text-ink/70 leading-relaxed text-sm">Our team is experienced at navigating the claims process with your insurer.</p>
+          </div>
+          <div>
+            <div class="w-9 h-9 bg-brand r flex items-center justify-center mb-4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b0b0c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">Verified Google reviews</h3>
+            <p class="text-ink/70 leading-relaxed text-sm">Over 700 verified Google reviews, averaging 4.9 out of 5 stars.</p>
+          </div>
+          <div>
+            <div class="w-9 h-9 bg-brand r flex items-center justify-center mb-4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b0b0c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">Licensed, highly trained team</h3>
+            <p class="text-ink/70 leading-relaxed text-sm">Decades of combined experience, with every part of your roof evaluated.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="lg:col-span-7">
-      <p class="label text-ink/60 mb-4">Why choose Regal Roofing</p>
-      <h2 class="text-4xl lg:text-5xl font-medium mb-10">Craftsmanship and service from a local team.</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-9">
-        <div>
-          <span class="inline-flex w-9 h-9 rounded-full bg-brand items-center justify-center mb-4">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          </span>
-          <h3 class="text-xl font-semibold mb-2">Free, no-obligation</h3>
-          <p class="text-ink/70 text-[15px]">Inspections and estimates cost nothing, and we work around your schedule.</p>
-        </div>
-        <div>
-          <span class="inline-flex w-9 h-9 rounded-full bg-brand items-center justify-center mb-4">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          </span>
-          <h3 class="text-xl font-semibold mb-2">Licensed and trained</h3>
-          <p class="text-ink/70 text-[15px]">Decades of combined experience across our team of highly-trained roofers.</p>
-        </div>
-        <div>
-          <span class="inline-flex w-9 h-9 rounded-full bg-brand items-center justify-center mb-4">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          </span>
-          <h3 class="text-xl font-semibold mb-2">Insurance experts</h3>
-          <p class="text-ink/70 text-[15px]">We navigate the claims process for you, from documentation to adjuster meetings.</p>
-        </div>
-        <div>
-          <span class="inline-flex w-9 h-9 rounded-full bg-brand items-center justify-center mb-4">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          </span>
-          <h3 class="text-xl font-semibold mb-2">Local service, national scale</h3>
-          <p class="text-ink/70 text-[15px]">As part of the RAFTRx family, we bring a local business feel with the backing of a national company.</p>
+  </div>
+</section>
+
+<!-- Insurance -->
+<section id="insurance" class="py-20 lg:py-28 bg-paper">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-6 reveal">
+        <p class="label text-ink/60 mb-4">Insurance support</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight mb-6">A general contractor and an insurance expert.</h2>
+        <p class="text-ink/70 text-lg leading-relaxed mb-5">Regal Roofing handles both repairs and the insurance process. Our detailed inspections often uncover damage that others overlook.</p>
+        <p class="text-ink/70 text-lg leading-relaxed mb-8">We have built relationships with all major insurance providers, so working with adjusters goes smoothly. From documenting damage to coordinating with your insurer, we advocate for the coverage you deserve, potentially saving you thousands on roof repairs.</p>
+        <a href="#contact" class="inline-flex items-center gap-2 bg-ink text-white font-semibold px-6 py-4 r hover:bg-brand hover:text-ink transition">
+          Start with a free inspection
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="lg:col-span-6 reveal">
+        <div class="r overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof being worked on after storm damage" class="w-full h-full object-cover">
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Areas served -->
+<section id="areas" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
+      <div class="lg:col-span-6 reveal">
+        <p class="label text-ink/60 mb-4">Areas served</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight">Serving homes and businesses across Kentucky and North Carolina.</h2>
+      </div>
+      <div class="lg:col-span-6 lg:pl-12 flex items-end reveal">
+        <p class="text-lg text-ink/70 leading-relaxed">We are more than a roofing company, we are your neighbors. Our local teams are ready for storm damage, aging roofs and upgrades.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <a href="https://regrs.com/areas-served/louisville/" class="bg-mist r p-8 flex items-center justify-between hover:bg-brand transition reveal">
+        <span class="text-xl font-semibold">Louisville, KY</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="https://regrs.com/areas-served/raleigh/" class="bg-mist r p-8 flex items-center justify-between hover:bg-brand transition reveal">
+        <span class="text-xl font-semibold">Raleigh, NC</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="https://regrs.com/areas-served/greensboro/" class="bg-mist r p-8 flex items-center justify-between hover:bg-brand transition reveal">
+        <span class="text-xl font-semibold">Greensboro, NC</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="py-20 lg:py-28 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-    <div class="lg:col-span-4">
-      <p class="label text-ink/60 mb-4">FAQ</p>
-      <h2 class="text-4xl lg:text-5xl font-medium">Questions homeowners ask.</h2>
-    </div>
-    <div class="lg:col-span-8 divide-y divide-ink/15 border-y border-ink/15">
-      <details class="group py-6" open>
-        <summary class="flex justify-between items-center gap-4 cursor-pointer list-none font-head text-xl font-medium">Can I tell if my roof is damaged after a storm?<span class="text-2xl group-open:rotate-45 transition-transform shrink-0">+</span></summary>
-        <p class="mt-4 text-ink/70">Sometimes it is obvious, like missing shingles, hail dents or interior leaks. Often the damage is hidden and not visible from the ground. Even lifted shingles or minor cracks can cause serious problems later, so have a professional inspect your roof after a storm.</p>
-      </details>
-      <details class="group py-6">
-        <summary class="flex justify-between items-center gap-4 cursor-pointer list-none font-head text-xl font-medium">Will my homeowner's insurance cover a new roof?<span class="text-2xl group-open:rotate-45 transition-transform shrink-0">+</span></summary>
-        <p class="mt-4 text-ink/70">In many cases yes, especially when a storm caused the damage. We work with insurance companies and guide you through the whole claims process.</p>
-      </details>
-      <details class="group py-6">
-        <summary class="flex justify-between items-center gap-4 cursor-pointer list-none font-head text-xl font-medium">How much does a roof replacement cost?<span class="text-2xl group-open:rotate-45 transition-transform shrink-0">+</span></summary>
-        <p class="mt-4 text-ink/70">Cost depends on roof size, materials and the extent of damage. If your roof qualifies for an insurance claim, your out-of-pocket cost may be minimal. We offer free inspections and estimates.</p>
-      </details>
-      <details class="group py-6">
-        <summary class="flex justify-between items-center gap-4 cursor-pointer list-none font-head text-xl font-medium">How long does a roof replacement take?<span class="text-2xl group-open:rotate-45 transition-transform shrink-0">+</span></summary>
-        <p class="mt-4 text-ink/70">Most residential roof replacements are completed in one day, with quality workmanship and a clean, protected property.</p>
-      </details>
-      <details class="group py-6">
-        <summary class="flex justify-between items-center gap-4 cursor-pointer list-none font-head text-xl font-medium">What roofing materials do you offer?<span class="text-2xl group-open:rotate-45 transition-transform shrink-0">+</span></summary>
-        <p class="mt-4 text-ink/70">Asphalt shingles, metal roofing and flat roofing from top-rated manufacturers. We help you choose based on your home's needs and your budget.</p>
-      </details>
-      <details class="group py-6">
-        <summary class="flex justify-between items-center gap-4 cursor-pointer list-none font-head text-xl font-medium">Do you offer warranties on your work?<span class="text-2xl group-open:rotate-45 transition-transform shrink-0">+</span></summary>
-        <p class="mt-4 text-ink/70">Yes. We back our work with strong labor warranties, and many roofing products carry manufacturer warranties as well.</p>
-      </details>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-4 reveal">
+        <p class="label text-ink/60 mb-4">FAQ</p>
+        <h2 class="text-3xl sm:text-4xl font-medium leading-[1.1] tracking-tight">Common questions.</h2>
+      </div>
+      <div class="lg:col-span-8 reveal">
+        <div class="border-t border-ink/15">
+          <details class="border-b border-ink/15 py-5">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer text-lg font-medium">Can I tell if my roof is damaged after a storm?<span class="plus text-2xl leading-none flex-shrink-0">+</span></summary>
+            <p class="mt-4 text-ink/70 leading-relaxed">Sometimes the damage is obvious, like missing shingles, hail dents or leaks inside your home. Often it is hidden and not visible from the ground. Even small issues like lifted shingles or minor cracks can cause serious problems if not addressed early, so it is best to have a professional inspect your roof after a storm.</p>
+          </details>
+          <details class="border-b border-ink/15 py-5">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer text-lg font-medium">Will my homeowner's insurance cover a new roof?<span class="plus text-2xl leading-none flex-shrink-0">+</span></summary>
+            <p class="mt-4 text-ink/70 leading-relaxed">In many cases, yes, especially if the damage was caused by a storm. Regal Roofing works with insurance companies and can guide you through the entire claims process.</p>
+          </details>
+          <details class="border-b border-ink/15 py-5">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer text-lg font-medium">How much does a roof replacement cost?<span class="plus text-2xl leading-none flex-shrink-0">+</span></summary>
+            <p class="mt-4 text-ink/70 leading-relaxed">Cost depends on roof size, materials and the extent of the damage. If your roof qualifies for an insurance claim, your out-of-pocket cost may be minimal. We offer free inspections and estimates so you can make an informed decision.</p>
+          </details>
+          <details class="border-b border-ink/15 py-5">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer text-lg font-medium">How long does a roof replacement take?<span class="plus text-2xl leading-none flex-shrink-0">+</span></summary>
+            <p class="mt-4 text-ink/70 leading-relaxed">Most residential roof replacements are completed in one day. Our team works efficiently while keeping workmanship high and leaving your property clean and protected.</p>
+          </details>
+          <details class="border-b border-ink/15 py-5">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer text-lg font-medium">What roofing materials do you offer?<span class="plus text-2xl leading-none flex-shrink-0">+</span></summary>
+            <p class="mt-4 text-ink/70 leading-relaxed">We install asphalt shingles, metal roofing and flat roofing, all from top-rated manufacturers. We help you choose the best option for your home and budget.</p>
+          </details>
+          <details class="border-b border-ink/15 py-5">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer text-lg font-medium">Do you offer warranties on your roofing work?<span class="plus text-2xl leading-none flex-shrink-0">+</span></summary>
+            <p class="mt-4 text-ink/70 leading-relaxed">Yes. We back our work with labor warranties, and many roofing products also carry manufacturer warranties.</p>
+          </details>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- Contact placeholder -->
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
@@ -397,14 +520,14 @@ tailwind.config = {
             <span><span class="lp-k">Email</span><a href="mailto:support@regrs.com" class="lp-v">support@regrs.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Atlanta, GA</span></span></li>
-        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:12px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/regal-roofing/21947/photo-11.jpg') center/cover no-repeat"></div></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:12px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/regal-roofing/21952/photo-11.jpg') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof replacement</option><option>Roof repair</option><option>Storm damage recovery</option><option>Insurance claim support</option><option>Commercial roofing</option><option>New installation</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof replacement</option><option>Roof repair</option><option>Storm damage recovery</option><option>Insurance claim support</option><option>Commercial roofing</option><option>Free roof inspection</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -414,20 +537,22 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-<!-- FINAL CTA -->
+<!-- Final call card -->
 <section class="py-20 lg:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-      <div class="lg:col-span-5 rounded-tile overflow-hidden aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
-        <img src="https://images.unsplash.com/photo-1763665814538-8ba04597286c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers laying roof tiles" class="w-full h-full object-cover">
+      <div class="lg:col-span-5 reveal">
+        <div class="r overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[400px]">
+          <img src="https://images.unsplash.com/photo-1643155316153-bce5d5f55d34?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home with gabled dormers" class="w-full h-full object-cover">
+        </div>
       </div>
-      <div class="lg:col-span-7 rounded-tile bg-stone p-8 sm:p-12 lg:p-14 flex flex-col justify-center">
-        <p class="label text-ink/60 mb-4">Next step</p>
-        <h2 class="text-4xl lg:text-5xl font-medium mb-5">Ready for a roof you can count on?</h2>
-        <p class="text-ink/75 mb-8 max-w-xl">Call us or send a message. We will reach out, ask about your situation, and set up a free inspection that fits your schedule.</p>
-        <div class="flex flex-wrap gap-3">
-          <a href="tel:8887342510" class="btn bg-brand text-ink">Call (888) 734-2510</a>
-          <a href="mailto:support@regrs.com" class="btn border border-ink/25 text-ink hover:bg-white">Email us</a>
+      <div class="lg:col-span-7 bg-mist r p-8 sm:p-12 flex flex-col justify-center reveal">
+        <p class="label text-ink/60 mb-4">Next steps</p>
+        <h2 class="text-3xl sm:text-4xl font-medium leading-[1.1] tracking-tight mb-5">Ready to have your roof looked at?</h2>
+        <p class="text-ink/70 text-lg leading-relaxed mb-8">Call us directly or send a message. We will reach out, learn what you need, and work with your insurance company so you are covered.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:8887342510" class="inline-flex items-center justify-center gap-2 bg-brand text-ink font-semibold px-6 py-4 r hover:bg-ink hover:text-brand transition">Call (888) 734-2510</a>
+          <a href="mailto:support@regrs.com" class="inline-flex items-center justify-center gap-2 bg-white text-ink font-semibold px-6 py-4 r hover:bg-ink hover:text-white transition">Email us</a>
         </div>
       </div>
     </div>
@@ -436,27 +561,27 @@ tailwind.config = {
 
 </main>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer class="bg-brand text-ink">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 text-center">
-    <a href="#top" class="inline-block bg-ink rounded-[16px] px-6 py-4 mb-8"><img src="https://regrs.com/wp-content/uploads/2025/01/regal-logo_nav.svg" alt="Regal Roofing" class="logo-img mx-auto"></a>
-    <p class="font-head text-2xl font-medium mb-6">Building trust, one roof at a time.</p>
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-10 font-medium mb-8">
+    <img src="https://regrs.com/wp-content/uploads/2025/01/regal-logo_nav.svg" alt="Regal Roofing" class="h-14 w-auto mx-auto bg-ink r px-5 py-3">
+    <p class="mt-6 max-w-xl mx-auto text-ink/80 leading-relaxed">Premier local roof replacement and storm damage recovery in Kentucky and North Carolina.</p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-lg font-semibold">
       <a href="tel:8887342510" class="hover:underline">(888) 734-2510</a>
       <a href="mailto:support@regrs.com" class="hover:underline break-words">support@regrs.com</a>
-      <span>Atlanta, GA</span>
     </div>
-    <nav class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-[15px] font-medium mb-10">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#process" class="hover:underline">Process</a>
+    <p class="mt-3 text-sm text-ink/75">Louisville, KY · Raleigh, NC · Greensboro, NC</p>
+    <nav class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium">
+      <a href="#about" class="hover:underline">Why Regal</a>
       <a href="#services" class="hover:underline">Services</a>
-      <a href="#why" class="hover:underline">Why Regal</a>
+      <a href="#inspection" class="hover:underline">Inspection</a>
+      <a href="#insurance" class="hover:underline">Insurance</a>
       <a href="#faq" class="hover:underline">FAQ</a>
       <a href="#contact" class="hover:underline">Contact</a>
     </nav>
-    <div class="border-t border-ink/20 pt-6 text-sm text-ink/80 space-y-1">
+    <div class="mt-10 pt-6 border-t border-ink/20 text-xs text-ink/75 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Regal Roofing website.</p>
-      <p>Some photos by Allen Y, Divaris Shirichena, Ben Koorengevel, Sergej *****, Aleksi Partanen, Christian Harb and Verstappen Photography on Unsplash.</p>
+      <p>Some photos by Compagnons, Reinis Brūzītis, Srinivasan Venkataraman, Allen Y, Mario Amé, Sergej, Divaris Shirichena and Christian Miranda on Unsplash.</p>
     </div>
   </div>
 </footer>

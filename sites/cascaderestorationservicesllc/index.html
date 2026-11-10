@@ -4,84 +4,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Cascade Restoration Services, LLC | Roofing in Atlanta, GA</title>
+<title>Cascade Restoration Services, LLC | Roofing & Home Restoration in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Outfit', 'system-ui', 'sans-serif'] },
+      fontFamily: { sans: ['Manrope', 'sans-serif'] },
       colors: {
         brand: '#0613b7',
-        brandDark: '#050b5e',
-        ink: '#0b0d1a',
-        paper: '#f6f6f3'
+        'brand-dark': '#050d73',
+        ink: '#0b0c10',
+        paper: '#f6f5f2'
       },
-      borderRadius: { base: '14px' }
+      borderRadius: { DEFAULT: '14px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Outfit', system-ui, sans-serif; color: #0b0d1a; background: #fff; line-height: 1.6; }
-  h1, h2, h3, h4 { line-height: 1.1; letter-spacing: -0.015em; }
+  body { font-family: 'Manrope', sans-serif; color: #1a1b22; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .svc-card img { transition: transform .6s ease; }
-  .svc-card:hover img { transform: scale(1.04); }
+  .card-img { transition: transform .6s ease; }
+  .card:hover .card-img { transform: scale(1.04); }
+  .card .arrow { transition: transform .3s ease; }
+  .card:hover .arrow { transform: translateX(4px); }
   @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1; transform: none; transition: none; }
-    .svc-card img { transition: none; }
+    .card-img, .card .arrow { transition: none; }
   }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="antialiased">
+<body class="bg-white">
 
 <!-- Top bar -->
 <div class="bg-brand text-white text-sm">
-  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
-    <span>Serving Atlanta, Union City, Forest Park, College Park &amp; Lithia Springs, GA</span>
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+    <span>Serving Atlanta, GA and surrounding areas</span>
     <a href="mailto:kagan@cascaderoofingservices.com" class="hover:underline break-words">kagan@cascaderoofingservices.com</a>
   </div>
 </div>
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-ink text-white border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="leading-none shrink-0">
-      <span class="block text-xl font-bold tracking-tight">Cascade</span>
-      <span class="block text-[11px] uppercase tracking-[0.22em] text-white/60 mt-1">Restoration Services</span>
+<header class="sticky top-0 z-50 bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="leading-none">
+      <span class="block text-lg sm:text-xl font-bold tracking-tight">Cascade</span>
+      <span class="block text-[11px] sm:text-xs font-medium tracking-[0.18em] uppercase text-white/70 mt-1">Restoration Services</span>
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/85">
-      <a href="#about" class="hover:text-white">About</a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
+      <a href="#difference" class="hover:text-white">About</a>
       <a href="#services" class="hover:text-white">Services</a>
-      <a href="#gallery" class="hover:text-white">Projects</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
       <a href="#areas" class="hover:text-white">Areas</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
-    <div class="flex items-center gap-4">
-      <a href="tel:4047108784" class="hidden md:block text-right leading-tight">
-        <span class="block text-xs text-white/60">Need help? Call us today</span>
-        <span class="block font-semibold">(404) 710-8784</span>
+    <div class="hidden md:flex items-center gap-5">
+      <div class="text-right leading-tight">
+        <div class="text-xs text-white/60">Need help? Call us today</div>
+        <a href="tel:+14047108784" class="font-semibold">(404) 710-8784</a>
+      </div>
+      <a href="#contact" class="bg-brand hover:bg-white hover:text-brand transition-colors text-white text-sm font-semibold px-5 py-3 rounded">Free Estimate</a>
+    </div>
+    <div class="flex md:hidden items-center gap-3">
+      <a href="tel:+14047108784" class="bg-brand text-white text-sm font-semibold px-4 py-2.5 rounded flex items-center gap-2" aria-label="Call (404) 710-8784">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
       </a>
-      <a href="#contact" class="hidden sm:inline-flex bg-brand hover:bg-white hover:text-ink transition-colors text-white font-medium px-5 py-3 rounded-base text-[15px]">Get a Free Estimate</a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-base border border-white/20" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button id="menuBtn" class="p-2" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 py-5 flex flex-col gap-4 text-lg">
-      <a href="#about" class="mnav">About</a>
-      <a href="#services" class="mnav">Services</a>
-      <a href="#gallery" class="mnav">Projects</a>
-      <a href="#areas" class="mnav">Areas</a>
-      <a href="#contact" class="mnav">Contact</a>
-      <a href="tel:4047108784" class="bg-brand text-white text-center font-medium px-5 py-3 rounded-base">Call (404) 710-8784</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
+    <div class="px-5 py-4 flex flex-col gap-4 text-white/90 font-medium">
+      <a href="#difference" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#areas" class="mobile-link">Areas</a>
+      <a href="#contact" class="mobile-link">Contact</a>
     </div>
   </div>
 </header>
@@ -89,174 +95,216 @@ tailwind.config = {
 <main id="top">
 
 <!-- Hero -->
-<section class="relative isolate overflow-hidden bg-ink text-white">
-  <video class="absolute inset-0 w-full h-full object-cover -z-20" autoplay muted loop playsinline preload="metadata" poster="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/cascade-restoration-services-llc/21948/photo-17.jpg">
+<section class="relative bg-ink text-white overflow-hidden">
+  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata" poster="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-12.jpg">
     <source src="https://cascaderoofingservices.com/wp-content/uploads/2026/09/Drone-Shot.mp4" type="video/mp4">
   </video>
-  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/40"></div>
-  <div class="max-w-7xl mx-auto px-5 py-28 md:py-40 lg:py-48">
+  <div class="absolute inset-0 bg-ink/70"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 sm:py-32 lg:py-44">
     <div class="max-w-3xl">
-      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-semibold">Complete home restoration, starting with the roof.</h1>
-      <p class="mt-7 text-lg md:text-xl text-white/80 max-w-2xl">Cascade Restoration Services handles roofing, gutters, siding, decks and storm damage for homes and businesses across Atlanta, GA.</p>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-brand hover:bg-white hover:text-ink transition-colors text-white font-medium px-7 py-4 rounded-base">Get a Free Estimate</a>
-        <a href="tel:4047108784" class="bg-white text-ink hover:bg-white/85 transition-colors font-medium px-7 py-4 rounded-full">Call (404) 710-8784</a>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">Roofing and home restoration, done right in Atlanta.</h1>
+      <p class="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">From roof replacement and leak repair to gutters, siding and storm damage, Cascade Restoration Services handles the full job for homes and commercial buildings across Atlanta, GA.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-brand hover:bg-white hover:text-brand transition-colors text-white font-semibold px-8 py-4 rounded text-center">Get a Free Estimate</a>
+        <a href="tel:+14047108784" class="bg-white hover:bg-white/85 transition-colors text-ink font-semibold px-8 py-4 rounded-full text-center">Call (404) 710-8784</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- The difference -->
-<section id="about" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
-    <div class="lg:col-span-6 reveal">
-      <p class="text-xs uppercase tracking-[0.22em] text-brand font-semibold">The Cascade difference</p>
-      <h2 class="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold">One crew for the roof, the repairs and everything after.</h2>
+<!-- The Cascade difference -->
+<section id="difference" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+      <div class="lg:col-span-6 reveal">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">The Cascade difference</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-ink">One crew for the roof, the gutters and everything the storm touched.</h2>
 
-      <div class="mt-12 grid grid-cols-6 gap-4 items-end">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/cascade-restoration-services-llc/21948/photo-17.jpg" alt="Commercial flat roof with a rooftop hatch" class="col-span-3 aspect-[3/4] w-full object-cover rounded-base">
-        <div class="col-span-3 flex flex-col gap-4">
-          <div class="bg-brand text-white rounded-base p-6 aspect-[5/4] flex items-end">
-            <p class="text-xl md:text-2xl font-semibold leading-tight">We provide complete home restoration services.</p>
+        <div class="mt-12 grid grid-cols-2 gap-4">
+          <div class="col-span-1 aspect-[3/4] rounded overflow-hidden">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-13.jpg" alt="Roofers in hard hats repairing shingles on a ladder" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <img src="https://images.unsplash.com/photo-1755114203680-d39d95efa82c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of a home with a new shingle roof" class="aspect-[5/4] w-full object-cover rounded-base">
-        </div>
-        <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers installing roof tiles" class="col-span-6 aspect-[16/7] w-full object-cover rounded-base">
-      </div>
-    </div>
-
-    <div class="lg:col-span-6 reveal">
-      <p class="text-lg text-ink/75">Cascade Restoration Services is an Atlanta roofing contractor on Phoenix Blvd. We take care of the roof and the work that follows from it, from the first inspection to the final repair.</p>
-      <p class="mt-4 text-lg text-ink/75">Call for a free estimate, Monday to Saturday, 9:00am to 6:00pm.</p>
-
-      <div class="mt-10 divide-y divide-ink/10 border-t border-b border-ink/10">
-        <div class="py-6">
-          <h3 class="text-xl font-semibold">Roof replacement and repair</h3>
-          <p class="mt-2 text-ink/70">New roofs, targeted repairs and ongoing maintenance for asphalt shingle and other roof types.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl font-semibold">Commercial TPO roofing</h3>
-          <p class="mt-2 text-ink/70">TPO and flat roof systems for commercial buildings.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl font-semibold">Gutters, siding and decks</h3>
-          <p class="mt-2 text-ink/70">Gutter and downspout work, siding installation and repair, and deck construction.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl font-semibold">Storm damage and interior repairs</h3>
-          <p class="mt-2 text-ink/70">Roof leak repair, drywall repair and storm damage restoration.</p>
+          <div class="col-span-1 flex flex-col gap-4">
+            <div class="aspect-[4/3] rounded overflow-hidden">
+              <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-16.jpg" alt="Finished asphalt shingle roof on a blue home" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="flex-1 bg-brand text-white rounded p-6 flex items-end min-h-[140px]">
+              <p class="text-xl font-bold leading-snug">We provide complete home restoration services.</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <a href="tel:4047108784" class="mt-10 inline-flex items-center gap-4 group">
-        <span class="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center shrink-0">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        <span>
-          <span class="block text-sm text-ink/60">Call for a free estimate</span>
-          <span class="block text-2xl font-semibold group-hover:text-brand transition-colors">(404) 710-8784</span>
-        </span>
-      </a>
+      <div class="lg:col-span-6 reveal">
+        <p class="text-lg text-neutral-600 leading-relaxed">Cascade Restoration Services is a roofing and restoration contractor based in Atlanta, Georgia. We repair and replace roofs, fix what water has damaged inside, and finish the exterior so the whole home is sound again.</p>
+        <p class="mt-5 text-lg text-neutral-600 leading-relaxed">Every job starts with a free estimate. You talk to the people doing the work, and we answer the phone Monday through Saturday.</p>
+
+        <div class="mt-10 divide-y divide-neutral-200 border-y border-neutral-200">
+          <div class="py-5">
+            <h3 class="font-bold text-ink text-lg">Roof replacement and repair</h3>
+            <p class="mt-1 text-neutral-600">New roofs, leak repairs, maintenance and installation for asphalt shingle, architectural shingle and flat roofs.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="font-bold text-ink text-lg">Commercial TPO roofing</h3>
+            <p class="mt-1 text-neutral-600">TPO roofing systems for commercial and flat-roof buildings.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="font-bold text-ink text-lg">Gutters, downspouts and siding</h3>
+            <p class="mt-1 text-neutral-600">Installation and repair that moves water away from your home and keeps the exterior sealed.</p>
+          </div>
+          <div class="py-5">
+            <h3 class="font-bold text-ink text-lg">Interior repairs and storm damage</h3>
+            <p class="mt-1 text-neutral-600">Roof leak damage, drywall repair and full storm damage restoration.</p>
+          </div>
+        </div>
+
+        <a href="tel:+14047108784" class="mt-9 inline-flex items-center gap-4 group">
+          <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span>
+            <span class="block text-sm text-neutral-500">Call for a free estimate</span>
+            <span class="block text-2xl font-bold text-ink group-hover:text-brand transition-colors">(404) 710-8784</span>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Services -->
-<section id="services" class="relative pb-24 lg:pb-32 bg-white">
-  <div class="absolute top-0 inset-x-0 h-[560px] lg:h-[480px] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5 pt-24 lg:pt-28">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end text-white reveal">
-      <div class="lg:col-span-7">
-        <p class="text-xs uppercase tracking-[0.22em] text-white/70 font-semibold">Our services</p>
-        <h2 class="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold">Roofing and the work around it.</h2>
+<section id="services" class="relative">
+  <div class="absolute inset-x-0 top-0 h-[55%] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-24 lg:pt-28 pb-24 lg:pb-32">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end text-white">
+      <div class="lg:col-span-6">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/70">Our services</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">Everything your roof and exterior need.</h2>
       </div>
-      <p class="lg:col-span-5 text-lg text-white/80">From a single leak to a full replacement, and from gutters to siding and decks, everything is handled by one Atlanta team.</p>
+      <div class="lg:col-span-6">
+        <p class="text-lg text-white/85 leading-relaxed">From a single leak to a full tear-off, we repair, replace and restore. Here is where most of our work starts.</p>
+      </div>
     </div>
 
     <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="#contact" class="svc-card group block bg-white rounded-base overflow-hidden border border-ink/10 reveal">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1755114203680-d39d95efa82c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Asphalt shingle roof on a house" class="w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">Roof Replacement</h3>
-            <svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <a href="#contact" class="card block bg-white rounded p-3 shadow-sm reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-12.jpg" alt="Crew tearing off old shingles during a roof replacement" class="card-img w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-lg font-bold text-ink">Roof Replacement</h3>
+            <svg class="arrow shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <p class="mt-2 text-ink/70 text-[15px]">New roofs for homes and businesses, including asphalt shingle systems.</p>
+          <p class="mt-2 text-neutral-600 text-[15px] leading-relaxed">Full tear-off and new roof installation for asphalt shingle and architectural shingle roofs.</p>
         </div>
       </a>
-      <a href="#contact" class="svc-card group block bg-white rounded-base overflow-hidden border border-ink/10 reveal">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers working on a roof installation" class="w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">Roof Installation</h3>
-            <svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+
+      <a href="#contact" class="card block bg-white rounded p-3 shadow-sm reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-15.jpg" alt="Roofer using a nail gun to install shingles" class="card-img w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-lg font-bold text-ink">Roof Repair</h3>
+            <svg class="arrow shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <p class="mt-2 text-ink/70 text-[15px]">Careful installation on new builds and tear-offs, done to the roof type you choose.</p>
+          <p class="mt-2 text-neutral-600 text-[15px] leading-relaxed">Missing shingles, damaged flashing and active leaks fixed before they spread.</p>
         </div>
       </a>
-      <a href="#contact" class="svc-card group block bg-white rounded-base overflow-hidden border border-ink/10 reveal">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/cascade-restoration-services-llc/21948/photo-17.jpg" alt="TPO commercial flat roof" class="w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">TPO Commercial Roofing</h3>
-            <svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+
+      <a href="#contact" class="card block bg-white rounded p-3 shadow-sm reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-17.jpg" alt="Flat commercial roof with a rooftop hatch under a cloudy sky" class="card-img w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-lg font-bold text-ink">TPO Commercial Roofing</h3>
+            <svg class="arrow shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <p class="mt-2 text-ink/70 text-[15px]">TPO and flat roof systems for commercial properties around Atlanta.</p>
+          <p class="mt-2 text-neutral-600 text-[15px] leading-relaxed">TPO membrane roofing for flat and low-slope commercial buildings.</p>
         </div>
       </a>
-      <a href="#contact" class="svc-card group block bg-white rounded-base overflow-hidden border border-ink/10 reveal">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Workers repairing a house roof" class="w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">Roof Repair &amp; Leaks</h3>
-            <svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </div>
-          <p class="mt-2 text-ink/70 text-[15px]">Roof leak repair plus the interior and drywall repairs that follow.</p>
+
+      <a href="#contact" class="card block bg-white rounded p-3 shadow-sm reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-10.jpg" alt="Red downspout running down a stone foundation to a drain" class="card-img w-full h-full object-cover" loading="lazy">
         </div>
-      </a>
-      <a href="#contact" class="svc-card group block bg-white rounded-base overflow-hidden border border-ink/10 reveal">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1727777266423-6a33048e4894?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cedar shake roof" class="w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">Roof Maintenance</h3>
-            <svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <div class="px-2 pt-5 pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-lg font-bold text-ink">Gutters and Downspouts</h3>
+            <svg class="arrow shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </div>
-          <p class="mt-2 text-ink/70 text-[15px]">Routine upkeep to keep your roof sound and catch problems early.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card group block bg-white rounded-base overflow-hidden border border-ink/10 reveal">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1715207422537-2549c75846b7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Siding and roofline on a house" class="w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">Siding Installation &amp; Repair</h3>
-            <svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </div>
-          <p class="mt-2 text-ink/70 text-[15px]">New siding and repairs that protect and finish the exterior of your home.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card group block bg-white rounded-base overflow-hidden border border-ink/10 reveal">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1768123927068-06de1b3a323e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Gutters along a tiled roofline" class="w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">Gutters &amp; Downspouts</h3>
-            <svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </div>
-          <p class="mt-2 text-ink/70 text-[15px]">Gutter and downspout installation and repair to move water away from your home.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card group block bg-white rounded-base overflow-hidden border border-ink/10 reveal">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1777919393762-2be32d198c62?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a deck and structure" class="w-full h-full object-cover"></div>
-        <div class="p-6">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">Deck Construction</h3>
-            <svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </div>
-          <p class="mt-2 text-ink/70 text-[15px]">Decks built to extend your living space, from framing to finish.</p>
+          <p class="mt-2 text-neutral-600 text-[15px] leading-relaxed">Installation and repair that carries water away from your walls and foundation.</p>
         </div>
       </a>
     </div>
 
-    <p class="mt-10 text-ink/70 reveal">Also available: drywall repair and storm damage restoration. <a href="#contact" class="text-brand font-semibold underline underline-offset-4">Ask us about your project.</a></p>
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 text-[15px] text-neutral-700 reveal">
+      <p><span class="font-semibold text-ink">Roof Maintenance</span></p>
+      <p><span class="font-semibold text-ink">Roof Installation</span></p>
+      <p><span class="font-semibold text-ink">Siding Installation &amp; Repair</span></p>
+      <p><span class="font-semibold text-ink">Deck Construction</span></p>
+      <p><span class="font-semibold text-ink">Roof Leak &amp; Interior Repairs</span></p>
+      <p><span class="font-semibold text-ink">Drywall Repair</span></p>
+      <p><span class="font-semibold text-ink">Storm Damage Restoration</span></p>
+      <p><span class="font-semibold text-ink">Asphalt Shingle Roofing</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects gallery -->
+<section id="projects" class="pb-24 lg:pb-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Our work</p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-[1.1] tracking-tight text-ink">On the roof, start to finish.</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-6 gap-4">
+      <div class="col-span-2 lg:col-span-3 aspect-[16/10] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-12.jpg" alt="Aerial view of a roof tear-off in progress" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-1 lg:col-span-3 aspect-square lg:aspect-[16/10] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-16.jpg" alt="Completed shingle roof with dormer" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-1 lg:col-span-2 aspect-square rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-14.jpg" alt="Gloved hand fitting a roof tile" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-1 lg:col-span-2 aspect-square rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-11.jpg" alt="Water-stained ceiling from a roof leak" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-1 lg:col-span-2 aspect-square rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-19.jpg" alt="Roofer installing shingles with a nail gun on a wooded property" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-2 lg:col-span-3 aspect-[16/10] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-17.jpg" alt="Large flat commercial roof" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-2 lg:col-span-3 aspect-[16/10] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-13.jpg" alt="Two roofers working on shingles from a ladder" class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service areas -->
+<section id="areas" class="py-20 lg:py-24 bg-paper">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-5 reveal">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Service areas</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-[1.1] tracking-tight text-ink">Roofing across Atlanta and nearby.</h2>
+        <p class="mt-5 text-lg text-neutral-600 leading-relaxed">We work out of 1800 Phoenix Blvd in Atlanta and serve these communities.</p>
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <li class="bg-white rounded px-6 py-5 font-semibold text-ink">Atlanta, GA</li>
+          <li class="bg-white rounded px-6 py-5 font-semibold text-ink">Union City, GA</li>
+          <li class="bg-white rounded px-6 py-5 font-semibold text-ink">Forest Park, GA</li>
+          <li class="bg-white rounded px-6 py-5 font-semibold text-ink">College Park, GA</li>
+          <li class="bg-white rounded px-6 py-5 font-semibold text-ink sm:col-span-2">Lithia Springs, GA</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -264,60 +312,16 @@ tailwind.config = {
 <section class="bg-ink text-white py-20 lg:py-24">
   <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
     <div class="lg:col-span-8">
-      <h2 class="text-4xl md:text-5xl font-semibold text-[#6f7cff]">Roof trouble in Atlanta?</h2>
-      <p class="mt-4 text-lg text-white/75 max-w-2xl">Call (404) 710-8784 or request a free estimate. We are open Monday to Saturday, 9:00am to 6:00pm.</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-[#6f7bff]">Roof leaking or storm damage?</h2>
+      <p class="mt-4 text-lg text-white/75 max-w-xl">Call us Monday to Saturday, 9:00am to 6:00pm, or request a free estimate online.</p>
     </div>
-    <div class="lg:col-span-4 flex flex-wrap lg:justify-end gap-4">
-      <a href="#contact" class="bg-brand hover:bg-white hover:text-ink transition-colors text-white font-medium px-7 py-4 rounded-base">Get a Free Estimate</a>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section id="gallery" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end reveal">
-      <div class="lg:col-span-7">
-        <p class="text-xs uppercase tracking-[0.22em] text-brand font-semibold">Projects</p>
-        <h2 class="mt-5 text-4xl md:text-5xl font-semibold">Roofs of every type.</h2>
-      </div>
-      <p class="lg:col-span-5 text-lg text-ink/70">Asphalt and architectural shingle, TPO, flat roofs, EPDM, modified bitumen and cedar shake.</p>
-    </div>
-
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-12 gap-4">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/cascade-restoration-services-llc/21948/photo-17.jpg" alt="Commercial flat roof with metal hatch" class="col-span-2 lg:col-span-7 aspect-[16/9] lg:aspect-[16/10] w-full object-cover rounded-base reveal">
-      <img src="https://images.unsplash.com/photo-1755114203680-d39d95efa82c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of a gray shingle roof" class="col-span-2 lg:col-span-5 aspect-[16/9] lg:aspect-auto w-full h-full object-cover rounded-base reveal">
-      <img src="https://images.unsplash.com/photo-1727777266423-6a33048e4894?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wood shake roof surface" class="col-span-1 lg:col-span-4 aspect-square lg:aspect-[4/3] w-full object-cover rounded-base reveal">
-      <img src="https://images.unsplash.com/photo-1762363146144-ed6c31d722f1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cedar shingle gable with green trim" class="col-span-1 lg:col-span-4 aspect-square lg:aspect-[4/3] w-full object-cover rounded-base reveal">
-      <img src="https://images.unsplash.com/photo-1768123927068-06de1b3a323e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Red tile roof with gutters" class="col-span-2 lg:col-span-4 aspect-[16/9] lg:aspect-[4/3] w-full object-cover rounded-base reveal">
-      <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers laying new tiles" class="col-span-2 lg:col-span-6 aspect-[16/9] w-full object-cover rounded-base reveal">
-      <img src="https://images.unsplash.com/photo-1789684290015-1231896d5549?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofline with skylight and siding at dusk" class="col-span-2 lg:col-span-6 aspect-[16/9] w-full object-cover rounded-base reveal">
+    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4">
+      <a href="tel:+14047108784" class="bg-brand hover:bg-white hover:text-brand transition-colors text-white font-semibold px-8 py-4 rounded text-center">Call (404) 710-8784</a>
+      <a href="#contact" class="border border-white/30 hover:bg-white hover:text-ink transition-colors font-semibold px-8 py-4 rounded text-center">Request an estimate</a>
     </div>
   </div>
 </section>
 
-<!-- Areas -->
-<section id="areas" class="py-24 lg:py-28 bg-white">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-5 reveal">
-      <p class="text-xs uppercase tracking-[0.22em] text-brand font-semibold">Service areas</p>
-      <h2 class="mt-5 text-4xl md:text-5xl font-semibold">Roofing across the Atlanta area.</h2>
-      <p class="mt-6 text-lg text-ink/70">Our office is at 1800 Phoenix Blvd Ste 128, Atlanta, GA. We work in these communities:</p>
-      <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-lg">
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Atlanta, GA</li>
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Union City, GA</li>
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Forest Park, GA</li>
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>College Park, GA</li>
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Lithia Springs, GA</li>
-      </ul>
-    </div>
-    <div class="lg:col-span-7 reveal">
-      <img src="https://images.unsplash.com/photo-1751066007385-392d684fd7c6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Tiled house roof in warm light" class="w-full aspect-[16/10] object-cover rounded-base">
-    </div>
-  </div>
-</section>
-
-<!-- Contact placeholder -->
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
@@ -333,16 +337,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#0613b7;box-shadow:0 0 0 4px rgba(6,19,183,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#0613b7;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#0613b7;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -352,7 +356,7 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1751066007385-392d684fd7c6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/cascade-restoration-services-llc/21952/photo-16.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
@@ -372,7 +376,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof Replacement</option><option>Roof Repair</option><option>Roof Maintenance</option><option>Roof Installation</option><option>Asphalt Shingle Roofing</option><option>TPO Commercial Roofing</option><option>Gutter Installation &amp;amp; Repair</option><option>Downspout Installation &amp;amp; Repair</option><option>Siding Installation &amp;amp; Repair</option><option>Deck Construction</option><option>Roof Leak &amp;amp; Interior Repairs</option><option>Drywall Repair</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Roof Replacement</option><option>Roof Repair</option><option>Roof Maintenance</option><option>Roof Installation</option><option>Asphalt Shingle Roofing</option><option>TPO Commercial Roofing</option><option>Gutter Installation &amp; Repair</option><option>Downspout Installation &amp; Repair</option><option>Siding Installation &amp; Repair</option><option>Deck Construction</option><option>Roof Leak &amp; Interior Repairs</option><option>Drywall Repair</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -385,43 +389,38 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-ink text-white pt-20 pb-10">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-      <div class="md:col-span-5">
-        <a href="#top" class="leading-none inline-block">
-          <span class="block text-2xl font-bold tracking-tight">Cascade</span>
-          <span class="block text-[11px] uppercase tracking-[0.22em] text-white/60 mt-1">Restoration Services</span>
-        </a>
-        <p class="mt-6 text-white/65 max-w-sm">Complete home restoration services, from the roof down, in Atlanta, GA.</p>
-        <div class="mt-6 flex gap-3 text-sm">
-          <a href="https://www.facebook.com/profile.php?id=61572406042536" class="border border-white/20 hover:border-white rounded-base px-4 py-2 transition-colors">Facebook</a>
-          <a href="https://www.instagram.com/cascaderestorationservices/" class="border border-white/20 hover:border-white rounded-base px-4 py-2 transition-colors">Instagram</a>
-        </div>
+<footer class="bg-ink text-white/75 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <div class="leading-none">
+        <span class="block text-xl font-bold tracking-tight text-white">Cascade</span>
+        <span class="block text-xs font-medium tracking-[0.18em] uppercase text-white/60 mt-1">Restoration Services, LLC</span>
       </div>
-      <div class="md:col-span-3">
-        <h4 class="text-sm uppercase tracking-[0.2em] text-white/50 font-semibold">Services</h4>
-        <ul class="mt-5 space-y-3 text-white/80">
-          <li>Roof Replacement &amp; Repair</li>
-          <li>TPO Commercial Roofing</li>
-          <li>Gutters &amp; Siding</li>
-          <li>Deck Construction</li>
-          <li>Storm Damage Restoration</li>
-        </ul>
-      </div>
-      <div class="md:col-span-4">
-        <h4 class="text-sm uppercase tracking-[0.2em] text-white/50 font-semibold">Contact</h4>
-        <ul class="mt-5 space-y-3 text-white/80">
-          <li>1800 Phoenix Blvd Ste 128<br>Atlanta, GA</li>
-          <li><a href="tel:4047108784" class="hover:text-white font-semibold">(404) 710-8784</a></li>
-          <li><a href="mailto:kagan@cascaderoofingservices.com" class="hover:text-white break-words text-[15px]">kagan@cascaderoofingservices.com</a></li>
-          <li>Mon - Sat: 9:00am to 6:00pm</li>
-        </ul>
-      </div>
+      <p class="mt-5 max-w-sm leading-relaxed">We provide complete home restoration services in Atlanta, GA.</p>
     </div>
-    <div class="mt-16 pt-8 border-t border-white/10 text-sm text-white/50 space-y-2">
+    <div class="md:col-span-3">
+      <h3 class="text-white font-semibold mb-4">Explore</h3>
+      <ul class="space-y-2.5">
+        <li><a href="#difference" class="hover:text-white">About</a></li>
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#projects" class="hover:text-white">Projects</a></li>
+        <li><a href="#areas" class="hover:text-white">Areas</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h3 class="text-white font-semibold mb-4">Contact</h3>
+      <ul class="space-y-2.5">
+        <li>1800 Phoenix Blvd Ste 128, Atlanta, GA</li>
+        <li><a href="tel:+14047108784" class="hover:text-white">(404) 710-8784</a></li>
+        <li><a href="mailto:kagan@cascaderoofingservices.com" class="hover:text-white break-words text-[15px]">kagan@cascaderoofingservices.com</a></li>
+        <li>Mon - Sat: 9:00am to 6:00pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-sm text-white/50 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Cascade Restoration Services, LLC website.</p>
-      <p>Some photos by Christian Harb, Ben Koorengevel, Paragon Exterior, Sergej, Gallant Haykan, Norbert Buduczki, Compagnons, Phil Desforges, Christian Miranda and Hedwin Hu on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -433,8 +432,9 @@ tailwind.config = {
     const open = menu.classList.toggle('hidden') === false;
     btn.setAttribute('aria-expanded', open);
   });
-  document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => {
-    menu.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false');
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+    menu.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
   }));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });

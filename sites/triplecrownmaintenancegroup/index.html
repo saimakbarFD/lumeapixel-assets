@@ -4,24 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Triple Crown Maintenance Group | Paving, Concrete & Striping in Tampa, FL</title>
+<title>Triple Crown Maintenance Group | Asphalt, Concrete & Striping in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Outfit', 'sans-serif'] },
       colors: {
         brand: '#5572B0',
-        brandDark: '#1b2640',
-        ink: '#0e1117',
-        paper: '#f5f6f8'
-      },
-      fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
+        brandDark: '#1B2640',
+        ink: '#0F1115',
+        paper: '#F5F6F8'
       },
       borderRadius: { DEFAULT: '6px' }
     }
@@ -30,99 +27,113 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1a1d24; }
-  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; }
-  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  body { font-family: 'Outfit', sans-serif; color: #0F1115; background: #fff; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .grad-bottom { background: linear-gradient(to top, rgba(10,13,20,.92) 0%, rgba(10,13,20,.55) 45%, rgba(10,13,20,0) 100%); }
-  .dot { width: 6px; height: 6px; border-radius: 9999px; background: #5572B0; display: inline-block; flex-shrink: 0; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.95rem 1.6rem; border-radius:6px; font-weight:600; transition: background .2s, color .2s, border-color .2s; }
+  .btn-brand { background:#5572B0; color:#fff; }
+  .btn-brand:hover { background:#46619c; }
+  .btn-ghost { border:1.5px solid rgba(255,255,255,.55); color:#fff; }
+  .btn-ghost:hover { background:#fff; color:#0F1115; }
+  .btn-dark { background:#0F1115; color:#fff; }
+  .btn-dark:hover { background:#1B2640; }
+  .ba-wrap { position:relative; overflow:hidden; border-radius:6px; user-select:none; touch-action:pan-y; }
+  .ba-top { position:absolute; inset:0; width:50%; overflow:hidden; }
+  .ba-top img { position:absolute; top:0; left:0; height:100%; max-width:none; }
+  .ba-handle { position:absolute; top:0; bottom:0; left:50%; width:2px; background:#fff; transform:translateX(-1px); pointer-events:none; }
+  .ba-knob { position:absolute; top:50%; left:50%; width:44px; height:44px; margin:-22px 0 0 -22px; border-radius:999px; background:#5572B0; border:2px solid #fff; display:flex; align-items:center; justify-content:center; color:#fff; }
+  .ba-range { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; margin:0; }
+  .grad-b { background: linear-gradient(to top, rgba(15,17,21,.92) 0%, rgba(15,17,21,.35) 55%, rgba(15,17,21,0) 100%); }
+  .dot { width:6px; height:6px; border-radius:999px; background:#5572B0; display:inline-block; flex:none; }
+  img { display:block; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white">
+<body class="antialiased">
 
-<!-- Header -->
+<!-- HEADER -->
 <header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between">
-    <a href="#top" class="font-heading font-bold text-white text-lg sm:text-xl tracking-tight leading-none">
-      TRIPLE CROWN<span class="block text-[10px] sm:text-[11px] font-medium tracking-[0.28em] text-brand mt-1">MAINTENANCE GROUP</span>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="text-white font-bold text-lg sm:text-xl tracking-tight leading-none">
+      TRIPLE CROWN<span class="block text-[11px] font-medium tracking-[.28em] text-brand mt-1">MAINTENANCE GROUP</span>
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
       <a href="#services" class="hover:text-white">Services</a>
-      <a href="#process" class="hover:text-white">How it runs</a>
+      <a href="#process" class="hover:text-white">Process</a>
       <a href="#work" class="hover:text-white">Our work</a>
       <a href="#about" class="hover:text-white">About</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18132409128" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-5 py-3 rounded hover:bg-[#4963a0] transition">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (813) 240-9128
+      <a href="tel:+18132409128" class="btn btn-brand !py-2.5 !px-4 text-sm">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="hidden sm:inline">(813) 240-9128</span><span class="sm:hidden">Call</span>
       </a>
       <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 py-5 space-y-4 text-white/90 font-medium">
-    <a href="#services" class="block">Services</a>
-    <a href="#process" class="block">How it runs</a>
-    <a href="#work" class="block">Our work</a>
-    <a href="#about" class="block">About</a>
-    <a href="#contact" class="block">Contact</a>
-    <a href="tel:+18132409128" class="block bg-brand text-white text-center py-3 rounded font-semibold">Call (813) 240-9128</a>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
+    <div class="px-5 py-4 flex flex-col gap-4 text-white/90 font-medium">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#work">Our work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- Hero -->
+<!-- 1. HERO -->
 <section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1763328044351-98341e9963da?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Freshly paved asphalt road" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-ink/80"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <img src="https://images.unsplash.com/photo-1779384896076-51cbd33c36ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Asphalt roller compacting fresh pavement" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-ink/75"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <p class="text-xs font-semibold tracking-[0.28em] text-brand mb-6">TAMPA, FLORIDA</p>
-      <h1 class="font-heading font-bold uppercase text-[2.6rem] sm:text-6xl lg:text-7xl leading-[0.98] tracking-tight">
-        Paving.<br>Concrete.<br>Maintenance.
+      <p class="text-xs font-semibold tracking-[.25em] text-brand mb-6">TAMPA, FLORIDA</p>
+      <h1 class="font-extrabold uppercase leading-[.95] tracking-tight text-5xl sm:text-6xl lg:text-7xl">
+        Paving.<br>Concrete.<br>Maintained right.
       </h1>
-      <p class="mt-7 text-lg text-white/80 max-w-xl">Triple Crown Maintenance Group paves driveways and parking lots, repairs concrete and curbs, and keeps commercial properties in shape. Any size project, handled start to finish.</p>
-      <ul class="mt-8 space-y-3 text-white/90">
-        <li class="flex items-start gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Asphalt paving, patching, sealcoat and crack fill</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Concrete flat work, curbs and ADA compliance</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Project managers who keep jobs on time and within budget</li>
+      <p class="mt-8 text-lg text-white/80 max-w-xl leading-relaxed">Triple Crown Maintenance Group paves driveways and parking lots, repairs concrete, and keeps commercial properties in shape. Any size project, handled from start to finish.</p>
+      <ul class="mt-8 space-y-3">
+        <li class="flex items-center gap-3"><svg class="text-brand flex-none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Asphalt paving, patching and sealcoat</li>
+        <li class="flex items-center gap-3"><svg class="text-brand flex-none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Concrete flat work, curbs and ADA compliance</li>
+        <li class="flex items-center gap-3"><svg class="text-brand flex-none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Striping, signage, sports courts and more</li>
       </ul>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="bg-brand hover:bg-[#4963a0] text-white font-semibold px-8 py-4 rounded text-center transition">Get a free estimate</a>
-        <a href="#services" class="border border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded text-center transition">See our services</a>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#contact" class="btn btn-brand">Get a free estimate</a>
+        <a href="#services" class="btn btn-ghost">See our services</a>
       </div>
     </div>
     <div class="lg:col-span-5">
-      <div class="bg-white text-ink rounded p-8 lg:p-9">
-        <h2 class="font-heading font-semibold text-2xl">Get a free estimate</h2>
-        <p class="mt-2 text-slate-600 text-base">Tell us about your property. We'll get back to you with a plan and a price.</p>
-        <div class="mt-6 space-y-3">
-          <a href="tel:+18132409128" class="flex items-center justify-center gap-2 bg-brand hover:bg-[#4963a0] text-white font-semibold py-4 rounded transition">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            (813) 240-9128
-          </a>
-          <a href="mailto:rob@triplecrownmaintenancegroup.com" class="flex items-center justify-center gap-2 border border-ink/20 hover:border-ink text-ink font-semibold py-4 px-3 rounded transition text-sm sm:text-base break-words text-center">
-            <svg class="shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            <span class="break-words min-w-0">rob@triplecrownmaintenancegroup.com</span>
-          </a>
-        </div>
+      <div class="bg-paper text-ink rounded p-8">
+        <p class="text-xs font-semibold tracking-[.22em] text-brand">FREE ESTIMATE</p>
+        <h2 class="mt-3 text-2xl font-bold leading-tight">Tell us about your property</h2>
+        <p class="mt-3 text-neutral-600">Call or email Rob directly. We'll talk through the job and the budget.</p>
+        <a href="tel:+18132409128" class="btn btn-dark w-full mt-6">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (813) 240-9128
+        </a>
+        <a href="mailto:rob@triplecrownmaintenancegroup.com" class="btn w-full mt-3 border-[1.5px] border-ink/20 hover:border-ink text-sm sm:text-base text-center break-words">
+          <svg class="flex-none" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <span class="break-words min-w-0">rob@triplecrownmaintenancegroup.com</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services strip -->
-<section class="bg-ink border-t border-white/10 text-white/80">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm font-medium tracking-wide">
+<!-- 2. SERVICES STRIP -->
+<section class="bg-ink border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm sm:text-base font-medium text-white/85">
     <span>Asphalt Paving</span><span class="dot"></span>
     <span>Patching</span><span class="dot"></span>
-    <span>Concrete</span><span class="dot"></span>
-    <span>Curbs</span><span class="dot"></span>
     <span>Sealcoat</span><span class="dot"></span>
+    <span>Crack Fill</span><span class="dot"></span>
+    <span>Concrete Flat Work</span><span class="dot"></span>
+    <span>Curbs</span><span class="dot"></span>
     <span>ADA Compliance</span><span class="dot"></span>
     <span>Striping</span><span class="dot"></span>
     <span>Sports Courts</span><span class="dot"></span>
@@ -130,223 +141,221 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- Services (3 cards in brand section) -->
+<!-- 3. THREE STAGES -->
 <section id="services" class="bg-brand py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.28em] text-white/70 mb-4">WHAT WE DO</p>
-      <h2 class="font-heading font-bold text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight">Pave. Repair. Finish.</h2>
-      <p class="mt-5 text-white/85 text-lg">Three ways we keep Tampa driveways, lots and sidewalks working and looking sharp.</p>
+      <p class="text-xs font-semibold tracking-[.25em] text-white/80">WHAT WE DO</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">Pave. Repair. Protect.</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
       <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1693019108307-25453cd99978?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paving crew with asphalt paver" class="w-full h-full object-cover"></div>
-        <div class="p-7 text-white">
-          <h3 class="font-heading font-semibold text-2xl">Asphalt Paving</h3>
-          <p class="mt-3 text-white/70 text-base">Driveways and parking lots, paved with every detail checked from start to finish.</p>
+        <img src="https://images.unsplash.com/photo-1693019108329-1889fb170f2e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paving crew with paver and roller" class="w-full aspect-[4/3] object-cover">
+        <div class="p-7">
+          <p class="text-xs font-semibold tracking-[.2em] text-brand">01</p>
+          <h3 class="mt-2 text-2xl font-bold text-white">Pave</h3>
+          <p class="mt-3 text-white/70 leading-relaxed">Asphalt paving for driveways and parking lots, plus new concrete flat work and sports courts built from scratch.</p>
         </div>
       </article>
       <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/triple-crown-maintenance-group/21950/photo-2.jpg" alt="Crew pouring and spreading concrete" class="w-full h-full object-cover"></div>
-        <div class="p-7 text-white">
-          <h3 class="font-heading font-semibold text-2xl">Concrete Flat Work</h3>
-          <p class="mt-3 text-white/70 text-base">Sidewalks, slabs and curbs repaired or built new for homes and commercial spaces.</p>
+        <img src="https://images.unsplash.com/photo-1772852340517-b11ec88979fc?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew laying fresh asphalt behind a paver" class="w-full aspect-[4/3] object-cover">
+        <div class="p-7">
+          <p class="text-xs font-semibold tracking-[.2em] text-brand">02</p>
+          <h3 class="mt-2 text-2xl font-bold text-white">Repair</h3>
+          <p class="mt-3 text-white/70 leading-relaxed">Pot holes, alligator cracks, curbs, sidewalks and slabs. Patching and replacement for commercial and residential properties.</p>
         </div>
       </article>
       <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/triple-crown-maintenance-group/21950/photo-1.jpg" alt="Striped parking lot with ADA space" class="w-full h-full object-cover object-bottom"></div>
-        <div class="p-7 text-white">
-          <h3 class="font-heading font-semibold text-2xl">Striping &amp; ADA</h3>
-          <p class="mt-3 text-white/70 text-base">DOT approved Sherwin Williams pavement paint, ADA ramps, truncated domes and signage.</p>
+        <img src="https://images.unsplash.com/photo-1685692145956-d48371176012?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Striped asphalt surface" class="w-full aspect-[4/3] object-cover">
+        <div class="p-7">
+          <p class="text-xs font-semibold tracking-[.2em] text-brand">03</p>
+          <h3 class="mt-2 text-2xl font-bold text-white">Protect</h3>
+          <p class="mt-3 text-white/70 leading-relaxed">Sealcoat, crack fill, striping, signage and bollards to extend the life of your pavement and keep your property up to code.</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- Process -->
+<!-- 4. HOW A PROJECT RUNS -->
 <section id="process" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.28em] text-brand mb-4">HOW IT RUNS</p>
-      <h2 class="font-heading font-bold text-4xl lg:text-5xl leading-[1.05] tracking-tight text-ink">One crew from estimate to finish</h2>
+      <p class="text-xs font-semibold tracking-[.25em] text-brand">PROCESS</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">How your project runs</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
+    <div class="mt-14 grid md:grid-cols-3 gap-10">
       <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand font-heading font-bold text-xl flex items-center justify-center rounded">01</div>
-        <h3 class="mt-6 font-heading font-semibold text-2xl text-ink">Tell us what you need</h3>
-        <p class="mt-3 text-slate-600">Call or email. We look at your property and your budget and talk through the options.</p>
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-bold">1</div>
+        <h3 class="mt-6 text-xl font-bold">Walk the property</h3>
+        <p class="mt-3 text-neutral-600 leading-relaxed">Call or email us. We look at the job, talk through what you need and give you a clear estimate that fits your budget.</p>
       </div>
       <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand font-heading font-bold text-xl flex items-center justify-center rounded">02</div>
-        <h3 class="mt-6 font-heading font-semibold text-2xl text-ink">We do the work</h3>
-        <p class="mt-3 text-slate-600">Our project managers keep the job on schedule and on budget, whatever the size.</p>
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-bold">2</div>
+        <h3 class="mt-6 text-xl font-bold">Schedule and build</h3>
+        <p class="mt-3 text-neutral-600 leading-relaxed">Our project managers keep the work on time and on budget, whether it's a small repair or a full parking lot.</p>
       </div>
       <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand font-heading font-bold text-xl flex items-center justify-center rounded">03</div>
-        <h3 class="mt-6 font-heading font-semibold text-2xl text-ink">Finished and up to code</h3>
-        <p class="mt-3 text-slate-600">Striping, signage, bollards and ADA details completed so your property is ready to use.</p>
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-bold">3</div>
+        <h3 class="mt-6 text-xl font-bold">Finish and protect</h3>
+        <p class="mt-3 text-neutral-600 leading-relaxed">Striping, signage, ADA details and sealcoat finish the job so it looks right and lasts.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Side by side -->
+<!-- 5. SIDE BY SIDE (no matching before/after pair, so two photos side by side) -->
 <section class="bg-ink text-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.28em] text-brand mb-4">FROM THE FIELD</p>
-      <h2 class="font-heading font-bold text-4xl lg:text-5xl leading-[1.05] tracking-tight">Worn markings, fresh paint</h2>
-      <p class="mt-5 text-white/70 text-lg">Faded arrows and cracked lines are an easy fix. We repaint with DOT approved pavement paint.</p>
+      <p class="text-xs font-semibold tracking-[.25em] text-brand">WEAR AND REPLACEMENT</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">From worn markings to fresh striping</h2>
+      <p class="mt-5 text-white/70 text-lg leading-relaxed">Faded lines and cracked paint are the first sign a lot needs attention. We re-stripe with DOT approved pavement paint from Sherwin Williams.</p>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
       <figure class="reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1708117242652-25dc76c4b30c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cracked, worn pavement marking" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-sm tracking-[0.2em] text-white/60 font-medium">WORN MARKINGS</figcaption>
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1782223912502-93f29f26012b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cracked, worn pavement marking" class="w-full aspect-[4/3] object-cover rounded">
+          <figcaption class="absolute left-4 top-4 bg-ink text-white text-xs font-semibold tracking-[.2em] px-3 py-2 rounded">WORN</figcaption>
+        </div>
       </figure>
       <figure class="reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/triple-crown-maintenance-group/21950/photo-1.jpg" alt="Freshly striped parking lot" class="w-full h-full object-cover object-bottom"></div>
-        <figcaption class="mt-3 text-sm tracking-[0.2em] text-brand font-medium">FRESHLY STRIPED</figcaption>
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1783582315652-e2e8676f622f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crisp white lines on asphalt" class="w-full aspect-[4/3] object-cover rounded">
+          <figcaption class="absolute left-4 top-4 bg-brand text-white text-xs font-semibold tracking-[.2em] px-3 py-2 rounded">STRIPED</figcaption>
+        </div>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- Comparison -->
+<!-- 6. DIY vs ONE CONTRACTOR -->
 <section class="bg-paper py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.28em] text-brand mb-4">WHY ONE CONTRACTOR</p>
-      <h2 class="font-heading font-bold text-4xl lg:text-5xl leading-[1.05] tracking-tight text-ink">Several vendors, or one team</h2>
+      <p class="text-xs font-semibold tracking-[.25em] text-brand">ONE CALL</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Many vendors, or one contractor</h2>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white border border-ink/10 rounded p-8 lg:p-10 reveal">
-        <h3 class="font-heading font-semibold text-2xl text-ink">Separate vendors</h3>
-        <ul class="mt-6 space-y-4 text-slate-600">
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-slate-400 shrink-0"></span>One company for paving, another for concrete, another for paint</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-slate-400 shrink-0"></span>Schedules you have to coordinate yourself</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-slate-400 shrink-0"></span>Several quotes and several points of contact</li>
+    <div class="mt-14 grid md:grid-cols-2 gap-6">
+      <div class="bg-white rounded p-8 lg:p-10 border border-neutral-200 reveal">
+        <h3 class="text-2xl font-bold">Hiring separate trades</h3>
+        <ul class="mt-6 space-y-4 text-neutral-600">
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-neutral-400 flex-none"></span>A different company for paving, concrete and striping</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-neutral-400 flex-none"></span>Schedules you have to coordinate yourself</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-neutral-400 flex-none"></span>Several quotes to compare and several people to call</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-[2px] bg-neutral-400 flex-none"></span>ADA details easy to miss</li>
         </ul>
       </div>
-      <div class="bg-white border-2 border-brand rounded p-8 lg:p-10 reveal">
-        <h3 class="font-heading font-semibold text-2xl text-ink">Triple Crown Maintenance Group</h3>
-        <ul class="mt-6 space-y-4 text-ink">
-          <li class="flex gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Paving, concrete, striping, signage and more under one roof</li>
-          <li class="flex gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Project managers who keep work on time and within budget</li>
-          <li class="flex gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>One call to get started: (813) 240-9128</li>
+      <div class="bg-white rounded p-8 lg:p-10 border-2 border-brand reveal">
+        <h3 class="text-2xl font-bold">Triple Crown Maintenance Group</h3>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3"><svg class="text-brand flex-none mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Asphalt, concrete, striping and signage under one roof</li>
+          <li class="flex gap-3"><svg class="text-brand flex-none mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Project managers who keep the job on time and on budget</li>
+          <li class="flex gap-3"><svg class="text-brand flex-none mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One estimate and one point of contact</li>
+          <li class="flex gap-3"><svg class="text-brand flex-none mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ADA ramps, truncated domes and hand rails to keep your property up to code</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- What we build bento -->
+<!-- 7. WHAT WE BUILD BENTO -->
 <section id="work" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.28em] text-brand mb-4">WHAT WE BUILD</p>
-      <h2 class="font-heading font-bold text-4xl lg:text-5xl leading-[1.05] tracking-tight text-ink">Work across the property</h2>
+      <p class="text-xs font-semibold tracking-[.25em] text-brand">OUR WORK</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">What we build and maintain</h2>
     </div>
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 grid-flow-row-dense">
-      <a href="#contact" class="relative block rounded overflow-hidden sm:col-span-2 lg:col-span-7 aspect-[4/3] lg:aspect-auto lg:h-[520px] reveal">
-        <img src="https://images.unsplash.com/photo-1782223912502-93f29f26012b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete being poured" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 grad-bottom"></div>
-        <div class="absolute bottom-0 p-7 text-white"><h3 class="font-heading font-semibold text-2xl">Concrete Flat Work</h3><p class="text-white/75 text-base mt-1">Sidewalks, slabs, curbs</p></div>
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <a href="#contact" class="group relative rounded overflow-hidden sm:col-span-2 lg:col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[520px] reveal">
+        <img src="https://images.unsplash.com/photo-1693019108307-25453cd99978?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roller finishing a neighborhood street" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 grad-b"></div>
+        <div class="absolute bottom-0 left-0 p-6 text-white">
+          <h3 class="text-2xl font-bold">Asphalt Paving</h3>
+          <p class="mt-1 text-white/75 text-sm">Driveways, streets and parking lots</p>
+        </div>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden lg:col-span-5 aspect-[4/3] lg:aspect-auto lg:h-[520px] reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/triple-crown-maintenance-group/21950/photo-1.jpg" alt="ADA parking space and striping" class="absolute inset-0 w-full h-full object-cover object-bottom">
-        <div class="absolute inset-0 grad-bottom"></div>
-        <div class="absolute bottom-0 p-7 text-white"><h3 class="font-heading font-semibold text-2xl">ADA Compliance</h3><p class="text-white/75 text-base mt-1">Ramps, domes, hand rails, markings</p></div>
+      <a href="#contact" class="group relative rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://images.unsplash.com/photo-1783753444935-18d863bc7611?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Milling machine removing old asphalt" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 grad-b"></div>
+        <div class="absolute bottom-0 left-0 p-5 text-white"><h3 class="text-lg font-bold">Asphalt Patching</h3></div>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden lg:col-span-4 aspect-[4/3] reveal">
-        <img src="https://images.unsplash.com/photo-1693019108307-25453cd99978?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Asphalt paver at work" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 grad-bottom"></div>
-        <div class="absolute bottom-0 p-6 text-white"><h3 class="font-heading font-semibold text-xl">Asphalt Paving</h3></div>
+      <a href="#contact" class="group relative rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://images.unsplash.com/photo-1706752095478-4d759dc68846?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sealing equipment spraying a road surface" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 grad-b"></div>
+        <div class="absolute bottom-0 left-0 p-5 text-white"><h3 class="text-lg font-bold">Sealcoat and Crack Fill</h3></div>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden lg:col-span-4 aspect-[4/3] reveal">
-        <img src="https://images.unsplash.com/photo-1763328044351-98341e9963da?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Road patching in progress" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 grad-bottom"></div>
-        <div class="absolute bottom-0 p-6 text-white"><h3 class="font-heading font-semibold text-xl">Asphalt Patching</h3></div>
+      <a href="#contact" class="group relative rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://images.unsplash.com/photo-1708117242652-25dc76c4b30c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Long road with fresh paving along the shoulder" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 grad-b"></div>
+        <div class="absolute bottom-0 left-0 p-5 text-white"><h3 class="text-lg font-bold">Commercial Maintenance</h3></div>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden sm:col-span-2 lg:col-span-4 aspect-[4/3] reveal">
-        <img src="https://images.unsplash.com/photo-1708117242652-25dc76c4b30c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Pavement marking" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 grad-bottom"></div>
-        <div class="absolute bottom-0 p-6 text-white"><h3 class="font-heading font-semibold text-xl">Striping</h3></div>
+      <a href="#contact" class="group relative rounded overflow-hidden aspect-[4/3] reveal">
+        <img src="https://images.unsplash.com/photo-1724648179736-fef1ae010d6b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Yellow roller on a newly paved road" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 grad-b"></div>
+        <div class="absolute bottom-0 left-0 p-5 text-white"><h3 class="text-lg font-bold">Road and Lot Rolling</h3></div>
+      </a>
+      <a href="#contact" class="group relative rounded overflow-hidden sm:col-span-2 lg:col-span-2 aspect-[16/9] lg:aspect-[2/1] reveal">
+        <img src="https://images.unsplash.com/photo-1783582315652-e2e8676f622f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Pavement with fresh white line striping" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 grad-b"></div>
+        <div class="absolute bottom-0 left-0 p-6 text-white">
+          <h3 class="text-xl font-bold">Striping</h3>
+          <p class="mt-1 text-white/75 text-sm">Parking spaces, stencils and custom line painting</p>
+        </div>
       </a>
     </div>
+    <p class="mt-6 text-sm text-neutral-500">Concrete flat work, curbs, ADA compliance, sports courts, signage, bollards and pressure washing are also available. Ask for a quote.</p>
   </div>
 </section>
 
-<!-- Services list -->
-<section class="bg-paper py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.28em] text-brand mb-4">FULL SERVICE LIST</p>
-      <h2 class="font-heading font-bold text-4xl lg:text-5xl leading-[1.05] tracking-tight text-ink">Everything for your lot, drive and walkway</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">Asphalt Patching</h3><p class="mt-2 text-slate-600 text-base">Pot holes, alligator cracks and more on commercial properties, any size project.</p></div>
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">Concrete Curbs</h3><p class="mt-2 text-slate-600 text-base">Curb repair and replacement for real curb appeal, managed to finish on time and on budget.</p></div>
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">Sealcoat</h3><p class="mt-2 text-slate-600 text-base">Prolong the life of your asphalt while giving it a clean, finished look.</p></div>
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">Crack Fill</h3><p class="mt-2 text-slate-600 text-base">Fill cracks in asphalt or concrete to reduce wear and keep moisture out.</p></div>
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">Signage &amp; Bollards</h3><p class="mt-2 text-slate-600 text-base">Stop signs, handicap signs and 4" to 6" bollards to protect vulnerable areas.</p></div>
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">Sports Courts</h3><p class="mt-2 text-slate-600 text-base">Resurface an existing court or build a new one from scratch. Over 20 years of experience.</p></div>
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">Striping</h3><p class="mt-2 text-slate-600 text-base">Parking spaces, stencils and custom line painting with DOT approved Sherwin Williams paint.</p></div>
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">Pressure Washing</h3><p class="mt-2 text-slate-600 text-base">Make an old driveway or sidewalk look brand new again.</p></div>
-      <div class="border-t-2 border-ink pt-5 reveal"><h3 class="font-heading font-semibold text-xl text-ink">ADA Compliance</h3><p class="mt-2 text-slate-600 text-base">ADA ramps, truncated domes, hand rails and more to keep your property up to code.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- About split -->
-<section id="about" class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- 8. OWNER-LED SPLIT -->
+<section id="about" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-6 reveal">
-      <p class="text-xs font-semibold tracking-[0.28em] text-brand mb-4">ABOUT TRIPLE CROWN</p>
-      <h2 class="font-heading font-bold text-4xl lg:text-5xl leading-[1.05] tracking-tight text-ink">Careful work, every detail</h2>
-      <p class="mt-6 text-slate-600 text-lg">We work closely with our clients to match their needs and style. Our team is committed to the highest quality workmanship, from a single repair to a full parking lot.</p>
-      <ul class="mt-7 space-y-3 text-ink">
-        <li class="flex gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Experienced team for driveways and parking lots</li>
-        <li class="flex gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Equipped to handle any size project</li>
-        <li class="flex gap-3"><svg class="mt-1 text-brand shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Over 20 years of experience with sports courts</li>
+      <p class="text-xs font-semibold tracking-[.25em] text-brand">ABOUT</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Craftsmanship you can see on the surface</h2>
+      <p class="mt-6 text-lg text-neutral-700 leading-relaxed">Our team works closely with each client to match their needs and their budget. We specialize in maintenance for commercial properties, and we handle homes too, from driveway paving to sidewalk repair.</p>
+      <ul class="mt-8 space-y-3">
+        <li class="flex gap-3"><svg class="text-brand flex-none mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Equipped to handle any size project</li>
+        <li class="flex gap-3"><svg class="text-brand flex-none mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Over 20 years of experience with sports courts</li>
+        <li class="flex gap-3"><svg class="text-brand flex-none mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>DOT approved pavement paint from Sherwin Williams</li>
       </ul>
-      <div class="mt-9 flex flex-col sm:flex-row gap-4">
-        <a href="tel:+18132409128" class="bg-brand hover:bg-[#4963a0] text-white font-semibold px-8 py-4 rounded text-center transition">Call (813) 240-9128</a>
-        <a href="#contact" class="border border-ink/25 hover:border-ink text-ink font-semibold px-8 py-4 rounded text-center transition">Request an estimate</a>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#contact" class="btn btn-brand">Request an estimate</a>
+        <a href="tel:+18132409128" class="btn btn-dark">Call (813) 240-9128</a>
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] rounded overflow-hidden">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/triple-crown-maintenance-group/21950/photo-1.jpg" alt="Finished parking lot with ADA stall and wheel stops" class="w-full h-full object-cover">
-      </div>
+      <img src="https://images.unsplash.com/photo-1693019108329-1889fb170f2e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paving crew working with a paver and roller" class="w-full aspect-[5/4] object-cover rounded">
     </div>
   </div>
 </section>
 
-<!-- Service area -->
-<section class="bg-paper py-20">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 reveal">
-    <p class="text-xs font-semibold tracking-[0.28em] text-brand mb-4">SERVICE AREA</p>
-    <h2 class="font-heading font-bold text-3xl lg:text-4xl tracking-tight text-ink">Based in Tampa, Florida</h2>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <span class="bg-white border border-ink/10 rounded px-5 py-2.5 text-sm font-medium text-ink">Tampa</span>
-      <span class="bg-white border border-ink/10 rounded px-5 py-2.5 text-sm font-medium text-ink">Residential driveways</span>
-      <span class="bg-white border border-ink/10 rounded px-5 py-2.5 text-sm font-medium text-ink">Commercial parking lots</span>
-      <span class="bg-white border border-ink/10 rounded px-5 py-2.5 text-sm font-medium text-ink">Commercial property maintenance</span>
+<!-- 9. SERVICE AREA -->
+<section class="bg-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-xs font-semibold tracking-[.25em] text-brand">SERVICE AREA</p>
+    <h2 class="mt-4 text-3xl lg:text-4xl font-bold tracking-tight">Based in Tampa, Florida</h2>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <span class="px-5 py-2.5 border border-neutral-300 rounded text-sm font-medium">Tampa</span>
+      <span class="px-5 py-2.5 border border-neutral-300 rounded text-sm font-medium">Commercial properties</span>
+      <span class="px-5 py-2.5 border border-neutral-300 rounded text-sm font-medium">Residential driveways</span>
+      <span class="px-5 py-2.5 border border-neutral-300 rounded text-sm font-medium">Parking lots</span>
     </div>
+    <p class="mt-6 text-neutral-600">Call to confirm we cover your location.</p>
   </div>
 </section>
 
-<!-- Call band -->
+<!-- 10. FINAL CALL BAND -->
 <section class="bg-ink text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 items-center">
     <div class="lg:col-span-7">
-      <h2 class="font-heading font-bold text-4xl lg:text-5xl leading-[1.05] tracking-tight">Ready to start your project?</h2>
-      <p class="mt-4 text-white/70 text-lg">Call or email Triple Crown Maintenance Group for a free estimate.</p>
+      <h2 class="text-4xl lg:text-5xl font-extrabold uppercase leading-[1] tracking-tight">Ready to start your project?</h2>
+      <p class="mt-5 text-white/70 text-lg">Call or email for a free estimate.</p>
     </div>
     <div class="lg:col-span-5 flex flex-col gap-3">
-      <a href="tel:+18132409128" class="bg-brand hover:bg-[#4963a0] text-white font-semibold text-lg py-4 rounded text-center transition">(813) 240-9128</a>
-      <a href="mailto:rob@triplecrownmaintenancegroup.com" class="border border-white/30 hover:border-white text-white font-medium py-4 px-3 rounded text-center transition text-sm sm:text-base break-words">rob@triplecrownmaintenancegroup.com</a>
+      <a href="tel:+18132409128" class="btn btn-brand text-lg">(813) 240-9128</a>
+      <a href="mailto:rob@triplecrownmaintenancegroup.com" class="btn btn-ghost text-sm sm:text-base text-center"><span class="break-words min-w-0">rob@triplecrownmaintenancegroup.com</span></a>
     </div>
   </div>
 </section>
@@ -386,21 +395,21 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#5572B0">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your property and we'll get back to you with a plan and a price.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#5572B0">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your property and the work you need, and we will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+18132409128" class="lp-v">(813) 240-9128</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:rob@triplecrownmaintenancegroup.com" class="lp-v">rob@triplecrownmaintenancegroup.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Tampa, FL</span></span></li>
-        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:10px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/triple-crown-maintenance-group/21950/photo-3.jpg') center/cover no-repeat"></div></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:10px;background:#ddd url('https://images.unsplash.com/photo-1693019108329-1889fb170f2e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Asphalt Paving</option><option>Asphalt Patching</option><option>Concrete Flat Work</option><option>Concrete Curbs</option><option>Sealcoat</option><option>ADA Compliance</option><option>Signage &amp; Bollards</option><option>Crack Fill</option><option>Sports Courts</option><option>Striping</option><option>Pressure Washing</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Asphalt Paving</option><option>Concrete Flat Work</option><option>Asphalt Patching</option><option>Concrete Curbs</option><option>Sealcoat</option><option>ADA Compliance</option><option>Signage &amp; Bollards</option><option>Crack Fill</option><option>Sports Courts</option><option>Striping</option><option>Pressure Washing</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -412,35 +421,36 @@ tailwind.config = {
 
 </main>
 
-<!-- Footer -->
-<footer class="bg-ink text-white/70 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-12 gap-10">
+<!-- FOOTER -->
+<footer class="bg-ink text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 grid md:grid-cols-12 gap-10">
     <div class="md:col-span-5">
-      <div class="font-heading font-bold text-white text-xl tracking-tight leading-none">TRIPLE CROWN<span class="block text-[11px] font-medium tracking-[0.28em] text-brand mt-1">MAINTENANCE GROUP</span></div>
-      <p class="mt-5 text-base max-w-sm">Paving, concrete, striping and property maintenance in Tampa, Florida.</p>
+      <div class="text-white font-bold text-xl tracking-tight leading-none">TRIPLE CROWN<span class="block text-[11px] font-medium tracking-[.28em] text-brand mt-1">MAINTENANCE GROUP</span></div>
+      <p class="mt-5 text-white/60 max-w-sm">Paving, concrete and property maintenance in Tampa, Florida.</p>
     </div>
     <div class="md:col-span-3">
-      <h3 class="text-white font-heading font-semibold mb-4">Contact</h3>
-      <ul class="space-y-2 text-base">
-        <li><a href="tel:+18132409128" class="hover:text-white">(813) 240-9128</a></li>
-        <li><a href="mailto:rob@triplecrownmaintenancegroup.com" class="hover:text-white break-words">rob@triplecrownmaintenancegroup.com</a></li>
-        <li>Tampa, FL</li>
+      <p class="text-xs font-semibold tracking-[.22em] text-white/50">SERVICES</p>
+      <ul class="mt-4 space-y-2 text-white/80 text-sm">
+        <li>Asphalt Paving and Patching</li>
+        <li>Concrete Flat Work and Curbs</li>
+        <li>Sealcoat and Crack Fill</li>
+        <li>Striping and Signage</li>
+        <li>Sports Courts</li>
       </ul>
     </div>
     <div class="md:col-span-4">
-      <h3 class="text-white font-heading font-semibold mb-4">Explore</h3>
-      <ul class="space-y-2 text-base">
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#process" class="hover:text-white">How it runs</a></li>
-        <li><a href="#work" class="hover:text-white">Our work</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      <p class="text-xs font-semibold tracking-[.22em] text-white/50">CONTACT</p>
+      <ul class="mt-4 space-y-2 text-white/80 text-sm">
+        <li><a href="tel:+18132409128" class="hover:text-white">(813) 240-9128</a></li>
+        <li><a href="mailto:rob@triplecrownmaintenancegroup.com" class="hover:text-white break-words">rob@triplecrownmaintenancegroup.com</a></li>
+        <li>Tampa, FL</li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/50 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Triple Crown Maintenance Group website.</p>
-      <p>Some photos by Rynco Maekawa, Tom Shamberger, Christian Agbede and Ray Donnelly on Unsplash.</p>
+      <p>Some photos by Collab Media, Ray Donnelly, ALEKSEY ALYPOV, Wolfgang Weiser, Tom Shamberger, Rynco Maekawa, Vadym Alyekseyenko, Evan Porter and Brian J. Tromp on Unsplash.</p>
     </div>
   </div>
 </footer>

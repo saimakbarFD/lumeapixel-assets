@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>JVS Contracting Inc | Demolition, Utilities & Concrete Recycling in Tampa, FL</title>
+<title>JVS Contracting, Inc. | Demolition, Civil & Utility Construction, Concrete Recycling in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,74 +13,59 @@
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Poppins', 'sans-serif'] },
       colors: {
-        brand: '#ffe900',
-        ink: '#121212',
+        brand: '#f5e100',
+        ink: '#111111',
         coal: '#1b1b1a',
         paper: '#f6f5f1',
-        stone: '#e7e5de'
+        line: '#e4e2da'
       },
-      fontFamily: { sans: ['Poppins', 'sans-serif'] },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '4px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Poppins', sans-serif; color: #121212; background: #fff; }
+  body { font-family: 'Poppins', sans-serif; color: #111; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.95rem 1.5rem; border-radius:6px; font-weight:600; font-size:15px; transition: background .2s, color .2s, border-color .2s; }
-  .btn-brand { background:#ffe900; color:#121212; }
-  .btn-brand:hover { background:#fff; }
-  .btn-ghost { border:1.5px solid rgba(255,255,255,.45); color:#fff; }
-  .btn-ghost:hover { border-color:#ffe900; color:#ffe900; }
-  .btn-dark { background:#121212; color:#fff; }
-  .btn-dark:hover { background:#2a2a28; }
-  .btn-outline { border:1.5px solid #121212; color:#121212; }
-  .btn-outline:hover { background:#121212; color:#fff; }
-  .eyebrow { font-size:12px; letter-spacing:.18em; text-transform:uppercase; font-weight:600; }
-  .tile-grad { background: linear-gradient(to top, rgba(10,10,10,.88) 0%, rgba(10,10,10,.25) 55%, rgba(10,10,10,0) 100%); }
-  .hero-shade { background: linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.72) 55%, rgba(10,10,10,.5) 100%); }
-  /* before/after slider */
-  .ba { position:relative; overflow:hidden; border-radius:6px; user-select:none; touch-action:pan-y; }
-  .ba img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  .ba .after-wrap { position:absolute; inset:0; clip-path: inset(0 0 0 50%); }
-  .ba .handle { position:absolute; top:0; bottom:0; left:50%; width:3px; background:#ffe900; transform:translateX(-50%); pointer-events:none; }
-  .ba .knob { position:absolute; top:50%; left:50%; width:44px; height:44px; background:#ffe900; border-radius:50%; transform:translate(-50%,-50%); display:flex; align-items:center; justify-content:center; pointer-events:none; }
-  .ba input[type=range] { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; margin:0; }
+  .hero-title { line-height: 0.98; letter-spacing: -0.02em; }
+  .tile-grad { background: linear-gradient(to top, rgba(10,10,10,.88) 0%, rgba(10,10,10,.35) 45%, rgba(10,10,10,0) 75%); }
+  .ba-handle { cursor: ew-resize; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white">
+<body class="bg-white text-ink">
 
-<!-- Header -->
+<!-- HEADER -->
 <header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/jvs-contracting-inc/21948/logo-0.png" alt="JVS Contracting, Inc." class="h-12 w-auto"></a>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="flex-shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/logo-0.png" alt="JVS Contracting, Inc." class="h-12 w-auto"></a>
     <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#process" class="hover:text-brand">How it works</a>
-      <a href="#work" class="hover:text-brand">Our work</a>
-      <a href="#about" class="hover:text-brand">About</a>
-      <a href="#contact" class="hover:text-brand">Contact</a>
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#work" class="hover:text-brand transition-colors">Our work</a>
+      <a href="#why" class="hover:text-brand transition-colors">Why JVS</a>
+      <a href="#area" class="hover:text-brand transition-colors">Service area</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18135148229" class="btn btn-brand !py-2.5 !px-4 sm:!px-5">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+18135148229" class="inline-flex items-center gap-2 bg-brand text-ink font-semibold text-sm px-4 sm:px-5 py-3 rounded hover:bg-white transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span class="hidden sm:inline">(813) 514-8229</span><span class="sm:hidden">Call</span>
       </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Menu">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileNav" class="hidden lg:hidden border-t border-white/10 bg-ink">
-    <div class="px-5 py-4 flex flex-col gap-4 text-white/90 text-base">
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
+    <div class="px-5 py-4 flex flex-col gap-4 text-white/90 font-medium">
       <a href="#services">Services</a>
-      <a href="#process">How it works</a>
       <a href="#work">Our work</a>
-      <a href="#about">About</a>
+      <a href="#why">Why JVS</a>
+      <a href="#area">Service area</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -88,42 +73,37 @@ tailwind.config = {
 
 <main id="top">
 
-<!-- 1. Hero -->
+<!-- HERO -->
 <section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1647735282077-c12699af40be?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete truck and excavator on an active job site" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 hero-shade"></div>
+  <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-15.jpg" alt="JVS excavator demolishing a waterfront home in the Tampa Bay area" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-ink/75"></div>
   <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <p class="eyebrow text-brand mb-6">Tampa, Florida</p>
-      <h1 class="uppercase font-bold leading-[0.98] tracking-tight text-[2.6rem] sm:text-6xl lg:text-[4.4rem]">
-        Demolition.<br>Utilities.<br>Recycling.
-      </h1>
-      <p class="mt-7 text-lg text-white/80 max-w-xl leading-relaxed">
-        JVS Contracting handles demolition, underground utility and site excavation, and concrete recycling across Hillsborough, Pinellas, Pasco and Polk counties. One company, from estimate to trucking.
-      </p>
+      <h1 class="hero-title text-5xl sm:text-6xl lg:text-7xl font-bold uppercase">Demolition.<br>Utilities.<br><span class="text-brand">Recycling.</span></h1>
+      <p class="mt-8 text-lg text-white/80 max-w-xl leading-relaxed">JVS Contracting, Inc. handles demolition, civil and utility construction, and concrete recycling across Tampa Bay, with our own crews, trucks and equipment.</p>
       <ul class="mt-8 space-y-3 text-white/90">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully insured, $35 million bonding capacity</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Most projects run by our own employees</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>General, plumbing and underground utility licenses</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully insured, with $35 million bonding capacity</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Most projects run by our own experienced employees</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Serving Hillsborough, Pinellas, Pasco and Polk counties</li>
       </ul>
-      <div class="mt-10 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="btn btn-brand">Get a free estimate</a>
-        <a href="#work" class="btn btn-ghost">See our work</a>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#contact" class="bg-brand text-ink font-semibold px-7 py-4 rounded hover:bg-white transition-colors">Request an estimate</a>
+        <a href="#work" class="border border-white/40 text-white font-semibold px-7 py-4 rounded hover:border-brand hover:text-brand transition-colors">See our work</a>
       </div>
     </div>
     <div class="lg:col-span-5">
-      <div class="bg-paper text-ink rounded p-7 sm:p-9">
-        <p class="eyebrow text-ink/60">Talk to our team</p>
-        <h2 class="mt-3 text-2xl font-semibold leading-tight">Get a free estimate</h2>
-        <p class="mt-3 text-ink/70 text-[15px] leading-relaxed">Tell us about the job. We reply fast, Monday through Saturday.</p>
-        <div class="mt-6 flex flex-col gap-3">
-          <a href="tel:+18135148229" class="btn btn-dark">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            (813) 514-8229
+      <div class="bg-paper text-ink rounded p-8 lg:p-10">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/60">Talk to our team</p>
+        <h2 class="mt-3 text-3xl font-bold leading-tight">Get a free estimate</h2>
+        <p class="mt-3 text-ink/70">Call or write. We'll take it from there, from estimate to permitting to demolition and trucking.</p>
+        <div class="mt-7 space-y-3">
+          <a href="tel:+18135148229" class="flex items-center justify-between gap-3 bg-ink text-white rounded px-5 py-4 font-semibold hover:bg-coal transition-colors">
+            <span>(813) 514-8229</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f5e100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </a>
-          <a href="mailto:sales@jvscontracting.com" class="btn btn-outline break-words text-[14px] sm:text-[15px]">
-            <svg class="shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            sales@jvscontracting.com
+          <a href="mailto:sales@jvscontracting.com" class="flex items-center justify-between gap-3 border border-ink/20 rounded px-5 py-4 font-semibold hover:border-ink transition-colors">
+            <span class="text-sm sm:text-base break-words min-w-0">sales@jvscontracting.com</span>
+            <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           </a>
         </div>
         <p class="mt-6 text-sm text-ink/60">Mon–Thu 6:30am–5pm · Fri–Sat 6:30am–3pm</p>
@@ -132,44 +112,43 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- 2. Services strip -->
+<!-- SERVICE STRIP -->
 <section class="bg-ink border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-semibold uppercase tracking-wider text-white/85">
-    <span>Concrete recycling</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-semibold uppercase tracking-wider text-white/85">
     <span>Demolition</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Civil construction</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Concrete recycling</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
     <span>Underground utilities</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
     <span>Site excavation</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
     <span>Trucking</span>
   </div>
 </section>
 
-<!-- 3. Three services in brand section -->
+<!-- THREE SERVICES -->
 <section id="services" class="bg-brand py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="eyebrow text-ink/70">What we do</p>
-      <h2 class="mt-4 text-4xl sm:text-5xl font-bold uppercase leading-[1.02] tracking-tight">Recycle. Demolish. Build.</h2>
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/70">What we do</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight uppercase">Demolish. Recycle. Build.</h2>
     </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="reveal bg-ink text-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1630683924997-fe27050a0416?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker cutting steel reinforcement on a gravel site" class="w-full h-full object-cover"></div>
+      <article class="bg-ink text-white rounded overflow-hidden flex flex-col reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-10.jpg" alt="Volvo excavator with JVS logo demolishing a brick home" class="w-full h-full object-cover" loading="lazy"></div>
         <div class="p-7">
-          <h3 class="text-xl font-semibold">Concrete Recycling</h3>
+          <h3 class="text-2xl font-bold">Demolition</h3>
+          <p class="mt-3 text-white/70 leading-relaxed">Commercial and residential demolition of any size, run by our own crews.</p>
+        </div>
+      </article>
+      <article class="bg-ink text-white rounded overflow-hidden flex flex-col reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-16.jpg" alt="JVS Mack trucks and Komatsu excavators at a concrete recycling yard" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="p-7">
+          <h3 class="text-2xl font-bold">Concrete Recycling</h3>
           <p class="mt-3 text-white/70 leading-relaxed">Free concrete, asphalt and fill dirt dumping, plus new materials for sale.</p>
         </div>
       </article>
-      <article class="reveal bg-ink text-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a large timber structure" class="w-full h-full object-cover"></div>
+      <article class="bg-ink text-white rounded overflow-hidden flex flex-col reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-19.jpg" alt="Excavator setting a concrete structure on a utility job site" class="w-full h-full object-cover" loading="lazy"></div>
         <div class="p-7">
-          <h3 class="text-xl font-semibold">Demolition</h3>
-          <p class="mt-3 text-white/70 leading-relaxed">Commercial and residential demolition services of any size.</p>
-        </div>
-      </article>
-      <article class="reveal bg-ink text-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1751054824448-749f467ffc4f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker climbing a ladder out of an excavated trench" class="w-full h-full object-cover"></div>
-        <div class="p-7">
-          <h3 class="text-xl font-semibold">Civil &amp; Utility Construction</h3>
+          <h3 class="text-2xl font-bold">Civil &amp; Utility Construction</h3>
           <p class="mt-3 text-white/70 leading-relaxed">Certified underground utilities and site excavation contractor.</p>
         </div>
       </article>
@@ -177,171 +156,179 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- 4. Process -->
-<section id="process" class="bg-white py-24 lg:py-32">
+<!-- HOW A PROJECT RUNS -->
+<section class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="eyebrow text-ink/60">How your project runs</p>
-      <h2 class="mt-4 text-4xl sm:text-5xl font-bold leading-[1.05] tracking-tight">One team from estimate to trucking</h2>
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/60">One company, start to finish</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">How your project runs</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="reveal border border-stone rounded p-8">
-        <div class="w-12 h-12 bg-brand rounded flex items-center justify-center font-bold text-lg">1</div>
-        <h3 class="mt-6 text-xl font-semibold">Estimate and permitting</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Call or email with your scope. We price the job and handle the permitting.</p>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-bold">1</div>
+        <h3 class="mt-6 text-2xl font-bold">Estimate &amp; permitting</h3>
+        <p class="mt-3 text-ink/70 leading-relaxed">Call or email us. We estimate the job and handle the permitting so the work can start clean.</p>
       </div>
-      <div class="reveal border border-stone rounded p-8">
-        <div class="w-12 h-12 bg-brand rounded flex items-center justify-center font-bold text-lg">2</div>
-        <h3 class="mt-6 text-xl font-semibold">Construction or demolition</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Our own crews and equipment fleet do the work, on schedule.</p>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-bold">2</div>
+        <h3 class="mt-6 text-2xl font-bold">Demolition &amp; construction</h3>
+        <p class="mt-3 text-ink/70 leading-relaxed">Our own employees and fleet take down structures and build the civil and underground utility work.</p>
       </div>
-      <div class="reveal border border-stone rounded p-8">
-        <div class="w-12 h-12 bg-brand rounded flex items-center justify-center font-bold text-lg">3</div>
-        <h3 class="mt-6 text-xl font-semibold">Trucking and recycling</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Debris is hauled out and recycled, so the site is left clean and the materials get reused.</p>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center text-xl font-bold">3</div>
+        <h3 class="mt-6 text-2xl font-bold">Trucking &amp; recycling</h3>
+        <p class="mt-3 text-ink/70 leading-relaxed">We haul material away and recycle concrete so it can be reused instead of landfilled.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5. Photos side by side -->
-<section class="bg-coal text-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="eyebrow text-brand">On the ground</p>
-      <h2 class="mt-4 text-4xl sm:text-5xl font-bold leading-[1.05] tracking-tight">From open trench to finished site</h2>
-      <p class="mt-5 text-white/70 text-lg leading-relaxed">Excavation, utilities and site work, handled by the same crews start to finish.</p>
+<!-- BEFORE / AFTER -->
+<section class="bg-ink text-white py-24 lg:py-32">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/60">Same estate, same crew</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Standing, then gone</h2>
+      <p class="mt-5 text-white/70 text-lg leading-relaxed">A bayfront Tampa estate mid-demolition. Drag the handle to compare the two stages.</p>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3]">
-        <img src="https://images.unsplash.com/photo-1768926968986-a88590ce5025?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew setting reinforcement before a pour" class="w-full h-full object-cover">
-        <figcaption class="absolute left-0 right-0 bottom-0 tile-grad p-5 text-sm font-semibold uppercase tracking-wider">Prep and reinforcement</figcaption>
-      </figure>
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3]">
-        <img src="https://images.unsplash.com/photo-1647735282077-c12699af40be?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete truck, excavator and crew in the street" class="w-full h-full object-cover">
-        <figcaption class="absolute left-0 right-0 bottom-0 tile-grad p-5 text-sm font-semibold uppercase tracking-wider">Pour and finish</figcaption>
-      </figure>
+    <div id="ba" class="relative mt-12 w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden rounded select-none touch-pan-y">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-18.jpg" alt="Waterfront estate with the upper floors being demolished" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+      <div id="baTop" class="absolute inset-0" style="clip-path: inset(0 50% 0 0);">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-15.jpg" alt="Waterfront estate reduced to rubble by JVS excavator" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+      </div>
+      <div id="baLine" class="absolute top-0 bottom-0 w-0.5 bg-brand" style="left:50%;"></div>
+      <button id="baHandle" class="ba-handle absolute top-1/2 w-12 h-12 -ml-6 -mt-6 rounded-full bg-brand text-ink flex items-center justify-center" style="left:50%;" aria-label="Drag to compare">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg>
+      </button>
+      <span class="absolute left-3 bottom-3 bg-ink/85 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded">After</span>
+      <span class="absolute right-3 bottom-3 bg-ink/85 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded">During</span>
     </div>
   </div>
 </section>
 
-<!-- 6. Compare -->
-<section class="bg-paper py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="eyebrow text-ink/60">Why use JVS</p>
-      <h2 class="mt-4 text-4xl sm:text-5xl font-bold leading-[1.05] tracking-tight">Many trades, or one contractor</h2>
+<!-- DIY VS ONE CONTRACTOR -->
+<section id="why" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/60">Why use JVS</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Juggling trades, or one contractor</h2>
     </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="reveal bg-white border border-stone rounded p-8 lg:p-10">
-        <h3 class="text-xl font-semibold">Hiring separate companies</h3>
+      <div class="bg-white border border-line rounded p-8 lg:p-10">
+        <h3 class="text-xl font-bold text-ink/60">Hiring each trade separately</h3>
         <ul class="mt-6 space-y-4 text-ink/70">
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>A demolition crew, an excavator, a trucker and a recycler to schedule</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Permits and estimates coordinated by you</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Delays when one trade waits on another</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Debris hauled off with no plan for reuse</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 flex-shrink-0"></span>Separate crews for estimating, permits, demolition and hauling</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 flex-shrink-0"></span>Several schedules to coordinate on one site</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 flex-shrink-0"></span>Debris hauled to a landfill</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 flex-shrink-0"></span>Different insurance and licenses to check on every vendor</li>
         </ul>
       </div>
-      <div class="reveal bg-white border-2 border-brand rounded p-8 lg:p-10 relative" style="box-shadow: 0 0 0 1px #121212 inset;">
-        <h3 class="text-xl font-semibold">JVS Contracting</h3>
-        <ul class="mt-6 space-y-4 text-ink">
-          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Estimate, permitting, construction, demolition and trucking under one roof</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Most projects run by our own experienced employees</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully insured, with $35 million bonding capacity</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Concrete recycled so materials are 100% reusable</li>
+      <div class="bg-white border-2 border-brand rounded p-8 lg:p-10 relative">
+        <h3 class="text-xl font-bold">JVS Contracting, one team</h3>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Estimating, permitting, demolition, construction and trucking in-house</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Most projects executed by our own employees</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Concrete recycled so materials are reused</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully insured, $35 million bonding capacity, 150+ employees</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 7. Bento -->
+<!-- WHAT WE BUILD / BENTO -->
 <section id="work" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="eyebrow text-ink/60">Some of our work</p>
-      <h2 class="mt-4 text-4xl sm:text-5xl font-bold leading-[1.05] tracking-tight">What we build and take down</h2>
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/60">Some of our work</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Jobs across Tampa Bay</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 grid-flow-row-dense">
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3] sm:aspect-[16/9] sm:col-span-2 lg:col-span-8 lg:aspect-auto lg:h-[460px]">
-        <img src="https://images.unsplash.com/photo-1667207591353-0e6d4412ea37?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a multi-story concrete frame" class="w-full h-full object-cover">
-        <figcaption class="absolute inset-x-0 bottom-0 tile-grad p-6 text-white"><span class="text-xl font-semibold">Commercial structures</span></figcaption>
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:auto-rows-[260px] grid-flow-row-dense">
+      <figure class="relative overflow-hidden rounded aspect-[4/3] sm:col-span-2 lg:col-span-2 lg:row-span-2 lg:aspect-auto">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-13.jpg" alt="Komatsu excavator clearing a demolished estate on Tampa Bay" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-6 text-white"><p class="text-xl font-bold">Waterfront estate demolition</p><p class="text-sm text-white/75 mt-1">Residential demolition</p></figcaption>
       </figure>
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4 lg:aspect-auto lg:h-[460px]">
-        <img src="https://images.unsplash.com/photo-1751054824448-749f467ffc4f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker climbing out of a shored utility trench" class="w-full h-full object-cover">
-        <figcaption class="absolute inset-x-0 bottom-0 tile-grad p-6 text-white"><span class="text-xl font-semibold">Underground utilities</span></figcaption>
+      <figure class="relative overflow-hidden rounded aspect-[4/3] lg:aspect-auto">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-9.jpg" alt="Crew placing rebar and forms for a concrete slab" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><p class="text-lg font-bold">Concrete slab work</p></figcaption>
       </figure>
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew on a slab with rebar and equipment" class="w-full h-full object-cover">
-        <figcaption class="absolute inset-x-0 bottom-0 tile-grad p-6 text-white"><span class="text-lg font-semibold">Site work</span></figcaption>
+      <figure class="relative overflow-hidden rounded aspect-[4/3] lg:aspect-auto">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-11.jpg" alt="Excavator with water spray pulling down a house" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><p class="text-lg font-bold">Dust-controlled demo</p></figcaption>
       </figure>
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4">
-        <img src="https://images.unsplash.com/photo-1630683924997-fe27050a0416?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker cutting rebar mesh with sparks" class="w-full h-full object-cover">
-        <figcaption class="absolute inset-x-0 bottom-0 tile-grad p-6 text-white"><span class="text-lg font-semibold">Concrete and reinforcement</span></figcaption>
+      <figure class="relative overflow-hidden rounded aspect-[4/3] lg:aspect-auto">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-17.jpg" alt="Volvo loader filling a Mack dump truck with material" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><p class="text-lg font-bold">Materials and trucking</p></figcaption>
       </figure>
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3] sm:col-span-2 lg:col-span-4">
-        <img src="https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Large crew framing and sheathing a structure" class="w-full h-full object-cover">
-        <figcaption class="absolute inset-x-0 bottom-0 tile-grad p-6 text-white"><span class="text-lg font-semibold">Demolition and rebuild</span></figcaption>
+      <figure class="relative overflow-hidden rounded aspect-[4/3] sm:col-span-2 lg:col-span-2 lg:aspect-auto">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-14.jpg" alt="JVS Volvo excavator taking the roof off a brick home" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><p class="text-lg font-bold">Brick home demolition</p></figcaption>
       </figure>
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3] sm:col-span-2 lg:col-span-12 lg:aspect-[21/8]">
-        <img src="https://images.unsplash.com/photo-1553946550-4b8f3eea5451?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew member in safety gear working on a foundation" class="w-full h-full object-cover">
-        <figcaption class="absolute inset-x-0 bottom-0 tile-grad p-6 text-white"><span class="text-xl font-semibold">Foundations and civil work</span></figcaption>
+      <figure class="relative overflow-hidden rounded aspect-[4/3] lg:aspect-auto">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-12.jpg" alt="JVS Volvo excavator parked beside a house being demolished" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="tile-grad absolute inset-0"></div>
+        <figcaption class="absolute left-0 bottom-0 p-5 text-white"><p class="text-lg font-bold">Residential demolition</p></figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- 8. Owner-led split -->
-<section id="about" class="bg-paper py-24 lg:py-32">
+<!-- OWNER-LED SPLIT -->
+<section class="bg-paper py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 reveal">
-      <p class="eyebrow text-ink/60">About JVS</p>
-      <h2 class="mt-4 text-4xl sm:text-5xl font-bold leading-[1.05] tracking-tight">Founded by John V. Simon, Jr.</h2>
-      <p class="mt-6 text-lg text-ink/75 leading-relaxed">JVS Contracting, Inc. was established in 2005 by John V. Simon, Jr., bringing over 50 years of experience in construction. We process over 600 thousand tons of concrete annually, so every material we handle is 100% reusable.</p>
-      <ul class="mt-8 space-y-3">
-        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Over 150 employees and an extensive equipment fleet</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Excellent safety record</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed: General, Plumbing, Pollutant Storage System, Underground Utility and Excavation</li>
+    <div class="lg:col-span-6">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/60">About JVS Contracting</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Founded by John V. Simon, Jr.</h2>
+      <p class="mt-6 text-lg text-ink/75 leading-relaxed">JVS was established in 2005 by John V. Simon, Jr., who brings over 50 years of construction experience. We process over 600 thousand tons of concrete a year, and the material is 100% reusable.</p>
+      <p class="mt-4 text-lg text-ink/75 leading-relaxed">We hold General Contractor, Plumbing Contractor, Pollutant Storage System Contractor, and Underground Utility and Excavation Contractor licenses.</p>
+      <ul class="mt-7 space-y-3">
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>150+ employees and an extensive equipment fleet</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Excellent safety record</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quality projects delivered on time</li>
       </ul>
-      <div class="mt-10 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="btn btn-dark">Request an estimate</a>
-        <a href="tel:+18135148229" class="btn btn-outline">Call (813) 514-8229</a>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="tel:+18135148229" class="bg-ink text-white font-semibold px-7 py-4 rounded hover:bg-coal transition-colors">Call (813) 514-8229</a>
+        <a href="#contact" class="border border-ink text-ink font-semibold px-7 py-4 rounded hover:bg-brand hover:border-brand transition-colors">Request an estimate</a>
       </div>
     </div>
-    <div class="lg:col-span-6 reveal">
-      <div class="rounded overflow-hidden aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5]">
-        <img src="https://images.unsplash.com/photo-1576522990562-51f78a9cf223?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Tower crane over a concrete building under construction" class="w-full h-full object-cover">
+    <div class="lg:col-span-6">
+      <div class="aspect-[4/3] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-16.jpg" alt="JVS Contracting trucks and excavators working at a recycling site" class="w-full h-full object-cover" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<!-- 9. Service area -->
-<section class="bg-white py-20 lg:py-24 border-t border-stone">
+<!-- SERVICE AREA -->
+<section id="area" class="bg-white py-24 lg:py-28">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-5 reveal">
-      <p class="eyebrow text-ink/60">Service area</p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight tracking-tight">Serving the Tampa Bay region</h2>
+    <div class="lg:col-span-5">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/60">Service area</p>
+      <h2 class="mt-4 text-4xl font-bold leading-tight tracking-tight">Based in Tampa, working across four counties</h2>
     </div>
-    <div class="lg:col-span-7 reveal flex flex-wrap gap-3">
-      <span class="px-5 py-3 rounded border border-ink font-semibold">Hillsborough County</span>
-      <span class="px-5 py-3 rounded border border-ink font-semibold">Pinellas County</span>
-      <span class="px-5 py-3 rounded border border-ink font-semibold">Pasco County</span>
-      <span class="px-5 py-3 rounded border border-ink font-semibold">Polk County</span>
+    <div class="lg:col-span-7 flex flex-wrap gap-3">
+      <span class="border border-ink px-6 py-3 rounded font-semibold">Hillsborough County</span>
+      <span class="border border-ink px-6 py-3 rounded font-semibold">Pinellas County</span>
+      <span class="border border-ink px-6 py-3 rounded font-semibold">Pasco County</span>
+      <span class="border border-ink px-6 py-3 rounded font-semibold">Polk County</span>
     </div>
   </div>
 </section>
 
-<!-- 10. Final call band -->
+<!-- FINAL CALL BAND -->
 <section class="bg-ink text-white py-20 lg:py-24">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
     <div class="lg:col-span-7">
-      <h2 class="text-4xl sm:text-5xl font-bold uppercase leading-[1.02] tracking-tight">Have a job in Tampa Bay?</h2>
-      <p class="mt-5 text-white/70 text-lg max-w-xl">Call or email with the scope and we will get back to you.</p>
+      <h2 class="text-4xl lg:text-5xl font-bold leading-tight tracking-tight uppercase">Have a job in Tampa Bay? <span class="text-brand">Call us.</span></h2>
     </div>
-    <div class="lg:col-span-5 flex flex-col gap-3">
-      <a href="tel:+18135148229" class="btn btn-brand text-lg">(813) 514-8229</a>
-      <a href="mailto:sales@jvscontracting.com" class="btn btn-ghost break-words text-[14px] sm:text-[15px]">sales@jvscontracting.com</a>
+    <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-4">
+      <a href="tel:+18135148229" class="bg-brand text-ink font-bold text-lg px-7 py-4 rounded text-center hover:bg-white transition-colors">(813) 514-8229</a>
+      <a href="mailto:sales@jvscontracting.com" class="border border-white/40 text-white font-semibold px-7 py-4 rounded text-center hover:border-brand hover:text-brand transition-colors break-words">sales@jvscontracting.com</a>
     </div>
   </div>
 </section>
@@ -349,8 +336,8 @@ tailwind.config = {
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:0 0 clamp(80px,10vw,128px)">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(255,233,0,0.10);color:#ffe900}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#ffe900}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(245,225,0,0.10);color:#f5e100}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#f5e100}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -361,16 +348,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:8px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:4px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#ffe900;box-shadow:0 0 0 4px rgba(255,233,0,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#ffe900;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#f5e100;box-shadow:0 0 0 4px rgba(245,225,0,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:4px;background:#f5e100;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -378,7 +365,7 @@ tailwind.config = {
     .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
     .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
-    .lp-contact .lp-band{position:relative;background:#111 url('https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;padding:clamp(80px,10vw,128px) 0 clamp(150px,16vw,200px)}
+    .lp-contact .lp-band{position:relative;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/photo-14.jpg') center/cover no-repeat;padding:clamp(80px,10vw,128px) 0 clamp(150px,16vw,200px)}
     .lp-contact .lp-band:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.72))}
     .lp-contact .lp-band>.lp-in{position:relative}
     .lp-contact .lp-up{margin-top:-120px;position:relative}
@@ -386,10 +373,10 @@ tailwind.config = {
     .lp-contact .lp-center .lp-p{margin-left:auto;margin-right:auto}
     .lp-contact .lp-tiles{margin:40px auto 0;display:grid;gap:12px;max-width:56rem}
     @media (min-width:768px){.lp-contact .lp-tiles{grid-template-columns:repeat(3,1fr)}}
-    .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:10px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
+    .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:8px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
     .lp-contact .lp-tile .lp-v{font-size:16px}
     .lp-contact .lp-formwrap{max-width:48rem;margin:28px auto 0}</style>
-  <div class="lp-band"><div class="lp-in"><div class="lp-center"><p class="lp-kick" style="color:#ffe900">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.82)">Tell us about your demolition, utility or site project and we will get back to you as soon as we can.</p></div></div></div>
+  <div class="lp-band"><div class="lp-in"><div class="lp-center"><p class="lp-kick" style="color:#f5e100">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.82)">Tell us about your demolition, utility or recycling project and our team will get back to you.</p></div></div></div>
   <div class="lp-in lp-up">
     
     <div class="lp-tiles" style="margin-top:0"><a href="tel:+18135148229" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(813) 514-8229</span></span></a><a href="mailto:sales@jvscontracting.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">sales@jvscontracting.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Tampa, FL</span></span></div></div>
@@ -399,7 +386,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Concrete Recycling</option><option>Demolition</option><option>Civil &amp; Utility Construction</option><option>Underground Utilities</option><option>Site Excavation</option><option>Trucking</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Demolition</option><option>Concrete Recycling</option><option>Civil &amp; Utility Construction</option><option>Site Excavation</option><option>Trucking</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -411,22 +398,22 @@ tailwind.config = {
 
 </main>
 
-<!-- Footer -->
-<footer class="bg-coal text-white/75">
+<!-- FOOTER -->
+<footer class="bg-ink text-white/75 border-t border-white/10">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
     <div class="md:col-span-5">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/jvs-contracting-inc/21948/logo-0.png" alt="JVS Contracting, Inc." class="h-12 w-auto">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/jvs-contracting-inc/21952/logo-0.png" alt="JVS Contracting, Inc." class="h-12 w-auto">
       <p class="mt-5 max-w-sm leading-relaxed">Demolition, civil and utility construction, and concrete recycling in Tampa, Florida.</p>
     </div>
-    <div class="md:col-span-4">
+    <div class="md:col-span-3">
       <h3 class="text-white font-semibold">Contact</h3>
       <ul class="mt-4 space-y-2">
-        <li><a href="tel:+18135148229" class="hover:text-brand">(813) 514-8229</a></li>
-        <li><a href="mailto:sales@jvscontracting.com" class="hover:text-brand break-words">sales@jvscontracting.com</a></li>
+        <li><a href="tel:+18135148229" class="hover:text-brand transition-colors">(813) 514-8229</a></li>
+        <li><a href="mailto:sales@jvscontracting.com" class="hover:text-brand transition-colors break-words">sales@jvscontracting.com</a></li>
         <li>Tampa, FL</li>
       </ul>
     </div>
-    <div class="md:col-span-3">
+    <div class="md:col-span-4">
       <h3 class="text-white font-semibold">Hours</h3>
       <ul class="mt-4 space-y-2">
         <li>Mon–Thu: 6:30am–5pm</li>
@@ -435,24 +422,38 @@ tailwind.config = {
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/55 space-y-1">
-      <p>Concept redesign by LumeaPixel. This is not the official JVS Contracting Inc website.</p>
-      <p>Some photos by John Kakuk, SAMS Solutions, Randy Fath, Emma Houghton, Yael Yañez, Sim Kimhort, Etienne Girardet, Wasif Ali and Remy Gieling on Unsplash.</p>
-    </div>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/50">Concept redesign by LumeaPixel. This is not the official JVS Contracting Inc website.</div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('menuBtn').addEventListener('click', function () {
-    document.getElementById('mobileNav').classList.toggle('hidden');
-  });
-  document.querySelectorAll('#mobileNav a').forEach(function (a) {
-    a.addEventListener('click', function () { document.getElementById('mobileNav').classList.add('hidden'); });
-  });
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  // mobile menu
+  const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', () => mm.classList.toggle('hidden'));
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.add('hidden')));
+
+  // reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // before/after slider
+  (function () {
+    const box = document.getElementById('ba'), top = document.getElementById('baTop'),
+          line = document.getElementById('baLine'), handle = document.getElementById('baHandle');
+    let drag = false;
+    function set(x) {
+      const r = box.getBoundingClientRect();
+      let p = ((x - r.left) / r.width) * 100;
+      p = Math.max(0, Math.min(100, p));
+      top.style.clipPath = 'inset(0 ' + (100 - p) + '% 0 0)';
+      line.style.left = p + '%';
+      handle.style.left = p + '%';
+    }
+    box.addEventListener('pointerdown', e => { drag = true; box.setPointerCapture(e.pointerId); set(e.clientX); });
+    box.addEventListener('pointermove', e => { if (drag) set(e.clientX); });
+    box.addEventListener('pointerup', () => drag = false);
+    box.addEventListener('pointercancel', () => drag = false);
+  })();
 </script>
 </body>
 </html>
