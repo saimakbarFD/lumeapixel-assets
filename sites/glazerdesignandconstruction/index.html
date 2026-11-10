@@ -4,83 +4,78 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Glazer Design and Construction | General Contractor in Atlanta, GA</title>
+<title>Glazer Design and Construction | Atlanta General Contractor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Manrope', 'sans-serif'] },
+      fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#244067',
-        brandDark: '#0e2b53',
-        ink: '#0b1626',
-        paper: '#f6f5f2',
-        stone2: '#e7e5e0'
+        brand: '#1c4a85',
+        ink: '#0b1a30',
+        tint: '#e8eef7',
+        paper: '#f6f5f2'
       },
-      borderRadius: { DEFAULT: '14px' }
+      borderRadius: { card: '24px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Manrope', sans-serif; color: #1b2433; background: #fff; -webkit-font-smoothing: antialiased; }
-  h1, h2, h3, h4 { letter-spacing: -0.02em; line-height: 1.1; }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: #0b1a30; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .hero-shade { background: linear-gradient(90deg, rgba(8,18,34,.88) 0%, rgba(8,18,34,.62) 55%, rgba(8,18,34,.35) 100%); }
-  .card-img { transition: transform .6s ease; }
-  .svc:hover .card-img { transform: scale(1.04); }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  @keyframes slideLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes slideRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .track-left { animation: slideLeft 50s linear infinite; }
+  .track-right { animation: slideRight 55s linear infinite; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .25s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .track-left, .track-right { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body>
-
-<!-- Top bar -->
-<div class="bg-brand text-white text-sm">
-  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
-    <span class="text-white/90">Serving Atlanta, Buckhead, Brookhaven, Sandy Springs and surrounding neighborhoods</span>
-    <a href="mailto:info@glazerconstruction.com" class="font-semibold hover:underline break-words">info@glazerconstruction.com</a>
-  </div>
-</div>
+<body class="bg-white text-ink">
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-ink text-white border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0 bg-white rounded px-3 py-1.5 flex items-center">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/logo-0.png" alt="Glazer Design & Construction" class="h-10 w-auto">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/logo-0.png" alt="Glazer Design and Construction" class="h-12 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/85">
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#services" class="hover:text-white">Services</a>
-      <a href="#portfolio" class="hover:text-white">Portfolio</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
+      <a href="#process" class="hover:text-brand transition">How it works</a>
+      <a href="#services" class="hover:text-brand transition">Services</a>
+      <a href="#projects" class="hover:text-brand transition">Projects</a>
+      <a href="#faq" class="hover:text-brand transition">Questions</a>
+      <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
-    <div class="hidden md:flex items-center gap-5">
-      <div class="text-right leading-tight">
-        <div class="text-xs text-white/60">Need help? Call us today</div>
-        <a href="tel:+14046839848" class="font-bold text-lg">(404) 683-9848</a>
-      </div>
-      <a href="#contact" class="bg-white text-brand font-semibold text-sm px-5 py-3 rounded hover:bg-paper transition">Get a Quote</a>
-    </div>
-    <div class="flex md:hidden items-center gap-3">
-      <a href="tel:+14046839848" class="bg-white text-brand font-bold text-sm px-4 py-2.5 rounded">Call</a>
-      <button id="menuBtn" aria-label="Open menu" class="p-2">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    <div class="flex items-center gap-3">
+      <a href="tel:+14046839848" class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm sm:text-[15px] px-4 sm:px-5 py-3 rounded-full hover:bg-ink transition">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="hidden sm:inline">(404) 683-9848</span><span class="sm:hidden">Call</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 inline-flex items-center justify-center rounded-full border border-black/10" aria-label="Open menu">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="px-5 py-4 flex flex-col gap-4 text-white/90 font-medium">
-      <a href="#about" class="mnav">About</a>
-      <a href="#services" class="mnav">Services</a>
-      <a href="#portfolio" class="mnav">Portfolio</a>
-      <a href="#contact" class="mnav">Contact</a>
-      <a href="tel:+14046839848" class="font-bold">(404) 683-9848</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-base font-medium">
+      <a href="#process" class="py-3 border-b border-black/5">How it works</a>
+      <a href="#services" class="py-3 border-b border-black/5">Services</a>
+      <a href="#projects" class="py-3 border-b border-black/5">Projects</a>
+      <a href="#faq" class="py-3 border-b border-black/5">Questions</a>
+      <a href="#contact" class="py-3">Contact</a>
     </div>
   </div>
 </header>
@@ -88,217 +83,281 @@ tailwind.config = {
 <main id="top">
 
 <!-- Hero -->
-<section class="relative isolate overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1683372101362-2efc3e75650e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home renovation in progress" class="absolute inset-0 w-full h-full object-cover -z-10">
-  <div class="absolute inset-0 hero-shade -z-10"></div>
-  <div class="max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
-    <div class="max-w-2xl text-white">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold">Atlanta homes and spaces, designed and built by one team.</h1>
-      <p class="mt-6 text-lg text-white/85 leading-relaxed">Glazer Design and Construction is a general contractor handling kitchens, bathrooms, custom homes, whole-home renovations, outdoor living and commercial construction across metro Atlanta.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="bg-brand text-white font-semibold px-7 py-4 rounded text-center hover:bg-brandDark transition border border-white/20">Get a free quote</a>
-        <a href="tel:+14046839848" class="bg-white text-ink font-semibold px-7 py-4 rounded-full text-center hover:bg-paper transition">Call (404) 683-9848</a>
+<section class="px-3 sm:px-5 pt-3 sm:pt-5">
+  <div class="relative rounded-card overflow-hidden max-w-[1500px] mx-auto min-h-[640px] lg:min-h-[720px] flex items-end lg:items-center">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-18.jpg" alt="Custom kitchen remodel with oak island and brass pendant lights" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/55 to-ink/10"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent lg:hidden"></div>
+    <div class="relative w-full px-6 sm:px-10 lg:px-16 py-10 lg:py-16 grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-8 text-white">
+        <h1 class="text-4xl sm:text-5xl lg:text-[64px] font-medium leading-[1.05] tracking-tight max-w-3xl">Kitchens, baths and whole homes, built right in Atlanta.</h1>
+        <p class="mt-5 text-lg text-white/85 max-w-xl leading-relaxed">Glazer Design and Construction is a general contractor serving Atlanta homeowners with remodeling, new homes and commercial work.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Difference -->
-<section id="about" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
-    <div class="lg:col-span-6 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">The Glazer difference</p>
-      <h2 class="mt-4 text-4xl md:text-5xl font-semibold text-ink">Design and construction under one roof.</h2>
-      <div class="mt-12 grid grid-cols-6 gap-4 items-end">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-6.jpg" alt="Renovated kitchen with island" class="col-span-3 w-full aspect-[3/4] object-cover rounded">
-        <div class="col-span-3 flex flex-col gap-4">
-          <div class="bg-brand text-white rounded p-5 sm:p-6">
-            <p class="text-lg sm:text-xl font-semibold leading-snug">Design and build, handled by one Atlanta team.</p>
+      <div class="lg:col-span-4">
+        <div class="bg-white rounded-[20px] p-5 sm:p-6 max-w-xl text-ink">
+          <p class="text-lg font-semibold">Get a free estimate</p>
+          <div class="mt-4 flex flex-col sm:flex-row gap-3">
+            <a href="tel:+14046839848" class="inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold px-6 py-3.5 rounded-full hover:bg-ink transition">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              (404) 683-9848
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-tint text-ink font-semibold px-6 py-3.5 rounded-full hover:bg-brand hover:text-white transition">
+              Request a quote
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
           </div>
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-7.jpg" alt="Remodeled primary bathroom" class="w-full aspect-[4/3] object-cover rounded">
+          <p class="mt-4 text-sm text-ink/60">Serving Atlanta, Buckhead, Brookhaven, Sandy Springs and nearby neighborhoods.</p>
         </div>
       </div>
     </div>
-    <div class="lg:col-span-6 reveal">
-      <p class="text-lg text-slate-600 leading-relaxed">From the first sketch to the final walkthrough, Glazer plans and builds residential and commercial projects across Atlanta, Buckhead, Brookhaven, Sandy Springs, Decatur, Marietta, Roswell and nearby communities.</p>
-      <div class="mt-10 divide-y divide-stone2 border-y border-stone2">
-        <div class="py-5">
-          <h3 class="text-lg font-semibold text-ink">Kitchen and bathroom remodeling</h3>
-          <p class="mt-1 text-slate-600">Layouts, cabinetry, surfaces and finishes planned and built as one project.</p>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="process" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Design and build</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-tight">How Glazer works</h2>
+      <p class="mt-4 text-lg text-ink/70 leading-relaxed">One team designs your project and builds it, so the plan on paper is the home you end up with.</p>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-8">
+      <article class="reveal">
+        <div class="aspect-[4/3] rounded-card overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-6.jpg" alt="Open kitchen with gray island and pendant lighting" class="w-full h-full object-cover">
         </div>
-        <div class="py-5">
-          <h3 class="text-lg font-semibold text-ink">Custom homes and renovations</h3>
-          <p class="mt-1 text-slate-600">New construction, additions and interior renovations for the way you live.</p>
+        <h3 class="mt-5 text-xl font-semibold">1. Call and talk it through</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">Tell us what you want to change. We listen, ask questions and set up your free estimate.</p>
+      </article>
+      <article class="reveal">
+        <div class="aspect-[4/3] rounded-card overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-17.jpg" alt="Kitchen with blue island and built-in cabinetry" class="w-full h-full object-cover">
         </div>
-        <div class="py-5">
-          <h3 class="text-lg font-semibold text-ink">Outdoor living and accessible homes</h3>
-          <p class="mt-1 text-slate-600">Covered patios and outdoor kitchens, plus homes designed for accessibility.</p>
+        <h3 class="mt-5 text-xl font-semibold">2. Plan the design</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">We design your space and lay out the scope so you know what is being built before work begins.</p>
+      </article>
+      <article class="reveal">
+        <div class="aspect-[4/3] rounded-card overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-7.jpg" alt="Primary bathroom with soaking tub and glass shower" class="w-full h-full object-cover">
         </div>
-        <div class="py-5">
-          <h3 class="text-lg font-semibold text-ink">Commercial construction</h3>
-          <p class="mt-1 text-slate-600">Restaurant and commercial interiors built to a clear schedule.</p>
-        </div>
-      </div>
-      <a href="tel:+14046839848" class="mt-8 inline-flex items-center gap-3 text-ink font-bold text-xl">
-        <span class="w-11 h-11 rounded-full bg-brand text-white flex items-center justify-center">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        (404) 683-9848
+        <h3 class="mt-5 text-xl font-semibold">3. Do the work</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">Our crew builds it, from framing to finish, and walks you through the finished project.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Services tiles -->
+<section id="services" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Services</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-tight">More than just kitchens</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 lg:gap-5">
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-18.jpg" alt="Kitchen remodeling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-sm font-semibold">Kitchen Remodeling</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-7.jpg" alt="Bathroom remodeling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-sm font-semibold">Bathroom Remodeling</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-8.jpg" alt="Custom home builder" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-sm font-semibold">Custom Home Builder</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-5.jpg" alt="Interior renovations" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-sm font-semibold">Interior Renovations</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-3.jpg" alt="Home renovations" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-sm font-semibold">Home Renovations</p>
+      </a>
+      <a href="#contact" class="group reveal">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-9.jpg" alt="Outdoor living spaces" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-sm font-semibold">Outdoor Living Spaces</p>
+      </a>
+      <a href="#contact" class="group reveal col-span-2 md:col-span-2 lg:col-span-1">
+        <div class="aspect-[2/1] md:aspect-[2/1] lg:aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-4.jpg" alt="Commercial construction" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-sm font-semibold">Commercial Construction</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="relative bg-paper pb-24 lg:pb-32">
-  <div class="absolute top-0 inset-x-0 h-[420px] lg:h-[380px] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5 pt-20 lg:pt-24">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end text-white reveal">
-      <div class="lg:col-span-6">
-        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/70">What we build</p>
-        <h2 class="mt-4 text-4xl md:text-5xl font-semibold">Residential and commercial services.</h2>
+<!-- Photo band -->
+<section class="px-3 sm:px-5 pb-24 lg:pb-32">
+  <div class="max-w-[1500px] mx-auto rounded-card overflow-hidden aspect-[16/10] sm:aspect-[21/9]">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-17.jpg" alt="Finished kitchen with white cabinetry and hardwood floors" class="w-full h-full object-cover">
+  </div>
+</section>
+
+<!-- Statement -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-3xl sm:text-4xl lg:text-6xl font-light tracking-tight leading-[1.15]">Glazer Design and Construction takes your project from first sketch to final walkthrough.</p>
+  </div>
+</section>
+
+<!-- Marquee pills -->
+<section class="pb-24 lg:pb-32 overflow-hidden">
+  <div class="flex flex-col gap-4">
+    <div class="overflow-hidden">
+      <div class="flex w-max gap-3 track-left">
+        <!-- set A -->
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Kitchen remodeling</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Bathroom remodeling</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Custom homes</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Interior renovations</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Outdoor living spaces</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Handicap accessible homes</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Commercial construction</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Green construction</span>
+        <!-- set B -->
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Kitchen remodeling</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Bathroom remodeling</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Custom homes</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Interior renovations</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Outdoor living spaces</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Handicap accessible homes</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Commercial construction</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Green construction</span>
       </div>
-      <p class="lg:col-span-6 text-lg text-white/85 leading-relaxed">Whether it is one room or an entire home, Glazer manages design, permits and construction so your project moves forward with a single point of contact.</p>
     </div>
-
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="#contact" class="svc group block bg-white rounded p-3 shadow-sm reveal">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-6.jpg" alt="Kitchen remodel" class="card-img w-full h-full object-cover">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="flex items-center justify-between text-xl font-semibold text-ink">Kitchen Remodeling
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </h3>
-          <p class="mt-2 text-slate-600">Open layouts, custom cabinetry and finishes built for daily use.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc group block bg-white rounded p-3 shadow-sm reveal">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-7.jpg" alt="Bathroom remodel" class="card-img w-full h-full object-cover">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="flex items-center justify-between text-xl font-semibold text-ink">Bathroom Remodeling
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </h3>
-          <p class="mt-2 text-slate-600">Tile, glass, fixtures and storage planned to work together.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc group block bg-white rounded p-3 shadow-sm reveal">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-8.jpg" alt="Custom home exterior" class="card-img w-full h-full object-cover">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="flex items-center justify-between text-xl font-semibold text-ink">Custom Home Builder
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </h3>
-          <p class="mt-2 text-slate-600">New homes designed around your lot, your plans and your budget.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc group block bg-white rounded p-3 shadow-sm reveal">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-9.jpg" alt="Outdoor living space with bar" class="card-img w-full h-full object-cover">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="flex items-center justify-between text-xl font-semibold text-ink">Outdoor Living Spaces
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </h3>
-          <p class="mt-2 text-slate-600">Covered patios, stone and outdoor kitchens that extend your home.</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="#contact" class="svc group block bg-white rounded p-3 shadow-sm reveal">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-5.jpg" alt="Finished basement living space" class="card-img w-full h-full object-cover">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="flex items-center justify-between text-xl font-semibold text-ink">Interior Renovations
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </h3>
-          <p class="mt-2 text-slate-600">Basements, living areas and whole-home updates.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc group block bg-white rounded p-3 shadow-sm reveal">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-3.jpg" alt="Brick home exterior at dusk" class="card-img w-full h-full object-cover">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="flex items-center justify-between text-xl font-semibold text-ink">Home Renovations
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </h3>
-          <p class="mt-2 text-slate-600">Additions and exterior work that respect the original house.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc group block bg-white rounded p-3 shadow-sm reveal">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-          <img src="https://images.unsplash.com/photo-1593012672105-42e6d13af5ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Structural steel work on a home addition" class="card-img w-full h-full object-cover">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="flex items-center justify-between text-xl font-semibold text-ink">Accessible Homes
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </h3>
-          <p class="mt-2 text-slate-600">Handicap accessible homes planned and built with care.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc group block bg-white rounded p-3 shadow-sm reveal">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-          <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-10.jpg" alt="Restaurant dining room build-out" class="card-img w-full h-full object-cover">
-        </div>
-        <div class="px-2 pt-5 pb-3">
-          <h3 class="flex items-center justify-between text-xl font-semibold text-ink">Commercial Construction
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </h3>
-          <p class="mt-2 text-slate-600">Restaurants and commercial interiors built to schedule.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Portfolio -->
-<section id="portfolio" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end reveal">
-      <div class="lg:col-span-7">
-        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Portfolio</p>
-        <h2 class="mt-4 text-4xl md:text-5xl font-semibold text-ink">Recent work around Atlanta.</h2>
+    <div class="overflow-hidden">
+      <div class="flex w-max gap-3 track-right">
+        <!-- set A -->
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Brookhaven</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Buckhead</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Sandy Springs</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Alpharetta</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Decatur</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Dunwoody</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Marietta</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Roswell</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Vinings</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Virginia Highland</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Chastain Park</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Midtown Atlanta</span>
+        <!-- set B -->
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Brookhaven</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Buckhead</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Sandy Springs</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Alpharetta</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Decatur</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Dunwoody</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Marietta</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Roswell</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Vinings</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Virginia Highland</span>
+        <span class="inline-flex items-center gap-2 bg-tint text-ink font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Chastain Park</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full whitespace-nowrap" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Midtown Atlanta</span>
       </div>
-      <p class="lg:col-span-5 text-lg text-slate-600 leading-relaxed">Homes, kitchens, baths, outdoor spaces and restaurants built by the Glazer team.</p>
-    </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-3.jpg" alt="Brick craftsman home at dusk" class="col-span-2 w-full aspect-[16/10] object-cover rounded reveal">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-6.jpg" alt="Kitchen with large island" class="w-full aspect-square object-cover rounded reveal">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-7.jpg" alt="Bathroom with freestanding tub" class="w-full aspect-square object-cover rounded reveal">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-5.jpg" alt="Basement lounge with shuffleboard" class="w-full aspect-square object-cover rounded reveal">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-9.jpg" alt="Covered outdoor kitchen and bar" class="w-full aspect-square object-cover rounded reveal">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-10.jpg" alt="Restaurant dining room" class="col-span-2 w-full aspect-[16/10] object-cover rounded reveal">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-8.jpg" alt="Custom home with stone terrace" class="col-span-2 w-full aspect-[16/10] object-cover rounded reveal">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/photo-4.jpg" alt="Commercial restaurant interior with open kitchen" class="col-span-2 w-full aspect-[16/10] object-cover rounded reveal">
     </div>
   </div>
 </section>
 
-<!-- Call band -->
-<section class="bg-ink py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-    <div class="lg:col-span-8 reveal">
-      <h2 class="text-3xl md:text-5xl font-semibold text-white">Planning a project in Atlanta?</h2>
-      <p class="mt-4 text-lg text-white/70 max-w-2xl">Call or send a message and the Glazer team will get back to you about your project.</p>
+<!-- FAQ -->
+<section id="faq" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16">
+    <div class="lg:col-span-5 reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">FAQ</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-tight">Questions, answered</h2>
+      <p class="mt-4 text-lg text-ink/70 leading-relaxed">Not seeing your question? Call <a href="tel:+14046839848" class="font-semibold text-brand">(404) 683-9848</a> or email <a href="mailto:info@glazerconstruction.com" class="font-semibold text-brand break-words">info@glazerconstruction.com</a>.</p>
     </div>
-    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 reveal">
-      <a href="tel:+14046839848" class="bg-white text-brand font-bold px-7 py-4 rounded text-center hover:bg-paper transition">Call (404) 683-9848</a>
-      <a href="#contact" class="border border-white/30 text-white font-semibold px-7 py-4 rounded text-center hover:bg-white/10 transition">Request a quote</a>
+    <div class="lg:col-span-7 flex flex-col gap-3 reveal">
+      <details class="bg-paper rounded-[20px] p-6">
+        <summary class="flex items-center justify-between gap-4 font-semibold text-lg">What kinds of projects does Glazer take on?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white inline-flex items-center justify-center"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Kitchen and bathroom remodeling, custom homes, interior and home renovations, outdoor living spaces, handicap accessible homes and commercial construction.</p>
+      </details>
+      <details class="bg-paper rounded-[20px] p-6">
+        <summary class="flex items-center justify-between gap-4 font-semibold text-lg">Which areas do you serve?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white inline-flex items-center justify-center"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">We work in Atlanta and nearby communities including Brookhaven, Buckhead, Sandy Springs, Alpharetta, Decatur, Dunwoody, Marietta, Roswell, Vinings, Virginia Highland, Chastain Park and Midtown.</p>
+      </details>
+      <details class="bg-paper rounded-[20px] p-6">
+        <summary class="flex items-center justify-between gap-4 font-semibold text-lg">Do you design as well as build?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white inline-flex items-center justify-center"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Yes. Glazer Design and Construction follows a design and build process, so design and construction are handled together.</p>
+      </details>
+      <details class="bg-paper rounded-[20px] p-6">
+        <summary class="flex items-center justify-between gap-4 font-semibold text-lg">Do you offer green construction?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white inline-flex items-center justify-center"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Green construction is part of our work. Ask us about it when you call for your estimate.</p>
+      </details>
+      <details class="bg-paper rounded-[20px] p-6">
+        <summary class="flex items-center justify-between gap-4 font-semibold text-lg">How do I get an estimate?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white inline-flex items-center justify-center"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Call (404) 683-9848, email info@glazerconstruction.com or send a request through the contact form below.</p>
+      </details>
     </div>
   </div>
 </section>
 
+<!-- Project cards -->
+<section id="projects" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Projects</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-tight">Recent work around Atlanta</h2>
+    </div>
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <article class="bg-white rounded-card overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-6.jpg" alt="Kitchen renovation with large gray island" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-semibold px-3 py-1.5 rounded-full">Kitchens</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Kitchen renovations</h3>
+          <p class="mt-2 text-ink/70 leading-relaxed">Open layouts, custom cabinetry and finishes chosen for how you cook and gather.</p>
+        </div>
+      </article>
+      <article class="bg-white rounded-card overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-8.jpg" alt="New custom home with stone and brick exterior" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-semibold px-3 py-1.5 rounded-full">New homes</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Custom homes</h3>
+          <p class="mt-2 text-ink/70 leading-relaxed">New construction designed and built for your lot, your family and your neighborhood.</p>
+        </div>
+      </article>
+      <article class="bg-white rounded-card overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-4.jpg" alt="Commercial restaurant build-out with open kitchen" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-semibold px-3 py-1.5 rounded-full">Commercial</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Commercial construction</h3>
+          <p class="mt-2 text-ink/70 leading-relaxed">Restaurant and business interiors built by the same team that builds Atlanta homes.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- gallery -->
+    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+      <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-16.jpg" alt="Wet bar and kitchen opening to the pool" class="w-full h-full object-cover"></div>
+      <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-5.jpg" alt="Finished basement living space" class="w-full h-full object-cover"></div>
+      <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-9.jpg" alt="Covered outdoor kitchen and bar" class="w-full h-full object-cover"></div>
+      <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-3.jpg" alt="Brick home with covered front porch at dusk" class="w-full h-full object-cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(36,64,103,0.10);color:#244067}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#9ca9bb}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(28,74,133,0.10);color:#1c4a85}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#99aec8}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -309,16 +368,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#244067;box-shadow:0 0 0 4px rgba(36,64,103,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#244067;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#1c4a85;box-shadow:0 0 0 4px rgba(28,74,133,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#1c4a85;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -328,13 +387,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1593012672105-42e6d13af5ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/photo-17.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#9ca9bb">Contact</p><h2 class="lp-h" style="color:#fff">Get a quote for your project</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your remodel, build or commercial project and the Glazer team will be in touch.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#99aec8">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your project and we will get back to you about your free estimate.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+14046839848" class="lp-v lp-v-d">(404) 683-9848</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -361,38 +420,57 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-ink text-white/75 pt-20 pb-10 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-12 gap-12">
-    <div class="md:col-span-5">
-      <div class="inline-block bg-white rounded px-3 py-2">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/glazer-design-and-construction/21927/logo-0.png" alt="Glazer Design & Construction" class="h-12 w-auto">
+<footer class="bg-paper border-t border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/glazer-design-and-construction/21950/logo-0.png" alt="Glazer Design and Construction" class="h-14 w-auto">
+        <p class="mt-5"><a href="tel:+14046839848" class="text-xl font-semibold text-brand">(404) 683-9848</a></p>
+        <p class="mt-2"><a href="mailto:info@glazerconstruction.com" class="text-ink/70 break-words text-sm hover:text-brand">info@glazerconstruction.com</a></p>
+        <p class="mt-2 text-ink/70 text-sm">Atlanta, GA</p>
       </div>
-      <p class="mt-6 max-w-sm leading-relaxed">General contractor providing residential and commercial design and construction in Atlanta, GA.</p>
+      <div class="lg:col-span-3">
+        <h4 class="text-sm font-semibold uppercase tracking-wider text-ink/50">Services</h4>
+        <ul class="mt-4 space-y-2 text-ink/80">
+          <li>Kitchen Remodeling</li>
+          <li>Bathroom Remodeling</li>
+          <li>Custom Home Builder</li>
+          <li>Interior Renovations</li>
+          <li>Outdoor Living Spaces</li>
+          <li>Commercial Construction</li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <h4 class="text-sm font-semibold uppercase tracking-wider text-ink/50">Explore</h4>
+        <ul class="mt-4 space-y-2 text-ink/80">
+          <li><a href="#process" class="hover:text-brand">How it works</a></li>
+          <li><a href="#services" class="hover:text-brand">Services</a></li>
+          <li><a href="#projects" class="hover:text-brand">Projects</a></li>
+          <li><a href="#faq" class="hover:text-brand">Questions</a></li>
+          <li><a href="#contact" class="hover:text-brand">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h4 class="text-sm font-semibold uppercase tracking-wider text-ink/50">Service areas</h4>
+        <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-ink/80 text-sm">
+          <li>Brookhaven</li>
+          <li>Buckhead</li>
+          <li>Sandy Springs</li>
+          <li>Alpharetta</li>
+          <li>Decatur</li>
+          <li>Dunwoody</li>
+          <li>Marietta</li>
+          <li>Roswell</li>
+          <li>Vinings</li>
+          <li>Virginia Highland</li>
+          <li>Chastain Park</li>
+          <li>Midtown Atlanta</li>
+        </ul>
+      </div>
     </div>
-    <div class="md:col-span-3">
-      <h4 class="text-white font-semibold mb-4">Services</h4>
-      <ul class="space-y-2 text-sm">
-        <li>Kitchen Remodeling</li>
-        <li>Bathroom Remodeling</li>
-        <li>Custom Home Builder</li>
-        <li>Home Renovations</li>
-        <li>Outdoor Living Spaces</li>
-        <li>Commercial Construction</li>
-      </ul>
+    <div class="mt-12 pt-6 border-t border-black/10 text-sm text-ink/55">
+      <p>Concept redesign by LumeaPixel. This is not the official Glazer Design and Construction website.</p>
     </div>
-    <div class="md:col-span-4">
-      <h4 class="text-white font-semibold mb-4">Contact</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="tel:+14046839848" class="hover:text-white font-semibold text-white">(404) 683-9848</a></li>
-        <li><a href="mailto:info@glazerconstruction.com" class="hover:text-white break-words">info@glazerconstruction.com</a></li>
-        <li>Atlanta, GA</li>
-        <li class="pt-2"><a href="#contact" class="inline-block bg-brand text-white font-semibold px-5 py-3 rounded hover:bg-brandDark transition border border-white/20">Get a Quote</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="max-w-7xl mx-auto px-5 mt-14 pt-6 border-t border-white/10 text-xs text-white/50 space-y-1">
-    <p>Concept redesign by LumeaPixel. This is not the official Glazer Design and Construction website.</p>
-    <p>Some photos by Brett Jordan, Samuel Cruz and Annie Spratt on Unsplash.</p>
   </div>
 </footer>
 
@@ -400,11 +478,17 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else {
+    els.forEach(el => el.classList.add('in'));
+  }
 </script>
 </body>
 </html>

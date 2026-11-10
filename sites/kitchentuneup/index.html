@@ -7,19 +7,22 @@
 <title>Kitchen Tune-Up New Braunfels, TX | Cabinet Painting, Refacing & Kitchen Updates</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Manrope', 'sans-serif'] },
       colors: {
         brand: '#f8971d',
-        brandDark: '#c97506',
-        ink: '#1a1612',
-        cocoa: '#2a1d0e',
-        cream: '#faf5ec'
+        ink: '#1c1611',
+        deep: '#2a1a07',
+        cream: '#faf6ef',
+        stone: '#efe9de'
+      },
+      fontFamily: {
+        heading: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif']
       },
       borderRadius: { DEFAULT: '6px' }
     }
@@ -28,324 +31,302 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Manrope', sans-serif; color: #1a1612; background: #fff; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', sans-serif; color: #1c1611; font-size: 17px; line-height: 1.6; background: #fff; }
+  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.12; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .field { width: 100%; min-height: 52px; border: 1px solid #d9d2c6; border-radius: 6px; background: #fff; padding: 12px 14px; font-size: 16px; color: #1a1612; transition: border-color .15s, box-shadow .15s; }
-  .field:focus { outline: none; border-color: #f8971d; box-shadow: 0 0 0 3px rgba(248,151,29,.28); }
-  textarea.field { min-height: 120px; resize: vertical; }
+  .tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(28,22,17,.78) 0%, rgba(28,22,17,0) 55%); }
   .tile img { transition: transform .6s ease; }
   .tile:hover img { transform: scale(1.04); }
-  .scrim { background: linear-gradient(to top, rgba(20,12,4,.82) 0%, rgba(20,12,4,.15) 55%, rgba(20,12,4,0) 100%); }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .tile img { transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between gap-6">
-    <a href="#top" class="flex-shrink-0" aria-label="Kitchen Tune-Up home">
-      <img src="https://www.kitchentuneup.com/globalassets/global-assets/ktu-logo-tagline.svg" alt="Kitchen Tune-Up" class="h-11 w-auto">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-0 border-b border-stone">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0 flex items-center">
+      <img src="https://www.kitchentuneup.com/globalassets/global-assets/ktu-logo-tagline.svg" alt="Kitchen Tune-Up" class="h-12 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-semibold text-ink">
-      <a href="#services" class="hover:text-brandDark transition-colors">Services</a>
-      <a href="#about" class="hover:text-brandDark transition-colors">About</a>
-      <a href="#projects" class="hover:text-brandDark transition-colors">Projects</a>
-      <a href="#contact" class="hover:text-brandDark transition-colors">Contact</a>
+    <nav class="hidden lg:flex items-center gap-8 font-heading font-medium text-[15px]">
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#about" class="hover:text-brand transition-colors">About</a>
+      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="#reviews-anchor" class="hover:text-brand transition-colors">Reviews</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18303874253" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-brandDark text-ink font-bold text-[15px] px-5 h-11 rounded transition-colors">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+18303874253" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-heading font-semibold px-5 py-3 rounded hover:bg-ink hover:text-white transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         (830) 387-4253
       </a>
-      <a href="tel:+18303874253" class="sm:hidden inline-flex items-center justify-center bg-brand text-ink w-11 h-11 rounded" aria-label="Call (830) 387-4253">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 inline-flex items-center justify-center border border-black/10 rounded" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-stone rounded" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
-    <div class="px-5 py-4 flex flex-col text-base font-semibold">
-      <a href="#services" class="py-3 border-b border-black/5">Services</a>
-      <a href="#about" class="py-3 border-b border-black/5">About</a>
-      <a href="#projects" class="py-3 border-b border-black/5">Projects</a>
-      <a href="#contact" class="py-3">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-stone bg-white">
+    <div class="px-5 py-5 flex flex-col gap-4 font-heading font-medium text-lg">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#reviews-anchor">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+18303874253" class="bg-brand text-ink font-semibold px-5 py-3 rounded text-center">Call (830) 387-4253</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
+<!-- Hero -->
 <section class="relative">
-  <div class="relative min-h-[640px] lg:min-h-[720px] flex items-center">
-    <img src="https://images.unsplash.com/photo-1613545564235-db7af30081bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled kitchen with white cabinets and an island" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-[#140c04]/65"></div>
-    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center pt-20 pb-40 lg:pb-48">
-      <p class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-brand mb-6">Kitchen Tune-Up &middot; New Braunfels, TX</p>
-      <h1 class="text-white font-bold text-[40px] leading-[1.08] sm:text-5xl lg:text-[64px] tracking-tight">Open up the possibilities<br class="hidden sm:block"> for your kitchen.</h1>
-      <p class="mt-7 text-white/85 text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto">Update, upgrade and uplift your kitchen with a local team that listens first. Cabinet painting, refacing, redooring, custom cabinets and countertops.</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="inline-flex items-center justify-center h-14 px-8 bg-brand hover:bg-brandDark text-ink font-bold rounded transition-colors">Request a free consultation</a>
-        <a href="#projects" class="inline-flex items-center justify-center h-14 px-8 border border-white/80 text-white font-bold rounded hover:bg-white hover:text-ink transition-colors">See our projects</a>
+  <div class="relative h-[640px] sm:h-[680px] lg:h-[720px] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright remodeled open kitchen with island" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-ink/65"></div>
+    <div class="relative max-w-4xl mx-auto px-5 h-full flex flex-col items-center justify-center text-center pb-24">
+      <p class="font-heading text-brand text-sm tracking-[0.2em] uppercase mb-5">Kitchen Tune-Up · New Braunfels, TX</p>
+      <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-semibold">Open up the possibilities<br class="hidden sm:block"> for your kitchen.</h1>
+      <p class="text-white/85 text-lg mt-6 max-w-2xl">Update, upgrade and uplift your kitchen with a local team. Cabinet painting, refacing, redooring, custom cabinets and countertops, planned around your style and your budget.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <a href="#contact" class="bg-brand text-ink font-heading font-semibold px-8 py-4 rounded hover:bg-white transition-colors">Request a free consultation</a>
+        <a href="tel:+18303874253" class="border border-white text-white font-heading font-semibold px-8 py-4 rounded hover:bg-white hover:text-ink transition-colors">Call (830) 387-4253</a>
       </div>
     </div>
   </div>
 
-  <!-- trust strip -->
-  <div class="relative z-10 max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20">
-    <div class="bg-white border border-black/5 rounded shadow-[0_8px_30px_rgba(0,0,0,.08)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="flex items-start gap-4 p-6 lg:p-7 border-b sm:border-r lg:border-b-0 border-black/5">
-        <svg class="flex-shrink-0 text-brandDark mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
-        <div><p class="font-bold text-[15px]">Locally owned and operated</p><p class="text-sm text-black/60 mt-1">Rudy &amp; Debra Jimenez, owners</p></div>
+  <!-- Trust strip -->
+  <div class="relative max-w-6xl mx-auto px-5 -mt-16 lg:-mt-14">
+    <div class="bg-cream border border-stone rounded p-6 lg:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <div><p class="font-heading font-semibold">Locally owned</p><p class="text-sm text-ink/70">Rudy &amp; Debra Jimenez live in your community.</p></div>
       </div>
-      <div class="flex items-start gap-4 p-6 lg:p-7 border-b lg:border-b-0 lg:border-r border-black/5">
-        <svg class="flex-shrink-0 text-brandDark mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M9 12h.01M15 12h.01"/></svg>
-        <div><p class="font-bold text-[15px]">Cabinets and countertops</p><p class="text-sm text-black/60 mt-1">Painting, refacing, redooring, custom</p></div>
+      <div class="flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <div><p class="font-heading font-semibold">Free in-home consultation</p><p class="text-sm text-ink/70">Talk through colors, styles and features.</p></div>
       </div>
-      <div class="flex items-start gap-4 p-6 lg:p-7 border-b sm:border-r lg:border-b-0 border-black/5">
-        <svg class="flex-shrink-0 text-brandDark mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/></svg>
-        <div><p class="font-bold text-[15px]">1-day wood restoration</p><p class="text-sm text-black/60 mt-1">The Original Tune-Up</p></div>
+      <div class="flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <div><p class="font-heading font-semibold">Real local projects</p><p class="text-sm text-ink/70">Kitchens in New Braunfels homes like yours.</p></div>
       </div>
-      <div class="flex items-start gap-4 p-6 lg:p-7">
-        <svg class="flex-shrink-0 text-brandDark mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-        <div><p class="font-bold text-[15px]">Free in-home consultation</p><p class="text-sm text-black/60 mt-1">Backed by a national franchise system</p></div>
+      <div class="flex items-start gap-4">
+        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><p class="font-heading font-semibold">National franchise backing</p><p class="text-sm text-ink/70">Supported by the Kitchen Tune-Up system.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- Services grid -->
 <section id="services" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brandDark mb-4">Services</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[1.1] tracking-tight">What we do for kitchens in New Braunfels</h2>
-      <p class="mt-5 text-lg text-black/65 leading-relaxed">From a fresh coat of paint to a full cabinet overhaul, pick the update that fits your kitchen and your budget.</p>
+      <p class="font-heading text-sm tracking-[0.2em] uppercase text-brand mb-4">Services</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">What we do for kitchens in New Braunfels</h2>
+      <p class="mt-5 text-ink/75">Whether your wood cabinets need a Tune-Up, you want a modern door style, or you're planning a full redesign, there's an option to fit.</p>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-6">
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@0930cbd4cf28276507616f63db6e61e23fc4dd84/sites/kitchen-tune-up/21922/photo-8.jpg" alt="Oak kitchen cabinets with stainless range" class="absolute inset-0 w-full h-full object-cover">
-        <div class="scrim absolute inset-0"></div>
-        <div class="absolute left-0 bottom-0 p-6"><h3 class="text-white text-2xl font-bold">The Original Tune-Up</h3><p class="text-white/80 text-sm mt-1">1-day wood restoration</p></div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[360px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-3.jpg" alt="Oak kitchen cabinets with stainless range" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute left-6 bottom-5 z-10 text-white"><h3 class="text-2xl font-semibold">The Original Tune-Up</h3><p class="text-sm text-white/85">One-day wood restoration</p></div>
       </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@0930cbd4cf28276507616f63db6e61e23fc4dd84/sites/kitchen-tune-up/21922/photo-9.jpg" alt="Two-tone refaced kitchen with white uppers and dark base cabinets" class="absolute inset-0 w-full h-full object-cover">
-        <div class="scrim absolute inset-0"></div>
-        <div class="absolute left-0 bottom-0 p-6"><h3 class="text-white text-2xl font-bold">Cabinet Refacing</h3><p class="text-white/80 text-sm mt-1">New door fronts on your existing boxes</p></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[360px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-8.jpg" alt="Sage green painted kitchen cabinets" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute left-6 bottom-5 z-10 text-white"><h3 class="text-2xl font-semibold">Cabinet Painting</h3><p class="text-sm text-white/85">A new color on cabinets in good shape</p></div>
       </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1652918320939-47f66eb1b684?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with painted green cabinets and a wood island" class="absolute inset-0 w-full h-full object-cover">
-        <div class="scrim absolute inset-0"></div>
-        <div class="absolute left-0 bottom-0 p-6"><h3 class="text-white text-2xl font-bold">Cabinet Painting</h3><p class="text-white/80 text-sm mt-1">A new color for cabinets in good shape</p></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[360px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-4.jpg" alt="White shaker upper cabinets with dark base cabinets" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute left-6 bottom-5 z-10 text-white"><h3 class="text-2xl font-semibold">Cabinet Refacing</h3><p class="text-sm text-white/85">New door fronts on your existing boxes</p></div>
       </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1682888813913-e13f18692019?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="White shaker cabinets and a long quartz island" class="absolute inset-0 w-full h-full object-cover">
-        <div class="scrim absolute inset-0"></div>
-        <div class="absolute left-0 bottom-0 p-6"><h3 class="text-white text-2xl font-bold">Cabinet Redooring</h3><p class="text-white/80 text-sm mt-1">Modern door styles, same layout</p></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[360px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-2.jpg" alt="Redoored cabinets with new granite countertop" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute left-6 bottom-5 z-10 text-white"><h3 class="text-2xl font-semibold">Cabinet Redooring</h3><p class="text-sm text-white/85">A fresh door style, same layout</p></div>
       </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1560185127-1902ccdc5094?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with butcher block island and granite countertops" class="absolute inset-0 w-full h-full object-cover">
-        <div class="scrim absolute inset-0"></div>
-        <div class="absolute left-0 bottom-0 p-6"><h3 class="text-white text-2xl font-bold">Countertops</h3><p class="text-white/80 text-sm mt-1">New surfaces to match your cabinets</p></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[360px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-6.jpg" alt="Custom white cabinets with stone range alcove and marble island" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute left-6 bottom-5 z-10 text-white"><h3 class="text-2xl font-semibold">Custom Cabinets</h3><p class="text-sm text-white/85">Built for how you use your kitchen</p></div>
       </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1682888813789-c39fe30921e2?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open kitchen with custom white cabinetry and marble island" class="absolute inset-0 w-full h-full object-cover">
-        <div class="scrim absolute inset-0"></div>
-        <div class="absolute left-0 bottom-0 p-6"><h3 class="text-white text-2xl font-bold">Custom Cabinets</h3><p class="text-white/80 text-sm mt-1">A new layout built around how you cook</p></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[360px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-9.jpg" alt="Kitchen with curved granite countertop over stone bar" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute left-6 bottom-5 z-10 text-white"><h3 class="text-2xl font-semibold">Countertops</h3><p class="text-sm text-white/85">Granite and quartz, matched to your cabinets</p></div>
       </a>
     </div>
-    <p class="mt-8 text-black/60 text-[15px]">Also available: accessories and organizers, and outdoor kitchens.</p>
   </div>
 </section>
 
-<!-- ABOUT SPLIT -->
+<!-- About split -->
 <section id="about" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-5 reveal">
-      <div class="aspect-[4/5] rounded overflow-hidden">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@0930cbd4cf28276507616f63db6e61e23fc4dd84/sites/kitchen-tune-up/21922/photo-10.jpg" alt="Kitchen with warm wood cabinets, stone arch and granite bar" class="w-full h-full object-cover">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-5.jpg" alt="Kitchen with stone archway, tile backsplash and wood cabinetry" class="w-full h-full object-cover">
       </div>
     </div>
-    <div class="lg:col-span-7 reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brandDark mb-4">About</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[1.1] tracking-tight">Your neighbors, your kitchen, your choices.</h2>
-      <p class="mt-6 text-lg text-black/70 leading-relaxed">Kitchen Tune-Up New Braunfels is owned and run by Rudy and Debra Jimenez. We live in this community and understand what homeowners here want from their kitchens.</p>
-      <p class="mt-4 text-lg text-black/70 leading-relaxed">What colors and styles do you like? What features and functions do you want? We work with you to build a space you love, at an investment you are comfortable with.</p>
-      <blockquote class="mt-8 border-l-4 border-brand pl-5 text-black/80 text-lg leading-relaxed">Our mission is to provide our clients with an elevated kitchen remodeling experience.
-        <footer class="mt-2 text-sm font-semibold text-black/60">Rudy &amp; Debra Jimenez, Owners</footer>
+    <div class="lg:col-span-6 reveal">
+      <p class="font-heading text-sm tracking-[0.2em] uppercase text-brand mb-4">About</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">A local team that listens first</h2>
+      <p class="mt-6 text-ink/80">At Kitchen Tune-Up New Braunfels, we work with you to achieve the kitchen you want. What colors and styles do you like? What features and functions do you need? Together, we build a space you love at an investment you're comfortable with.</p>
+      <p class="mt-4 text-ink/80">Locally owned and operated, we live in your community and understand what homeowners here need. We're backed by a national franchise system, so whatever your style, we're equipped to find the right solution.</p>
+      <blockquote class="mt-7 border-l-4 border-brand pl-5 text-ink/80">
+        Our mission is to provide our clients with an elevated kitchen remodeling experience.
+        <footer class="mt-2 font-heading font-medium text-ink">Rudy &amp; Debra Jimenez, Owners</footer>
       </blockquote>
-      <a href="#contact" class="mt-9 inline-flex items-center justify-center h-14 px-8 bg-brand hover:bg-brandDark text-ink font-bold rounded transition-colors">Request a consultation</a>
+      <a href="#contact" class="inline-block mt-9 bg-brand text-ink font-heading font-semibold px-8 py-4 rounded hover:bg-ink hover:text-white transition-colors">Talk to our team</a>
     </div>
   </div>
 </section>
 
-<!-- REVERSE SPLIT -->
+<!-- Reverse split: renovation options -->
 <section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-7 order-2 lg:order-1 reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brandDark mb-4">Your options</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[1.1] tracking-tight">From a tune-up to a new layout.</h2>
-      <p class="mt-6 text-lg text-black/70 leading-relaxed">Whether your wood cabinets need a tune-up, you picture a new modern door style, or you want a completely new layout, we make the process enjoyable and hassle-free.</p>
-      <p class="mt-4 text-lg text-black/70 leading-relaxed">Cabinet painting gives tired cabinets new life. Refacing replaces the door fronts and keeps the boxes. Custom cabinetry makes every inch work for you. Each one can be paired with new countertops and backsplash.</p>
-      <a href="#contact" class="mt-9 inline-flex items-center justify-center h-14 px-8 bg-brand hover:bg-brandDark text-ink font-bold rounded transition-colors">Talk to us about your kitchen</a>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
+      <p class="font-heading text-sm tracking-[0.2em] uppercase text-brand mb-4">Cabinet renovations</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">A fresh update without a full tear-out</h2>
+      <p class="mt-6 text-ink/80">Cabinet work can change the look and feel of a kitchen without starting over. Redooring and refacing replace the door fronts and keep the cabinet boxes. Painting gives tired cabinets a new color. Custom cabinetry adds storage and uses every inch.</p>
+      <p class="mt-4 text-ink/80">Each option can work together with new countertops, backsplash and organizers to meet the look and function you're after.</p>
+      <a href="#contact" class="inline-block mt-9 bg-brand text-ink font-heading font-semibold px-8 py-4 rounded hover:bg-ink hover:text-white transition-colors">Request a free consultation</a>
     </div>
-    <div class="lg:col-span-5 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/5] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1694885150510-cb89a261081d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Light kitchen with painted cabinets and a long countertop" class="w-full h-full object-cover">
+    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
+      <div class="aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-1.jpg" alt="Kitchen with oak cabinets, granite island and stainless appliances" class="w-full h-full object-cover">
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="py-24 lg:py-32 bg-cream">
+<!-- Projects gallery -->
+<section id="projects" class="py-24 lg:py-32 bg-stone">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brandDark mb-4">Projects</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[1.1] tracking-tight">Kitchens from New Braunfels homes</h2>
-      <p class="mt-5 text-lg text-black/65 leading-relaxed">Real remodeling jobs in homes like yours, kitchens that families use every day.</p>
+      <p class="font-heading text-sm tracking-[0.2em] uppercase text-brand mb-4">Projects</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Real kitchens in real homes</h2>
+      <p class="mt-5 text-ink/75">These are everyday family kitchens, not showroom fantasies. Each one was planned around the homeowner's needs and a realistic budget.</p>
     </div>
-
-    <div class="mt-12 grid grid-cols-2 md:grid-cols-12 gap-4 lg:gap-5">
-      <figure class="col-span-2 md:col-span-7 reveal">
-        <div class="aspect-[16/10] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@0930cbd4cf28276507616f63db6e61e23fc4dd84/sites/kitchen-tune-up/21922/photo-9.jpg" alt="White shaker uppers and black base cabinets with granite countertops" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-[15px] text-black/70">Dark and dated to sleek: white shaker uppers, black base cabinets, new granite and tile.</figcaption>
-      </figure>
-      <figure class="col-span-2 md:col-span-5 reveal">
-        <div class="aspect-[16/10] md:aspect-[5/4] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@0930cbd4cf28276507616f63db6e61e23fc4dd84/sites/kitchen-tune-up/21922/photo-7.jpg" alt="Kitchen with light cabinets, stone backsplash and a peninsula sink" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-[15px] text-black/70">Two-tone refacing with new counters and backsplash.</figcaption>
-      </figure>
-      <figure class="col-span-1 md:col-span-4 reveal">
-        <div class="aspect-square md:aspect-[4/3] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@0930cbd4cf28276507616f63db6e61e23fc4dd84/sites/kitchen-tune-up/21922/photo-6.jpg" alt="Kitchen before its update, oak cabinets and a granite island" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-[15px] text-black/70">Before: oak doors, two-tier granite island.</figcaption>
-      </figure>
-      <figure class="col-span-1 md:col-span-4 reveal">
-        <div class="aspect-square md:aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1652918320939-47f66eb1b684?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Painted green cabinets with a creamy island" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-[15px] text-black/70">Cabinets painted light green, new counters and tile.</figcaption>
-      </figure>
-      <figure class="col-span-2 md:col-span-4 reveal">
-        <div class="aspect-[16/10] md:aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1682888813789-c39fe30921e2?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open-plan kitchen with white cabinets and marble waterfall island" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-[15px] text-black/70">An open, leveled island built for gathering.</figcaption>
-      </figure>
-      <figure class="col-span-2 md:col-span-6 reveal">
-        <div class="aspect-[16/10] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@0930cbd4cf28276507616f63db6e61e23fc4dd84/sites/kitchen-tune-up/21922/photo-8.jpg" alt="Kitchen with warm oak cabinets and black granite counters" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-[15px] text-black/70">Existing oak cabinets, a candidate for a tune-up or paint.</figcaption>
-      </figure>
-      <figure class="col-span-2 md:col-span-6 reveal">
-        <div class="aspect-[16/10] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1613545564235-db7af30081bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright kitchen with light cabinetry and a marble-top island with stools" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-[15px] text-black/70">Sleek quartz, glass backsplash and new light fixtures.</figcaption>
-      </figure>
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5 grid-flow-row-dense">
+      <div class="reveal col-span-2 lg:col-span-7 aspect-[16/9] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-6.jpg" alt="White cabinets, stone alcove and marble island after remodel" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-5 aspect-square lg:aspect-auto overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-4.jpg" alt="Two-tone kitchen with white uppers and black base cabinets" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-4 aspect-square lg:aspect-[4/3] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-8.jpg" alt="Sage green cabinets with textured tile backsplash" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-4 aspect-square lg:aspect-[4/3] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-2.jpg" alt="Updated cabinets with new granite countertop and sink" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-2 lg:col-span-4 aspect-[16/9] lg:aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1682888818650-0a7cbb35287d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="White kitchen with quartz island and herringbone backsplash" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-5 aspect-square lg:aspect-[16/10] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-7.jpg" alt="Kitchen with oak cabinets before an update" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-7 aspect-square lg:aspect-[16/10] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-9.jpg" alt="Kitchen with stone-faced bar and granite top" class="w-full h-full object-cover"></div>
     </div>
   </div>
 </section>
 
-<!-- CREAM PANEL -->
+<!-- Cream CTA panel -->
 <section class="py-24 lg:py-28">
-  <div class="max-w-3xl mx-auto px-5 lg:px-8 text-center reveal">
-    <h2 class="text-3xl sm:text-4xl font-bold leading-[1.1] tracking-tight">Beautifully updated. Effortlessly upscale.</h2>
-    <p class="mt-6 text-lg text-black/70 leading-relaxed">Tell us what you want your kitchen to feel like. We will come to your home, listen, and show you what is possible.</p>
-    <a href="#contact" class="mt-9 inline-flex items-center justify-center h-14 px-8 bg-brand hover:bg-brandDark text-ink font-bold rounded transition-colors">Book your free consultation</a>
+  <div class="max-w-4xl mx-auto px-5 lg:px-8">
+    <div class="bg-cream border border-stone rounded text-center px-6 sm:px-14 py-14 reveal">
+      <h2 class="text-3xl sm:text-4xl font-semibold">Update. Upgrade. Uplift.</h2>
+      <p class="mt-5 text-ink/75 max-w-xl mx-auto">Tell us what you'd change about your kitchen and we'll show you the ways to get there. The first consultation is free and happens in your home.</p>
+      <a href="#contact" class="inline-block mt-8 bg-brand text-ink font-heading font-semibold px-8 py-4 rounded hover:bg-ink hover:text-white transition-colors">Request a free consultation</a>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="lp-contact py-24 md:py-32 bg-[#f6f5f2]">
+<!-- Final call: photo with overlapping brand card -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 items-center">
+    <div class="lg:col-span-8 aspect-[16/10] overflow-hidden rounded reveal">
+      <img src="https://images.unsplash.com/photo-1694885150510-cb89a261081d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Light kitchen with long island and pendant lights" class="w-full h-full object-cover">
+    </div>
+    <div class="lg:col-span-4 lg:-ml-24 relative z-10 mt-[-48px] lg:mt-0 mx-4 lg:mx-0 reveal">
+      <div class="bg-brand text-ink rounded p-8 lg:p-10">
+        <h2 class="text-2xl sm:text-3xl font-semibold">Ready to open up your kitchen?</h2>
+        <p class="mt-4 text-ink/85">Call Rudy and Debra's team, or send a note and we'll get back to you to schedule your consultation.</p>
+        <a href="tel:+18303874253" class="mt-6 block font-heading text-2xl font-semibold hover:underline">(830) 387-4253</a>
+        <a href="mailto:rjimenez@kitchentuneup.com" class="mt-2 block text-sm font-medium break-words underline">rjimenez@kitchentuneup.com</a>
+        <a href="#contact" class="inline-block mt-7 bg-ink text-white font-heading font-semibold px-7 py-3 rounded hover:bg-white hover:text-ink transition-colors">Request a consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<span id="reviews-anchor"></span>
+
+<!-- Contact placeholder -->
+<section id="contact" class="lp-contact" style="background:#fff">
   <style>
+    .lp-contact{position:relative}
     .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(248,151,29,0.10);color:#f8971d}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 12px 32px -12px rgba(16,24,40,.10)}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#f8971d}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#f8971d;box-shadow:0 0 0 4px rgba(248,151,29,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border-radius:6px;background:#f8971d;color:#111111;font-weight:600;font-size:16px;transition:filter .15s,transform .15s}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#f8971d;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
-  </style>
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-      <div class="lg:col-span-5">
-        <p class="text-[13px] font-semibold uppercase tracking-[.16em]" style="color:#f8971d">Contact</p>
-        <h2 class="mt-4 text-4xl md:text-5xl font-semibold leading-[1.08] tracking-tight text-neutral-900">Request a free in-home consultation</h2>
-        <p class="mt-5 text-lg leading-relaxed text-neutral-600 max-w-md">Tell us about your kitchen and we will set up a time to visit, measure and talk through options.</p>
-        <ul class="mt-10 space-y-6">
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Call</span>
-            <a href="tel:+18303874253" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">(830) 387-4253</a></span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Email</span>
-            <a href="mailto:rjimenez@kitchentuneup.com" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">rjimenez@kitchentuneup.com</a></span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Service area</span>
-            <span class="text-lg font-medium text-neutral-900">New Braunfels, TX</span></span>
-          </li>
-        </ul>
-      </div>
-      <div class="lg:col-span-7">
-        <div class="lp-card p-6 sm:p-8 md:p-10">
-          <form id="lp-form" novalidate class="grid sm:grid-cols-2 gap-x-5 gap-y-6">
-            <div class="">
-              <label for="lp-name" class="lp-label">Full name</label>
-              <input id="lp-name" name="name" type="text" required class="lp-input">
-            </div>
-            <div class="">
-              <label for="lp-phone" class="lp-label">Phone</label>
-              <input id="lp-phone" name="phone" type="tel" required class="lp-input">
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-email" class="lp-label">Email</label>
-              <input id="lp-email" name="email" type="email" required class="lp-input">
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input">
-                <option value="">Choose a service</option><option>The Original Tune-Up</option><option>Cabinet Painting</option><option>Cabinet Refacing</option><option>Cabinet Redooring</option><option>Countertops</option><option>Custom Cabinets</option>
-                <option>Something else</option>
-              </select>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-message" class="lp-label">Project details</label>
-              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea>
-            </div>
-            <div class="sm:col-span-2 pt-2">
-              <button type="submit" class="lp-btn w-full sm:w-auto">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button>
-            </div>
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-split{display:grid}
+    @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/kitchen-tune-up/21950/photo-7.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
+    .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
+    .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
+    .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
+  <div class="lp-split">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#f8971d">Contact</p><h2 class="lp-h" style="color:#fff">Request a free in-home consultation</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Share your contact details and we'll reach out to schedule your free kitchen consultation in New Braunfels.</p><ul class="lp-info">
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18303874253" class="lp-v lp-v-d">(830) 387-4253</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k lp-k-d">Email</span><a href="mailto:rjimenez@kitchentuneup.com" class="lp-v lp-v-d">rjimenez@kitchentuneup.com</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Service area</span><span class="lp-v lp-v-d">New Braunfels, TX</span></span></li>
+        </ul></div></div>
+    <div class="lp-panel"><div><p class="lp-kick" style="color:#737373;margin-bottom:20px">Send us a message</p>
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>The Original Tune-Up</option><option>Cabinet Redooring</option><option>Cabinet Painting</option><option>Cabinet Refacing</option><option>Custom Cabinets</option><option>Countertops</option><option>Accessories &amp;amp; Organizers</option><option>Outdoor Kitchens</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
           </form>
-          <div id="lp-thanks" class="hidden py-16 text-center">
-            <span class="lp-ic mx-auto" style="width:56px;height:56px"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span>
-            <p class="mt-5 text-2xl font-semibold text-neutral-900">Thanks, we'll be in touch soon.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div></div>
   </div>
-  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('hidden');document.getElementById('lp-thanks').classList.remove('hidden');});</script>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="bg-cocoa text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 grid-flow-row-dense">
+<!-- Footer -->
+<footer class="bg-deep text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
     <div class="lg:col-span-4">
       <div class="inline-block bg-white rounded p-3">
         <img src="https://www.kitchentuneup.com/globalassets/global-assets/ktu-logo-tagline.svg" alt="Kitchen Tune-Up" class="h-12 w-auto">
       </div>
-      <p class="mt-5 text-white/70 leading-relaxed max-w-xs">Kitchen Tune-Up New Braunfels, TX. Locally owned and operated by Rudy &amp; Debra Jimenez.</p>
+      <p class="mt-5 text-white/70 text-[15px] max-w-xs">Locally owned kitchen updates serving New Braunfels, TX. Open up the possibilities for your kitchen.</p>
     </div>
     <div class="lg:col-span-3">
-      <h3 class="text-sm font-bold tracking-[0.15em] uppercase text-brand mb-5">Services</h3>
-      <ul class="space-y-3 text-white/75 text-[15px]">
+      <h4 class="font-heading font-semibold text-brand mb-4">Services</h4>
+      <ul class="space-y-2 text-white/80 text-[15px]">
         <li>The Original Tune-Up</li>
         <li>Cabinet Redooring</li>
         <li>Cabinet Painting</li>
@@ -355,60 +336,40 @@ tailwind.config = {
       </ul>
     </div>
     <div class="lg:col-span-2">
-      <h3 class="text-sm font-bold tracking-[0.15em] uppercase text-brand mb-5">Explore</h3>
-      <ul class="space-y-3 text-white/75 text-[15px]">
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#about" class="hover:text-white">About</a></li>
-        <li><a href="#projects" class="hover:text-white">Projects</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      <h4 class="font-heading font-semibold text-brand mb-4">Explore</h4>
+      <ul class="space-y-2 text-white/80 text-[15px]">
+        <li><a href="#services" class="hover:text-brand">Services</a></li>
+        <li><a href="#about" class="hover:text-brand">About</a></li>
+        <li><a href="#projects" class="hover:text-brand">Projects</a></li>
+        <li><a href="#contact" class="hover:text-brand">Contact</a></li>
       </ul>
     </div>
-    <div class="sm:col-span-2 lg:col-span-3">
-      <h3 class="text-sm font-bold tracking-[0.15em] uppercase text-brand mb-5">Contact</h3>
-      <ul class="space-y-3 text-white/75 text-[15px]">
-        <li><a href="tel:+18303874253" class="hover:text-white">(830) 387-4253</a></li>
-        <li><a href="mailto:rjimenez@kitchentuneup.com" class="hover:text-white break-words">rjimenez@kitchentuneup.com</a></li>
+    <div class="lg:col-span-3">
+      <h4 class="font-heading font-semibold text-brand mb-4">Contact</h4>
+      <ul class="space-y-2 text-white/80 text-[15px]">
         <li>New Braunfels, TX</li>
+        <li><a href="tel:+18303874253" class="hover:text-brand">(830) 387-4253</a></li>
+        <li><a href="mailto:rjimenez@kitchentuneup.com" class="hover:text-brand break-words text-[14px]">rjimenez@kitchentuneup.com</a></li>
       </ul>
     </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-[13px] text-white/55 space-y-1">
+  <div class="border-t border-white/15">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/60 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Kitchen Tune-Up website.</p>
-      <p>Some photos by Zac Gudakov, Decima Athens, Brian Wangenheim, Francesca Tosolini and Clay Banks on Unsplash.</p>
+      <p>Some photos by Zac Gudakov and Brian Wangenheim on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  // mobile menu
-  var btn = document.getElementById('menuBtn');
-  var menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', function () {
-    var open = menu.classList.toggle('hidden');
-    btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-  });
-  menu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () { menu.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); });
-  });
-
-  // reveal on scroll
-  var els = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach(function (el) { io.observe(el); });
-  } else {
-    els.forEach(function (el) { el.classList.add('in'); });
-  }
-
-  // contact form
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    this.classList.add('hidden');
-    document.getElementById('thanks').classList.remove('hidden');
-  });
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>

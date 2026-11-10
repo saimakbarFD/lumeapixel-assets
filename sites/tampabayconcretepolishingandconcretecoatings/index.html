@@ -4,385 +4,385 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Tampa Bay Concrete Polishing &amp; Concrete Coatings | Polished Concrete and Epoxy Floors in Tampa, FL</title>
+<title>Tampa Bay Concrete Polishing &amp; Concrete Coatings | Polished Concrete &amp; Epoxy Floors in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
       colors: {
         brand: '#68ccd1',
-        'brand-dark': '#0f2b2d',
-        ink: '#0c0f10',
-        paper: '#f5f6f6',
-        stone: '#e4e7e8'
+        'brand-dark': '#0c2224',
+        ink: '#0b0c0d',
+        paper: '#f5f4f1',
+        stone: '#e6e4df'
       },
-      fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '14px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #0c0f10; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.08; letter-spacing: -0.01em; }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: #0b0c0d; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { letter-spacing: -0.02em; line-height: 1.08; font-weight: 600; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .ba { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
-  .ba img { pointer-events: none; }
-  .ba-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: #68ccd1; }
-  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; background: #68ccd1; border-radius: 9999px; display: flex; align-items: center; justify-content: center; color: #0c0f10; }
-  .dot::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 9999px; background: #68ccd1; margin-right: 14px; vertical-align: middle; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
+  .card-img { transition: transform .6s ease; }
+  .card:hover .card-img { transform: scale(1.04); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white antialiased">
+<body class="bg-white">
+
+<!-- Top bar -->
+<div class="bg-brand text-ink text-sm">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <span class="font-semibold">Serving Tampa Bay and Central Florida</span>
+    <a href="mailto:info@concretecoatingsflorida.com" class="font-semibold break-words hover:underline">info@concretecoatingsflorida.com</a>
+  </div>
+</div>
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="font-heading text-white leading-none">
-      <span class="block text-lg sm:text-xl font-semibold tracking-tight">Tampa Bay Concrete</span>
-      <span class="block text-[11px] sm:text-xs uppercase tracking-[0.18em] text-brand mt-1">Polishing &amp; Coatings</span>
+<header class="sticky top-0 z-50 bg-ink">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0 flex items-center">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/logo-0.png" alt="Tampa Bay Concrete Polishing &amp; Concrete Coatings" class="h-12 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm text-white/80">
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#process" class="hover:text-brand transition">How it works</a>
-      <a href="#work" class="hover:text-brand transition">Our work</a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/80">
       <a href="#about" class="hover:text-brand transition">About</a>
-      <a href="#areas" class="hover:text-brand transition">Service area</a>
+      <a href="#services" class="hover:text-brand transition">Services</a>
+      <a href="#projects" class="hover:text-brand transition">Projects</a>
+      <a href="#process" class="hover:text-brand transition">Process</a>
+      <a href="#faq" class="hover:text-brand transition">FAQs</a>
       <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
-    <div class="flex items-center gap-3">
-      <a href="tel:8009559530" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-heading font-semibold px-5 py-3 rounded hover:bg-white transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (800) 955-9530
+    <div class="hidden lg:flex items-center gap-5">
+      <div class="text-right leading-tight">
+        <div class="text-[11px] uppercase tracking-widest text-white/50 font-semibold">Need help? Call us today</div>
+        <a href="tel:8009559530" class="text-white font-bold text-lg hover:text-brand transition">(800) 955-9530</a>
+      </div>
+      <a href="#contact" class="bg-brand text-ink font-bold text-sm px-6 py-3 rounded-full hover:bg-white transition">Free Estimate</a>
+    </div>
+    <div class="flex items-center gap-3 lg:hidden">
+      <a href="tel:8009559530" aria-label="Call (800) 955-9530" class="bg-brand text-ink w-11 h-11 rounded-full flex items-center justify-center">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
       </a>
-      <button id="menuBtn" aria-label="Open menu" class="lg:hidden text-white p-2">
+      <button id="menuBtn" aria-label="Open menu" class="text-white w-11 h-11 flex items-center justify-center">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="px-5 py-5 flex flex-col gap-4 text-white/90">
-      <a href="#services" class="mlink">Services</a>
-      <a href="#process" class="mlink">How it works</a>
-      <a href="#work" class="mlink">Our work</a>
-      <a href="#about" class="mlink">About</a>
-      <a href="#areas" class="mlink">Service area</a>
-      <a href="#contact" class="mlink">Contact</a>
-      <a href="tel:8009559530" class="inline-flex justify-center bg-brand text-ink font-heading font-semibold px-5 py-3 rounded">Call (800) 955-9530</a>
-    </div>
+    <nav class="px-5 py-5 flex flex-col gap-4 text-white font-semibold">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:8009559530" class="text-brand">(800) 955-9530</a>
+    </nav>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1. Hero -->
-<section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-3.jpg" alt="Large commercial space with freshly polished concrete floor" class="absolute inset-0 w-full h-full object-cover object-center">
-  <div class="absolute inset-0 bg-ink/80"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-16 sm:py-20 lg:py-28 grid lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-7">
-      <p class="text-xs uppercase tracking-[0.2em] text-brand mb-6">Tampa Bay, Florida</p>
-      <h1 class="font-heading font-bold uppercase text-4xl sm:text-6xl lg:text-7xl leading-[0.98]">Polished concrete.<br>Epoxy floors.<br>Built for Florida.</h1>
-      <p class="mt-7 text-lg text-white/80 max-w-xl">Polished concrete, epoxy, flake and urethane systems made for Florida heat, humidity and heavy traffic. Installed clean, on schedule, and made to last.</p>
-      <ul class="mt-8 space-y-3 text-white/90">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free on-site estimates</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Commercial, industrial and residential</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>In-house crew, owner-operated</li>
-      </ul>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="inline-flex justify-center bg-brand text-ink font-heading font-semibold px-7 py-4 rounded hover:bg-white transition">Request a free quote</a>
-        <a href="#work" class="inline-flex justify-center border border-white/40 text-white font-heading font-semibold px-7 py-4 rounded hover:border-brand hover:text-brand transition">See our work</a>
-      </div>
-    </div>
-    <div class="lg:col-span-5">
-      <div class="bg-paper text-ink rounded p-7 sm:p-9">
-        <h2 class="font-heading font-semibold text-2xl sm:text-3xl">Get a free estimate</h2>
-        <p class="mt-3 text-ink/70 text-base">Tell us about your floor and we'll get back to you quickly with a no-cost quote.</p>
-        <div class="mt-7 space-y-3">
-          <a href="tel:8009559530" class="flex items-center justify-center gap-2 bg-ink text-white font-heading font-semibold px-5 py-4 rounded hover:bg-brand-dark transition">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            (800) 955-9530
-          </a>
-          <a href="mailto:info@concretecoatingsflorida.com" class="flex items-center justify-center gap-2 border border-ink/25 text-ink font-heading font-semibold px-4 py-4 rounded hover:border-brand hover:bg-white transition text-[15px] sm:text-base break-words text-center">
-            <svg class="shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <span class="break-words min-w-0">info@concretecoatingsflorida.com</span>
-          </a>
-          <a href="#contact" class="flex items-center justify-center bg-brand text-ink font-heading font-semibold px-5 py-4 rounded hover:bg-ink hover:text-white transition">Send us your details</a>
-        </div>
+<!-- Hero -->
+<section class="relative bg-ink overflow-hidden">
+  <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-2.jpg" alt="Polished concrete floor in a large commercial building" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/30"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-24 md:py-32 lg:py-44">
+    <div class="max-w-2xl">
+      <p class="label text-brand mb-5">Free on-site estimates</p>
+      <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl">Tampa Bay's concrete polishing and epoxy experts</h1>
+      <p class="mt-6 text-white/80 text-lg leading-relaxed max-w-xl">Polished concrete, epoxy, flake and urethane systems built for Florida heat, humidity and heavy traffic. Installed clean, on schedule, and made to last.</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href="#contact" class="bg-brand text-ink font-bold px-7 py-4 rounded-full hover:bg-white transition">Request a free quote</a>
+        <a href="tel:8009559530" class="bg-white text-ink font-bold px-7 py-4 rounded-full hover:bg-brand transition">Call (800) 955-9530</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Services strip -->
-<section class="bg-ink border-t border-white/10 text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap gap-x-8 gap-y-3 justify-center text-sm uppercase tracking-[0.14em]">
-    <span class="dot">Concrete polishing</span>
-    <span class="dot">Flake coatings</span>
-    <span class="dot">Epoxy &amp; metallic</span>
-    <span class="dot">Sealed concrete</span>
-    <span class="dot">Urethane systems</span>
-    <span class="dot">Repair &amp; prep</span>
-  </div>
-</section>
-
-<!-- 3. Services (brand section) -->
-<section id="services" class="bg-brand py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-ink/70 mb-4">What we do</p>
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl text-ink">Prep. Polish. Protect.</h2>
-      <p class="mt-5 text-ink/80 text-lg">From prep to finish, we handle every step to ensure a strong, long-lasting result.</p>
-    </div>
-    <div class="mt-14 grid md:grid-cols-3 gap-6">
-      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-5.jpg" alt="Polished concrete retail floor reflecting light" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7 text-white flex-1">
-          <h3 class="font-heading font-semibold text-2xl">Concrete polishing</h3>
-          <p class="mt-3 text-white/70 text-base">Ground, densified and polished to a matte, satin or high-gloss finish that resists wear without coatings or wax.</p>
-        </div>
-      </article>
-      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-4.jpg" alt="Blue and gray flake epoxy floor" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7 text-white flex-1">
-          <h3 class="font-heading font-semibold text-2xl">Flake, epoxy &amp; metallic</h3>
-          <p class="mt-3 text-white/70 text-base">Full-broadcast chip systems with a polyaspartic topcoat, plus seamless high-build resinous floors built for impact.</p>
-        </div>
-      </article>
-      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Clean concrete slab in front of a garage door" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7 text-white flex-1">
-          <h3 class="font-heading font-semibold text-2xl">Sealed concrete &amp; repair</h3>
-          <p class="mt-3 text-white/70 text-base">Grind-and-seal and densifier systems, plus crack and spall repair, joint filling, shot blasting and moisture mitigation.</p>
-        </div>
-      </article>
-    </div>
-    <div class="mt-10 reveal">
-      <a href="#contact" class="inline-flex bg-ink text-white font-heading font-semibold px-7 py-4 rounded hover:bg-white hover:text-ink transition">Request a free quote</a>
-    </div>
-  </div>
-</section>
-
-<!-- 4. Process -->
-<section id="process" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-ink/60 mb-4">How it works</p>
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl">From first call to finished floor</h2>
-      <p class="mt-5 text-ink/70 text-lg">No guesswork and no surprises. Here is what happens when you work with us.</p>
-    </div>
-    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="reveal border border-stone rounded p-7">
-        <div class="w-14 h-14 border-2 border-brand rounded flex items-center justify-center font-heading font-bold text-xl">01</div>
-        <h3 class="mt-6 font-heading font-semibold text-xl">Free on-site estimate</h3>
-        <p class="mt-3 text-ink/70 text-base">We visit your property, assess the slab, talk through your goals, then send a clear, no-cost quote.</p>
-      </div>
-      <div class="reveal border border-stone rounded p-7">
-        <div class="w-14 h-14 border-2 border-brand rounded flex items-center justify-center font-heading font-bold text-xl">02</div>
-        <h3 class="mt-6 font-heading font-semibold text-xl">Surface prep &amp; repair</h3>
-        <p class="mt-3 text-ink/70 text-base">We diamond-grind the surface and handle cracks, spalls, joints and moisture so your new floor bonds tight.</p>
-      </div>
-      <div class="reveal border border-stone rounded p-7">
-        <div class="w-14 h-14 border-2 border-brand rounded flex items-center justify-center font-heading font-bold text-xl">03</div>
-        <h3 class="mt-6 font-heading font-semibold text-xl">Professional install</h3>
-        <p class="mt-3 text-ink/70 text-base">Our in-house crew installs your polished, epoxy, flake or sealed system, clean, organized and on schedule.</p>
-      </div>
-      <div class="reveal border border-stone rounded p-7">
-        <div class="w-14 h-14 border-2 border-brand rounded flex items-center justify-center font-heading font-bold text-xl">04</div>
-        <h3 class="mt-6 font-heading font-semibold text-xl">Final walk-through</h3>
-        <p class="mt-3 text-ink/70 text-base">We review the finished floor with you, confirm every detail is right, and leave the space clean and ready to use.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. Side by side -->
-<section class="bg-ink text-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-brand mb-4">Finished floors</p>
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl">Two finishes, one standard</h2>
-      <p class="mt-5 text-white/70 text-lg">A high-gloss polished slab on one side, a full-broadcast flake system on the other. Same prep, same care.</p>
-    </div>
-    <div class="mt-14 grid md:grid-cols-2 gap-6">
-      <figure class="reveal">
-        <div class="aspect-[4/5] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-3.jpg" alt="Polished concrete floor across a large commercial space" class="w-full h-full object-cover" loading="lazy"></div>
-        <figcaption class="mt-4 font-heading text-lg">Polished concrete</figcaption>
-      </figure>
-      <figure class="reveal">
-        <div class="aspect-[4/5] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-4.jpg" alt="Flake epoxy floor in blue, white, gray and black" class="w-full h-full object-cover" loading="lazy"></div>
-        <figcaption class="mt-4 font-heading text-lg">Flake epoxy system</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- 6. Compare -->
-<section class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-ink/60 mb-4">Why choose us</p>
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl">A rushed job vs. a floor done right</h2>
-    </div>
-    <div class="mt-14 grid md:grid-cols-2 gap-6">
-      <div class="reveal bg-white border border-stone rounded p-8 sm:p-10">
-        <h3 class="font-heading font-semibold text-2xl">Skipping the prep</h3>
-        <ul class="mt-6 space-y-4 text-ink/70">
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Coatings applied over an unprepared slab</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Cracks and moisture left unaddressed</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Different crews for quote and install</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Finishes that don't suit Florida conditions</li>
-        </ul>
-      </div>
-      <div class="reveal bg-white border-2 border-brand rounded p-8 sm:p-10">
-        <h3 class="font-heading font-semibold text-2xl">Tampa Bay Concrete Polishing &amp; Coatings</h3>
-        <ul class="mt-6 space-y-4">
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Grinding and prep done right for long-term performance</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Crack, spall, joint and moisture repair included in the scope</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>The same team that quotes your floor finishes it</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Systems designed for wear, moisture and heavy use</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. Work bento -->
-<section id="work" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-ink/60 mb-4">Our work</p>
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl">Floors we've finished</h2>
-      <p class="mt-5 text-ink/70 text-lg">Warehouses and retail spaces, garages and homes, storage facilities and showrooms.</p>
-    </div>
-    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="reveal relative col-span-2 lg:col-span-2 lg:row-span-2 aspect-[4/5] sm:aspect-[4/3] lg:aspect-auto rounded overflow-hidden min-h-[320px]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-3.jpg" alt="Polished concrete in a large commercial building" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-6 pt-24"><h3 class="font-heading font-semibold text-xl sm:text-2xl text-white">Commercial polished concrete</h3></div>
-      </div>
-      <div class="reveal relative col-span-1 aspect-square rounded overflow-hidden">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-7.jpg" alt="Polished floor in a self-storage corridor" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-4 pt-16"><h3 class="font-heading font-semibold text-base sm:text-lg text-white">Storage facilities</h3></div>
-      </div>
-      <div class="reveal relative col-span-1 aspect-square rounded overflow-hidden">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-6.jpg" alt="Polished concrete living space with brick fireplace" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-4 pt-16"><h3 class="font-heading font-semibold text-base sm:text-lg text-white">Residential interiors</h3></div>
-      </div>
-      <div class="reveal relative col-span-1 aspect-square rounded overflow-hidden">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-8.jpg" alt="Polished slab inside a steel-frame shop" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-4 pt-16"><h3 class="font-heading font-semibold text-base sm:text-lg text-white">Shops &amp; industrial</h3></div>
-      </div>
-      <div class="reveal relative col-span-1 aspect-square rounded overflow-hidden">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-5.jpg" alt="Polished concrete floor in a retail entrance" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-4 pt-16"><h3 class="font-heading font-semibold text-base sm:text-lg text-white">Retail &amp; showrooms</h3></div>
-      </div>
-      <div class="reveal relative col-span-2 lg:col-span-2 aspect-[16/9] rounded overflow-hidden">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21943/photo-4.jpg" alt="Flake epoxy floor in a freshly painted room" class="absolute inset-0 w-full h-full object-cover object-bottom" loading="lazy">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-5 pt-20"><h3 class="font-heading font-semibold text-lg sm:text-xl text-white">Flake &amp; epoxy coatings</h3></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. About split -->
-<section id="about" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Difference -->
+<section id="about" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
     <div class="lg:col-span-6 reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-ink/60 mb-4">About us</p>
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl">The crew that quotes your floor finishes it</h2>
-      <p class="mt-6 text-ink/75 text-lg">Tampa Bay Concrete Polishing &amp; Concrete Coatings specializes in concrete polishing, epoxy flooring and durable coating systems for commercial, industrial and residential properties across Tampa Bay. We combine quality materials, expert craftsmanship and proper surface preparation to deliver floors built to last.</p>
-      <p class="mt-4 text-ink/75 text-lg">From warehouses and retail spaces to garages and pool decks, every project gets attention to detail and reliable service, with results designed for Florida's climate.</p>
-      <ul class="mt-8 space-y-3">
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built to handle wear, moisture and heavy use</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Custom finishes from flake systems to metallic epoxy</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Owner-operated, with simple accountability</li>
-      </ul>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="tel:8009559530" class="inline-flex justify-center bg-brand text-ink font-heading font-semibold px-7 py-4 rounded hover:bg-ink hover:text-white transition">Call (800) 955-9530</a>
-        <a href="#contact" class="inline-flex justify-center border border-ink/30 font-heading font-semibold px-7 py-4 rounded hover:border-brand transition">Request a quote</a>
+      <p class="label text-brand-dark mb-4">The Tampa Bay Concrete difference</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl">Floors prepped right, finished right, built for Florida</h2>
+      <div class="mt-12 grid grid-cols-2 gap-4">
+        <div class="aspect-[4/5] rounded overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-7.jpg" alt="Large polished concrete floor inside a steel building" class="w-full h-full object-cover">
+        </div>
+        <div class="grid grid-rows-2 gap-4">
+          <div class="bg-brand rounded p-6 flex flex-col justify-end">
+            <p class="text-ink font-bold text-xl leading-snug">Same team quotes your floor and finishes it.</p>
+          </div>
+          <div class="rounded overflow-hidden min-h-[140px]">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-3.jpg" alt="Blue, white and grey flake epoxy floor" class="w-full h-full object-cover">
+          </div>
+        </div>
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1685464196343-c377192f9387?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew member finishing a concrete slab" class="w-full h-full object-cover object-center" loading="lazy"></div>
+      <p class="text-lg text-ink/75 leading-relaxed">Tampa Bay Concrete Polishing &amp; Concrete Coatings specializes in concrete polishing, epoxy flooring and durable coating systems for commercial, industrial and residential properties. We combine quality materials, expert craftsmanship and proper surface preparation to deliver floors built to last.</p>
+      <p class="mt-5 text-lg text-ink/75 leading-relaxed">From warehouses and retail spaces to garages and pool decks, every project gets attention to detail and results designed for Florida's climate.</p>
+      <div class="mt-10 divide-y divide-stone border-t border-stone">
+        <div class="py-5">
+          <h3 class="text-lg font-bold">Built to last</h3>
+          <p class="text-ink/70 mt-1">Coating systems designed to handle wear, moisture and heavy use.</p>
+        </div>
+        <div class="py-5">
+          <h3 class="text-lg font-bold">Proper prep work</h3>
+          <p class="text-ink/70 mt-1">We don't cut corners. Grinding and prep are done right for long-term performance.</p>
+        </div>
+        <div class="py-5">
+          <h3 class="text-lg font-bold">Custom finishes</h3>
+          <p class="text-ink/70 mt-1">From flake systems to metallic epoxy, finishes that match your space and style.</p>
+        </div>
+        <div class="py-5 border-b border-stone">
+          <h3 class="text-lg font-bold">Owner-operated quality</h3>
+          <p class="text-ink/70 mt-1">Consistent quality from an in-house crew, with simple accountability.</p>
+        </div>
+      </div>
+      <a href="tel:8009559530" class="mt-9 inline-flex items-center gap-4 group">
+        <span class="bg-brand text-ink w-14 h-14 rounded-full flex items-center justify-center shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block text-xs uppercase tracking-widest text-ink/50 font-bold">Call for a free estimate</span>
+          <span class="block text-2xl font-bold group-hover:text-brand-dark transition">(800) 955-9530</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="relative pt-24 lg:pt-32 pb-24 lg:pb-32 bg-paper">
+  <div class="absolute top-0 left-0 right-0 h-[420px] lg:h-[460px] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end reveal">
+      <div class="lg:col-span-7">
+        <p class="label text-ink/70 mb-4">What we do</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl text-ink">Concrete polishing and coating services</h2>
+      </div>
+      <p class="lg:col-span-5 text-ink/80 text-lg leading-relaxed">From prep to finish, we handle every step to ensure a strong, long-lasting result.</p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#contact" class="card block bg-white rounded p-3 group reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-6.jpg" alt="Polished concrete floor in a storage facility hallway" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-3 pt-5 pb-4">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-bold">Concrete Polishing</h3>
+            <svg class="shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-2 text-ink/70 text-[15px] leading-relaxed">Ground, densified and polished to a matte, satin or high-gloss finish that resists wear.</p>
+        </div>
+      </a>
+      <a href="#contact" class="card block bg-white rounded p-3 group reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-3.jpg" alt="Full-broadcast flake epoxy floor" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-3 pt-5 pb-4">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-bold">Flake Coatings</h3>
+            <svg class="shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-2 text-ink/70 text-[15px] leading-relaxed">Full-broadcast chip systems with a polyaspartic topcoat for garages, showrooms and busy floors.</p>
+        </div>
+      </a>
+      <a href="#contact" class="card block bg-white rounded p-3 group reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1772300164438-f73307d3b645?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew applying a resinous floor coating in a warehouse" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-3 pt-5 pb-4">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-bold">Epoxy &amp; Metallic</h3>
+            <svg class="shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-2 text-ink/70 text-[15px] leading-relaxed">Seamless, high-build resinous floors, from metallic epoxy to quartz broadcast systems built for impact.</p>
+        </div>
+      </a>
+      <a href="#contact" class="card block bg-white rounded p-3 group reveal">
+        <div class="aspect-[4/3] rounded overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-5.jpg" alt="Sealed concrete floor in a living space" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-3 pt-5 pb-4">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-bold">Sealed Concrete</h3>
+            <svg class="shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <p class="mt-2 text-ink/70 text-[15px] leading-relaxed">Grind-and-seal and densifier systems that lock out moisture and dust and keep a natural look.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded p-8 reveal">
+        <h3 class="text-xl font-bold">Urethane Systems</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">Cementitious urethane floors for thermal shock, heavy impact and wet, demanding production environments.</p>
+      </div>
+      <div class="bg-white rounded p-8 reveal">
+        <h3 class="text-xl font-bold">Repair &amp; Prep</h3>
+        <p class="mt-2 text-ink/70 leading-relaxed">Crack and spall repair, joint filling, shot blasting and moisture mitigation. The groundwork that makes a floor last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects gallery -->
+<section id="projects" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end reveal">
+      <div class="lg:col-span-7">
+        <p class="label text-brand-dark mb-4">Recent floors</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl">Polished, coated and sealed across Tampa Bay</h2>
+      </div>
+      <p class="lg:col-span-5 text-ink/70 text-lg leading-relaxed">Warehouses, retail spaces, storage facilities and homes. Here is a look at recent work from our crew.</p>
+    </div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="col-span-2 aspect-[16/10] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-7.jpg" alt="Polished concrete in a steel-frame building" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-[4/5] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-4.jpg" alt="Polished concrete entry at a retail space" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-[4/5] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-3.jpg" alt="Blue flake epoxy floor" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-[4/5] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-6.jpg" alt="Polished concrete in a storage corridor" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 aspect-[4/5] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-2.jpg" alt="Polished warehouse floor with reflecting lights" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-2 aspect-[16/10] rounded overflow-hidden reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-5.jpg" alt="Sealed concrete floor in a home" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section id="process" class="py-24 lg:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14">
+    <div class="lg:col-span-5 reveal">
+      <p class="label text-brand-dark mb-4">How it works</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl">From first call to finished floor</h2>
+      <p class="mt-6 text-ink/70 text-lg leading-relaxed">No guesswork and no surprises. Here is exactly what happens when you work with us.</p>
+      <div class="mt-9 aspect-[4/3] rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1588130739798-136cb52da55c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete surface detail" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="lg:col-span-7 divide-y divide-ink/10 border-t border-ink/10">
+      <div class="py-8 flex gap-6 reveal">
+        <span class="text-brand-dark font-bold text-lg w-10 shrink-0">01</span>
+        <div>
+          <h3 class="text-xl font-bold">Free on-site estimate</h3>
+          <p class="mt-2 text-ink/70 leading-relaxed">We visit your property, assess the slab and talk through your goals, then send a clear, no-cost quote.</p>
+        </div>
+      </div>
+      <div class="py-8 flex gap-6 reveal">
+        <span class="text-brand-dark font-bold text-lg w-10 shrink-0">02</span>
+        <div>
+          <h3 class="text-xl font-bold">Surface prep and repair</h3>
+          <p class="mt-2 text-ink/70 leading-relaxed">We diamond-grind the surface and handle cracks, spalls, joints and moisture so your new floor bonds tight and lasts.</p>
+        </div>
+      </div>
+      <div class="py-8 flex gap-6 reveal">
+        <span class="text-brand-dark font-bold text-lg w-10 shrink-0">03</span>
+        <div>
+          <h3 class="text-xl font-bold">Professional install</h3>
+          <p class="mt-2 text-ink/70 leading-relaxed">Our in-house crew installs your polished, epoxy, flake or sealed system, clean, organized and finished on schedule.</p>
+        </div>
+      </div>
+      <div class="py-8 flex gap-6 border-b border-ink/10 reveal">
+        <span class="text-brand-dark font-bold text-lg w-10 shrink-0">04</span>
+        <div>
+          <h3 class="text-xl font-bold">Final walk-through</h3>
+          <p class="mt-2 text-ink/70 leading-relaxed">We review the completed floor with you, confirm every detail is right and leave the space clean and ready to use.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service areas -->
+<section class="py-24 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-6 reveal">
+      <p class="label text-brand-dark mb-4">Service areas</p>
+      <h2 class="text-3xl sm:text-4xl">Proudly serving Tampa Bay</h2>
+      <p class="mt-5 text-ink/70 text-lg leading-relaxed">Professional concrete polishing, coatings and surface prep throughout the region, from residential homes to commercial properties, with results built for the local climate.</p>
+      <ul class="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 font-semibold">
+        <li>Tampa</li><li>Bradenton</li>
+        <li>St. Petersburg</li><li>Brandon</li>
+        <li>Clearwater</li><li>Riverview</li>
+        <li>Lakeland</li><li>Wesley Chapel</li>
+        <li>Sarasota</li><li>New Port Richey</li>
+      </ul>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[16/10] rounded overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/photo-10.jpg" alt="Tampa skyline across the water" class="w-full h-full object-cover">
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="py-24 lg:py-28 bg-white">
-  <div class="max-w-4xl mx-auto px-5 lg:px-8">
-    <div class="reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-ink/60 mb-4">FAQs</p>
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl">Common questions</h2>
+<section id="faq" class="py-24 lg:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4 reveal">
+      <p class="label text-brand-dark mb-4">FAQs</p>
+      <h2 class="text-3xl sm:text-4xl">Frequently asked questions</h2>
+      <p class="mt-5 text-ink/70 text-lg leading-relaxed">Quick answers to the questions we hear most.</p>
     </div>
-    <div class="mt-10 divide-y divide-stone border-y border-stone reveal">
-      <details class="py-5 group">
-        <summary class="cursor-pointer list-none flex justify-between gap-4 font-heading font-semibold text-lg">What is the difference between polished concrete and epoxy flooring?<span class="text-brand text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-3 text-ink/70">Polished concrete enhances your existing slab by mechanically grinding and polishing it, while epoxy adds a protective coating over the surface. Polished concrete offers a natural finish with minimal maintenance. Epoxy provides additional chemical resistance, color options and decorative finishes.</p>
+    <div class="lg:col-span-8 divide-y divide-ink/10 border-t border-b border-ink/10 reveal">
+      <details class="group py-6">
+        <summary class="flex items-center justify-between gap-6 cursor-pointer list-none font-bold text-lg">What is the difference between polished concrete and epoxy flooring?<span class="text-brand-dark text-2xl leading-none shrink-0 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Polished concrete enhances your existing slab by mechanically grinding and polishing it, while epoxy adds a protective coating over the surface. Polished concrete offers a natural finish with minimal maintenance. Epoxy provides additional chemical resistance, color options and decorative finishes.</p>
       </details>
-      <details class="py-5 group">
-        <summary class="cursor-pointer list-none flex justify-between gap-4 font-heading font-semibold text-lg">Do you handle surface prep and repairs?<span class="text-brand text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-3 text-ink/70">Yes. We handle grinding, crack repair and full prep to ensure a strong, long-lasting finish.</p>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between gap-6 cursor-pointer list-none font-bold text-lg">Do you handle surface prep and repairs?<span class="text-brand-dark text-2xl leading-none shrink-0 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">Yes. We handle grinding, crack repair and full prep to ensure a strong, long-lasting finish.</p>
       </details>
-      <details class="py-5 group">
-        <summary class="cursor-pointer list-none flex justify-between gap-4 font-heading font-semibold text-lg">What types of concrete floor coatings do you install?<span class="text-brand text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-3 text-ink/70">We install epoxy, polyaspartic, polyurea, urethane, metallic epoxy, flake broadcast, quartz broadcast, anti-slip and chemical-resistant floor coating systems for commercial, industrial and residential properties.</p>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between gap-6 cursor-pointer list-none font-bold text-lg">What types of concrete floor coatings do you install?<span class="text-brand-dark text-2xl leading-none shrink-0 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">We install epoxy, polyaspartic, polyurea, urethane, metallic epoxy, flake broadcast, quartz broadcast, anti-slip and chemical-resistant floor coating systems for commercial, industrial and residential properties throughout Florida.</p>
       </details>
-      <details class="py-5 group">
-        <summary class="cursor-pointer list-none flex justify-between gap-4 font-heading font-semibold text-lg">How long do concrete floor coatings last?<span class="text-brand text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-3 text-ink/70">A professionally installed coating can last 10 to 20 years or more with proper maintenance. Lifespan depends on the type of coating, traffic levels and how the floor is used.</p>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between gap-6 cursor-pointer list-none font-bold text-lg">How long do concrete floor coatings last?<span class="text-brand-dark text-2xl leading-none shrink-0 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">A professionally installed coating can last 10 to 20 years or more with proper maintenance. Lifespan depends on the coating type, traffic levels and how the floor is used.</p>
       </details>
-      <details class="py-5 group">
-        <summary class="cursor-pointer list-none flex justify-between gap-4 font-heading font-semibold text-lg">What areas do you serve?<span class="text-brand text-2xl leading-none group-open:rotate-45 transition">+</span></summary>
-        <p class="mt-3 text-ink/70">We serve Tampa, St. Petersburg, Clearwater, Lakeland, Sarasota, Bradenton, Brandon, Riverview, Wesley Chapel, New Port Richey and surrounding Florida communities.</p>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between gap-6 cursor-pointer list-none font-bold text-lg">What areas do you serve?<span class="text-brand-dark text-2xl leading-none shrink-0 group-open:rotate-45 transition">+</span></summary>
+        <p class="mt-4 text-ink/70 leading-relaxed">We serve commercial, industrial and residential customers throughout Tampa, St. Petersburg, Clearwater, Lakeland, Sarasota, Bradenton, Brandon, Riverview, Wesley Chapel, New Port Richey and surrounding Florida communities.</p>
       </details>
-    </div>
-  </div>
-</section>
-
-<!-- 9. Service areas -->
-<section id="areas" class="py-24 lg:py-28 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs uppercase tracking-[0.2em] text-ink/60 mb-4">Service area</p>
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl">Proudly serving Tampa Bay</h2>
-      <p class="mt-5 text-ink/70 text-lg">Polishing, coatings and surface prep across the region, from residential homes to commercial properties.</p>
-    </div>
-    <div class="mt-10 flex flex-wrap gap-3 reveal">
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">Tampa</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">St. Petersburg</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">Clearwater</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">Lakeland</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">Sarasota</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">Bradenton</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">Brandon</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">Riverview</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">Wesley Chapel</span>
-      <span class="bg-white border border-stone rounded px-5 py-3 font-heading font-medium">New Port Richey</span>
     </div>
   </div>
 </section>
 
-<!-- 10. Call band -->
-<section class="bg-ink text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-7">
-      <h2 class="font-heading font-bold text-4xl sm:text-5xl">Ready for a floor that lasts?</h2>
+<!-- Call band -->
+<section class="bg-ink py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+    <div class="max-w-2xl">
+      <h2 class="text-brand text-3xl sm:text-4xl lg:text-5xl">Ready for a floor that lasts?</h2>
       <p class="mt-4 text-white/70 text-lg">Free, no-obligation on-site estimates across Tampa Bay.</p>
     </div>
-    <div class="lg:col-span-5 flex flex-col gap-4">
-      <a href="tel:8009559530" class="inline-flex justify-center bg-brand text-ink font-heading font-semibold text-xl px-7 py-4 rounded hover:bg-white transition">(800) 955-9530</a>
-      <a href="mailto:info@concretecoatingsflorida.com" class="inline-flex justify-center items-center border border-white/30 text-white font-heading font-medium px-5 py-4 rounded hover:border-brand hover:text-brand transition text-[15px] sm:text-base text-center break-words">info@concretecoatingsflorida.com</a>
+    <div class="flex flex-wrap gap-3">
+      <a href="#contact" class="bg-brand text-ink font-bold px-7 py-4 rounded-full hover:bg-white transition">Get a free estimate</a>
+      <a href="tel:8009559530" class="border border-white/30 text-white font-bold px-7 py-4 rounded-full hover:border-brand hover:text-brand transition">(800) 955-9530</a>
     </div>
   </div>
 </section>
@@ -402,16 +402,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#68ccd1;box-shadow:0 0 0 4px rgba(104,204,209,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#68ccd1;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#68ccd1;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -422,7 +422,7 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div style="color:#fff"><p class="lp-kick" style="color:#68ccd1">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your floor and we'll get back to you quickly with a no-cost quote.</p><ul class="lp-info">
+    <div style="color:#fff"><p class="lp-kick" style="color:#68ccd1">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your floor and we'll get back to you quickly with a no-cost estimate.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18009559530" class="lp-v lp-v-d">(800) 955-9530</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -436,7 +436,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Concrete polishing</option><option>Flake coatings</option><option>Epoxy and metallic floors</option><option>Sealed concrete</option><option>Urethane systems</option><option>Repair and prep</option><option>Pool deck resurfacing</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Concrete Polishing</option><option>Flake Coatings</option><option>Epoxy &amp; Metallic</option><option>Sealed Concrete</option><option>Urethane Systems</option><option>Repair &amp; Prep</option><option>Pool Deck Resurfacing</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -449,29 +449,25 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-ink text-white/80 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid md:grid-cols-12 gap-10">
+<footer class="bg-ink text-white/70">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
     <div class="md:col-span-5">
-      <div class="font-heading text-white leading-none">
-        <span class="block text-xl font-semibold tracking-tight">Tampa Bay Concrete</span>
-        <span class="block text-xs uppercase tracking-[0.18em] text-brand mt-1">Polishing &amp; Coatings</span>
-      </div>
-      <p class="mt-5 text-white/60 text-base max-w-sm">Commercial, industrial and residential concrete polishing and coatings across Tampa Bay and Central Florida.</p>
+      <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/tampa-bay-concrete-polishing-and-concrete-coatings/21950/logo-0.png" alt="Tampa Bay Concrete Polishing &amp; Concrete Coatings" class="h-14 w-auto">
+      <p class="mt-6 max-w-sm leading-relaxed">Commercial, industrial and residential concrete polishing and coatings across Tampa Bay and Central Florida.</p>
     </div>
     <div class="md:col-span-3">
-      <h3 class="font-heading font-semibold text-white mb-4">Services</h3>
-      <ul class="space-y-2 text-base">
-        <li>Concrete polishing</li>
-        <li>Flake coatings</li>
-        <li>Epoxy &amp; metallic</li>
-        <li>Sealed concrete</li>
-        <li>Urethane systems</li>
-        <li>Repair &amp; prep</li>
+      <h4 class="text-white font-bold mb-5">Services</h4>
+      <ul class="space-y-3">
+        <li><a href="#services" class="hover:text-brand transition">Concrete Polishing</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Flake Coatings</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Epoxy &amp; Metallic</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Sealed Concrete</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Urethane Systems</a></li>
       </ul>
     </div>
     <div class="md:col-span-4">
-      <h3 class="font-heading font-semibold text-white mb-4">Contact</h3>
-      <ul class="space-y-3 text-base">
+      <h4 class="text-white font-bold mb-5">Contact</h4>
+      <ul class="space-y-3">
         <li><a href="tel:8009559530" class="hover:text-brand transition">(800) 955-9530</a></li>
         <li><a href="mailto:info@concretecoatingsflorida.com" class="hover:text-brand transition break-words">info@concretecoatingsflorida.com</a></li>
         <li>Tampa, FL</li>
@@ -481,7 +477,7 @@ tailwind.config = {
   <div class="border-t border-white/10">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/50 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Tampa Bay Concrete Polishing &amp; Concrete Coatings website.</p>
-      <p>Some photos by web seo and Mélyna Côté on Unsplash.</p>
+      <p>Some photos by Dave Lowe, Craftsman Concrete Floors and Mélyna Côté on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -490,11 +486,16 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  document.querySelectorAll('.mlink').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else {
+    els.forEach(el => el.classList.add('in'));
+  }
 </script>
 </body>
 </html>

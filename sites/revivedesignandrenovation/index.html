@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Revive Design and Renovation | Kitchen & Bath Remodeling in Tampa, FL</title>
+<title>Revive Design and Renovation | Kitchen, Bathroom and Interior Remodeling in Tampa and Orlando</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -13,237 +13,351 @@
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Roboto', 'system-ui', 'sans-serif'] },
+      fontFamily: { sans: ['Roboto', 'sans-serif'] },
       colors: {
-        brand: '#1c3d5a',
-        brandDark: '#0f2437',
-        ink: '#12161a',
-        paper: '#f6f4f0',
-        mist: '#ecebe7'
+        brand: '#0071bb',
+        ink: '#0c1a26',
+        deep: '#06304d',
+        paper: '#f6f5f2'
       },
-      borderRadius: { DEFAULT: '20px' }
+      borderRadius: { DEFAULT: '6px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Roboto', system-ui, sans-serif; color: #12161a; background: #ffffff; -webkit-font-smoothing: antialiased; }
-  h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.08; }
-  .r { border-radius: 20px; }
+  body { font-family: 'Roboto', sans-serif; color: #0c1a26; background: #fff; -webkit-font-smoothing: antialiased; }
+  h1,h2,h3,h4 { letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .label { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; padding: 14px 26px; font-weight: 500; transition: background .2s, color .2s; }
-  .photo { position: relative; overflow: hidden; border-radius: 20px; background: #ecebe7; }
-  .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .logo-light { filter: none; }
+  .tile-grad { background: linear-gradient(to top, rgba(6,14,22,.88) 0%, rgba(6,14,22,.35) 45%, rgba(6,14,22,0) 70%); }
+  .hero-shade { background: linear-gradient(100deg, rgba(6,14,22,.92) 0%, rgba(6,14,22,.78) 45%, rgba(6,14,22,.5) 100%); }
+  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .ba-top { position: absolute; inset: 0; width: 50%; overflow: hidden; }
+  .ba-top img { position: absolute; top: 0; left: 0; height: 100%; max-width: none; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #fff; transform: translateX(-1px); pointer-events: none; }
+  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 9999px; background: #0071bb; border: 2px solid #fff; display:flex; align-items:center; justify-content:center; }
+  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .dot::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 9999px; background: #0071bb; margin-right: 14px; vertical-align: middle; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body>
+<body class="antialiased">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-brandDark border-b border-white/10">
+<header id="top" class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0"><img src="https://www.revivedesignandrenovation.com/wp-content/uploads/2024/09/Logo.svg" alt="Revive Design and Renovation" class="h-11 w-auto"></a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/80">
+    <a href="#top" class="shrink-0 flex items-center">
+      <img src="https://www.revivedesignandrenovation.com/wp-content/uploads/2024/09/Logo.svg" alt="Revive Design and Renovation" class="h-12 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/85">
       <a href="#services" class="hover:text-white">Services</a>
       <a href="#process" class="hover:text-white">Process</a>
-      <a href="#gallery" class="hover:text-white">Gallery</a>
+      <a href="#work" class="hover:text-white">Our Work</a>
       <a href="#why" class="hover:text-white">Why Revive</a>
+      <a href="#areas" class="hover:text-white">Service Area</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18137304954" class="hidden sm:inline-flex btn bg-white text-brandDark hover:bg-paper text-[15px] py-3">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (813) 730-4954
+      <a href="tel:8137269170" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-[#005f9e] text-white text-sm font-medium px-5 py-3 rounded transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Tampa 813-726-9170
       </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center text-white" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center text-white border border-white/20 rounded" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-brandDark border-t border-white/10 px-5 pb-6">
-    <nav class="flex flex-col text-white/90 text-lg">
-      <a href="#services" class="py-3 border-b border-white/10">Services</a>
-      <a href="#process" class="py-3 border-b border-white/10">Process</a>
-      <a href="#gallery" class="py-3 border-b border-white/10">Gallery</a>
-      <a href="#why" class="py-3 border-b border-white/10">Why Revive</a>
-      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
-      <a href="tel:+18137304954" class="mt-5 btn bg-white text-brandDark justify-center">Call (813) 730-4954</a>
-    </nav>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
+    <div class="px-5 py-5 flex flex-col gap-4 text-white/90 text-base">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#work">Our Work</a>
+      <a href="#why">Why Revive</a>
+      <a href="#areas">Service Area</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:8137269170" class="bg-brand text-white text-center font-medium px-5 py-3 rounded">Tampa 813-726-9170</a>
+      <a href="tel:4073072672" class="border border-white/30 text-white text-center font-medium px-5 py-3 rounded">Orlando 407-307-2672</a>
+    </div>
   </div>
 </header>
 
-<main id="top">
+<main>
 
-<!-- HERO -->
-<section class="bg-paper pt-14 lg:pt-20 pb-20 lg:pb-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-      <div class="lg:col-span-7">
-        <h1 class="text-[40px] sm:text-6xl lg:text-[76px] font-medium text-ink">Kitchens and baths, <span class="font-bold">remodeled</span> start to finish in Tampa.</h1>
-      </div>
-      <div class="lg:col-span-5 lg:pb-3">
-        <p class="text-lg text-ink/75 leading-relaxed">Revive Design and Renovation is a family-owned interior remodeling company. Design, permitting, construction and installation, all handled by one team, so you deal with one point of contact instead of many.</p>
-      </div>
-    </div>
-
-    <div class="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-5">
-      <div class="lg:col-span-6 photo aspect-[4/3] lg:aspect-auto lg:min-h-[480px]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-1.jpg" alt="Remodeled white kitchen with marble backsplash and navy barstools">
-      </div>
-      <div class="lg:col-span-3 flex flex-col gap-5">
-        <div class="photo aspect-[4/3] lg:aspect-auto lg:flex-1 lg:min-h-[260px]">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-4.jpg" alt="Warm wood kitchen with stone island and lit toe-kick">
-        </div>
-        <a href="#contact" class="btn bg-brand text-white hover:bg-brandDark justify-center">
-          Schedule a free consultation
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-      <div class="lg:col-span-3 r bg-mist p-8 flex flex-col justify-between min-h-[260px]">
-        <p class="label text-ink/60">Recognition</p>
-        <div>
-          <p class="text-6xl font-medium text-brand leading-none">23</p>
-          <p class="mt-3 text-lg text-ink/80">NARI awards for home designs and remodels.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- THREE COLUMNS -->
-<section class="py-20 lg:py-28 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10">
-    <div class="reveal">
-      <p class="label text-brand mb-4">Turnkey</p>
-      <p class="text-ink/75 text-lg leading-relaxed">We handle design, permitting, demolition, construction, installation, plumbing and electrical, so you don't coordinate multiple contractors.</p>
-    </div>
-    <div class="reveal">
-      <p class="label text-brand mb-4">Custom</p>
-      <p class="text-ink/75 text-lg leading-relaxed">No cookie-cutter solutions. Every project is built around your needs and design preferences.</p>
-    </div>
-    <div class="reveal">
-      <p class="label text-brand mb-4">In-house team</p>
-      <p class="text-ink/75 text-lg leading-relaxed">Our designers, project managers and craftsmen are part of the Revive team, which keeps problems close and solved directly.</p>
-    </div>
-  </div>
-</section>
-
-<!-- MISSION STATEMENT -->
-<section class="pb-20 lg:pb-28 bg-white">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
-    <p class="text-3xl sm:text-4xl lg:text-[52px] font-medium text-ink leading-[1.15] tracking-tight">Life improvement through home improvement. One family-owned team, one clear process, one home made better.</p>
-  </div>
-</section>
-
-<!-- COLLAGE -->
-<section id="gallery" class="pb-24 lg:pb-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5 grid-flow-row-dense">
-      <div class="col-span-1 lg:col-span-3 photo aspect-[3/4]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-5.jpg" alt="Walk-in closet with dark wood cabinetry and brass pulls"></div>
-      <div class="col-span-1 lg:col-span-6 lg:row-span-2 photo aspect-[4/3] lg:aspect-auto lg:min-h-[520px] order-first lg:order-none col-span-2"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-2.jpg" alt="Open kitchen and dining area with stone island and oak floors"></div>
-      <div class="col-span-1 lg:col-span-3 photo aspect-[3/4]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-8.jpg" alt="Primary bathroom with marble shower and freestanding tub"></div>
-      <div class="col-span-1 lg:col-span-3 photo aspect-[3/4]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-3.jpg" alt="Laundry and mudroom with checkerboard floor"></div>
-      <div class="col-span-1 lg:col-span-3 photo aspect-[3/4]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-7.jpg" alt="Dark cabinet wet bar with herringbone marble backsplash"></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl mb-14 lg:mb-20">
-      <p class="label text-brand mb-4">How it works</p>
-      <h2 class="text-4xl lg:text-5xl font-medium text-ink">Revive your home in three steps.</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div class="r bg-white p-8 lg:p-10">
-        <p class="text-5xl font-medium text-brand">01</p>
-        <h3 class="mt-8 text-2xl font-medium">Schedule a consultation</h3>
-        <p class="mt-4 text-ink/70 leading-relaxed">A consultant visits your home, discusses your needs and explains how our process works. No cost or obligation.</p>
-      </div>
-      <div class="r bg-white p-8 lg:p-10">
-        <p class="text-5xl font-medium text-brand">02</p>
-        <h3 class="mt-8 text-2xl font-medium">Meet with a designer</h3>
-        <p class="mt-4 text-ink/70 leading-relaxed">You're paired with a dedicated designer who creates a custom kitchen or bathroom design that fits your taste and how you live.</p>
-      </div>
-      <div class="r bg-white p-8 lg:p-10">
-        <p class="text-5xl font-medium text-brand">03</p>
-        <h3 class="mt-8 text-2xl font-medium">Watch the revival unfold</h3>
-        <p class="mt-4 text-ink/70 leading-relaxed">We handle permitting, construction and installation. The job isn't complete until you are 100% satisfied.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 lg:mb-16">
-      <div class="max-w-2xl">
-        <p class="label text-brand mb-4">What we remodel</p>
-        <h2 class="text-4xl lg:text-5xl font-medium text-ink">Full-service interior remodeling.</h2>
-      </div>
-      <a href="#contact" class="btn bg-brand text-white hover:bg-brandDark self-start md:self-auto">Request a consultation</a>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <article class="group">
-        <div class="photo aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-6.jpg" alt="Light grey kitchen with arabesque tile backsplash"></div>
-        <h3 class="mt-5 text-xl font-medium">Kitchens</h3>
-        <p class="mt-2 text-ink/70 leading-relaxed">Custom layouts, cabinetry, counters and finishes, built around how you cook and gather.</p>
-      </article>
-      <article class="group">
-        <div class="photo aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-10.jpg" alt="Bathroom with freestanding tub and marble floor"></div>
-        <h3 class="mt-5 text-xl font-medium">Bathrooms</h3>
-        <p class="mt-2 text-ink/70 leading-relaxed">Showers, tubs, vanities and tile, designed and installed with plumbing and electrical in house.</p>
-      </article>
-      <article class="group">
-        <div class="photo aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-9.jpg" alt="Kitchen with waterfall island and oak cabinetry"></div>
-        <h3 class="mt-5 text-xl font-medium">Full home interiors</h3>
-        <p class="mt-2 text-ink/70 leading-relaxed">Whole-home interior remodeling with one team carrying the design through every room.</p>
-      </article>
-      <article class="group">
-        <div class="photo aspect-[4/5]"><img src="https://images.unsplash.com/photo-1649083048455-01f6827c24d6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright white kitchen with island and pendant lights"></div>
-        <h3 class="mt-5 text-xl font-medium">Showroom visits</h3>
-        <p class="mt-2 text-ink/70 leading-relaxed">See cabinetry, tile and finishes in person at our Tampa design center on W Kennedy Blvd.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE -->
-<section id="why" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-5 photo aspect-[4/5] lg:aspect-[3/4]">
-      <img src="https://images.unsplash.com/photo-1682888818602-b4492fadf2f8?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="White remodeled kitchen with farmhouse sink and brass fixtures">
-    </div>
+<!-- 1. HERO -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-1.jpg" alt="Remodeled kitchen with marble backsplash and blue velvet barstools" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-shade"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <p class="label text-brand mb-4">Why choose Revive</p>
-      <h2 class="text-4xl lg:text-5xl font-medium text-ink max-w-xl">A remodeler built around your peace of mind.</h2>
-      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
-        <div>
-          <span class="w-10 h-10 r bg-brand text-white flex items-center justify-center mb-4" style="border-radius:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
-          <h3 class="text-xl font-medium">Family owned</h3>
-          <p class="mt-2 text-ink/70 leading-relaxed">We focus on client communication and customer satisfaction on every project.</p>
-        </div>
-        <div>
-          <span class="w-10 h-10 bg-brand text-white flex items-center justify-center mb-4" style="border-radius:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
-          <h3 class="text-xl font-medium">In house</h3>
-          <p class="mt-2 text-ink/70 leading-relaxed">Designers, project managers and craftsmen on one team, with fewer handoffs.</p>
-        </div>
-        <div>
-          <span class="w-10 h-10 bg-brand text-white flex items-center justify-center mb-4" style="border-radius:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
-          <h3 class="text-xl font-medium">Custom</h3>
-          <p class="mt-2 text-ink/70 leading-relaxed">Every project is shaped around your needs and design preferences.</p>
-        </div>
-        <div>
-          <span class="w-10 h-10 bg-brand text-white flex items-center justify-center mb-4" style="border-radius:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
-          <h3 class="text-xl font-medium">Peace of mind</h3>
-          <p class="mt-2 text-ink/70 leading-relaxed">Experienced, vetted professionals and a one-year parts and labor warranty.</p>
+      <p class="text-xs tracking-[0.22em] uppercase text-white/70 mb-6">Tampa and Orlando, Florida</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-bold uppercase leading-[1.02]">
+        Kitchens.<br>Bathrooms.<br>Whole-home interiors.
+      </h1>
+      <p class="mt-7 text-lg text-white/85 max-w-xl leading-relaxed">
+        Revive Design and Renovation is a family-owned remodeling company. We handle design, permitting, demolition, construction and installation, so you deal with one team from first sketch to final walkthrough.
+      </p>
+      <ul class="mt-8 space-y-3 text-white/90">
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5db7f2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Winner of 23 NARI awards for home designs and remodels</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5db7f2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Designers, project managers and craftsmen on our own team</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5db7f2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>0% interest and no payments for 24 months (limited time offer)</li>
+      </ul>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-brand hover:bg-[#005f9e] text-white font-medium px-7 py-4 rounded text-center transition-colors">Schedule a consultation</a>
+        <a href="#work" class="border border-white/40 hover:bg-white hover:text-ink text-white font-medium px-7 py-4 rounded text-center transition-colors">See our work</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="bg-white text-ink rounded p-8 lg:p-9">
+        <p class="text-xs tracking-[0.2em] uppercase text-brand font-medium">Complimentary consultation</p>
+        <h2 class="mt-3 text-2xl lg:text-3xl font-bold leading-tight">Get a free estimate</h2>
+        <p class="mt-3 text-slate-600 leading-relaxed">Call the office nearest you, or send an email and we will get back to you.</p>
+        <div class="mt-6 space-y-3">
+          <a href="tel:8137269170" class="flex items-center justify-between bg-brand hover:bg-[#005f9e] text-white px-5 py-4 rounded transition-colors">
+            <span><span class="block text-xs uppercase tracking-wider opacity-80">Tampa</span><span class="text-lg font-medium">813-726-9170</span></span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="tel:4073072672" class="flex items-center justify-between bg-ink hover:bg-deep text-white px-5 py-4 rounded transition-colors">
+            <span><span class="block text-xs uppercase tracking-wider opacity-70">Orlando</span><span class="text-lg font-medium">407-307-2672</span></span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="mailto:info@revivedandr.com" class="flex items-center justify-between border border-slate-300 hover:border-ink text-ink px-5 py-4 rounded transition-colors">
+            <span class="min-w-0"><span class="block text-xs uppercase tracking-wider text-slate-500">Email</span><span class="text-base font-medium break-words">info@revivedandr.com</span></span>
+            <svg class="shrink-0 ml-3" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. SERVICES STRIP -->
+<section class="bg-ink border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm uppercase tracking-[0.14em] text-white/85">
+    <span class="dot">Kitchen remodeling</span>
+    <span class="dot">Bathroom remodeling</span>
+    <span class="dot">Full home interiors</span>
+    <span class="dot">Custom design</span>
+    <span class="dot">Permitting</span>
+    <span class="dot">Plumbing and electrical</span>
+  </div>
+</section>
+
+<!-- 3. DESIGN / BUILD / FINISH -->
+<section id="services" class="bg-brand text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-white/75 mb-4">What we do</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase leading-[1.05]">Design | Build | Finish</h2>
+      <p class="mt-5 text-lg text-white/90 leading-relaxed">One turnkey service. We manage design, permitting, construction, demolition, installations and any required plumbing and electrical work.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-20.jpg" alt="Modern kitchen with waterfall island and flat-panel cabinets" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-xl font-bold uppercase tracking-wide">Design</h3>
+          <p class="mt-3 text-white/75 leading-relaxed">Every project is 100% custom. Our in-house designers shape the plan around your home and your taste.</p>
+        </div>
+      </article>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-5.jpg" alt="Light grey kitchen with large island and lantern pendants" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-xl font-bold uppercase tracking-wide">Build</h3>
+          <p class="mt-3 text-white/75 leading-relaxed">Demolition, construction and installation by vetted, trained and experienced professionals on our team.</p>
+        </div>
+      </article>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-7.jpg" alt="Master bathroom with marble slab shower and freestanding tub" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-xl font-bold uppercase tracking-wide">Finish</h3>
+          <p class="mt-3 text-white/75 leading-relaxed">Cabinetry, flooring, tile and fixtures installed with care, and your project backed by a one-year warranty.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PROCESS -->
+<section id="process" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-brand font-medium mb-4">Our process</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.08]">How your project runs</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand flex items-center justify-center text-xl font-bold rounded">01</div>
+        <h3 class="mt-6 text-xl font-bold">Complimentary consultation</h3>
+        <p class="mt-3 text-slate-600 leading-relaxed">We meet at your home, hear what you want from the space and talk through options, budget and financing.</p>
+      </div>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand flex items-center justify-center text-xl font-bold rounded">02</div>
+        <h3 class="mt-6 text-xl font-bold">Custom design</h3>
+        <p class="mt-3 text-slate-600 leading-relaxed">Our designers develop a plan built around your home, with cabinetry, flooring and tile selected together.</p>
+      </div>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand flex items-center justify-center text-xl font-bold rounded">03</div>
+        <h3 class="mt-6 text-xl font-bold">Construction and installation</h3>
+        <p class="mt-3 text-slate-600 leading-relaxed">Your project manager coordinates the crew and schedule through demolition, build and final installation.</p>
+      </div>
+    </div>
+    <div class="mt-12 reveal">
+      <a href="#contact" class="inline-flex items-center gap-2 text-brand font-medium hover:underline">Start with a consultation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. PHOTO COMPARISON -->
+<section class="bg-ink text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-white/60 mb-4">Two kitchens, two styles</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.08]">Classic or modern, built your way</h2>
+      <p class="mt-5 text-lg text-white/75 leading-relaxed">Drag the handle to compare a traditional dark kitchen with a clean modern one. Both are Revive projects, designed around the homeowner.</p>
+    </div>
+    <div class="mt-12 reveal">
+      <div class="ba-wrap rounded aspect-[4/3] sm:aspect-[16/9] bg-black" id="ba">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-20.jpg" alt="Modern kitchen with waterfall island" class="absolute inset-0 w-full h-full object-cover">
+        <div class="ba-top" id="baTop">
+          <img id="baImg" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-19.jpg" alt="Traditional kitchen with dark cabinetry and coffered ceiling">
+        </div>
+        <div class="ba-handle" id="baHandle"><div class="ba-knob"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></div></div>
+        <input type="range" min="0" max="100" value="50" class="ba-range" id="baRange" aria-label="Compare the two kitchens">
+        <span class="absolute left-4 bottom-4 bg-ink/90 text-white text-xs uppercase tracking-widest px-3 py-2 rounded">Traditional</span>
+        <span class="absolute right-4 bottom-4 bg-ink/90 text-white text-xs uppercase tracking-widest px-3 py-2 rounded">Modern</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. COMPARISON CARDS -->
+<section id="why" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-brand font-medium mb-4">Why Revive</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.08]">Many trades, or one turnkey team</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div class="reveal bg-white border border-slate-200 rounded p-8 lg:p-10">
+        <h3 class="text-xl font-bold">Hiring separate trades yourself</h3>
+        <ul class="mt-6 space-y-4 text-slate-600">
+          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>Coordinating designers, installers, plumbers and electricians</li>
+          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>Handoffs between companies when something goes wrong</li>
+          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>Vetting each crew on your own</li>
+          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>No single party responsible for the whole job</li>
+        </ul>
+      </div>
+      <div class="reveal bg-white border-2 border-brand rounded p-8 lg:p-10">
+        <h3 class="text-xl font-bold">One contractor: Revive</h3>
+        <ul class="mt-6 space-y-4 text-ink">
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Designers, project managers and craftsmen are part of our team</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cabinetry, flooring and tile sourced through Momentum Cabinetry</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plumbing and electrical handled through Revive Mechanical Services</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fewer handoffs, so problems get resolved directly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. WHAT WE BUILD / BENTO -->
+<section id="work" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-brand font-medium mb-4">Recent projects</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.08]">What we build</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] sm:col-span-2 lg:col-span-8 lg:row-span-2 lg:aspect-auto lg:min-h-[560px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-2.jpg" alt="Open-plan kitchen with marble island and dining table" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-0 bottom-0 p-6 lg:p-8 text-white"><h3 class="text-xl lg:text-2xl font-bold">Open-plan kitchens</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-7.jpg" alt="Primary bathroom with marble shower wall" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-0 bottom-0 p-6 text-white"><h3 class="text-lg font-bold">Primary bathrooms</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-4.jpg" alt="Walk-in closet with custom cabinetry" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-0 bottom-0 p-6 text-white"><h3 class="text-lg font-bold">Custom closets</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-3.jpg" alt="Laundry and mudroom with checkered floor and built-in bench" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-0 bottom-0 p-6 text-white"><h3 class="text-lg font-bold">Laundry and mudrooms</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-6.jpg" alt="Wet bar with dark cabinets and herringbone marble backsplash" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-0 bottom-0 p-6 text-white"><h3 class="text-lg font-bold">Wet bars</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4">
+        <img src="https://images.unsplash.com/photo-1639173925921-5d5fd027713c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright white kitchen with island and stainless appliances" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-0 bottom-0 p-6 text-white"><h3 class="text-lg font-bold">Bright family kitchens</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-5.jpg" alt="Light grey kitchen with arabesque tile backsplash" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-0 bottom-0 p-6 text-white"><h3 class="text-lg font-bold">Full kitchen remodels</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] sm:col-span-2 lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-19.jpg" alt="Traditional kitchen with dark cabinets and tin coffered ceiling" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-0 bottom-0 p-6 text-white"><h3 class="text-lg font-bold">Traditional interiors</h3></div>
+      </div>
+    </div>
+    <p class="mt-8 reveal"><a href="https://www.revivedesignandrenovation.com/kitchen-gallery/" class="inline-flex items-center gap-2 text-brand font-medium hover:underline">View the full gallery
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+  </div>
+</section>
+
+<!-- 8. FAMILY OWNED SPLIT -->
+<section class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-brand font-medium mb-4">Family owned</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.08]">Family-owned, with 158 years of combined experience</h2>
+      <p class="mt-6 text-lg text-slate-600 leading-relaxed">Revive has become one of the most trusted and highly rated interior renovation companies serving the Tampa and Orlando metro areas. Customer satisfaction comes first, and we stay focused on clear communication from design through installation.</p>
+      <ul class="mt-8 space-y-3">
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>100% custom, never cookie-cutter</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Experienced, thoroughly vetted professionals</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Convenient financing options available</li>
+      </ul>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-brand hover:bg-[#005f9e] text-white font-medium px-7 py-4 rounded text-center transition-colors">Schedule a consultation</a>
+        <a href="tel:8137269170" class="border border-ink hover:bg-ink hover:text-white text-ink font-medium px-7 py-4 rounded text-center transition-colors">Call 813-726-9170</a>
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/3] lg:aspect-[5/4] rounded overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-2.jpg" alt="Finished kitchen and dining area in a Revive remodel" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. SERVICE AREA -->
+<section id="areas" class="bg-white py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-brand font-medium mb-4">Service area</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.08]">Serving Central Florida homeowners</h2>
+      <p class="mt-5 text-lg text-slate-600 leading-relaxed">Two offices, one standard of work. Call the one closest to your home.</p>
+    </div>
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl reveal">
+      <a href="https://www.revivedesignandrenovation.com/service-area/" class="flex items-center justify-between border border-slate-300 hover:border-brand rounded px-6 py-5 transition-colors">
+        <span><span class="block text-xl font-bold">Tampa Bay</span><span class="text-slate-500">813-726-9170</span></span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="https://www.revivedesignandrenovation.com/service-area-orlando/" class="flex items-center justify-between border border-slate-300 hover:border-brand rounded px-6 py-5 transition-colors">
+        <span><span class="block text-xl font-bold">Orlando</span><span class="text-slate-500">407-307-2672</span></span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071bb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -292,42 +406,92 @@ tailwind.config = {
       <div class="ti-track">
         <article class="ti-card">
           <div class="ti-head">
-            <span class="ti-avatar" style="background:#6d4c41">M</span>
-            <span class="ti-who"><span class="ti-name">Mike Wasik</span></span>
+            <span class="ti-avatar" style="background:#f4511e">S</span>
+            <span class="ti-who"><span class="ti-name">Susan Lubas</span></span>
             <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
           <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
-          <p class="ti-text">Revive is by far the best remodeler I have used. Justin was great at getting everything in place for the job. Jorge was a great contractor who was on top of everything and kept me informed the whole time. He instantly handled any issues that came up. The design crew was great as well helping us come up with the finished product. You get what you pay for – it might cost more for concierge-like service but it made the job go so smooth and we love the end result!</p>
+          <p class="ti-text">The project manager, Armando, was fantastic. Everything was well coordinated, I was made aware of what to expect and time and day the different workers would be coming. All the workers...</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
         <article class="ti-card">
           <div class="ti-head">
-            <span class="ti-avatar" style="background:#43a047">R</span>
-            <span class="ti-who"><span class="ti-name">Richard Heflin</span></span>
+            <span class="ti-avatar" style="background:#7b1fa2">A</span>
+            <span class="ti-who"><span class="ti-name">Amy F</span></span>
             <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
           <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
-          <p class="ti-text">After a bad experience with contractors, I was hesitant to use another. I am so glad I did. Joe and Jorge were excellent the process was fast they had my kitchen done in less time than quoted. Any questions I asked were answered quickly and concise. Super happy overall and would recommend and use again. I want to add when the guys were here working, they didn’t play around they worked hard. they were very polite and cleaned up during and after their work. Everyone was very professional.</p>
+          <p class="ti-text">The pictures say it all. We LOVE, LOVE, LOVE our new bathrooms. When we met Jenna, we knew our remodel was safe in the hands of Revive. Thank you for all of your help, Jenna! Everyone...</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
         <article class="ti-card">
           <div class="ti-head">
-            <span class="ti-avatar" style="background:#7b1fa2">D</span>
-            <span class="ti-who"><span class="ti-name">Dawn Gutierrez</span></span>
+            <span class="ti-avatar" style="background:#f4511e">P</span>
+            <span class="ti-who"><span class="ti-name">Paul Hinson</span></span>
             <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
           <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
-          <p class="ti-text">Revive Design and Renovation just completed a kitchen and bathroom renovation for us. We are beyond thrilled with the outcome! Jessica’s vision in reworking the entry to our kitchen in order to install bar area was a game changer. It makes our small kitchen feel so much bigger and open. Justin and crew were very professional and responsive. We highly recommend Revive Design and Renovation.</p>
+          <p class="ti-text">From the initial reach out to Revive Kitchen and Bath, they contacted me within mins and had a consultation set up. Austin came, and was professional, straight forward and easy to talk t...</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
         <article class="ti-card">
           <div class="ti-head">
-            <span class="ti-avatar" style="background:#f4511e">G</span>
-            <span class="ti-who"><span class="ti-name">Greg Kurzner</span></span>
+            <span class="ti-avatar" style="background:#c2185b">M</span>
+            <span class="ti-who"><span class="ti-name">Madison Szabo</span></span>
             <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
           <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
-          <p class="ti-text">Very professional. Justin and his team are easy to work with and good at what they do. Things went smoothly and communication was good throughout. I recommend them highly.</p>
+          <p class="ti-text">We are so happy with the kitchen that revive put together for us. We knew it would be a big project and we’re nervous to take something on so big but the Revive team went above and beyon...</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#f4511e">M</span>
+            <span class="ti-who"><span class="ti-name">Marilyn Nalewajek</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Revive updated our guest bathroom and completely remodeled our Master bathroom. The results are beautiful. Everyone from Matt, our consultant, Lena, our designer, and Barry, our contrac...</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#e53935">A</span>
+            <span class="ti-who"><span class="ti-name">Amanda C</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">We used this business to remodel our kitchen and can’t say enough good things. They are extremely transparent, paying attention to even the small details, and will do anything to make su...</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#e53935">B</span>
+            <span class="ti-who"><span class="ti-name">Bruce MacLeod</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Revive and their team were terrific to deal with. Great ownership, design team and contractors! We had our Harbour Island home's bathroom remodeled six months ago and continue to love t...</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#00897b">S</span>
+            <span class="ti-who"><span class="ti-name">Sarah Alexander</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Very happy with our bathroom project. Alex went above and beyond to make sure our project was finished on time and done correctly.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#6d4c41">A</span>
+            <span class="ti-who"><span class="ti-name">Allison Wilkins</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">We cannot say enough about Revive Kitchen and Bath. After interviewing 6 other contracting companies, we truly found the best fit to remodel our 1913 home's master bathroom. Our project...</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
       </div>
@@ -346,11 +510,11 @@ tailwind.config = {
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
+<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:0 0 clamp(80px,10vw,128px)">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(28,61,90,0.10);color:#1c3d5a}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#99a8b5}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(0,113,187,0.10);color:#0071bb}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#8cbfe0}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -361,16 +525,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:20px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:16px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#1c3d5a;box-shadow:0 0 0 4px rgba(28,61,90,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:16px;background:#1c3d5a;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#0071bb;box-shadow:0 0 0 4px rgba(0,113,187,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#0071bb;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -378,23 +542,28 @@ tailwind.config = {
     .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
     .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-band{position:relative;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/revive-design-and-renovation/21950/photo-3.jpg') center/cover no-repeat;padding:clamp(80px,10vw,128px) 0 clamp(150px,16vw,200px)}
+    .lp-contact .lp-band:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.72))}
+    .lp-contact .lp-band>.lp-in{position:relative}
+    .lp-contact .lp-up{margin-top:-120px;position:relative}
     .lp-contact .lp-center{max-width:48rem;margin:0 auto;text-align:center}
     .lp-contact .lp-center .lp-p{margin-left:auto;margin-right:auto}
     .lp-contact .lp-tiles{margin:40px auto 0;display:grid;gap:12px;max-width:56rem}
     @media (min-width:768px){.lp-contact .lp-tiles{grid-template-columns:repeat(3,1fr)}}
-    .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:20px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
+    .lp-contact .lp-tile{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e7e5e0;border-radius:10px;padding:16px 18px;text-align:left;text-decoration:none;min-width:0}
     .lp-contact .lp-tile .lp-v{font-size:16px}
     .lp-contact .lp-formwrap{max-width:48rem;margin:28px auto 0}</style>
-  <div class="lp-in">
-    <div class="lp-center"><p class="lp-kick" style="color:#1c3d5a">Contact</p><h2 class="lp-h" style="color:#171717">Schedule a free consultation</h2><p class="lp-p" style="color:#525252">Tell us about your kitchen, bathroom or full-home project and we'll get back to you to set up a visit.</p></div>
-    <div class="lp-tiles"><a href="tel:+18137304954" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(813) 730-4954</span></span></a><a href="mailto:info@revivedandr.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">info@revivedandr.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Tampa, FL</span></span></div></div>
+  <div class="lp-band"><div class="lp-in"><div class="lp-center"><p class="lp-kick" style="color:#8cbfe0">Contact</p><h2 class="lp-h" style="color:#fff">Schedule a complimentary consultation</h2><p class="lp-p" style="color:rgba(255,255,255,.82)">Tell us about your kitchen, bathroom or interior project and we will get back to you to set up a time.</p></div></div></div>
+  <div class="lp-in lp-up">
+    
+    <div class="lp-tiles" style="margin-top:0"><a href="tel:+18137304954" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span><span style="min-width:0"><span class="lp-k">Call</span><span class="lp-v" style="display:block">(813) 730-4954</span></span></a><a href="mailto:info@revivedandr.com" class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span><span style="min-width:0"><span class="lp-k">Email</span><span class="lp-v" style="display:block">info@revivedandr.com</span></span></a><div class="lp-tile"><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span><span style="min-width:0"><span class="lp-k">Service area</span><span class="lp-v" style="display:block">Tampa, FL</span></span></div></div>
     <div class="lp-formwrap lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen remodeling</option><option>Bathroom remodeling</option><option>Full home interior remodeling</option><option>Showroom visit</option><option>Other</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen remodeling</option><option>Bathroom remodeling</option><option>Full home interior remodeling</option><option>Other</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -404,20 +573,17 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-<!-- FINAL CALL -->
-<section class="py-20 lg:py-28 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-5">
-    <div class="lg:col-span-6 photo aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/revive-design-and-renovation/21943/photo-8.jpg" alt="Remodeled primary bathroom with marble slab shower">
+<!-- 10. FINAL CALL BAND -->
+<section class="bg-deep text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase leading-[1.05]">Ready to revive your home?</h2>
+      <p class="mt-5 text-lg text-white/80 max-w-xl leading-relaxed">0% interest and no payments for 24 months is available for a limited time. Schedule your complimentary consultation today.</p>
     </div>
-    <div class="lg:col-span-6 r bg-mist p-8 sm:p-12 lg:p-14 flex flex-col justify-center">
-      <p class="label text-brand mb-4">Start your project</p>
-      <h2 class="text-3xl lg:text-5xl font-medium text-ink">Ready to revive your home?</h2>
-      <p class="mt-5 text-lg text-ink/75 leading-relaxed">Call our Tampa office or send a message. Your first consultation is complimentary and carries no obligation.</p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="tel:+18137304954" class="btn bg-brand text-white hover:bg-brandDark justify-center">Call (813) 730-4954</a>
-        <a href="mailto:info@revivedandr.com" class="btn bg-white text-ink hover:bg-paper justify-center">Email us</a>
-      </div>
+    <div class="lg:col-span-5 flex flex-col gap-4">
+      <a href="tel:8137269170" class="bg-brand hover:bg-[#005f9e] text-white font-medium px-7 py-4 rounded text-center text-lg transition-colors">Tampa 813-726-9170</a>
+      <a href="tel:4073072672" class="bg-white text-ink hover:bg-paper font-medium px-7 py-4 rounded text-center text-lg transition-colors">Orlando 407-307-2672</a>
+      <a href="mailto:info@revivedandr.com" class="border border-white/40 hover:bg-white/10 text-white font-medium px-7 py-4 rounded text-center break-words transition-colors">info@revivedandr.com</a>
     </div>
   </div>
 </section>
@@ -425,42 +591,62 @@ tailwind.config = {
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-brand text-white pt-20 pb-10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 text-center">
-    <img src="https://www.revivedesignandrenovation.com/wp-content/uploads/2024/09/Logo.svg" alt="Revive Design and Renovation" class="h-14 w-auto mx-auto">
-    <p class="mt-6 text-white/80 text-lg">Life Improvement Through Home Improvement™</p>
-
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-white/85 text-[15px] leading-relaxed">
-      <div>
-        <p class="label text-white/60 mb-3">Tampa showroom</p>
-        <p>3102 W Kennedy Blvd<br>Tampa, FL 33609</p>
-      </div>
-      <div>
-        <p class="label text-white/60 mb-3">Contact</p>
-        <p><a href="tel:+18137304954" class="hover:text-white">(813) 730-4954</a><br><a href="mailto:info@revivedandr.com" class="hover:text-white break-words">info@revivedandr.com</a></p>
-      </div>
-      <div>
-        <p class="label text-white/60 mb-3">Explore</p>
-        <p><a href="#services" class="hover:text-white">Services</a> · <a href="#process" class="hover:text-white">Process</a> · <a href="#gallery" class="hover:text-white">Gallery</a> · <a href="#contact" class="hover:text-white">Contact</a></p>
-      </div>
+<footer class="bg-ink text-white/75">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <img src="https://www.revivedesignandrenovation.com/wp-content/uploads/2024/09/Logo.svg" alt="Revive Design and Renovation" class="h-12 w-auto">
+      <p class="mt-5 max-w-sm leading-relaxed">Full-service kitchen, bathroom and interior remodeling in Tampa and Orlando, Florida.</p>
     </div>
-
-    <div class="mt-14 pt-8 border-t border-white/15 text-sm text-white/65 space-y-2">
+    <div class="md:col-span-4">
+      <h3 class="text-white font-medium mb-4">Contact</h3>
+      <ul class="space-y-2">
+        <li><a href="tel:8137269170" class="hover:text-white">Tampa: 813-726-9170</a></li>
+        <li><a href="tel:4073072672" class="hover:text-white">Orlando: 407-307-2672</a></li>
+        <li><a href="mailto:info@revivedandr.com" class="hover:text-white break-words">info@revivedandr.com</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-3">
+      <h3 class="text-white font-medium mb-4">Explore</h3>
+      <ul class="space-y-2">
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#process" class="hover:text-white">Process</a></li>
+        <li><a href="#work" class="hover:text-white">Our Work</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/55 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Revive Design and Renovation website.</p>
-      <p>Some photos by Zac Gudakov and Bailey Alexander on Unsplash.</p>
+      <p>Some photos by Lotus Design N Print on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // mobile menu
+  var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', function(){ mm.classList.toggle('hidden'); });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.add('hidden'); }); });
+
+  // reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+
+  // before / after slider
+  var ba = document.getElementById('ba'), top = document.getElementById('baTop'),
+      img = document.getElementById('baImg'), handle = document.getElementById('baHandle'),
+      range = document.getElementById('baRange');
+  function sizeImg(){ img.style.width = ba.offsetWidth + 'px'; img.style.objectFit = 'cover'; }
+  function setPos(v){ top.style.width = v + '%'; handle.style.left = v + '%'; }
+  sizeImg(); setPos(50);
+  window.addEventListener('resize', sizeImg);
+  range.addEventListener('input', function(){ setPos(range.value); });
 </script>
 </body>
 </html>

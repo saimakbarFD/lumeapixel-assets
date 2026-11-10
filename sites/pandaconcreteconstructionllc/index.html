@@ -4,323 +4,113 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Panda Concrete Construction LLC | Driveways, Patios & Sidewalks in Tampa, FL</title>
+<title>Panda Concrete Construction LLC | Driveways, Patios & Slabs in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Outfit', 'system-ui', 'sans-serif'] },
       colors: {
         brand: '#111111',
-        ink: '#0e0e0e',
-        steel: '#1b1b1b',
-        concrete: '#f3f2f0',
-        stone: '#e4e2de',
-        slate2: '#6b6a67',
-        signal: '#e50050'
+        ink: '#0d0d0d',
+        paper: '#f6f5f2',
+        line: '#e4e2dc',
+        stone: '#6b6a66'
       },
-      fontFamily: {
-        head: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { xl2: '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1b1b1b; background: #fff; }
-  h1, h2, h3, h4, .font-head { font-family: 'Outfit', sans-serif; }
+  body { font-family: 'Outfit', sans-serif; color: #0d0d0d; background: #fff; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .hero-bg { background-image: linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.78) 55%, rgba(10,10,10,.6) 100%), url('https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-1.jpg'); background-size: cover; background-position: center; }
-  .band-bg { background-image: linear-gradient(rgba(10,10,10,.88), rgba(10,10,10,.88)), url('https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-10.jpg'); background-size: cover; background-position: center; }
-  .dot { width: 6px; height: 6px; border-radius: 9999px; background: #e50050; display: inline-block; flex: none; }
-  .cmp { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
-  .cmp img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .cmp-top { position: absolute; inset: 0; clip-path: inset(0 50% 0 0); }
-  .cmp-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; }
-  .cmp-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 9999px; background: #fff; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; color: #111; }
-  .cmp input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-  .tag { position: absolute; top: 12px; padding: 4px 10px; background: rgba(10,10,10,.8); color: #fff; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; border-radius: 6px; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .25s ease; }
+  @keyframes slideL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes slideR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .marquee-l { animation: slideL 45s linear infinite; }
+  .marquee-r { animation: slideR 50s linear infinite; }
+  .hero-grad { background: linear-gradient(90deg, rgba(8,8,8,.88) 0%, rgba(8,8,8,.62) 45%, rgba(8,8,8,.15) 100%); }
+  @media (max-width: 1023px) { .hero-grad { background: linear-gradient(180deg, rgba(8,8,8,.82) 0%, rgba(8,8,8,.6) 60%, rgba(8,8,8,.45) 100%); } }
+  @media (prefers-reduced-motion: reduce) { .marquee-l, .marquee-r { animation: none; } .reveal { opacity: 1; transform: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white">
+<body>
 
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
     <a href="#top" class="flex items-center shrink-0">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/logo-0.png" alt="Panda Concrete Construction LLC" class="h-12 w-auto" style="filter: invert(1);">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/panda-concrete-construction-llc/21950/logo-0.png" alt="Panda Concrete Construction LLC" class="h-12 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
-      <a href="#services" class="hover:text-white">Services</a>
-      <a href="#process" class="hover:text-white">Process</a>
-      <a href="#work" class="hover:text-white">Our Work</a>
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#areas" class="hover:text-white">Service Areas</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
+      <a href="#how" class="hover:text-stone transition">How it works</a>
+      <a href="#services" class="hover:text-stone transition">Services</a>
+      <a href="#projects" class="hover:text-stone transition">Projects</a>
+      <a href="#faq" class="hover:text-stone transition">FAQ</a>
+      <a href="#contact" class="hover:text-stone transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:2035207079" class="hidden sm:inline-flex items-center gap-2 bg-signal text-white font-head font-semibold px-5 py-3 rounded hover:opacity-90 transition">
+      <a href="tel:2035207079" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white px-5 h-11 rounded-full text-[15px] font-medium hover:bg-black/80 transition">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (203) 520-7079
       </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full border border-line flex items-center justify-center" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="px-5 py-4 flex flex-col gap-4 text-white/90 font-medium">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#work">Our Work</a>
-      <a href="#about">About</a>
-      <a href="#areas">Service Areas</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:2035207079" class="bg-signal text-white text-center font-head font-semibold px-5 py-3 rounded">Call (203) 520-7079</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-line bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-lg font-medium">
+      <a href="#how" class="py-3 border-b border-line">How it works</a>
+      <a href="#services" class="py-3 border-b border-line">Services</a>
+      <a href="#projects" class="py-3 border-b border-line">Projects</a>
+      <a href="#faq" class="py-3 border-b border-line">FAQ</a>
+      <a href="#contact" class="py-3 border-b border-line">Contact</a>
+      <a href="tel:2035207079" class="mt-3 inline-flex items-center justify-center bg-brand text-white h-12 rounded-full">Call (203) 520-7079</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1. Hero -->
-<section class="hero-bg text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-7">
-      <p class="text-sm tracking-[0.2em] uppercase text-white/60 font-semibold mb-5">Concrete contractor in Tampa, FL</p>
-      <h1 class="font-head font-bold uppercase text-4xl sm:text-5xl lg:text-7xl leading-[0.98] tracking-tight">
-        Driveways.<br>Patios.<br>Sidewalks.
-      </h1>
-      <p class="mt-7 text-lg text-white/80 max-w-xl">Residential and commercial concrete across Tampa Bay. Clean joints, clean finish, and a crew that shows up when scheduled.</p>
-      <ul class="mt-7 space-y-3 text-white/90">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>5-star rated on Google and Facebook</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Flatwork, foundation slabs, pavers and CMU walls</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Founder-led, hands-on on every job</li>
-      </ul>
-      <div class="mt-9 flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="bg-signal text-white font-head font-semibold text-center px-8 py-4 rounded hover:opacity-90 transition">Get a free estimate</a>
-        <a href="#work" class="border border-white/40 text-white font-head font-semibold text-center px-8 py-4 rounded hover:bg-white hover:text-ink transition">See our work</a>
+<!-- HERO -->
+<section class="px-3 sm:px-5 lg:px-6 pt-3 sm:pt-5">
+  <div class="relative rounded-[24px] overflow-hidden min-h-[640px] lg:min-h-[680px]">
+    <img src="https://images.unsplash.com/photo-1685464197144-790d716b8649?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew pouring concrete from a pump hose" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 hero-grad"></div>
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end min-h-[640px] lg:min-h-[680px]">
+      <div class="lg:col-span-7 text-white self-start lg:self-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-[64px] font-medium leading-[1.05] tracking-tight">Concrete driveways, patios and slabs, built right in Tampa.</h1>
+        <p class="mt-6 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed">Residential and commercial flatwork, pavers and masonry from a Tampa crew that shows up and finishes the job.</p>
       </div>
-    </div>
-    <div class="lg:col-span-5">
-      <div class="bg-concrete text-ink rounded p-7 sm:p-9">
-        <h2 class="font-head font-semibold text-2xl">Get a free estimate</h2>
-        <p class="mt-3 text-slate2">Call or email with your project details. We will talk through the scope and send you a competitive price.</p>
-        <div class="mt-6 space-y-3">
-          <a href="tel:2035207079" class="flex items-center gap-3 bg-ink text-white rounded px-5 py-4 font-head font-semibold hover:bg-steel transition">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            (203) 520-7079
-          </a>
-          <a href="mailto:pandaoutdoorrenovations@gmail.com" class="flex items-center gap-3 border border-ink/25 rounded px-5 py-4 font-medium hover:bg-white transition text-sm sm:text-base break-words">
-            <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <span class="break-words min-w-0">pandaoutdoorrenovations@gmail.com</span>
-          </a>
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-[20px] p-6 sm:p-7 text-ink max-w-md lg:ml-auto">
+          <p class="text-xl font-semibold">Get a free estimate</p>
+          <div class="mt-5 flex flex-col gap-3">
+            <a href="tel:2035207079" class="inline-flex items-center justify-center gap-2 bg-brand text-white h-13 py-3.5 rounded-full font-medium text-[17px] hover:bg-black/80 transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              Call (203) 520-7079
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center border border-ink/20 py-3.5 rounded-full font-medium hover:bg-paper transition">Request an estimate online</a>
+          </div>
+          <p class="mt-4 text-sm text-stone">Serving Tampa, Hillsborough, Pinellas and Pasco counties.</p>
         </div>
-        <p class="mt-5 text-sm text-slate2">5110 South Manhattan Avenue, Tampa, FL</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Services strip -->
-<section class="bg-ink text-white border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-head font-medium uppercase tracking-wide text-sm">
-    <span>Driveway Installation</span><span class="dot"></span>
-    <span>Concrete Foundation Slabs</span><span class="dot"></span>
-    <span>Concrete Repair</span><span class="dot"></span>
-    <span>Pavers &amp; Decorative Patios</span><span class="dot"></span>
-    <span>CMU Walls &amp; Additions</span>
-  </div>
-</section>
-
-<!-- 3. Services as three stages -->
-<section id="services" class="bg-signal py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase font-semibold text-white/80">What we do</p>
-      <h2 class="mt-3 font-head font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight text-white">Pour. Repair. Build out.</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-2.jpg" alt="Freshly poured concrete driveway slab in Tampa" class="w-full aspect-[4/3] object-cover">
-        <div class="p-7 text-white">
-          <h3 class="font-head font-semibold text-2xl">Driveways &amp; Slabs</h3>
-          <p class="mt-3 text-white/70">Durable driveways that lift your curb appeal, plus foundation slabs built to carry your structure and keep moisture out.</p>
-          <a href="#contact" class="inline-flex mt-5 font-head font-semibold text-signal hover:underline">Ask about a driveway or slab &rarr;</a>
-        </div>
-      </article>
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-4.jpg" alt="Cracked sidewalk before and replaced sidewalk after" class="w-full aspect-[4/3] object-cover">
-        <div class="p-7 text-white">
-          <h3 class="font-head font-semibold text-2xl">Concrete Repair</h3>
-          <p class="mt-3 text-white/70">Cracked or damaged concrete repaired for lasting stability and a surface you will be glad to look at again.</p>
-          <a href="#contact" class="inline-flex mt-5 font-head font-semibold text-signal hover:underline">Ask about a repair &rarr;</a>
-        </div>
-      </article>
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-6.jpg" alt="CMU block wall addition under construction" class="w-full aspect-[4/3] object-cover">
-        <div class="p-7 text-white">
-          <h3 class="font-head font-semibold text-2xl">Pavers, Patios &amp; CMU</h3>
-          <p class="mt-3 text-white/70">Paver patios for outdoor living, plus new CMU walls, privacy walls and additions.</p>
-          <a href="#contact" class="inline-flex mt-5 font-head font-semibold text-signal hover:underline">Ask about a build &rarr;</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 4. How your project runs -->
-<section id="process" class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase font-semibold text-slate2">How your project runs</p>
-      <h2 class="mt-3 font-head font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight text-ink">Three steps from call to finished slab.</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-2xl text-ink">1</div>
-        <h3 class="mt-6 font-head font-semibold text-xl text-ink">Phone consultation</h3>
-        <p class="mt-3 text-slate2">Call us at 203-520-7079. We assess your needs and give you recommendations on the phone.</p>
-      </div>
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-2xl text-ink">2</div>
-        <h3 class="mt-6 font-head font-semibold text-xl text-ink">Scope and price</h3>
-        <p class="mt-3 text-slate2">We agree on the project scope and pricing, then schedule a start date that works for you.</p>
-      </div>
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-2xl text-ink">3</div>
-        <h3 class="mt-6 font-head font-semibold text-xl text-ink">Build and updates</h3>
-        <p class="mt-3 text-slate2">Our team does the work and keeps you updated through the construction process.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. Before / after -->
-<section class="bg-ink text-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-5 reveal">
-      <p class="text-sm tracking-[0.2em] uppercase font-semibold text-white/60">Repair and replace</p>
-      <h2 class="mt-3 font-head font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight">Cracked sidewalk out. Clean sidewalk in.</h2>
-      <p class="mt-6 text-white/75">Broken, lifting concrete is a trip hazard and an eyesore. We tear it out and pour fresh, with clean joints and a smooth finish. Drag the slider to compare.</p>
-      <a href="#contact" class="inline-flex mt-8 bg-signal text-white font-head font-semibold px-8 py-4 rounded hover:opacity-90 transition">Get a free estimate</a>
-    </div>
-    <div class="lg:col-span-7 reveal">
-      <div class="cmp rounded aspect-[5/4] w-full" id="cmp">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-4.jpg" alt="Sidewalk and driveway apron after replacement" style="object-position: 100% 50%; width:200%; max-width:none; left:-100%;">
-        <div class="cmp-top" id="cmpTop">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-4.jpg" alt="Cracked sidewalk before replacement" style="width:200%; max-width:none; left:0;">
-        </div>
-        <span class="tag" style="left:12px;">Before</span>
-        <span class="tag" style="right:12px;">After</span>
-        <div class="cmp-handle" id="cmpHandle"><div class="cmp-knob"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-5 6 5 6M16 6l5 6-5 6"/></svg></div></div>
-        <input type="range" min="0" max="100" value="50" id="cmpRange" aria-label="Before and after slider">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. DIY vs one contractor -->
-<section class="bg-concrete py-24 lg:py-32">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase font-semibold text-slate2">Why hire a concrete crew</p>
-      <h2 class="mt-3 font-head font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight text-ink">Doing it yourself vs. one contractor.</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white rounded p-8 border border-stone reveal">
-        <h3 class="font-head font-semibold text-xl text-ink">Doing it yourself</h3>
-        <ul class="mt-6 space-y-4 text-slate2">
-          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-slate2 shrink-0"></span>Rent forms, tools and trucks, then line up the pour yourself</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-slate2 shrink-0"></span>Concrete sets on its own clock, with no second chance</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-slate2 shrink-0"></span>Cracks, uneven surfaces and drainage problems show up later</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-slate2 shrink-0"></span>Your weekends go to the job</li>
-        </ul>
-      </div>
-      <div class="bg-white rounded p-8 border-2 border-signal reveal">
-        <h3 class="font-head font-semibold text-xl text-ink">One contractor, Panda Concrete</h3>
-        <ul class="mt-6 space-y-4 text-ink">
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One call covers the plan, the pour and the finish</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A crew that arrives on time and finishes quickly</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clean joints and a clean finish</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Progress updates and photos while you are away</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. What we build: bento -->
-<section id="work" class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase font-semibold text-slate2">Our recent projects</p>
-      <h2 class="mt-3 font-head font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight text-ink">What we build in Tampa Bay.</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:grid-flow-dense">
-      <div class="relative col-span-2 lg:col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[480px] rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-1.jpg" alt="New concrete driveway at a garage" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-x-0 bottom-0 p-5 pt-16 bg-gradient-to-t from-black/85 to-transparent text-white font-head font-semibold text-xl">Residential driveways</div>
-      </div>
-      <div class="relative aspect-[4/3] rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-10.jpg" alt="Poured concrete patio behind a two-story home" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-x-0 bottom-0 p-4 pt-12 bg-gradient-to-t from-black/85 to-transparent text-white font-head font-semibold">Backyard patios</div>
-      </div>
-      <div class="relative aspect-[4/3] rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-3.jpg" alt="Foundation slab with forms in place" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-x-0 bottom-0 p-4 pt-12 bg-gradient-to-t from-black/85 to-transparent text-white font-head font-semibold">Foundation slabs</div>
-      </div>
-      <div class="relative aspect-[4/3] rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-5.jpg" alt="Concrete patio slabs with river rock joints" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-x-0 bottom-0 p-4 pt-12 bg-gradient-to-t from-black/85 to-transparent text-white font-head font-semibold">Decorative joints</div>
-      </div>
-      <div class="relative aspect-[4/3] rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-8.jpg" alt="Commercial concrete sidewalk with safety cones" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-x-0 bottom-0 p-4 pt-12 bg-gradient-to-t from-black/85 to-transparent text-white font-head font-semibold">Commercial walkways</div>
-      </div>
-      <div class="relative aspect-[4/3] col-span-2 lg:col-span-2 rounded overflow-hidden reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-9.jpg" alt="Covered concrete patio with grill and seating" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-x-0 bottom-0 p-4 pt-12 bg-gradient-to-t from-black/85 to-transparent text-white font-head font-semibold">Covered outdoor living</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. Owner-led split -->
-<section id="about" class="bg-concrete py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-6 reveal">
-      <p class="text-sm tracking-[0.2em] uppercase font-semibold text-slate2">About Panda Concrete</p>
-      <h2 class="mt-3 font-head font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight text-ink">Led by John Panda, on site with his crew.</h2>
-      <p class="mt-6 text-slate2">Panda Concrete Construction is led by founder John Panda, a Tampa-based contractor with deep roots in the concrete trade and a background in the University of Tampa's School of Business. With a hands-on approach and a sharp eye for detail, John and his team deliver refined concrete, paver and masonry installations for residential and commercial clients across the Tampa Bay area.</p>
-      <ul class="mt-6 space-y-3 text-ink">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Based in Tampa, Florida</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Residential driveways to commercial foundations</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quality flatwork built for durability and curb appeal</li>
-      </ul>
-      <div class="mt-9 flex flex-col sm:flex-row gap-4">
-        <a href="tel:2035207079" class="bg-ink text-white font-head font-semibold text-center px-8 py-4 rounded hover:bg-steel transition">Call (203) 520-7079</a>
-        <a href="#contact" class="border border-ink text-ink font-head font-semibold text-center px-8 py-4 rounded hover:bg-ink hover:text-white transition">Request an estimate</a>
-      </div>
-    </div>
-    <div class="lg:col-span-6 reveal">
-      <div class="grid grid-cols-2 gap-4">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-7.jpg" alt="Panda Concrete crew screeding a fresh pour" class="w-full aspect-[3/4] object-cover rounded row-span-2 h-full">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-2.jpg" alt="New concrete pad in front of a Tampa home" class="w-full aspect-[4/3] object-cover rounded">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/photo-6.jpg" alt="CMU block wall construction" class="w-full aspect-[4/3] object-cover rounded">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Reviews -->
+<!-- REVIEWS -->
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -407,78 +197,223 @@ tailwind.config = {
   })();</script>
 </section>
 
-<!-- 9. Service areas -->
-<section id="areas" class="bg-white py-24 lg:py-32">
+<!-- HOW IT WORKS -->
+<section id="how" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase font-semibold text-slate2">Service areas</p>
-      <h2 class="mt-3 font-head font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight text-ink">Concrete across Tampa Bay.</h2>
-      <p class="mt-5 text-slate2">Based in Tampa and working throughout the surrounding counties and cities. Not sure if we cover your location? Call and ask.</p>
+      <p class="text-xs uppercase tracking-[0.18em] text-stone font-medium">The process</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">How Panda Concrete works</h2>
     </div>
-    <div class="mt-10 flex flex-wrap gap-3 reveal">
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Tampa</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">South Tampa</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Hillsborough County</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Pinellas County</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Pasco County</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Manatee County</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Lutz</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Land O' Lakes</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">St Petersburg</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Plant City</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Ruskin</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Temple Terrace</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Seminole</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Palmetto</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Sarasota</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Carrollwood</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Palm Harbor</span>
-      <span class="border border-stone bg-concrete rounded px-4 py-2 text-sm font-medium text-ink">Clearwater</span>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-[20px] overflow-hidden bg-paper">
+          <img src="https://images.unsplash.com/photo-1588131012272-821617bf265b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Granite block in a park" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <h3 class="mt-6 text-xl font-semibold">1. Call us</h3>
+        <p class="mt-2 text-stone leading-relaxed">Start with a phone consultation. We talk through your project and what you need.</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-[20px] overflow-hidden bg-paper">
+          <img src="https://images.unsplash.com/photo-1673978484202-ea21a0750148?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Rebar laid out over wet concrete" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <h3 class="mt-6 text-xl font-semibold">2. Agree the plan</h3>
+        <p class="mt-2 text-stone leading-relaxed">We give you recommendations, a competitive estimate and a start date once scope and pricing are set.</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-[20px] overflow-hidden bg-paper">
+          <img src="https://images.unsplash.com/photo-1685464197144-790d716b8649?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew placing concrete on site" class="w-full h-full object-cover object-right" loading="lazy">
+        </div>
+        <h3 class="mt-6 text-xl font-semibold">3. We do the work</h3>
+        <p class="mt-2 text-stone leading-relaxed">Our team builds it and keeps you updated through the whole construction process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES TILES -->
+<section id="services" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs uppercase tracking-[0.18em] text-stone font-medium">What we build</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">More than just driveways</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+      <a href="#contact" class="group block reveal">
+        <div class="aspect-square rounded-[20px] overflow-hidden bg-paper">
+          <img src="https://images.unsplash.com/photo-1624178990904-4cce0e510897?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete tunnel interior" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+        </div>
+        <p class="mt-3 text-[15px] font-medium">Concrete foundation slabs</p>
+      </a>
+      <a href="#contact" class="group block reveal">
+        <div class="aspect-square rounded-[20px] overflow-hidden bg-paper">
+          <img src="https://images.unsplash.com/photo-1788809168827-d2527518da26?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete paving beside a wall" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+        </div>
+        <p class="mt-3 text-[15px] font-medium">Driveway installation</p>
+      </a>
+      <a href="#contact" class="group block reveal">
+        <div class="aspect-square rounded-[20px] overflow-hidden bg-paper">
+          <img src="https://images.unsplash.com/photo-1761805574493-87d5d07ac282?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cracked concrete sidewalk" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+        </div>
+        <p class="mt-3 text-[15px] font-medium">Concrete repair</p>
+      </a>
+      <a href="#contact" class="group block reveal">
+        <div class="aspect-square rounded-[20px] overflow-hidden bg-paper">
+          <img src="https://images.unsplash.com/photo-1790156591319-00499776587b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Polished concrete floor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+        </div>
+        <p class="mt-3 text-[15px] font-medium">Pavers and decorative patios</p>
+      </a>
+      <a href="#contact" class="group block reveal col-span-2 md:col-span-1">
+        <div class="aspect-square rounded-[20px] overflow-hidden bg-paper">
+          <img src="https://images.unsplash.com/photo-1694580511884-7de02841ac2b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Masonry wall under steel beams" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+        </div>
+        <p class="mt-3 text-[15px] font-medium">CMU walls and additions</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BAND -->
+<section class="px-3 sm:px-5 lg:px-6">
+  <div class="rounded-[24px] overflow-hidden aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] reveal">
+    <img src="https://images.unsplash.com/photo-1774031159721-aec9230f38db?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete steps being cleaned on site" class="w-full h-full object-cover" loading="lazy">
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="py-24 lg:py-36">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-3xl sm:text-5xl lg:text-6xl font-light leading-[1.15] tracking-tight">Residential and commercial concrete in Tampa, led by founder John Panda with a hands-on eye for detail.</p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="pb-24 lg:pb-32 overflow-hidden">
+  <div class="flex flex-col gap-4">
+    <div class="overflow-hidden">
+      <div class="marquee-l flex w-max gap-4">
+        <div class="flex gap-4 shrink-0">
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Driveway installation</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Concrete foundation slabs</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Concrete repair services</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pavers and decorative patios</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>CMU walls and additions</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Residential and commercial</span>
+        </div>
+        <div class="flex gap-4 shrink-0" aria-hidden="true">
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Driveway installation</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Concrete foundation slabs</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Concrete repair services</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pavers and decorative patios</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>CMU walls and additions</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Residential and commercial</span>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <div class="marquee-r flex w-max gap-4">
+        <div class="flex gap-4 shrink-0">
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Hillsborough County</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pinellas County</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pasco County</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Manatee County</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lutz and Land O' Lakes</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>South Tampa</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clearwater</span>
+        </div>
+        <div class="flex gap-4 shrink-0" aria-hidden="true">
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Hillsborough County</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pinellas County</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pasco County</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Manatee County</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lutz and Land O' Lakes</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>South Tampa</span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-paper text-ink px-6 py-3 text-[15px] font-medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clearwater</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="bg-concrete py-24 lg:py-32">
-  <div class="max-w-4xl mx-auto px-5 lg:px-8">
-    <div class="reveal">
-      <p class="text-sm tracking-[0.2em] uppercase font-semibold text-slate2">Questions</p>
-      <h2 class="mt-3 font-head font-bold text-3xl sm:text-4xl leading-tight text-ink">Before you call.</h2>
+<section id="faq" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4 reveal">
+      <p class="text-xs uppercase tracking-[0.18em] text-stone font-medium">FAQ</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">Questions, answered</h2>
     </div>
-    <div class="mt-10 divide-y divide-stone border-y border-stone reveal">
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-head font-semibold text-lg text-ink">What types of concrete services do you offer?<span class="ml-4 text-signal text-2xl group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-slate2">Driveways, patios, foundation slabs and decorative concrete options, for both residential and commercial projects.</p>
+    <div class="lg:col-span-8 flex flex-col gap-3 reveal">
+      <details class="group rounded-[20px] border border-line bg-paper px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">What types of concrete services do you offer?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed">We provide a wide range of concrete services including driveways, patios, foundation slabs and decorative concrete options. Our expertise extends to both residential and commercial projects.</p>
       </details>
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-head font-semibold text-lg text-ink">How can I request a quote?<span class="ml-4 text-signal text-2xl group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-slate2">Call 203-520-7079 to discuss your project and we will provide a competitive estimate, or email pandaoutdoorrenovations@gmail.com.</p>
+      <details class="group rounded-[20px] border border-line bg-paper px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">How can I request a quote for my concrete project?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed">Call us at 203-520-7079 to discuss your project details and we will provide a competitive estimate. You can also email pandaoutdoorrenovations@gmail.com.</p>
       </details>
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-head font-semibold text-lg text-ink">What areas do you serve?<span class="ml-4 text-signal text-2xl group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-slate2">Primarily the greater Tampa, Florida area, with projects in surrounding neighborhoods and cities. Contact us if you are unsure whether we can service your location.</p>
+      <details class="group rounded-[20px] border border-line bg-paper px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">What areas do you serve?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed">We primarily serve the greater Tampa, Florida area and can accommodate projects in surrounding neighborhoods and cities. Contact us if you're unsure whether we can service your location.</p>
       </details>
-      <details class="group py-5">
-        <summary class="flex justify-between items-center cursor-pointer list-none font-head font-semibold text-lg text-ink">What is your process for starting a project?<span class="ml-4 text-signal text-2xl group-open:rotate-45 transition-transform">+</span></summary>
-        <p class="mt-3 text-slate2">It begins with a phone consultation. After we agree on scope and pricing, we schedule a start time and keep you updated throughout construction.</p>
+      <details class="group rounded-[20px] border border-line bg-paper px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">What is your process for starting a new project?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed">It begins with a phone consultation where we assess your needs and give recommendations. After we agree on scope and pricing, we schedule a time for our team to begin and keep you updated throughout construction.</p>
       </details>
-    </div>
-  </div>
-</section>
-
-<!-- 10. Final call band -->
-<section class="band-bg text-white py-24 lg:py-28">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
-    <h2 class="font-head font-bold uppercase text-3xl sm:text-4xl lg:text-6xl leading-[1.02] tracking-tight">Ready to pour? Call Panda Concrete.</h2>
-    <p class="mt-6 text-lg text-white/75 max-w-xl mx-auto">Tell us about your driveway, patio, slab or wall and get a free estimate.</p>
-    <div class="mt-9 flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <a href="tel:2035207079" class="bg-signal text-white font-head font-semibold text-lg px-9 py-4 rounded hover:opacity-90 transition">(203) 520-7079</a>
-      <a href="mailto:pandaoutdoorrenovations@gmail.com" class="border border-white/40 text-white font-medium px-7 py-4 rounded hover:bg-white hover:text-ink transition text-sm sm:text-base break-words max-w-full">pandaoutdoorrenovations@gmail.com</a>
     </div>
   </div>
 </section>
 
-<!-- Contact placeholder -->
+<!-- PROJECT CARDS -->
+<section id="projects" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs uppercase tracking-[0.18em] text-stone font-medium">Our work</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">Recent projects around Tampa</h2>
+      <p class="mt-5 text-lg text-stone leading-relaxed">From patios that invite comfort to driveways that stand up to years of use, every pour reflects our commitment to quality and craftsmanship.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="bg-white rounded-[20px] overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1788809168827-d2527518da26?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete flatwork" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Driveways</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Driveways and sidewalks</h3>
+          <p class="mt-2 text-stone leading-relaxed">Smooth, durable surfaces that lift your home's curb appeal.</p>
+        </div>
+      </article>
+      <article class="bg-white rounded-[20px] overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1673978484202-ea21a0750148?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Rebar and wet concrete for a slab" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Foundations</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Foundation slabs</h3>
+          <p class="mt-2 text-stone leading-relaxed">Strong slabs for sheds, additions and commercial structures.</p>
+        </div>
+      </article>
+      <article class="bg-white rounded-[20px] overflow-hidden reveal">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1790156591319-00499776587b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished concrete floor" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium px-3 py-1.5 rounded-full">Patios</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Patios and pavers</h3>
+          <p class="mt-2 text-stone leading-relaxed">Outdoor living spaces built for family and entertaining.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact" class="lp-contact" style="background:#0c0c0c;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
@@ -494,16 +429,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#111111;box-shadow:0 0 0 4px rgba(17,17,17,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#111111;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#111111;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -514,7 +449,7 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div style="color:#fff"><p class="lp-kick" style="color:#949494">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your concrete project in Tampa and we will get back to you with a free estimate.</p><ul class="lp-info">
+    <div style="color:#fff"><p class="lp-kick" style="color:#949494">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your driveway, patio or slab project in Tampa and we will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+12035207079" class="lp-v lp-v-d">(203) 520-7079</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -528,7 +463,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Driveway Installation</option><option>Concrete Foundation Slabs</option><option>Concrete Repair Services</option><option>Pavers and Decorative Patios</option><option>CMU Walls and Additions</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Driveway installation</option><option>Concrete foundation slabs</option><option>Concrete repair services</option><option>Pavers and decorative patios</option><option>CMU walls and additions</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -540,64 +475,77 @@ tailwind.config = {
 
 </main>
 
-<!-- Footer -->
-<footer class="bg-ink text-white/75 pt-16 pb-10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-5">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/panda-concrete-construction-llc/21943/logo-0.png" alt="Panda Concrete Construction LLC" class="h-14 w-auto" style="filter: invert(1);">
-      <p class="mt-5 max-w-sm text-sm">Residential and commercial concrete in Tampa, Florida. Driveways, patios, foundation slabs, pavers and CMU walls.</p>
+<!-- FOOTER -->
+<footer class="bg-white border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div class="md:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/panda-concrete-construction-llc/21950/logo-0.png" alt="Panda Concrete Construction LLC" class="h-14 w-auto">
+        <a href="tel:2035207079" class="mt-6 block text-2xl font-semibold">(203) 520-7079</a>
+        <a href="mailto:pandaoutdoorrenovations@gmail.com" class="mt-2 block text-stone break-words text-[15px] hover:text-ink">pandaoutdoorrenovations@gmail.com</a>
+        <p class="mt-4 text-stone leading-relaxed">5110 South Manhattan Avenue<br>Tampa, FL</p>
+      </div>
+      <div class="md:col-span-2">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em]">Company</p>
+        <ul class="mt-4 space-y-3 text-stone">
+          <li><a href="#how" class="hover:text-ink">How it works</a></li>
+          <li><a href="#services" class="hover:text-ink">Services</a></li>
+          <li><a href="#projects" class="hover:text-ink">Projects</a></li>
+          <li><a href="#faq" class="hover:text-ink">FAQ</a></li>
+          <li><a href="#contact" class="hover:text-ink">Contact</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-2">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em]">Services</p>
+        <ul class="mt-4 space-y-3 text-stone">
+          <li>Driveway installation</li>
+          <li>Foundation slabs</li>
+          <li>Concrete repair</li>
+          <li>Pavers and patios</li>
+          <li>CMU walls</li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em]">Service areas</p>
+        <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-stone">
+          <li>Hillsborough County</li>
+          <li>Pinellas County</li>
+          <li>Pasco County</li>
+          <li>Manatee County</li>
+          <li>Lutz</li>
+          <li>Land O' Lakes</li>
+          <li>South Tampa</li>
+          <li>St Petersburg</li>
+          <li>Plant City</li>
+          <li>Ruskin</li>
+          <li>Temple Terrace</li>
+          <li>Seminole</li>
+          <li>Palmetto</li>
+          <li>Sarasota</li>
+          <li>Carrollwood</li>
+          <li>Palm Harbor</li>
+          <li>Clearwater</li>
+          <li>Tampa</li>
+        </ul>
+      </div>
     </div>
-    <div class="md:col-span-3">
-      <h4 class="font-head font-semibold text-white mb-4">Explore</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#process" class="hover:text-white">Process</a></li>
-        <li><a href="#work" class="hover:text-white">Our Work</a></li>
-        <li><a href="#about" class="hover:text-white">About</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact</a></li>
-      </ul>
+    <div class="mt-14 pt-6 border-t border-line text-sm text-stone flex flex-col gap-2">
+      <p>&copy; Panda Concrete Construction LLC</p>
+      <p>Concept redesign by LumeaPixel. This is not the official Panda Concrete Construction LLC website.</p>
+      <p>Some photos by Mélyna Côté, Ceba Solutions, Ricardo Gomez Angel, Dave Lowe, Chad Nathan, d c, Infinara, Saif71.com and Wolf Lieff on Unsplash.</p>
     </div>
-    <div class="md:col-span-4">
-      <h4 class="font-head font-semibold text-white mb-4">Contact</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="tel:2035207079" class="hover:text-white">(203) 520-7079</a></li>
-        <li><a href="mailto:pandaoutdoorrenovations@gmail.com" class="hover:text-white break-words">pandaoutdoorrenovations@gmail.com</a></li>
-        <li>5110 South Manhattan Avenue, Tampa, FL</li>
-        <li><a href="https://www.facebook.com/pandaconcreteconstruction/" class="hover:text-white">Facebook</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 mt-12 pt-6 border-t border-white/10 text-xs text-white/50 space-y-1">
-    <p>&copy; Panda Concrete Construction LLC</p>
-    <p>Concept redesign by LumeaPixel. This is not the official Panda Concrete Construction LLC website.</p>
   </div>
 </footer>
 
 <script>
-  // Mobile menu
-  var btn = document.getElementById('menuBtn');
-  var menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
-  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.classList.add('hidden'); }); });
-
-  // Reveal on scroll
-  var els = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach(function (el) { io.observe(el); });
-  } else { els.forEach(function (el) { el.classList.add('in'); }); }
-
-  // Before / after slider
-  var range = document.getElementById('cmpRange');
-  var top = document.getElementById('cmpTop');
-  var handle = document.getElementById('cmpHandle');
-  function setCmp(v) {
-    top.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
-    handle.style.left = v + '%';
-  }
-  range.addEventListener('input', function () { setCmp(range.value); });
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>

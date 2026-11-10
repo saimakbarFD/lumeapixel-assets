@@ -4,224 +4,332 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Herman Renovations | Home Remodeling in Tampa, FL</title>
+<title>Herman Renovations | Kitchen & Bathroom Remodeling in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Outfit', 'sans-serif'] },
       colors: {
-        brand: '#12c4d6',
-        brandDark: '#07272c',
-        ink: '#0b0f10',
-        paper: '#f6f7f7'
+        brand: '#12C4D6',
+        ink: '#0B1A1D',
+        deep: '#0D2A30',
+        sand: '#F4F5F4',
+        mist: '#E9ECEC'
       },
-      fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { DEFAULT: '14px' }
+      borderRadius: { xl2: '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1b2224; background: #fff; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
+  body { font-family: 'Outfit', sans-serif; color: #0B1A1D; background: #fff; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { letter-spacing: -0.02em; line-height: 1.08; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .label { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; }
-  .ph { aspect-ratio: 1 / 1; }
+  .r { border-radius: 20px; }
+  .label { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+  .ph { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; padding: 14px 26px; font-weight: 600; transition: background .2s, color .2s; }
+  .btn-brand { background: #12C4D6; color: #0B1A1D; }
+  .btn-brand:hover { background: #0fb0c0; }
+  .btn-dark { background: #0B1A1D; color: #fff; }
+  .btn-dark:hover { background: #12C4D6; color: #0B1A1D; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body>
+<body class="bg-white">
 
-<!-- Top bar -->
-<div class="bg-brand text-ink text-sm">
-  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
-    <span class="font-medium">Serving Tampa, St. Petersburg, Clearwater, Lakeland &amp; South Florida</span>
-    <a href="mailto:contact@hermanrenovations.com" class="font-medium hover:underline break-words">contact@hermanrenovations.com</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-ink text-white">
-  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/logo-0.png" alt="Herman Renovations" class="h-12 w-auto"></a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
-      <a href="#about" class="hover:text-brand transition">About</a>
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#projects" class="hover:text-brand transition">Projects</a>
-      <a href="#process" class="hover:text-brand transition">Process</a>
-      <a href="#contact" class="hover:text-brand transition">Contact</a>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/logo-0.png" alt="Herman Renovations" class="h-12 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] text-white/85 font-medium">
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="#process" class="hover:text-brand transition-colors">Process</a>
+      <a href="#why" class="hover:text-brand transition-colors">Why Herman</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
     </nav>
-    <div class="hidden md:flex items-center gap-5">
-      <div class="text-right leading-tight hidden xl:block">
-        <div class="text-xs text-white/60">Need help? Call us today</div>
-        <a href="tel:+18135391412" class="font-heading font-semibold text-lg hover:text-brand">(813) 539-1412</a>
-      </div>
-      <a href="tel:+18135391412" class="xl:hidden font-heading font-semibold hover:text-brand">(813) 539-1412</a>
-      <a href="#contact" class="bg-brand text-ink font-semibold px-5 py-3 rounded hover:bg-white transition text-[15px]">Free Estimate</a>
+    <div class="flex items-center gap-3">
+      <a href="tel:+18135391412" class="btn btn-brand !py-2.5 !px-5 text-[15px]">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="hidden sm:inline">(813) 539-1412</span>
+        <span class="sm:hidden">Call</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center text-white" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </div>
-    <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
-    <div class="px-5 py-5 flex flex-col gap-4 font-medium">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:+18135391412" class="bg-brand text-ink text-center font-semibold px-5 py-3 rounded">Call (813) 539-1412</a>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 pb-6">
+    <div class="flex flex-col text-white/90 text-lg">
+      <a href="#services" class="py-3 border-b border-white/10 mobile-link">Services</a>
+      <a href="#projects" class="py-3 border-b border-white/10 mobile-link">Projects</a>
+      <a href="#process" class="py-3 border-b border-white/10 mobile-link">Process</a>
+      <a href="#why" class="py-3 border-b border-white/10 mobile-link">Why Herman</a>
+      <a href="#contact" class="py-3 mobile-link">Contact</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- Hero -->
-<section class="relative bg-ink text-white">
-  <img src="https://images.unsplash.com/photo-1652918320939-47f66eb1b684?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled kitchen with custom cabinetry and island" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/75 to-ink/30"></div>
-  <div class="relative max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
-    <div class="max-w-2xl">
-      <p class="label text-brand mb-5">Tampa's renovation company</p>
-      <h1 class="font-heading font-semibold text-4xl sm:text-5xl lg:text-6xl">Luxury renovations. Timeless results.</h1>
-      <p class="mt-6 text-lg text-white/80 max-w-xl">Elevated design, exceptional craftsmanship and honest pricing for kitchens, bathrooms, tile, flooring and whole homes across Tampa Bay.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="bg-brand text-ink font-semibold px-7 py-4 rounded text-center hover:bg-white transition">Book Your Free Estimate</a>
-        <a href="tel:+18135391412" class="bg-white text-ink font-semibold px-7 py-4 rounded-full text-center hover:bg-brand transition">Call (813) 539-1412</a>
+<!-- HERO -->
+<section class="bg-white pt-14 lg:pt-20 pb-16 lg:pb-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <div class="lg:col-span-8 reveal">
+        <p class="label text-ink/60 mb-6">Home remodeling in Tampa, FL</p>
+        <h1 class="text-5xl sm:text-6xl lg:text-[84px] font-medium">Luxury renovations.<br><span class="font-bold">Timeless</span> results.</h1>
+      </div>
+      <div class="lg:col-span-4 reveal">
+        <p class="text-lg text-ink/70 leading-relaxed">Elevated design, exceptional craftsmanship and honest pricing for kitchens, bathrooms, tile, flooring and whole-home renovations across the Tampa Bay area.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#contact" class="btn btn-brand">Book your free estimate</a>
+          <a href="tel:+18135391412" class="btn border border-ink/20 hover:border-ink">(813) 539-1412</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 lg:mt-20 grid grid-cols-1 md:grid-cols-12 gap-5 reveal">
+      <div class="md:col-span-7 r overflow-hidden aspect-[4/3] md:aspect-auto md:h-[520px]">
+        <img class="ph" src="https://images.unsplash.com/photo-1601760561441-16420502c7e0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled kitchen with white shaker cabinets and farmhouse sink">
+      </div>
+      <div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 md:grid-rows-[1fr_auto] gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5">
+          <div class="r overflow-hidden aspect-[4/3] md:aspect-auto md:h-[300px]">
+            <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-19.jpg" alt="Renovated bathroom with freestanding tub and walk-in shower">
+          </div>
+          <div class="r bg-sand p-7 flex flex-col justify-between md:h-[196px] gap-6">
+            <p class="label text-ink/60">Licensed &amp; insured</p>
+            <div>
+              <p class="text-3xl font-semibold leading-tight">Family owned. Local and trusted.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Trust strip -->
-<section class="bg-brandDark text-white">
-  <div class="max-w-7xl mx-auto px-5 py-8 grid grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-6">
-    <div><div class="font-heading font-semibold text-brand">Licensed &amp; Insured</div><div class="text-sm text-white/70">State certified</div></div>
-    <div><div class="font-heading font-semibold text-brand">Premium Quality</div><div class="text-sm text-white/70">Top-tier materials</div></div>
-    <div><div class="font-heading font-semibold text-brand">Family Owned</div><div class="text-sm text-white/70">Local and trusted</div></div>
-    <div><div class="font-heading font-semibold text-brand">5-Star Rated</div><div class="text-sm text-white/70">150+ reviews</div></div>
-    <div class="col-span-2 md:col-span-1"><div class="font-heading font-semibold text-brand">Financing Available</div><div class="text-sm text-white/70">Easy and fast approval</div></div>
-  </div>
-</section>
-
-<!-- The Herman difference -->
-<section id="about" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
-    <div class="lg:col-span-7 reveal">
-      <p class="label text-brandDark mb-4">The Herman difference</p>
-      <h2 class="font-heading font-semibold text-4xl md:text-5xl lg:text-6xl text-ink">Designed. Built. Perfected.</h2>
-      <div class="mt-12 grid grid-cols-3 gap-3 md:gap-4 items-center">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-1.jpg" alt="Bathroom with freestanding tub and glass shower" class="w-full aspect-[3/4] object-cover rounded">
-        <div class="bg-brand text-ink rounded aspect-[3/4] p-4 md:p-6 flex flex-col justify-end">
-          <p class="font-heading font-semibold text-xl md:text-3xl leading-tight">Family owned. Local and trusted.</p>
-        </div>
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-6.jpg" alt="Kitchen with marble islands and gold pendant lights" class="w-full aspect-[3/4] object-cover rounded">
+<!-- THREE COLUMNS -->
+<section class="bg-white pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-ink/10 pt-12">
+      <div class="reveal">
+        <h3 class="label text-brand mb-4">Premium quality</h3>
+        <p class="text-lg text-ink/75 leading-relaxed">Top-tier materials and careful installation in every room we touch, from cabinetry to tile to flooring.</p>
       </div>
-    </div>
-    <div class="lg:col-span-5 reveal">
-      <p class="text-lg text-slate-700">Herman Renovations is a family-owned remodeling company in Tampa. We design and build spaces that feel considered and last, with clear pricing and daily updates so you always know where your project stands.</p>
-      <p class="mt-4 text-slate-700">Our clients mention the same things: careful communication, clean job sites, and finished work that looks better than expected.</p>
-      <div class="mt-8 divide-y divide-slate-200 border-t border-slate-200">
-        <div class="py-5"><h3 class="font-heading font-semibold text-xl text-ink">Bathroom Remodeling</h3><p class="text-slate-600">Spa-like bathrooms custom designed for you.</p></div>
-        <div class="py-5"><h3 class="font-heading font-semibold text-xl text-ink">Kitchen Remodeling</h3><p class="text-slate-600">Beautiful kitchens built for life and entertaining.</p></div>
-        <div class="py-5"><h3 class="font-heading font-semibold text-xl text-ink">Tile &amp; Stone Installation</h3><p class="text-slate-600">Expert craftsmanship in every detail.</p></div>
+      <div class="reveal">
+        <h3 class="label text-brand mb-4">State certified</h3>
+        <p class="text-lg text-ink/75 leading-relaxed">Licensed and insured, with a family-run team that keeps you updated at every step of the project.</p>
       </div>
-      <a href="tel:+18135391412" class="mt-4 inline-flex items-center gap-3 font-heading font-semibold text-2xl text-ink hover:text-brandDark">
-        <span class="w-11 h-11 rounded-full bg-brand flex items-center justify-center">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b0f10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        (813) 539-1412
-      </a>
+      <div class="reveal">
+        <h3 class="label text-brand mb-4">Financing available</h3>
+        <p class="text-lg text-ink/75 leading-relaxed">Easy and fast approval, so the project you want does not have to wait. Ask us about options during your estimate.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="relative pt-24 lg:pt-32 pb-24 lg:pb-32 bg-paper">
-  <div class="absolute top-0 left-0 right-0 h-[420px] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
-      <div class="lg:col-span-7">
-        <p class="label text-ink/70 mb-4">Our services</p>
-        <h2 class="font-heading font-semibold text-4xl md:text-5xl text-ink">Everything inside your home, done well</h2>
-      </div>
-      <p class="lg:col-span-5 text-ink/80 text-lg">From a single bathroom to a full home renovation, one crew handles design, tile, flooring, cabinetry and paint.</p>
-    </div>
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="#contact" class="group bg-white rounded overflow-hidden flex flex-col reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-3.jpg" alt="Marble tile shower with bench and niche" class="w-full aspect-[4/5] object-cover">
-        <div class="p-6 flex-1">
-          <div class="flex items-start justify-between gap-3"><h3 class="font-heading font-semibold text-xl text-ink">Bathroom Remodeling</h3>
-          <svg class="shrink-0 mt-1 group-hover:translate-x-1 transition" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12c4d6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-slate-600 text-[15px]">Spa-like bathrooms custom designed for you.</p>
-        </div>
-      </a>
-      <a href="#contact" class="group bg-white rounded overflow-hidden flex flex-col reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-2.jpg" alt="Open kitchen with dark cabinetry and island" class="w-full aspect-[4/5] object-cover">
-        <div class="p-6 flex-1">
-          <div class="flex items-start justify-between gap-3"><h3 class="font-heading font-semibold text-xl text-ink">Kitchen Remodeling</h3>
-          <svg class="shrink-0 mt-1 group-hover:translate-x-1 transition" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12c4d6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-slate-600 text-[15px]">Beautiful kitchens built for life and entertaining.</p>
-        </div>
-      </a>
-      <a href="#contact" class="group bg-white rounded overflow-hidden flex flex-col reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-10.jpg" alt="Kitchen with marble counters and arabesque tile backsplash" class="w-full aspect-[4/5] object-cover">
-        <div class="p-6 flex-1">
-          <div class="flex items-start justify-between gap-3"><h3 class="font-heading font-semibold text-xl text-ink">Tile &amp; Stone Installation</h3>
-          <svg class="shrink-0 mt-1 group-hover:translate-x-1 transition" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12c4d6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-slate-600 text-[15px]">Expert craftsmanship in every detail.</p>
-        </div>
-      </a>
-      <a href="#contact" class="group bg-white rounded overflow-hidden flex flex-col reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-4.jpg" alt="Kitchen with new plank flooring and white cabinets" class="w-full aspect-[4/5] object-cover">
-        <div class="p-6 flex-1">
-          <div class="flex items-start justify-between gap-3"><h3 class="font-heading font-semibold text-xl text-ink">Flooring</h3>
-          <svg class="shrink-0 mt-1 group-hover:translate-x-1 transition" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12c4d6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <p class="mt-2 text-slate-600 text-[15px]">Luxury flooring for a stunning finish.</p>
-        </div>
-      </a>
-    </div>
-    <p class="mt-10 text-slate-600 reveal">Also: <span class="font-medium text-ink">Interior painting</span> with a flawless finish, and <span class="font-medium text-ink">whole home renovations</span> from start to finish.</p>
+<!-- MISSION STATEMENT -->
+<section class="bg-sand py-24 lg:py-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="label text-ink/60 mb-8">Designed. Built. Perfected.</p>
+    <p class="text-3xl sm:text-4xl lg:text-6xl font-medium leading-[1.12] tracking-tight">Stunning spaces.<br>Flawless execution.<br>See the difference quality makes.</p>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
-      <div class="lg:col-span-7">
-        <p class="label text-brandDark mb-4">Feature projects</p>
-        <h2 class="font-heading font-semibold text-4xl md:text-5xl text-ink">Recent transformations</h2>
+<!-- COLLAGE -->
+<section id="projects" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 reveal">
+      <div>
+        <p class="label text-ink/60 mb-4">Recent transformations</p>
+        <h2 class="text-4xl lg:text-6xl font-medium">Work from Tampa homes</h2>
       </div>
-      <p class="lg:col-span-5 text-slate-600 text-lg">Stunning spaces, flawless execution. See the difference quality makes.</p>
+      <a href="#contact" class="btn btn-dark self-start sm:self-auto">Start your project</a>
     </div>
-    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-6.jpg" alt="Kitchen with two islands and gold pendant lights" class="ph w-full object-cover rounded reveal">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-1.jpg" alt="Bathroom with walk-in glass shower and freestanding tub" class="ph w-full object-cover rounded reveal">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-8.jpg" alt="White shaker kitchen with black hardware" class="ph w-full object-cover rounded reveal">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-3.jpg" alt="Marble shower with hexagon tile floor" class="ph w-full object-cover rounded reveal">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-9.jpg" alt="Cherry cabinet kitchen with quartz island" class="ph w-full object-cover rounded reveal">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-5.jpg" alt="Bathroom with clawfoot tub and wood vanity" class="ph w-full object-cover rounded reveal">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-2.jpg" alt="Kitchen with dark cabinets and mosaic backsplash" class="ph w-full object-cover rounded reveal">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/photo-7.jpg" alt="Kitchen with white cabinets and patterned backsplash" class="ph w-full object-cover rounded reveal">
-    </div>
-    <div class="mt-10">
-      <a href="#contact" class="inline-block bg-ink text-white font-semibold px-7 py-4 rounded hover:bg-brandDark transition">Start your project</a>
+
+    <div class="grid grid-cols-2 md:grid-cols-12 gap-4 lg:gap-5 reveal grid-flow-row-dense">
+      <div class="md:col-span-3 r overflow-hidden aspect-square">
+        <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-3.jpg" alt="Marble tile walk-in shower with hexagon niche">
+      </div>
+      <div class="col-span-2 md:col-span-6 md:row-span-2 r overflow-hidden aspect-[4/3] md:aspect-auto order-first md:order-none">
+        <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-6.jpg" alt="Kitchen with two marble islands and gold pendant lights">
+      </div>
+      <div class="md:col-span-3 r overflow-hidden aspect-square">
+        <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-2.jpg" alt="Open kitchen with dark cabinets and island seating">
+      </div>
+      <div class="md:col-span-3 r overflow-hidden aspect-square">
+        <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-5.jpg" alt="Classic bathroom with clawfoot tub and wood vanity">
+      </div>
+      <div class="md:col-span-3 r overflow-hidden aspect-square">
+        <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-4.jpg" alt="White kitchen with black hardware and dark tile floor">
+      </div>
+      <div class="col-span-2 md:col-span-3 r overflow-hidden aspect-[2/1] md:aspect-square">
+        <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-7.jpg" alt="White kitchen cabinets with patterned backsplash">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Reviews -->
+<!-- SERVICES CARDS -->
+<section id="services" class="bg-sand py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl mb-14 reveal">
+      <p class="label text-ink/60 mb-4">Services</p>
+      <h2 class="text-4xl lg:text-6xl font-medium">Designed, built, perfected</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article class="reveal bg-white r overflow-hidden flex flex-col">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-1.jpg" alt="Bathroom remodel with floating vanity and glass shower">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Bathroom Remodeling</h3>
+          <p class="text-ink/70 leading-relaxed">Spa-like bathrooms custom designed for you.</p>
+        </div>
+      </article>
+      <article class="reveal bg-white r overflow-hidden flex flex-col">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-20.jpg" alt="Remodeled kitchen with quartz counters and pendant lights">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Kitchen Remodeling</h3>
+          <p class="text-ink/70 leading-relaxed">Beautiful kitchens built for life and entertaining.</p>
+        </div>
+      </article>
+      <article class="reveal bg-white r overflow-hidden flex flex-col">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-3.jpg" alt="Natural stone and marble tile shower">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Tile &amp; Stone Installation</h3>
+          <p class="text-ink/70 leading-relaxed">Expert craftsmanship in every detail.</p>
+        </div>
+      </article>
+      <article class="reveal bg-white r overflow-hidden flex flex-col">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img class="ph" src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/photo-2.jpg" alt="Light wood-look flooring in an open kitchen">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Flooring</h3>
+          <p class="text-ink/70 leading-relaxed">Luxury flooring for a stunning finish.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+      <article class="reveal bg-white r p-7 lg:p-8 flex flex-col justify-between gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Interior Painting</h3>
+          <p class="text-ink/70 leading-relaxed">Flawless finish and cleanliness in all our work.</p>
+        </div>
+      </article>
+      <article class="reveal bg-ink text-white r p-7 lg:p-8 flex flex-col justify-between gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Whole Home Renovations</h3>
+          <p class="text-white/75 leading-relaxed">Complete transformations from start to finish.</p>
+        </div>
+        <a href="#contact" class="inline-flex items-center gap-2 text-brand font-semibold">Request an estimate
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl mb-14 reveal">
+      <p class="label text-ink/60 mb-4">Our process</p>
+      <h2 class="text-4xl lg:text-6xl font-medium">A smooth experience from start to finish</h2>
+      <p class="mt-5 text-lg text-ink/70">We make remodeling simple, transparent and stress-free.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="reveal bg-sand r p-8">
+        <p class="text-5xl font-semibold text-brand mb-8">01</p>
+        <h3 class="text-xl font-semibold mb-2">Consultation</h3>
+        <p class="text-ink/70 leading-relaxed">We listen to your vision and goals.</p>
+      </div>
+      <div class="reveal bg-sand r p-8">
+        <p class="text-5xl font-semibold text-brand mb-8">02</p>
+        <h3 class="text-xl font-semibold mb-2">Detailed Estimate</h3>
+        <p class="text-ink/70 leading-relaxed">Clear pricing and honest recommendations.</p>
+      </div>
+      <div class="reveal bg-sand r p-8">
+        <p class="text-5xl font-semibold text-brand mb-8">03</p>
+        <h3 class="text-xl font-semibold mb-2">Design &amp; Planning</h3>
+        <p class="text-ink/70 leading-relaxed">We finalize every detail before we build.</p>
+      </div>
+      <div class="reveal bg-sand r p-8">
+        <p class="text-5xl font-semibold text-brand mb-8">04</p>
+        <h3 class="text-xl font-semibold mb-2">Build &amp; Transform</h3>
+        <p class="text-ink/70 leading-relaxed">Expert craftsmanship with daily updates.</p>
+      </div>
+      <div class="reveal bg-sand r p-8">
+        <p class="text-5xl font-semibold text-brand mb-8">05</p>
+        <h3 class="text-xl font-semibold mb-2">Final Walkthrough</h3>
+        <p class="text-ink/70 leading-relaxed">We ensure every detail is perfect.</p>
+      </div>
+      <div class="reveal bg-ink text-white r p-8 flex flex-col justify-between gap-8">
+        <p class="text-2xl font-medium leading-snug">Ready to start? Tell us about your project.</p>
+        <a href="#contact" class="btn btn-brand self-start">Book your free estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section id="why" class="bg-sand py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-6 r overflow-hidden aspect-[4/5] reveal">
+        <img class="ph" src="https://images.unsplash.com/photo-1613545564235-db7af30081bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright remodeled kitchen with marble island">
+      </div>
+      <div class="lg:col-span-6 reveal">
+        <p class="label text-ink/60 mb-4">Why choose Herman Renovations</p>
+        <h2 class="text-4xl lg:text-5xl font-medium mb-12">Trusted by Tampa homeowners who expect the best</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+          <div>
+            <svg class="mb-4 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <h3 class="text-lg font-semibold mb-2">Licensed &amp; insured</h3>
+            <p class="text-ink/70 leading-relaxed">State certified, so your home is in qualified hands.</p>
+          </div>
+          <div>
+            <svg class="mb-4 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <h3 class="text-lg font-semibold mb-2">Premium materials</h3>
+            <p class="text-ink/70 leading-relaxed">Top-tier products chosen to look right and last.</p>
+          </div>
+          <div>
+            <svg class="mb-4 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <h3 class="text-lg font-semibold mb-2">Family owned</h3>
+            <p class="text-ink/70 leading-relaxed">A local team that stays in touch from quote to final walkthrough.</p>
+          </div>
+          <div>
+            <svg class="mb-4 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <h3 class="text-lg font-semibold mb-2">Financing available</h3>
+            <p class="text-ink/70 leading-relaxed">Easy and fast approval to help you get started.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -348,43 +456,12 @@ tailwind.config = {
   })();</script>
 </section>
 
-<!-- Process -->
-<section id="process" class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="max-w-2xl reveal">
-      <p class="label text-brandDark mb-4">Our process</p>
-      <h2 class="font-heading font-semibold text-4xl md:text-5xl text-ink">A smooth experience from start to finish</h2>
-      <p class="mt-5 text-lg text-slate-600">We make remodeling simple, transparent, and stress-free.</p>
-    </div>
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-      <div class="bg-white rounded p-6 reveal"><div class="font-heading font-semibold text-brandDark text-3xl">01</div><h3 class="mt-4 font-heading font-semibold text-xl text-ink">Consultation</h3><p class="mt-2 text-slate-600 text-[15px]">We listen to your vision and goals.</p></div>
-      <div class="bg-white rounded p-6 reveal"><div class="font-heading font-semibold text-brandDark text-3xl">02</div><h3 class="mt-4 font-heading font-semibold text-xl text-ink">Detailed Estimate</h3><p class="mt-2 text-slate-600 text-[15px]">Clear pricing and honest recommendations.</p></div>
-      <div class="bg-white rounded p-6 reveal"><div class="font-heading font-semibold text-brandDark text-3xl">03</div><h3 class="mt-4 font-heading font-semibold text-xl text-ink">Design &amp; Planning</h3><p class="mt-2 text-slate-600 text-[15px]">We finalize every detail before we build.</p></div>
-      <div class="bg-white rounded p-6 reveal"><div class="font-heading font-semibold text-brandDark text-3xl">04</div><h3 class="mt-4 font-heading font-semibold text-xl text-ink">Build &amp; Transform</h3><p class="mt-2 text-slate-600 text-[15px]">Expert craftsmanship with daily updates.</p></div>
-      <div class="bg-white rounded p-6 reveal sm:col-span-2 lg:col-span-1"><div class="font-heading font-semibold text-brandDark text-3xl">05</div><h3 class="mt-4 font-heading font-semibold text-xl text-ink">Final Walkthrough</h3><p class="mt-2 text-slate-600 text-[15px]">We ensure every detail is perfect.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Call band -->
-<section class="bg-ink text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-    <div class="lg:col-span-8">
-      <h2 class="font-heading font-semibold text-4xl md:text-5xl text-brand">Ready to renovate your home?</h2>
-      <p class="mt-4 text-lg text-white/75 max-w-2xl">Share your vision with us and let's bring it to life together. Call or text for a free estimate.</p>
-    </div>
-    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 lg:items-end">
-      <a href="#contact" class="bg-brand text-ink font-semibold px-7 py-4 rounded text-center hover:bg-white transition">Book Your Free Estimate</a>
-      <a href="tel:+18135391412" class="font-heading font-semibold text-2xl hover:text-brand text-center">(813) 539-1412</a>
-    </div>
-  </div>
-</section>
-
+<!-- CONTACT -->
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(18,196,214,0.10);color:#12c4d6}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#12c4d6}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(18,196,214,0.10);color:#12C4D6}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#12C4D6}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -395,16 +472,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#12c4d6;box-shadow:0 0 0 4px rgba(18,196,214,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#12c4d6;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#12C4D6;box-shadow:0 0 0 4px rgba(18,196,214,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#12C4D6;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -414,13 +491,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1652918320939-47f66eb1b684?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1601760561441-16420502c7e0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#12c4d6">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your kitchen, bathroom or whole home project and we will get back to you with a clear, honest estimate.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#12C4D6">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your kitchen, bathroom or whole-home project and we will get back to you with a clear, honest estimate.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18135391412" class="lp-v lp-v-d">(813) 539-1412</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -444,49 +521,47 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-</main>
-
-<!-- Footer -->
-<footer class="bg-ink text-white border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-4">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/herman-renovations/21943/logo-0.png" alt="Herman Renovations" class="h-14 w-auto">
-      <p class="mt-5 text-white/65 max-w-xs text-[15px]">Luxury renovations and timeless results for homes across Tampa Bay and South Florida.</p>
-    </div>
-    <div class="md:col-span-3">
-      <h3 class="label text-brand mb-5">Services</h3>
-      <ul class="space-y-2 text-white/80 text-[15px]">
-        <li>Bathroom Renovation</li>
-        <li>Kitchen Renovation</li>
-        <li>Tile &amp; Stone Installation</li>
-        <li>Flooring Installation</li>
-        <li>Interior Painting</li>
-      </ul>
-    </div>
-    <div class="md:col-span-2">
-      <h3 class="label text-brand mb-5">Service area</h3>
-      <ul class="space-y-2 text-white/80 text-[15px]">
-        <li>Tampa, FL</li>
-        <li>St. Petersburg, FL</li>
-        <li>Clearwater, FL</li>
-        <li>Lakeland, FL</li>
-        <li>South Florida, FL</li>
-      </ul>
-    </div>
-    <div class="md:col-span-3">
-      <h3 class="label text-brand mb-5">Contact</h3>
-      <ul class="space-y-2 text-white/80 text-[15px]">
-        <li><a href="tel:+18135391412" class="hover:text-brand">(813) 539-1412</a></li>
-        <li><a href="mailto:contact@hermanrenovations.com" class="hover:text-brand break-words">contact@hermanrenovations.com</a></li>
-        <li>Tampa, Florida</li>
-        <li><a href="https://www.instagram.com/hermanrenovations/" class="hover:text-brand">@hermanrenovations</a></li>
-      </ul>
+<!-- FINAL CALL -->
+<section class="bg-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 reveal">
+      <div class="lg:col-span-5 r overflow-hidden aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
+        <img class="ph" src="https://images.unsplash.com/photo-1694885150510-cb89a261081d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled kitchen with long marble island">
+      </div>
+      <div class="lg:col-span-7 r bg-sand p-8 lg:p-14 flex flex-col justify-center">
+        <p class="label text-ink/60 mb-5">Herman Renovations, Tampa</p>
+        <h2 class="text-4xl lg:text-5xl font-medium mb-5">Ready to transform your home?</h2>
+        <p class="text-lg text-ink/70 mb-8 max-w-xl">Share your vision with us and let's bring it to life together. Call, text or send us a message.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="btn btn-brand">Book your free estimate</a>
+          <a href="tel:+18135391412" class="btn btn-dark">(813) 539-1412</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50 space-y-1">
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 text-center">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/herman-renovations/21950/logo-0.png" alt="Herman Renovations" class="h-14 w-auto mx-auto mb-10">
+    <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-white/80 mb-10">
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#projects" class="hover:text-brand">Projects</a>
+      <a href="#process" class="hover:text-brand">Process</a>
+      <a href="#why" class="hover:text-brand">Why Herman</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
+    </nav>
+    <div class="space-y-2 text-white/85">
+      <p><a href="tel:+18135391412" class="text-xl font-semibold text-brand">(813) 539-1412</a></p>
+      <p><a href="mailto:contact@hermanrenovations.com" class="break-words hover:text-brand">contact@hermanrenovations.com</a></p>
+      <p>Tampa, Florida. Serving Tampa, St. Petersburg, Clearwater, Lakeland and South Florida.</p>
+    </div>
+    <div class="mt-12 pt-8 border-t border-white/10 text-sm text-white/55 space-y-2">
       <p>Concept redesign by LumeaPixel. This is not the official Herman Renovations website.</p>
-      <p>Some photos by Decima Athens and Brian Wangenheim on Unsplash.</p>
+      <p>Some photos by Brian Wangenheim, Zac Gudakov and Clay Elliot on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -495,7 +570,8 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
+
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

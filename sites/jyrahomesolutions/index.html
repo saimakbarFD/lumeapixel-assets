@@ -15,220 +15,319 @@ tailwind.config = {
     extend: {
       colors: {
         brand: '#1f3765',
-        brandDark: '#0f1c36',
-        ink: '#0c1220',
-        paper: '#f6f5f2',
-        line: '#e4e2dc'
+        brandDark: '#142547',
+        leaf: '#5a9a3c',
+        ink: '#0e1626',
+        paper: '#f5f6f8'
       },
       fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
+        head: ['Outfit', 'sans-serif'],
         body: ['Inter', 'sans-serif']
       },
-      borderRadius: { DEFAULT: '10px' }
+      borderRadius: { DEFAULT: '6px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1b2231; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; }
+  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1b2433; }
+  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.08; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
-  .svc-card:hover .svc-arrow { transform: translate(3px,-3px); }
-  .svc-arrow { transition: transform .25s ease; }
-  .svc-card img { transition: transform .6s ease; }
-  .svc-card:hover img { transform: scale(1.04); }
-  .gal img { transition: transform .6s ease; }
-  .gal:hover img { transform: scale(1.04); }
+  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .ba-top { position: absolute; inset: 0; width: 50%; overflow: hidden; }
+  .ba-top img { position: absolute; top: 0; left: 0; height: 100%; max-width: none; object-fit: cover; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #fff; transform: translateX(-1px); pointer-events: none; }
+  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; background: #fff; border-radius: 9999px; display: flex; align-items: center; justify-content: center; color: #1f3765; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .hero-overlay { background: linear-gradient(90deg, rgba(14,22,38,.92) 0%, rgba(14,22,38,.78) 55%, rgba(14,22,38,.55) 100%); }
+  .tile-grad { background: linear-gradient(to top, rgba(14,22,38,.92) 0%, rgba(14,22,38,.35) 55%, rgba(14,22,38,0) 100%); }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
-<!-- Top bar -->
-<div class="bg-brand text-white text-sm">
-  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
-    <span>Serving Schertz, TX and the surrounding area</span>
-    <a href="mailto:seth@jyrahomesolutions.com" class="hover:underline break-words">seth@jyrahomesolutions.com</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-ink text-white border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="flex-shrink-0"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/jyra-home-solutions/21926/logo-0.png" alt="JYRA Home Solutions" class="h-12 w-auto"></a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/85">
-      <a href="#difference" class="hover:text-white">About</a>
-      <a href="#services" class="hover:text-white">Services</a>
-      <a href="#projects" class="hover:text-white">Projects</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/logo-0.png" alt="JYRA Home Solutions" class="h-12 w-auto"></a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink">
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#process" class="hover:text-brand">How it works</a>
+      <a href="#work" class="hover:text-brand">Our work</a>
+      <a href="#about" class="hover:text-brand">About</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
     </nav>
-    <div class="hidden md:flex items-center gap-5">
-      <div class="text-right leading-tight hidden xl:block">
-        <div class="text-xs text-white/60">Need help? Call us today</div>
-        <a href="tel:2104198185" class="font-heading font-semibold text-lg">(210) 419-8185</a>
-      </div>
-      <a href="tel:2104198185" class="xl:hidden font-heading font-semibold">(210) 419-8185</a>
-      <a href="#contact" class="bg-brand hover:bg-white hover:text-brand border border-white/25 transition px-5 py-2.5 rounded text-sm font-semibold">Get an estimate</a>
+    <div class="flex items-center gap-3">
+      <a href="tel:+12104198185" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-semibold px-5 py-3 rounded hover:bg-brandDark transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (210) 419-8185
+      </a>
+      <button id="menuBtn" class="lg:hidden p-2 text-ink" aria-label="Menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </div>
-    <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
-    <div class="px-5 py-4 flex flex-col gap-3 text-white/90">
-      <a href="#difference" class="py-1">About</a>
-      <a href="#services" class="py-1">Services</a>
-      <a href="#projects" class="py-1">Projects</a>
-      <a href="#contact" class="py-1">Contact</a>
-      <a href="tel:2104198185" class="mt-2 bg-brand text-center py-3 rounded font-semibold">Call (210) 419-8185</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-200 bg-white">
+    <div class="px-5 py-4 flex flex-col gap-4 font-medium text-ink">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#work">Our work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+12104198185" class="bg-brand text-white text-center font-semibold px-5 py-3 rounded">Call (210) 419-8185</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="relative bg-ink text-white">
-  <img src="https://images.unsplash.com/photo-1601303981881-f630d27a7df5?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home addition under construction" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-ink/40"></div>
-  <div class="relative max-w-7xl mx-auto px-5 py-24 md:py-36 lg:py-44">
-    <div class="max-w-2xl">
-      <p class="label text-white/70 mb-5">General contractor · Schertz, TX</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold">Quality building work for Schertz homes.</h1>
-      <p class="mt-6 text-lg text-white/80 max-w-xl">From repairs and repaints to additions and remodels, JYRA Home Solutions delivers durable, cost-effective workmanship and keeps you updated until the job is done.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="bg-brand hover:bg-white hover:text-brand border border-white/20 transition px-7 py-3.5 rounded text-center font-semibold">Request a free estimate</a>
-        <a href="tel:2104198185" class="bg-white text-ink hover:bg-paper transition px-7 py-3.5 rounded-full text-center font-semibold">Call (210) 419-8185</a>
+  <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-11.jpg" alt="Finished white kitchen with marble island" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7">
+      <p class="text-sm tracking-[0.2em] uppercase text-white/70 mb-5">General contractor · Schertz, TX</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase leading-[1.02]">Reliable work.<br>Clear updates.<br>Done right.</h1>
+      <p class="mt-7 text-lg text-white/85 max-w-xl">JYRA Home Solutions delivers durable, cost-effective workmanship for homeowners in Schertz and the surrounding area. We keep you informed from the first call to the final walk-through.</p>
+      <ul class="mt-7 space-y-3 text-white/90">
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-leaf" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Open communication on the status of your job</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-leaf" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We coordinate deadlines with related projects</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-leaf" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We don't leave until it's finished and you're satisfied</li>
+      </ul>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="#contact" class="bg-white text-brand font-semibold px-7 py-4 rounded hover:bg-paper transition">Get a free estimate</a>
+        <a href="#work" class="border border-white/50 text-white font-semibold px-7 py-4 rounded hover:bg-white/10 transition">See our work</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="bg-white text-ink rounded p-7 sm:p-9">
+        <p class="text-sm tracking-[0.18em] uppercase text-brand font-semibold">Talk to us</p>
+        <h2 class="text-3xl font-semibold mt-2">Get a free estimate</h2>
+        <p class="mt-3 text-gray-600">Call or email Seth directly and tell us about your project.</p>
+        <div class="mt-6 space-y-3">
+          <a href="tel:+12104198185" class="flex items-center justify-center gap-3 bg-brand text-white font-semibold px-5 py-4 rounded hover:bg-brandDark transition">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            (210) 419-8185
+          </a>
+          <a href="mailto:seth@jyrahomesolutions.com" class="flex items-center justify-center gap-3 border border-brand text-brand font-semibold px-5 py-4 rounded hover:bg-paper transition text-[15px] break-words text-center">
+            <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            seth@jyrahomesolutions.com
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- The difference -->
-<section id="difference" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+<!-- SERVICE STRIP -->
+<section class="bg-paper border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[15px] font-medium text-ink">
+    <span>Kitchen remodeling</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Exterior painting</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Interior painting</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Doors &amp; entryways</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Trim &amp; finish work</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Home renovation</span>
+  </div>
+</section>
+
+<!-- PLAN / BUILD / FINISH -->
+<section id="services" class="bg-brand text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-white/70 mb-4">What we do</p>
+      <h2 class="text-4xl lg:text-5xl font-bold uppercase">Plan. Build. Finish.</h2>
+      <p class="mt-5 text-white/80">A wide range of services to meet your project needs, handled by one team that stays on the job until it is done.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Renovation in progress" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-2xl font-semibold uppercase">Plan</h3>
+          <p class="mt-3 text-white/75">We review the scope with you, set deadlines and coordinate with any related projects before work begins.</p>
+        </div>
+      </article>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-9.jpg" alt="Painter spraying a white deck railing" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-2xl font-semibold uppercase">Build</h3>
+          <p class="mt-3 text-white/75">Quality parts and equipment, industry knowledge and steady updates while the work is underway.</p>
+        </div>
+      </article>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-10.jpg" alt="Completed kitchen remodel" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <h3 class="text-2xl font-semibold uppercase">Finish</h3>
+          <p class="mt-3 text-white/75">We don't leave the job until it is finished and you are satisfied with the result.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-brand mb-4">How it works</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-ink">How your project runs</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-head text-2xl font-semibold">1</div>
+        <h3 class="mt-6 text-2xl font-semibold text-ink">Tell us what you need</h3>
+        <p class="mt-3 text-gray-600">Call or email. We talk through your project, your preferences and your timeline.</p>
+      </div>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-head text-2xl font-semibold">2</div>
+        <h3 class="mt-6 text-2xl font-semibold text-ink">We work, you stay informed</h3>
+        <p class="mt-3 text-gray-600">We meet deadlines, coordinate with related work and keep you up to date on the status of your job.</p>
+      </div>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-head text-2xl font-semibold">3</div>
+        <h3 class="mt-6 text-2xl font-semibold text-ink">Finished to your satisfaction</h3>
+        <p class="mt-3 text-gray-600">The project is completed according to your preferences. We stay until you are satisfied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="bg-ink text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-white/60 mb-4">The difference</p>
+      <h2 class="text-4xl lg:text-5xl font-bold">From gutted to finished</h2>
+      <p class="mt-5 text-white/75">Drag the slider to compare a space mid-renovation with a finished interior.</p>
+    </div>
+    <div class="mt-12 reveal">
+      <div class="ba-wrap rounded aspect-[4/3] sm:aspect-[16/9] max-w-5xl mx-auto" id="ba">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-12.jpg" alt="Finished interior with grey walls and white trim" class="absolute inset-0 w-full h-full object-cover">
+        <div class="ba-top" id="baTop">
+          <img id="baTopImg" src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior during renovation">
+        </div>
+        <div class="ba-handle" id="baHandle"><div class="ba-knob">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg>
+        </div></div>
+        <span class="absolute top-4 left-4 bg-ink/80 text-white text-xs tracking-widest uppercase px-3 py-1.5 rounded">During</span>
+        <span class="absolute top-4 right-4 bg-brand text-white text-xs tracking-widest uppercase px-3 py-1.5 rounded">Finished</span>
+        <input type="range" min="0" max="100" value="50" class="ba-range" id="baRange" aria-label="Before and after slider">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIY VS CONTRACTOR -->
+<section class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-brand mb-4">Your options</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-ink">Doing it yourself vs. one contractor</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded border border-gray-200 p-8 lg:p-10 reveal">
+        <h3 class="text-2xl font-semibold text-ink">Managing it yourself</h3>
+        <ul class="mt-6 space-y-4 text-gray-600">
+          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-gray-400 shrink-0"></span>You track deadlines across every trade</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-gray-400 shrink-0"></span>You source parts and equipment</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-gray-400 shrink-0"></span>You chase updates from several people</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-gray-400 shrink-0"></span>You carry the risk if the finish falls short</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded border-2 border-brand p-8 lg:p-10 reveal">
+        <h3 class="text-2xl font-semibold text-brand">JYRA Home Solutions</h3>
+        <ul class="mt-6 space-y-4 text-ink">
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We coordinate deadlines and related projects</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Highest quality parts and equipment</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Open communication on job status</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We stay until you are satisfied</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BUILD -->
+<section id="work" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-brand mb-4">Our work</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-ink">What we build</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:grid-rows-2">
+      <figure class="relative rounded overflow-hidden col-span-2 lg:col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[520px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-11.jpg" alt="White kitchen with marble island" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <figcaption class="absolute bottom-0 left-0 p-6 text-white"><h3 class="text-2xl font-semibold">Kitchens</h3></figcaption>
+      </figure>
+      <figure class="relative rounded overflow-hidden col-span-2 lg:col-span-2 aspect-[16/9] lg:aspect-auto reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-8.jpg" alt="Exterior painting on a two-story home" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <figcaption class="absolute bottom-0 left-0 p-6 text-white"><h3 class="text-xl font-semibold">Exterior painting</h3></figcaption>
+      </figure>
+      <figure class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-1.jpg" alt="Black front door with sidelights" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 text-white"><h3 class="text-lg font-semibold">Entryways</h3></figcaption>
+      </figure>
+      <figure class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-12.jpg" alt="Interior with grey walls and white trim" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 text-white"><h3 class="text-lg font-semibold">Interior finish</h3></figcaption>
+      </figure>
+      <figure class="relative rounded overflow-hidden col-span-2 lg:col-span-2 aspect-[16/9] reveal">
+        <img src="https://images.unsplash.com/photo-1786269691602-519fdaa112ea?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Outdoor renovation work with cement mixer" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <figcaption class="absolute bottom-0 left-0 p-6 text-white"><h3 class="text-xl font-semibold">Renovation &amp; repairs</h3></figcaption>
+      </figure>
+      <figure class="relative rounded overflow-hidden col-span-2 lg:col-span-2 aspect-[16/9] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-7.jpg" alt="Craftsman style front door" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <figcaption class="absolute bottom-0 left-0 p-6 text-white"><h3 class="text-xl font-semibold">Doors &amp; trim</h3></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / OWNER LED -->
+<section id="about" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
     <div class="lg:col-span-6 reveal">
-      <p class="label text-brand mb-4">The JYRA difference</p>
-      <h2 class="text-4xl sm:text-5xl text-ink">Reliable contractors. Open communication. Work you're happy with.</h2>
-      <div class="mt-12 grid grid-cols-6 gap-4 items-center">
-        <div class="col-span-2 aspect-[3/4] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/jyra-home-solutions/21926/photo-2.jpg" alt="Painter spraying a porch railing" class="w-full h-full object-cover"></div>
-        <div class="col-span-2 aspect-[3/4] bg-brand text-white rounded p-4 sm:p-6 flex items-end">
-          <p class="font-heading text-lg sm:text-2xl font-semibold leading-tight">Satisfaction guaranteed</p>
-        </div>
-        <div class="col-span-2 aspect-[3/4] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/jyra-home-solutions/21926/photo-4.jpg" alt="Finished interior with fresh paint and trim" class="w-full h-full object-cover"></div>
+      <p class="text-sm tracking-[0.2em] uppercase text-brand mb-4">About JYRA</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-ink">Speak with Seth, not a call center</h2>
+      <p class="mt-6 text-gray-700">We are dedicated to providing premier customer service and strive to deliver unparalleled quality on every assignment. We combine industry knowledge, the highest quality parts and equipment, and exceptional service to save you both time and money.</p>
+      <ul class="mt-7 space-y-3 text-ink">
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Durable, cost-effective workmanship</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Communication from start to finish</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Satisfaction guaranteed on every job</li>
+      </ul>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="tel:+12104198185" class="bg-brand text-white font-semibold px-7 py-4 rounded hover:bg-brandDark transition">Call (210) 419-8185</a>
+        <a href="#contact" class="border border-brand text-brand font-semibold px-7 py-4 rounded hover:bg-white transition">Request an estimate</a>
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <p class="text-gray-600">We are dedicated to providing premier customer service, and we aim to deliver quality on every assignment. We offer a wide range of services to meet your project needs and ensure durable, cost-effective workmanship.</p>
-      <div class="mt-10 divide-y divide-line border-y border-line">
-        <div class="py-6">
-          <h3 class="text-xl text-ink">Reliable contractor experts</h3>
-          <p class="mt-2 text-gray-600">A full range of services to match your project, built to last and priced to make sense.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl text-ink">Communication is key</h3>
-          <p class="mt-2 text-gray-600">We work to your deadlines, coordinate with related projects and keep you updated on the status of your job.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="text-xl text-ink">Satisfaction guaranteed</h3>
-          <p class="mt-2 text-gray-600">Industry knowledge, quality parts and equipment, and exceptional service. We don't leave until the job is finished and you're satisfied.</p>
-        </div>
-      </div>
-      <a href="tel:2104198185" class="mt-8 inline-flex items-center gap-3 group">
-        <span class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        <span class="leading-tight">
-          <span class="block text-sm text-gray-500">Call Seth</span>
-          <span class="block font-heading text-2xl font-semibold text-ink group-hover:text-brand">(210) 419-8185</span>
-        </span>
-      </a>
+      <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-2.jpg" alt="JYRA painter at work on a home exterior" class="w-full h-full object-cover"></div>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="relative">
-  <div class="absolute inset-x-0 top-0 h-[55%] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5 pt-24 lg:pt-28 pb-24 lg:pb-32">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end text-white reveal">
-      <div class="lg:col-span-7">
-        <p class="label text-white/70 mb-4">What we do</p>
-        <h2 class="text-4xl sm:text-5xl">Services for every stage of your home.</h2>
-      </div>
-      <p class="lg:col-span-5 text-white/80">Tell us what your house needs. We handle the work from first walkthrough to final cleanup and stay in touch the whole way.</p>
+<!-- SERVICE AREA -->
+<section class="bg-white py-20 lg:py-24 border-t border-gray-200">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-sm tracking-[0.2em] uppercase text-brand mb-4">Service area</p>
+    <h2 class="text-3xl lg:text-4xl font-bold text-ink">Based in Schertz, Texas</h2>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <span class="border border-gray-300 rounded px-5 py-2.5 text-ink font-medium">Schertz</span>
+      <span class="border border-gray-300 rounded px-5 py-2.5 text-ink font-medium">Surrounding communities</span>
     </div>
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <a href="#contact" class="svc-card group block bg-white rounded p-3 reveal shadow-sm">
-        <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/jyra-home-solutions/21926/photo-2.jpg" alt="Exterior painting" class="w-full h-full object-cover"></div>
-        <div class="px-2 pt-5 pb-3">
-          <div class="flex items-center justify-between"><h3 class="text-xl text-ink">Painting</h3>
-          <svg class="svc-arrow text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
-          <p class="mt-2 text-gray-600 text-[15px]">Interior and exterior painting with clean lines and lasting finishes.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card group block bg-white rounded p-3 reveal shadow-sm">
-        <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/jyra-home-solutions/21926/photo-3.jpg" alt="Remodeled kitchen" class="w-full h-full object-cover"></div>
-        <div class="px-2 pt-5 pb-3">
-          <div class="flex items-center justify-between"><h3 class="text-xl text-ink">Remodeling</h3>
-          <svg class="svc-arrow text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
-          <p class="mt-2 text-gray-600 text-[15px]">Kitchens, living areas and interiors updated to fit how you live.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card group block bg-white rounded p-3 reveal shadow-sm">
-        <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1593786267440-550458cc882a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home addition framing and block work" class="w-full h-full object-cover"></div>
-        <div class="px-2 pt-5 pb-3">
-          <div class="flex items-center justify-between"><h3 class="text-xl text-ink">Additions &amp; construction</h3>
-          <svg class="svc-arrow text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
-          <p class="mt-2 text-gray-600 text-[15px]">Added space built to deadline and coordinated with related trades.</p>
-        </div>
-      </a>
-      <a href="#contact" class="svc-card group block bg-white rounded p-3 reveal shadow-sm">
-        <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/jyra-home-solutions/21926/photo-1.jpg" alt="Front entry with new door" class="w-full h-full object-cover"></div>
-        <div class="px-2 pt-5 pb-3">
-          <div class="flex items-center justify-between"><h3 class="text-xl text-ink">Doors &amp; exterior upgrades</h3>
-          <svg class="svc-arrow text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
-          <p class="mt-2 text-gray-600 text-[15px]">Entryways and exterior details that improve how your home looks and works.</p>
-        </div>
-      </a>
-    </div>
+    <p class="mt-6 text-gray-600">Call to confirm we serve your address.</p>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="pb-24 lg:pb-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="reveal max-w-2xl">
-      <p class="label text-brand mb-4">Our work</p>
-      <h2 class="text-4xl sm:text-5xl text-ink">Projects in progress and finished.</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="gal col-span-2 aspect-[16/10] rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Framed interior of a new build" class="w-full h-full object-cover"></div>
-      <div class="gal col-span-1 aspect-square rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working in a hallway" class="w-full h-full object-cover"></div>
-      <div class="gal col-span-1 aspect-square rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1697967464378-1498c293e1aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Renovation site with ladder and supplies" class="w-full h-full object-cover"></div>
-      <div class="gal col-span-1 aspect-square rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1606383446056-eb3fc3cde97b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home extension with scaffolding" class="w-full h-full object-cover"></div>
-      <div class="gal col-span-1 aspect-square rounded overflow-hidden reveal"><img src="https://images.unsplash.com/photo-1783587354630-3300699c053c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior wall being boarded out" class="w-full h-full object-cover"></div>
-      <div class="gal col-span-2 aspect-[16/10] rounded overflow-hidden reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/jyra-home-solutions/21926/photo-5.jpg" alt="Finished front entry with dark door and white trim" class="w-full h-full object-cover"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Call band -->
-<section class="bg-ink text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-    <div class="lg:col-span-8 reveal">
-      <h2 class="text-3xl sm:text-5xl text-white">Ready to start your project in Schertz?</h2>
-      <p class="mt-4 text-white/70 max-w-xl">Call Seth or send a message. We'll talk through the job and get you an estimate.</p>
-    </div>
-    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 reveal">
-      <a href="tel:2104198185" class="bg-brand border border-white/20 hover:bg-white hover:text-brand transition px-7 py-3.5 rounded text-center font-semibold">Call (210) 419-8185</a>
-      <a href="#contact" class="border border-white/30 hover:bg-white hover:text-ink transition px-7 py-3.5 rounded text-center font-semibold">Request an estimate</a>
-    </div>
-  </div>
-</section>
-
+<!-- CONTACT PLACEHOLDER -->
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
@@ -244,16 +343,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:10px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#1f3765;box-shadow:0 0 0 4px rgba(31,55,101,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:10px;background:#1f3765;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#1f3765;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -263,13 +362,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1697967464378-1498c293e1aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/photo-11.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#9aa5ba">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your project in Schertz and Seth will get back to you.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#9aa5ba">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your project and we will get back to you with next steps.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+12104198185" class="lp-v lp-v-d">(210) 419-8185</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -283,7 +382,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Painting</option><option>Remodeling</option><option>Home additions</option><option>Doors and exterior upgrades</option><option>General repairs</option><option>Other</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Kitchen remodeling</option><option>Exterior painting</option><option>Interior painting</option><option>Doors and entryways</option><option>Trim and finish work</option><option>Home renovation</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -293,50 +392,90 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
+<!-- FINAL CALL BAND -->
+<section class="bg-ink text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-7">
+      <h2 class="text-3xl lg:text-5xl font-bold uppercase leading-[1.05]">Ready to start your project?</h2>
+      <p class="mt-4 text-white/75 max-w-xl">Call or email JYRA Home Solutions for a free estimate.</p>
+    </div>
+    <div class="lg:col-span-5 flex flex-col gap-3">
+      <a href="tel:+12104198185" class="bg-white text-brand font-semibold text-lg px-6 py-4 rounded text-center hover:bg-paper transition">(210) 419-8185</a>
+      <a href="mailto:seth@jyrahomesolutions.com" class="border border-white/40 text-white font-semibold px-6 py-4 rounded text-center hover:bg-white/10 transition break-words text-[15px]">seth@jyrahomesolutions.com</a>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<!-- Footer -->
-<footer class="bg-ink text-white/75 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+<!-- FOOTER -->
+<footer class="bg-brandDark text-white/80">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-12 gap-10">
     <div class="md:col-span-5">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@006773d9c4de5fb42fadb9bc2107df256a1bac3a/sites/jyra-home-solutions/21926/logo-0.png" alt="JYRA Home Solutions" class="h-12 w-auto">
-      <p class="mt-5 max-w-sm text-[15px]">General contractor serving Schertz, TX. Reliable work, open communication, and a job that isn't done until you're satisfied.</p>
+      <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/jyra-home-solutions/21950/logo-0.png" alt="JYRA Home Solutions" class="h-14 w-auto">
+      <p class="mt-5 max-w-sm text-[15px]">General contractor serving Schertz, TX and the surrounding area.</p>
     </div>
     <div class="md:col-span-3">
-      <h4 class="text-white text-lg mb-4">Explore</h4>
+      <h4 class="text-white font-semibold mb-4">Explore</h4>
       <ul class="space-y-2 text-[15px]">
-        <li><a href="#difference" class="hover:text-white">About</a></li>
         <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#projects" class="hover:text-white">Projects</a></li>
+        <li><a href="#process" class="hover:text-white">How it works</a></li>
+        <li><a href="#work" class="hover:text-white">Our work</a></li>
+        <li><a href="#about" class="hover:text-white">About</a></li>
         <li><a href="#contact" class="hover:text-white">Contact</a></li>
       </ul>
     </div>
     <div class="md:col-span-4">
-      <h4 class="text-white text-lg mb-4">Contact</h4>
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
       <ul class="space-y-2 text-[15px]">
-        <li><a href="tel:2104198185" class="hover:text-white">(210) 419-8185</a></li>
-        <li><a href="mailto:seth@jyrahomesolutions.com" class="hover:text-white break-words text-[14px] sm:text-[15px]">seth@jyrahomesolutions.com</a></li>
+        <li><a href="tel:+12104198185" class="hover:text-white">(210) 419-8185</a></li>
+        <li><a href="mailto:seth@jyrahomesolutions.com" class="hover:text-white break-words">seth@jyrahomesolutions.com</a></li>
         <li>Schertz, TX</li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50 space-y-1">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-[13px] text-white/60 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official JYRA Home Solutions website.</p>
-      <p>Some photos by Steffen Lemmerzahl, Brett Jordan, Annie Spratt, Samuel Cruz and Jessica Hearn on Unsplash.</p>
+      <p>Some photos by Milivoj Kuhar and Annie Spratt on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Mobile menu
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { menu.classList.add('hidden'); });
+  });
+
+  // Reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Before / after slider
+  var ba = document.getElementById('ba');
+  var top = document.getElementById('baTop');
+  var topImg = document.getElementById('baTopImg');
+  var handle = document.getElementById('baHandle');
+  var range = document.getElementById('baRange');
+  function sizeImg() { topImg.style.width = ba.offsetWidth + 'px'; }
+  function setPos(v) { top.style.width = v + '%'; handle.style.left = v + '%'; }
+  range.addEventListener('input', function () { setPos(range.value); });
+  window.addEventListener('resize', sizeImg);
+  window.addEventListener('load', sizeImg);
+  sizeImg(); setPos(50);
 </script>
 </body>
 </html>

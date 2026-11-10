@@ -7,19 +7,22 @@
 <title>Premier Concrete | Concrete Contractor in Charlotte, NC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['"DM Sans"', 'system-ui', 'sans-serif'] },
       colors: {
         brand: '#0081f2',
-        ink: '#0b1118',
+        ink: '#0c1622',
         deep: '#06223f',
-        paper: '#f5f6f7',
-        stone: '#e4e7ea'
+        cream: '#f6f3ee',
+        stone: '#eceae6'
+      },
+      fontFamily: {
+        heading: ['Poppins', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif']
       },
       borderRadius: { DEFAULT: '6px' }
     }
@@ -28,333 +31,225 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', system-ui, sans-serif; color: #0b1118; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'DM Sans', sans-serif; color: #0c1622; background: #fff; line-height: 1.6; font-size: 17px; }
+  h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; line-height: 1.12; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .hero-title { line-height: 0.98; letter-spacing: -0.02em; }
-  .dot::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 9999px; background: #0081f2; margin-right: 14px; vertical-align: middle; }
-  .scrim { background: linear-gradient(to top, rgba(6,10,15,.92) 0%, rgba(6,10,15,.45) 55%, rgba(6,10,15,0) 100%); }
-  #ba { touch-action: pan-y; }
-  #ba .handle { position:absolute; top:0; bottom:0; width:2px; background:#fff; }
-  #ba .knob { position:absolute; top:50%; left:50%; width:44px; height:44px; margin:-22px 0 0 -22px; background:#0081f2; border:3px solid #fff; border-radius:9999px; display:flex; align-items:center; justify-content:center; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } html{scroll-behavior:auto;} }
+  .tile img { transition: transform .8s ease; }
+  .tile:hover img { transform: scale(1.04); }
+  .btn { transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .tile img { transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white text-ink">
+<body>
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between">
-    <a href="#top" class="text-white font-bold text-xl tracking-tight uppercase leading-none">Premier<span class="text-brand"> Concrete</span></a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
-      <a href="#services" class="hover:text-white">Services</a>
-      <a href="#process" class="hover:text-white">Process</a>
-      <a href="#work" class="hover:text-white">Our work</a>
-      <a href="#charlotte" class="hover:text-white">Charlotte know-how</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="font-heading font-semibold text-xl lg:text-2xl tracking-tight text-ink">Premier <span class="text-brand">Concrete</span></a>
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink">
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#approach" class="hover:text-brand">Our approach</a>
+      <a href="#before-you-pour" class="hover:text-brand">Before you pour</a>
+      <a href="#projects" class="hover:text-brand">Projects</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+17042010596" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-5 py-3 rounded hover:bg-[#006fd1] transition">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+17042010596" class="btn hidden sm:inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 py-3 rounded hover:bg-ink">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (704) 201-0596
       </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" aria-label="Open menu" class="lg:hidden w-11 h-11 inline-flex items-center justify-center rounded border border-black/10">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 pb-6">
-    <div class="flex flex-col py-2 text-white/90 font-medium">
-      <a href="#services" class="py-3 border-b border-white/10">Services</a>
-      <a href="#process" class="py-3 border-b border-white/10">Process</a>
-      <a href="#work" class="py-3 border-b border-white/10">Our work</a>
-      <a href="#charlotte" class="py-3 border-b border-white/10">Charlotte know-how</a>
-      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
+    <div class="px-5 py-5 flex flex-col gap-4 text-base font-medium">
+      <a href="#services" class="mlink">Services</a>
+      <a href="#approach" class="mlink">Our approach</a>
+      <a href="#before-you-pour" class="mlink">Before you pour</a>
+      <a href="#projects" class="mlink">Projects</a>
+      <a href="#contact" class="mlink">Contact</a>
+      <a href="tel:+17042010596" class="btn inline-flex justify-center bg-brand text-white font-semibold px-5 py-3 rounded">Call (704) 201-0596</a>
     </div>
-    <a href="tel:+17042010596" class="mt-4 flex items-center justify-center bg-brand text-white font-semibold px-5 py-3 rounded">Call (704) 201-0596</a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1. Hero -->
-<section class="relative bg-ink overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1651195297119-afc97f14a40d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&amp;ixlib=rb-4.1.0&amp;w=1600&amp;q=80&amp;fit=max&amp;auto=format" alt="Fresh concrete poured between forms on a Charlotte site" class="absolute inset-0 w-full h-full object-cover object-center">
-  <div class="absolute inset-0 bg-ink/80"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-7">
-      <h1 class="hero-title text-white font-bold uppercase text-[2.6rem] sm:text-6xl lg:text-7xl">Concrete built for Charlotte clay.</h1>
-      <p class="mt-7 text-lg text-white/80 max-w-xl leading-relaxed">Premier Concrete pours driveways, patios and foundations on a properly prepared base, so your slab stays put through wet seasons and dry spells.</p>
-      <ul class="mt-8 space-y-3 text-white">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Excavation and compacted gravel base on every pour</span></li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Reinforcement and control joints to manage cracking</span></li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Help with Charlotte permits and HOA approvals</span></li>
-      </ul>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-brand text-white font-semibold px-7 py-4 rounded hover:bg-[#006fd1] transition">Get a free estimate</a>
-        <a href="#work" class="border border-white/40 text-white font-semibold px-7 py-4 rounded hover:bg-white hover:text-ink transition">See our work</a>
+<!-- Hero -->
+<section class="relative">
+  <div class="relative min-h-[640px] lg:min-h-[760px] flex items-center">
+    <img src="https://images.unsplash.com/photo-1651195297119-afc97f14a40d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew spreading and screeding a fresh concrete pour" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-ink/70"></div>
+    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-20 pb-40 lg:pb-48">
+      <h1 class="font-heading font-semibold text-4xl sm:text-5xl lg:text-[64px]">Concrete that holds up<br class="hidden sm:block"> in Charlotte clay.</h1>
+      <p class="mt-6 text-lg lg:text-xl text-white/85 max-w-2xl mx-auto">Driveways, patios, slabs and repairs built on a proper sub-base, with the permits and HOA approvals handled before the first truck arrives.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contact" class="btn bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-white hover:text-ink">Request a free estimate</a>
+        <a href="tel:+17042010596" class="btn border border-white text-white font-semibold px-8 py-4 rounded hover:bg-white hover:text-ink">Call (704) 201-0596</a>
       </div>
     </div>
-    <div class="lg:col-span-5">
-      <div class="bg-white rounded p-7 lg:p-9">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/60">Charlotte, NC</p>
-        <h2 class="mt-2 text-2xl font-bold tracking-tight">Get a free estimate</h2>
-        <p class="mt-3 text-ink/70">Tell us about your project. We'll walk the site and talk through the base, the pour and the permit.</p>
-        <a href="tel:+17042010596" class="mt-6 flex items-center justify-center gap-2 bg-brand text-white font-semibold px-5 py-4 rounded hover:bg-[#006fd1] transition">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-          (704) 201-0596
-        </a>
-        <a href="mailto:info@premierconcretecarolinas.com" class="mt-3 flex items-center justify-center gap-2 border border-ink/20 text-ink font-semibold px-4 py-4 rounded hover:border-brand hover:text-brand transition text-[15px] break-words text-center">
-          <svg class="shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          <span class="break-words min-w-0">info@premierconcretecarolinas.com</span>
-        </a>
+  </div>
+  <!-- Trust strip -->
+  <div class="relative z-10 max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20">
+    <div class="bg-white rounded shadow-[0_10px_40px_rgba(0,0,0,0.10)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="p-6 lg:p-7 flex gap-4 items-start border-b sm:border-r lg:border-b-0 border-black/5">
+        <svg class="shrink-0 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18M5 18V9l7-5 7 5v9"/></svg>
+        <div><p class="font-heading font-semibold text-base">Built for clay soil</p><p class="text-sm text-ink/65 mt-1">Deep excavation and a compacted gravel base.</p></div>
+      </div>
+      <div class="p-6 lg:p-7 flex gap-4 items-start border-b lg:border-r lg:border-b-0 border-black/5">
+        <svg class="shrink-0 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+        <div><p class="font-heading font-semibold text-base">Permits handled</p><p class="text-sm text-ink/65 mt-1">We navigate Charlotte permitting for you.</p></div>
+      </div>
+      <div class="p-6 lg:p-7 flex gap-4 items-start border-b sm:border-r lg:border-b-0 border-black/5">
+        <svg class="shrink-0 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13M9 21v-6h6v6"/></svg>
+        <div><p class="font-heading font-semibold text-base">HOA submittals</p><p class="text-sm text-ink/65 mt-1">Site plans and finish samples prepared.</p></div>
+      </div>
+      <div class="p-6 lg:p-7 flex gap-4 items-start">
+        <svg class="shrink-0 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6M8 13h8M8 17h5"/></svg>
+        <div><p class="font-heading font-semibold text-base">Written contracts</p><p class="text-sm text-ink/65 mt-1">Scope, mix, timeline and payment in writing.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Services strip -->
-<section class="bg-ink border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold uppercase tracking-[0.12em] text-white/85">
-    <span class="dot">Driveways</span>
-    <span class="dot">Patios</span>
-    <span class="dot">Stamped concrete</span>
-    <span class="dot">Foundations</span>
-    <span class="dot">Concrete repair</span>
-    <span class="dot">Slab lifting</span>
-  </div>
-</section>
-
-<!-- 3. Plan / Build / Finish -->
-<section id="services" class="bg-brand py-24 lg:py-32">
+<!-- Services -->
+<section id="services" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-white/80">What we do</p>
-      <h2 class="mt-3 text-4xl lg:text-5xl font-bold uppercase text-white tracking-tight" style="line-height:1.02">Prepare. Pour. Finish.</h2>
-      <p class="mt-5 text-white/90 text-lg">Concrete lasts when the work before the truck arrives is done right. That's where we start.</p>
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Services</p>
+      <h2 class="mt-3 font-heading font-semibold text-3xl lg:text-5xl">What we build in Charlotte</h2>
+      <p class="mt-5 text-ink/70">From residential driveways to commercial floors, every job starts below the surface.</p>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1673978484281-e9370ac3b81c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete shell with formwork props" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7">
-          <h3 class="text-white text-xl font-bold uppercase tracking-tight">Prepare</h3>
-          <p class="mt-3 text-white/70">Excavate past unstable topsoil, then compact 4 to 6 inches of crushed stone for drainage and a stable base.</p>
-        </div>
-      </article>
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/premier-concrete/21943/photo-1.jpg" alt="Concrete poured in forms with rebar" class="w-full h-full object-cover object-center" loading="lazy"></div>
-        <div class="p-7">
-          <h3 class="text-white text-xl font-bold uppercase tracking-tight">Pour</h3>
-          <p class="mt-3 text-white/70">Rebar or fiber reinforcement, formed control joints, and pours timed around heat and cold.</p>
-        </div>
-      </article>
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1786269691602-519fdaa112ea?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete mixer on a residential job" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7">
-          <h3 class="text-white text-xl font-bold uppercase tracking-tight">Finish</h3>
-          <p class="mt-3 text-white/70">Broom finish or stamped patterns, then curing methods that protect the surface while it gains strength.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 4. Process -->
-<section id="process" class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/60">How it works</p>
-      <h2 class="mt-3 text-4xl lg:text-5xl font-bold tracking-tight" style="line-height:1.05">How your project runs</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-      <div class="border border-stone rounded p-8 reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-xl font-bold">01</div>
-        <h3 class="mt-6 text-xl font-bold">Site visit and estimate</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">We look at your soil, drainage and access, then give you a written scope with materials and timeline.</p>
-      </div>
-      <div class="border border-stone rounded p-8 reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-xl font-bold">02</div>
-        <h3 class="mt-6 text-xl font-bold">Permits and approvals</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Driveway and building permits, plus HOA submittals where your neighborhood requires them, before any concrete is poured.</p>
-      </div>
-      <div class="border border-stone rounded p-8 reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-xl font-bold">03</div>
-        <h3 class="mt-6 text-xl font-bold">Prep, pour and cure</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Base work, reinforcement, the pour and proper curing, scheduled around Charlotte's weather.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. Side by side -->
-<section class="bg-ink py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-white/60">Before the work, after the work</p>
-      <h2 class="mt-3 text-4xl lg:text-5xl font-bold text-white tracking-tight" style="line-height:1.05">From bare ground to a finished slab</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure class="reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1683372101362-2efc3e75650e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Excavation with a skid steer at a house" class="w-full h-full object-cover" loading="lazy"></div>
-        <figcaption class="mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-white/70">Excavation</figcaption>
-      </figure>
-      <figure class="reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/premier-concrete/21943/photo-1.jpg" alt="Freshly poured concrete in forms" class="w-full h-full object-cover object-center" loading="lazy"></div>
-        <figcaption class="mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-white/70">The pour</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- 6. DIY vs contractor -->
-<section class="bg-paper py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/60">Choosing who pours</p>
-      <h2 class="mt-3 text-4xl lg:text-5xl font-bold tracking-tight" style="line-height:1.05">The cheapest bid vs. the right base</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white border border-stone rounded p-8 lg:p-10 reveal">
-        <h3 class="text-xl font-bold">Skipping the prep</h3>
-        <ul class="mt-6 space-y-4 text-ink/70">
-          <li class="flex gap-3"><span class="mt-2 w-2 h-0.5 bg-ink/40 shrink-0"></span>Thin or no gravel base on clay soil</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-0.5 bg-ink/40 shrink-0"></span>Cracks, settling and heaving as clay swells and shrinks</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-0.5 bg-ink/40 shrink-0"></span>Permits skipped, with fines or forced removal risk</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-0.5 bg-ink/40 shrink-0"></span>Nothing in writing about mix, scope or warranty</li>
-        </ul>
-      </div>
-      <div class="bg-white border-2 border-brand rounded p-8 lg:p-10 reveal">
-        <h3 class="text-xl font-bold">Premier Concrete</h3>
-        <ul class="mt-6 space-y-4">
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Excavation to stable subgrade and a compacted stone base</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rebar or fiber reinforcement and planned control joints</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Permit and HOA paperwork handled with you</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A detailed written contract before work starts</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. What we build -->
-<section id="work" class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/60">Our work</p>
-      <h2 class="mt-3 text-4xl lg:text-5xl font-bold tracking-tight" style="line-height:1.05">What we build</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-5">
-      <a href="#contact" class="relative block rounded overflow-hidden md:col-span-6 lg:col-span-7 aspect-[4/3] lg:aspect-auto lg:min-h-[520px] reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/premier-concrete/21943/photo-1.jpg" alt="Poured concrete walkway with forms" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy">
-        <div class="absolute inset-0 scrim"></div>
-        <div class="absolute bottom-0 left-0 p-7"><h3 class="text-white text-2xl font-bold">Driveways and walkways</h3><p class="text-white/75 mt-1">Reinforced, jointed and graded for drainage</p></div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px]">
+        <img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished concrete driveway at a garage" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+        <p class="absolute left-6 bottom-5 font-heading font-semibold text-white text-xl">Driveways</p>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden md:col-span-3 lg:col-span-5 aspect-[4/3] reveal">
-        <img src="https://images.unsplash.com/photo-1673978484281-e9370ac3b81c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete structure with formwork" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 scrim"></div>
-        <div class="absolute bottom-0 left-0 p-6"><h3 class="text-white text-xl font-bold">Foundations</h3></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px]">
+        <img src="https://images.unsplash.com/photo-1685464196343-c377192f9387?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete finisher screeding a patio slab" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+        <p class="absolute left-6 bottom-5 font-heading font-semibold text-white text-xl">Patios and walkways</p>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden md:col-span-3 lg:col-span-5 aspect-[4/3] reveal">
-        <img src="https://images.unsplash.com/photo-1786269691602-519fdaa112ea?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete mixer in a garden patio area" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 scrim"></div>
-        <div class="absolute bottom-0 left-0 p-6"><h3 class="text-white text-xl font-bold">Patios</h3></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px]">
+        <img src="https://images.unsplash.com/photo-1673978484328-40359db01843?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Workers walking across a reinforced slab during a pour" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+        <p class="absolute left-6 bottom-5 font-heading font-semibold text-white text-xl">Slabs and foundations</p>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden md:col-span-3 lg:col-span-3 aspect-[4/3] lg:aspect-auto reveal">
-        <img src="https://images.unsplash.com/photo-1683372101362-2efc3e75650e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Excavation work beside a house" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 scrim"></div>
-        <div class="absolute bottom-0 left-0 p-6"><h3 class="text-white text-xl font-bold">Excavation</h3></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px]">
+        <img src="https://images.unsplash.com/photo-1582540730843-f4418d96ccbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker laying rebar reinforcement" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+        <p class="absolute left-6 bottom-5 font-heading font-semibold text-white text-xl">Reinforced concrete</p>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden md:col-span-3 lg:col-span-4 aspect-[4/3] reveal">
-        <img src="https://images.unsplash.com/photo-1606383446056-eb3fc3cde97b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="House extension under construction with scaffolding" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 scrim"></div>
-        <div class="absolute bottom-0 left-0 p-6"><h3 class="text-white text-xl font-bold">Additions and slabs</h3></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px]">
+        <img src="https://images.unsplash.com/photo-1772209415876-76ea6cbc2f0c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew applying a coating to a warehouse concrete floor" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+        <p class="absolute left-6 bottom-5 font-heading font-semibold text-white text-xl">Commercial floors</p>
       </a>
-      <a href="#contact" class="relative block rounded overflow-hidden md:col-span-6 lg:col-span-5 aspect-[4/3] md:aspect-[16/9] lg:aspect-[4/3] reveal">
-        <img src="https://images.unsplash.com/photo-1697967464378-1498c293e1aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete walls with ladder and buckets" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 scrim"></div>
-        <div class="absolute bottom-0 left-0 p-6"><h3 class="text-white text-xl font-bold">Concrete repair</h3></div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/premier-concrete/21950/photo-1.jpg" alt="Fresh concrete poured between forms on a graded site" class="absolute inset-0 w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+        <p class="absolute left-6 bottom-5 font-heading font-semibold text-white text-xl">Repair and replacement</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Charlotte know-how -->
-<section id="charlotte" class="bg-paper py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/60">Local know-how</p>
-      <h2 class="mt-3 text-4xl lg:text-5xl font-bold tracking-tight" style="line-height:1.05">What Charlotte concrete needs</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white border border-stone rounded p-8 reveal">
-        <h3 class="text-xl font-bold">Clay soil</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Clay swells when wet and shrinks when dry. Without a compacted gravel base, that movement shows up as cracks, settling and heaving.</p>
-      </div>
-      <div class="bg-white border border-stone rounded p-8 reveal">
-        <h3 class="text-xl font-bold">Permits</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Driveways tied to a public street and larger patios or foundations can need permits. Plan for lead time, especially in spring and early summer.</p>
-      </div>
-      <div class="bg-white border border-stone rounded p-8 reveal">
-        <h3 class="text-xl font-bold">HOA review</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Many Charlotte neighborhoods require pre-approval for width, finish and placement. We help prepare site plans and material specs for the submittal.</p>
-      </div>
-      <div class="bg-white border border-stone rounded p-8 reveal">
-        <h3 class="text-xl font-bold">Season and weather</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Summer heat calls for early pours and curing compounds. In winter, fresh concrete must be protected from freezing. Spring and fall are ideal.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. Split -->
-<section class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Split: approach -->
+<section id="approach" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
     <div class="lg:col-span-6 reveal">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/60">Premier Concrete</p>
-      <h2 class="mt-3 text-4xl lg:text-5xl font-bold tracking-tight" style="line-height:1.05">One contractor from estimate to cure</h2>
-      <p class="mt-6 text-lg text-ink/70 leading-relaxed">You get a straight answer on how your slab will be built: what goes under it, what goes in it, and how it's protected while it cures. Everything is spelled out in a written contract before we start.</p>
-      <ul class="mt-8 space-y-3">
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Scope, materials and timeline in writing</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sub-base and drainage explained in plain terms</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Permits and HOA paperwork supported</li>
-      </ul>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-brand text-white font-semibold px-7 py-4 rounded hover:bg-[#006fd1] transition">Request an estimate</a>
-        <a href="tel:+17042010596" class="border border-ink/25 font-semibold px-7 py-4 rounded hover:border-brand hover:text-brand transition">Call (704) 201-0596</a>
+      <div class="aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/premier-concrete/21950/photo-1.jpg" alt="Concrete footing poured between wooden forms on red clay ground" class="w-full h-full object-cover">
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Contractors cutting lumber with a miter saw" class="w-full h-full object-cover" loading="lazy"></div>
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Our approach</p>
+      <h2 class="mt-3 font-heading font-semibold text-3xl lg:text-5xl">Clay moves.<br>Your slab shouldn't.</h2>
+      <p class="mt-6 text-ink/75">Clay-heavy soil swells when it's wet and shrinks when it dries. Without a proper base, that movement turns into cracks, settling and heaving. It's the most common reason concrete fails early in this area, and it's preventable.</p>
+      <p class="mt-4 text-ink/75">We excavate deep enough to clear unstable topsoil, install 4 to 6 inches of compacted crushed stone, add rebar or fiber reinforcement, and place control joints so any cracking lands where it's meant to.</p>
+      <a href="#contact" class="btn mt-8 inline-flex bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-ink">Talk to us about your project</a>
     </div>
   </div>
 </section>
 
-<!-- 9. Service area -->
-<section class="bg-paper py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 text-center reveal">
-    <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink/60">Service area</p>
-    <h2 class="mt-3 text-3xl lg:text-4xl font-bold tracking-tight">Serving Charlotte and the Carolinas</h2>
-    <div class="mt-8 flex flex-wrap justify-center gap-3">
-      <span class="bg-white border border-stone rounded px-5 py-2.5 font-medium">Charlotte, NC</span>
-      <span class="bg-white border border-stone rounded px-5 py-2.5 font-medium">North Carolina</span>
-      <span class="bg-white border border-stone rounded px-5 py-2.5 font-medium">South Carolina</span>
+<!-- Reverse split: before you pour -->
+<section id="before-you-pour" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Before you pour</p>
+      <h2 class="mt-3 font-heading font-semibold text-3xl lg:text-5xl">Permits and HOA approval, sorted first.</h2>
+      <p class="mt-6 text-ink/75">Driveways that connect to a public street typically need a driveway permit, and larger patios or attached structures may need a full building permit. Skipping permits can mean fines, forced removal, or trouble when you sell.</p>
+      <p class="mt-4 text-ink/75">Many Charlotte neighborhoods also require HOA pre-approval for exterior concrete. We help prepare the submittal, with site plans, material specs and finish samples, so nothing gets torn out later. Permits take time, so plan ahead, especially for spring and early summer.</p>
+      <ul class="mt-7 space-y-3 text-ink/80">
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Driveway and building permits</li>
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>HOA architectural review packages</li>
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Seasonal pour scheduling for heat and cold</li>
+      </ul>
+    </div>
+    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
+      <div class="aspect-[4/5] overflow-hidden rounded">
+        <img src="https://images.unsplash.com/photo-1673978484328-40359db01843?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew pouring concrete over reinforcement steel" class="w-full h-full object-cover">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 10. Call band -->
-<section class="bg-ink py-24 lg:py-28">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
-    <h2 class="text-4xl lg:text-6xl font-bold uppercase text-white tracking-tight" style="line-height:1.02">Planning a pour in Charlotte?</h2>
-    <p class="mt-6 text-lg text-white/75 max-w-xl mx-auto">Call or email and we'll set up a site visit.</p>
-    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-      <a href="tel:+17042010596" class="bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-[#006fd1] transition">(704) 201-0596</a>
-      <a href="mailto:info@premierconcretecarolinas.com" class="border border-white/40 text-white font-semibold px-6 py-4 rounded hover:bg-white hover:text-ink transition break-words">info@premierconcretecarolinas.com</a>
+<!-- Cream panel -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="bg-cream rounded px-6 py-14 lg:px-20 lg:py-20 text-center reveal">
+      <h2 class="font-heading font-semibold text-3xl lg:text-4xl">Get the quote in writing.</h2>
+      <p class="mt-5 text-ink/75 max-w-2xl mx-auto">Every job comes with a detailed written contract covering scope of work, materials including mix design and PSI rating, timeline and payment schedule. You'll know what's included before we start.</p>
+      <a href="#contact" class="btn mt-8 inline-flex bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-ink">Request a free estimate</a>
     </div>
   </div>
 </section>
 
-<!-- Contact (auto-filled) -->
+<!-- Projects gallery -->
+<section id="projects" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-brand">Projects</p>
+      <h2 class="mt-3 font-heading font-semibold text-3xl lg:text-5xl">On site, start to finish</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="reveal overflow-hidden rounded aspect-square"><img src="https://images.unsplash.com/photo-1651195297119-afc97f14a40d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Large crew placing concrete" class="w-full h-full object-cover"></div>
+      <div class="reveal overflow-hidden rounded aspect-square"><img src="https://images.unsplash.com/photo-1772300164438-f73307d3b645?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Warehouse floor being coated" class="w-full h-full object-cover"></div>
+      <div class="reveal overflow-hidden rounded aspect-square"><img src="https://images.unsplash.com/photo-1582540730843-f4418d96ccbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Rebar mat being laid" class="w-full h-full object-cover"></div>
+      <div class="reveal overflow-hidden rounded aspect-square"><img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished driveway with control joints" class="w-full h-full object-cover"></div>
+      <div class="reveal overflow-hidden rounded aspect-square"><img src="https://images.unsplash.com/photo-1685464196343-c377192f9387?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finisher working a fresh slab" class="w-full h-full object-cover"></div>
+      <div class="reveal overflow-hidden rounded aspect-square"><img src="https://images.unsplash.com/photo-1772209415876-76ea6cbc2f0c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Floor coating application" class="w-full h-full object-cover"></div>
+      <div class="reveal overflow-hidden rounded aspect-square"><img src="https://images.unsplash.com/photo-1673978484328-40359db01843?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Pour over rebar grid" class="w-full h-full object-cover"></div>
+      <div class="reveal overflow-hidden rounded aspect-square"><img src="https://lumea-redesigns-01.pages.dev/gh/9c43a7172fa713209177b5a5b6869519760aafd5/sites/premier-concrete/21950/photo-1.jpg" alt="Concrete footing between forms" class="w-full h-full object-cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Final call -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+      <div class="lg:col-span-7 lg:row-start-1 lg:col-start-1 aspect-[4/3] lg:aspect-auto lg:h-[520px] overflow-hidden rounded">
+        <img src="https://images.unsplash.com/photo-1651195297119-afc97f14a40d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete crew at work from above" class="w-full h-full object-cover">
+      </div>
+      <div class="lg:col-span-5 lg:row-start-1 lg:col-start-8 relative z-10 -mt-12 mx-4 lg:mx-0 lg:mt-0">
+        <div class="bg-brand text-white rounded p-8 lg:p-12">
+          <h2 class="font-heading font-semibold text-3xl lg:text-4xl">Planning a concrete project in Charlotte?</h2>
+          <p class="mt-4 text-white/90">Call or send a message. We'll talk through your soil, permits and timeline.</p>
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <a href="tel:+17042010596" class="btn bg-white text-ink font-semibold px-6 py-3.5 rounded text-center hover:bg-ink hover:text-white">(704) 201-0596</a>
+            <a href="#contact" class="btn border border-white text-white font-semibold px-6 py-3.5 rounded text-center hover:bg-white hover:text-ink">Request an estimate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="lp-contact" style="background:#092035;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
@@ -390,7 +285,7 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div style="color:#fff"><p class="lp-kick" style="color:#0081f2">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your concrete project in Charlotte and we'll get back to you with next steps.</p><ul class="lp-info">
+    <div style="color:#fff"><p class="lp-kick" style="color:#0081f2">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your project and we'll get back to you with next steps.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+17042010596" class="lp-v lp-v-d">(704) 201-0596</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -404,7 +299,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Driveways</option><option>Patios</option><option>Stamped concrete</option><option>Foundations</option><option>Concrete repair</option><option>Slab lifting</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Driveways</option><option>Patios and walkways</option><option>Slabs and foundations</option><option>Reinforced concrete</option><option>Commercial floors</option><option>Concrete repair and replacement</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -416,34 +311,44 @@ tailwind.config = {
 
 </main>
 
-<footer class="bg-ink border-t border-white/10 text-white/70">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-5">
-      <a href="#top" class="text-white font-bold text-xl tracking-tight uppercase leading-none">Premier<span class="text-brand"> Concrete</span></a>
-      <p class="mt-4 max-w-sm">Concrete contractor serving Charlotte, NC and the Carolinas.</p>
+<!-- Footer -->
+<footer class="bg-deep text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-20 pb-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4">
+        <a href="#top" class="font-heading font-semibold text-2xl">Premier <span class="text-brand">Concrete</span></a>
+        <p class="mt-4 text-white/70 max-w-xs">Residential and commercial concrete work in Charlotte, NC.</p>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="font-heading font-semibold text-sm tracking-wide uppercase text-white/50">Explore</p>
+        <ul class="mt-4 space-y-2.5 text-white/80">
+          <li><a href="#services" class="hover:text-white">Services</a></li>
+          <li><a href="#approach" class="hover:text-white">Our approach</a></li>
+          <li><a href="#before-you-pour" class="hover:text-white">Before you pour</a></li>
+          <li><a href="#projects" class="hover:text-white">Projects</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="font-heading font-semibold text-sm tracking-wide uppercase text-white/50">Services</p>
+        <ul class="mt-4 space-y-2.5 text-white/80">
+          <li>Driveways</li>
+          <li>Patios and walkways</li>
+          <li>Slabs and foundations</li>
+          <li>Concrete repair</li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="font-heading font-semibold text-sm tracking-wide uppercase text-white/50">Contact</p>
+        <ul class="mt-4 space-y-2.5 text-white/80">
+          <li><a href="tel:+17042010596" class="hover:text-white">(704) 201-0596</a></li>
+          <li><a href="mailto:info@premierconcretecarolinas.com" class="hover:text-white break-words text-[15px]">info@premierconcretecarolinas.com</a></li>
+          <li>Charlotte, NC</li>
+        </ul>
+      </div>
     </div>
-    <div class="md:col-span-3">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-white/50">Contact</p>
-      <ul class="mt-4 space-y-2">
-        <li><a href="tel:+17042010596" class="hover:text-white">(704) 201-0596</a></li>
-        <li class="break-words"><a href="mailto:info@premierconcretecarolinas.com" class="hover:text-white break-words text-sm">info@premierconcretecarolinas.com</a></li>
-        <li>Charlotte, NC</li>
-      </ul>
-    </div>
-    <div class="md:col-span-4">
-      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-white/50">Explore</p>
-      <ul class="mt-4 space-y-2">
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#process" class="hover:text-white">Process</a></li>
-        <li><a href="#work" class="hover:text-white">Our work</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/50 space-y-1">
+    <div class="mt-16 pt-8 border-t border-white/10 text-sm text-white/55 space-y-2">
       <p>Concept redesign by LumeaPixel. This is not the official Premier Concrete website.</p>
-      <p>Some photos by Brett Jordan, d c, Samuel Cruz, Annie Gray, Annie Spratt, Steffen Lemmerzahl and Yauheni Flerman on Unsplash.</p>
+      <p>Some photos by Dave Lowe, Craftsman Concrete Floors, Ricardo Gomez Angel, Mélyna Côté, PJH, d c, web seo, Acton Crawford and Chad Nathan on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -452,7 +357,7 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  document.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
