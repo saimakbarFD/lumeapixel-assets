@@ -4,21 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Castlebrook Restoration & Roofing | Roofing Contractors in Tampa, FL</title>
+<title>Castlebrook Restoration & Roofing | Roofing and Restoration in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Outfit', 'sans-serif'] },
+      fontFamily: {
+        heading: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif']
+      },
       colors: {
         brand: '#ed2329',
-        ink: '#141414',
-        night: '#1b1b1d',
-        paper: '#f6f5f3'
+        'brand-dark': '#c41b20',
+        'brand-deep': '#2a0b0d',
+        ink: '#111214',
+        'ink-soft': '#1c1d20',
+        paper: '#f6f4f1',
+        line: '#e4e0da'
       },
       borderRadius: { DEFAULT: '6px' }
     }
@@ -27,88 +33,98 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Outfit', sans-serif; color: #141414; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #111214; background: #fff; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .hero-title { line-height: .95; letter-spacing: -0.02em; }
-  .dot::before { content: ""; display: inline-block; width: 6px; height: 6px; background: #ed2329; border-radius: 50%; margin-right: 18px; vertical-align: middle; }
-  .compare { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
-  .compare img { pointer-events: none; }
-  .compare-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; }
-  .compare-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; background: #ed2329; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  .hero-shade { background: linear-gradient(100deg, rgba(17,18,20,.94) 0%, rgba(17,18,20,.82) 48%, rgba(17,18,20,.55) 100%); }
+  .tile-shade { background: linear-gradient(to top, rgba(17,18,20,.92) 0%, rgba(17,18,20,.45) 45%, rgba(17,18,20,0) 100%); }
+  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .ba-top { position: absolute; inset: 0; clip-path: inset(0 50% 0 0); }
+  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; }
+  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 6px; background: #ed2329; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; color: #fff; pointer-events: none; }
+  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: #ed2329; transition: width .25s ease; }
+  .nav-link:hover::after { width: 100%; }
+  .num-box { font-family: 'Outfit', sans-serif; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white">
+<body class="font-body">
 
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/logo-0.png" alt="Castlebrook Restoration and Roofing" class="h-12 w-auto"></a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#process" class="hover:text-brand transition">How it works</a>
-      <a href="#work" class="hover:text-brand transition">Our work</a>
-      <a href="#about" class="hover:text-brand transition">Why Castlebrook</a>
-      <a href="#contact" class="hover:text-brand transition">Contact</a>
+<!-- HEADER -->
+<header id="top" class="sticky top-0 z-50 bg-white/95 backdrop-blur-0 border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="shrink-0" aria-label="Castlebrook Restoration and Roofing home">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/logo-0.png" alt="Castlebrook Restoration and Roofing" class="h-12 md:h-14 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#process" class="nav-link">How it works</a>
+      <a href="#work" class="nav-link">Our work</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18135909800" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-semibold px-5 h-11 rounded hover:bg-ink transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:8135909800" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold text-[15px] px-5 h-11 rounded transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (813) 590-9800
       </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-black/15 rounded" aria-label="Menu">
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-line rounded" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-white">
-    <div class="px-5 py-4 flex flex-col gap-4 text-lg font-medium">
-      <a href="#services">Services</a>
-      <a href="#process">How it works</a>
-      <a href="#work">Our work</a>
-      <a href="#about">Why Castlebrook</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:+18135909800" class="bg-brand text-white text-center font-semibold h-12 flex items-center justify-center rounded">Call (813) 590-9800</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-line bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-base font-medium">
+      <a href="#services" class="py-3 border-b border-line">Services</a>
+      <a href="#process" class="py-3 border-b border-line">How it works</a>
+      <a href="#work" class="py-3 border-b border-line">Our work</a>
+      <a href="#about" class="py-3 border-b border-line">About</a>
+      <a href="#contact" class="py-3 border-b border-line">Contact</a>
+      <a href="tel:8135909800" class="mt-3 inline-flex items-center justify-center bg-brand text-white font-semibold h-12 rounded">Call (813) 590-9800</a>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main>
 
-<!-- 1. Hero -->
+<!-- 1. HERO -->
 <section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers installing roof tiles" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-ink/80"></div>
+  <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-6.jpg" alt="Castlebrook crew measuring insulation boards on a commercial metal roof" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-shade"></div>
   <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <p class="text-sm tracking-[0.2em] uppercase text-white/70 mb-6">Tampa, Florida</p>
-      <h1 class="hero-title uppercase font-bold text-[44px] sm:text-6xl lg:text-7xl">Roofing and restoration, done right.</h1>
-      <p class="mt-8 text-lg lg:text-xl text-white/80 max-w-xl leading-relaxed">From The Villages to Venice and everywhere in between, Castlebrook is your partner for roofing and restoration across Tampa Bay.</p>
+      <p class="text-xs tracking-[0.2em] uppercase text-white/70 font-semibold mb-6">Tampa Bay roofing and restoration</p>
+      <h1 class="font-heading font-bold uppercase text-[2.6rem] sm:text-6xl lg:text-[4.4rem] leading-[0.98] tracking-tight">
+        Roofing services<br>in Tampa, FL.<br><span class="text-brand">Done right.</span>
+      </h1>
+      <p class="mt-7 text-lg text-white/80 max-w-xl">From The Villages to Venice and everywhere in between, Castlebrook is your partner for roofing and restoration, backed by 50+ years of combined experience.</p>
       <ul class="mt-8 space-y-3 text-[17px]">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>50+ years of combined experience</li>
         <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Thorough, detailed inspection before any work begins</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clear, consistent communication through the whole project</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed insurance adjuster on staff for your claim</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Locally owned, licensed and insured</li>
       </ul>
-      <div class="mt-10 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="bg-brand text-white font-semibold h-14 px-8 rounded flex items-center justify-center hover:bg-white hover:text-ink transition">Request a free inspection</a>
-        <a href="#work" class="border border-white/40 text-white font-semibold h-14 px-8 rounded flex items-center justify-center hover:bg-white hover:text-ink transition">See our work</a>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-flex items-center justify-center bg-brand hover:bg-brand-dark text-white font-semibold h-14 px-8 rounded transition-colors">Request a free inspection</a>
+        <a href="tel:8135909800" class="inline-flex items-center justify-center border border-white/40 hover:bg-white hover:text-ink text-white font-semibold h-14 px-8 rounded transition-colors">Call (813) 590-9800</a>
       </div>
     </div>
     <div class="lg:col-span-5">
-      <div class="bg-white text-ink rounded p-7 lg:p-9">
-        <p class="text-sm tracking-[0.18em] uppercase text-ink/60">Free inspection</p>
-        <h2 class="mt-2 text-3xl font-semibold leading-tight">Get a free estimate</h2>
-        <p class="mt-3 text-ink/70">Call or email and we'll get an inspection on the calendar.</p>
-        <div class="mt-6 space-y-3">
-          <a href="tel:+18135909800" class="flex items-center gap-3 bg-brand text-white font-semibold h-14 px-5 rounded hover:bg-ink transition">
-            <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            (813) 590-9800
+      <div class="bg-white text-ink rounded p-7 sm:p-9">
+        <p class="text-xs tracking-[0.2em] uppercase text-brand font-semibold">Free inspection</p>
+        <h2 class="font-heading font-semibold text-3xl mt-2 leading-tight">Get a free estimate</h2>
+        <p class="mt-3 text-[16px] text-ink/70">Talk to the team directly. We answer fast and show up when we say we will.</p>
+        <div class="mt-6 flex flex-col gap-3">
+          <a href="tel:8135909800" class="flex items-center justify-between gap-3 bg-ink hover:bg-ink-soft text-white font-semibold h-14 px-5 rounded transition-colors">
+            <span>(813) 590-9800</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
           </a>
-          <a href="mailto:jwiles@castlebrookrestoration.com" class="flex items-center gap-3 border border-ink/20 font-semibold min-h-14 py-3 px-5 rounded hover:border-brand hover:text-brand transition text-[15px] break-words">
+          <a href="mailto:jwiles@castlebrookrestoration.com" class="flex items-center justify-between gap-3 border border-line hover:border-ink font-semibold min-h-14 py-3 px-5 rounded transition-colors">
+            <span class="text-[14px] sm:text-[15px] break-words min-w-0">jwiles@castlebrookrestoration.com</span>
             <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <span class="min-w-0 break-words">jwiles@castlebrookrestoration.com</span>
           </a>
+          <a href="#contact" class="flex items-center justify-center bg-brand hover:bg-brand-dark text-white font-semibold h-14 px-5 rounded transition-colors">Send us a message</a>
         </div>
         <p class="mt-5 text-sm text-ink/60">19046 Bruce B Downs Blvd, Suite 68, Tampa, FL 33647</p>
       </div>
@@ -116,199 +132,228 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- 2. Services strip -->
-<section class="bg-night text-white border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap gap-y-3 gap-x-0 text-[15px] uppercase tracking-wider font-medium justify-center lg:justify-between">
-    <span class="dot">Roof Replacement</span>
-    <span class="dot">Roof Repair</span>
-    <span class="dot">Roof Coatings</span>
-    <span class="dot">Commercial Roofing</span>
-    <span class="dot">Water Mitigation</span>
-    <span class="dot">Tarping</span>
-    <span class="dot">Drywall &amp; Painting</span>
-    <span class="dot">Fascia &amp; Soffit</span>
+<!-- 2. SERVICE STRIP -->
+<section class="bg-ink-soft text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6">
+    <ul class="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[14px] sm:text-[15px] font-medium uppercase tracking-wider">
+      <li>Roof Replacement</li><li class="w-1.5 h-1.5 rounded-full bg-brand" aria-hidden="true"></li>
+      <li>Roof Repair</li><li class="w-1.5 h-1.5 rounded-full bg-brand" aria-hidden="true"></li>
+      <li>Water Mitigation</li><li class="w-1.5 h-1.5 rounded-full bg-brand" aria-hidden="true"></li>
+      <li>Drywall and Painting</li><li class="w-1.5 h-1.5 rounded-full bg-brand" aria-hidden="true"></li>
+      <li>Tarping</li><li class="w-1.5 h-1.5 rounded-full bg-brand" aria-hidden="true"></li>
+      <li>Fascia &amp; Soffit</li><li class="w-1.5 h-1.5 rounded-full bg-brand" aria-hidden="true"></li>
+      <li>Roof Coating</li><li class="w-1.5 h-1.5 rounded-full bg-brand" aria-hidden="true"></li>
+      <li>Commercial Roofing</li>
+    </ul>
   </div>
 </section>
 
-<!-- 3. Services as stages -->
-<section id="services" class="bg-brand text-white py-24 lg:py-32">
+<!-- 3. THREE PILLARS -->
+<section id="services" class="bg-brand py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-white/80 mb-4">What we do</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight">Roofing. Restoration. Protection.</h2>
-      <p class="mt-5 text-lg text-white/90">Three ways we look after your property, from a full new roof to the repairs that follow a storm.</p>
+      <p class="text-xs tracking-[0.2em] uppercase text-white/80 font-semibold mb-4">Our services</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl leading-[1.05] text-white tracking-tight">Inspect. Repair. Restore.</h2>
+      <p class="mt-5 text-lg text-white/90">Greater Tampa Bay's one-stop shop for all things roofing and restoration, handled by one team from start to finish.</p>
     </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-8.jpg" alt="Tile roof replaced on a Florida home" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7">
-          <h3 class="text-2xl font-semibold">Roofing</h3>
-          <p class="mt-3 text-white/70">Roof replacement, roof repair, roof coatings, roof coverings and commercial roofing.</p>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-7.jpg" alt="Aerial view of a gray tile roof on a Florida home" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="p-7 text-white">
+          <h3 class="font-heading font-semibold text-2xl">Roofing</h3>
+          <p class="mt-2 text-white/75 text-[16px]">Roof replacement, roof repair, roof coatings and commercial roofing for homes and businesses.</p>
         </div>
       </article>
-      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-9.jpg" alt="Roof deck exposed during a repair" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7">
-          <h3 class="text-2xl font-semibold">Restoration</h3>
-          <p class="mt-3 text-white/70">Water mitigation, drywall and painting, and fascia and soffit repair.</p>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-13.jpg" alt="Blue tarp and sandbags securing a damaged tile roof" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="p-7 text-white">
+          <h3 class="font-heading font-semibold text-2xl">Emergency tarping</h3>
+          <p class="mt-2 text-white/75 text-[16px]">Emergency roof repairs, tarping and water mitigation to stop damage fast after a storm.</p>
         </div>
       </article>
-      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-7.jpg" alt="Crew working on a commercial metal roof" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7">
-          <h3 class="text-2xl font-semibold">Emergency &amp; storm</h3>
-          <p class="mt-3 text-white/70">Emergency roof repairs, emergency tarping and storm relief when you need it fast.</p>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-8.jpg" alt="Roof deck exposed during a shingle roof repair" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="p-7 text-white">
+          <h3 class="font-heading font-semibold text-2xl">Restoration</h3>
+          <p class="mt-2 text-white/75 text-[16px]">Fascia and soffit, drywall and painting, and storm relief and repair to finish the job.</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 4. Process -->
+<!-- 4. HOW IT RUNS -->
 <section id="process" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-ink/60 mb-4">How your project runs</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight">Three steps, no surprises</h2>
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-semibold mb-4">How your project runs</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight">Clear steps from first call to final report</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-2xl font-semibold">1</div>
-        <h3 class="mt-6 text-2xl font-semibold">Inspect</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">We start with a thorough, detailed inspection before any work begins, so you know exactly what your roof needs.</p>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="border border-line rounded p-8 reveal">
+        <div class="num-box w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-bold text-2xl">1</div>
+        <h3 class="font-heading font-semibold text-2xl mt-6">Inspection</h3>
+        <p class="mt-3 text-ink/70">We start with a thorough, detailed inspection, including an aerial view of your roof, so you see the condition for yourself.</p>
       </div>
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-2xl font-semibold">2</div>
-        <h3 class="mt-6 text-2xl font-semibold">Communicate</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">You get clear, consistent updates at every step, from the first call through the final walk-through.</p>
+      <div class="border border-line rounded p-8 reveal">
+        <div class="num-box w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-bold text-2xl">2</div>
+        <h3 class="font-heading font-semibold text-2xl mt-6">Plan and claim</h3>
+        <p class="mt-3 text-ink/70">We work with you to find the right option for your needs, goals and budget. Our licensed adjuster on staff helps handle insurance claims.</p>
       </div>
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-2xl font-semibold">3</div>
-        <h3 class="mt-6 text-2xl font-semibold">Complete</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">We finish the work as scheduled and clean up after ourselves, so the job site is left as we found it.</p>
+      <div class="border border-line rounded p-8 reveal">
+        <div class="num-box w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-bold text-2xl">3</div>
+        <h3 class="font-heading font-semibold text-2xl mt-6">Work and report</h3>
+        <p class="mt-3 text-ink/70">Clear, consistent communication throughout. When we finish, you get a thorough report of the work so you understand each piece.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5. Photo pair (no before/after pair available) -->
-<section class="bg-night text-white py-24 lg:py-32">
+<!-- 5. BEFORE / AFTER -->
+<section class="bg-ink text-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-white/60 mb-4">Roof replacement</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight">From open deck to finished roof</h2>
-      <p class="mt-5 text-lg text-white/70">A repair in progress on one side, a completed Tampa Bay home on the other.</p>
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-semibold mb-4">Before and after</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight">From storm-damaged to a finished roof</h2>
+      <p class="mt-5 text-lg text-white/70">Drag the handle to compare a damaged tile roof under emergency tarp with a completed tile roof on another Tampa Bay home.</p>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-9.jpg" alt="Roof decking exposed during repair" class="w-full h-full object-cover" loading="lazy">
-        <figcaption class="absolute left-4 bottom-4 bg-ink/85 text-white text-sm font-medium px-4 py-2 rounded">In progress</figcaption>
-      </figure>
-      <figure class="reveal relative rounded overflow-hidden aspect-[4/3]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-10.jpg" alt="Finished shingle roof on a two-story Tampa Bay home" class="w-full h-full object-cover" loading="lazy">
-        <figcaption class="absolute left-4 bottom-4 bg-brand text-white text-sm font-medium px-4 py-2 rounded">Finished</figcaption>
-      </figure>
+    <div class="mt-12 max-w-5xl">
+      <div id="baWrap" class="ba-wrap rounded aspect-[4/3] sm:aspect-[16/9]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-7.jpg" alt="Finished gray tile roof, aerial view" class="absolute inset-0 w-full h-full object-cover">
+        <div id="baTop" class="ba-top">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-13.jpg" alt="Damaged tile roof covered with blue tarp" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+        <div id="baHandle" class="ba-handle"></div>
+        <div id="baKnob" class="ba-knob">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg>
+        </div>
+        <span class="absolute left-4 bottom-4 bg-ink/85 text-white text-xs font-semibold tracking-wider uppercase px-3 py-2 rounded">Damaged</span>
+        <span class="absolute right-4 bottom-4 bg-brand text-white text-xs font-semibold tracking-wider uppercase px-3 py-2 rounded">Finished</span>
+        <input id="baRange" class="ba-range" type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 6. Comparison -->
+<!-- 6. COMPARISON -->
 <section class="bg-paper py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-ink/60 mb-4">Why Castlebrook</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight">Roofing is a crowded market. Here's how we stand out.</h2>
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-semibold mb-4">Why Castlebrook</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight">Many trades or one team?</h2>
+      <p class="mt-5 text-lg text-ink/70">Roofing is a crowded market. Here is how handling roofing and restoration under one roof compares.</p>
     </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="reveal bg-white border border-ink/10 rounded p-8 lg:p-10">
-        <h3 class="text-2xl font-semibold text-ink/70">The typical roofing company</h3>
-        <ul class="mt-6 space-y-4 text-ink/70 text-[17px]">
-          <li class="flex gap-3"><span class="text-ink/30 shrink-0">&mdash;</span>Quotes before a proper look at the roof</li>
-          <li class="flex gap-3"><span class="text-ink/30 shrink-0">&mdash;</span>Updates only when you chase them</li>
-          <li class="flex gap-3"><span class="text-ink/30 shrink-0">&mdash;</span>One service, then you search for the next contractor</li>
+      <div class="bg-white border border-line rounded p-8 lg:p-10 reveal">
+        <h3 class="font-heading font-semibold text-2xl">Separate contractors</h3>
+        <ul class="mt-6 space-y-4 text-ink/70">
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>A different company for the roof, the drywall and the water damage</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>You carry the claim and the paperwork yourself</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>Scattered schedules and updates from each crew</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>No single report covering the full scope of work</li>
         </ul>
       </div>
-      <div class="reveal bg-white border-2 border-brand rounded p-8 lg:p-10">
-        <h3 class="text-2xl font-semibold">Castlebrook</h3>
-        <ul class="mt-6 space-y-4 text-[17px]">
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Thorough, detailed inspections before we ever begin working</li>
+      <div class="bg-white border-2 border-brand rounded p-8 lg:p-10 reveal">
+        <h3 class="font-heading font-semibold text-2xl">Castlebrook, one team</h3>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Roofing and restoration services from a single company</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed insurance adjuster on staff for claims</li>
           <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clear and consistent communication throughout your project</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Roofing and restoration under one roof</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Customized projects, so you get what you're looking for</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A thorough report of the work we have done</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 7. Bento gallery -->
+<!-- 7. WHAT WE WORK ON (BENTO) -->
 <section id="work" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-ink/60 mb-4">Our work</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight">Roofs across Tampa Bay</h2>
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-semibold mb-4">Our work</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight">Roofs across Tampa Bay</h2>
     </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
-      <figure class="reveal relative col-span-2 lg:col-span-2 lg:row-span-2 rounded overflow-hidden aspect-[4/3] lg:aspect-auto lg:min-h-[520px]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-8.jpg" alt="Aerial view of a tile roof" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
-        <figcaption class="absolute left-5 bottom-5 text-white text-xl font-semibold">Tile roof replacement</figcaption>
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:auto-rows-[260px]">
+      <figure class="relative rounded overflow-hidden aspect-[4/3] sm:aspect-auto sm:col-span-2 lg:col-span-2 lg:row-span-2 min-h-[260px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-10.jpg" alt="Roofer installing slate tiles on a roof" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 tile-shade"></div>
+        <figcaption class="absolute left-0 right-0 bottom-0 p-6 text-white"><h3 class="font-heading font-semibold text-2xl">Roof replacement</h3><p class="text-white/80 text-[15px] mt-1">Careful installation, start to finish.</p></figcaption>
       </figure>
-      <figure class="reveal relative col-span-1 lg:col-span-1 rounded overflow-hidden aspect-square">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-7.jpg" alt="Metal roof installation" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 text-white font-semibold">Commercial roofing</figcaption>
+      <figure class="relative rounded overflow-hidden aspect-[4/3] sm:aspect-auto min-h-[220px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-16.jpg" alt="Aerial view of a gray tile roof over a pool home" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 tile-shade"></div>
+        <figcaption class="absolute left-0 right-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Tile roofing</h3></figcaption>
       </figure>
-      <figure class="reveal relative col-span-1 lg:col-span-1 rounded overflow-hidden aspect-square">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-10.jpg" alt="Finished shingle roof" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 text-white font-semibold">Shingle roofing</figcaption>
+      <figure class="relative rounded overflow-hidden aspect-[4/3] sm:aspect-auto min-h-[220px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-8.jpg" alt="Roof deck exposed during a shingle roof repair" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 tile-shade"></div>
+        <figcaption class="absolute left-0 right-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Roof repair</h3></figcaption>
       </figure>
-      <figure class="reveal relative col-span-1 lg:col-span-1 rounded overflow-hidden aspect-square">
-        <img src="https://images.unsplash.com/photo-1755114203680-d39d95efa82c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Aerial view of a gray shingle roof" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 text-white font-semibold">Roof replacement</figcaption>
+      <figure class="relative rounded overflow-hidden aspect-[4/3] sm:aspect-auto min-h-[220px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-13.jpg" alt="Emergency blue tarp on a tile roof" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 tile-shade"></div>
+        <figcaption class="absolute left-0 right-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Emergency tarping</h3></figcaption>
       </figure>
-      <figure class="reveal relative col-span-1 lg:col-span-1 rounded overflow-hidden aspect-square">
-        <img src="https://images.unsplash.com/photo-1789683037479-44602dbee028?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof on a two-story house" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
-        <figcaption class="absolute left-4 bottom-4 text-white font-semibold">Metal roofing</figcaption>
+      <figure class="relative rounded overflow-hidden aspect-[4/3] sm:aspect-auto min-h-[220px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-12.jpg" alt="Damaged screen enclosure frame and exterior wall" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 tile-shade"></div>
+        <figcaption class="absolute left-0 right-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Storm relief and repair</h3></figcaption>
       </figure>
-      <figure class="reveal relative col-span-2 lg:col-span-2 rounded overflow-hidden aspect-[2/1]">
-        <img src="https://images.unsplash.com/photo-1787672358028-72efebce1029?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof over a brick building" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
-        <figcaption class="absolute left-5 bottom-4 text-white text-lg font-semibold">Roof coverings</figcaption>
+      <figure class="relative rounded overflow-hidden aspect-[4/3] sm:aspect-auto sm:col-span-2 lg:col-span-2 min-h-[220px] reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-6.jpg" alt="Crew working on a commercial metal roof" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 tile-shade"></div>
+        <figcaption class="absolute left-0 right-0 bottom-0 p-5 text-white"><h3 class="font-heading font-semibold text-xl">Commercial roofing</h3></figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- 8. Owner-led split -->
+<!-- 8. ABOUT -->
 <section id="about" class="bg-paper py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
     <div class="lg:col-span-6 reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-ink/60 mb-4">The Castlebrook guarantee</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight">Your satisfaction comes first</h2>
-      <p class="mt-6 text-lg text-ink/75 leading-relaxed">At Castlebrook Roofing and Restoration, we work with you at every step of the process to find solutions built around your needs. With our customized projects, you always get what you're looking for.</p>
-      <ul class="mt-7 space-y-3 text-[17px]">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>50+ years of combined experience</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tampa Bay's #1 choice for elastomeric roof coatings</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Residential and commercial projects</li>
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-semibold mb-4">About Castlebrook</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight">Tampa Bay's #1 choice for roofing and restoration</h2>
+      <p class="mt-6 text-ink/75">Our founders, James Wiles and Scott Burns, bring over 50 years of experience combined. They joined forces to offer attention to detail, professionalism and innovative solutions to every homeowner they work with. With expertise ranging from construction to insurance, our team helps you through every step of the roofing and restoration process.</p>
+      <ul class="mt-7 space-y-3">
+        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Locally owned and operated, clients treated as neighbors</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed, insured and highly trained</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Specialists in elastomeric roof coatings for commercial roofs</li>
       </ul>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="bg-brand text-white font-semibold h-14 px-8 rounded flex items-center justify-center hover:bg-ink transition">Request a free inspection</a>
-        <a href="tel:+18135909800" class="border border-ink/25 font-semibold h-14 px-8 rounded flex items-center justify-center hover:border-brand hover:text-brand transition">Call (813) 590-9800</a>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-flex items-center justify-center bg-brand hover:bg-brand-dark text-white font-semibold h-14 px-8 rounded transition-colors">Request a free inspection</a>
+        <a href="tel:8135909800" class="inline-flex items-center justify-center border border-ink hover:bg-ink hover:text-white font-semibold h-14 px-8 rounded transition-colors">(813) 590-9800</a>
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <div class="rounded overflow-hidden aspect-[4/3]">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/photo-1.jpg" alt="Castlebrook roofing project on a Tampa home" class="w-full h-full object-cover object-right" loading="lazy">
+      <div class="aspect-[4/3] rounded overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/photo-9.jpg" alt="Two-story Tampa Bay home with a new shingle roof and a Castlebrook yard sign" class="w-full h-full object-cover" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<!-- Reviews -->
+<!-- 9. SERVICE AREA -->
+<section class="bg-white py-20 lg:py-24 border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5 reveal">
+      <p class="text-xs tracking-[0.2em] uppercase text-brand font-semibold mb-4">Service area</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl leading-tight tracking-tight">From The Villages to Venice</h2>
+      <p class="mt-4 text-ink/70">Based in Tampa and serving the greater Tampa Bay area and everywhere in between.</p>
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <div class="flex flex-wrap gap-3">
+        <span class="border border-line rounded px-5 py-3 font-medium">Tampa</span>
+        <span class="border border-line rounded px-5 py-3 font-medium">Greater Tampa Bay</span>
+        <span class="border border-line rounded px-5 py-3 font-medium">The Villages</span>
+        <span class="border border-line rounded px-5 py-3 font-medium">Venice</span>
+        <span class="border border-line rounded px-5 py-3 font-medium">Everywhere in between</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -372,32 +417,22 @@ tailwind.config = {
         </article>
         <article class="ti-card">
           <div class="ti-head">
+            <span class="ti-avatar" style="background:#3949ab">A</span>
+            <span class="ti-who"><span class="ti-name">Allen Hanson</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">I meet with James in person. James did a aerial view of my roof and surrounding area. That was something to Experience. We were able to see the condition of the roof together with out going up on the roof. For a closer inspection. James is a very knowable young man. Thank you Allen Hanson</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
             <span class="ti-avatar" style="background:#6d4c41">R</span>
             <span class="ti-who"><span class="ti-name">Rich Borowiec</span></span>
             <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
           <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
           <p class="ti-text">Castlebrook responded quickly, showed up on schedule and completed a roofing/siding repair as promised. Appreciate their help and would highly recommend.</p>
-          <button type="button" class="ti-more">Read more</button>
-        </article>
-        <article class="ti-card">
-          <div class="ti-head">
-            <span class="ti-avatar" style="background:#6d4c41">B</span>
-            <span class="ti-who"><span class="ti-name">Brent Kirves</span></span>
-            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
-          </div>
-          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
-          <p class="ti-text">We had a great experience with Castlebrook Restoration. All the roof work was completed within a few days, with a thorough cleanup afterwards and nothing damaged in the process. The color choices were amazing as well and the result turned out amazing. Thank you!</p>
-          <button type="button" class="ti-more">Read more</button>
-        </article>
-        <article class="ti-card">
-          <div class="ti-head">
-            <span class="ti-avatar" style="background:#6d4c41">T</span>
-            <span class="ti-who"><span class="ti-name">Tyrtza Wetherell</span></span>
-            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
-          </div>
-          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
-          <p class="ti-text">Fantastic customer service, had a great experience!!</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
       </div>
@@ -415,38 +450,7 @@ tailwind.config = {
   })();</script>
 </section>
 
-<!-- 9. Service area -->
-<section class="bg-white py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-sm tracking-[0.2em] uppercase text-ink/60 mb-4">Service area</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight">Serving Tampa Bay and beyond</h2>
-      <p class="mt-5 text-lg text-ink/70">From The Villages to Venice and everywhere in between.</p>
-    </div>
-    <div class="mt-10 flex flex-wrap gap-3 reveal">
-      <span class="border border-ink/20 rounded px-5 py-2.5 font-medium">Tampa</span>
-      <span class="border border-ink/20 rounded px-5 py-2.5 font-medium">The Villages</span>
-      <span class="border border-ink/20 rounded px-5 py-2.5 font-medium">Venice</span>
-      <span class="border border-ink/20 rounded px-5 py-2.5 font-medium">Tampa Bay area</span>
-    </div>
-  </div>
-</section>
-
-<!-- 10. Call band -->
-<section class="bg-ink text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-7">
-      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight uppercase tracking-tight">Need a roof you can rely on?</h2>
-      <p class="mt-4 text-lg text-white/70">Call us or send an email and we'll set up your free inspection.</p>
-    </div>
-    <div class="lg:col-span-5 flex flex-col gap-3">
-      <a href="tel:+18135909800" class="bg-brand text-white font-semibold text-xl h-16 px-8 rounded flex items-center justify-center hover:bg-white hover:text-ink transition">(813) 590-9800</a>
-      <a href="mailto:jwiles@castlebrookrestoration.com" class="border border-white/30 font-semibold min-h-14 py-3 px-6 rounded flex items-center justify-center text-center hover:bg-white hover:text-ink transition text-[15px] sm:text-base break-words">jwiles@castlebrookrestoration.com</a>
-    </div>
-  </div>
-</section>
-
-<!-- Contact placeholder -->
+<!-- CONTACT -->
 <section id="contact" class="lp-contact" style="background:#340f10;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
@@ -482,7 +486,7 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div style="color:#fff"><p class="lp-kick" style="color:#ed2329">Contact</p><h2 class="lp-h" style="color:#fff">Request a free inspection</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your roof or restoration project and we'll get back to you to set up your free inspection.</p><ul class="lp-info">
+    <div style="color:#fff"><p class="lp-kick" style="color:#ed2329">Contact</p><h2 class="lp-h" style="color:#fff">Request a free inspection</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your roof or storm damage and the Castlebrook team will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18135909800" class="lp-v lp-v-d">(813) 590-9800</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -506,47 +510,88 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
+<!-- 10. FINAL CALL BAND -->
+<section class="bg-ink text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <h2 class="font-heading font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight">Ready for a roof you can rely on?</h2>
+      <p class="mt-5 text-lg text-white/70 max-w-xl">Call or email the Castlebrook team to schedule your free inspection.</p>
+    </div>
+    <div class="lg:col-span-5 flex flex-col gap-4">
+      <a href="tel:8135909800" class="inline-flex items-center justify-center bg-brand hover:bg-brand-dark text-white font-semibold text-lg h-16 px-8 rounded transition-colors">Call (813) 590-9800</a>
+      <a href="mailto:jwiles@castlebrookrestoration.com" class="inline-flex items-center justify-center border border-white/40 hover:bg-white hover:text-ink font-semibold min-h-16 py-3 px-6 rounded transition-colors text-[15px] sm:text-base text-center break-words">jwiles@castlebrookrestoration.com</a>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer class="bg-ink text-white border-t border-white/10">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-4">
-      <div class="bg-white rounded inline-block p-3"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/castlebrook-restoration-and-roofing-llc/21943/logo-0.png" alt="Castlebrook Restoration and Roofing" class="h-14 w-auto"></div>
-      <p class="mt-5 text-white/60 max-w-xs">Roofing and restoration in Tampa, Florida, and across Tampa Bay.</p>
+    <div class="md:col-span-5">
+      <div class="inline-block bg-white rounded p-3">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/158627987195961d70e532e8ca8d62f78a93610e/sites/castlebrook-restoration-and-roofing-llc/21946/logo-0.png" alt="Castlebrook Restoration and Roofing" class="h-12 w-auto">
+      </div>
+      <p class="mt-5 text-white/65 max-w-sm">Roofing and restoration for homes and businesses across the greater Tampa Bay area.</p>
     </div>
-    <div class="md:col-span-4">
-      <h3 class="text-sm tracking-[0.18em] uppercase text-white/50 mb-4">Services</h3>
-      <ul class="space-y-2 text-white/80">
-        <li>Roof Replacement</li><li>Roof Repair</li><li>Roof Coatings</li><li>Commercial Roofing</li><li>Water Mitigation</li><li>Tarping &amp; Mitigation</li>
+    <div class="md:col-span-3">
+      <h3 class="font-heading font-semibold text-lg mb-4">Services</h3>
+      <ul class="space-y-2 text-white/70 text-[16px]">
+        <li>Roof Replacement</li><li>Roof Repair</li><li>Water Mitigation</li><li>Tarping &amp; Mitigation</li><li>Commercial Roofing</li>
       </ul>
     </div>
     <div class="md:col-span-4">
-      <h3 class="text-sm tracking-[0.18em] uppercase text-white/50 mb-4">Contact</h3>
-      <ul class="space-y-3 text-white/80">
+      <h3 class="font-heading font-semibold text-lg mb-4">Contact</h3>
+      <ul class="space-y-3 text-white/70 text-[16px]">
         <li>19046 Bruce B Downs Blvd, Suite 68<br>Tampa, Florida 33647</li>
-        <li><a href="tel:+18135909800" class="hover:text-brand transition">(813) 590-9800</a></li>
-        <li><a href="mailto:jwiles@castlebrookrestoration.com" class="hover:text-brand transition break-words">jwiles@castlebrookrestoration.com</a></li>
+        <li><a href="tel:8135909800" class="hover:text-white">(813) 590-9800</a></li>
+        <li><a href="mailto:jwiles@castlebrookrestoration.com" class="hover:text-white break-words">jwiles@castlebrookrestoration.com</a></li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/50 space-y-1">
-      <p>Concept redesign by LumeaPixel. This is not the official Castlebrook Restoration &amp; Roofing LLC website.</p>
-      <p>Some photos by Sergej *****, Roger Starnes Sr, Divaris Shirichena and Paragon Exterior on Unsplash.</p>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/50">
+      Concept redesign by LumeaPixel. This is not the official Castlebrook Restoration &amp; Roofing LLC website.
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Mobile menu
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', function () {
+    var open = mobileMenu.classList.toggle('hidden') === false;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { mobileMenu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', 'false'); });
+  });
+
+  // Reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Before / after slider
+  var range = document.getElementById('baRange');
+  var top = document.getElementById('baTop');
+  var handle = document.getElementById('baHandle');
+  var knob = document.getElementById('baKnob');
+  function setBA(v) {
+    top.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
+    handle.style.left = v + '%';
+    knob.style.left = v + '%';
+  }
+  range.addEventListener('input', function () { setBA(range.value); });
+  setBA(50);
 </script>
 </body>
 </html>
