@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Unique Home Remodeling | Kitchen, Bath &amp; Floor Remodeling in Tampa, FL</title>
+<title>Unique Home Remodeling | Kitchen, Bath & Flooring in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,10 +16,10 @@ tailwind.config = {
       fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
       colors: {
         brand: '#0a0a7a',
-        brandDark: '#06063f',
-        brandDeep: '#04042b',
-        cream: '#f6f3ed',
-        ink: '#111118'
+        ink: '#0b0c1c',
+        deep: '#07073f',
+        cream: '#f5f2ec',
+        paper: '#faf9f6'
       },
       borderRadius: { DEFAULT: '6px' }
     }
@@ -28,24 +28,26 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Manrope', system-ui, sans-serif; color: #111118; background: #fff; -webkit-font-smoothing: antialiased; }
-  h1, h2, h3, h4 { letter-spacing: -0.02em; line-height: 1.1; }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: #0b0c1c; background: #fff; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.1; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile-shade { background: linear-gradient(to top, rgba(4,4,43,.82) 0%, rgba(4,4,43,.25) 45%, rgba(4,4,43,0) 70%); }
-  .hero-shade { background: linear-gradient(to bottom, rgba(4,4,43,.62), rgba(4,4,43,.72)); }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  .tile img { transition: transform .8s ease; }
+  .tile:hover img { transform: scale(1.04); }
+  .tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(7,7,63,.82) 0%, rgba(7,7,63,0) 55%); }
+  .tile > .label { position: absolute; left: 0; bottom: 0; z-index: 2; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body>
+<body class="bg-white">
 
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
     <a href="#top" class="flex items-center shrink-0" aria-label="Unique Home Remodeling">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/unique-home-remodeling/21949/logo-0.png" alt="Unique Home Remodeling logo" class="h-14 w-auto">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/4b7a4410463b9e608a27d84b7b49bdf18d489f38/sites/unique-home-remodeling/21955/logo-0.png" alt="Unique Home Remodeling logo" class="h-14 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink">
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink/80">
       <a href="#services" class="hover:text-brand transition">Services</a>
       <a href="#about" class="hover:text-brand transition">About</a>
       <a href="#projects" class="hover:text-brand transition">Projects</a>
@@ -53,23 +55,23 @@ tailwind.config = {
       <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18134386709" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded text-[15px] font-semibold hover:bg-brandDark transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <a href="tel:+18134386709" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white text-[15px] font-semibold px-5 py-3 rounded hover:bg-deep transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (813) 438-6709
       </a>
       <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center rounded border border-black/10" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
-    <div class="px-5 py-5 flex flex-col gap-4 text-base font-medium">
-      <a href="#services" class="mnav">Services</a>
-      <a href="#about" class="mnav">About</a>
-      <a href="#projects" class="mnav">Projects</a>
-      <a href="#areas" class="mnav">Service Areas</a>
-      <a href="#contact" class="mnav">Contact</a>
-      <a href="tel:+18134386709" class="inline-flex justify-center items-center bg-brand text-white px-5 py-3 rounded font-semibold">Call (813) 438-6709</a>
+    <div class="px-5 py-5 flex flex-col gap-1 text-[17px] font-medium">
+      <a href="#services" class="py-3 border-b border-black/5">Services</a>
+      <a href="#about" class="py-3 border-b border-black/5">About</a>
+      <a href="#projects" class="py-3 border-b border-black/5">Projects</a>
+      <a href="#areas" class="py-3 border-b border-black/5">Service Areas</a>
+      <a href="#contact" class="py-3 border-b border-black/5">Contact</a>
+      <a href="tel:+18134386709" class="mt-4 inline-flex justify-center bg-brand text-white font-semibold px-5 py-3.5 rounded">Call (813) 438-6709</a>
     </div>
   </div>
 </header>
@@ -78,119 +80,98 @@ tailwind.config = {
 
 <!-- Hero -->
 <section class="relative">
-  <div class="relative min-h-[620px] lg:min-h-[720px] flex items-center">
-    <img src="https://images.unsplash.com/photo-1682888813913-e13f18692019?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled open kitchen with marble waterfall island" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 hero-shade"></div>
-    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-16 pb-40 lg:pb-48">
-      <p class="text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold text-white/80 mb-6">Serving Hillsborough County Since 2017</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold">Kitchens, baths and floors, built right in Tampa.</h1>
-      <p class="mt-6 text-lg text-white/85 max-w-2xl mx-auto leading-relaxed">A family-owned remodeling company serving Tampa, Riverview, Brandon, St. Petersburg and all of Hillsborough County. Quality craftsmanship backed by a 1-year labor guarantee.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#contact" class="bg-brand text-white px-8 py-4 rounded font-semibold hover:bg-brandDark transition">Get Your Free Estimate</a>
-        <a href="tel:+18134386709" class="border border-white text-white px-8 py-4 rounded font-semibold hover:bg-white hover:text-ink transition">(813) 438-6709</a>
+  <div class="relative min-h-[640px] lg:min-h-[760px] flex items-center">
+    <img src="https://images.unsplash.com/photo-1682888813789-c39fe30921e2?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Remodeled open kitchen with marble island" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-deep/70"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-20 pb-40 lg:pb-48">
+      <p class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-white/80 mb-6">Serving Hillsborough County since 2017</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-[64px] font-semibold">Kitchens, baths and floors<br class="hidden sm:block"> built right in Tampa</h1>
+      <p class="mt-7 text-lg lg:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">A family-owned remodeling company serving Tampa, Riverview, Brandon, St. Petersburg and all of Hillsborough County. Quality craftsmanship, backed by a 1-year labor guarantee.</p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="w-full sm:w-auto inline-flex justify-center bg-brand text-white font-semibold px-8 py-4 rounded border border-white/25 hover:bg-white hover:text-brand transition">Get your free estimate</a>
+        <a href="tel:+18134386709" class="w-full sm:w-auto inline-flex justify-center border border-white text-white font-semibold px-8 py-4 rounded hover:bg-white hover:text-ink transition">Call (813) 438-6709</a>
       </div>
     </div>
   </div>
 
   <!-- Trust strip -->
-  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20 z-10">
-    <div class="bg-white rounded shadow-[0_10px_40px_rgba(4,4,43,.12)] grid grid-cols-2 lg:grid-cols-4">
-      <div class="p-6 lg:p-8 flex items-start gap-4 border-b lg:border-b-0 border-r border-black/5">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <div><p class="font-semibold text-ink leading-tight">15+ years</p><p class="text-sm text-ink/60 mt-1">Industry experience</p></div>
+  <div class="relative z-20 max-w-6xl mx-auto px-5 lg:px-8 -mt-20 lg:-mt-24">
+    <div class="bg-white rounded shadow-[0_18px_50px_-20px_rgba(7,7,63,.35)] grid grid-cols-2 lg:grid-cols-4">
+      <div class="p-6 lg:p-8 flex items-start gap-4 border-b border-r border-black/5 lg:border-b-0">
+        <svg class="shrink-0 text-brand" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><p class="font-semibold text-[17px] leading-snug">15+ years</p><p class="text-sm text-ink/60 mt-1">Industry experience</p></div>
       </div>
-      <div class="p-6 lg:p-8 flex items-start gap-4 border-b lg:border-b-0 lg:border-r border-black/5">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
-        <div><p class="font-semibold text-ink leading-tight">Family owned</p><p class="text-sm text-ink/60 mt-1">And operated</p></div>
+      <div class="p-6 lg:p-8 flex items-start gap-4 border-b border-black/5 lg:border-b-0 lg:border-r">
+        <svg class="shrink-0 text-brand" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+        <div><p class="font-semibold text-[17px] leading-snug">Family owned</p><p class="text-sm text-ink/60 mt-1">And operated</p></div>
       </div>
       <div class="p-6 lg:p-8 flex items-start gap-4 border-r border-black/5">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
-        <div><p class="font-semibold text-ink leading-tight">1-year guarantee</p><p class="text-sm text-ink/60 mt-1">On all labor</p></div>
+        <svg class="shrink-0 text-brand" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div><p class="font-semibold text-[17px] leading-snug">1-year guarantee</p><p class="text-sm text-ink/60 mt-1">On all labor</p></div>
       </div>
       <div class="p-6 lg:p-8 flex items-start gap-4">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        <div><p class="font-semibold text-ink leading-tight">Hillsborough County</p><p class="text-sm text-ink/60 mt-1">Serving since 2017</p></div>
+        <svg class="shrink-0 text-brand" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div><p class="font-semibold text-[17px] leading-snug">Hillsborough County</p><p class="text-sm text-ink/60 mt-1">Serving since 2017</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Services -->
-<section id="services" class="py-24 lg:py-32">
+<section id="services" class="pt-24 lg:pt-32 pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs tracking-[0.2em] uppercase font-semibold text-brand mb-4">Our Services</p>
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Our services</p>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">What we build in Tampa</h2>
-      <p class="mt-5 text-lg text-ink/70 leading-relaxed">From full kitchen renovations to quick handyman fixes, the same care goes into every project in Hillsborough County.</p>
+      <p class="mt-5 text-lg text-ink/70 leading-relaxed">From complete kitchen remodels to quick handyman fixes, the same commitment to craftsmanship goes into every project.</p>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-6">
-      <a href="#contact" class="reveal group relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1649083048391-1c9e82472f65?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with white cabinets and brass pendant lights" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white">
-          <h3 class="text-2xl font-semibold">Kitchen Remodeling</h3>
-          <p class="mt-1 text-sm text-white/80">Custom cabinetry, modern countertops, better layouts.</p>
-        </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[420px]">
+        <img src="https://images.unsplash.com/photo-1613545564259-ede280773613?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen remodeling" class="absolute inset-0 w-full h-full object-cover">
+        <div class="label p-6 lg:p-7 text-white"><h3 class="text-2xl font-semibold">Kitchen Remodeling</h3><p class="mt-2 text-sm text-white/85 max-w-xs">Custom cabinetry, modern countertops and layouts built around how you cook.</p></div>
       </a>
-      <a href="#contact" class="reveal group relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1649083048455-01f6827c24d6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright white kitchen with island and leather stools" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white">
-          <h3 class="text-2xl font-semibold">Complete Kitchen Transformations</h3>
-          <p class="mt-1 text-sm text-white/80">Layouts designed around how you cook and gather.</p>
-        </div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[420px]">
+        <img src="https://images.unsplash.com/photo-1682888818620-94875adf5bb9?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen cabinetry and countertops" class="absolute inset-0 w-full h-full object-cover">
+        <div class="label p-6 lg:p-7 text-white"><h3 class="text-2xl font-semibold">Cabinets &amp; Countertops</h3><p class="mt-2 text-sm text-white/85 max-w-sm">Shaker cabinets, quartz surfaces and tile backsplashes, installed clean.</p></div>
       </a>
-      <a href="#contact" class="reveal group relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1733431770522-971aface0858?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Hard surface flooring running through a kitchen" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white">
-          <h3 class="text-2xl font-semibold">Floor Installation</h3>
-          <p class="mt-1 text-sm text-white/80">Hardwood, tile, laminate and luxury vinyl, professionally installed.</p>
-        </div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[420px]">
+        <img src="https://images.unsplash.com/photo-1601760561441-16420502c7e0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bathroom and tile style remodel" class="absolute inset-0 w-full h-full object-cover">
+        <div class="label p-6 lg:p-7 text-white"><h3 class="text-2xl font-semibold">Bathroom Remodeling</h3><p class="mt-2 text-sm text-white/85 max-w-sm">Elegant tile work, updated fixtures and smart storage that makes the most of your space.</p></div>
       </a>
-      <a href="#contact" class="reveal group relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1613545564259-ede280773613?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Light kitchen with mosaic backsplash and window" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white">
-          <h3 class="text-2xl font-semibold">Bathroom Remodeling</h3>
-          <p class="mt-1 text-sm text-white/80">Tile work, updated fixtures and smart storage.</p>
-        </div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[420px]">
+        <img src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wood flooring in open living space" class="absolute inset-0 w-full h-full object-cover">
+        <div class="label p-6 lg:p-7 text-white"><h3 class="text-2xl font-semibold">Floor Installation</h3><p class="mt-2 text-sm text-white/85 max-w-xs">Hardwood, tile, laminate and luxury vinyl, professionally installed.</p></div>
       </a>
-      <a href="#contact" class="reveal group relative md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1719569019031-ca8fb2911e2d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Renovated kitchen with updated cabinets and sink" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white">
-          <h3 class="text-2xl font-semibold">Handyman Services</h3>
-          <p class="mt-1 text-sm text-white/80">Repairs and home improvements, done with care.</p>
-        </div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[420px]">
+        <img src="https://images.unsplash.com/photo-1552155235-a68a6c02d512?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open plan home renovation" class="absolute inset-0 w-full h-full object-cover">
+        <div class="label p-6 lg:p-7 text-white"><h3 class="text-2xl font-semibold">Whole-Room Renovations</h3><p class="mt-2 text-sm text-white/85 max-w-xs">Opening up layouts and updating finishes from floor to ceiling.</p></div>
       </a>
-      <a href="#contact" class="reveal group relative md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open-plan living space with kitchen island and fireplace" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-        <div class="absolute inset-0 tile-shade"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white">
-          <h3 class="text-2xl font-semibold">Whole-Home Updates</h3>
-          <p class="mt-1 text-sm text-white/80">Room-by-room upgrades under one trusted crew.</p>
-        </div>
+      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[420px]">
+        <img src="https://images.unsplash.com/photo-1643034738686-d69e7bc047e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Handyman and home improvement work" class="absolute inset-0 w-full h-full object-cover">
+        <div class="label p-6 lg:p-7 text-white"><h3 class="text-2xl font-semibold">Handyman Services</h3><p class="mt-2 text-sm text-white/85 max-w-sm">Minor repairs to home improvements, with the same attention to detail as our major renovations.</p></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- About split -->
+<!-- Split: about -->
 <section id="about" class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
     <div class="lg:col-span-6 reveal">
       <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1682888818602-b4492fadf2f8?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Farmhouse sink and white cabinetry in a finished kitchen" class="w-full h-full object-cover">
+        <img src="https://images.unsplash.com/photo-1613545564235-db7af30081bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished kitchen with island and pendant lights" class="w-full h-full object-cover">
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <p class="text-xs tracking-[0.2em] uppercase font-semibold text-brand mb-4">Why Choose Us</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">We treat your home like our own.</h2>
-      <p class="mt-6 text-lg text-ink/70 leading-relaxed">Unique Home Remodeling Co. is a family-owned team with more than 15 years of residential remodeling experience across Florida and over 7 years serving Hillsborough County.</p>
-      <p class="mt-4 text-lg text-ink/70 leading-relaxed">You get personal attention and accountability on every job, and a 1-year labor guarantee on the workmanship you pay for.</p>
-      <a href="#contact" class="mt-9 inline-flex bg-brand text-white px-8 py-4 rounded font-semibold hover:bg-brandDark transition">Request an Estimate</a>
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Why choose us</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">We treat your home like our own</h2>
+      <p class="mt-6 text-lg text-ink/70 leading-relaxed">Unique Home Remodeling Co. is a family-owned team with more than 15 years of experience in residential remodeling across Florida, and over 7 years serving Hillsborough County.</p>
+      <p class="mt-4 text-lg text-ink/70 leading-relaxed">You get personal attention and real accountability on every project, and a 1-year labor guarantee behind the workmanship.</p>
+      <a href="#contact" class="mt-9 inline-flex items-center gap-2 bg-brand text-white font-semibold px-7 py-4 rounded hover:bg-deep transition">
+        Talk to our team
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -199,15 +180,19 @@ tailwind.config = {
 <section class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
     <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <p class="text-xs tracking-[0.2em] uppercase font-semibold text-brand mb-4">How We Work</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Free estimates. No obligation.</h2>
-      <p class="mt-6 text-lg text-ink/70 leading-relaxed">We start by listening. We walk through your vision, give you expert guidance on what works in your space, and deliver a detailed quote you can review on your own time.</p>
-      <p class="mt-4 text-lg text-ink/70 leading-relaxed">Whether it is a full kitchen renovation or a small repair, you will know what to expect before work begins.</p>
-      <a href="tel:+18134386709" class="mt-9 inline-flex border border-brand text-brand px-8 py-4 rounded font-semibold hover:bg-brand hover:text-white transition">Call (813) 438-6709</a>
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">How we work</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Clear plans and honest quotes</h2>
+      <p class="mt-6 text-lg text-ink/70 leading-relaxed">Call us or send a message for your free estimate. We talk through your vision, give expert guidance and deliver a detailed quote, with no obligation.</p>
+      <ul class="mt-8 space-y-4">
+        <li class="flex items-start gap-3 text-[17px]"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>15+ years of industry experience</span></li>
+        <li class="flex items-start gap-3 text-[17px]"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>7+ years serving Hillsborough County</span></li>
+        <li class="flex items-start gap-3 text-[17px]"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>Family-owned and operated</span></li>
+        <li class="flex items-start gap-3 text-[17px]"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>1-year labor guarantee</span></li>
+      </ul>
     </div>
     <div class="lg:col-span-6 order-1 lg:order-2 reveal">
       <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1770135878277-73e589248b43?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with tiled backsplash, island and walnut stools" class="w-full h-full object-cover">
+        <img src="https://images.unsplash.com/photo-1772016127953-19bb88908950?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with walnut island and bar stools" class="w-full h-full object-cover">
       </div>
     </div>
   </div>
@@ -217,32 +202,32 @@ tailwind.config = {
 <section id="projects" class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs tracking-[0.2em] uppercase font-semibold text-brand mb-4">Recent Work</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Spaces we have renovated</h2>
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Recent work</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Spaces we have remodeled</h2>
     </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1639173925921-5d5fd027713c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="White kitchen with island and steel stools" class="w-full h-full object-cover"></div>
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1649083048455-01f6827c24d6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen island with pendant lighting" class="w-full h-full object-cover"></div>
-      <div class="reveal col-span-2 lg:col-span-1 aspect-[2/1] lg:aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open kitchen and living area with linear fireplace" class="w-full h-full object-cover"></div>
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1770063817031-f3b98dff347f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with brick backsplash and range" class="w-full h-full object-cover"></div>
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1613545564259-ede280773613?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Marble-topped kitchen island with white stools" class="w-full h-full object-cover"></div>
-      <div class="reveal col-span-2 lg:col-span-1 aspect-[2/1] lg:aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1682888813913-e13f18692019?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Large waterfall island with gold-framed stools" class="w-full h-full object-cover"></div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
+      <div class="reveal col-span-2 lg:col-span-6 aspect-[16/10] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1649083048455-01f6827c24d6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="White kitchen with brass pendant lights" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1649083048428-3d8ed23a3ce0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bright open kitchen and dining area" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1682888818620-94875adf5bb9?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Herringbone tile backsplash and white cabinets" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1613545564259-ede280773613?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen with mosaic backsplash and marble island" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1601760561441-16420502c7e0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Farmhouse sink kitchen with hex tile floor" class="w-full h-full object-cover"></div>
+      <div class="reveal col-span-2 lg:col-span-6 aspect-[16/10] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1552155235-a68a6c02d512?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Long open-plan kitchen with hardwood floors" class="w-full h-full object-cover"></div>
     </div>
   </div>
 </section>
 
 <!-- Service areas cream panel -->
 <section id="areas" class="pb-24 lg:pb-32">
-  <div class="max-w-6xl mx-auto px-5 lg:px-8">
-    <div class="bg-cream rounded px-6 sm:px-12 lg:px-20 py-16 lg:py-20 text-center reveal">
-      <p class="text-xs tracking-[0.2em] uppercase font-semibold text-brand mb-4">Service Areas</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Proudly serving Hillsborough County</h2>
-      <p class="mt-5 text-lg text-ink/70 max-w-2xl mx-auto leading-relaxed">From Tampa to St. Petersburg and everywhere in between.</p>
-      <ul class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-ink font-medium text-[17px]">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="bg-cream rounded px-6 py-16 lg:px-16 lg:py-24 text-center reveal">
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Service areas</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold max-w-3xl mx-auto">Proudly serving Hillsborough County</h2>
+      <p class="mt-6 text-lg text-ink/70 max-w-2xl mx-auto leading-relaxed">From Tampa to St. Petersburg and everywhere in between, we bring quality craftsmanship to homes across the greater Tampa Bay area.</p>
+      <ul class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[17px] font-semibold max-w-3xl mx-auto">
         <li>Tampa</li><li>Riverview</li><li>Brandon</li><li>St. Petersburg</li><li>Carrollwood</li><li>Town 'n' Country</li><li>Temple Terrace</li><li>Plant City</li>
       </ul>
       <p class="mt-6 text-ink/60">And all surrounding areas in Hillsborough County.</p>
-      <a href="#contact" class="mt-10 inline-flex bg-brand text-white px-8 py-4 rounded font-semibold hover:bg-brandDark transition">Check Your Address</a>
+      <a href="#contact" class="mt-10 inline-flex bg-brand text-white font-semibold px-8 py-4 rounded hover:bg-deep transition">Check your address</a>
     </div>
   </div>
 </section>
@@ -251,16 +236,17 @@ tailwind.config = {
 <section class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
-      <div class="lg:col-span-7 lg:row-start-1 lg:col-start-1 aspect-[4/3] lg:aspect-[16/10] overflow-hidden rounded reveal">
-        <img src="https://images.unsplash.com/photo-1733431770522-971aface0858?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fGtpdGNoZW4lMjByZW1vZGVsJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc5NDIyMjQ4MHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen ready for remodeling" class="w-full h-full object-cover">
+      <div class="lg:col-span-8 aspect-[4/3] lg:aspect-[16/10] overflow-hidden rounded">
+        <img src="https://images.unsplash.com/photo-1649083048428-3d8ed23a3ce0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8a2l0Y2hlbiUyMHJlbW9kZWwlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzk0MjIyNDgwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Sunlit remodeled kitchen and dining room" class="w-full h-full object-cover">
       </div>
-      <div class="lg:col-span-5 lg:col-start-8 lg:row-start-1 bg-brand text-white rounded p-8 sm:p-10 lg:p-12 -mt-10 mx-4 lg:mx-0 lg:mt-0 relative reveal">
+      <div class="lg:col-span-4 relative z-10 bg-brand text-white rounded p-8 lg:p-10 mt-[-48px] mx-4 lg:mx-0 lg:mt-0 lg:-ml-24">
         <h2 class="text-3xl lg:text-4xl font-semibold">Ready to start your project?</h2>
-        <p class="mt-5 text-white/80 leading-relaxed">Call or send a request for your free estimate. We will talk through your plans and send you a detailed quote.</p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="#contact" class="bg-white text-brand px-7 py-4 rounded font-semibold text-center hover:bg-cream transition">Get Your Free Estimate</a>
-          <a href="tel:+18134386709" class="border border-white/60 text-white px-7 py-4 rounded font-semibold text-center hover:bg-white/10 transition">(813) 438-6709</a>
+        <p class="mt-5 text-white/85 leading-relaxed">Get a free, no-obligation estimate for your kitchen, bathroom, floors or repairs.</p>
+        <div class="mt-8 flex flex-col gap-3">
+          <a href="tel:+18134386709" class="inline-flex justify-center bg-white text-brand font-semibold px-6 py-4 rounded hover:bg-cream transition">Call (813) 438-6709</a>
+          <a href="#contact" class="inline-flex justify-center border border-white/60 text-white font-semibold px-6 py-4 rounded hover:bg-white hover:text-brand transition">Request an estimate</a>
         </div>
+        <p class="mt-6 text-sm text-white/70 leading-relaxed">Mon to Fri 8:00 AM to 6:00 PM<br>Sat 9:00 AM to 3:00 PM<br>Sunday closed</p>
       </div>
     </div>
   </div>
@@ -301,7 +287,7 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div style="color:#fff"><p class="lp-kick" style="color:#9191c3">Contact</p><h2 class="lp-h" style="color:#fff">Request your free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your project and we will get back to you with a detailed, no-obligation quote.</p><ul class="lp-info">
+    <div style="color:#fff"><p class="lp-kick" style="color:#9191c3">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your project and we will get back to you with a detailed, no-obligation quote.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18134386709" class="lp-v lp-v-d">(813) 438-6709</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -328,45 +314,47 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-brandDeep text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
-    <div class="sm:col-span-2 lg:col-span-4">
-      <div class="inline-block bg-white rounded p-3">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/b59c10817dabfd1b14b097aa34e251d6f5c23b04/sites/unique-home-remodeling/21949/logo-0.png" alt="Unique Home Remodeling logo" class="h-14 w-auto">
+<footer class="bg-deep text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-20 pb-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4">
+        <div class="inline-block bg-white rounded p-3">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/4b7a4410463b9e608a27d84b7b49bdf18d489f38/sites/unique-home-remodeling/21955/logo-0.png" alt="Unique Home Remodeling logo" class="h-12 w-auto">
+        </div>
+        <p class="mt-6 text-white/70 leading-relaxed max-w-sm">Family-owned remodeling company serving Hillsborough County with quality craftsmanship and personalized service since 2017.</p>
       </div>
-      <p class="mt-6 text-white/70 leading-relaxed max-w-sm">Family-owned remodeling company serving Hillsborough County with quality craftsmanship and personalized service since 2017.</p>
+      <div class="lg:col-span-2">
+        <h3 class="text-sm font-semibold tracking-[0.18em] uppercase text-white/60 mb-5">Explore</h3>
+        <ul class="space-y-3 text-white/85">
+          <li><a href="#services" class="hover:text-white">Services</a></li>
+          <li><a href="#about" class="hover:text-white">Why Choose Us</a></li>
+          <li><a href="#projects" class="hover:text-white">Projects</a></li>
+          <li><a href="#areas" class="hover:text-white">Service Areas</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h3 class="text-sm font-semibold tracking-[0.18em] uppercase text-white/60 mb-5">Contact</h3>
+        <ul class="space-y-3 text-white/85">
+          <li><a href="tel:+18134386709" class="hover:text-white">(813) 438-6709</a></li>
+          <li><a href="mailto:info@uniqueremodelingfl.com" class="hover:text-white break-words text-[15px]">info@uniqueremodelingfl.com</a></li>
+          <li>Tampa, FL</li>
+          <li class="text-white/60 text-sm pt-2">Licensed &amp; Insured<br>Hillsborough County, FL</li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h3 class="text-sm font-semibold tracking-[0.18em] uppercase text-white/60 mb-5">Business hours</h3>
+        <ul class="space-y-3 text-white/85">
+          <li>Mon to Fri: 8:00 AM to 6:00 PM</li>
+          <li>Saturday: 9:00 AM to 3:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
     </div>
-    <div class="lg:col-span-2">
-      <h4 class="text-sm tracking-[0.15em] uppercase font-semibold text-white/60 mb-5">Quick Links</h4>
-      <ul class="space-y-3 text-white/85">
-        <li><a href="#services" class="hover:text-white">Our Services</a></li>
-        <li><a href="#about" class="hover:text-white">Why Choose Us</a></li>
-        <li><a href="#areas" class="hover:text-white">Service Areas</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="lg:col-span-3">
-      <h4 class="text-sm tracking-[0.15em] uppercase font-semibold text-white/60 mb-5">Contact</h4>
-      <ul class="space-y-3 text-white/85">
-        <li><a href="tel:+18134386709" class="hover:text-white">(813) 438-6709</a></li>
-        <li><a href="mailto:info@uniqueremodelingfl.com" class="hover:text-white break-words text-[15px]">info@uniqueremodelingfl.com</a></li>
-        <li>Tampa, FL</li>
-      </ul>
-    </div>
-    <div class="lg:col-span-3">
-      <h4 class="text-sm tracking-[0.15em] uppercase font-semibold text-white/60 mb-5">Business Hours</h4>
-      <ul class="space-y-3 text-white/85">
-        <li>Mon – Fri: 8:00 AM – 6:00 PM</li>
-        <li>Saturday: 9:00 AM – 3:00 PM</li>
-        <li>Sunday: Closed</li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-col gap-2 text-sm text-white/55">
-      <p>&copy; 2026 Unique Home Remodeling Co. All rights reserved. Licensed &amp; Insured &bull; Hillsborough County, FL</p>
+    <div class="mt-16 pt-8 border-t border-white/10 text-sm text-white/55 space-y-2">
+      <p>&copy; 2026 Unique Home Remodeling Co. All rights reserved.</p>
       <p>Concept redesign by LumeaPixel. This is not the official Unique Home Remodeling website.</p>
-      <p>Some photos by Zac Gudakov, Bailey Alexander, Lotus Design N Print, Brian Wangenheim and Clay Banks on Unsplash.</p>
+      <p>Some photos by Zac Gudakov, Bailey Alexander, Christa Grover, Clay Elliot, Smart Renovations and Lotus Design N Print on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -378,7 +366,7 @@ tailwind.config = {
     const open = menu.classList.toggle('hidden') === false;
     btn.setAttribute('aria-expanded', open);
   });
-  document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); btn.setAttribute('aria-expanded', false); }));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); }));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
