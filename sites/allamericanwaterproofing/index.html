@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>All-American Waterproofing | Basement Waterproofing & Concrete in Atlanta, GA</title>
+<title>All-American Waterproofing | Waterproofing & Concrete in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,13 +13,13 @@
 tailwind.config = {
   theme: {
     extend: {
-      fontFamily: { sans: ['Outfit', 'sans-serif'] },
+      fontFamily: { sans: ['Outfit', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#1f5aa6',
-        brandDark: '#0c2342',
-        brandTint: '#e7eef8',
-        ink: '#10151c',
-        paper: '#f6f5f2'
+        brand: '#1f5fae',
+        brandDark: '#0b2545',
+        brandTint: '#e6eef8',
+        ink: '#0e1726',
+        paper: '#f6f7f9'
       },
       borderRadius: { card: '24px' }
     }
@@ -28,19 +28,20 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Outfit', sans-serif; color: #10151c; font-size: 17px; line-height: 1.6; }
+  body { font-family: 'Outfit', sans-serif; color: #0e1726; font-size: 17px; line-height: 1.6; }
+  h1, h2, h3, h4 { line-height: 1.1; letter-spacing: -0.01em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  @keyframes slideL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  @keyframes slideR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-  .marquee-l { animation: slideL 45s linear infinite; }
-  .marquee-r { animation: slideR 50s linear infinite; }
+  .marquee { display: flex; width: max-content; gap: 12px; animation: scrollL 45s linear infinite; }
+  .marquee.rev { animation-name: scrollR; animation-duration: 55s; }
+  @keyframes scrollL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes scrollR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
   details > summary { list-style: none; cursor: pointer; }
   details > summary::-webkit-details-marker { display: none; }
   details[open] .plus { transform: rotate(45deg); }
   .plus { transition: transform .25s ease; }
   @media (prefers-reduced-motion: reduce) {
-    .marquee-l, .marquee-r { animation: none; }
+    .marquee { animation: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
   }
 </style>
@@ -48,61 +49,63 @@ tailwind.config = {
 <body class="bg-white antialiased">
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
     <a href="#top" class="shrink-0">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/logo-0.png" alt="All-American Waterproofing" class="h-12 w-auto">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/logo-0.png" alt="All-American Waterproofing" class="h-12 w-auto">
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink/80">
-      <a href="#how" class="hover:text-brand transition">How it works</a>
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#projects" class="hover:text-brand transition">Projects</a>
-      <a href="#faq" class="hover:text-brand transition">Questions</a>
-      <a href="#contact" class="hover:text-brand transition">Contact</a>
+      <a href="#how" class="hover:text-brand">How it works</a>
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#faq" class="hover:text-brand">Questions</a>
+      <a href="#projects" class="hover:text-brand">Projects</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+14043013431" class="inline-flex items-center gap-2 bg-brand text-white font-medium rounded-full px-4 sm:px-5 py-2.5 text-[15px] hover:bg-brandDark transition">
+      <a href="tel:+14043013431" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-medium px-5 py-3 rounded-full hover:bg-brandDark transition">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="hidden sm:inline">(404) 301-3431</span><span class="sm:hidden">Call</span>
+        (404) 301-3431
       </a>
       <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
-    <nav class="px-5 py-4 flex flex-col gap-1 text-[17px] font-medium">
-      <a href="#how" class="py-2.5">How it works</a>
-      <a href="#services" class="py-2.5">Services</a>
-      <a href="#projects" class="py-2.5">Projects</a>
-      <a href="#faq" class="py-2.5">Questions</a>
-      <a href="#contact" class="py-2.5">Contact</a>
-    </nav>
+    <div class="px-5 py-4 flex flex-col gap-1 text-lg">
+      <a href="#how" class="py-2">How it works</a>
+      <a href="#services" class="py-2">Services</a>
+      <a href="#faq" class="py-2">Questions</a>
+      <a href="#projects" class="py-2">Projects</a>
+      <a href="#contact" class="py-2">Contact</a>
+      <a href="tel:+14043013431" class="mt-2 bg-brand text-white text-center font-medium px-5 py-3 rounded-full">Call (404) 301-3431</a>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
 <!-- Hero -->
-<section class="px-3 sm:px-5 lg:px-6 pt-3 sm:pt-5">
-  <div class="relative rounded-card overflow-hidden bg-brandDark min-h-[640px] lg:min-h-[700px]">
-    <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-12.jpg" alt="Stone retaining wall braced with timber during repair" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-r from-brandDark/95 via-brandDark/70 to-brandDark/20"></div>
-    <div class="relative z-10 px-6 sm:px-10 lg:px-16 py-12 lg:py-16 flex flex-col justify-between min-h-[640px] lg:min-h-[700px] gap-10">
+<section class="px-3 sm:px-5 pt-3 sm:pt-5">
+  <div class="relative rounded-card overflow-hidden max-w-[1400px] mx-auto min-h-[640px] lg:min-h-[700px] flex">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-2.jpg" alt="All-American Waterproofing crew member applying waterproofing coating to a foundation wall" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-brandDark/95 via-brandDark/70 to-brandDark/10"></div>
+    <div class="relative z-10 w-full px-6 sm:px-10 lg:px-14 py-12 lg:py-16 flex flex-col justify-between gap-10">
       <div class="max-w-2xl">
-        <h1 class="text-white text-4xl sm:text-5xl lg:text-[64px] font-medium leading-[1.05] tracking-tight">Keep water out of your Atlanta property.</h1>
-        <p class="mt-5 text-white/85 text-lg sm:text-xl max-w-xl">Waterproofing and concrete work for homes and businesses across Metro Atlanta and all of Georgia, since 1961.</p>
+        <h1 class="text-white text-4xl sm:text-5xl lg:text-[64px] font-medium">Keep water out of your Atlanta home or building.</h1>
+        <p class="mt-5 text-white/85 text-lg sm:text-xl max-w-xl">Waterproofing and concrete work across Metro Atlanta and Georgia, backed by a lifetime warranty on all services.</p>
       </div>
-      <div class="bg-white rounded-card p-6 sm:p-7 max-w-md w-full">
-        <p class="text-ink text-xl font-semibold">Get a free estimate</p>
-        <div class="mt-4 flex flex-col sm:flex-row gap-3">
-          <a href="tel:+14043013431" class="flex-1 inline-flex items-center justify-center gap-2 bg-brand text-white font-medium rounded-full px-5 py-3 hover:bg-brandDark transition">
+      <div class="bg-white rounded-card p-6 sm:p-7 max-w-md">
+        <h2 class="text-2xl font-medium">Get a free estimate</h2>
+        <p class="mt-1 text-ink/70 text-[15px]">Free consultation. We'll provide an estimate in two or three days.</p>
+        <div class="mt-5 flex flex-col sm:flex-row gap-3">
+          <a href="tel:+14043013431" class="flex-1 inline-flex items-center justify-center gap-2 bg-brand text-white font-medium px-5 py-3.5 rounded-full hover:bg-brandDark transition">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
             (404) 301-3431
           </a>
-          <a href="#contact" class="flex-1 inline-flex items-center justify-center bg-brandTint text-brandDark font-medium rounded-full px-5 py-3 hover:bg-brand hover:text-white transition">Request service</a>
+          <a href="#contact" class="flex-1 inline-flex items-center justify-center border border-ink/20 text-ink font-medium px-5 py-3.5 rounded-full hover:border-brand hover:text-brand transition">Request service</a>
         </div>
-        <p class="mt-4 text-sm text-ink/60">Serving Metro Atlanta and all of Georgia. Estimate in two or three days.</p>
+        <p class="mt-4 text-sm text-ink/60">Serving Metro Atlanta and all of Georgia.</p>
       </div>
     </div>
   </div>
@@ -111,31 +114,29 @@ tailwind.config = {
 <!-- How it works -->
 <section id="how" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-sm font-medium tracking-[0.18em] uppercase text-brand">The process</p>
-      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">How All-American Waterproofing works</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+    <p class="text-sm tracking-[0.18em] uppercase text-brand font-medium">The process</p>
+    <h2 class="mt-3 text-4xl lg:text-5xl font-medium max-w-2xl">How All-American Waterproofing works</h2>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
       <div class="reveal">
         <div class="aspect-[4/3] rounded-card overflow-hidden">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-11.jpg" alt="Excavated slope beside a house showing the old stone foundation wall" class="w-full h-full object-cover">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-12.jpg" alt="Stone retaining wall inspected before repair" class="w-full h-full object-cover">
         </div>
-        <h3 class="mt-5 text-xl font-semibold">1. Call us</h3>
-        <p class="mt-2 text-ink/70">Reach out for a free consultation. We look at the problem and give you a free estimate in two or three days.</p>
+        <h3 class="mt-6 text-2xl font-semibold">1. Call us</h3>
+        <p class="mt-2 text-ink/70">Tell us what's happening with your property. Consultations and estimates are free.</p>
       </div>
       <div class="reveal">
         <div class="aspect-[4/3] rounded-card overflow-hidden">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-10.jpg" alt="Basement wall opened up to the block with floor protected" class="w-full h-full object-cover">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-10.jpg" alt="Basement wall opened up to find the source of moisture" class="w-full h-full object-cover">
         </div>
-        <h3 class="mt-5 text-xl font-semibold">2. Get a clear plan</h3>
-        <p class="mt-2 text-ink/70">You receive a written quote. We offer price matching with written quotes, so you know where you stand.</p>
+        <h3 class="mt-6 text-2xl font-semibold">2. We plan the fix</h3>
+        <p class="mt-2 text-ink/70">You get a written quote in two or three days. We price match written quotes.</p>
       </div>
       <div class="reveal">
         <div class="aspect-[4/3] rounded-card overflow-hidden">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-15.jpg" alt="Foundation wall coated with black waterproofing membrane" class="w-full h-full object-cover">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-15.jpg" alt="Foundation wall with black waterproof coating applied" class="w-full h-full object-cover">
         </div>
-        <h3 class="mt-5 text-xl font-semibold">3. We do the work</h3>
-        <p class="mt-2 text-ink/70">Our licensed and insured crew handles the job and stands behind it with a lifetime warranty on all services.</p>
+        <h3 class="mt-6 text-2xl font-semibold">3. We do the work</h3>
+        <p class="mt-2 text-ink/70">Our licensed, insured crew completes the job and stands behind it with a lifetime warranty.</p>
       </div>
     </div>
   </div>
@@ -144,100 +145,88 @@ tailwind.config = {
 <!-- Services tiles -->
 <section id="services" class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">More than just basement waterproofing</h2>
-      <p class="mt-4 text-ink/70">From the footing to the retaining wall, every service keeps water moving away from your property.</p>
+    <h2 class="text-4xl lg:text-5xl font-medium max-w-3xl">More than just basement waterproofing</h2>
+    <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+      <a href="#contact" class="group block">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-10.jpg" alt="Basement waterproofing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Basement waterproofing</p>
+      </a>
+      <a href="#contact" class="group block">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-7.jpg" alt="Concrete services" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Concrete services</p>
+      </a>
+      <a href="#contact" class="group block">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-3.jpg" alt="Exterior waterproofing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Exterior waterproofing</p>
+      </a>
+      <a href="#contact" class="group block">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-1.jpg" alt="Drainage solutions" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Drainage solutions</p>
+      </a>
+      <a href="#contact" class="group block">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-9.jpg" alt="Interior waterproofing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Interior waterproofing</p>
+      </a>
+      <a href="#contact" class="group block">
+        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-12.jpg" alt="Retaining wall services" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Retaining walls</p>
+      </a>
     </div>
-    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 lg:gap-5">
-      <div class="reveal">
-        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-10.jpg" alt="Basement waterproofing" class="w-full h-full object-cover"></div>
-        <p class="mt-3 text-sm font-medium">Basement waterproofing</p>
-      </div>
-      <div class="reveal">
-        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-15.jpg" alt="Exterior waterproofing" class="w-full h-full object-cover"></div>
-        <p class="mt-3 text-sm font-medium">Exterior waterproofing</p>
-      </div>
-      <div class="reveal">
-        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-9.jpg" alt="Interior waterproofing" class="w-full h-full object-cover"></div>
-        <p class="mt-3 text-sm font-medium">Interior waterproofing</p>
-      </div>
-      <div class="reveal">
-        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-11.jpg" alt="Drainage solutions and excavation" class="w-full h-full object-cover"></div>
-        <p class="mt-3 text-sm font-medium">Drainage solutions</p>
-      </div>
-      <div class="reveal">
-        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-12.jpg" alt="Retaining wall services" class="w-full h-full object-cover"></div>
-        <p class="mt-3 text-sm font-medium">Retaining walls</p>
-      </div>
-      <div class="reveal">
-        <div class="aspect-square rounded-card overflow-hidden"><img src="https://images.unsplash.com/photo-1777919393762-2be32d198c62?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete services" class="w-full h-full object-cover"></div>
-        <p class="mt-3 text-sm font-medium">Concrete services</p>
-      </div>
-      <div class="reveal col-span-2 md:col-span-1">
-        <div class="aspect-square rounded-card overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-10.jpg" alt="Crawlspace and sump pump services" class="w-full h-full object-cover object-bottom"></div>
-        <p class="mt-3 text-sm font-medium">Crawlspace and sump pumps</p>
-      </div>
-    </div>
+    <p class="mt-8 text-ink/70 max-w-3xl">We also handle crawlspace waterproofing, sump pump maintenance and inspections, and outside excavation.</p>
   </div>
 </section>
 
 <!-- Photo band -->
-<section class="px-3 sm:px-5 lg:px-6 pb-24 lg:pb-32">
-  <div class="rounded-card overflow-hidden aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]">
-    <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-11.jpg" alt="Foundation excavation beside a brick house in Atlanta" class="w-full h-full object-cover object-center">
+<section class="px-3 sm:px-5">
+  <div class="max-w-[1400px] mx-auto rounded-card overflow-hidden aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-15.jpg" alt="Freshly waterproofed foundation wall at a new build" class="w-full h-full object-cover">
   </div>
 </section>
 
 <!-- Statement -->
-<section class="pb-24 lg:pb-32">
+<section class="py-24 lg:py-36">
   <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
-    <p class="text-3xl sm:text-4xl lg:text-6xl font-light leading-[1.15] tracking-tight text-ink reveal">Local, family-owned and veteran-owned, with the same owner since 1961.</p>
+    <p class="text-3xl sm:text-4xl lg:text-6xl font-light leading-[1.15] tracking-tight">Since 1961, a local, family-owned and veteran-owned team keeping Georgia properties dry.</p>
   </div>
 </section>
 
-<!-- Marquee pills -->
+<!-- Marquee -->
 <section class="pb-24 lg:pb-32 overflow-hidden">
-  <div class="space-y-4">
+  <div class="space-y-3">
     <div class="overflow-hidden">
-      <div class="marquee-l flex w-max gap-4">
-        <div class="flex gap-4 shrink-0">
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lifetime warranty on all services</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed and insured</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A+ BBB rating</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>OSHA compliant and certified</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Price matching with written quotes</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free consultations and estimates</span>
-        </div>
-        <div class="flex gap-4 shrink-0" aria-hidden="true">
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Lifetime warranty on all services</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed and insured</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A+ BBB rating</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>OSHA compliant and certified</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Price matching with written quotes</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free consultations and estimates</span>
-        </div>
+      <div class="marquee">
+        <!-- set A -->
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Lifetime warranty on all services</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Free consultations and estimates</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Price matching with written quotes</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Licensed and insured</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>A+ BBB rated</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>OSHA compliant and certified</span>
+        <!-- set B -->
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Lifetime warranty on all services</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Free consultations and estimates</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Price matching with written quotes</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Licensed and insured</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>A+ BBB rated</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>OSHA compliant and certified</span>
       </div>
     </div>
     <div class="overflow-hidden">
-      <div class="marquee-r flex w-max gap-4">
-        <div class="flex gap-4 shrink-0">
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Basement waterproofing</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Crawlspace waterproofing</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>French drains and surface drains</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Retaining wall repair</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sump pump maintenance</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Outside excavation</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>10% off for seniors, military and first responders</span>
-        </div>
-        <div class="flex gap-4 shrink-0" aria-hidden="true">
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Basement waterproofing</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Crawlspace waterproofing</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>French drains and surface drains</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Retaining wall repair</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sump pump maintenance</span>
-          <span class="inline-flex items-center gap-2 bg-brand text-white rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Outside excavation</span>
-          <span class="inline-flex items-center gap-2 bg-brandTint text-brandDark rounded-full px-6 py-3 whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>10% off for seniors, military and first responders</span>
-        </div>
+      <div class="marquee rev">
+        <!-- set A -->
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Crawlspace waterproofing</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>10% off for seniors</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Sump pump inspections</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>10% off for military</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Outside excavation</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>10% off for first responders</span>
+        <!-- set B -->
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Crawlspace waterproofing</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>10% off for seniors</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Sump pump inspections</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>10% off for military</span>
+        <span class="inline-flex items-center gap-2 bg-brandTint text-ink px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Outside excavation</span>
+        <span class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>10% off for first responders</span>
       </div>
     </div>
   </div>
@@ -246,77 +235,72 @@ tailwind.config = {
 <!-- FAQ -->
 <section id="faq" class="pb-24 lg:pb-32">
   <div class="max-w-4xl mx-auto px-5 lg:px-8">
-    <div class="reveal">
-      <p class="text-sm font-medium tracking-[0.18em] uppercase text-brand">FAQ</p>
-      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">Questions, answered</h2>
-    </div>
+    <h2 class="text-4xl lg:text-5xl font-medium">Questions, answered</h2>
     <div class="mt-10 space-y-3">
-      <details class="group bg-paper rounded-card px-6 py-5">
-        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Do you offer free estimates?<span class="plus text-2xl leading-none text-brand shrink-0">+</span></summary>
-        <p class="mt-3 text-ink/70">Yes. We offer free consultations and estimates, and we provide a free estimate in two or three days.</p>
+      <details class="bg-paper rounded-card px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">How long has All-American Waterproofing been in business?
+          <span class="plus shrink-0 text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70">Since 1961. We are a local, family-owned and veteran-owned business, with the same owner since the start.</p>
       </details>
-      <details class="group bg-paper rounded-card px-6 py-5">
-        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Is the work warrantied?<span class="plus text-2xl leading-none text-brand shrink-0">+</span></summary>
+      <details class="bg-paper rounded-card px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Do you offer free estimates?
+          <span class="plus shrink-0 text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70">Yes. Consultations and estimates are free, and we'll provide your estimate in two or three days.</p>
+      </details>
+      <details class="bg-paper rounded-card px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Is your work warrantied?
+          <span class="plus shrink-0 text-2xl text-brand leading-none">+</span></summary>
         <p class="mt-3 text-ink/70">We stand by our work with a lifetime warranty on all services.</p>
       </details>
-      <details class="group bg-paper rounded-card px-6 py-5">
-        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Are you licensed and insured?<span class="plus text-2xl leading-none text-brand shrink-0">+</span></summary>
-        <p class="mt-3 text-ink/70">Yes. Our team is licensed and insured. We are also compliant with and certified by OSHA, and we hold an A+ BBB rating.</p>
+      <details class="bg-paper rounded-card px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Do you match other quotes?
+          <span class="plus shrink-0 text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70">Yes, we offer price matching with written quotes.</p>
       </details>
-      <details class="group bg-paper rounded-card px-6 py-5">
-        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Do you price match?<span class="plus text-2xl leading-none text-brand shrink-0">+</span></summary>
-        <p class="mt-3 text-ink/70">We know cost matters, which is why we offer price matching with written quotes.</p>
+      <details class="bg-paper rounded-card px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Are there discounts available?
+          <span class="plus shrink-0 text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70">We offer 10% off to seniors, military personnel and first responders. Mention the discount when you schedule. It can't be combined with other offers or promotions, and restrictions apply.</p>
       </details>
-      <details class="group bg-paper rounded-card px-6 py-5">
-        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Are there discounts available?<span class="plus text-2xl leading-none text-brand shrink-0">+</span></summary>
-        <p class="mt-3 text-ink/70">We offer a 10% discount to seniors, military personnel and first responders. Mention it when scheduling. Not valid with any other offers or promotions, and restrictions apply.</p>
-      </details>
-      <details class="group bg-paper rounded-card px-6 py-5">
-        <summary class="flex items-center justify-between gap-4 text-lg font-medium">What areas do you serve?<span class="plus text-2xl leading-none text-brand shrink-0">+</span></summary>
-        <p class="mt-3 text-ink/70">We serve Metro Atlanta and all of Georgia.</p>
+      <details class="bg-paper rounded-card px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-medium">Are you licensed and insured?
+          <span class="plus shrink-0 text-2xl text-brand leading-none">+</span></summary>
+        <p class="mt-3 text-ink/70">Yes. Our team is licensed and insured, compliant with and certified by OSHA, and rated A+ by the BBB.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- Project cards -->
-<section id="projects" class="bg-paper py-24 lg:py-32">
+<!-- Projects -->
+<section id="projects" class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-sm font-medium tracking-[0.18em] uppercase text-brand">Recent projects</p>
-      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">Our work around Atlanta</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-      <article class="bg-white rounded-card overflow-hidden reveal">
-        <div class="relative aspect-[4/3]">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-10.jpg" alt="Basement wall opened up for waterproofing" class="w-full h-full object-cover">
-          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium rounded-full px-3 py-1.5">Interior</span>
-        </div>
+    <p class="text-sm tracking-[0.18em] uppercase text-brand font-medium">Our recent projects</p>
+    <h2 class="mt-3 text-4xl lg:text-5xl font-medium max-w-2xl">Work from around Metro Atlanta</h2>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <a href="#contact" class="group block bg-paper rounded-card overflow-hidden">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-1.jpg" alt="Excavated foundation trench with waterproofing membrane" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold">Basement waterproofing</h3>
-          <p class="mt-2 text-ink/70">Keeping your lower level dry and usable year-round.</p>
+          <p class="text-xs tracking-[0.16em] uppercase text-brand font-medium">Waterproofing</p>
+          <h3 class="mt-2 text-2xl font-semibold">Foundation waterproofing</h3>
+          <p class="mt-2 text-ink/70">Exterior membrane and drainage around the foundation wall.</p>
         </div>
-      </article>
-      <article class="bg-white rounded-card overflow-hidden reveal">
-        <div class="relative aspect-[4/3]">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-15.jpg" alt="Foundation with exterior waterproofing coat applied" class="w-full h-full object-cover">
-          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium rounded-full px-3 py-1.5">Exterior</span>
-        </div>
+      </a>
+      <a href="#contact" class="group block bg-paper rounded-card overflow-hidden">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-11.jpg" alt="Excavation behind a house exposing a stone retaining wall" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold">Exterior waterproofing</h3>
-          <p class="mt-2 text-ink/70">A robust barrier that stops moisture before it reaches the foundation.</p>
+          <p class="text-xs tracking-[0.16em] uppercase text-brand font-medium">Retaining walls</p>
+          <h3 class="mt-2 text-2xl font-semibold">Retaining wall repair</h3>
+          <p class="mt-2 text-ink/70">Excavation and waterproofing to protect walls and the property behind them.</p>
         </div>
-      </article>
-      <article class="bg-white rounded-card overflow-hidden reveal">
-        <div class="relative aspect-[4/3]">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-12.jpg" alt="Stone retaining wall under repair" class="w-full h-full object-cover">
-          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-medium rounded-full px-3 py-1.5">Walls</span>
-        </div>
+      </a>
+      <a href="#contact" class="group block bg-paper rounded-card overflow-hidden">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-8.jpg" alt="Newly poured concrete driveway" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold">Retaining wall services</h3>
-          <p class="mt-2 text-ink/70">Building, repairing and waterproofing walls that manage water and soil.</p>
+          <p class="text-xs tracking-[0.16em] uppercase text-brand font-medium">Concrete</p>
+          <h3 class="mt-2 text-2xl font-semibold">Driveways and walkways</h3>
+          <p class="mt-2 text-ink/70">Concrete installation and repair built to stay solid and water-resistant.</p>
         </div>
-      </article>
+      </a>
     </div>
   </div>
 </section>
@@ -325,8 +309,8 @@ tailwind.config = {
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(31,90,166,0.10);color:#1f5aa6}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#9ab5d7}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(31,95,174,0.10);color:#1f5fae}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#9ab7db}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -345,8 +329,8 @@ tailwind.config = {
     .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#1f5aa6;box-shadow:0 0 0 4px rgba(31,90,166,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#1f5aa6;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#1f5fae;box-shadow:0 0 0 4px rgba(31,95,174,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#1f5fae;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -357,14 +341,14 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#1f5aa6">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your waterproofing or concrete project and we will get back to you with a free estimate.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#1f5fae">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us what's going on with your property and we'll get back to you with a free consultation.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+14043013431" class="lp-v">(404) 301-3431</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:sales@all-americanwaterproofing.com" class="lp-v">sales@all-americanwaterproofing.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Atlanta, GA</span></span></li>
-        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:12px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/photo-11.jpg') center/cover no-repeat"></div></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:12px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/photo-15.jpg') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
@@ -388,24 +372,24 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-8">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
       <div class="md:col-span-4">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/d5ea43b2c4a58f1ddb7b961c888e6554ac4fb55e/sites/all-american-waterproofing/21952/logo-0.png" alt="All-American Waterproofing" class="h-14 w-auto">
-        <p class="mt-5"><a href="tel:+14043013431" class="text-2xl font-medium text-ink hover:text-brand transition">(404) 301-3431</a></p>
-        <p class="mt-2"><a href="mailto:sales@all-americanwaterproofing.com" class="text-ink/70 hover:text-brand transition break-words text-[15px]">sales@all-americanwaterproofing.com</a></p>
-        <p class="mt-2 text-ink/70">Atlanta, GA</p>
+        <img src="https://lumea-redesigns-01.pages.dev/gh/e9abf1b6979b57feb4e37e173ba96a28ad0aa12c/sites/all-american-waterproofing/21953/logo-0.png" alt="All-American Waterproofing" class="h-12 w-auto">
+        <a href="tel:+14043013431" class="mt-5 block text-2xl font-medium hover:text-brand">(404) 301-3431</a>
+        <a href="mailto:sales@all-americanwaterproofing.com" class="mt-2 block text-ink/70 hover:text-brand break-words text-[15px]">sales@all-americanwaterproofing.com</a>
+        <p class="mt-2 text-ink/70 text-[15px]">Atlanta, GA</p>
       </div>
       <div class="md:col-span-2">
-        <p class="font-semibold mb-3">Company</p>
-        <ul class="space-y-2 text-ink/70">
-          <li><a href="#how" class="hover:text-brand transition">How it works</a></li>
-          <li><a href="#services" class="hover:text-brand transition">Services</a></li>
-          <li><a href="#projects" class="hover:text-brand transition">Projects</a></li>
-          <li><a href="#faq" class="hover:text-brand transition">Questions</a></li>
-          <li><a href="#contact" class="hover:text-brand transition">Contact</a></li>
+        <h4 class="font-semibold mb-4">Company</h4>
+        <ul class="space-y-2 text-ink/70 text-[15px]">
+          <li><a href="#how" class="hover:text-brand">How it works</a></li>
+          <li><a href="#services" class="hover:text-brand">Services</a></li>
+          <li><a href="#faq" class="hover:text-brand">Questions</a></li>
+          <li><a href="#projects" class="hover:text-brand">Projects</a></li>
+          <li><a href="#contact" class="hover:text-brand">Contact</a></li>
         </ul>
       </div>
       <div class="md:col-span-3">
-        <p class="font-semibold mb-3">Services</p>
-        <ul class="space-y-2 text-ink/70">
+        <h4 class="font-semibold mb-4">Services</h4>
+        <ul class="space-y-2 text-ink/70 text-[15px]">
           <li>Basement waterproofing</li>
           <li>Concrete services</li>
           <li>Crawlspace waterproofing</li>
@@ -416,38 +400,29 @@ tailwind.config = {
         </ul>
       </div>
       <div class="md:col-span-3">
-        <p class="font-semibold mb-3">Service area</p>
-        <ul class="space-y-2 text-ink/70">
+        <h4 class="font-semibold mb-4">Service area</h4>
+        <ul class="space-y-2 text-ink/70 text-[15px]">
           <li>Metro Atlanta</li>
           <li>All of Georgia</li>
         </ul>
       </div>
     </div>
-    <div class="mt-12 pt-6 border-t border-black/10 text-sm text-ink/55 space-y-1">
+    <div class="mt-12 pt-6 border-t border-black/10 text-sm text-ink/60 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official All-American Waterproofing website.</p>
-      <p>Some photos by Ben Koorengevel on Unsplash.</p>
+      <p>Some photos by Sergej on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  var btn = document.getElementById('menuBtn');
-  var menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
-  menu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () { menu.classList.add('hidden'); });
-  });
-  var els = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12 });
-    els.forEach(function (el) { io.observe(el); });
-  } else {
-    els.forEach(function (el) { el.classList.add('in'); });
-  }
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
