@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Softroc of Tampa | Rubber Surfacing for Pool Decks, Patios and Home Gyms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Outfit', 'system-ui', 'sans-serif'] },
+      colors: {
+        brand: '#b0291f',
+        brandDark: '#2a0c09',
+        ink: '#161312',
+        paper: '#f6f3f0',
+        stone: '#e6e1dc'
+      },
+      borderRadius: { DEFAULT: '6px' }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Outfit', system-ui, sans-serif; color: #161312; background: #fff; line-height: 1.6; font-size: 17px; }
+  h1,h2,h3 { line-height: 1.05; letter-spacing: -0.01em; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .ba-after { position: absolute; inset: 0; clip-path: inset(0 0 0 50%); }
+  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; }
+  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 6px; background: #b0291f; transform: translate(-50%,-50%); display:flex; align-items:center; justify-content:center; color:#fff; }
+  .ba-range { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor: ew-resize; margin:0; }
+  .dot::before { content:""; display:inline-block; width:6px; height:6px; border-radius:2px; background:#b0291f; margin-right:14px; vertical-align:middle; }
+</style>
+<style>html,body{overflow-x:clip}</style></head>
+<body class="antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="shrink-0"><img src="https://www.softroc.com/images/logo/ocala.svg?dpl=dpl_8uVAvHY3cLa4LmhZeFJgkXRY3RQU" alt="Softroc of Tampa" class="h-12 w-auto"></a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
+      <a href="#services" class="hover:text-brand">Surfaces</a>
+      <a href="#process" class="hover:text-brand">How it works</a>
+      <a href="#work" class="hover:text-brand">Our work</a>
+      <a href="#areas" class="hover:text-brand">Service area</a>
+      <a href="#contact" class="hover:text-brand">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:8135921375" class="inline-flex items-center gap-2 bg-brand text-white font-semibold px-4 sm:px-5 py-3 rounded hover:bg-brandDark transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="hidden sm:inline">(813) 592-1375</span><span class="sm:hidden">Call</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-stone rounded" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-stone bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-lg font-medium">
+      <a href="#services" class="py-3 border-b border-stone">Surfaces</a>
+      <a href="#process" class="py-3 border-b border-stone">How it works</a>
+      <a href="#work" class="py-3 border-b border-stone">Our work</a>
+      <a href="#areas" class="py-3 border-b border-stone">Service area</a>
+      <a href="#contact" class="py-3">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1772209415876-76ea6cbc2f0c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew troweling a new surface over a concrete floor" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/50"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7">
+      <p class="text-sm tracking-[0.2em] uppercase text-white/70 mb-6">Rubber surfacing in Tampa, FL</p>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold uppercase">Cool underfoot.<br>Grippy when wet.<br>Built to last.</h1>
+      <p class="mt-8 text-lg sm:text-xl text-white/85 max-w-xl">Softroc turns ordinary concrete into safe, low-maintenance rubber surfaces for pool decks, patios, splash pads and home gyms. Hand-troweled on site in your colors.</p>
+      <ul class="mt-8 space-y-3 text-white/95">
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Stays cooler underfoot and slip-resistant when wet</li>
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fade-resistant color, mixed all the way through each granule</li>
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Drains quickly so puddles don't linger after a storm</li>
+      </ul>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-flex justify-center items-center bg-brand hover:bg-white hover:text-brand text-white font-semibold px-8 py-4 rounded transition">Get a free estimate</a>
+        <a href="#work" class="inline-flex justify-center items-center border border-white/60 hover:bg-white hover:text-ink text-white font-semibold px-8 py-4 rounded transition">See our work</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="bg-paper text-ink rounded p-8 sm:p-10">
+        <h2 class="text-3xl font-bold">Get a free estimate</h2>
+        <p class="mt-3 text-ink/70">Talk through your space and ideas with the rubber paving team. No pressure.</p>
+        <div class="mt-8 space-y-3">
+          <a href="tel:8135921375" class="flex items-center justify-between bg-brand text-white px-6 py-4 rounded font-semibold hover:bg-brandDark transition">
+            <span>(813) 592-1375</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="mailto:info@softroc.com" class="flex items-center justify-between border border-ink/25 px-6 py-4 rounded font-semibold hover:border-brand hover:text-brand transition">
+            <span class="break-words min-w-0">info@softroc.com</span>
+            <svg class="shrink-0 ml-3" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services strip -->
+<section class="bg-ink text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap gap-x-8 gap-y-3 text-sm sm:text-base font-medium uppercase tracking-wider">
+    <span class="dot">Pool decks</span>
+    <span class="dot">Home gyms</span>
+    <span class="dot">Splash pads</span>
+    <span class="dot">Patios &amp; porches</span>
+    <span class="dot">Driveways</span>
+    <span class="dot">Sidewalks</span>
+  </div>
+</section>
+
+<!-- Surfaces (brand section) -->
+<section id="services" class="bg-brand text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-white/75 mb-5">Softroc rubber surfacing</p>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase">One surface. Every space.</h2>
+      <p class="mt-6 text-lg text-white/90">Poured rubber that keeps its color, drains fast and feels better underfoot than bare concrete.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1774031159721-aec9230f38db?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wet concrete steps being washed" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold uppercase">Pool decks</h3>
+          <p class="mt-3 text-white/75 text-[15px]">Decks stay cool and slip-resistant when splashed.</p>
+        </div>
+      </article>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/softroc-of-tampa/21943/photo-3.jpg" alt="Dumbbells on a rubber gym floor" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold uppercase">Home gyms</h3>
+          <p class="mt-3 text-white/75 text-[15px]">Shock-absorbing flooring turns a garage or spare room into a comfortable gym.</p>
+        </div>
+      </article>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1673978484202-ea21a0750148?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete slab work in progress" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold uppercase">Splash pads</h3>
+          <p class="mt-3 text-white/75 text-[15px]">Cool, slip-resistant surfacing keeps splash pads safe for kids all summer.</p>
+        </div>
+      </article>
+      <article class="bg-ink rounded overflow-hidden reveal">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete driveway in front of a garage" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold uppercase">Patios &amp; porches</h3>
+          <p class="mt-3 text-white/75 text-[15px]">Drains quickly after heavy summer storms and stays comfortable in the heat.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section id="process" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+      <div class="lg:col-span-6 reveal">
+        <p class="text-sm tracking-[0.2em] uppercase text-brand mb-5">How your project runs</p>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase">Upgrade your space in 3 steps</h2>
+      </div>
+      <div class="lg:col-span-6 lg:pt-10 reveal">
+        <p class="text-lg text-ink/75">Finding the right surface doesn't have to be hard. Here is how we take you from first call to finished space.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="border border-stone rounded p-8 reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-2xl font-bold">1</div>
+        <h3 class="mt-8 text-2xl font-bold">Book now</h3>
+        <p class="mt-3 text-ink/75">Fill out our contact form and one of our representatives will reach out to answer any questions you have.</p>
+      </div>
+      <div class="border border-stone rounded p-8 reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-2xl font-bold">2</div>
+        <h3 class="mt-8 text-2xl font-bold">Free consultation</h3>
+        <p class="mt-3 text-ink/75">Ready for an estimate? Our rubber paving team is happy to talk through your ideas.</p>
+      </div>
+      <div class="border border-stone rounded p-8 reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-2xl font-bold">3</div>
+        <h3 class="mt-8 text-2xl font-bold">Get it installed</h3>
+        <p class="mt-3 text-ink/75">Our installers mix your colors and hand-trowel your new rubber surface on site to bring your space to life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Before / After -->
+<section class="bg-ink text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-white/60 mb-5">Surface transformation</p>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase">Bare concrete, finished floor</h2>
+      <p class="mt-6 text-lg text-white/75">Drag the slider to compare a raw concrete slab with the same kind of space after a coating goes down.</p>
+    </div>
+    <div class="mt-12 ba-wrap rounded aspect-[4/3] sm:aspect-[16/9] reveal" id="ba">
+      <img src="https://images.unsplash.com/photo-1673978484328-40359db01843?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Raw concrete before finishing" class="absolute inset-0 w-full h-full object-cover">
+      <div class="ba-after" id="baAfter">
+        <img src="https://images.unsplash.com/photo-1772209415876-76ea6cbc2f0c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete floor after the coating is applied" class="w-full h-full object-cover">
+      </div>
+      <span class="absolute left-4 top-4 bg-ink/80 text-white text-xs uppercase tracking-widest px-3 py-2 rounded">Before</span>
+      <span class="absolute right-4 top-4 bg-brand text-white text-xs uppercase tracking-widest px-3 py-2 rounded">After</span>
+      <div class="ba-handle" id="baHandle"><div class="ba-knob"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></div></div>
+      <input type="range" min="0" max="100" value="50" class="ba-range" id="baRange" aria-label="Before and after slider">
+    </div>
+  </div>
+</section>
+
+<!-- DIY vs contractor -->
+<section class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-brand mb-5">Why Softroc</p>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase">Plain concrete vs Softroc rubber</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border border-stone rounded p-8 sm:p-10 reveal">
+        <h3 class="text-2xl font-bold">Traditional concrete</h3>
+        <ul class="mt-6 space-y-4 text-ink/75">
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>Gets hot in the summer sun</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>Slippery when wet</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>Hard, unforgiving surface</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-3 h-0.5 bg-ink/40 shrink-0"></span>Limited color and design options</li>
+        </ul>
+      </div>
+      <div class="bg-white border-2 border-brand rounded p-8 sm:p-10 reveal">
+        <h3 class="text-2xl font-bold text-brand">Softroc rubber surfacing</h3>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Stays cooler underfoot</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Slip-resistant, drains fast</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fade-resistant, UV-resistant color</li>
+          <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Custom colors and speckled blends</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What we build / gallery -->
+<section id="work" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-brand mb-5">Our work</p>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase">Surfaces we install</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:grid-rows-2">
+      <div class="relative rounded overflow-hidden col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[520px] reveal">
+        <img src="https://images.unsplash.com/photo-1772209415876-76ea6cbc2f0c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew applying a floor coating" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <p class="absolute left-5 bottom-5 right-5 text-white text-xl font-bold uppercase">Hand-troweled installs</p>
+      </div>
+      <div class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Driveway" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+        <p class="absolute left-4 bottom-4 right-4 text-white font-bold uppercase text-sm sm:text-base">Driveways</p>
+      </div>
+      <div class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://images.unsplash.com/photo-1774031159721-aec9230f38db?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Steps and walkways" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+        <p class="absolute left-4 bottom-4 right-4 text-white font-bold uppercase text-sm sm:text-base">Steps &amp; walkways</p>
+      </div>
+      <div class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/softroc-of-tampa/21943/photo-3.jpg" alt="Home gym rubber floor" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+        <p class="absolute left-4 bottom-4 right-4 text-white font-bold uppercase text-sm sm:text-base">Home gyms</p>
+      </div>
+      <div class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://images.unsplash.com/photo-1790156591319-00499776587b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Polished commercial floor" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+        <p class="absolute left-4 bottom-4 right-4 text-white font-bold uppercase text-sm sm:text-base">Commercial spaces</p>
+      </div>
+      <div class="relative rounded overflow-hidden col-span-2 aspect-[2/1] reveal">
+        <img src="https://images.unsplash.com/photo-1673978484202-ea21a0750148?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete pour with rebar" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+        <p class="absolute left-5 bottom-5 right-5 text-white font-bold uppercase">Slab preparation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Color / split -->
+<section class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-brand mb-5">Multiple color options</p>
+      <h2 class="text-4xl sm:text-5xl font-extrabold uppercase">Pick the colors that match your style</h2>
+      <p class="mt-6 text-lg text-ink/75">Softroc uses fade-resistant technology for a better long-term appearance on your rubber pool deck, driveway, sidewalk, splash pad and other spaces.</p>
+      <ul class="mt-8 space-y-3">
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Each rubber granule is colored all the way through</li>
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Easy to cut and inset a different-colored rubber for your design</li>
+        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Any color you like, or your own blend for a speckled look</li>
+      </ul>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="https://softroc.com/color-blend-visualizer/" class="inline-flex justify-center items-center bg-brand hover:bg-brandDark text-white font-semibold px-8 py-4 rounded transition">Pick my favorite color</a>
+        <a href="#contact" class="inline-flex justify-center items-center border border-ink/30 hover:border-brand hover:text-brand font-semibold px-8 py-4 rounded transition">Request an estimate</a>
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/3] rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1673978484328-40359db01843?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a surface installation" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service area -->
+<section id="areas" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5 reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-brand mb-5">Service area</p>
+      <h2 class="text-4xl sm:text-5xl font-extrabold uppercase">Built for Florida sun and storms</h2>
+      <p class="mt-6 text-lg text-ink/75">Softroc gives families a poured rubber surface that stays cooler underfoot, grips when wet and drains fast. UV resistance holds up to strong sun across patios, pool areas and driveways all year.</p>
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <p class="text-sm tracking-wide uppercase text-ink/60 mb-5">Areas served by Softroc in North Central Florida</p>
+      <div class="flex flex-wrap gap-3">
+        <span class="border border-stone rounded px-5 py-3 font-medium">Tampa</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Ocala</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Leesburg</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Lady Lake</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Summerfield</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">The Villages</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Wildwood</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Oxford</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Weirsdale</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Sumterville</span>
+        <span class="border border-stone rounded px-5 py-3 font-medium">Candler</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call band -->
+<section class="bg-brandDark text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <h2 class="text-4xl sm:text-5xl font-extrabold uppercase">Ready for a better surface?</h2>
+      <p class="mt-5 text-lg text-white/80 max-w-xl">Call or email and we will talk through your space, your colors and your free estimate.</p>
+    </div>
+    <div class="lg:col-span-5 flex flex-col gap-4">
+      <a href="tel:8135921375" class="inline-flex justify-center items-center bg-brand hover:bg-white hover:text-brand text-white font-semibold text-xl px-8 py-5 rounded transition">(813) 592-1375</a>
+      <a href="mailto:info@softroc.com" class="inline-flex justify-center items-center border border-white/40 hover:bg-white hover:text-ink font-semibold px-8 py-4 rounded transition break-words">info@softroc.com</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="lp-contact" style="background:#29100f;padding:clamp(80px,10vw,128px) 0">
+  <style>
+    .lp-contact{position:relative}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(176,41,31,0.10);color:#b0291f}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#db9f9a}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#b0291f;box-shadow:0 0 0 4px rgba(176,41,31,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#b0291f;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
+    @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
+  <div class="lp-in"><div class="lp-grid">
+    <div style="color:#fff"><p class="lp-kick" style="color:#db9f9a">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your space and a Softroc representative will get back to you to talk through your ideas.</p><ul class="lp-info">
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18135921375" class="lp-v lp-v-d">(813) 592-1375</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k lp-k-d">Email</span><a href="mailto:info@softroc.com" class="lp-v lp-v-d">info@softroc.com</a></span></li>
+          <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k lp-k-d">Service area</span><span class="lp-v lp-v-d">Tampa, FL</span></span></li>
+        </ul></div>
+    <div class="lp-card">
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Pool decks</option><option>Home gyms</option><option>Splash pads</option><option>Patios &amp; porches</option><option>Driveways</option><option>Sidewalks</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
+          </form>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div>
+  </div></div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
+</section>
+
+</main>
+
+<footer class="bg-ink text-white/80 pt-16 pb-10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <div class="bg-white inline-block rounded p-3"><img src="https://www.softroc.com/images/logo/ocala.svg?dpl=dpl_8uVAvHY3cLa4LmhZeFJgkXRY3RQU" alt="Softroc of Tampa" class="h-12 w-auto"></div>
+        <p class="mt-6 max-w-sm">Rubber surfacing, stone overlays and concrete maintenance for pool decks, patios, splash pads and home gyms.</p>
+      </div>
+      <div class="md:col-span-4">
+        <h3 class="text-white font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li><a href="tel:8135921375" class="hover:text-white">(813) 592-1375</a></li>
+          <li><a href="mailto:info@softroc.com" class="hover:text-white break-words">info@softroc.com</a></li>
+          <li>Tampa, FL</li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h3 class="text-white font-semibold mb-4">Explore</h3>
+        <ul class="space-y-2">
+          <li><a href="#services" class="hover:text-white">Surfaces</a></li>
+          <li><a href="#process" class="hover:text-white">How it works</a></li>
+          <li><a href="#work" class="hover:text-white">Our work</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-white/15 text-sm text-white/55 space-y-2">
+      <p>Concept redesign by LumeaPixel. This is not the official Softroc of Tampa website.</p>
+      <p>Some photos by Craftsman Concrete Floors, d c, Infinara, Ceba Solutions, web seo on Unsplash.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', function(){ mm.classList.toggle('hidden'); });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.add('hidden'); }); });
+
+  var r = document.getElementById('baRange'), after = document.getElementById('baAfter'), h = document.getElementById('baHandle');
+  function setBA(v){ after.style.clipPath = 'inset(0 0 0 ' + v + '%)'; h.style.left = v + '%'; }
+  r.addEventListener('input', function(){ setBA(r.value); });
+
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
