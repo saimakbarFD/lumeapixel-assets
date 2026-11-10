@@ -4,237 +4,284 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Zebra Parking Lot Maintenance | Line Striping & Parking Lot Services in Atlanta, GA</title>
+<title>Zebra Parking Lot Maintenance | Line Striping & Curb Painting in Atlanta, GA</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       fontFamily: { sans: ['Montserrat', 'sans-serif'] },
       colors: {
-        brand: '#920c0c',
-        brandDark: '#2a0606',
-        ink: '#161212',
-        cream: '#f6f2ec',
-        stone2: '#ece6dd'
+        brand: '#f4f2ee',
+        ink: '#121212',
+        coal: '#1c1c1c',
+        paper: '#fafaf8',
+        mist: '#efeeea',
+        stone: '#6b6a66'
       },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Montserrat', sans-serif; color: #161212; background: #fff; line-height: 1.6; font-size: 16px; }
-  h1, h2, h3 { line-height: 1.12; letter-spacing: -0.01em; }
+  body { font-family: 'Montserrat', sans-serif; color: #121212; background: #fafaf8; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile img { transition: transform .7s ease; }
-  .tile:hover img { transform: scale(1.04); }
-  .tile-shade { background: linear-gradient(to top, rgba(22,18,18,.85) 0%, rgba(22,18,18,.15) 55%, rgba(22,18,18,0) 100%); }
+  .r { border-radius: 20px; }
+  .ph { overflow: hidden; border-radius: 20px; background: #dcdad4; }
+  .ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
+  .ph:hover img { transform: scale(1.03); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 15px; transition: background .2s, color .2s; }
+  .btn-light { background: #f4f2ee; color: #121212; }
+  .btn-light:hover { background: #fff; }
+  .btn-dark { background: #121212; color: #fff; }
+  .btn-dark:hover { background: #2a2a2a; }
+  .btn-line { border: 1.5px solid #121212; color: #121212; }
+  .btn-line:hover { background: #121212; color: #fff; }
+  .label { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="antialiased">
+<body>
 
 <!-- Header -->
-<header id="top" class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
+<header class="sticky top-0 z-50 bg-ink border-b border-white/10">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/logo-0.png" alt="Zebra Parking Lot Maintenance LLC" class="h-11 sm:h-12 w-auto"></a>
-    <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-white/85">
+    <a href="#top" class="shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/zebra-parking-lot-maintenance/21948/logo-0.png" alt="Zebra Parking Lot Maintenance LLC" class="h-11 sm:h-12 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-white/80">
       <a href="#services" class="hover:text-white">Services</a>
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#work" class="hover:text-white">Our Work</a>
-      <a href="#quote" class="hover:text-white">Free Quote</a>
+      <a href="#process" class="hover:text-white">How it works</a>
+      <a href="#work" class="hover:text-white">Our work</a>
+      <a href="#why" class="hover:text-white">Why Zebra</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+16787936453" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-[#7a0a0a] text-white text-sm font-semibold px-5 py-3 rounded transition-colors">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (678) 793-6453
+      <a href="tel:+16787936453" class="btn btn-light !py-2.5 !px-4 sm:!px-5 text-sm">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="hidden sm:inline">(678) 793-6453</span><span class="sm:hidden">Call</span>
       </a>
-      <a href="tel:+16787936453" class="sm:hidden inline-flex items-center justify-center bg-brand text-white w-11 h-11 rounded" aria-label="Call (678) 793-6453">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      </a>
-      <button id="menuBtn" class="lg:hidden text-white w-11 h-11 inline-flex items-center justify-center" aria-label="Open menu" aria-expanded="false">
+      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <nav class="px-5 py-5 flex flex-col gap-4 text-white/90 font-medium">
-      <a href="#services" class="mobile-link">Services</a>
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#work" class="mobile-link">Our Work</a>
-      <a href="#quote" class="mobile-link">Free Quote</a>
-      <a href="#contact" class="mobile-link">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 pb-5">
+    <nav class="flex flex-col text-white/90 font-medium">
+      <a href="#services" class="py-3 border-b border-white/10">Services</a>
+      <a href="#process" class="py-3 border-b border-white/10">How it works</a>
+      <a href="#work" class="py-3 border-b border-white/10">Our work</a>
+      <a href="#why" class="py-3 border-b border-white/10">Why Zebra</a>
+      <a href="#contact" class="py-3">Contact</a>
     </nav>
   </div>
 </header>
 
+<main id="top">
+
 <!-- Hero -->
-<section class="relative">
-  <div class="relative min-h-[640px] lg:min-h-[760px] flex items-center">
-    <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-2.jpg" alt="Freshly striped parking lot in front of a commercial building" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-ink/70"></div>
-    <div class="relative w-full max-w-4xl mx-auto px-5 lg:px-8 pt-20 pb-40 lg:pb-48 text-center text-white">
-      <p class="text-xs sm:text-sm tracking-[0.22em] uppercase font-semibold text-white/75 mb-6">Serving Metro Atlanta since 1997</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold">High quality parking lot maintenance in Atlanta</h1>
-      <p class="mt-7 text-lg text-white/85 max-w-2xl mx-auto">Line striping, curb painting, stencils, parking blocks and more. Locally owned and owner operated, and we stand by our work.</p>
-      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#quote" class="w-full sm:w-auto bg-brand hover:bg-[#7a0a0a] text-white font-semibold px-8 py-4 rounded transition-colors">Get a free quote</a>
-        <a href="tel:+16787936453" class="w-full sm:w-auto border border-white/80 hover:bg-white hover:text-ink text-white font-semibold px-8 py-4 rounded transition-colors">Call (678) 793-6453</a>
-      </div>
-    </div>
-  </div>
-  <!-- Trust strip -->
-  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20 z-10">
-    <div class="bg-white rounded border border-stone2 shadow-sm grid grid-cols-2 lg:grid-cols-4">
-      <div class="p-6 lg:p-8 flex items-start gap-4 border-b lg:border-b-0 border-r border-stone2">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-        <div><p class="font-semibold text-sm lg:text-base">Metro Atlanta</p><p class="text-sm text-ink/60">Serving the area since 1997</p></div>
-      </div>
-      <div class="p-6 lg:p-8 flex items-start gap-4 border-b lg:border-b-0 lg:border-r border-stone2">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
-        <div><p class="font-semibold text-sm lg:text-base">Locally owned</p><p class="text-sm text-ink/60">Atlanta based business</p></div>
-      </div>
-      <div class="p-6 lg:p-8 flex items-start gap-4 border-r border-stone2">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        <div><p class="font-semibold text-sm lg:text-base">Owner operated</p><p class="text-sm text-ink/60">Work you can trust</p></div>
-      </div>
-      <div class="p-6 lg:p-8 flex items-start gap-4">
-        <svg class="shrink-0 text-brand mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-        <div><p class="font-semibold text-sm lg:text-base">Free online quote</p><p class="text-sm text-ink/60">We'll beat a competitor's quote</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
-<section id="services" class="py-24 lg:py-32">
+<section class="pt-14 lg:pt-20 pb-20 lg:pb-28">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs tracking-[0.22em] uppercase font-semibold text-brand mb-4">Services</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">What we do for Atlanta parking lots</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 grid-flow-row-dense">
-      <a href="#quote" class="tile group relative block overflow-hidden rounded aspect-[4/3] lg:col-span-5 reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-2.jpg" alt="Line striping at a theater entrance" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-6 text-white text-xl lg:text-2xl font-semibold">Line Striping</h3>
-      </a>
-      <a href="#quote" class="tile group relative block overflow-hidden rounded aspect-[4/3] lg:col-span-7 reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-1.jpg" alt="Curb painting along a commercial entrance" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-6 text-white text-xl lg:text-2xl font-semibold">Curb Painting</h3>
-      </a>
-      <a href="#quote" class="tile group relative block overflow-hidden rounded aspect-[4/3] lg:col-span-7 reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-3.jpg" alt="Accessible parking stencils on a garage deck" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-6 text-white text-xl lg:text-2xl font-semibold">Stencils</h3>
-      </a>
-      <a href="#quote" class="tile group relative block overflow-hidden rounded aspect-[4/3] lg:col-span-5 reveal">
-        <img src="https://images.unsplash.com/photo-1706922942734-55cd441ed755?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working with traffic cones on a roadway" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-6 text-white text-xl lg:text-2xl font-semibold">Parking Blocks &amp; Bollards</h3>
-      </a>
-      <a href="#quote" class="tile group relative block overflow-hidden rounded aspect-[4/3] lg:col-span-5 reveal">
-        <img src="https://images.unsplash.com/photo-1779384896076-51cbd33c36ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Compactor rolling fresh asphalt" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-6 text-white text-xl lg:text-2xl font-semibold">Speed Breakers</h3>
-      </a>
-      <a href="#quote" class="tile group relative block overflow-hidden rounded aspect-[4/3] lg:col-span-7 sm:col-span-2 reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-3.jpg" alt="Parking structure with new layout markings" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-6 text-white text-xl lg:text-2xl font-semibold">Design &amp; Maintenance</h3>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Split: about -->
-<section id="about" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-1.jpg" alt="Line striping machine in a parking lot before restriping" class="w-full h-full object-cover">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <div class="lg:col-span-8">
+        <p class="label text-stone mb-6">Atlanta, Georgia</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-medium">Parking lot striping<br>and upkeep, <b class="font-bold">done right.</b></h1>
+      </div>
+      <div class="lg:col-span-4">
+        <p class="text-lg text-stone">Line striping, curb painting, stencils, parking blocks, bollards and speed breakers for properties across Metro Atlanta. Locally owned and owner operated.</p>
       </div>
     </div>
-    <div class="lg:col-span-6 reveal">
-      <p class="text-xs tracking-[0.22em] uppercase font-semibold text-brand mb-4">About Zebra</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">We stand by our work</h2>
-      <p class="mt-7 text-lg text-ink/75">Zebra Parking Lot Maintenance is a locally owned, owner operated company serving Metro Atlanta since 1997. When you call, you talk to the people who do the work.</p>
-      <p class="mt-5 text-lg text-ink/75">From fresh line striping and curb painting to stencils, parking blocks, bollards and speed breakers, we keep your lot safe, clear and easy to navigate.</p>
-      <a href="#quote" class="inline-block mt-9 bg-brand hover:bg-[#7a0a0a] text-white font-semibold px-8 py-4 rounded transition-colors">Request a quote</a>
-    </div>
-  </div>
-</section>
 
-<!-- Reverse split -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <p class="text-xs tracking-[0.22em] uppercase font-semibold text-brand mb-4">Design &amp; Maintenance</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Layouts that work, markings that last</h2>
-      <p class="mt-7 text-lg text-ink/75">A well planned lot moves traffic smoothly and keeps drivers and pedestrians safe. We help with layout, accessible stalls, directional arrows and the upkeep that keeps it all visible.</p>
-      <p class="mt-5 text-lg text-ink/75">Whether it's a retail center, a medical campus or a parking deck, we handle the details so your property looks sharp.</p>
-      <a href="tel:+16787936453" class="inline-block mt-9 border border-ink hover:bg-ink hover:text-white font-semibold px-8 py-4 rounded transition-colors">Call (678) 793-6453</a>
-    </div>
-    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-2.jpg" alt="Newly striped lot with crisp white lines" class="w-full h-full object-cover object-right">
+    <div class="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <div class="lg:col-span-6 ph aspect-[4/3] lg:aspect-auto lg:min-h-[460px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/zebra-parking-lot-maintenance/21948/photo-3.jpg" alt="Freshly striped parking deck with accessible stalls in Atlanta">
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-5">
+        <div class="ph aspect-[4/3] lg:aspect-auto lg:flex-1">
+          <img src="https://images.unsplash.com/photo-1685692145956-d48371176012?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crisp white parking lines on dark asphalt">
+        </div>
+        <a href="#contact" class="btn btn-dark justify-center">Get a free quote</a>
+      </div>
+      <div class="lg:col-span-3 bg-mist r p-8 flex flex-col justify-between min-h-[240px]">
+        <p class="label text-stone">Our promise</p>
+        <div>
+          <p class="text-2xl font-semibold leading-snug">Upload a competitor's quote and we'll beat it.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 mt-5 font-semibold text-sm">
+            Free online quote
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Work gallery -->
-<section id="work" class="pb-24 lg:pb-32">
+<!-- Three columns -->
+<section id="services" class="pb-20 lg:pb-28">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs tracking-[0.22em] uppercase font-semibold text-brand mb-4">Our Work</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Pavement and projects</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
-      <div class="aspect-[4/3] overflow-hidden rounded lg:col-span-4 reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-2.jpg" alt="Striped lot at a theater entrance" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded lg:col-span-4 reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/photo-3.jpg" alt="Parking deck with accessible stalls" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded col-span-2 lg:col-span-4 reveal"><img src="https://images.unsplash.com/photo-1779384896076-51cbd33c36ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roller compacting fresh asphalt" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded lg:col-span-4 reveal"><img src="https://images.unsplash.com/photo-1706922685061-e346647bde61?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew applying tack coat on a road" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded lg:col-span-4 reveal"><img src="https://images.unsplash.com/photo-1595734939818-f4e0d44957df?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Double drum roller on new pavement" class="w-full h-full object-cover"></div>
-      <div class="aspect-[4/3] overflow-hidden rounded col-span-2 lg:col-span-4 reveal"><img src="https://images.unsplash.com/photo-1724648179736-fef1ae010d6b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Yellow roller on a city street" class="w-full h-full object-cover"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Cream panel -->
-<section id="quote" class="pb-24 lg:pb-32">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="bg-cream rounded px-6 sm:px-12 py-16 lg:py-20 text-center reveal">
-      <p class="text-xs tracking-[0.22em] uppercase font-semibold text-brand mb-4">Free online quote</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Got a competitor's quote? We'll beat it.</h2>
-      <p class="mt-6 text-lg text-ink/70 max-w-2xl mx-auto">Upload the quote you already have and we'll come back with a better price on the same scope of work.</p>
-      <a href="#contact" class="inline-block mt-9 bg-brand hover:bg-[#7a0a0a] text-white font-semibold px-8 py-4 rounded transition-colors">Get my free quote</a>
-    </div>
-  </div>
-</section>
-
-<!-- Final call -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 items-center">
-    <div class="lg:col-span-7 reveal">
-      <div class="aspect-[4/3] lg:aspect-[16/11] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1706712637075-f47fb47548f2?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Fresh sealcoat being applied on an open road" class="w-full h-full object-cover">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-ink/15 pt-12">
+      <div class="reveal">
+        <h3 class="label mb-4">Line Striping</h3>
+        <p class="text-stone">Clean, durable lines that make a lot easy to read and easy to use, from small lots to full parking decks.</p>
+      </div>
+      <div class="reveal">
+        <h3 class="label mb-4">Curb Painting &amp; Stencils</h3>
+        <p class="text-stone">Painted curbs, fire lanes, accessible symbols, arrows and numbering to keep traffic and parking organized.</p>
+      </div>
+      <div class="reveal">
+        <h3 class="label mb-4">Blocks, Bollards &amp; Breakers</h3>
+        <p class="text-stone">Parking blocks, bollards and speed breakers installed to protect buildings and slow traffic down.</p>
       </div>
     </div>
-    <div class="lg:col-span-5 lg:-ml-16 relative z-10 -mt-10 mx-4 lg:mx-0 lg:mt-0 reveal">
-      <div class="bg-brand text-white rounded p-8 lg:p-12">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold">Ready to refresh your lot?</h2>
-        <p class="mt-5 text-white/85">Call or email Zebra Parking Lot Maintenance for a free quote anywhere in Metro Atlanta.</p>
-        <a href="tel:+16787936453" class="mt-8 inline-block bg-white text-brand hover:bg-cream font-semibold px-7 py-4 rounded transition-colors">(678) 793-6453</a>
-        <p class="mt-5 text-sm text-white/80 break-words"><a href="mailto:zebraplm@gmail.com" class="underline underline-offset-4">zebraplm@gmail.com</a></p>
+  </div>
+</section>
+
+<!-- Mission statement -->
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
+    <p class="label text-stone mb-8">Serving Metro Atlanta since 1997</p>
+    <h2 class="text-3xl sm:text-4xl lg:text-6xl font-medium reveal">Locally owned.<br>Owner operated.<br>We stand by our work.</h2>
+  </div>
+</section>
+
+<!-- Collage -->
+<section id="work" class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5 grid-flow-row-dense">
+      <div class="ph aspect-square lg:col-span-3 lg:aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1724648179736-fef1ae010d6b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Yellow roller on fresh asphalt">
+      </div>
+      <div class="ph col-span-2 aspect-[16/10] lg:col-span-6 lg:row-span-2 lg:aspect-auto lg:min-h-[560px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/zebra-parking-lot-maintenance/21948/photo-20.jpg" alt="Striped and stenciled parking deck between office buildings">
+      </div>
+      <div class="ph aspect-square lg:col-span-3 lg:aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1784454936095-28042e9b1652?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Compactor rolling a new asphalt surface">
+      </div>
+      <div class="ph aspect-square lg:col-span-3 lg:aspect-[4/3]">
+        <img src="https://images.unsplash.com/photo-1774274951965-3828c5cea7c9?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew applying sealcoat to a paved road">
+      </div>
+      <div class="ph aspect-square lg:col-span-3 lg:aspect-[4/3]">
+        <img src="https://images.unsplash.com/photo-1772852340517-b11ec88979fc?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Paving machine laying fresh asphalt">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="process" class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl mb-14">
+      <p class="label text-stone mb-4">How it works</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium">From quote to fresh lines in six steps</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+      <div class="border-t border-ink/15 pt-6 reveal">
+        <p class="text-sm font-semibold text-stone mb-4">01</p>
+        <h3 class="text-xl font-semibold mb-2">Request a quote</h3>
+        <p class="text-stone">Send us your lot details through the online form. Have a competitor's quote? Upload it.</p>
+      </div>
+      <div class="border-t border-ink/15 pt-6 reveal">
+        <p class="text-sm font-semibold text-stone mb-4">02</p>
+        <h3 class="text-xl font-semibold mb-2">We review the property</h3>
+        <p class="text-stone">We look at your layout, existing markings and what needs repainting or replacing.</p>
+      </div>
+      <div class="border-t border-ink/15 pt-6 reveal">
+        <p class="text-sm font-semibold text-stone mb-4">03</p>
+        <h3 class="text-xl font-semibold mb-2">Plan the layout</h3>
+        <p class="text-stone">Stalls, accessible spaces, arrows, curbs and hardware are laid out to suit how the lot is used.</p>
+      </div>
+      <div class="border-t border-ink/15 pt-6 reveal">
+        <p class="text-sm font-semibold text-stone mb-4">04</p>
+        <h3 class="text-xl font-semibold mb-2">Schedule the work</h3>
+        <p class="text-stone">We agree on a time that keeps disruption to your tenants and customers low.</p>
+      </div>
+      <div class="border-t border-ink/15 pt-6 reveal">
+        <p class="text-sm font-semibold text-stone mb-4">05</p>
+        <h3 class="text-xl font-semibold mb-2">Striping and installation</h3>
+        <p class="text-stone">Our crew paints lines, curbs and stencils and installs blocks, bollards and speed breakers.</p>
+      </div>
+      <div class="border-t border-ink/15 pt-6 reveal">
+        <p class="text-sm font-semibold text-stone mb-4">06</p>
+        <h3 class="text-xl font-semibold mb-2">Final walkthrough</h3>
+        <p class="text-stone">We check the finished lot with you, because we stand by our work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service cards -->
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium">What we do</h2>
+      <a href="#contact" class="font-semibold text-sm inline-flex items-center gap-2">Ask about a service
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article>
+        <div class="ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1685692145956-d48371176012?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="White line striping on asphalt"></div>
+        <h3 class="text-lg font-semibold mt-5 mb-1">Line Striping</h3>
+        <p class="text-stone text-[15px]">Stalls, lanes and directional markings.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5]"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/zebra-parking-lot-maintenance/21948/photo-3.jpg" alt="Stenciled accessible parking symbols"></div>
+        <h3 class="text-lg font-semibold mt-5 mb-1">Curb Painting &amp; Stencils</h3>
+        <p class="text-stone text-[15px]">Accessible symbols, arrows, numbers and curbs.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1707925082019-4a182e2ba548?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Dump truck on a newly paved road"></div>
+        <h3 class="text-lg font-semibold mt-5 mb-1">Blocks, Bollards &amp; Breakers</h3>
+        <p class="text-stone text-[15px]">Parking blocks, bollards and speed breakers.</p>
+      </article>
+      <article>
+        <div class="ph aspect-[4/5]"><img src="https://images.unsplash.com/photo-1779384896076-51cbd33c36ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGFzcGhhbHQlMjBwYXZpbmd8ZW58MXwwfHx8MTc5NDIyOTUzMHww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Heavy roller compacting asphalt"></div>
+        <h3 class="text-lg font-semibold mt-5 mb-1">Design &amp; Maintenance</h3>
+        <p class="text-stone text-[15px]">Lot layout and ongoing upkeep.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Why Zebra -->
+<section id="why" class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-6 ph aspect-[4/3] lg:aspect-[5/4]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/zebra-parking-lot-maintenance/21948/photo-20.jpg" alt="Parking deck with new striping and accessible stalls">
+      </div>
+      <div class="lg:col-span-6">
+        <p class="label text-stone mb-4">Why choose Zebra</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium mb-10">A local crew that answers for the work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-9">
+          <div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><path d="M20 6 9 17l-5-5"/></svg>
+            <h3 class="font-semibold mb-1">Locally owned</h3>
+            <p class="text-stone text-[15px]">An Atlanta company serving Metro Atlanta since 1997.</p>
+          </div>
+          <div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><path d="M20 6 9 17l-5-5"/></svg>
+            <h3 class="font-semibold mb-1">Owner operated</h3>
+            <p class="text-stone text-[15px]">You deal with the people who run the business.</p>
+          </div>
+          <div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><path d="M20 6 9 17l-5-5"/></svg>
+            <h3 class="font-semibold mb-1">One crew, full scope</h3>
+            <p class="text-stone text-[15px]">Striping, curbs, stencils, blocks, bollards and speed breakers.</p>
+          </div>
+          <div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><path d="M20 6 9 17l-5-5"/></svg>
+            <h3 class="font-semibold mb-1">We beat other quotes</h3>
+            <p class="text-stone text-[15px]">Upload a competitor's quote and we'll beat it.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -243,8 +290,8 @@ tailwind.config = {
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(146,12,12,0.10);color:#920c0c}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#ce9292}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(244,242,238,0.10);color:#f4f2ee}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#f4f2ee}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -255,16 +302,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:20px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:16px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#920c0c;box-shadow:0 0 0 4px rgba(146,12,12,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#920c0c;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#f4f2ee;box-shadow:0 0 0 4px rgba(244,242,238,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:16px;background:#f4f2ee;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -275,14 +322,14 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#920c0c">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your parking lot and we'll get back to you with a free quote.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#f4f2ee">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your parking lot and upload any competing quote, and we'll get back to you with a price.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+16787936453" class="lp-v">(678) 793-6453</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:zebraplm@gmail.com" class="lp-v">zebraplm@gmail.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Atlanta, GA</span></span></li>
-        </ul></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:20px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/zebra-parking-lot-maintenance/21948/photo-20.jpg') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
@@ -299,62 +346,55 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-<!-- Footer -->
-<footer class="bg-brandDark text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-20 pb-10">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
-      <div class="lg:col-span-4">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/zebra-parking-lot-maintenance/21935/logo-0.png" alt="Zebra Parking Lot Maintenance LLC" class="h-12 w-auto">
-        <p class="mt-6 text-white/70 max-w-xs">Locally owned and owner operated. Serving Metro Atlanta since 1997.</p>
+<!-- Final call card -->
+<section class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <div class="lg:col-span-6 ph aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
+        <img src="https://images.unsplash.com/photo-1706712637075-f47fb47548f2?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8YXNwaGFsdCUyMHBhdmluZ3xlbnwxfDB8fHwxNzk0MjI5NTMwfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Fresh asphalt road under open sky">
       </div>
-      <div class="lg:col-span-2">
-        <h3 class="text-sm tracking-[0.18em] uppercase font-semibold text-white/60 mb-5">Services</h3>
-        <ul class="space-y-3 text-white/85">
-          <li>Line Striping</li>
-          <li>Curb Painting</li>
-          <li>Stencils</li>
-          <li>Parking Blocks</li>
-        </ul>
-      </div>
-      <div class="lg:col-span-3">
-        <h3 class="text-sm tracking-[0.18em] uppercase font-semibold text-white/60 mb-5">Explore</h3>
-        <ul class="space-y-3 text-white/85">
-          <li><a href="#services" class="hover:text-white">Services</a></li>
-          <li><a href="#about" class="hover:text-white">About</a></li>
-          <li><a href="#work" class="hover:text-white">Our Work</a></li>
-          <li><a href="#contact" class="hover:text-white">Contact</a></li>
-        </ul>
-      </div>
-      <div class="lg:col-span-3">
-        <h3 class="text-sm tracking-[0.18em] uppercase font-semibold text-white/60 mb-5">Contact</h3>
-        <ul class="space-y-3 text-white/85">
-          <li><a href="tel:+16787936453" class="hover:text-white">(678) 793-6453</a></li>
-          <li class="break-words"><a href="mailto:zebraplm@gmail.com" class="hover:text-white">zebraplm@gmail.com</a></li>
-          <li>Atlanta, GA</li>
-        </ul>
+      <div class="lg:col-span-6 bg-mist r p-8 sm:p-12 flex flex-col justify-center">
+        <p class="label text-stone mb-4">Ready when you are</p>
+        <h2 class="text-3xl sm:text-4xl font-medium mb-5">Got a lot that needs fresh lines?</h2>
+        <p class="text-stone mb-8">Call us or send your details. Upload a competitor's quote and we'll beat it.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:+16787936453" class="btn btn-dark justify-center">Call (678) 793-6453</a>
+          <a href="mailto:zebraplm@gmail.com" class="btn btn-line justify-center">Email us</a>
+        </div>
       </div>
     </div>
-    <div class="mt-16 pt-8 border-t border-white/15 text-sm text-white/60 space-y-2">
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 text-center">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/zebra-parking-lot-maintenance/21948/logo-0.png" alt="Zebra Parking Lot Maintenance LLC" class="h-14 w-auto mx-auto mb-8">
+    <p class="text-white/70 mb-6">Parking lot maintenance serving Metro Atlanta, Georgia.</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 font-medium">
+      <a href="tel:+16787936453" class="hover:text-white/70">(678) 793-6453</a>
+      <a href="mailto:zebraplm@gmail.com" class="hover:text-white/70 break-words">zebraplm@gmail.com</a>
+    </div>
+    <div class="mt-12 pt-8 border-t border-white/15 text-xs text-white/50 space-y-2">
       <p>Concept redesign by LumeaPixel. This is not the official Zebra Parking Lot Maintenance website.</p>
-      <p>Some photos by Tom Shamberger, Evan Porter, Collab Media and Michael Evans on Unsplash.</p>
+      <p>Some photos by Tom Shamberger, Evan Porter, Wolfgang Weiser, ALEKSEY ALYPOV and Brian J. Tromp on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => {
-    const open = menu.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', open);
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { menu.classList.add('hidden'); });
   });
-  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
-    menu.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false');
-  }));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 </script>
 </body>
 </html>

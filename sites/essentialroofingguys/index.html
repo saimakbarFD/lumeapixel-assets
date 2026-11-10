@@ -7,7 +7,7 @@
 <title>Essential Roofing Guys | Roof Repair in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -15,332 +15,338 @@ tailwind.config = {
     extend: {
       colors: {
         brand: '#f7fc01',
-        ink: '#0e0f0a',
-        coal: '#17180f',
-        paper: '#f6f5ef',
-        stone: '#e6e4d9'
+        ink: '#0d0d0b',
+        coal: '#171713',
+        stone: '#f4f3ee'
       },
       fontFamily: {
         head: ['Outfit', 'sans-serif'],
         body: ['Inter', 'sans-serif']
       },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '10px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #17180f; background: #fff; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.01em; }
+  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #171713; }
+  h1, h2, h3, h4, .font-head { font-family: 'Outfit', sans-serif; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile-grad { background: linear-gradient(to top, rgba(14,15,10,.92) 0%, rgba(14,15,10,.35) 45%, rgba(14,15,10,0) 75%); }
-  .ba-wrap { touch-action: pan-y; user-select: none; }
-  .ba-handle { cursor: ew-resize; }
+  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .ba-top { position: absolute; inset: 0; width: 50%; overflow: hidden; }
+  .ba-top img { position: absolute; top: 0; left: 0; height: 100%; max-width: none; object-fit: cover; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #f7fc01; transform: translateX(-50%); pointer-events: none; }
+  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 9999px; background: #f7fc01; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; color: #0d0d0b; }
+  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .strip-dot { width: 6px; height: 6px; border-radius: 9999px; background: #f7fc01; display: inline-block; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body>
+<body class="bg-white">
 
-<!-- HEADER -->
+<!-- Header -->
 <header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/essential-roofing-guys/21943/logo-0.png" alt="Essential Roofing Guys" class="h-10 md:h-12 w-auto"></a>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/essential-roofing-guys/21948/logo-0.png" alt="Essential Roofing Guys" class="h-10 md:h-12 w-auto">
+    </a>
     <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#process" class="hover:text-brand">How it works</a>
-      <a href="#work" class="hover:text-brand">Our work</a>
-      <a href="#about" class="hover:text-brand">About</a>
-      <a href="#contact" class="hover:text-brand">Contact</a>
+      <a href="#services" class="hover:text-brand transition">Services</a>
+      <a href="#process" class="hover:text-brand transition">How it works</a>
+      <a href="#work" class="hover:text-brand transition">Our work</a>
+      <a href="#area" class="hover:text-brand transition">Service area</a>
+      <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18137367231" class="inline-flex items-center gap-2 bg-brand text-ink font-head font-semibold text-sm md:text-base px-4 py-2.5 rounded hover:bg-white transition-colors">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="hidden sm:inline">(813) 736-7231</span><span class="sm:hidden">Call</span>
+      <a href="tel:+18137367231" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-head font-semibold px-5 h-11 rounded hover:bg-white transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (813) 736-7231
       </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Menu">
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center text-white" aria-label="Open menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 py-4 space-y-3 text-white/90">
-    <a href="#services" class="block py-1">Services</a>
-    <a href="#process" class="block py-1">How it works</a>
-    <a href="#work" class="block py-1">Our work</a>
-    <a href="#about" class="block py-1">About</a>
-    <a href="#contact" class="block py-1">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 pb-6">
+    <div class="flex flex-col py-2 text-white/90 font-medium">
+      <a href="#services" class="py-3 border-b border-white/10">Services</a>
+      <a href="#process" class="py-3 border-b border-white/10">How it works</a>
+      <a href="#work" class="py-3 border-b border-white/10">Our work</a>
+      <a href="#area" class="py-3 border-b border-white/10">Service area</a>
+      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
+    </div>
+    <a href="tel:+18137367231" class="mt-4 flex items-center justify-center bg-brand text-ink font-head font-semibold h-12 rounded">Call (813) 736-7231</a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
+<!-- Hero -->
 <section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1788616051964-19e17fe8e0b3?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers fastening new decking with drills" class="absolute inset-0 w-full h-full object-cover">
+  <img src="https://images.unsplash.com/photo-1763665814965-b5c4b3547908?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers laying new roof tiles" class="absolute inset-0 w-full h-full object-cover">
   <div class="absolute inset-0 bg-ink/80"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <p class="text-brand text-xs font-semibold tracking-[0.22em] uppercase mb-5">Roofing contractor · Tampa, FL</p>
-      <h1 class="font-head font-bold uppercase text-[2.6rem] sm:text-6xl lg:text-7xl leading-[0.98]">Roof repair<br>done right<br>in Tampa.</h1>
-      <p class="mt-7 text-lg text-white/75 max-w-xl">Leaks, missing shingles, damaged flashing or a storm emergency. Essential Roofing Guys repairs and replaces roofs for homes and businesses in Tampa, with clear communication from first call to final cleanup.</p>
-      <ul class="mt-7 space-y-3 text-white/90">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24/7 emergency roofing service</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Homes and commercial buildings</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Competitive, affordable pricing</li>
+      <p class="text-xs tracking-[0.22em] uppercase text-brand font-semibold mb-6">Roofing contractors in Tampa, FL</p>
+      <h1 class="font-head font-bold uppercase text-5xl sm:text-6xl lg:text-7xl leading-[0.98] tracking-tight">
+        Roof repair<br>done right<br>in Tampa.
+      </h1>
+      <p class="mt-7 text-lg text-white/80 max-w-xl">Leaks, damaged shingles, flashing, gutters and skylights. Essential Roofing Guys repairs roofs for Tampa homeowners and businesses, with clear communication from the first call to the last nail.</p>
+      <ul class="mt-8 space-y-3 text-white/90">
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24/7 emergency roof repair</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Homes and commercial buildings</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Competitive, straightforward pricing</li>
       </ul>
-      <div class="mt-9 flex flex-wrap gap-3">
-        <a href="#contact" class="bg-brand text-ink font-head font-semibold px-7 py-3.5 rounded hover:bg-white transition-colors">Get a free estimate</a>
-        <a href="#services" class="border border-white/40 text-white font-head font-semibold px-7 py-3.5 rounded hover:border-brand hover:text-brand transition-colors">See our services</a>
+      <div class="mt-10 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="inline-flex items-center justify-center bg-brand text-ink font-head font-semibold h-14 px-8 rounded hover:bg-white transition">Get a free estimate</a>
+        <a href="tel:+18137367231" class="inline-flex items-center justify-center border border-white/40 text-white font-head font-semibold h-14 px-8 rounded hover:border-brand hover:text-brand transition">Call (813) 736-7231</a>
       </div>
     </div>
     <div class="lg:col-span-5">
-      <div class="bg-paper text-ink rounded p-7 lg:p-9">
-        <h2 class="font-head font-bold text-2xl">Get a free estimate</h2>
-        <p class="mt-2 text-ink/70 text-base">Call or email and tell us what your roof is doing. We'll take it from there.</p>
-        <a href="tel:+18137367231" class="mt-6 flex items-center justify-between gap-3 bg-ink text-white rounded px-5 py-4 hover:bg-coal transition-colors">
-          <span class="flex items-center gap-3"><svg class="text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="font-head font-semibold text-lg">(813) 736-7231</span></span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="mailto:info@essentialroofingguys.com" class="mt-3 flex items-center justify-between gap-3 border border-ink/20 rounded px-5 py-4 hover:border-ink transition-colors">
-          <span class="flex items-center gap-3 min-w-0"><svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="font-medium text-sm sm:text-base break-words">info@essentialroofingguys.com</span></span>
-        </a>
-        <p class="mt-5 text-sm text-ink/60">Serving Tampa, FL and the surrounding area.</p>
+      <div class="bg-stone text-ink rounded p-8 lg:p-10">
+        <h2 class="font-head font-bold text-2xl sm:text-3xl leading-tight">Get a free estimate</h2>
+        <p class="mt-3 text-ink/70">Tell us what your roof is doing. We will get back to you quickly.</p>
+        <div class="mt-7 space-y-3">
+          <a href="tel:+18137367231" class="flex items-center justify-center gap-2 bg-ink text-white font-head font-semibold h-14 rounded hover:bg-coal transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7fc01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (813) 736-7231
+          </a>
+          <a href="mailto:info@essentialroofingguys.com" class="flex items-center justify-center gap-2 border border-ink/25 text-ink font-head font-semibold min-h-14 px-4 rounded hover:border-ink transition text-center break-words text-[15px] sm:text-base">
+            <svg class="shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            info@essentialroofingguys.com
+          </a>
+          <a href="#contact" class="flex items-center justify-center bg-brand text-ink font-head font-semibold h-14 rounded hover:bg-ink hover:text-brand transition">Send a request</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE STRIP -->
+<!-- Services strip -->
 <section class="bg-coal text-white border-y border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-head font-medium text-sm md:text-base uppercase tracking-wide">
-    <span>Emergency repair</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Leak detection</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Shingle repair</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Flashing</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Gutters</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-head text-sm sm:text-base font-medium uppercase tracking-wider text-white/85">
+    <span>Emergency repair</span><span class="strip-dot"></span>
+    <span>Leak repair</span><span class="strip-dot"></span>
+    <span>Shingles</span><span class="strip-dot"></span>
+    <span>Flashing</span><span class="strip-dot"></span>
+    <span>Gutters</span><span class="strip-dot"></span>
     <span>Skylights</span>
   </div>
 </section>
 
-<!-- THREE STAGES -->
+<!-- Three stages -->
 <section id="services" class="bg-brand text-ink py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-xs font-semibold tracking-[0.22em] uppercase">What we do</p>
-    <h2 class="mt-3 font-head font-bold uppercase text-4xl md:text-5xl lg:text-6xl leading-[1.02] max-w-3xl">Find it. Fix it. Protect it.</h2>
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-4">What we repair</p>
+      <h2 class="font-head font-bold uppercase text-4xl sm:text-5xl lg:text-6xl leading-[1.02] tracking-tight">Find it. Fix it. Protect it.</h2>
+    </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="reveal bg-ink text-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1597245289444-700c59bce206?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Slate roof with dormer windows and chimney" class="w-full h-full object-cover"></div>
+      <article class="bg-ink text-white rounded overflow-hidden reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew inspecting a house roof" class="w-full h-full object-cover"></div>
         <div class="p-7">
-          <h3 class="font-head font-semibold text-2xl">Find</h3>
-          <p class="mt-3 text-white/70 text-base">Leak detection and roof inspection. We track down the source of the problem before it spreads into your home.</p>
+          <h3 class="font-head font-semibold text-2xl">Leak detection</h3>
+          <p class="mt-3 text-white/70">We trace the source of the leak before we touch anything, so the repair fixes the cause and not just the stain.</p>
         </div>
       </article>
-      <article class="reveal bg-ink text-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1787672358119-25cb4c768d14?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Metal roof on a brick home" class="w-full h-full object-cover"></div>
+      <article class="bg-ink text-white rounded overflow-hidden reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1763665814538-8ba04597286c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers replacing tiles on a roof" class="w-full h-full object-cover"></div>
         <div class="p-7">
-          <h3 class="font-head font-semibold text-2xl">Fix</h3>
-          <p class="mt-3 text-white/70 text-base">Shingle, flashing and skylight repair or replacement, done with proper materials and clean workmanship.</p>
+          <h3 class="font-head font-semibold text-2xl">Repair and replacement</h3>
+          <p class="mt-3 text-white/70">Damaged or missing shingles, worn flashing, broken gutters and skylights, repaired or replaced with quality materials.</p>
         </div>
       </article>
-      <article class="reveal bg-ink text-white rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1775508567950-137d8cc57040?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Clay tile roofs and gutter on neighboring homes" class="w-full h-full object-cover"></div>
+      <article class="bg-ink text-white rounded overflow-hidden reveal">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://images.unsplash.com/photo-1768123927068-06de1b3a323e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished tile roof and gutter" class="w-full h-full object-cover"></div>
         <div class="p-7">
-          <h3 class="font-head font-semibold text-2xl">Protect</h3>
-          <p class="mt-3 text-white/70 text-base">Gutter repair and replacement plus maintenance advice so your repaired roof keeps doing its job.</p>
+          <h3 class="font-head font-semibold text-2xl">Maintenance and inspection</h3>
+          <p class="mt-3 text-white/70">Regular roof inspections catch small problems early, which saves you time and money down the line.</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- HOW IT RUNS -->
+<!-- Process -->
 <section id="process" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-xs font-semibold tracking-[0.22em] uppercase text-ink/60">How your repair runs</p>
-    <h2 class="mt-3 font-head font-bold text-4xl md:text-5xl leading-[1.05] max-w-2xl">Three steps from leak to done.</h2>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-ink/60 font-semibold mb-4">How it works</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05] tracking-tight">How your roof repair runs</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
       <div class="reveal">
         <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-xl bg-brand">1</div>
-        <h3 class="mt-6 font-head font-semibold text-2xl">You call or email</h3>
-        <p class="mt-3 text-ink/70">Tell us what's happening up there. For storm damage or a bad leak, we offer 24/7 emergency service.</p>
+        <h3 class="mt-6 font-head font-semibold text-2xl">Call or send a request</h3>
+        <p class="mt-3 text-ink/70">Tell us what is happening up there. Emergencies get priority, any hour of the day.</p>
       </div>
       <div class="reveal">
         <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-xl bg-brand">2</div>
-        <h3 class="mt-6 font-head font-semibold text-2xl">We find the source</h3>
-        <p class="mt-3 text-ink/70">We inspect the roof, locate the problem and give you a clear, competitive price before any work starts.</p>
+        <h3 class="mt-6 font-head font-semibold text-2xl">We find the problem</h3>
+        <p class="mt-3 text-ink/70">Our team identifies the source, explains what needs doing and gives you a clear price.</p>
       </div>
       <div class="reveal">
         <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-head font-bold text-xl bg-brand">3</div>
-        <h3 class="mt-6 font-head font-semibold text-2xl">We repair it right</h3>
-        <p class="mt-3 text-ink/70">Our crew repairs it safely with quality materials, and we stay in touch until you're completely satisfied.</p>
+        <h3 class="mt-6 font-head font-semibold text-2xl">We repair it properly</h3>
+        <p class="mt-3 text-ink/70">The work is done safely and efficiently, and we stay in touch until you are completely satisfied.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BEFORE / AFTER -->
+<!-- Side by side -->
 <section class="bg-ink text-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand">Roofs we see</p>
-    <h2 class="mt-3 font-head font-bold text-4xl md:text-5xl leading-[1.05] max-w-2xl">Worn on one side. Sound on the other.</h2>
-    <p class="mt-5 text-white/70 max-w-2xl">Drag the handle to compare an aged, weathered roof with a clean, well-kept one. Regular inspection is how a roof gets from the first to the second.</p>
-    <div class="mt-12 ba-wrap relative max-w-5xl mx-auto aspect-[16/10] rounded overflow-hidden" id="ba">
-      <img src="https://images.unsplash.com/photo-1775508199661-718c1d16da5a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Clean, well-kept tile roof" class="absolute inset-0 w-full h-full object-cover">
-      <div id="baTop" class="absolute inset-0" style="clip-path: inset(0 50% 0 0);">
-        <img src="https://images.unsplash.com/photo-1597245289444-700c59bce206?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Weathered slate roof" class="absolute inset-0 w-full h-full object-cover">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-brand font-semibold mb-4">From worn to finished</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05] tracking-tight">Roof work, start to finish</h2>
+      <p class="mt-5 text-white/70">Drag the slider to compare a roof mid-job with a finished one.</p>
+    </div>
+    <div class="mt-12 ba-wrap rounded aspect-[4/3] md:aspect-[16/8] reveal" id="ba">
+      <img src="https://images.unsplash.com/photo-1763665814538-8ba04597286c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof under repair" class="absolute inset-0 w-full h-full object-cover">
+      <div class="ba-top" id="baTop">
+        <img src="https://images.unsplash.com/photo-1727777266423-6a33048e4894?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Weathered wood shingle roof" id="baImg">
       </div>
-      <span class="absolute left-4 top-4 bg-ink/85 text-white text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded">Weathered</span>
-      <span class="absolute right-4 top-4 bg-brand text-ink text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded">Well kept</span>
-      <div id="baLine" class="absolute top-0 bottom-0 w-0.5 bg-brand" style="left:50%">
-        <div class="ba-handle absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-brand text-ink flex items-center justify-center">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg>
-        </div>
-      </div>
-      <input id="baRange" type="range" min="0" max="100" value="50" aria-label="Compare roofs" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize">
+      <div class="ba-handle" id="baHandle"><div class="ba-knob"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></div></div>
+      <input type="range" min="0" max="100" value="50" class="ba-range" id="baRange" aria-label="Compare photos">
+      <span class="absolute left-4 bottom-4 bg-ink/85 text-white text-xs font-semibold tracking-wider uppercase px-3 py-2 rounded">Worn roof</span>
+      <span class="absolute right-4 bottom-4 bg-brand text-ink text-xs font-semibold tracking-wider uppercase px-3 py-2 rounded">New tiles going on</span>
     </div>
   </div>
 </section>
 
-<!-- DIY VS CONTRACTOR -->
-<section class="bg-paper py-24 lg:py-32">
+<!-- DIY vs contractor -->
+<section class="bg-stone py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-xs font-semibold tracking-[0.22em] uppercase text-ink/60">Why hire a pro</p>
-    <h2 class="mt-3 font-head font-bold text-4xl md:text-5xl leading-[1.05] max-w-2xl">Doing it yourself vs. Essential Roofing Guys.</h2>
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-ink/60 font-semibold mb-4">Why hire a pro</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05] tracking-tight">Doing it yourself vs. one roofing contractor</h2>
+    </div>
     <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="reveal bg-white border border-stone rounded p-8 lg:p-10">
-        <h3 class="font-head font-semibold text-2xl">Fixing it yourself</h3>
-        <ul class="mt-6 space-y-4 text-ink/70">
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-ink/40 shrink-0"></span>Working at height without proper safety gear</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-ink/40 shrink-0"></span>Guessing where the leak actually starts</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-ink/40 shrink-0"></span>Weekends lost to a slow, unfamiliar job</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-ink/40 shrink-0"></span>A patch that may not last</li>
+      <div class="bg-white rounded p-8 lg:p-10 border border-ink/10 reveal">
+        <h3 class="font-head font-semibold text-2xl">Repairing it yourself</h3>
+        <ul class="mt-6 space-y-4 text-ink/75">
+          <li class="flex gap-3"><span class="mt-1 shrink-0 w-5 text-ink/40 font-bold">&ndash;</span>Climbing a roof without safety training or equipment</li>
+          <li class="flex gap-3"><span class="mt-1 shrink-0 w-5 text-ink/40 font-bold">&ndash;</span>Guessing where the leak really starts</li>
+          <li class="flex gap-3"><span class="mt-1 shrink-0 w-5 text-ink/40 font-bold">&ndash;</span>A slow job without the right experience</li>
+          <li class="flex gap-3"><span class="mt-1 shrink-0 w-5 text-ink/40 font-bold">&ndash;</span>Repairs that may not hold for years</li>
         </ul>
       </div>
-      <div class="reveal bg-white border-2 border-brand rounded p-8 lg:p-10 ring-1 ring-ink">
-        <h3 class="font-head font-semibold text-2xl">One roofing contractor</h3>
-        <ul class="mt-6 space-y-4">
-          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Trained crew with safety equipment</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Experienced eyes that spot the real cause</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quick, efficient repair that saves you time</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quality materials and techniques built to last</li>
+      <div class="bg-white rounded p-8 lg:p-10 border-2 border-brand ring-1 ring-ink reveal">
+        <h3 class="font-head font-semibold text-2xl">Essential Roofing Guys</h3>
+        <ul class="mt-6 space-y-4 text-ink/85">
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d0d0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Safety equipment and training on every job</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d0d0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>The source of the problem found quickly</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d0d0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quality materials and proper technique</li>
+          <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d0d0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Time saved, with competitive pricing</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT WE WORK ON: BENTO -->
+<!-- Bento -->
 <section id="work" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-xs font-semibold tracking-[0.22em] uppercase text-ink/60">Roofs we work on</p>
-    <h2 class="mt-3 font-head font-bold text-4xl md:text-5xl leading-[1.05] max-w-2xl">Every roof type, every kind of repair.</h2>
-    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:grid-rows-2">
-      <div class="relative col-span-2 lg:col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[520px] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1789683037479-44602dbee028?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two-story home with a standing seam metal roof" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 tile-grad"></div>
-        <div class="absolute bottom-0 p-6 text-white"><h3 class="font-head font-semibold text-2xl">Metal roofing</h3><p class="text-white/75 text-sm mt-1">Repair and replacement</p></div>
+    <div class="max-w-2xl reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-ink/60 font-semibold mb-4">Our work</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05] tracking-tight">Roofs we repair</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:grid-rows-2">
+      <div class="relative col-span-2 lg:row-span-2 rounded overflow-hidden aspect-[4/3] lg:aspect-auto lg:min-h-[520px] reveal">
+        <img src="https://images.unsplash.com/photo-1625512208347-8b6e3423b174?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8cm9vZmluZyUyMGNvbnRyYWN0b3IlMjBob3VzZSUyMHJvb2Z8ZW58MXwwfHx8MTc5NDIyOTQ2NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofers working on a roof" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent"></div>
+        <h3 class="absolute left-5 bottom-5 right-5 text-white font-head font-semibold text-xl sm:text-2xl">Full roof repair</h3>
       </div>
-      <div class="relative aspect-square rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1715596636360-c47539cbfbbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjN8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Building under construction with roof materials" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 tile-grad"></div>
-        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">New builds</h3></div>
+      <div class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://images.unsplash.com/photo-1597245289444-700c59bce206?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Slate roof with dormer windows" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
+        <h3 class="absolute left-4 bottom-4 right-4 text-white font-head font-semibold text-lg">Shingle repair</h3>
       </div>
-      <div class="relative aspect-square rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a roof edge" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 tile-grad"></div>
-        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Emergency repair</h3></div>
+      <div class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://images.unsplash.com/photo-1787504543471-c95423873995?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof with dormer skylight windows" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
+        <h3 class="absolute left-4 bottom-4 right-4 text-white font-head font-semibold text-lg">Skylights</h3>
       </div>
-      <div class="relative aspect-square rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1762363146144-ed6c31d722f1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cedar shingle gable with metal trim" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 tile-grad"></div>
-        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Shingle repair</h3></div>
+      <div class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://images.unsplash.com/photo-1718411774135-c7168b3ca794?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roof edge and flashing detail" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
+        <h3 class="absolute left-4 bottom-4 right-4 text-white font-head font-semibold text-lg">Flashing</h3>
       </div>
-      <div class="relative aspect-square rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1778098684671-f922c50d0a24?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker on a residential roof" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 tile-grad"></div>
-        <div class="absolute bottom-0 p-4 text-white"><h3 class="font-head font-semibold text-lg">Leak repair</h3></div>
+      <div class="relative rounded overflow-hidden aspect-square reveal">
+        <img src="https://images.unsplash.com/photo-1768123927068-06de1b3a323e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Terracotta tile roof with gutter" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
+        <h3 class="absolute left-4 bottom-4 right-4 text-white font-head font-semibold text-lg">Gutters</h3>
       </div>
-      <div class="relative col-span-2 aspect-[2/1] lg:aspect-auto lg:min-h-[250px] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1715207422537-2549c75846b7?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTd8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Gable roofline and trim on a siding home" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 tile-grad"></div>
-        <div class="absolute bottom-0 p-5 text-white"><h3 class="font-head font-semibold text-xl">Flashing, trim and gutters</h3></div>
+      <div class="relative col-span-2 rounded overflow-hidden aspect-[2/1] lg:aspect-auto reveal">
+        <img src="https://images.unsplash.com/photo-1789683037479-44602dbee028?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home with a metal roof" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
+        <h3 class="absolute left-5 bottom-5 right-5 text-white font-head font-semibold text-xl">Homes and commercial roofs</h3>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OWNER-LED / ABOUT -->
-<section id="about" class="bg-paper py-24 lg:py-32">
+<!-- Split -->
+<section class="bg-stone py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-ink/60">About Essential Roofing Guys</p>
-      <h2 class="mt-3 font-head font-bold text-4xl md:text-5xl leading-[1.05]">A roofing company you can trust.</h2>
-      <p class="mt-6 text-ink/75">Essential Roofing Guys has built a reputation for high-quality roofing services for homeowners and businesses in Tampa and the surrounding areas. Our team has years of experience in roof repair, so whatever your roof is doing, we've handled it before.</p>
-      <p class="mt-4 text-ink/75">We work closely with you through the whole repair, and we keep our pricing competitive because we know repairs aren't cheap.</p>
+    <div class="lg:col-span-6 reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-ink/60 font-semibold mb-4">Why Essential Roofing Guys</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05] tracking-tight">A roofing team you can trust in Tampa</h2>
+      <p class="mt-6 text-ink/75">Choosing a roofer comes down to experience, customer service and fair pricing. Our team has years of experience in roof repair, and we work closely with you through the whole process so your needs are met.</p>
       <ul class="mt-7 space-y-3">
-        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Experienced roof repair team</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Exceptional customer service from start to finish</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Affordable, competitive pricing</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d0d0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Experienced repair team</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d0d0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Close communication on every job</li>
+        <li class="flex gap-3"><svg class="mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d0d0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Affordable roof repair pricing</li>
       </ul>
-      <div class="mt-9 flex flex-wrap gap-3">
-        <a href="#contact" class="bg-ink text-white font-head font-semibold px-7 py-3.5 rounded hover:bg-coal transition-colors">Request an estimate</a>
-        <a href="tel:+18137367231" class="border border-ink text-ink font-head font-semibold px-7 py-3.5 rounded hover:bg-brand transition-colors">(813) 736-7231</a>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="inline-flex items-center justify-center bg-ink text-white font-head font-semibold h-14 px-8 rounded hover:bg-brand hover:text-ink transition">Request an estimate</a>
+        <a href="tel:+18137367231" class="inline-flex items-center justify-center border border-ink/30 font-head font-semibold h-14 px-8 rounded hover:border-ink transition">Call (813) 736-7231</a>
       </div>
     </div>
-    <div class="lg:col-span-6">
-      <div class="aspect-[4/3] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1778098684671-f922c50d0a24?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Roofer repairing a residential roof" class="w-full h-full object-cover">
+    <div class="lg:col-span-6 reveal">
+      <div class="aspect-[4/5] rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1778098683484-697beaf16ac0?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fHJvb2ZpbmclMjBjb250cmFjdG9yJTIwaG91c2UlMjByb29mfGVufDF8MHx8fDE3OTQyMjk0NjV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two people working on a house roof" class="w-full h-full object-cover">
       </div>
     </div>
   </div>
 </section>
 
-<!-- MAINTENANCE -->
+<!-- Maintenance tips -->
 <section class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <p class="text-xs font-semibold tracking-[0.22em] uppercase text-ink/60">After the repair</p>
-    <h2 class="mt-3 font-head font-bold text-4xl md:text-5xl leading-[1.05] max-w-2xl">Keep your roof in shape.</h2>
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="reveal border-t-2 border-ink pt-5"><h3 class="font-head font-semibold text-xl">Clean your gutters</h3><p class="mt-2 text-ink/70 text-base">Clear leaves and twigs regularly so water drains away from the home.</p></div>
-      <div class="reveal border-t-2 border-ink pt-5"><h3 class="font-head font-semibold text-xl">Trim overhanging trees</h3><p class="mt-2 text-ink/70 text-base">Branches over the roof can scrape and damage it.</p></div>
-      <div class="reveal border-t-2 border-ink pt-5"><h3 class="font-head font-semibold text-xl">Look for damage</h3><p class="mt-2 text-ink/70 text-base">Missing or damaged shingles are easier and cheaper to fix early.</p></div>
-      <div class="reveal border-t-2 border-ink pt-5"><h3 class="font-head font-semibold text-xl">Book inspections</h3><p class="mt-2 text-ink/70 text-base">Regular professional checks catch small issues before they grow.</p></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5 reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-ink/60 font-semibold mb-4">After the repair</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05] tracking-tight">Keeping your Tampa roof in shape</h2>
+    </div>
+    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
+      <div class="reveal border-t-2 border-ink pt-5"><h3 class="font-head font-semibold text-xl">Keep gutters clean</h3><p class="mt-2 text-ink/70">Clear leaves and twigs regularly so water drains away from the house.</p></div>
+      <div class="reveal border-t-2 border-ink pt-5"><h3 class="font-head font-semibold text-xl">Trim overhanging trees</h3><p class="mt-2 text-ink/70">Branches over the roof can damage it. Cut them back.</p></div>
+      <div class="reveal border-t-2 border-ink pt-5"><h3 class="font-head font-semibold text-xl">Inspect regularly</h3><p class="mt-2 text-ink/70">Look for missing or damaged shingles and deal with them early.</p></div>
+      <div class="reveal border-t-2 border-ink pt-5"><h3 class="font-head font-semibold text-xl">Schedule inspections</h3><p class="mt-2 text-ink/70">A professional inspection catches issues before they get costly.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE AREA -->
-<section class="bg-coal text-white py-20 lg:py-24">
+<!-- Service area -->
+<section id="area" class="bg-coal text-white py-24 lg:py-28">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-5">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand">Service area</p>
-      <h2 class="mt-3 font-head font-bold text-3xl md:text-4xl leading-tight">Roofing across Tampa, FL.</h2>
-      <p class="mt-4 text-white/70">Homes and businesses in Tampa and the surrounding areas. Not sure if we cover your street? Give us a call.</p>
+    <div class="lg:col-span-5 reveal">
+      <p class="text-xs tracking-[0.22em] uppercase text-brand font-semibold mb-4">Service area</p>
+      <h2 class="font-head font-bold text-4xl sm:text-5xl leading-[1.05] tracking-tight">Serving Tampa, FL</h2>
+      <p class="mt-5 text-white/70">Roof repair for homeowners and businesses in Tampa and the surrounding area.</p>
     </div>
-    <div class="lg:col-span-7 flex flex-wrap gap-3">
-      <span class="border border-white/25 rounded px-5 py-2.5 font-head font-medium">Tampa</span>
-      <span class="border border-white/25 rounded px-5 py-2.5 font-head font-medium">Surrounding areas</span>
-      <span class="border border-white/25 rounded px-5 py-2.5 font-head font-medium">Residential</span>
-      <span class="border border-white/25 rounded px-5 py-2.5 font-head font-medium">Commercial</span>
-    </div>
-  </div>
-</section>
-
-<!-- CALL BAND -->
-<section class="bg-brand text-ink py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-    <div class="lg:col-span-7">
-      <h2 class="font-head font-bold uppercase text-4xl md:text-5xl leading-[1.02]">Roof leaking? Call now.</h2>
-      <p class="mt-4 text-ink/80 max-w-xl">Emergency roofing service is available 24/7 in Tampa.</p>
-    </div>
-    <div class="lg:col-span-5 flex flex-col gap-3">
-      <a href="tel:+18137367231" class="bg-ink text-white font-head font-semibold text-xl px-7 py-4 rounded text-center hover:bg-coal transition-colors">(813) 736-7231</a>
-      <a href="mailto:info@essentialroofingguys.com" class="border-2 border-ink text-ink font-head font-semibold px-7 py-3.5 rounded text-center hover:bg-ink hover:text-white transition-colors break-words">info@essentialroofingguys.com</a>
+    <div class="lg:col-span-7 flex flex-wrap gap-3 reveal">
+      <span class="border border-white/25 rounded px-5 py-3 font-head font-medium">Tampa, FL</span>
+      <span class="border border-white/25 rounded px-5 py-3 font-head font-medium">Residential roofs</span>
+      <span class="border border-white/25 rounded px-5 py-3 font-head font-medium">Commercial roofs</span>
+      <span class="border border-brand text-brand rounded px-5 py-3 font-head font-medium">24/7 emergency service</span>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- Contact placeholder -->
 <section id="contact" class="lp-contact" style="background:#23230a;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
@@ -356,16 +362,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:10px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
     .lp-contact .lp-input:focus{outline:none;border-color:#f7fc01;box-shadow:0 0 0 4px rgba(247,252,1,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#f7fc01;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:10px;background:#f7fc01;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -376,7 +382,7 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div style="color:#fff"><p class="lp-kick" style="color:#f7fc01">Contact</p><h2 class="lp-h" style="color:#fff">Request a free roofing estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your roof and we'll get back to you with a clear price.</p><ul class="lp-info">
+    <div style="color:#fff"><p class="lp-kick" style="color:#f7fc01">Contact</p><h2 class="lp-h" style="color:#fff">Request a free roof estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your roof and we will get back to you with a clear, competitive quote.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18137367231" class="lp-v lp-v-d">(813) 736-7231</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -390,7 +396,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Emergency Roof Repair</option><option>Leak Detection and Repair</option><option>Shingle Repair and Replacement</option><option>Flashing Repair and Replacement</option><option>Gutter Repair and Replacement</option><option>Skylight Repair and Replacement</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Emergency roof repair</option><option>Leak detection and repair</option><option>Shingle repair and replacement</option><option>Flashing repair and replacement</option><option>Gutter repair and replacement</option><option>Skylight repair and replacement</option><option>Roof inspection</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -400,56 +406,76 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
+<!-- Call band -->
+<section class="bg-ink text-white py-20 lg:py-24 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 text-center">
+    <h2 class="font-head font-bold uppercase text-4xl sm:text-5xl lg:text-6xl leading-[1.02] tracking-tight">Roof problem? Call us.</h2>
+    <p class="mt-5 text-white/70 max-w-xl mx-auto">Emergency roof repair is available 24/7 in Tampa.</p>
+    <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:+18137367231" class="inline-flex items-center justify-center bg-brand text-ink font-head font-semibold h-14 px-9 rounded hover:bg-white transition">(813) 736-7231</a>
+      <a href="mailto:info@essentialroofingguys.com" class="inline-flex items-center justify-center border border-white/40 font-head font-semibold min-h-14 px-6 rounded hover:border-brand hover:text-brand transition break-words text-[15px] sm:text-base">info@essentialroofingguys.com</a>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<!-- FOOTER -->
-<footer class="bg-ink text-white/70 pt-16 pb-10">
+<!-- Footer -->
+<footer class="bg-black text-white/70 pt-16 pb-10">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-10">
     <div class="md:col-span-5">
-      <img src="https://lumea-redesigns-01.pages.dev/gh/29c4e8bc06822aed7c142a8aac51320c6a7fe9cf/sites/essential-roofing-guys/21943/logo-0.png" alt="Essential Roofing Guys" class="h-11 w-auto">
-      <p class="mt-5 max-w-sm text-base">Roof repair and replacement for homes and businesses in Tampa, FL.</p>
+      <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/essential-roofing-guys/21948/logo-0.png" alt="Essential Roofing Guys" class="h-12 w-auto">
+      <p class="mt-5 max-w-sm">Roof repair for Tampa homeowners and businesses.</p>
     </div>
     <div class="md:col-span-3">
-      <h4 class="font-head font-semibold text-white text-lg">Explore</h4>
-      <ul class="mt-4 space-y-2 text-base">
+      <h4 class="font-head font-semibold text-white mb-4">Explore</h4>
+      <ul class="space-y-2">
         <li><a href="#services" class="hover:text-brand">Services</a></li>
         <li><a href="#process" class="hover:text-brand">How it works</a></li>
         <li><a href="#work" class="hover:text-brand">Our work</a></li>
-        <li><a href="#about" class="hover:text-brand">About</a></li>
         <li><a href="#contact" class="hover:text-brand">Contact</a></li>
       </ul>
     </div>
     <div class="md:col-span-4">
-      <h4 class="font-head font-semibold text-white text-lg">Contact</h4>
-      <ul class="mt-4 space-y-2 text-base">
+      <h4 class="font-head font-semibold text-white mb-4">Contact</h4>
+      <ul class="space-y-2">
         <li><a href="tel:+18137367231" class="hover:text-brand">(813) 736-7231</a></li>
-        <li><a href="mailto:info@essentialroofingguys.com" class="hover:text-brand break-words">info@essentialroofingguys.com</a></li>
+        <li><a href="mailto:info@essentialroofingguys.com" class="hover:text-brand break-words text-[15px]">info@essentialroofingguys.com</a></li>
         <li>Tampa, FL</li>
       </ul>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 mt-12 pt-6 border-t border-white/10 text-sm space-y-1.5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 mt-12 pt-6 border-t border-white/10 text-sm space-y-2">
     <p>Concept redesign by LumeaPixel. This is not the official Essential Roofing Guys website.</p>
-    <p>Some photos by LXS Photography, Mr Xerty, Aleksi Partanen, Divaris Shirichena, Christian Miranda, Trương Tuyết Ly, Hedwin Hu, Roger Starnes Sr and Compagnons on Unsplash.</p>
+    <p>Some photos by Robert Katzki, Allen Y, Mr Xerty, Sergej *****, Christian Harb, Norbert Buduczki, Christian Miranda, Roger Starnes Sr and Dániel Ács-Kurucz on Unsplash.</p>
   </div>
 </footer>
 
 <script>
-  // mobile menu
-  var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
-  mb.addEventListener('click', function(){ mm.classList.toggle('hidden'); });
-  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.add('hidden'); }); });
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-  // reveal on scroll
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // before/after slider
-  var r = document.getElementById('baRange'), top = document.getElementById('baTop'), line = document.getElementById('baLine');
-  function setBA(v){ top.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)'; line.style.left = v + '%'; }
-  r.addEventListener('input', function(){ setBA(r.value); });
+  // Before / after slider
+  const ba = document.getElementById('ba');
+  const baTop = document.getElementById('baTop');
+  const baImg = document.getElementById('baImg');
+  const baHandle = document.getElementById('baHandle');
+  const baRange = document.getElementById('baRange');
+  function sizeBa() { baImg.style.width = ba.offsetWidth + 'px'; }
+  function setBa(v) { baTop.style.width = v + '%'; baHandle.style.left = v + '%'; }
+  baRange.addEventListener('input', e => setBa(e.target.value));
+  window.addEventListener('resize', sizeBa);
+  window.addEventListener('load', sizeBa);
+  sizeBa(); setBa(50);
 </script>
 </body>
 </html>

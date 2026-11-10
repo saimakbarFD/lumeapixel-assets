@@ -4,245 +4,317 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Florida Masonry Construction Company | Tilt-Up Concrete Construction in Tampa, FL</title>
+<title>Florida Masonry Construction Company | Tilt Wall Concrete Contractor in Tampa, FL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#f26a21',
-        ink: '#0b1226',
-        navy: '#14213d',
-        paper: '#f6f4f1',
-        stone2: '#e7e3dd'
+        brand: '#ff690c',
+        ink: '#000929',
+        paper: '#f6f5f2'
       },
-      fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { 'site': '14px' }
+      borderRadius: { xl2: '24px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1d2433; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: #000929; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
-  .svc:hover .arr { transform: translate(3px,-3px); }
-  .arr { transition: transform .25s ease; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  @keyframes slideL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes slideR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .marquee-track { display: flex; width: max-content; gap: 12px; }
+  .marquee-l { animation: slideL 45s linear infinite; }
+  .marquee-r { animation: slideR 50s linear infinite; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .25s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-l, .marquee-r { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="bg-white antialiased">
+<body class="bg-white text-ink font-sans text-[16px] leading-[1.6]">
 
-<!-- Top bar -->
-<div class="bg-brand text-white text-sm">
-  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
-    <span class="font-medium">Serving Tampa and the Greater Tampa Bay area</span>
-    <a href="mailto:ryan@fmcctampa.com" class="font-medium hover:underline break-words">ryan@fmcctampa.com</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-ink text-white border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/logo-0.png" alt="Florida Masonry Construction Co." class="h-12 w-auto"></a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-white/85">
-      <a href="#difference" class="hover:text-brand transition">About</a>
-      <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#projects" class="hover:text-brand transition">Projects</a>
-      <a href="#contact" class="hover:text-brand transition">Contact</a>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white/95 border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between gap-4">
+    <a href="#top" class="leading-none shrink-0">
+      <span class="block text-[17px] sm:text-[19px] font-bold tracking-tight text-ink">Florida Masonry</span>
+      <span class="block text-[10px] sm:text-[11px] font-semibold tracking-[0.18em] uppercase text-brand mt-1">Construction Company</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
+      <a href="#process" class="hover:text-brand transition-colors">Process</a>
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#faq" class="hover:text-brand transition-colors">FAQ</a>
+      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
     </nav>
-    <div class="flex items-center gap-4">
-      <a href="tel:8136264518" class="hidden md:block text-right leading-tight">
-        <span class="block text-[11px] uppercase tracking-widest text-white/60">Need help? Call us today</span>
-        <span class="block font-heading font-semibold text-lg">(813) 626-4518</span>
+    <div class="flex items-center gap-3">
+      <a href="tel:8136264518" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-11 rounded-[24px] hover:bg-ink transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (813) 626-4518
       </a>
-      <a href="#contact" class="hidden sm:inline-flex bg-brand hover:bg-orange-600 text-white font-semibold px-5 py-3 rounded-site text-[15px] transition">Get a Quote</a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-white/20 rounded-site" aria-label="Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button id="menuBtn" aria-label="Open menu" class="lg:hidden w-11 h-11 rounded-[24px] border border-black/10 flex items-center justify-center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 py-5 space-y-4 text-white/90">
-    <a href="#difference" class="block">About</a>
-    <a href="#services" class="block">Services</a>
-    <a href="#projects" class="block">Projects</a>
-    <a href="#contact" class="block">Contact</a>
-    <a href="tel:8136264518" class="block bg-brand text-white font-semibold text-center py-3 rounded-site">Call (813) 626-4518</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-[16px] font-medium">
+      <a href="#process" class="py-3 border-b border-black/5">Process</a>
+      <a href="#services" class="py-3 border-b border-black/5">Services</a>
+      <a href="#faq" class="py-3 border-b border-black/5">FAQ</a>
+      <a href="#projects" class="py-3 border-b border-black/5">Projects</a>
+      <a href="#contact" class="py-3 border-b border-black/5">Contact</a>
+      <a href="tel:8136264518" class="mt-3 inline-flex items-center justify-center bg-brand text-white font-semibold h-12 rounded-[24px]">Call (813) 626-4518</a>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- Hero -->
-<section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-7.jpg" alt="Tilt-up concrete wall panel lifted by crane on a Tampa commercial site" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-ink/70"></div>
-  <div class="relative max-w-7xl mx-auto px-5 py-28 md:py-40 lg:py-48">
-    <div class="max-w-3xl">
-      <p class="label text-brand mb-5">Tilt-up concrete construction · Tampa, FL</p>
-      <h1 class="font-heading font-semibold text-4xl sm:text-5xl lg:text-6xl">Commercial tilt-wall concrete, built in Tampa since 1965.</h1>
-      <p class="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">Foundations and tilt-up wall construction for commercial projects, delivered on time and within budget by a family-owned crew.</p>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-brand hover:bg-orange-600 text-white font-semibold px-7 py-4 rounded-site transition">Request a quote</a>
-        <a href="tel:8136264518" class="bg-white text-ink hover:bg-stone2 font-semibold px-7 py-4 rounded-site transition">Call (813) 626-4518</a>
+<!-- HERO -->
+<section class="px-3 sm:px-5 lg:px-6 pt-3 sm:pt-5">
+  <div class="relative rounded-[24px] overflow-hidden bg-ink">
+    <img src="https://images.unsplash.com/photo-1651195297119-afc97f14a40d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew placing and finishing a concrete pour" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/65 to-ink/10"></div>
+    <div class="relative px-6 sm:px-10 lg:px-16 py-12 sm:py-16 lg:py-24 min-h-[640px] flex flex-col justify-between gap-10">
+      <div class="max-w-2xl">
+        <h1 class="text-white font-medium text-[38px] sm:text-[54px] lg:text-[68px] leading-[1.05] tracking-tight">Tilt wall concrete, built right in Tampa.</h1>
+        <p class="mt-5 text-white/85 text-[17px] sm:text-[19px] max-w-lg">Commercial foundations and tilt wall construction from a family-owned crew building Florida since 1965.</p>
+      </div>
+      <div class="bg-white rounded-[24px] p-5 sm:p-6 max-w-md w-full">
+        <p class="text-[18px] font-semibold">Get a free estimate</p>
+        <div class="mt-4 flex flex-col sm:flex-row gap-3">
+          <a href="tel:8136264518" class="inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold h-12 px-5 rounded-[24px] hover:bg-ink transition-colors text-[15px]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            (813) 626-4518
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center h-12 px-5 rounded-[24px] border border-ink/15 font-semibold text-[15px] hover:border-brand hover:text-brand transition-colors">Request a quote</a>
+        </div>
+        <p class="mt-4 text-[13px] text-ink/60">Open today 7:00 am – 3:30 pm · 2501 N 70th St, Tampa, FL</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- The difference -->
-<section id="difference" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-14 lg:gap-16">
-    <div class="lg:col-span-7 reveal">
-      <p class="label text-brand mb-4">The Florida Masonry difference</p>
-      <h2 class="font-heading font-semibold text-4xl md:text-5xl text-ink max-w-xl">Quality concrete work that keeps customers coming back.</h2>
-      <div class="mt-12 grid grid-cols-6 gap-4">
-        <div class="col-span-3 aspect-[3/4] overflow-hidden rounded-site">
-          <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-10.jpg" alt="Crew guiding a tilt-up wall panel into place" class="w-full h-full object-cover">
+<!-- HOW IT WORKS -->
+<section id="process" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-[12px] font-semibold tracking-[0.18em] uppercase text-brand">Our process</p>
+      <h2 class="mt-3 text-[32px] sm:text-[44px] font-medium leading-[1.1] tracking-tight">How Florida Masonry works</h2>
+      <p class="mt-4 text-[17px] text-ink/70">From the first consultation to the final inspection, we work closely with you so the project is finished on time and within budget.</p>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="reveal">
+        <div class="aspect-[3/2] rounded-[24px] overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/florida-masonry-construction-company/21948/photo-2.jpg" alt="Crane lifting a tilt wall panel beside a hotel" class="w-full h-full object-cover">
         </div>
-        <div class="col-span-3 flex flex-col gap-4">
-          <div class="bg-brand text-white rounded-site p-6 flex-1 flex flex-col justify-end min-h-[150px]">
-            <p class="font-heading font-semibold text-3xl leading-tight">Building Florida one project at a time since 1965.</p>
-          </div>
-          <div class="aspect-[4/3] overflow-hidden rounded-site">
-            <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-2.jpg" alt="Crew placing concrete over reinforced foundation" class="w-full h-full object-cover">
-          </div>
+        <h3 class="mt-5 text-[20px] font-semibold">1. Call and consult</h3>
+        <p class="mt-2 text-ink/70">Tell us about your commercial project. We talk through your vision, schedule and budget before any work begins.</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[3/2] rounded-[24px] overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/florida-masonry-construction-company/21948/photo-4.jpg" alt="Crew casting tilt wall panels on a concrete slab" class="w-full h-full object-cover">
         </div>
+        <h3 class="mt-5 text-[20px] font-semibold">2. Plan the build</h3>
+        <p class="mt-2 text-ink/70">We follow a rigorous process on every job, using quality materials and going above the minimum requirements.</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[3/2] rounded-[24px] overflow-hidden">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/florida-masonry-construction-company/21948/photo-3.jpg" alt="Crew in safety vests placing a concrete foundation" class="w-full h-full object-cover">
+        </div>
+        <h3 class="mt-5 text-[20px] font-semibold">3. Do the work</h3>
+        <p class="mt-2 text-ink/70">Our experienced crew builds with safety as a priority on every jobsite, through to final inspection.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- SERVICES TILES -->
+<section id="services" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-[12px] font-semibold tracking-[0.18em] uppercase text-brand">What we build</p>
+      <h2 class="mt-3 text-[32px] sm:text-[44px] font-medium leading-[1.1] tracking-tight">More than just tilt wall</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+      <div class="reveal">
+        <div class="aspect-square rounded-[24px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/florida-masonry-construction-company/21948/photo-2.jpg" alt="Tilt wall construction" class="w-full h-full object-cover"></div>
+        <p class="mt-3 text-[15px] font-semibold">Tilt wall construction</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-square rounded-[24px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/florida-masonry-construction-company/21948/photo-3.jpg" alt="Concrete foundations" class="w-full h-full object-cover"></div>
+        <p class="mt-3 text-[15px] font-semibold">Concrete foundations</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-square rounded-[24px] overflow-hidden"><img src="https://images.unsplash.com/photo-1588406235219-0314e168c5e4?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete pour" class="w-full h-full object-cover"></div>
+        <p class="mt-3 text-[15px] font-semibold">Commercial concrete</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-square rounded-[24px] overflow-hidden"><img src="https://images.unsplash.com/photo-1673978484202-ea21a0750148?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Rebar and concrete" class="w-full h-full object-cover"></div>
+        <p class="mt-3 text-[15px] font-semibold">Rebar and slabs</p>
+      </div>
+      <div class="reveal col-span-2 md:col-span-1">
+        <div class="aspect-square rounded-[24px] overflow-hidden"><img src="https://images.unsplash.com/photo-1694358338222-2fe5226bc713?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Completed commercial building" class="w-full h-full object-cover"></div>
+        <p class="mt-3 text-[15px] font-semibold">New commercial buildings</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BAND -->
+<section class="px-3 sm:px-5 lg:px-6">
+  <div class="max-w-7xl mx-auto aspect-[4/3] sm:aspect-[21/9] rounded-[24px] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1588406235219-0314e168c5e4?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete crew at work on a large pour" class="w-full h-full object-cover" style="object-position:center 40%">
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="py-24 lg:py-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-[28px] sm:text-[40px] lg:text-[52px] font-light leading-[1.2] tracking-tight">We have been building Florida one project at a time since 1965.</p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="pb-24 lg:pb-32 overflow-hidden" aria-label="What we do">
+  <div class="overflow-hidden">
+    <div class="marquee-track marquee-l">
+      <!-- set A -->
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Tilt wall construction</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Commercial foundations</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Member of the Tilt-Up Concrete Association</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Family-owned</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Serving Florida since 1965</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Safety on every jobsite</span>
+      <!-- set B -->
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Tilt wall construction</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Commercial foundations</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Member of the Tilt-Up Concrete Association</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Family-owned</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Serving Florida since 1965</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Safety on every jobsite</span>
+    </div>
+  </div>
+  <div class="overflow-hidden mt-3">
+    <div class="marquee-track marquee-r">
+      <!-- set A -->
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Resistant to moisture, no mortar joints</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Greater Tampa community</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>On time and within budget</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Consultation to final inspection</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Quality materials</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Customers who keep coming back</span>
+      <!-- set B -->
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Resistant to moisture, no mortar joints</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Greater Tampa community</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>On time and within budget</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Consultation to final inspection</span>
+      <span class="inline-flex items-center gap-2 bg-brand/10 text-ink font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Quality materials</span>
+      <span class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-[15px] px-5 h-12 rounded-[24px] whitespace-nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Customers who keep coming back</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
     <div class="lg:col-span-5 reveal">
-      <p class="text-lg text-slate-700">We specialize in new commercial concrete tilt wall construction, including foundations and the tilt-up walls themselves. We are a member of the Tilt-Up Concrete Association, and our team brings deep experience to every job.</p>
-      <p class="mt-5 text-slate-600">Tilt-wall is generally considered seismic resistant and more resistant to moisture, because there are no mortar joints throughout the wall as there are with CMU block walls.</p>
-      <div class="mt-9 space-y-7 border-t border-stone2 pt-9">
-        <div>
-          <h3 class="font-heading font-semibold text-xl text-ink">Our process</h3>
-          <p class="mt-1 text-slate-600">From first consultation to final inspection, we work closely with you so your vision is realized on schedule and on budget.</p>
-        </div>
-        <div>
-          <h3 class="font-heading font-semibold text-xl text-ink">Safety first</h3>
-          <p class="mt-1 text-slate-600">Safety is a priority on our jobsites and in everything we do. We use the best materials and go above the minimum requirements.</p>
-        </div>
-        <div>
-          <h3 class="font-heading font-semibold text-xl text-ink">Family owned</h3>
-          <p class="mt-1 text-slate-600">Known for quality, professionalism and customer care, with a solid reputation in the Greater Tampa community.</p>
-        </div>
-      </div>
-      <a href="tel:8136264518" class="mt-9 inline-flex items-center gap-3 group">
-        <span class="w-12 h-12 rounded-full bg-brand flex items-center justify-center text-white">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        </span>
-        <span class="font-heading font-semibold text-2xl text-ink group-hover:text-brand transition">(813) 626-4518</span>
-      </a>
+      <p class="text-[12px] font-semibold tracking-[0.18em] uppercase text-brand">FAQ</p>
+      <h2 class="mt-3 text-[32px] sm:text-[44px] font-medium leading-[1.1] tracking-tight">Questions, answered</h2>
+      <p class="mt-4 text-[17px] text-ink/70">Something else on your mind? Call <a href="tel:8136264518" class="font-semibold text-ink underline decoration-brand underline-offset-4">(813) 626-4518</a> and we will talk it through.</p>
+    </div>
+    <div class="lg:col-span-7 flex flex-col gap-3 reveal">
+      <details class="group bg-paper rounded-[24px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">What kind of projects do you build?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p class="mt-3 text-ink/70">We specialize in new commercial concrete tilt wall construction, including foundations and tilt wall concrete construction.</p>
+      </details>
+      <details class="group bg-paper rounded-[24px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">Why choose tilt wall over block walls?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p class="mt-3 text-ink/70">Tilt wall is generally considered seismic resistant and more resistant to moisture, because there are no mortar joints throughout the wall like there are with CMU/block walls.</p>
+      </details>
+      <details class="group bg-paper rounded-[24px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">How long have you been in business?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p class="mt-3 text-ink/70">We have been building in Florida since 1965. We are a well-established, family-owned business, and our customers keep coming back and referring us to others.</p>
+      </details>
+      <details class="group bg-paper rounded-[24px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">What is your process?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p class="mt-3 text-ink/70">We follow a rigorous process from initial consultation to final inspection, working closely with you so your vision is realized and the project is completed on time and within budget.</p>
+      </details>
+      <details class="group bg-paper rounded-[24px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-[17px] font-semibold">Where are you located and when are you open?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p class="mt-3 text-ink/70">We are at 2501 North 70th Street, Tampa, Florida 33619, open 7:00 am – 3:30 pm. Call (813) 626-4518 to reach us.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="relative pb-24 lg:pb-32">
-  <div class="absolute inset-x-0 top-0 h-[55%] bg-brand"></div>
-  <div class="relative max-w-7xl mx-auto px-5 pt-24 lg:pt-28">
-    <div class="grid lg:grid-cols-12 gap-8 items-end text-white reveal">
-      <div class="lg:col-span-6">
-        <p class="label text-white/80 mb-4">What we build</p>
-        <h2 class="font-heading font-semibold text-4xl md:text-5xl">Commercial concrete, start to finish.</h2>
-      </div>
-      <p class="lg:col-span-6 text-lg text-white/90">Your go-to source for quality commercial concrete construction in Tampa. We deliver tilt-up projects with exceptional results, on time and within budget.</p>
+<!-- PROJECT CARDS -->
+<section id="projects" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-[12px] font-semibold tracking-[0.18em] uppercase text-brand">Projects</p>
+      <h2 class="mt-3 text-[32px] sm:text-[44px] font-medium leading-[1.1] tracking-tight">Construction from start to finish</h2>
     </div>
-    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="#contact" class="svc block bg-white rounded-site p-3 reveal">
-        <div class="aspect-[4/3] overflow-hidden rounded-[10px]"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-10.jpg" alt="Tilt-up wall panel being raised" class="w-full h-full object-cover"></div>
-        <div class="px-2 pt-5 pb-3">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="font-heading font-semibold text-xl text-ink">Tilt-up wall construction</h3>
-            <svg class="arr shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </div>
-          <p class="mt-2 text-[15px] text-slate-600">New commercial tilt wall projects, resistant to moisture with no mortar joints.</p>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="bg-white rounded-[24px] overflow-hidden reveal">
+        <div class="aspect-[4/3] relative">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/florida-masonry-construction-company/21948/photo-2.jpg" alt="Tilt wall panel being lifted by crane" class="w-full h-full object-cover">
+          <span class="absolute left-4 top-4 bg-white text-ink text-[12px] font-semibold px-3 py-1.5 rounded-[24px]">Tilt wall</span>
         </div>
-      </a>
-      <a href="#contact" class="svc block bg-white rounded-site p-3 reveal">
-        <div class="aspect-[4/3] overflow-hidden rounded-[10px]"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-2.jpg" alt="Foundation concrete pour with rebar" class="w-full h-full object-cover"></div>
-        <div class="px-2 pt-5 pb-3">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="font-heading font-semibold text-xl text-ink">Foundations</h3>
-            <svg class="arr shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </div>
-          <p class="mt-2 text-[15px] text-slate-600">Reinforced concrete foundations for commercial buildings, poured with care.</p>
+        <div class="p-6">
+          <h3 class="text-[20px] font-semibold">Tilt wall panels</h3>
+          <p class="mt-2 text-ink/70">Concrete walls cast flat, then lifted into place for commercial buildings.</p>
         </div>
-      </a>
-      <a href="#contact" class="svc block bg-white rounded-site p-3 reveal">
-        <div class="aspect-[4/3] overflow-hidden rounded-[10px]"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-6.jpg" alt="Panels cast flat on site before lifting" class="w-full h-full object-cover"></div>
-        <div class="px-2 pt-5 pb-3">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="font-heading font-semibold text-xl text-ink">Commercial concrete</h3>
-            <svg class="arr shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </div>
-          <p class="mt-2 text-[15px] text-slate-600">Quality commercial concrete construction, delivered on time and within budget.</p>
+      </article>
+      <article class="bg-white rounded-[24px] overflow-hidden reveal">
+        <div class="aspect-[4/3] relative">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/florida-masonry-construction-company/21948/photo-3.jpg" alt="Foundation formwork and rebar before a pour" class="w-full h-full object-cover">
+          <span class="absolute left-4 top-4 bg-white text-ink text-[12px] font-semibold px-3 py-1.5 rounded-[24px]">Foundations</span>
         </div>
-      </a>
-      <a href="#contact" class="svc block bg-white rounded-site p-3 reveal">
-        <div class="aspect-[4/3] overflow-hidden rounded-[10px]"><img src="https://images.unsplash.com/photo-1772306814076-ff65f53ac438?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Finished concrete floor inside a large commercial building" class="w-full h-full object-cover"></div>
-        <div class="px-2 pt-5 pb-3">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="font-heading font-semibold text-xl text-ink">Start to finish projects</h3>
-            <svg class="arr shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </div>
-          <p class="mt-2 text-[15px] text-slate-600">One team from the first consultation through final inspection.</p>
+        <div class="p-6">
+          <h3 class="text-[20px] font-semibold">Commercial foundations</h3>
+          <p class="mt-2 text-ink/70">Formwork, rebar and concrete placed with care before the walls go up.</p>
         </div>
-      </a>
+      </article>
+      <article class="bg-white rounded-[24px] overflow-hidden reveal">
+        <div class="aspect-[4/3] relative">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/b94bd5396baceba39b32db40a94da16920412268/sites/florida-masonry-construction-company/21948/photo-4.jpg" alt="Workers on a cast tilt wall slab" class="w-full h-full object-cover">
+          <span class="absolute left-4 top-4 bg-white text-ink text-[12px] font-semibold px-3 py-1.5 rounded-[24px]">Casting</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-[20px] font-semibold">Slab casting</h3>
+          <p class="mt-2 text-ink/70">Panels formed and poured on the slab, ready to be tilted up.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="pb-24 lg:pb-32 bg-white">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="grid lg:grid-cols-12 gap-6 items-end reveal">
-      <div class="lg:col-span-7">
-        <p class="label text-brand mb-4">Recent work</p>
-        <h2 class="font-heading font-semibold text-4xl md:text-5xl text-ink">Projects across Florida.</h2>
-      </div>
-      <p class="lg:col-span-5 text-slate-600">Tilt-up panels, foundations and finished commercial buildings from our jobsites.</p>
-    </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="col-span-2 lg:col-span-2 aspect-[16/9] overflow-hidden rounded-site reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-4.jpg" alt="Completed two-story commercial building" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 aspect-[4/3] lg:aspect-auto overflow-hidden rounded-site reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-10.jpg" alt="Tilt-up panel being raised" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 aspect-[4/3] overflow-hidden rounded-site reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-8.jpg" alt="School building with checkerboard concrete panels" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 aspect-[4/3] overflow-hidden rounded-site reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-9.jpg" alt="Courtyard with palm trees and concrete walkways" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 aspect-[4/3] overflow-hidden rounded-site reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-5.jpg" alt="Reinforcing steel laid for a warehouse slab at night" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 aspect-[4/3] overflow-hidden rounded-site reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-3.jpg" alt="Workers rigging cast tilt-up panels" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 aspect-[4/3] overflow-hidden rounded-site reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-1.jpg" alt="Crane lifting a tilt wall panel beside a hotel" class="w-full h-full object-cover"></div>
-      <div class="col-span-2 lg:col-span-1 aspect-[16/9] lg:aspect-[4/3] overflow-hidden rounded-site reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-7.jpg" alt="Tilt wall panels braced on a steel-framed building" class="w-full h-full object-cover"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Call band -->
-<section class="bg-ink py-20 lg:py-24">
-  <div class="max-w-5xl mx-auto px-5 text-center reveal">
-    <h2 class="font-heading font-semibold text-4xl md:text-5xl text-brand">Planning a tilt-wall project in Tampa?</h2>
-    <p class="mt-5 text-lg text-white/75 max-w-2xl mx-auto">Call Ryan and the team to talk through your project, or send us the details for a quote.</p>
-    <div class="mt-9 flex flex-wrap justify-center gap-4">
-      <a href="tel:8136264518" class="bg-brand hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-site transition">Call (813) 626-4518</a>
-      <a href="#contact" class="border border-white/30 hover:bg-white hover:text-ink text-white font-semibold px-8 py-4 rounded-site transition">Request a quote</a>
-    </div>
-  </div>
-</section>
-
+<!-- CONTACT -->
 <section id="contact" class="lp-contact" style="background:#fff">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(242,106,33,0.10);color:#f26a21}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#f26a21}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(255,105,12,0.10);color:#ff690c}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#ff690c}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -261,8 +333,8 @@ tailwind.config = {
     .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:8px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#f26a21;box-shadow:0 0 0 4px rgba(242,106,33,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#f26a21;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#ff690c;box-shadow:0 0 0 4px rgba(255,105,12,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:8px;background:#ff690c;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -272,13 +344,13 @@ tailwind.config = {
     @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
     .lp-contact .lp-split{display:grid}
     @media (min-width:1024px){.lp-contact .lp-split{grid-template-columns:1fr 1fr;min-height:760px}}
-    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/photo-4.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
+    .lp-contact .lp-photo{position:relative;min-height:520px;background:#111 url('https://images.unsplash.com/photo-1694358338222-2fe5226bc713?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format') center/cover no-repeat;display:flex;align-items:flex-end}
     .lp-contact .lp-photo:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}
     .lp-contact .lp-photo-in{position:relative;padding:clamp(32px,5vw,64px);color:#fff;max-width:36rem}
     .lp-contact .lp-panel{background:#f6f5f2;display:flex;align-items:center;padding:clamp(24px,5vw,72px)}
     .lp-contact .lp-panel>div{width:100%;max-width:36rem;margin:0 auto}</style>
   <div class="lp-split">
-    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#f26a21">Contact</p><h2 class="lp-h" style="color:#fff">Request a quote for your project</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your commercial concrete or tilt-wall project and we will get back to you.</p><ul class="lp-info">
+    <div class="lp-photo"><div class="lp-photo-in"><p class="lp-kick" style="color:#ff690c">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.8)">Tell us about your commercial concrete project and we will get back to you.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18136264518" class="lp-v lp-v-d">(813) 626-4518</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -292,7 +364,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Tilt-up wall construction</option><option>Foundations</option><option>Commercial concrete construction</option><option>Start to finish projects</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Tilt wall construction</option><option>Commercial foundations</option><option>Commercial concrete</option><option>New commercial buildings</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn lp-btn-full">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -304,50 +376,62 @@ tailwind.config = {
 
 </main>
 
-<!-- Footer -->
-<footer class="bg-ink text-white/75 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-3 gap-12">
-    <div>
-      <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/florida-masonry-construction-company/21935/logo-0.png" alt="Florida Masonry Construction Co." class="h-14 w-auto">
-      <p class="mt-5 text-[15px] max-w-xs">Commercial tilt-up concrete construction. Family owned in Tampa since 1965. Member of the Tilt-Up Concrete Association.</p>
+<!-- FOOTER -->
+<footer class="bg-white border-t border-black/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <a href="#top" class="leading-none inline-block">
+        <span class="block text-[19px] font-bold tracking-tight">Florida Masonry</span>
+        <span class="block text-[11px] font-semibold tracking-[0.18em] uppercase text-brand mt-1">Construction Company</span>
+      </a>
+      <p class="mt-5 text-ink/70 max-w-sm">Commercial tilt wall concrete construction, building Florida one project at a time since 1965.</p>
+      <a href="tel:8136264518" class="mt-5 inline-block text-[22px] font-semibold hover:text-brand transition-colors">(813) 626-4518</a>
+      <p class="mt-1"><a href="mailto:ryan@fmcctampa.com" class="text-[15px] text-ink/70 hover:text-brand break-words">ryan@fmcctampa.com</a></p>
     </div>
-    <div>
-      <h4 class="font-heading font-semibold text-white text-lg mb-4">Contact</h4>
-      <ul class="space-y-2 text-[15px]">
-        <li>2501 North 70th Street<br>Tampa, Florida 33619</li>
-        <li><a href="tel:8136264518" class="hover:text-brand">(813) 626-4518</a></li>
-        <li><a href="mailto:ryan@fmcctampa.com" class="hover:text-brand break-words">ryan@fmcctampa.com</a></li>
-        <li>Open today 7:00 am – 3:30 pm</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-heading font-semibold text-white text-lg mb-4">Explore</h4>
-      <ul class="space-y-2 text-[15px]">
-        <li><a href="#difference" class="hover:text-brand">About</a></li>
+    <div class="md:col-span-3">
+      <p class="text-[12px] font-semibold tracking-[0.18em] uppercase text-ink/50">Explore</p>
+      <ul class="mt-4 space-y-2 text-[15px]">
+        <li><a href="#process" class="hover:text-brand">Process</a></li>
         <li><a href="#services" class="hover:text-brand">Services</a></li>
+        <li><a href="#faq" class="hover:text-brand">FAQ</a></li>
         <li><a href="#projects" class="hover:text-brand">Projects</a></li>
         <li><a href="#contact" class="hover:text-brand">Contact</a></li>
       </ul>
     </div>
+    <div class="md:col-span-4">
+      <p class="text-[12px] font-semibold tracking-[0.18em] uppercase text-ink/50">Visit us</p>
+      <p class="mt-4 text-[15px] text-ink/80">2501 North 70th Street<br>Tampa, Florida 33619</p>
+      <p class="mt-3 text-[15px] text-ink/80">Open today 7:00 am – 3:30 pm</p>
+      <p class="mt-5 text-[12px] font-semibold tracking-[0.18em] uppercase text-ink/50">Service area</p>
+      <p class="mt-2 text-[15px] text-ink/80">Tampa and the Greater Tampa community, Florida</p>
+    </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50 space-y-1">
+  <div class="border-t border-black/10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-[13px] text-ink/60 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Florida Masonry Construction Company website.</p>
-      <p>Some photos by Craftsman Concrete Floors on Unsplash.</p>
-      <p>Copyright © 2025 Florida Masonry Construction Company. All rights reserved.</p>
+      <p>Some photos by Rose Galloway Green, Acton Crawford, Dave Lowe and d c on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { menu.classList.add('hidden'); });
+  });
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('in'); });
+  }
 </script>
 </body>
 </html>
