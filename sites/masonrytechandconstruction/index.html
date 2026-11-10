@@ -7,21 +7,18 @@
 <title>Masonry Tech & Construction | Masonry and Hardscape in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Manrope', 'sans-serif'] },
       colors: {
         brand: '#3e990a',
-        'brand-dark': '#1d3a0c',
-        ink: '#121410',
-        stone: '#f4f3ef'
-      },
-      fontFamily: {
-        head: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
+        brandDark: '#12210a',
+        ink: '#0f1410',
+        paper: '#f6f5f1'
       },
       borderRadius: { DEFAULT: '6px' }
     }
@@ -30,295 +27,302 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #121410; background: #fff; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.05; }
+  body { font-family: 'Manrope', sans-serif; color: #0f1410; background: #fff; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .sec { padding-top: 72px; padding-bottom: 72px; }
-  @media (min-width: 1024px) { .sec { padding-top: 112px; padding-bottom: 112px; } }
-  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
-  .ba-top { position: absolute; inset: 0; width: 50%; overflow: hidden; }
-  .ba-top img { position: absolute; top: 0; left: 0; height: 100%; max-width: none; }
-  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); pointer-events: none; }
-  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 6px; background: #3e990a; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; color: #fff; }
-  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-  details > summary { list-style: none; }
-  details > summary::-webkit-details-marker { display: none; }
+  .h-tight { line-height: 1.02; letter-spacing: -0.02em; }
+  .ba { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .ba img { pointer-events: none; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; width: 3px; background: #fff; transform: translateX(-50%); }
+  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 9999px; background: #3e990a; border: 3px solid #fff; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="antialiased">
 
-<!-- HEADER -->
+<!-- Header -->
 <header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-0 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between gap-6">
-    <a href="#top" class="font-head text-white font-bold text-lg sm:text-xl tracking-tight leading-none uppercase">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="text-white font-extrabold uppercase tracking-tight text-lg leading-none">
       Masonry Tech <span class="text-brand">&amp;</span> Construction
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/80">
       <a href="#services" class="hover:text-white">Services</a>
-      <a href="#process" class="hover:text-white">How it works</a>
-      <a href="#work" class="hover:text-white">Our work</a>
-      <a href="#owner" class="hover:text-white">About</a>
-      <a href="#reviews" class="hover:text-white">Reviews</a>
+      <a href="#process" class="hover:text-white">Process</a>
+      <a href="#work" class="hover:text-white">Our Work</a>
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#reviews-anchor" class="hover:text-white">Reviews</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+14047020968" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-[#368808] text-white font-semibold text-sm px-5 h-11 rounded">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+14047020968" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-bold text-sm px-5 py-3 rounded hover:bg-[#357f09] transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         (404) 702-0968
       </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center text-white border border-white/20 rounded" aria-label="Open menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
-    <div class="px-5 py-5 flex flex-col gap-4 text-white/90 font-medium">
-      <a href="#services">Services</a>
-      <a href="#process">How it works</a>
-      <a href="#work">Our work</a>
-      <a href="#owner">About</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:+14047020968" class="inline-flex items-center justify-center bg-brand text-white font-semibold h-12 rounded">Call (404) 702-0968</a>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10 px-5 pb-6">
+    <div class="flex flex-col py-2 text-white/90 font-semibold">
+      <a href="#services" class="py-3 border-b border-white/10">Services</a>
+      <a href="#process" class="py-3 border-b border-white/10">Process</a>
+      <a href="#work" class="py-3 border-b border-white/10">Our Work</a>
+      <a href="#about" class="py-3 border-b border-white/10">About</a>
+      <a href="#contact" class="py-3 border-b border-white/10">Contact</a>
     </div>
+    <a href="tel:+14047020968" class="mt-4 flex items-center justify-center bg-brand text-white font-bold px-5 py-3 rounded">Call (404) 702-0968</a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
+<!-- 1. Hero -->
 <section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/masonry-tech-and-construction/21935/photo-1.jpg" alt="Stone fire pit and seating wall with steps and gravel path" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-ink/80"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/masonry-tech-and-construction/21947/photo-2.jpg" alt="Sunken stone fire pit with retaining walls and steps in an Atlanta backyard" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-ink/75"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <h1 class="font-head font-extrabold uppercase text-[2.6rem] sm:text-6xl lg:text-7xl tracking-tight">
-        Atlanta's<br>masonry and<br><span class="text-brand">hardscape</span> crew.
+      <h1 class="h-tight font-extrabold uppercase text-[2.6rem] sm:text-6xl lg:text-7xl">
+        Stone<br>built right<br>in Atlanta.
       </h1>
-      <p class="mt-7 text-lg text-white/80 max-w-xl">
-        Masonry Tech &amp; Construction builds patios, walls, walkways and stone work across Atlanta, and restores old brick and stone. Clear quotes, steady communication, clean job sites.
+      <p class="mt-7 text-lg text-white/85 max-w-xl leading-relaxed">
+        Masonry and hardscape for Atlanta homes and buildings. Patios, walls, walkways and historic restoration, built with real craftsmanship and clear communication.
       </p>
-      <ul class="mt-7 space-y-3 text-white/90">
-        <li class="flex gap-3 items-start"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Walk-through, quote and schedule before work starts</li>
-        <li class="flex gap-3 items-start"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>New brick matched to your existing brick pattern</li>
-        <li class="flex gap-3 items-start"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clean-up when the job is done</li>
+      <ul class="mt-7 space-y-3 text-white/90 font-semibold">
+        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Masonry and hardscape specialists</li>
+        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Walk-through, quote and schedule up front</li>
+        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clean job sites and punctual crews</li>
       </ul>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="inline-flex items-center justify-center bg-brand hover:bg-[#368808] text-white font-semibold h-13 px-8 py-4 rounded">Get a free estimate</a>
-        <a href="#work" class="inline-flex items-center justify-center border border-white/40 hover:bg-white hover:text-ink text-white font-semibold px-8 py-4 rounded">See our work</a>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-flex justify-center bg-brand text-white font-bold px-8 py-4 rounded hover:bg-[#357f09] transition">Get a free estimate</a>
+        <a href="#work" class="inline-flex justify-center border border-white/40 text-white font-bold px-8 py-4 rounded hover:bg-white hover:text-ink transition">See our work</a>
       </div>
     </div>
     <div class="lg:col-span-5">
-      <div class="bg-stone text-ink rounded p-7 sm:p-9">
-        <h2 class="font-head font-bold text-3xl">Get a free estimate</h2>
-        <p class="mt-3 text-ink/70">Tell us about your project. Luis or a member of the team will get back to you.</p>
+      <div class="bg-paper text-ink rounded p-8 lg:p-9">
+        <h2 class="text-2xl font-extrabold tracking-tight">Get a free estimate</h2>
+        <p class="mt-2 text-ink/70">Tell us about your project. Luis will get back to you.</p>
         <div class="mt-6 space-y-3">
-          <a href="tel:+14047020968" class="flex items-center gap-3 bg-ink text-white font-semibold px-5 py-4 rounded hover:bg-brand-dark">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          <a href="tel:+14047020968" class="flex items-center justify-center gap-2 bg-brand text-white font-bold px-5 py-4 rounded hover:bg-[#357f09] transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             (404) 702-0968
           </a>
-          <a href="mailto:luis@matechconstruction.com" class="flex items-center gap-3 border border-ink/20 bg-white font-semibold px-5 py-4 rounded hover:border-brand text-sm sm:text-base break-words">
-            <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <span class="break-words min-w-0">luis@matechconstruction.com</span>
+          <a href="mailto:luis@matechconstruction.com" class="flex items-center justify-center gap-2 bg-ink text-white font-bold px-5 py-4 rounded hover:bg-brandDark transition text-sm sm:text-base break-words text-center">
+            <svg class="shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            luis@matechconstruction.com
           </a>
-          <a href="#contact" class="flex items-center justify-center bg-brand hover:bg-[#368808] text-white font-semibold px-5 py-4 rounded">Send a request</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE STRIP -->
-<section class="bg-ink border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-white/85 font-head font-semibold uppercase tracking-wide text-sm">
+<!-- 2. Services strip -->
+<section class="bg-paper border-b border-ink/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm sm:text-base font-bold uppercase tracking-wide text-ink">
     <span>Masonry</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
     <span>Hardscape</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Patios</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Walkways</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Brick walls</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Limestone edging</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Repointing &amp; restoration</span>
+    <span>Patios &amp; Pavers</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Stone Walls</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Brick Work</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+    <span>Restoration</span>
   </div>
 </section>
 
-<!-- SERVICES: three stages -->
-<section id="services" class="sec bg-brand text-white">
+<!-- 3. Plan | Build | Finish -->
+<section id="services" class="bg-brand py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/80">What we do</p>
-      <h2 class="mt-3 font-head font-bold text-4xl lg:text-5xl">Masonry, hardscape and restoration</h2>
-      <p class="mt-5 text-white/90 text-lg">From a new patio to a hundred-year-old brick wall, the same crew handles the stone, the brick and the details.</p>
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/80">How we work</p>
+      <h2 class="mt-3 h-tight font-extrabold uppercase text-4xl sm:text-5xl text-white">Plan. Build. Finish.</h2>
+      <p class="mt-5 text-lg text-white/90 leading-relaxed">From the first walk-through to the final cleanup, one team handles your masonry or hardscape project.</p>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/masonry-tech-and-construction/21935/photo-6.jpg" alt="Paver patio with stone fire pit" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-6">
-          <h3 class="font-head font-bold text-2xl uppercase">Hardscape</h3>
-          <p class="mt-3 text-white/70 text-base">Paver patios, stone seating walls, steps, walkways and limestone edging for your yard.</p>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTh8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Craftsmen measuring and cutting material on site" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="p-7 text-white">
+          <h3 class="text-2xl font-extrabold uppercase tracking-tight">Plan</h3>
+          <p class="mt-3 text-white/75 leading-relaxed">A site walk-through, a clear quote and a schedule before any stone is moved.</p>
         </div>
       </article>
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1646324554833-f0b6a479fa5d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Builder framing a structure" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-6">
-          <h3 class="font-head font-bold text-2xl uppercase">Masonry &amp; construction</h3>
-          <p class="mt-3 text-white/70 text-base">Brick walls, sidewalks, block work and stone built to match the home around them.</p>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/masonry-tech-and-construction/21947/photo-2.jpg" alt="Block retaining walls and paver patio under construction detail" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="p-7 text-white">
+          <h3 class="text-2xl font-extrabold uppercase tracking-tight">Build</h3>
+          <p class="mt-3 text-white/75 leading-relaxed">Walls, patios, walkways and brickwork laid with precision and care around your home.</p>
         </div>
       </article>
-      <article class="bg-ink rounded overflow-hidden reveal">
-        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NHx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Contractors reviewing a job site" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-6">
-          <h3 class="font-head font-bold text-2xl uppercase">Restoration</h3>
-          <p class="mt-3 text-white/70 text-base">Repointing and repair of old common bond brick and stone walls on historic buildings.</p>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://images.unsplash.com/photo-1646324554833-f0b6a479fa5d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Builder finishing wood framing with a hammer" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="p-7 text-white">
+          <h3 class="text-2xl font-extrabold uppercase tracking-tight">Finish</h3>
+          <p class="mt-3 text-white/75 leading-relaxed">Detail work, matching existing patterns and a clean site when we leave.</p>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="sec bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">How it works</p>
-      <h2 class="mt-3 font-head font-bold text-4xl lg:text-5xl">How your project runs</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="border border-ink/10 rounded p-8 reveal">
-        <span class="inline-flex w-12 h-12 items-center justify-center bg-ink text-white font-head font-bold text-xl rounded">1</span>
-        <h3 class="mt-6 font-head font-bold text-2xl">Walk-through and quote</h3>
-        <p class="mt-3 text-ink/70 text-base">We visit the site, look at your foundation, existing brick and landscape, then send a clear quote.</p>
-      </div>
-      <div class="border border-ink/10 rounded p-8 reveal">
-        <span class="inline-flex w-12 h-12 items-center justify-center bg-ink text-white font-head font-bold text-xl rounded">2</span>
-        <h3 class="mt-6 font-head font-bold text-2xl">Schedule and build</h3>
-        <p class="mt-3 text-ink/70 text-base">We set the dates and do the work with care around your home. You hear from us at the key points.</p>
-      </div>
-      <div class="border border-ink/10 rounded p-8 reveal">
-        <span class="inline-flex w-12 h-12 items-center justify-center bg-ink text-white font-head font-bold text-xl rounded">3</span>
-        <h3 class="mt-6 font-head font-bold text-2xl">Clean-up and handover</h3>
-        <p class="mt-3 text-ink/70 text-base">The site is cleaned up and we walk the finished work with you before we call it done.</p>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- SIDE BY SIDE (dark) -->
-<section class="sec bg-ink text-white">
+<!-- 4. Process -->
+<section id="process" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Finished work</p>
-      <h2 class="mt-3 font-head font-bold text-4xl lg:text-5xl">Stone built to last, shaped for the site</h2>
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">The process</p>
+      <h2 class="mt-3 h-tight font-extrabold uppercase text-4xl sm:text-5xl">How your project runs</h2>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure class="reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/masonry-tech-and-construction/21935/photo-1.jpg" alt="Sunken patio with fire pit and stone seating wall" class="w-full h-full object-cover" loading="lazy"></div>
-        <figcaption class="mt-3 text-white/70 text-sm">Patio, fire pit and retaining seat wall</figcaption>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-xl font-extrabold">01</div>
+        <h3 class="mt-6 text-xl font-extrabold">Walk-through and quote</h3>
+        <p class="mt-3 text-ink/70 leading-relaxed">We visit the property, look at the site and the existing work, and give you a clear quote.</p>
+      </div>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-xl font-extrabold">02</div>
+        <h3 class="mt-6 text-xl font-extrabold">Schedule and build</h3>
+        <p class="mt-3 text-ink/70 leading-relaxed">We set a start date and keep you updated. Our crew shows up on time and works with care.</p>
+      </div>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center text-xl font-extrabold">03</div>
+        <h3 class="mt-6 text-xl font-extrabold">Cleanup and handover</h3>
+        <p class="mt-3 text-ink/70 leading-relaxed">We clean the site and walk you through the finished work so you know it is done right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Side by side (photos do not show same job) -->
+<section class="bg-ink text-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Craft</p>
+      <h2 class="mt-3 h-tight font-extrabold uppercase text-4xl sm:text-5xl">From the ground up</h2>
+      <p class="mt-5 text-lg text-white/75 leading-relaxed">Good masonry starts with solid structure underneath. Here is the finished hardscape, and the building work behind it.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <figure class="reveal relative aspect-[4/3] rounded overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/masonry-tech-and-construction/21947/photo-2.jpg" alt="Finished stone fire pit and patio" class="w-full h-full object-cover" loading="lazy">
+        <figcaption class="absolute left-4 bottom-4 bg-brand text-white text-xs font-bold uppercase tracking-widest px-3 py-2 rounded">Finished hardscape</figcaption>
       </figure>
-      <figure class="reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1630683924997-fe27050a0416?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker cutting rebar mesh on site" class="w-full h-full object-cover" loading="lazy"></div>
-        <figcaption class="mt-3 text-white/70 text-sm">Reinforcement and prep before the pour</figcaption>
+      <figure class="reveal relative aspect-[4/3] rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on a concrete structure with rebar" class="w-full h-full object-cover" loading="lazy">
+        <figcaption class="absolute left-4 bottom-4 bg-white text-ink text-xs font-bold uppercase tracking-widest px-3 py-2 rounded">Structure underneath</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- COMPARISON -->
-<section class="sec bg-stone">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Why hire a mason</p>
-      <h2 class="mt-3 font-head font-bold text-4xl lg:text-5xl">Doing it yourself vs one contractor</h2>
+<!-- 6. Comparison -->
+<section class="bg-paper py-24 lg:py-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Why one team</p>
+      <h2 class="mt-3 h-tight font-extrabold uppercase text-4xl sm:text-5xl">Piecing it together vs. one contractor</h2>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white border border-ink/10 rounded p-8 lg:p-10 reveal">
-        <h3 class="font-head font-bold text-2xl">Doing it yourself</h3>
-        <ul class="mt-6 space-y-4 text-ink/75">
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Renting tools and sourcing materials yourself</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Guessing at grade, base and drainage</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>New brick that does not match the old</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Weekends lost to the work and the clean-up</li>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="reveal bg-white border border-ink/15 rounded p-8">
+        <h3 class="text-xl font-extrabold">Doing it yourself</h3>
+        <ul class="mt-6 space-y-4 text-ink/70">
+          <li class="flex gap-3"><span class="mt-1 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Hiring and coordinating several trades</li>
+          <li class="flex gap-3"><span class="mt-1 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Matching materials and patterns yourself</li>
+          <li class="flex gap-3"><span class="mt-1 w-2 h-2 rounded-full bg-ink/30 shrink-0"></span>Chasing schedules and cleanup</li>
         </ul>
       </div>
-      <div class="bg-white border-2 border-brand rounded p-8 lg:p-10 reveal">
-        <h3 class="font-head font-bold text-2xl">One contractor, Masonry Tech</h3>
+      <div class="reveal bg-white border-2 border-brand rounded p-8">
+        <h3 class="text-xl font-extrabold text-brand">Masonry Tech &amp; Construction</h3>
         <ul class="mt-6 space-y-4 text-ink">
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One team for design, stone, brick and finish</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Care taken around your foundation and landscaping</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>New brick matched to the existing pattern</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quote, schedule, work and clean-up handled for you</li>
+          <li class="flex gap-3"><svg class="text-brand shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One team from walk-through to cleanup</li>
+          <li class="flex gap-3"><svg class="text-brand shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Brick and stone matched to your existing home</li>
+          <li class="flex gap-3"><svg class="text-brand shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Direct, responsive communication with Luis</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT WE BUILD: bento -->
-<section id="work" class="sec bg-white">
+<!-- 7. What we build -->
+<section id="work" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Our work</p>
-      <h2 class="mt-3 font-head font-bold text-4xl lg:text-5xl">What we build in Atlanta</h2>
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Our work</p>
+      <h2 class="mt-3 h-tight font-extrabold uppercase text-4xl sm:text-5xl">What we build</h2>
     </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <a href="#contact" class="relative col-span-2 lg:col-span-2 lg:row-span-2 rounded overflow-hidden group min-h-[280px] aspect-[4/3] lg:aspect-auto reveal">
-        <img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/masonry-tech-and-construction/21935/photo-1.jpg" alt="Stone patio and fire pit" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
-        <span class="absolute left-5 bottom-5 right-5 text-white font-head font-bold text-2xl">Patios and fire pits</span>
-      </a>
-      <a href="#contact" class="relative col-span-1 rounded overflow-hidden aspect-square reveal">
-        <img src="https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew framing a large building" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
-        <span class="absolute left-4 bottom-4 right-4 text-white font-head font-semibold text-lg leading-tight">Structures</span>
-      </a>
-      <a href="#contact" class="relative col-span-1 rounded overflow-hidden aspect-square reveal">
-        <img src="https://images.unsplash.com/photo-1751054824448-749f467ffc4f?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker climbing out of an excavation" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
-        <span class="absolute left-4 bottom-4 right-4 text-white font-head font-semibold text-lg leading-tight">Groundwork</span>
-      </a>
-      <a href="#contact" class="relative col-span-1 rounded overflow-hidden aspect-square reveal">
-        <img src="https://images.unsplash.com/photo-1530639834082-05bafb67fbbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Ironworker on rebar columns" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
-        <span class="absolute left-4 bottom-4 right-4 text-white font-head font-semibold text-lg leading-tight">Reinforced work</span>
-      </a>
-      <a href="#contact" class="relative col-span-1 rounded overflow-hidden aspect-square reveal">
-        <img src="https://images.unsplash.com/photo-1664662568348-24b1482b6354?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker on scaffolding at a concrete frame" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
-        <span class="absolute left-4 bottom-4 right-4 text-white font-head font-semibold text-lg leading-tight">Formwork</span>
-      </a>
-      <a href="#contact" class="relative col-span-2 rounded overflow-hidden aspect-[2/1] reveal">
-        <img src="https://images.unsplash.com/photo-1576577610667-c9ea0ac983fd?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cranes over a building under construction" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
-        <span class="absolute left-5 bottom-5 right-5 text-white font-head font-bold text-2xl">Commercial and large builds</span>
-      </a>
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+      <figure class="reveal relative col-span-2 lg:col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[520px] rounded overflow-hidden">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/masonry-tech-and-construction/21947/photo-2.jpg" alt="Stone fire pit patio with retaining walls" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <figcaption class="absolute left-5 bottom-5 text-white font-extrabold text-xl uppercase">Patios &amp; fire pits</figcaption>
+      </figure>
+      <figure class="reveal relative aspect-square rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew working on tall concrete wall forms" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <figcaption class="absolute left-4 bottom-4 text-white font-bold uppercase text-sm">Walls</figcaption>
+      </figure>
+      <figure class="reveal relative aspect-square rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1563166423-482a8c14b2d6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker on a concrete structure with rebar" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <figcaption class="absolute left-4 bottom-4 text-white font-bold uppercase text-sm">Foundations</figcaption>
+      </figure>
+      <figure class="reveal relative aspect-square rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTJ8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cutting lumber with a circular saw" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <figcaption class="absolute left-4 bottom-4 text-white font-bold uppercase text-sm">Framing &amp; forms</figcaption>
+      </figure>
+      <figure class="reveal relative aspect-square rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1530639834082-05bafb67fbbe?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Ironworker on rebar against blue sky" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <figcaption class="absolute left-4 bottom-4 text-white font-bold uppercase text-sm">Structural work</figcaption>
+      </figure>
+      <figure class="reveal relative col-span-2 aspect-[2/1] rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1489514354504-1653aa90e34e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGNvbnN0cnVjdGlvbiUyMGNvbnRyYWN0b3IlMjB3b3JrfGVufDF8MHx8fDE3OTQyMjk1MTZ8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Worker laying out rebar mesh on a slab" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent"></div>
+        <figcaption class="absolute left-5 bottom-5 text-white font-extrabold text-lg uppercase">Slabs &amp; walkways</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- OWNER LED -->
-<section id="owner" class="sec bg-stone">
+<!-- 8. Owner-led -->
+<section id="about" class="bg-paper py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-6 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">About us</p>
-      <h2 class="mt-3 font-head font-bold text-4xl lg:text-5xl">Talk to Luis, not a call center</h2>
-      <p class="mt-6 text-ink/75">Masonry Tech &amp; Construction is a masonry and hardscape contractor serving Atlanta. Customers say the same things again and again: professional, easy to reach, and careful with the details.</p>
-      <ul class="mt-6 space-y-3">
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Responsive from first call to final clean-up</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Skilled in both new builds and restoration work</li>
-        <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Updates by phone or video call when you cannot be on site</li>
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">About us</p>
+      <h2 class="mt-3 h-tight font-extrabold uppercase text-4xl sm:text-5xl">Atlanta masonry, done with care</h2>
+      <p class="mt-6 text-lg text-ink/75 leading-relaxed">Masonry Tech &amp; Construction is Atlanta's masonry and hardscape contractor. Our team works on outdoor spaces and older buildings alike, from patios and walkways to repointing century-old brick walls, always with attention to detail.</p>
+      <ul class="mt-7 space-y-3 font-semibold">
+        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Restoration and new construction</li>
+        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Professional, responsive communication</li>
+        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Careful work around your existing home</li>
       </ul>
-      <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="inline-flex items-center justify-center bg-brand hover:bg-[#368808] text-white font-semibold px-8 py-4 rounded">Request an estimate</a>
-        <a href="tel:+14047020968" class="inline-flex items-center justify-center border border-ink/30 hover:bg-ink hover:text-white font-semibold px-8 py-4 rounded">Call (404) 702-0968</a>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-flex justify-center bg-brand text-white font-bold px-8 py-4 rounded hover:bg-[#357f09] transition">Request an estimate</a>
+        <a href="tel:+14047020968" class="inline-flex justify-center border border-ink text-ink font-bold px-8 py-4 rounded hover:bg-ink hover:text-white transition">Call (404) 702-0968</a>
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/9f35247b47a37a69ac49c9cbb2b1e5a077181d92/sites/masonry-tech-and-construction/21935/photo-3.jpg" alt="Landscaped yard with stone patio and steps" class="w-full h-full object-cover" loading="lazy"></div>
+      <div class="aspect-[4/3] rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1646324554833-f0b6a479fa5d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8Y29uc3RydWN0aW9uJTIwY29udHJhY3RvciUyMHdvcmt8ZW58MXwwfHx8MTc5NDIyOTUxNnww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Builder at work on a timber frame" class="w-full h-full object-cover" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- 9. Service area -->
+<section class="bg-white py-20 lg:py-24 border-t border-ink/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Service area</p>
+    <h2 class="mt-3 h-tight font-extrabold uppercase text-3xl sm:text-4xl">Serving Atlanta, GA</h2>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <span class="border border-ink/20 rounded px-5 py-2.5 font-semibold">Atlanta</span>
+      <span class="border border-ink/20 rounded px-5 py-2.5 font-semibold">Metro Atlanta</span>
+      <span class="border border-ink/20 rounded px-5 py-2.5 font-semibold">Residential</span>
+      <span class="border border-ink/20 rounded px-5 py-2.5 font-semibold">Historic buildings</span>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<div id="reviews-anchor"></div>
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -415,38 +419,21 @@ tailwind.config = {
   })();</script>
 </section>
 
-<!-- SERVICE AREA -->
-<section class="sec bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand">Service area</p>
-      <h2 class="mt-3 font-head font-bold text-4xl lg:text-5xl">Based in Atlanta, Georgia</h2>
-      <p class="mt-5 text-ink/70">Masonry and hardscape work for homes and buildings in Atlanta and the surrounding area. Call to confirm your address.</p>
-    </div>
-    <div class="mt-8 flex flex-wrap gap-3 reveal">
-      <span class="border border-ink/15 rounded px-5 py-2.5 font-medium">Atlanta, GA</span>
-      <span class="border border-ink/15 rounded px-5 py-2.5 font-medium">Residential patios and walkways</span>
-      <span class="border border-ink/15 rounded px-5 py-2.5 font-medium">Brick and stone walls</span>
-      <span class="border border-ink/15 rounded px-5 py-2.5 font-medium">Historic restoration</span>
-    </div>
-  </div>
-</section>
-
-<!-- CALL BAND -->
-<section class="bg-ink text-white sec">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- 10. Final call band -->
+<section class="bg-brandDark text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
     <div class="lg:col-span-7">
-      <h2 class="font-head font-extrabold uppercase text-4xl lg:text-6xl tracking-tight">Ready to <span class="text-brand">start?</span></h2>
-      <p class="mt-5 text-white/75 text-lg max-w-xl">Call or write to Masonry Tech &amp; Construction for a free estimate on your masonry or hardscape project in Atlanta.</p>
+      <h2 class="h-tight font-extrabold uppercase text-4xl sm:text-5xl">Ready to start your project?</h2>
+      <p class="mt-5 text-lg text-white/80 max-w-xl leading-relaxed">Call or email Luis for a free estimate on masonry and hardscape in Atlanta.</p>
     </div>
-    <div class="lg:col-span-5 flex flex-col gap-3">
-      <a href="tel:+14047020968" class="inline-flex items-center justify-center bg-brand hover:bg-[#368808] text-white font-head font-bold text-2xl px-8 py-5 rounded">(404) 702-0968</a>
-      <a href="mailto:luis@matechconstruction.com" class="inline-flex items-center justify-center border border-white/30 hover:bg-white hover:text-ink font-semibold px-6 py-4 rounded text-center break-words text-sm sm:text-base">luis@matechconstruction.com</a>
+    <div class="lg:col-span-5 flex flex-col gap-4">
+      <a href="tel:+14047020968" class="flex items-center justify-center bg-brand text-white font-bold px-6 py-4 rounded hover:bg-[#357f09] transition text-lg">(404) 702-0968</a>
+      <a href="mailto:luis@matechconstruction.com" class="flex items-center justify-center border border-white/40 text-white font-bold px-6 py-4 rounded hover:bg-white hover:text-ink transition text-sm sm:text-base break-words text-center">luis@matechconstruction.com</a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- Contact placeholder -->
 <section id="contact" class="lp-contact" style="background:#14250b;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
@@ -496,7 +483,7 @@ tailwind.config = {
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Masonry</option><option>Hardscape</option><option>Patios and walkways</option><option>Brick walls</option><option>Limestone edging</option><option>Repointing and restoration</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Masonry</option><option>Hardscape</option><option>Patios and pavers</option><option>Stone and brick walls</option><option>Walkways</option><option>Restoration and repointing</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -508,42 +495,42 @@ tailwind.config = {
 
 </main>
 
-<!-- FOOTER -->
-<footer class="bg-ink text-white/75 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-5">
-      <p class="font-head font-bold text-white text-xl uppercase tracking-tight">Masonry Tech <span class="text-brand">&amp;</span> Construction</p>
-      <p class="mt-4 max-w-sm">Masonry and hardscape contractor in Atlanta, Georgia.</p>
+<footer class="bg-ink text-white/75">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div>
+      <div class="text-white font-extrabold uppercase tracking-tight text-lg">Masonry Tech <span class="text-brand">&amp;</span> Construction</div>
+      <p class="mt-4 text-sm leading-relaxed max-w-xs">Masonry and hardscape contractor serving Atlanta, GA.</p>
     </div>
-    <div class="md:col-span-3">
-      <p class="text-white font-semibold mb-3">Contact</p>
-      <p><a href="tel:+14047020968" class="hover:text-white">(404) 702-0968</a></p>
-      <p class="mt-1 break-words"><a href="mailto:luis@matechconstruction.com" class="hover:text-white">luis@matechconstruction.com</a></p>
-      <p class="mt-1">Atlanta, GA</p>
+    <div class="text-sm space-y-2">
+      <div class="text-white font-bold uppercase tracking-widest text-xs mb-3">Contact</div>
+      <a href="tel:+14047020968" class="block hover:text-white">(404) 702-0968</a>
+      <a href="mailto:luis@matechconstruction.com" class="block hover:text-white break-words">luis@matechconstruction.com</a>
+      <div>Atlanta, GA</div>
     </div>
-    <div class="md:col-span-4">
-      <p class="text-white font-semibold mb-3">Explore</p>
-      <ul class="space-y-1">
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#process" class="hover:text-white">How it works</a></li>
-        <li><a href="#work" class="hover:text-white">Our work</a></li>
-        <li><a href="#contact" class="hover:text-white">Contact</a></li>
-      </ul>
+    <div class="text-sm space-y-2">
+      <div class="text-white font-bold uppercase tracking-widest text-xs mb-3">Explore</div>
+      <a href="#services" class="block hover:text-white">Services</a>
+      <a href="#work" class="block hover:text-white">Our work</a>
+      <a href="#about" class="block hover:text-white">About</a>
+      <a href="#contact" class="block hover:text-white">Contact</a>
     </div>
   </div>
   <div class="border-t border-white/10">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/55 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Masonry Tech &amp; Construction website.</p>
-      <p>Some photos by John Kakuk, Marek Minor, Emma Houghton, Josue Isai Ramos Figueroa, Josh Olalde, Randy Fath, Joe Holland and Thatselby on Unsplash.</p>
+      <p>Some photos by Ivan Henao, Josue Isai Ramos Figueroa, Greyson Joralemon, Etienne Girardet, Annie Gray, Josh Olalde and Guilherme Cunha on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
-  mb.addEventListener('click', () => mm.classList.toggle('hidden'));
-  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.add('hidden')));
-  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>

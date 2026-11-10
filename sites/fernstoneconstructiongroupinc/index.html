@@ -7,259 +7,286 @@
 <title>Fernstone Construction Group, Inc. | General Contractor in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
       colors: {
-        brand: '#7ab929',
-        brandDark: '#16210b',
-        ink: '#171a14',
-        cream: '#f6f5ef',
-        stone2: '#e7e6dd'
+        brand: '#92b832',
+        ink: '#161b0d',
+        forest: '#2a3314',
+        paper: '#f6f7f2',
+        tint: '#eaf2d3'
       },
-      fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '20px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; color: #171a14; line-height: 1.6; font-size: 17px; }
-  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
+  body { font-family: 'Outfit', sans-serif; color: #161b0d; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile img { transition: transform .8s ease; }
-  .tile:hover img { transform: scale(1.04); }
-  .tile-shade { background: linear-gradient(to top, rgba(10,14,6,.78) 0%, rgba(10,14,6,.15) 55%, rgba(10,14,6,0) 100%); }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .tile img { transition: none; } }
+  .marquee-wrap { overflow: hidden; }
+  .marquee { display: flex; width: max-content; gap: 12px; animation: scrollL 40s linear infinite; }
+  .marquee.rev { animation-name: scrollR; }
+  @keyframes scrollL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes scrollR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .25s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone2">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/logo-0.png" alt="Fernstone Construction Group, Inc." class="h-11 sm:h-12 w-auto"></a>
+    <a href="#top" class="shrink-0"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/logo-0.png" alt="Fernstone Construction Group, Inc." class="h-10 sm:h-12 w-auto"></a>
     <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
-      <a href="#services" class="hover:text-brand transition-colors">Services</a>
-      <a href="#about" class="hover:text-brand transition-colors">About</a>
-      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
-      <a href="#areas" class="hover:text-brand transition-colors">Service Areas</a>
-      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+      <a href="#how" class="hover:text-forest">How it works</a>
+      <a href="#services" class="hover:text-forest">Services</a>
+      <a href="#projects" class="hover:text-forest">Projects</a>
+      <a href="#faq" class="hover:text-forest">FAQ</a>
+      <a href="#contact" class="hover:text-forest">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+16789770043" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-semibold px-5 py-3 rounded hover:brightness-95 transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        (678) 977-0043
+      <a href="tel:+16789770043" class="inline-flex items-center gap-2 bg-brand text-ink font-semibold rounded-full px-4 sm:px-5 py-2.5 text-sm sm:text-[15px] hover:brightness-95 transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5l1.5 4-2 1.5a11 11 0 005.5 5.5L14 12l4 1.5V16a2 2 0 01-2 2A13 13 0 013 5z"/></svg>
+        <span>(678) 977-0043</span>
       </a>
-      <a href="tel:+16789770043" class="sm:hidden inline-flex items-center justify-center w-11 h-11 bg-brand text-ink rounded" aria-label="Call Fernstone">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 inline-flex items-center justify-center border border-stone2 rounded" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full border border-black/10 flex items-center justify-center" aria-label="Menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-stone2 bg-white">
-    <nav class="px-5 py-4 flex flex-col text-lg font-medium">
-      <a href="#services" class="py-3 border-b border-stone2">Services</a>
-      <a href="#about" class="py-3 border-b border-stone2">About</a>
-      <a href="#projects" class="py-3 border-b border-stone2">Projects</a>
-      <a href="#areas" class="py-3 border-b border-stone2">Service Areas</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
+    <div class="px-5 py-4 flex flex-col gap-1 text-base font-medium">
+      <a href="#how" class="py-3 border-b border-black/5">How it works</a>
+      <a href="#services" class="py-3 border-b border-black/5">Services</a>
+      <a href="#projects" class="py-3 border-b border-black/5">Projects</a>
+      <a href="#faq" class="py-3 border-b border-black/5">FAQ</a>
       <a href="#contact" class="py-3">Contact</a>
-    </nav>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
 <!-- Hero -->
-<section class="relative">
-  <div class="relative min-h-[640px] lg:min-h-[740px] flex items-center">
-    <img src="https://images.unsplash.com/photo-1656733911001-16912b79d2bf?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8N3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Wood-framed interior of a home under construction" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-brandDark/75"></div>
-    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-20 pb-44 lg:pb-52">
-      <h1 class="font-semibold text-[2.5rem] sm:text-6xl lg:text-7xl">Built to last.<br>Built in Atlanta.</h1>
-      <p class="mt-7 text-lg sm:text-xl text-white/85 max-w-2xl mx-auto">Fernstone Construction Group is a full-service general contractor focused on residential building and design. Complete home renovations, custom kitchens and baths, and capital improvement projects, delivered on time and on budget.</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="bg-brand text-ink font-semibold px-8 py-4 rounded hover:brightness-95 transition">Request an estimate</a>
-        <a href="#projects" class="border border-white text-white font-semibold px-8 py-4 rounded hover:bg-white hover:text-ink transition">See our work</a>
+<section class="px-3 sm:px-5 pt-3 sm:pt-5">
+  <div class="relative rounded-[24px] overflow-hidden min-h-[640px] lg:min-h-[700px] flex">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-1.jpg" alt="Renovated kitchen with white cabinets and a wood range hood" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/10"></div>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16 flex flex-col justify-between gap-12">
+      <div class="max-w-2xl">
+        <h1 class="text-[40px] sm:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight text-white">Atlanta homes, renovated and built to last.</h1>
+        <p class="mt-6 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed">Full-service general contracting for homeowners: whole-home renovations, custom kitchens and bathrooms, and additions.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Trust strip -->
-<section class="relative z-10 px-5 lg:px-8">
-  <div class="max-w-6xl mx-auto -mt-28 lg:-mt-24 bg-white rounded shadow-[0_10px_40px_rgba(0,0,0,.10)] border border-stone2">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-stone2">
-      <div class="p-7 flex gap-4 items-start">
-        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        <p class="font-medium leading-snug">Licensed, bonded and insured in four states</p>
-      </div>
-      <div class="p-7 flex gap-4 items-start">
-        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-        <p class="font-medium leading-snug">Over 1,000 full-scale property flips completed</p>
-      </div>
-      <div class="p-7 flex gap-4 items-start">
-        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></svg>
-        <p class="font-medium leading-snug">25+ years combined experience in residential construction</p>
-      </div>
-      <div class="p-7 flex gap-4 items-start">
-        <svg class="shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <p class="font-medium leading-snug">Craftsmanship, communication, knowledge and integrity</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
-<section id="services" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Services</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">What we build in Atlanta</h2>
-      <p class="mt-5 text-ink/70">From a single kitchen to a whole-house renovation, one team handles the build from start to finish.</p>
-    </div>
-
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5">
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[340px]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-4.jpg" alt="Remodeled kitchen with dark countertops and stainless appliances" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Custom kitchens</h3>
-      </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[340px]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-3.jpg" alt="Large renovated kitchen with white cabinets and island seating" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Complete home renovations</h3>
-      </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[340px]">
-        <img src="https://images.unsplash.com/photo-1683372101362-2efc3e75650e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Compact track loader at a home addition site" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Additions and ADUs</h3>
-      </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[340px]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-5.jpg" alt="Outdoor kitchen with built-in grill and ceramic smoker" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Capital improvement projects</h3>
-      </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[340px]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-2.jpg" alt="Renovated bungalow with new porch and fence" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Property renovations and flips</h3>
-      </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[340px]">
-        <img src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen protected with plastic sheeting during a remodel" class="absolute inset-0 w-full h-full object-cover">
-        <div class="tile-shade absolute inset-0"></div>
-        <h3 class="absolute left-6 bottom-5 text-white text-2xl font-medium">Kitchen and bathroom buildouts</h3>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- About split -->
-<section id="about" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1593012671976-1422185230fb?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="House addition under construction behind scaffolding" class="w-full h-full object-cover">
-      </div>
-    </div>
-    <div class="lg:col-span-6 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">About Fernstone</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">A general contractor headquartered in Atlanta</h2>
-      <p class="mt-7 text-ink/75">Fernstone Construction Group, Inc. is a full-service general contracting company focused on residential building and design. We specialize in turnkey complete home renovations, custom kitchen and bathroom buildouts and capital improvement projects.</p>
-      <p class="mt-5 text-ink/75">Our team prides itself on delivering projects on time and on budget, exceeding client expectations with superior skills, craftsmanship and communication. We work closely with you throughout the process so your vision becomes a reality.</p>
-      <a href="#contact" class="mt-9 inline-flex items-center gap-2 bg-brand text-ink font-semibold px-7 py-4 rounded hover:brightness-95 transition">
-        Talk to our team
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Reverse split -->
-<section id="why" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Why choose us</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">Quality and expertise, on every job</h2>
-      <p class="mt-7 text-ink/75">Every Fernstone project is built to last. We prioritize customer satisfaction and keep communication open from the first walkthrough to the final punch list.</p>
-      <ul class="mt-7 space-y-4">
-        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>Licensed, bonded and insured in four states</span></li>
-        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>Over 1,000 full-scale property flips completed</span></li>
-        <li class="flex gap-3"><svg class="shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>Above and beyond craftsmanship, communication, knowledge and integrity</span></li>
-      </ul>
-      <a href="#projects" class="mt-9 inline-flex items-center gap-2 border border-ink text-ink font-semibold px-7 py-4 rounded hover:bg-ink hover:text-white transition">
-        View recent projects
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/5] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1593623671658-6b842c7f9697?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Block and timber home extension with scaffolding" class="w-full h-full object-cover">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Projects gallery -->
-<section id="projects" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Projects</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">Recent work</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-1.jpg" alt="Finished kitchen with white cabinets and wood range hood" class="w-full h-full object-cover"></div>
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-2.jpg" alt="Renovated bungalow exterior with new fence" class="w-full h-full object-cover"></div>
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-3.jpg" alt="Open kitchen with large island and glass-front cabinets" class="w-full h-full object-cover"></div>
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-4.jpg" alt="Kitchen with dark quartz counters and tile backsplash" class="w-full h-full object-cover"></div>
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/photo-5.jpg" alt="Outdoor kitchen with stone-faced counter" class="w-full h-full object-cover"></div>
-      <div class="reveal aspect-[4/3] overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1601303981881-f630d27a7df5?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Second-story addition framed in block under blue sky" class="w-full h-full object-cover"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Areas cream panel -->
-<section id="areas" class="px-5 lg:px-8 pb-24 lg:pb-32">
-  <div class="max-w-5xl mx-auto bg-cream rounded px-6 sm:px-12 py-16 lg:py-20 text-center reveal">
-    <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Service areas</p>
-    <h2 class="text-3xl lg:text-5xl font-semibold">Serving clients in four states</h2>
-    <p class="mt-6 text-ink/70 max-w-xl mx-auto">Based in Atlanta, Georgia, Fernstone proudly serves clients in Alabama, Florida, Georgia and North Carolina.</p>
-    <div class="mt-8 flex flex-wrap justify-center gap-x-10 gap-y-3 font-heading text-xl font-medium">
-      <span>Alabama</span><span>Florida</span><span>Georgia</span><span>North Carolina</span>
-    </div>
-    <a href="#contact" class="mt-10 inline-flex bg-brand text-ink font-semibold px-8 py-4 rounded hover:brightness-95 transition">Start your project</a>
-  </div>
-</section>
-
-<!-- Reviews placeholder: none included, their site shows only a rating count without review text -->
-
-<!-- Final call -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 items-center">
-    <div class="lg:col-span-7 lg:row-start-1 lg:col-start-1">
-      <div class="aspect-[16/10] lg:aspect-[16/11] overflow-hidden rounded">
-        <img src="https://images.unsplash.com/photo-1786269691602-519fdaa112ea?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjZ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Cement mixer and materials in a garden during a home project" class="w-full h-full object-cover">
-      </div>
-    </div>
-    <div class="lg:col-span-5 lg:row-start-1 lg:col-start-8 relative z-10 -mt-12 lg:mt-0 mx-4 lg:mx-0">
-      <div class="bg-brand text-ink rounded p-8 lg:p-11">
-        <h2 class="text-3xl lg:text-4xl font-semibold">Ready to plan your project?</h2>
-        <p class="mt-4 text-ink/80">Call us or send the details of your project. We will get back to you about next steps.</p>
-        <div class="mt-7 flex flex-col sm:flex-row gap-3">
-          <a href="tel:+16789770043" class="bg-ink text-white font-semibold px-6 py-4 rounded text-center hover:bg-brandDark transition">(678) 977-0043</a>
-          <a href="#contact" class="border border-ink font-semibold px-6 py-4 rounded text-center hover:bg-ink hover:text-white transition">Send a message</a>
+      <div class="bg-white rounded-[20px] p-5 sm:p-6 max-w-md w-full">
+        <p class="text-xl font-semibold">Get a free estimate</p>
+        <div class="mt-4 flex flex-col sm:flex-row gap-3">
+          <a href="tel:+16789770043" class="flex-1 inline-flex items-center justify-center gap-2 bg-brand text-ink font-semibold rounded-full px-5 py-3.5 hover:brightness-95 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5l1.5 4-2 1.5a11 11 0 005.5 5.5L14 12l4 1.5V16a2 2 0 01-2 2A13 13 0 013 5z"/></svg>
+            (678) 977-0043
+          </a>
+          <a href="#contact" class="flex-1 inline-flex items-center justify-center rounded-full px-5 py-3.5 font-semibold border border-ink/15 hover:bg-paper transition">Send a message</a>
         </div>
+        <p class="mt-4 text-sm text-ink/60">Serving Georgia, Alabama, Florida and North Carolina.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50">The process</p>
+      <h2 class="mt-3 text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1]">How Fernstone works</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-[20px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-3.jpg" alt="Open kitchen with white cabinets and island seating" class="w-full h-full object-cover"></div>
+        <h3 class="mt-6 text-2xl font-semibold">Call us</h3>
+        <p class="mt-2 text-lg text-ink/70 leading-relaxed">Tell us about your project and your address. We'll set up your free estimate.</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-[20px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-4.jpg" alt="Kitchen with dark countertops, tile backsplash and stainless appliances" class="w-full h-full object-cover"></div>
+        <h3 class="mt-6 text-2xl font-semibold">We plan it together</h3>
+        <p class="mt-2 text-lg text-ink/70 leading-relaxed">We work closely with you so the plan matches your vision, your timeline and your budget.</p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-[20px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-2.jpg" alt="Finished home with covered front porch and wood fence gate" class="w-full h-full object-cover"></div>
+        <h3 class="mt-6 text-2xl font-semibold">We build it</h3>
+        <p class="mt-2 text-lg text-ink/70 leading-relaxed">Skilled craftsmanship and clear communication, delivered on time and on budget.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services tiles -->
+<section id="services" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50">What we build</p>
+      <h2 class="mt-3 text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1]">More than just renovations</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-6">
+      <a href="#contact" class="group reveal block">
+        <div class="aspect-square rounded-[20px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-2.jpg" alt="Complete home renovation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Complete home renovations</p>
+      </a>
+      <a href="#contact" class="group reveal block">
+        <div class="aspect-square rounded-[20px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-1.jpg" alt="Custom kitchen buildout" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Custom kitchens</p>
+      </a>
+      <a href="#contact" class="group reveal block">
+        <div class="aspect-square rounded-[20px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-3.jpg" alt="Kitchen and bathroom buildouts" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Kitchen and bath buildouts</p>
+      </a>
+      <a href="#contact" class="group reveal block">
+        <div class="aspect-square rounded-[20px] overflow-hidden"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-5.jpg" alt="Outdoor kitchen" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Capital improvement projects</p>
+      </a>
+      <a href="#contact" class="group reveal block col-span-2 md:col-span-1">
+        <div class="aspect-square md:aspect-square rounded-[20px] overflow-hidden"><img src="https://images.unsplash.com/photo-1768321902290-54497eeb9cf6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior framing and insulation during renovation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+        <p class="mt-3 text-[15px] font-medium">Additions and ADUs</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Photo band -->
+<section class="px-3 sm:px-5 pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto">
+    <div class="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] rounded-[24px] overflow-hidden">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-2.jpg" alt="Renovated home with front porch under a blue sky" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>
+
+<!-- Statement -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center reveal">
+    <p class="text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.15]">At Fernstone Construction Group, our projects are built to last.</p>
+  </div>
+</section>
+
+<!-- Marquee -->
+<section class="pb-24 lg:pb-32 space-y-3">
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <!-- set 1 -->
+      <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Licensed, bonded and insured in 4 states</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-tint text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Over 1,000 full-scale property flips completed</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>25+ years combined residential experience</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-tint text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Turnkey home renovations</span>
+      <!-- set 2 -->
+      <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Licensed, bonded and insured in 4 states</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-tint text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Over 1,000 full-scale property flips completed</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>25+ years combined residential experience</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-tint text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Turnkey home renovations</span>
+    </div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee rev">
+      <span class="shrink-0 inline-flex items-center gap-2 bg-tint text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Custom kitchen and bathroom buildouts</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Capital improvement projects</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-tint text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>On time and on budget</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Headquartered in Atlanta, GA</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-tint text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Custom kitchen and bathroom buildouts</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Capital improvement projects</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-tint text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>On time and on budget</span>
+      <span class="shrink-0 inline-flex items-center gap-2 bg-brand text-ink rounded-full px-5 py-3 text-[15px] font-medium"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Headquartered in Atlanta, GA</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="pb-24 lg:pb-32">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8">
+    <div class="reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50">FAQ</p>
+      <h2 class="mt-3 text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1]">Questions, answered</h2>
+    </div>
+    <div class="mt-12 space-y-3">
+      <details class="group bg-paper rounded-[20px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-semibold">What does Fernstone build?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center text-xl leading-none">+</span></summary>
+        <p class="mt-4 text-lg text-ink/70 leading-relaxed">We are a full-service general contractor focused on residential building and design. We specialize in turnkey complete home renovations, custom kitchen and bathroom buildouts and capital improvement projects.</p>
+      </details>
+      <details class="group bg-paper rounded-[20px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-semibold">Where do you work?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center text-xl leading-none">+</span></summary>
+        <p class="mt-4 text-lg text-ink/70 leading-relaxed">We are headquartered in Atlanta, GA and serve clients in Alabama, Florida, Georgia and North Carolina.</p>
+      </details>
+      <details class="group bg-paper rounded-[20px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-semibold">Are you licensed and insured?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center text-xl leading-none">+</span></summary>
+        <p class="mt-4 text-lg text-ink/70 leading-relaxed">Yes. Fernstone Construction Group is licensed, bonded and insured in four states.</p>
+      </details>
+      <details class="group bg-paper rounded-[20px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-semibold">How much experience does your team have?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center text-xl leading-none">+</span></summary>
+        <p class="mt-4 text-lg text-ink/70 leading-relaxed">Our team brings more than 25 years of combined experience in residential construction, and we have completed over 1,000 full-scale property flips.</p>
+      </details>
+      <details class="group bg-paper rounded-[20px] px-6 py-5">
+        <summary class="flex items-center justify-between gap-4 text-lg font-semibold">How do I get started?
+          <span class="plus shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center text-xl leading-none">+</span></summary>
+        <p class="mt-4 text-lg text-ink/70 leading-relaxed">Call (678) 977-0043 or send us your project address and a short description through the contact form. We work closely with you throughout the process so your vision becomes a reality.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Project cards -->
+<section id="projects" class="bg-paper py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50">Our work</p>
+      <h2 class="mt-3 text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1]">Recent project types</h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <article class="reveal bg-white rounded-[20px] overflow-hidden">
+        <div class="relative aspect-[4/3]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-1.jpg" alt="White kitchen with wood hood and bronze hardware" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-semibold rounded-full px-3 py-1.5">Kitchens</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold">Custom kitchen buildouts</h3>
+          <p class="mt-2 text-ink/70 text-lg leading-relaxed">Cabinetry, counters and finishes built to your plan.</p>
+        </div>
+      </article>
+      <article class="reveal bg-white rounded-[20px] overflow-hidden">
+        <div class="relative aspect-[4/3]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-2.jpg" alt="Renovated bungalow with new porch and fence" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-semibold rounded-full px-3 py-1.5">Whole home</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold">Complete home renovations</h3>
+          <p class="mt-2 text-ink/70 text-lg leading-relaxed">Turnkey renovations from the first demo to the final detail.</p>
+        </div>
+      </article>
+      <article class="reveal bg-white rounded-[20px] overflow-hidden">
+        <div class="relative aspect-[4/3]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-5.jpg" alt="Outdoor kitchen with grill and ceramic smoker" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white text-ink text-xs font-semibold rounded-full px-3 py-1.5">Improvements</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold">Capital improvement projects</h3>
+          <p class="mt-2 text-ink/70 text-lg leading-relaxed">Upgrades that add lasting value to the property.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -267,8 +294,8 @@ tailwind.config = {
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(122,185,41,0.10);color:#7ab929}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#7ab929}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(146,184,50,0.10);color:#92b832}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#92b832}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -279,16 +306,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:20px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:16px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#7ab929;box-shadow:0 0 0 4px rgba(122,185,41,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#7ab929;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#92b832;box-shadow:0 0 0 4px rgba(146,184,50,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:16px;background:#92b832;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -299,21 +326,21 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#7ab929">Contact</p><h2 class="lp-h" style="color:#171717">Request an estimate</h2><p class="lp-p" style="color:#525252">Tell us about your project and the Fernstone team will get back to you.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#92b832">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about your project and we'll get back to you about your free estimate.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+16789770043" class="lp-v">(678) 977-0043</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:info@fernstoneconstruction.com" class="lp-v">info@fernstoneconstruction.com</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Atlanta, GA</span></span></li>
-        </ul></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:20px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/photo-5.jpg') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Complete home renovations</option><option>Custom kitchens</option><option>Bathroom buildouts</option><option>Additions and ADUs</option><option>Capital improvement projects</option><option>Property renovations and flips</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Complete home renovations</option><option>Custom kitchens</option><option>Bathroom buildouts</option><option>Capital improvement projects</option><option>Additions and ADUs</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -326,61 +353,68 @@ tailwind.config = {
 </main>
 
 <!-- Footer -->
-<footer class="bg-brandDark text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
-    <div class="lg:col-span-4">
-      <div class="inline-block bg-white rounded p-3">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/fernstone-construction-group-inc/21927/logo-0.png" alt="Fernstone Construction Group, Inc." class="h-11 w-auto">
+<footer class="bg-paper border-t border-black/5">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 grid-flow-row-dense">
+      <div class="lg:col-span-5">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/fernstone-construction-group-inc/21947/logo-0.png" alt="Fernstone Construction Group, Inc." class="h-12 w-auto">
+        <p class="mt-6 text-lg"><a href="tel:+16789770043" class="font-semibold hover:text-forest">(678) 977-0043</a></p>
+        <p class="mt-1 text-ink/70 break-words"><a href="mailto:info@fernstoneconstruction.com" class="hover:text-forest">info@fernstoneconstruction.com</a></p>
+        <p class="mt-1 text-ink/70">Atlanta, GA</p>
       </div>
-      <p class="mt-6 text-white/70 max-w-sm">Full-service residential general contractor headquartered in Atlanta, GA. Our projects are built to last.</p>
+      <div class="lg:col-span-2">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50">Explore</p>
+        <ul class="mt-4 space-y-2 text-[15px]">
+          <li><a href="#how" class="hover:text-forest">How it works</a></li>
+          <li><a href="#services" class="hover:text-forest">Services</a></li>
+          <li><a href="#projects" class="hover:text-forest">Projects</a></li>
+          <li><a href="#faq" class="hover:text-forest">FAQ</a></li>
+          <li><a href="#contact" class="hover:text-forest">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50">Follow</p>
+        <ul class="mt-4 space-y-2 text-[15px]">
+          <li><a href="https://www.instagram.com/fernstoneconstruction/" class="hover:text-forest">Instagram</a></li>
+          <li><a href="https://www.facebook.com/fernstoneconstruction/" class="hover:text-forest">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/michael-adley-b66170b9/" class="hover:text-forest">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="sm:col-span-2 lg:col-span-3">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-ink/50">Service areas</p>
+        <ul class="mt-4 space-y-2 text-[15px]">
+          <li>Alabama</li>
+          <li>Florida</li>
+          <li>Georgia</li>
+          <li>North Carolina</li>
+        </ul>
+      </div>
     </div>
-    <div class="lg:col-span-2">
-      <h4 class="text-sm font-semibold tracking-[0.15em] uppercase text-brand mb-5">Company</h4>
-      <ul class="space-y-3 text-white/80">
-        <li><a href="#about" class="hover:text-brand transition-colors">About</a></li>
-        <li><a href="#projects" class="hover:text-brand transition-colors">Projects</a></li>
-        <li><a href="#areas" class="hover:text-brand transition-colors">Service areas</a></li>
-        <li><a href="#contact" class="hover:text-brand transition-colors">Contact</a></li>
-      </ul>
-    </div>
-    <div class="lg:col-span-3">
-      <h4 class="text-sm font-semibold tracking-[0.15em] uppercase text-brand mb-5">Services</h4>
-      <ul class="space-y-3 text-white/80">
-        <li>Complete home renovations</li>
-        <li>Custom kitchens and baths</li>
-        <li>Additions and ADUs</li>
-        <li>Capital improvements</li>
-      </ul>
-    </div>
-    <div class="lg:col-span-3">
-      <h4 class="text-sm font-semibold tracking-[0.15em] uppercase text-brand mb-5">Contact</h4>
-      <ul class="space-y-3 text-white/80">
-        <li><a href="tel:+16789770043" class="hover:text-brand transition-colors">(678) 977-0043</a></li>
-        <li><a href="mailto:info@fernstoneconstruction.com" class="hover:text-brand transition-colors break-words text-[15px]">info@fernstoneconstruction.com</a></li>
-        <li>Atlanta, GA</li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/55 space-y-1">
+    <div class="mt-14 pt-6 border-t border-black/10 text-sm text-ink/55 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Fernstone Construction Group, Inc. website.</p>
-      <p>Some photos by Brett Jordan, Annie Spratt, Samuel Cruz and immo RENOVATION on Unsplash.</p>
+      <p>Some photos by Olek Buzunov on Unsplash.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => {
-    const open = menu.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', open);
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { menu.classList.add('hidden'); });
   });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); btn.setAttribute('aria-expanded', false); }));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('in'); });
+  }
 </script>
 </body>
 </html>

@@ -7,19 +7,18 @@
 <title>The Berndsen Co | Luxury Home Builders in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: {
-        brand: '#855f3d',
-        brandDark: '#2a1f17',
-        slate: { ink: '#4a4f57' },
-        ink: '#17181a',
-        paper: '#f7f4ef',
-        sand: '#ece6dc'
+        brand: '#835F3F',
+        slate: { brand: '#4A4F55' },
+        ink: '#23262A',
+        cream: '#F6F2EC',
+        bone: '#FBF9F6'
       },
       fontFamily: {
         heading: ['Jost', 'sans-serif'],
@@ -32,53 +31,49 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Manrope', sans-serif; color: #17181a; background: #fff; -webkit-font-smoothing: antialiased; }
-  h1, h2, h3, h4 { font-family: 'Jost', sans-serif; letter-spacing: -0.01em; }
-  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  body { font-family: 'Manrope', sans-serif; font-size: 17px; line-height: 1.6; color: #2b2e32; background: #FBF9F6; }
+  h1, h2, h3, h4 { font-family: 'Jost', sans-serif; line-height: 1.12; letter-spacing: -0.01em; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile img { transition: transform .8s ease; }
+  .tile img { transition: transform .9s ease; }
   .tile:hover img { transform: scale(1.04); }
-  .ba-wrap { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
-  .ba-top { position: absolute; inset: 0; clip-path: inset(0 50% 0 0); }
-  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #fff; transform: translateX(-1px); pointer-events: none; }
-  .ba-knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 4px; background: #855f3d; border: 2px solid #fff; display: flex; align-items: center; justify-content: center; pointer-events: none; }
-  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .eyebrow { font-family: 'Manrope', sans-serif; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .tile img { transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="font-body text-base md:text-[17px] leading-relaxed">
+<body class="antialiased">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/10">
+<header class="sticky top-0 z-50 bg-bone/95 backdrop-blur-none border-b border-black/10">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
-    <a href="#top" class="shrink-0 flex items-center">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/logo-0.png" alt="The Berndsen Co" class="h-12 w-auto">
+    <a href="#top" class="flex-shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/logo-0.png" alt="The Berndsen Co" class="h-12 w-auto">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-ink">
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#process" class="hover:text-brand">Process</a>
-      <a href="#work" class="hover:text-brand">Our Work</a>
-      <a href="#press" class="hover:text-brand">Press &amp; Awards</a>
-      <a href="#contact" class="hover:text-brand">Contact</a>
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink">
+      <a href="#services" class="hover:text-brand transition-colors">What we build</a>
+      <a href="#about" class="hover:text-brand transition-colors">About</a>
+      <a href="#process" class="hover:text-brand transition-colors">Process</a>
+      <a href="#press" class="hover:text-brand transition-colors">Press</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+14043037272" class="inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-4 sm:px-5 py-3 rounded hover:bg-brandDark transition-colors">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span class="hidden sm:inline">(404) 303-7272</span>
-        <span class="sm:hidden">Call</span>
+      <a href="tel:+14043037272" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white px-5 py-3 text-[15px] font-semibold rounded hover:bg-ink transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (404) 303-7272
       </a>
-      <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center border border-black/15 rounded" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-white">
-    <div class="px-5 py-4 flex flex-col gap-1 text-base font-semibold">
-      <a href="#services" class="py-3 border-b border-black/5">Services</a>
-      <a href="#process" class="py-3 border-b border-black/5">Process</a>
-      <a href="#work" class="py-3 border-b border-black/5">Our Work</a>
-      <a href="#press" class="py-3 border-b border-black/5">Press &amp; Awards</a>
-      <a href="#contact" class="py-3">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-bone">
+    <div class="px-5 py-5 flex flex-col gap-4 text-ink font-medium">
+      <a href="#services" class="mobile-link">What we build</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#process" class="mobile-link">Process</a>
+      <a href="#press" class="mobile-link">Press</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="tel:+14043037272" class="inline-flex justify-center bg-brand text-white px-5 py-3 font-semibold rounded">Call (404) 303-7272</a>
     </div>
   </div>
 </header>
@@ -86,300 +81,217 @@ tailwind.config = {
 <main id="top">
 
 <!-- HERO -->
-<section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-2.jpg" alt="Wood-paneled sitting room with tall windows built by The Berndsen Company" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-ink/70"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 md:py-28 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-    <div class="lg:col-span-7">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-white/70 mb-6">Luxury home builders in Atlanta</p>
-      <h1 class="font-heading font-semibold uppercase leading-[0.98] text-5xl sm:text-6xl lg:text-[5.25rem]">
-        Houses built<br>with the care<br>of a craft.
-      </h1>
-      <p class="mt-8 text-lg text-white/85 max-w-xl">The Berndsen Company builds bespoke residences, condominiums, renovations, retreats and outdoor living spaces across Atlanta.</p>
-      <ul class="mt-8 space-y-3 text-white/90">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Nine-time recipient of the GAHBA OBIE Awards</span></li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>2008 ICAA Shutze Award recognition</span></li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Featured in Atlanta Style &amp; Design and House Beautiful</span></li>
-      </ul>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-brand text-white font-semibold px-7 py-4 rounded hover:bg-white hover:text-ink transition-colors">Start a conversation</a>
-        <a href="#work" class="border border-white/60 text-white font-semibold px-7 py-4 rounded hover:bg-white hover:text-ink transition-colors">See our work</a>
+<section class="relative">
+  <div class="relative h-[620px] md:h-[720px] w-full overflow-hidden">
+    <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-3.jpg" alt="Garden courtyard and pool pavilion built by The Berndsen Co" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-[#1b1d20]/65"></div>
+    <div class="relative h-full max-w-4xl mx-auto px-5 flex flex-col items-center justify-center text-center text-white pb-20">
+      <p class="eyebrow text-white/80 mb-6">Luxury home builders · Atlanta, Georgia</p>
+      <h1 class="font-heading font-medium text-4xl sm:text-5xl lg:text-[64px]">Custom homes built<br>with Atlanta craftsmanship</h1>
+      <p class="mt-7 max-w-2xl text-lg text-white/85">The Berndsen Company builds new residences, condominiums, renovations, retreats and outdoor living spaces for Atlanta homeowners who expect every detail done right.</p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-brand text-white px-8 py-4 font-semibold rounded hover:bg-white hover:text-ink transition-colors">Start a project</a>
+        <a href="#services" class="border border-white text-white px-8 py-4 font-semibold rounded hover:bg-white hover:text-ink transition-colors">See what we build</a>
       </div>
     </div>
-    <div class="lg:col-span-5">
-      <div class="bg-paper text-ink rounded p-7 sm:p-9">
-        <h2 class="font-heading text-2xl sm:text-3xl font-semibold leading-tight">Talk to our team</h2>
-        <p class="mt-3 text-ink/70">Call or write about your Atlanta project. We will get back to you directly.</p>
-        <div class="mt-7 space-y-3">
-          <a href="tel:+14043037272" class="flex items-center gap-3 bg-brand text-white font-semibold px-5 py-4 rounded hover:bg-brandDark transition-colors">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            (404) 303-7272
-          </a>
-          <a href="mailto:info@berndsen.com" class="flex items-center gap-3 border border-ink/25 font-semibold px-5 py-4 rounded hover:border-brand hover:text-brand transition-colors break-words">
-            <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            info@berndsen.com
-          </a>
-        </div>
+  </div>
+  <!-- Trust strip -->
+  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-14 z-10">
+    <div class="bg-bone border border-black/10 rounded grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-black/10">
+      <div class="p-6 flex items-start gap-4">
+        <svg class="flex-shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <div><p class="font-heading font-semibold text-ink leading-snug">Custom residences</p><p class="text-sm text-slate-brand mt-1">Built in Atlanta</p></div>
+      </div>
+      <div class="p-6 flex items-start gap-4">
+        <svg class="flex-shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7.5 21l4.5-2.5 4.5 2.5L15 13.5"/></svg>
+        <div><p class="font-heading font-semibold text-ink leading-snug">9× OBIE Awards</p><p class="text-sm text-slate-brand mt-1">Greater Atlanta HBA</p></div>
+      </div>
+      <div class="p-6 flex items-start gap-4">
+        <svg class="flex-shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.5 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.5l1.1-6L3.4 9.3l6-.8z"/></svg>
+        <div><p class="font-heading font-semibold text-ink leading-snug">2008 Shutze Award</p><p class="text-sm text-slate-brand mt-1">ICAA recognition</p></div>
+      </div>
+      <div class="p-6 flex items-start gap-4">
+        <svg class="flex-shrink-0 text-brand mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3z"/><path d="M8 9h8M8 13h8"/></svg>
+        <div><p class="font-heading font-semibold text-ink leading-snug">Atlanta Style &amp; Design</p><p class="text-sm text-slate-brand mt-1">Cover story, Summer 2025</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES STRIP -->
-<section class="bg-ink text-white border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase">
-    <span>New Residences</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
-    <span>Condominiums</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
-    <span>Renovations</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
-    <span>Retreats</span><span class="w-1.5 h-1.5 bg-brand rounded-full"></span>
-    <span>Outdoor Living</span>
-  </div>
-</section>
-
-<!-- SERVICES (brand section) -->
-<section id="services" class="bg-brand text-white py-24 lg:py-32">
+<!-- SERVICES -->
+<section id="services" class="pt-28 pb-24 lg:pt-36 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-white/75 mb-4">Our services</p>
-      <h2 class="font-heading text-4xl sm:text-5xl font-semibold leading-[1.05]">Five ways we build for Atlanta homeowners</h2>
+    <div class="max-w-2xl mb-14 reveal">
+      <p class="eyebrow text-brand mb-4">Our services</p>
+      <h2 class="font-heading font-medium text-4xl lg:text-5xl text-ink">What we build in Atlanta</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="reveal bg-brandDark rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-3.jpg" alt="Garden courtyard with pool and pavilion" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7"><h3 class="font-heading text-2xl font-semibold uppercase tracking-wide">New Residences</h3><p class="mt-3 text-white/75">Bespoke custom homes built from the ground up, with architecture and landscape working as one.</p></div>
-      </article>
-      <article class="reveal bg-brandDark rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-4.jpg" alt="Condominium primary bath with arched window and city view" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7"><h3 class="font-heading text-2xl font-semibold uppercase tracking-wide">Condominiums</h3><p class="mt-3 text-white/75">Refined high-rise interiors, finished with precise millwork, stone and lighting.</p></div>
-      </article>
-      <article class="reveal bg-brandDark rounded overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-5.jpg" alt="Renovated entry hall with glass stair railing" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="p-7"><h3 class="font-heading text-2xl font-semibold uppercase tracking-wide">Renovations</h3><p class="mt-3 text-white/75">Careful updates to existing homes that respect the architecture and improve how it lives.</p></div>
-      </article>
-    </div>
-    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <article class="reveal bg-brandDark rounded overflow-hidden grid grid-cols-1 sm:grid-cols-5">
-        <div class="sm:col-span-2 aspect-[4/3] sm:aspect-auto overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-6.jpg" alt="Lodge-style retreat with lawn and bocce court" class="w-full h-full object-cover" loading="lazy"></div>
-        <div class="sm:col-span-3 p-7"><h3 class="font-heading text-2xl font-semibold uppercase tracking-wide">Retreats</h3><p class="mt-3 text-white/75">Lodges and getaway homes with timber, stone and generous porches.</p></div>
-      </article>
-      <article class="reveal bg-brandDark rounded overflow-hidden grid grid-cols-1 sm:grid-cols-5">
-        <div class="sm:col-span-2 aspect-[4/3] sm:aspect-auto overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-3.jpg" alt="Pool terrace with gardens" class="w-full h-full object-cover object-center" loading="lazy"></div>
-        <div class="sm:col-span-3 p-7"><h3 class="font-heading text-2xl font-semibold uppercase tracking-wide">Outdoor Living</h3><p class="mt-3 text-white/75">Pools, pavilions, terraces and gardens designed to be used every day.</p></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Our process</p>
-      <h2 class="font-heading text-4xl sm:text-5xl font-semibold leading-[1.05]">How your project runs</h2>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-heading text-2xl font-semibold">1</div>
-        <h3 class="mt-6 font-heading text-2xl font-semibold">Plan together</h3>
-        <p class="mt-3 text-ink/70">We start with a conversation about your property, your goals and how you want to live in the home.</p>
-      </div>
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-heading text-2xl font-semibold">2</div>
-        <h3 class="mt-6 font-heading text-2xl font-semibold">Build with care</h3>
-        <p class="mt-3 text-ink/70">Our team manages the construction from foundation to roof, working closely with your architect and designer.</p>
-      </div>
-      <div class="reveal">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-heading text-2xl font-semibold">3</div>
-        <h3 class="mt-6 font-heading text-2xl font-semibold">Finish and hand over</h3>
-        <p class="mt-3 text-ink/70">Interior details, landscape and final walkthroughs bring the home to its finished state.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SIDE BY SIDE / SLIDER -->
-<section class="bg-ink text-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-white/60 mb-4">Detail work</p>
-      <h2 class="font-heading text-4xl sm:text-5xl font-semibold leading-[1.05]">Two interiors, one standard of finish</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure class="reveal">
-        <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-2.jpg" alt="Timber-lined sitting room" class="w-full h-full object-cover" loading="lazy"></div>
-        <figcaption class="mt-4 text-white/70 text-sm">Reclaimed timber, tall windows and a quiet palette.</figcaption>
-      </figure>
-      <figure class="reveal">
-        <div class="aspect-[4/3] overflow-hidden rounded"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-4.jpg" alt="Marble and cabinetry primary bath" class="w-full h-full object-cover" loading="lazy"></div>
-        <figcaption class="mt-4 text-white/70 text-sm">Marble, millwork and warm light, high above the city.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- COMPARISON -->
-<section class="bg-paper py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Why a builder</p>
-      <h2 class="font-heading text-4xl sm:text-5xl font-semibold leading-[1.05]">Coordinating trades yourself vs. one builder</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
-      <div class="reveal bg-white rounded p-8 lg:p-10 border border-ink/10">
-        <h3 class="font-heading text-2xl font-semibold">Doing it yourself</h3>
-        <ul class="mt-6 space-y-4 text-ink/70">
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-ink/40 shrink-0"></span>Hiring and scheduling every trade on your own</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-ink/40 shrink-0"></span>Resolving conflicts between architect, designer and crews</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-ink/40 shrink-0"></span>Tracking materials, deliveries and inspections</li>
-          <li class="flex gap-3"><span class="mt-2.5 w-2 h-0.5 bg-ink/40 shrink-0"></span>Carrying the day-to-day risk yourself</li>
-        </ul>
-      </div>
-      <div class="reveal bg-white rounded p-8 lg:p-10 border-2 border-brand">
-        <h3 class="font-heading text-2xl font-semibold text-brand">One builder, The Berndsen Co</h3>
-        <ul class="mt-6 space-y-4">
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One team coordinating every phase of construction</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Close work with your architect and designer</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Recognized by OBIE and ICAA awards</li>
-          <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A single point of contact by phone or email</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT WE BUILD / BENTO -->
-<section id="work" class="bg-white py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Our work</p>
-      <h2 class="font-heading text-4xl sm:text-5xl font-semibold leading-[1.05]">What we build</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded aspect-[4/3] sm:aspect-[16/9] sm:col-span-2 lg:col-span-2 lg:row-span-2 lg:aspect-auto lg:min-h-[520px]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-3.jpg" alt="Estate garden with pool and pavilion" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6 text-white"><h3 class="font-heading text-2xl font-semibold">Garden pavilion and pool</h3><p class="text-white/80 text-sm mt-1">Outdoor Living</p></div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+      <a href="#contact" class="tile group relative block md:col-span-5 aspect-[4/5] md:aspect-auto md:h-[440px] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-7.jpg" alt="Arched stone loggia on a new residence" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1b1d20]/80 via-transparent to-transparent"></div>
+        <h3 class="absolute left-6 bottom-6 text-white font-heading font-medium text-2xl">New Residences</h3>
       </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded aspect-[4/3]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-4.jpg" alt="Primary bath with arched window" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-5 text-white"><h3 class="font-heading text-xl font-semibold">Skyline primary bath</h3><p class="text-white/80 text-sm">Condominiums</p></div>
+      <a href="#contact" class="tile group relative block md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[440px] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-4.jpg" alt="Condominium primary bath with arched window over Atlanta" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1b1d20]/80 via-transparent to-transparent"></div>
+        <h3 class="absolute left-6 bottom-6 text-white font-heading font-medium text-2xl">Condominiums</h3>
       </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded aspect-[4/3]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-5.jpg" alt="Gallery-style entry hall" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-5 text-white"><h3 class="font-heading text-xl font-semibold">Gallery entry hall</h3><p class="text-white/80 text-sm">Renovations</p></div>
+      <a href="#contact" class="tile group relative block md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[440px] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-12.jpg" alt="Renovated dining room with paneled walls" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1b1d20]/80 via-transparent to-transparent"></div>
+        <h3 class="absolute left-6 bottom-6 text-white font-heading font-medium text-2xl">Renovations</h3>
       </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded aspect-[4/3]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-6.jpg" alt="Lodge with lawn and bocce court" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-5 text-white"><h3 class="font-heading text-xl font-semibold">Lodge and lawn</h3><p class="text-white/80 text-sm">Retreats</p></div>
+      <a href="#contact" class="tile group relative block md:col-span-5 aspect-[4/5] md:aspect-auto md:h-[440px] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-6.jpg" alt="Wooded retreat with covered porch and bocce court" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1b1d20]/80 via-transparent to-transparent"></div>
+        <h3 class="absolute left-6 bottom-6 text-white font-heading font-medium text-2xl">Retreats</h3>
       </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded aspect-[4/3]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-2.jpg" alt="Timber sitting room" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-5 text-white"><h3 class="font-heading text-xl font-semibold">Timber sitting room</h3><p class="text-white/80 text-sm">New Residences</p></div>
+      <a href="#contact" class="tile group relative block md:col-span-5 aspect-[4/5] md:aspect-auto md:h-[440px] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-11.jpg" alt="Stone outdoor fireplace and pizza oven" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1b1d20]/80 via-transparent to-transparent"></div>
+        <h3 class="absolute left-6 bottom-6 text-white font-heading font-medium text-2xl">Outdoor Living</h3>
       </a>
-      <a href="#contact" class="tile reveal relative block overflow-hidden rounded aspect-[4/3] sm:col-span-2 lg:col-span-2 sm:aspect-[16/9] lg:aspect-[16/9]">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-6.jpg" alt="Lodge exterior at golden hour" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-5 text-white"><h3 class="font-heading text-xl font-semibold">Porches built for long evenings</h3><p class="text-white/80 text-sm">Retreats</p></div>
+      <a href="#contact" class="tile group relative block md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[440px] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-2.jpg" alt="Timber-beamed sitting room with tall windows" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1b1d20]/80 via-transparent to-transparent"></div>
+        <h3 class="absolute left-6 bottom-6 text-white font-heading font-medium text-2xl">Custom Interiors &amp; Millwork</h3>
       </a>
     </div>
   </div>
 </section>
 
-<!-- OWNER / ABOUT SPLIT -->
-<section class="bg-paper py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- ABOUT SPLIT -->
+<section id="about" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
     <div class="lg:col-span-6 reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">About The Berndsen Co</p>
-      <h2 class="font-heading text-4xl sm:text-5xl font-semibold leading-[1.05]">Luxury homes, built the Atlanta way</h2>
-      <p class="mt-6 text-ink/75">The Berndsen Company is a luxury home builder in Atlanta, creating bespoke residences with classical detail and modern comfort. Our work has been recognized by the Greater Atlanta Home Builders Association and the ICAA, and featured in leading design publications.</p>
-      <ul class="mt-8 space-y-3">
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>OBIE Awards recipient, nine times</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2008 Shutze Award, David Residence with Historical Concepts</li>
-        <li class="flex items-start gap-3"><svg class="mt-1 shrink-0 text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Featured in Traditional Building and Modern Luxury Interiors</li>
-      </ul>
-      <div class="mt-9 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-brand text-white font-semibold px-7 py-4 rounded hover:bg-brandDark transition-colors">Contact us</a>
-        <a href="tel:+14043037272" class="border border-ink/30 font-semibold px-7 py-4 rounded hover:border-brand hover:text-brand transition-colors">(404) 303-7272</a>
+      <div class="aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-9.jpg" alt="Primary bath with hand-painted wallpaper and herringbone marble floor" class="w-full h-full object-cover">
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] overflow-hidden rounded">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/photo-5.jpg" alt="Interior hallway with art and glass stair railing" class="w-full h-full object-cover" loading="lazy">
+      <p class="eyebrow text-brand mb-4">The Berndsen Company</p>
+      <h2 class="font-heading font-medium text-4xl lg:text-5xl text-ink">Atlanta luxury homes, built to the last detail</h2>
+      <p class="mt-7 text-slate-brand">The Berndsen Company is a premier custom builder of bespoke Atlanta residences. From classical stone and plaster homes to timber retreats and high-rise condominiums, every project is built around how our clients live.</p>
+      <p class="mt-5 text-slate-brand">Our work has earned the Greater Atlanta Home Builders Association OBIE Award nine times, and the ICAA's 2008 Shutze Award for the David Residence, built with Historical Concepts.</p>
+      <a href="#contact" class="inline-block mt-9 bg-brand text-white px-8 py-4 font-semibold rounded hover:bg-ink transition-colors">Talk with our team</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVERSE SPLIT -->
+<section id="process" class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
+      <p class="eyebrow text-brand mb-4">Our process</p>
+      <h2 class="font-heading font-medium text-4xl lg:text-5xl text-ink">One builder, from first drawing to final walkthrough</h2>
+      <p class="mt-7 text-slate-brand">We work alongside architects, designers and homeowners from the start, so decisions about structure, materials and finishes are made together and built the way they were drawn.</p>
+      <p class="mt-5 text-slate-brand">Whether the project is a new residence, a floor in a high-rise or a covered terrace with a fire pit, you deal with the same team throughout.</p>
+      <a href="#contact" class="inline-block mt-9 border border-ink text-ink px-8 py-4 font-semibold rounded hover:bg-ink hover:text-white transition-colors">Request a consultation</a>
+    </div>
+    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
+      <div class="aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-10.jpg" alt="Covered dining terrace overlooking a lawn and fire pit" class="w-full h-full object-cover">
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl mb-12 reveal">
+      <p class="eyebrow text-brand mb-4">Recent work</p>
+      <h2 class="font-heading font-medium text-4xl lg:text-5xl text-ink">Inside and out</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
+      <div class="tile col-span-2 lg:col-span-8 aspect-[16/9] overflow-hidden rounded reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-5.jpg" alt="Residence entry hall with glass stair rail and art" class="w-full h-full object-cover"></div>
+      <div class="tile col-span-1 lg:col-span-4 aspect-[3/4] lg:aspect-auto overflow-hidden rounded reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-7.jpg" alt="Columned arcade with lantern" class="w-full h-full object-cover"></div>
+      <div class="tile col-span-1 lg:col-span-4 aspect-[3/4] overflow-hidden rounded reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-11.jpg" alt="Stone fireplace with wood storage" class="w-full h-full object-cover"></div>
+      <div class="tile col-span-1 lg:col-span-4 aspect-[3/4] overflow-hidden rounded reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-9.jpg" alt="Bath with chinoiserie wallpaper" class="w-full h-full object-cover"></div>
+      <div class="tile col-span-1 lg:col-span-4 aspect-[3/4] overflow-hidden rounded reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-10.jpg" alt="Outdoor dining terrace" class="w-full h-full object-cover"></div>
+      <div class="tile col-span-2 lg:col-span-12 aspect-[16/9] lg:aspect-[21/8] overflow-hidden rounded reveal"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-6.jpg" alt="Wood and metal-roof retreat at dusk" class="w-full h-full object-cover"></div>
     </div>
   </div>
 </section>
 
 <!-- PRESS -->
-<section id="press" class="bg-white py-24 lg:py-32">
+<section id="press" class="pb-24 lg:pb-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Press &amp; awards</p>
-      <h2 class="font-heading text-4xl sm:text-5xl font-semibold leading-[1.05]">Recognized by the industry and the press</h2>
+    <div class="max-w-2xl mb-12 reveal">
+      <p class="eyebrow text-brand mb-4">Press &amp; awards</p>
+      <h2 class="font-heading font-medium text-4xl lg:text-5xl text-ink">Featured in Atlanta's design press</h2>
     </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <a href="https://www.berndsen.com/press/atlanta-style-design-winter-2026" class="reveal block border border-ink/10 rounded p-7 hover:border-brand transition-colors">
-        <p class="text-sm font-semibold text-brand">01/2026</p>
-        <h3 class="mt-3 font-heading text-xl font-semibold">Atlanta Style &amp; Design, Winter 2026</h3>
-        <p class="mt-3 text-ink/70 text-[15px]">Recent work by The Berndsen Company featured in the Winter 2026 issue.</p>
-      </a>
-      <a href="https://www.berndsen.com/press/atlanta-style-design-fall-2025" class="reveal block border border-ink/10 rounded p-7 hover:border-brand transition-colors">
-        <p class="text-sm font-semibold text-brand">10/2025</p>
-        <h3 class="mt-3 font-heading text-xl font-semibold">Atlanta Style &amp; Design, Fall 2025</h3>
-        <p class="mt-3 text-ink/70 text-[15px]">A profile of The Berndsen Company as a custom builder of bespoke Atlanta residences.</p>
-      </a>
-      <a href="https://www.berndsen.com/press/atlanta-style-design-summer-2025" class="reveal block border border-ink/10 rounded p-7 hover:border-brand transition-colors">
-        <p class="text-sm font-semibold text-brand">07/2025</p>
-        <h3 class="mt-3 font-heading text-xl font-semibold">Atlanta Style &amp; Design, Summer 2025</h3>
-        <p class="mt-3 text-ink/70 text-[15px]">The Berndsen Company featured in the Summer 2025 issue.</p>
-      </a>
-      <a href="https://www.berndsen.com/press/house-beautiful-november-2024" class="reveal block border border-ink/10 rounded p-7 hover:border-brand transition-colors">
-        <p class="text-sm font-semibold text-brand">11/2024</p>
-        <h3 class="mt-3 font-heading text-xl font-semibold">House Beautiful, November 2024</h3>
-        <p class="mt-3 text-ink/70 text-[15px]">A residence by The Berndsen Company in House Beautiful.</p>
-      </a>
-      <a href="https://www.berndsen.com/press/traditional-building-october-2024" class="reveal block border border-ink/10 rounded p-7 hover:border-brand transition-colors">
-        <p class="text-sm font-semibold text-brand">10/2024</p>
-        <h3 class="mt-3 font-heading text-xl font-semibold">Traditional Building, October 2024</h3>
-        <p class="mt-3 text-ink/70 text-[15px]">Our approach to classical residential construction in Atlanta.</p>
-      </a>
-      <a href="https://www.berndsen.com/press/modern-luxury-interiors-july-2024" class="reveal block border border-ink/10 rounded p-7 hover:border-brand transition-colors">
-        <p class="text-sm font-semibold text-brand">07/2024</p>
-        <h3 class="mt-3 font-heading text-xl font-semibold">Modern Luxury Interiors, July 2024</h3>
-        <p class="mt-3 text-ink/70 text-[15px]">Interior work from a Berndsen Company project.</p>
-      </a>
-    </div>
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="reveal bg-paper rounded p-7"><h3 class="font-heading text-xl font-semibold">GAHBA OBIE Awards</h3><p class="mt-2 text-ink/70">Recipient of the Greater Atlanta Home Builders Association OBIE Awards, nine times.</p></div>
-      <div class="reveal bg-paper rounded p-7"><h3 class="font-heading text-xl font-semibold">2008 Shutze Award</h3><p class="mt-2 text-ink/70">The Berndsen Company and Historical Concepts' David Residence project was recognized by the ICAA.</p></div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-5 grid grid-cols-2 gap-4 reveal">
+        <a href="https://www.berndsen.com/press/atlanta-style-design-summer-2025" class="block aspect-[4/5] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-15.jpg" alt="Atlanta Style & Design, Summer 2025 cover" class="w-full h-full object-cover"></a>
+        <a href="https://www.berndsen.com/press/atlanta-style-design-fall-2025" class="block aspect-[4/5] overflow-hidden rounded"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-14.jpg" alt="Atlanta Style & Design, Fall 2025 cover" class="w-full h-full object-cover"></a>
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <ul class="divide-y divide-black/10 border-y border-black/10">
+          <li class="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+            <a href="https://www.berndsen.com/press/atlanta-style-design-winter-2026" class="font-heading text-xl font-medium text-ink hover:text-brand transition-colors">Atlanta Style &amp; Design, Winter 2026</a>
+            <span class="text-sm text-slate-brand">01/2026</span>
+          </li>
+          <li class="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+            <a href="https://www.berndsen.com/press/atlanta-style-design-fall-2025" class="font-heading text-xl font-medium text-ink hover:text-brand transition-colors">Atlanta Style &amp; Design, Fall 2025</a>
+            <span class="text-sm text-slate-brand">10/2025</span>
+          </li>
+          <li class="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+            <a href="https://www.berndsen.com/press/atlanta-style-design-summer-2025" class="font-heading text-xl font-medium text-ink hover:text-brand transition-colors">Atlanta Style &amp; Design, Summer 2025 (cover story)</a>
+            <span class="text-sm text-slate-brand">07/2025</span>
+          </li>
+          <li class="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+            <a href="https://www.berndsen.com/press/house-beautiful-november-2024" class="font-heading text-xl font-medium text-ink hover:text-brand transition-colors">House Beautiful, November 2024</a>
+            <span class="text-sm text-slate-brand">11/2024</span>
+          </li>
+          <li class="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+            <a href="https://www.berndsen.com/press/traditional-building-october-2024" class="font-heading text-xl font-medium text-ink hover:text-brand transition-colors">Traditional Building, October 2024</a>
+            <span class="text-sm text-slate-brand">10/2024</span>
+          </li>
+          <li class="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+            <a href="https://www.berndsen.com/press/modern-luxury-interiors-july-2024" class="font-heading text-xl font-medium text-ink hover:text-brand transition-colors">Modern Luxury Interiors, July 2024</a>
+            <span class="text-sm text-slate-brand">07/2024</span>
+          </li>
+        </ul>
+        <p class="mt-6 text-slate-brand">Recipient of the Greater Atlanta Home Builders Association OBIE Awards nine times. The David Residence, with Historical Concepts, received the ICAA 2008 Shutze Award.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE AREA -->
-<section class="bg-paper py-20 lg:py-24 border-t border-ink/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-brand mb-4">Where we build</p>
-      <h2 class="font-heading text-3xl sm:text-4xl font-semibold leading-tight">Based in Atlanta, Georgia</h2>
-    </div>
-    <div class="mt-8 flex flex-wrap gap-3 reveal">
-      <span class="bg-white border border-ink/15 rounded px-5 py-2.5 text-sm font-semibold">Atlanta, GA</span>
-      <span class="bg-white border border-ink/15 rounded px-5 py-2.5 text-sm font-semibold">Greater Atlanta</span>
+<!-- CREAM PANEL -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="bg-cream rounded px-6 py-16 lg:py-20 text-center reveal">
+      <h2 class="font-heading font-medium text-3xl lg:text-4xl text-ink max-w-2xl mx-auto">Planning a home in Atlanta?</h2>
+      <p class="mt-5 text-slate-brand max-w-xl mx-auto">Tell us about the lot, the house or the renovation you have in mind. We'll start the conversation from there.</p>
+      <a href="#contact" class="inline-block mt-9 bg-brand text-white px-8 py-4 font-semibold rounded hover:bg-ink transition-colors">Contact The Berndsen Co</a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT PLACEHOLDER -->
+<!-- FINAL CALL -->
+<section class="pb-24 lg:pb-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+      <div class="lg:col-span-8 aspect-[4/3] lg:aspect-[16/11] overflow-hidden rounded reveal">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/photo-2.jpg" alt="Sitting room framed in cypress and tall casement windows" class="w-full h-full object-cover">
+      </div>
+      <div class="lg:col-span-4 lg:-ml-24 -mt-12 lg:mt-0 mx-4 lg:mx-0 relative bg-brand text-white p-8 lg:p-10 rounded reveal">
+        <h2 class="font-heading font-medium text-3xl">Call us to talk it through</h2>
+        <p class="mt-4 text-white/85">Reach the team directly, or send a note and we'll get back to you.</p>
+        <a href="tel:+14043037272" class="inline-block mt-7 bg-white text-ink px-7 py-3.5 font-semibold rounded hover:bg-ink hover:text-white transition-colors">(404) 303-7272</a>
+        <p class="mt-5 text-sm text-white/85 break-words"><a href="mailto:info@berndsen.com" class="underline underline-offset-4">info@berndsen.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="lp-contact" style="background:#211a14;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(133,95,61,0.10);color:#855f3d}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#c8b7a8}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(131,95,63,0.10);color:#835F3F}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#c7b7a9}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -398,8 +310,8 @@ tailwind.config = {
     .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:4px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#855f3d;box-shadow:0 0 0 4px rgba(133,95,61,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:4px;background:#855f3d;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#835F3F;box-shadow:0 0 0 4px rgba(131,95,63,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:4px;background:#835F3F;color:#ffffff;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -410,7 +322,7 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div style="color:#fff"><p class="lp-kick" style="color:#c8b7a8">Contact</p><h2 class="lp-h" style="color:#fff">Start your project with The Berndsen Co</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your Atlanta project and our team will get back to you.</p><ul class="lp-info">
+    <div style="color:#fff"><p class="lp-kick" style="color:#c7b7a9">Contact</p><h2 class="lp-h" style="color:#fff">Start a conversation about your Atlanta home</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your project and The Berndsen Company will be in touch.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+14043037272" class="lp-v lp-v-d">(404) 303-7272</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -434,72 +346,61 @@ tailwind.config = {
   <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
-<!-- FINAL CALL BAND -->
-<section class="bg-brandDark text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-7">
-      <h2 class="font-heading text-4xl sm:text-5xl font-semibold uppercase leading-[1.02]">Planning a home in Atlanta?</h2>
-      <p class="mt-5 text-white/75 max-w-xl">Call or write and speak with The Berndsen Company directly.</p>
-    </div>
-    <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-4">
-      <a href="tel:+14043037272" class="bg-brand text-white font-semibold px-7 py-4 rounded text-center hover:bg-white hover:text-ink transition-colors">(404) 303-7272</a>
-      <a href="mailto:info@berndsen.com" class="border border-white/40 font-semibold px-7 py-4 rounded text-center hover:bg-white hover:text-ink transition-colors break-words">info@berndsen.com</a>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-ink text-white/80">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-5">
-      <div class="inline-block bg-white rounded p-4">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@993ca8cc9390aa0cfeb1f78127bbad672ba6faa1/sites/berndsen-co/21929/logo-0.png" alt="The Berndsen Co" class="h-14 w-auto">
+<footer class="bg-[#2d2012] text-white/80">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-4">
+      <div class="inline-block bg-bone rounded p-3">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/berndsen-co/21947/logo-0.png" alt="The Berndsen Co" class="h-14 w-auto">
       </div>
-      <p class="mt-6 max-w-sm text-white/65">Luxury home builders in Atlanta, Georgia.</p>
+      <p class="mt-6 max-w-xs text-white/70">Luxury home builders in Atlanta, Georgia.</p>
     </div>
-    <div class="md:col-span-3">
-      <h3 class="font-heading text-white text-lg font-semibold">Explore</h3>
-      <ul class="mt-4 space-y-2 text-sm">
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#process" class="hover:text-white">Process</a></li>
-        <li><a href="#work" class="hover:text-white">Our Work</a></li>
-        <li><a href="#press" class="hover:text-white">Press &amp; Awards</a></li>
+    <div class="lg:col-span-2">
+      <h4 class="font-heading text-white font-medium mb-4">What we build</h4>
+      <ul class="space-y-2 text-[15px]">
+        <li><a href="#services" class="hover:text-white">New Residences</a></li>
+        <li><a href="#services" class="hover:text-white">Condominiums</a></li>
+        <li><a href="#services" class="hover:text-white">Renovations</a></li>
+        <li><a href="#services" class="hover:text-white">Retreats</a></li>
+        <li><a href="#services" class="hover:text-white">Outdoor Living</a></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-3">
+      <h4 class="font-heading text-white font-medium mb-4">Company</h4>
+      <ul class="space-y-2 text-[15px]">
+        <li><a href="#about" class="hover:text-white">About</a></li>
+        <li><a href="#process" class="hover:text-white">Our process</a></li>
+        <li><a href="#press" class="hover:text-white">Press &amp; awards</a></li>
         <li><a href="#contact" class="hover:text-white">Contact</a></li>
       </ul>
     </div>
-    <div class="md:col-span-4">
-      <h3 class="font-heading text-white text-lg font-semibold">Contact</h3>
-      <ul class="mt-4 space-y-2 text-sm">
-        <li><a href="tel:+14043037272" class="hover:text-white">(404) 303-7272</a></li>
-        <li><a href="mailto:info@berndsen.com" class="hover:text-white break-words">info@berndsen.com</a></li>
+    <div class="lg:col-span-3">
+      <h4 class="font-heading text-white font-medium mb-4">Contact</h4>
+      <ul class="space-y-2 text-[15px]">
         <li>Atlanta, GA</li>
+        <li><a href="tel:+14043037272" class="hover:text-white">(404) 303-7272</a></li>
+        <li class="break-words"><a href="mailto:info@berndsen.com" class="hover:text-white">info@berndsen.com</a></li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/55 space-y-1">
-      <p>Concept redesign by LumeaPixel. This is not the official The Berndsen Co website.</p>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/60">
+      Concept redesign by LumeaPixel. This is not the official The Berndsen Co website.
     </div>
   </div>
 </footer>
 
 <script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-
-  const els = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach(el => io.observe(el));
-  } else {
-    els.forEach(el => el.classList.add('in'));
-  }
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>

@@ -4,260 +4,352 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Lucky's Concrete Atlanta | Driveways, Patios & Stamped Concrete in Atlanta, GA</title>
+<title>Luckily Concrete Atlanta | Driveways, Patios & Stamped Concrete in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Outfit', 'sans-serif'] },
       colors: {
-        brand: '#fd8c01',
-        ink: '#1c1611',
-        deep: '#2a1d10',
-        cream: '#f8f3ec',
-        stone: '#ece6dc'
+        brand: '#f98c05',
+        ink: '#161412',
+        coal: '#201c18',
+        sand: '#f6f3ee',
+        stone2: '#e7e2d9'
       },
-      fontFamily: {
-        head: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '14px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1c1611; background: #fff; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
+  body { font-family: 'Outfit', sans-serif; color: #161412; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile img { transition: transform .8s ease; }
-  .tile:hover img { transform: scale(1.04); }
-  .rd { border-radius: 6px; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .tile img { transition: none; } }
+  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
+  .card-img { transition: transform .6s ease; }
+  .card:hover .card-img { transform: scale(1.04); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .card-img { transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="antialiased">
+<body class="bg-white text-ink">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
-    <a href="#top" class="font-head font-semibold text-2xl tracking-tight text-ink leading-none">Lucky's <span class="text-brand">Concrete</span><span class="block text-[10px] tracking-[0.28em] uppercase font-medium text-ink/60 mt-1">Atlanta, GA</span></a>
-    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink/80">
+<!-- Top bar -->
+<div class="bg-brand text-ink text-sm">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+    <p class="font-medium">Serving Atlanta, GA &amp; the surrounding area</p>
+    <a href="mailto:info@luckysconcrete.org" class="font-medium break-words hover:underline">info@luckysconcrete.org</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
+    <a href="#top" class="flex items-center shrink-0">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/logo-0.png" alt="Luckily Concrete Atlanta" class="h-12 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] text-white/80">
+      <a href="#difference" class="hover:text-brand transition">Why Lucky's</a>
       <a href="#services" class="hover:text-brand transition">Services</a>
-      <a href="#process" class="hover:text-brand transition">How we pour</a>
-      <a href="#about" class="hover:text-brand transition">About</a>
-      <a href="#work" class="hover:text-brand transition">Our work</a>
+      <a href="#process" class="hover:text-brand transition">Process</a>
+      <a href="#work" class="hover:text-brand transition">Our Work</a>
       <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
-    <div class="flex items-center gap-3">
-      <a href="tel:+14709422563" class="hidden sm:inline-flex items-center gap-2 bg-brand text-ink font-semibold px-5 py-3 rd hover:bg-ink hover:text-white transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (470) 942-2563
+    <div class="hidden lg:flex items-center gap-5">
+      <div class="text-right leading-tight">
+        <p class="text-xs text-white/60">Need help? Call us today</p>
+        <a href="tel:+14709422563" class="font-semibold text-lg hover:text-brand transition">(470) 942-2563</a>
+      </div>
+      <a href="#contact" class="bg-brand text-ink font-semibold px-6 py-3 rounded hover:bg-white transition">Free Estimate</a>
+    </div>
+    <div class="flex lg:hidden items-center gap-3">
+      <a href="tel:+14709422563" class="bg-brand text-ink font-semibold px-4 py-2.5 rounded text-sm flex items-center gap-2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call
       </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center rd border border-stone" aria-label="Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" aria-label="Open menu" class="p-2">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-stone bg-white">
-    <div class="px-5 py-5 flex flex-col gap-4 font-medium">
-      <a href="#services" class="mlink">Services</a>
-      <a href="#process" class="mlink">How we pour</a>
-      <a href="#about" class="mlink">About</a>
-      <a href="#work" class="mlink">Our work</a>
-      <a href="#contact" class="mlink">Contact</a>
-      <a href="tel:+14709422563" class="inline-flex justify-center bg-brand text-ink font-semibold px-5 py-3 rd">Call (470) 942-2563</a>
-    </div>
+  <div id="mobileMenu" class="hidden lg:hidden bg-coal border-t border-white/10">
+    <nav class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-1 text-white/90">
+      <a href="#difference" class="py-3 border-b border-white/10">Why Lucky's</a>
+      <a href="#services" class="py-3 border-b border-white/10">Services</a>
+      <a href="#process" class="py-3 border-b border-white/10">Process</a>
+      <a href="#work" class="py-3 border-b border-white/10">Our Work</a>
+      <a href="#contact" class="py-3">Contact</a>
+    </nav>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
-<section class="relative">
-  <div class="relative min-h-[640px] lg:min-h-[760px] flex items-center">
-    <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-1.jpg" alt="Newly poured concrete driveway in front of a stone home" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-ink/70"></div>
-    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-20 pb-40 lg:pb-48">
-      <p class="text-xs tracking-[0.28em] uppercase text-brand font-semibold mb-6">Concrete contractor in Atlanta, GA</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-semibold">Not the cheapest.<br>The one that shows up.</h1>
-      <p class="mt-7 text-lg lg:text-xl text-white/85 max-w-2xl mx-auto">Done gambling on the low bid? Lucky's answers the phone, manages every crew, and is fully insured. One company accountable from first call to final cure.</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="bg-brand text-ink font-semibold px-8 py-4 rd hover:bg-white transition">Get my free estimate</a>
-        <a href="tel:+14709422563" class="border border-white/80 text-white font-semibold px-8 py-4 rd hover:bg-white hover:text-ink transition">Call (470) 942-2563</a>
-      </div>
-    </div>
-  </div>
-  <!-- trust strip -->
-  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20">
-    <div class="bg-white rd shadow-[0_8px_30px_rgba(28,22,17,0.10)] border border-stone grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-stone">
-      <div class="p-6 lg:p-8">
-        <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
-        <p class="font-head font-semibold text-lg leading-tight">Fully insured</p>
-        <p class="text-sm text-ink/65 mt-1">COI and workers' comp on file</p>
-      </div>
-      <div class="p-6 lg:p-8">
-        <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>
-        <p class="font-head font-semibold text-lg leading-tight">500+ projects</p>
-        <p class="text-sm text-ink/65 mt-1">Driveways to commercial lots</p>
-      </div>
-      <div class="p-6 lg:p-8">
-        <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.5 3.2-5.5 6.5-5.5s5.9 2 6.5 5.5"/><path d="M17 11l2 2 3-3.5"/></svg>
-        <p class="font-head font-semibold text-lg leading-tight">Managed crews</p>
-        <p class="text-sm text-ink/65 mt-1">A lead foreman on every job</p>
-      </div>
-      <div class="p-6 lg:p-8">
-        <svg class="text-brand mb-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <p class="font-head font-semibold text-lg leading-tight">Same-day reply</p>
-        <p class="text-sm text-ink/65 mt-1">A real person, not a call center</p>
+<!-- Hero -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-1.jpg" alt="Freshly poured concrete driveway in front of a stone home" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/75 to-ink/30"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 sm:py-32 lg:py-44">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.08] tracking-tight">Not the cheapest.<br>The one that shows up.</h1>
+      <p class="mt-6 text-lg text-white/80 leading-relaxed max-w-xl">Done gambling on the low bid? Lucky's answers the phone, manages every crew, and is fully insured. One company accountable from first call to final cure, serving Atlanta, GA and the surrounding area.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="bg-brand text-ink font-semibold px-8 py-4 rounded text-center hover:bg-white transition">Get My Free Estimate</a>
+        <a href="tel:+14709422563" class="bg-white text-ink font-semibold px-8 py-4 rounded-full text-center hover:bg-brand transition">Call (470) 942-2563</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+<!-- Difference -->
+<section id="difference" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+      <div class="lg:col-span-6 reveal">
+        <p class="label text-brand">The Lucky's difference</p>
+        <h2 class="mt-4 text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-tight">The concrete company you don't have to worry about</h2>
+        <div class="mt-12 grid grid-cols-6 gap-4">
+          <div class="col-span-3 aspect-[3/4] overflow-hidden rounded">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-3.jpg" alt="Stamped concrete driveway laid like flagstone" class="w-full h-full object-cover">
+          </div>
+          <div class="col-span-3 aspect-[3/4] overflow-hidden rounded mt-10">
+            <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-2.jpg" alt="New concrete patio behind a brick home" class="w-full h-full object-cover">
+          </div>
+          <div class="col-span-6 bg-brand text-ink rounded p-7 -mt-16 sm:-mt-20 mx-4 sm:mx-10 relative z-10">
+            <p class="text-3xl sm:text-4xl font-semibold leading-tight">500+ projects</p>
+            <p class="mt-1 font-medium">Driveways, patios and commercial pours, run the same way every time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-6 reveal">
+        <p class="text-lg text-ink/75 leading-relaxed">The trade ghosts people, cuts corners, and disappears when something goes wrong. We built Lucky's to be the opposite: one company accountable from the first estimate to the final walkthrough.</p>
+        <div class="mt-9 divide-y divide-stone2 border-y border-stone2">
+          <div class="py-6">
+            <h3 class="text-xl font-semibold">We answer, and we come back</h3>
+            <p class="mt-1.5 text-ink/70">We pick up the phone, show up when we say, and stand behind the work after the truck leaves.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-xl font-semibold">Managed crews, our name on it</h3>
+            <p class="mt-1.5 text-ink/70">A foreman we know runs your job and a vetted crew does the work.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-xl font-semibold">Fully insured, paperwork-ready</h3>
+            <p class="mt-1.5 text-ink/70">COI, workers' comp and lien waivers on file before we break ground.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-xl font-semibold">Built right, not cheap</h3>
+            <p class="mt-1.5 text-ink/70">Prepped subgrade, reinforced and mixed to spec, with proper curing.</p>
+          </div>
+        </div>
+        <a href="tel:+14709422563" class="mt-9 inline-flex items-center gap-4 group">
+          <span class="w-14 h-14 rounded-full bg-brand text-ink flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          </span>
+          <span>
+            <span class="block text-sm text-ink/60">Talk to a real person</span>
+            <span class="block text-2xl font-semibold group-hover:text-brand transition">(470) 942-2563</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="relative pb-24 lg:pb-32">
+  <div class="absolute inset-x-0 top-0 h-[360px] lg:h-[420px] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-20 lg:pt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end reveal">
+      <div class="lg:col-span-6">
+        <p class="label text-ink/70">What we pour</p>
+        <h2 class="mt-4 text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-tight text-ink">Driveways to decorative, built to last</h2>
+      </div>
+      <div class="lg:col-span-6">
+        <p class="text-lg text-ink/80 leading-relaxed">Every service is built on prepped subgrade, reinforced and mixed to spec for the job, and cured right.</p>
+      </div>
+    </div>
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="https://luckysconcreteatlanta.com/concrete-driveway/" class="card block bg-white rounded p-3 shadow-sm">
+        <div class="aspect-[4/3] overflow-hidden rounded">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-8.jpg" alt="Concrete driveway" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="text-xl font-semibold flex items-center justify-between">Driveways <span aria-hidden="true">&rarr;</span></h3>
+          <p class="mt-2 text-ink/70 text-[15px]">The first thing buyers see. Poured to the right thickness and reinforced to carry real vehicle loads.</p>
+        </div>
+      </a>
+      <a href="https://luckysconcreteatlanta.com/concrete-patio/" class="card block bg-white rounded p-3 shadow-sm">
+        <div class="aspect-[4/3] overflow-hidden rounded">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-2.jpg" alt="Concrete patio" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="text-xl font-semibold flex items-center justify-between">Patios <span aria-hidden="true">&rarr;</span></h3>
+          <p class="mt-2 text-ink/70 text-[15px]">Broom, smooth or decorative finishes, with the drainage and control joints a patio needs.</p>
+        </div>
+      </a>
+      <a href="https://luckysconcreteatlanta.com/stamped-concrete/" class="card block bg-white rounded p-3 shadow-sm">
+        <div class="aspect-[4/3] overflow-hidden rounded">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-3.jpg" alt="Stamped concrete" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="text-xl font-semibold flex items-center justify-between">Stamped &amp; Decorative <span aria-hidden="true">&rarr;</span></h3>
+          <p class="mt-2 text-ink/70 text-[15px]">The look of stone, brick or slate. Stamped, hand-colored and sealed.</p>
+        </div>
+      </a>
+      <a href="https://luckysconcreteatlanta.com/concrete-sidewalk/" class="card block bg-white rounded p-3 shadow-sm">
+        <div class="aspect-[4/3] overflow-hidden rounded">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-4.jpg" alt="Concrete walkway" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="text-xl font-semibold flex items-center justify-between">Sidewalks &amp; Walkways <span aria-hidden="true">&rarr;</span></h3>
+          <p class="mt-2 text-ink/70 text-[15px]">Level walkways with proper subgrade, jointing and drainage.</p>
+        </div>
+      </a>
+    </div>
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <a href="https://luckysconcreteatlanta.com/concrete-steps/" class="card flex items-center gap-5 bg-sand rounded p-3">
+        <div class="w-28 sm:w-36 aspect-[4/3] overflow-hidden rounded shrink-0">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-5.jpg" alt="Concrete steps" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="pr-3">
+          <h3 class="text-lg font-semibold">Steps &amp; Stairs &rarr;</h3>
+          <p class="mt-1 text-ink/70 text-[15px]">Even risers and slip-aware finishes, poured to match the house.</p>
+        </div>
+      </a>
+      <a href="https://luckysconcreteatlanta.com/concrete-slab/" class="card flex items-center gap-5 bg-sand rounded p-3">
+        <div class="w-28 sm:w-36 aspect-[4/3] overflow-hidden rounded shrink-0">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-6.jpg" alt="Concrete pad" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="pr-3">
+          <h3 class="text-lg font-semibold">Pads &amp; Slabs &rarr;</h3>
+          <p class="mt-1 text-ink/70 text-[15px]">Shed, AC, hot-tub, RV or shop slabs, flat, square and sized to the load.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section id="process" class="py-24 lg:py-32 bg-sand">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="lg:col-span-5 reveal">
+        <div class="aspect-[4/5] overflow-hidden rounded">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-7.jpg" alt="Crew prepping reinforcing steel with a mixer truck on site" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <p class="label text-brand">How it's poured</p>
+        <h2 class="mt-4 text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-tight">The sequence that holds up</h2>
+        <p class="mt-5 text-lg text-ink/75 leading-relaxed max-w-xl">A cheap pour skips the steps you can't see. Every slab we pour runs this order, start to cure.</p>
+        <ol class="mt-10 divide-y divide-stone2 border-y border-stone2">
+          <li class="py-5 flex gap-6">
+            <span class="text-brand font-semibold text-xl w-8 shrink-0">01</span>
+            <div><h3 class="text-xl font-semibold">Subgrade prep</h3><p class="mt-1 text-ink/70">Base compacted to depth before any concrete goes down, the step cheap pours skip.</p></div>
+          </li>
+          <li class="py-5 flex gap-6">
+            <span class="text-brand font-semibold text-xl w-8 shrink-0">02</span>
+            <div><h3 class="text-xl font-semibold">Slope to drain</h3><p class="mt-1 text-ink/70">Pitched away from the house so runoff sheds instead of pooling at the foundation.</p></div>
+          </li>
+          <li class="py-5 flex gap-6">
+            <span class="text-brand font-semibold text-xl w-8 shrink-0">03</span>
+            <div><h3 class="text-xl font-semibold">Reinforcement grid</h3><p class="mt-1 text-ink/70">Reinforced on a grid so the slab carries its load across the span.</p></div>
+          </li>
+          <li class="py-5 flex gap-6">
+            <span class="text-brand font-semibold text-xl w-8 shrink-0">04</span>
+            <div><h3 class="text-xl font-semibold">Mixed to spec</h3><p class="mt-1 text-ink/70">Poured to spec with control joints so movement goes where it's planned.</p></div>
+          </li>
+          <li class="py-5 flex gap-6">
+            <span class="text-brand font-semibold text-xl w-8 shrink-0">05</span>
+            <div><h3 class="text-xl font-semibold">Proper cure</h3><p class="mt-1 text-ink/70">Cured on a schedule so it sets evenly instead of flashing off too fast.</p></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About + Commercial -->
+<section class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+    <div class="lg:col-span-7 reveal">
+      <p class="label text-brand">About Lucky's</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-tight">One company, accountable for the whole job</h2>
+      <p class="mt-6 text-lg text-ink/75 leading-relaxed">Lucky's Concrete is a residential and light-commercial concrete contractor serving Atlanta and the surrounding area. We've poured <strong class="font-semibold text-ink">500+ driveways, patios, and commercial projects</strong>, and we run every one the same way: a lead foreman is assigned to your project as your single point of contact, from the first estimate to the final walkthrough.</p>
+      <p class="mt-5 text-lg text-ink/75 leading-relaxed">We carry full insurance, with COI, workers' comp, and lien waivers on file before we break ground. We don't promise concrete never cracks. We build it right, with prepped subgrade, reinforcement and mixed to spec, with control joints that decide where it moves.</p>
+    </div>
+    <div class="lg:col-span-5 reveal">
+      <div class="bg-ink text-white rounded overflow-hidden">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1685464197144-790d716b8649?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew guiding a concrete pour" class="w-full h-full object-cover">
+        </div>
+        <div class="p-7">
+          <p class="label text-brand">Light commercial</p>
+          <h3 class="mt-3 text-2xl font-semibold leading-tight">Built for property managers &amp; GCs</h3>
+          <p class="mt-3 text-white/70">Insured, documented and easy to pay. We keep your site moving while we work.</p>
+          <ul class="mt-5 space-y-2.5 text-white/90">
+            <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Parking-lot panel replacement</li>
+            <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Loading docks &amp; dock aprons</li>
+            <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ADA ramps &amp; approaches</li>
+            <li class="flex gap-3"><svg class="mt-1 shrink-0 text-brand" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Equipment &amp; bollard pads</li>
+          </ul>
+          <a href="https://luckysconcreteatlanta.com/commercial/" class="mt-6 inline-block text-brand font-semibold hover:text-white transition">See commercial services &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="work" class="py-24 lg:py-32 bg-sand">
+  <div class="max-w-7xl mx-auto px-5">
     <div class="max-w-2xl reveal">
-      <p class="text-xs tracking-[0.28em] uppercase text-brand font-semibold mb-4">What we pour</p>
-      <h2 class="text-3xl lg:text-5xl font-semibold">What we build in Atlanta</h2>
-      <p class="mt-5 text-ink/70">Driveways to decorative, built on prepped subgrade, reinforced and mixed to spec for the job, and cured right.</p>
+      <p class="label text-brand">The work speaks</p>
+      <h2 class="mt-4 text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-tight">Recent pours around Atlanta</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5">
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[420px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-8.jpg" alt="Concrete driveway apron" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="text-2xl font-semibold">Driveways</h3><p class="text-sm text-white/80 mt-1">Poured thick, reinforced for real vehicle loads.</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[420px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-2.jpg" alt="Poured concrete patio behind a brick home" class="absolute inset-0 w-full h-full object-cover object-[center_70%]">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="text-2xl font-semibold">Patios</h3><p class="text-sm text-white/80 mt-1">Broom, smooth or decorative, with proper drainage.</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[420px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-3.jpg" alt="Stamped concrete driveway in a flagstone pattern" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="text-2xl font-semibold">Stamped &amp; decorative</h3><p class="text-sm text-white/80 mt-1">The look of stone or slate, hand-colored and sealed.</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[420px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-4.jpg" alt="Finished concrete walkway beside a brick wall" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="text-2xl font-semibold">Sidewalks &amp; walkways</h3><p class="text-sm text-white/80 mt-1">Level, jointed and drained.</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[420px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-5.jpg" alt="Freshly poured concrete steps with handrails" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="text-2xl font-semibold">Steps &amp; stairs</h3><p class="text-sm text-white/80 mt-1">Even risers, slip-aware finishes.</p></div>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[420px] reveal">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-6.jpg" alt="Poured concrete pad beside a commercial building" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="text-2xl font-semibold">Pads &amp; slabs</h3><p class="text-sm text-white/80 mt-1">Flat, square, sized to the load.</p></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- WHY: split -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] overflow-hidden rd">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-3.jpg" alt="Stamped concrete driveway leading to a gated home" class="w-full h-full object-cover">
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-12 gap-4 reveal">
+      <div class="col-span-2 lg:col-span-7 aspect-[16/10] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-1.jpg" alt="New curved concrete driveway" class="w-full h-full object-cover">
       </div>
-    </div>
-    <div class="lg:col-span-6 reveal">
-      <p class="text-xs tracking-[0.28em] uppercase text-brand font-semibold mb-4">Why people choose Lucky's</p>
-      <h2 class="text-3xl lg:text-5xl font-semibold">The one you don't have to worry about</h2>
-      <p class="mt-6 text-ink/75">The trade ghosts people after the deposit. We pick up the phone, show up when we say, and stand behind the work after the truck leaves.</p>
-      <p class="mt-4 text-ink/75">A foreman we know runs your job and a vetted crew does the work. COI, workers' comp and lien waivers are on file before we break ground. We build it right, not cheap.</p>
-      <a href="#contact" class="inline-flex mt-8 bg-brand text-ink font-semibold px-8 py-4 rd hover:bg-ink hover:text-white transition">Get my free estimate</a>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS: reverse split -->
-<section id="process" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <p class="text-xs tracking-[0.28em] uppercase text-brand font-semibold mb-4">How it's poured</p>
-      <h2 class="text-3xl lg:text-5xl font-semibold">The sequence that holds up</h2>
-      <p class="mt-6 text-ink/75">A cheap pour skips the steps you can't see. Every slab we pour runs this order, start to cure.</p>
-      <ol class="mt-8 divide-y divide-stone border-t border-b border-stone">
-        <li class="py-4 flex gap-5"><span class="font-head font-semibold text-brand w-8 shrink-0">01</span><div><p class="font-head font-semibold text-lg">Subgrade prep</p><p class="text-sm text-ink/65">Base compacted to depth before any concrete goes down.</p></div></li>
-        <li class="py-4 flex gap-5"><span class="font-head font-semibold text-brand w-8 shrink-0">02</span><div><p class="font-head font-semibold text-lg">Slope to drain</p><p class="text-sm text-ink/65">Pitched away from the house so runoff sheds, not pools.</p></div></li>
-        <li class="py-4 flex gap-5"><span class="font-head font-semibold text-brand w-8 shrink-0">03</span><div><p class="font-head font-semibold text-lg">Reinforcement grid</p><p class="text-sm text-ink/65">Reinforced so the slab carries its load across the span.</p></div></li>
-        <li class="py-4 flex gap-5"><span class="font-head font-semibold text-brand w-8 shrink-0">04</span><div><p class="font-head font-semibold text-lg">Mixed to spec</p><p class="text-sm text-ink/65">Control joints put movement where it's planned.</p></div></li>
-        <li class="py-4 flex gap-5"><span class="font-head font-semibold text-brand w-8 shrink-0">05</span><div><p class="font-head font-semibold text-lg">Proper cure</p><p class="text-sm text-ink/65">Cured on a schedule so it sets evenly.</p></div></li>
-      </ol>
-    </div>
-    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/5] overflow-hidden rd">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-2.jpg" alt="Finished concrete patio with clean control joints" class="w-full h-full object-cover object-[center_75%]">
+      <div class="col-span-1 lg:col-span-5 aspect-[4/5] lg:aspect-auto overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-2.jpg" alt="Finished backyard patio" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 lg:col-span-4 aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-3.jpg" alt="Stamped concrete drive" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 lg:col-span-4 aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-4.jpg" alt="Poured concrete entry walk" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-1 lg:col-span-4 aspect-[4/5] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-7.jpg" alt="Commercial parking-lot pour in progress" class="w-full h-full object-cover">
+      </div>
+      <div class="col-span-2 lg:col-span-12 aspect-[21/9] overflow-hidden rounded">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-6.jpg" alt="Finished concrete slab beside a commercial building" class="w-full h-full object-cover">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT: cream panel -->
-<section id="about" class="px-5 lg:px-8 pb-24 lg:pb-32">
-  <div class="max-w-5xl mx-auto bg-cream rd px-6 py-16 lg:px-20 lg:py-24 text-center reveal">
-    <p class="text-xs tracking-[0.28em] uppercase text-brand font-semibold mb-4">About Lucky's</p>
-    <h2 class="text-3xl lg:text-5xl font-semibold">One company, accountable for the whole job</h2>
-    <p class="mt-7 text-ink/75 max-w-3xl mx-auto">Lucky's Concrete is a residential and light-commercial concrete contractor serving Atlanta and the surrounding area. We've poured 500+ driveways, patios and commercial projects, and we run every one the same way: a lead foreman is your single point of contact from the first estimate to the final walkthrough.</p>
-    <p class="mt-4 text-ink/75 max-w-3xl mx-auto">We don't promise concrete never cracks. We build it right, with prepped subgrade, reinforcement and control joints that decide where it moves.</p>
-    <a href="#contact" class="inline-flex mt-9 bg-brand text-ink font-semibold px-8 py-4 rd hover:bg-ink hover:text-white transition">Talk to Lucky's</a>
-  </div>
-</section>
-
-<!-- COMMERCIAL: split -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <p class="text-xs tracking-[0.28em] uppercase text-brand font-semibold mb-4">Light commercial</p>
-      <h2 class="text-3xl lg:text-5xl font-semibold">Built for property managers and GCs</h2>
-      <p class="mt-6 text-ink/75">Insured, documented and easy to pay. We carry the COI, workers' comp and lien waivers your accounting team needs, and we keep your site moving while we work.</p>
-      <ul class="mt-7 space-y-3">
-        <li class="flex gap-3 items-start"><svg class="text-brand mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Parking-lot panel replacement</li>
-        <li class="flex gap-3 items-start"><svg class="text-brand mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Loading docks and dock aprons</li>
-        <li class="flex gap-3 items-start"><svg class="text-brand mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>ADA ramps and approaches</li>
-        <li class="flex gap-3 items-start"><svg class="text-brand mt-1 shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Equipment and bollard pads</li>
-      </ul>
-      <a href="#contact" class="inline-flex mt-8 bg-brand text-ink font-semibold px-8 py-4 rd hover:bg-ink hover:text-white transition">Request a commercial quote</a>
+<!-- Call band -->
+<section class="bg-ink text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-8">
+      <h2 class="text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-tight text-brand">Stop gambling on your concrete.</h2>
+      <p class="mt-4 text-lg text-white/75 max-w-2xl">Free, no-pressure estimates. You'll hear back from a real person, usually the same day.</p>
     </div>
-    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/3] lg:aspect-[5/4] overflow-hidden rd">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-7.jpg" alt="Crew and mixer truck on a commercial parking lot concrete replacement" class="w-full h-full object-cover">
-      </div>
+    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
+      <a href="#contact" class="bg-brand text-ink font-semibold px-8 py-4 rounded text-center hover:bg-white transition">Get a Free Estimate</a>
+      <a href="tel:+14709422563" class="font-semibold text-xl text-center hover:text-brand transition py-2">(470) 942-2563</a>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="work" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="text-xs tracking-[0.28em] uppercase text-brand font-semibold mb-4">The work speaks</p>
-      <h2 class="text-3xl lg:text-5xl font-semibold">Recent pours</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-5">
-      <div class="tile overflow-hidden rd aspect-[4/5] md:row-span-2 md:aspect-auto reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-3.jpg" alt="Stamped flagstone concrete driveway" class="w-full h-full object-cover"></div>
-      <div class="tile overflow-hidden rd aspect-square reveal"><img src="https://images.unsplash.com/photo-1781637202423-33ec5b47e52e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OHx8Q29uY3JldGUlMjBzZXJ2aWNlfGVufDF8MHx8fDE3OTQyMjY3MjN8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Concrete driveway at a garage door" class="w-full h-full object-cover"></div>
-      <div class="tile overflow-hidden rd aspect-square reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-4.jpg" alt="Concrete walkway by a red brick wall" class="w-full h-full object-cover"></div>
-      <div class="tile overflow-hidden rd aspect-[4/5] md:row-span-2 md:aspect-auto reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-2.jpg" alt="Backyard concrete patio" class="w-full h-full object-cover object-[center_75%]"></div>
-      <div class="tile overflow-hidden rd aspect-square reveal"><img src="https://images.unsplash.com/photo-1772300164438-f73307d3b645?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjR8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Crew finishing a polished concrete warehouse floor" class="w-full h-full object-cover"></div>
-      <div class="tile overflow-hidden rd aspect-square reveal"><img src="https://images.unsplash.com/photo-1790156591319-00499776587b?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fENvbmNyZXRlJTIwc2VydmljZXxlbnwxfDB8fHwxNzk0MjI2NzIzfDA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Smooth concrete floor in a commercial interior" class="w-full h-full object-cover"></div>
-      <div class="tile overflow-hidden rd col-span-2 aspect-[2/1] reveal"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-6.jpg" alt="Concrete slab poured next to a commercial building" class="w-full h-full object-cover"></div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
+<!-- Reviews -->
 <section id="reviews" class="ti-reviews">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
@@ -292,8 +384,8 @@ tailwind.config = {
   <div class="ti-wrap">
         <div class="ti-sum">
           <div class="ti-label">REVIEWS</div>
-          <div class="ti-based">What customers say about <b>Lucky's Concrete</b></div>
-          
+          <div class="ti-based">What customers say about <b>Luckily Concrete Atlanta</b></div>
+          <span class="ti-google" aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
         </div>
     <div class="ti-slider">
       <button type="button" class="ti-arrow ti-prev" aria-label="Previous reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -302,9 +394,9 @@ tailwind.config = {
           <div class="ti-head">
             <span class="ti-avatar" style="background:#c2185b">L</span>
             <span class="ti-who"><span class="ti-name">Lindsey J.</span></span>
-            
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
-          
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
           <p class="ti-text">Lucky's Concrete did a phenomenal job on my patio project. I'd recommend them for any kind of concrete project. They showed up on time and were super easy to work with, not to mention, they were very well priced. It's rare to find concrete contractors as good as they are. HUGE special shoutout to Josh, who bent over backwards to make our project work on a tight deadline. Thanks!!</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
@@ -312,9 +404,9 @@ tailwind.config = {
           <div class="ti-head">
             <span class="ti-avatar" style="background:#c2185b">G</span>
             <span class="ti-who"><span class="ti-name">Graham</span></span>
-            
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
-          
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
           <p class="ti-text">These guys saved me from losing some really good tenants. They fixed the driveway in no time, price was on point and the job came up spectacular at a fair price. Highly recommended</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
@@ -322,9 +414,9 @@ tailwind.config = {
           <div class="ti-head">
             <span class="ti-avatar" style="background:#7b1fa2">J</span>
             <span class="ti-who"><span class="ti-name">Jacob S.</span></span>
-            
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
-          
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
           <p class="ti-text">I highly recommend these guys. Hard working, respectful, and most dependable. Thank yall for everything. I will definitely recommend to all! Keep up the good work, and God Bless you!!</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
@@ -332,9 +424,9 @@ tailwind.config = {
           <div class="ti-head">
             <span class="ti-avatar" style="background:#7b1fa2">L</span>
             <span class="ti-who"><span class="ti-name">Lyric A.</span></span>
-            
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
-          
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
           <p class="ti-text">I knew absolutely nothing about anything construction and they not only did a fantastic job, but they broke down what it was going to take to get my new driveway put in. I recommend these guys 100%</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
@@ -342,9 +434,9 @@ tailwind.config = {
           <div class="ti-head">
             <span class="ti-avatar" style="background:#f4511e">L</span>
             <span class="ti-who"><span class="ti-name">Lily S.</span></span>
-            
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
-          
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
           <p class="ti-text">Couldn't be happier with the service they provided with my home project. Very reliable, and worth the price. Communication from start to finish was fantastic, making the entire experience easy. I definitely will recommend Lucky's to friends and family.</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
@@ -352,9 +444,9 @@ tailwind.config = {
           <div class="ti-head">
             <span class="ti-avatar" style="background:#1e88e5">J</span>
             <span class="ti-who"><span class="ti-name">Jonathan T.</span></span>
-            
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
           </div>
-          
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
           <p class="ti-text">Great people to work with. They helped on my patio and it looks great. I've already gave out their info to a few neighbors. Thanks guys for your help.</p>
           <button type="button" class="ti-more">Read more</button>
         </article>
@@ -373,38 +465,12 @@ tailwind.config = {
   })();</script>
 </section>
 
-<!-- FINAL CALL -->
-<section class="px-5 lg:px-8 pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 items-center">
-    <div class="lg:col-span-7 reveal">
-      <div class="aspect-[4/3] overflow-hidden rd">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/luckily-concrete-atlanta/21927/photo-1.jpg" alt="Concrete driveway in front of a stone house in Atlanta" class="w-full h-full object-cover">
-      </div>
-    </div>
-    <div class="lg:col-span-5 lg:-ml-24 -mt-10 lg:mt-0 mx-4 lg:mx-0 relative reveal">
-      <div class="bg-brand text-ink rd p-8 lg:p-12">
-        <h2 class="text-3xl lg:text-4xl font-semibold">Tell us what you need poured.</h2>
-        <p class="mt-4 text-ink/85">You'll hear back from a real person, usually the same day. No call center, no runaround.</p>
-        <ul class="mt-6 space-y-2 text-sm font-medium">
-          <li class="flex gap-2 items-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Free and no-obligation</li>
-          <li class="flex gap-2 items-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Same-day reply</li>
-          <li class="flex gap-2 items-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Financing available</li>
-        </ul>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="tel:+14709422563" class="bg-ink text-white font-semibold px-6 py-4 rd text-center hover:bg-white hover:text-ink transition">Call (470) 942-2563</a>
-          <a href="#contact" class="border border-ink font-semibold px-6 py-4 rd text-center hover:bg-ink hover:text-white transition">Free estimate</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
+<!-- Contact -->
 <section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(253,140,1,0.10);color:#fd8c01}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#fd8c01}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(249,140,5,0.10);color:#f98c05}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#f98c05}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -415,16 +481,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#fd8c01;box-shadow:0 0 0 4px rgba(253,140,1,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#fd8c01;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#f98c05;box-shadow:0 0 0 4px rgba(249,140,5,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#f98c05;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -435,21 +501,21 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div><p class="lp-kick" style="color:#fd8c01">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us what you need poured and a real person from Lucky's will get back to you, usually the same day.</p><ul class="lp-info">
+    <div><p class="lp-kick" style="color:#f98c05">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us what you need poured and a real person will get back to you, usually the same day.</p><ul class="lp-info">
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k">Call</span><a href="tel:+14709422563" class="lp-v">(470) 942-2563</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
             <span><span class="lp-k">Email</span><a href="mailto:info@luckysconcrete.org" class="lp-v">info@luckysconcrete.org</a></span></li>
           <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
             <span><span class="lp-k">Service area</span><span class="lp-v">Atlanta, GA</span></span></li>
-        </ul></div>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:18px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/photo-2.jpg') center/cover no-repeat"></div></div>
     <div class="lp-card">
           <form id="lp-form" novalidate class="lp-form">
             <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
             <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
             <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Driveways</option><option>Patios</option><option>Stamped &amp; Decorative Concrete</option><option>Sidewalks &amp; Walkways</option><option>Steps &amp; Stairs</option><option>Pads &amp; Slabs</option><option>Commercial Concrete</option><option>Something else</option></select></div>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Driveways</option><option>Patios</option><option>Stamped &amp; Decorative</option><option>Sidewalks &amp; Walkways</option><option>Steps &amp; Stairs</option><option>Pads &amp; Slabs</option><option>Light Commercial</option><option>Something else</option></select></div>
             <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
               <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
             <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
@@ -461,42 +527,36 @@ tailwind.config = {
 
 </main>
 
-<!-- FOOTER -->
-<footer class="bg-deep text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-20 pb-10">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
-      <div class="lg:col-span-4">
-        <a href="#top" class="font-head font-semibold text-2xl tracking-tight leading-none">Lucky's <span class="text-brand">Concrete</span></a>
-        <p class="mt-5 text-white/70 max-w-xs">Residential and light-commercial concrete in Atlanta, GA and the surrounding area. One company accountable from first call to final cure.</p>
-      </div>
-      <div class="lg:col-span-2">
-        <h4 class="font-head font-semibold text-lg mb-4">Services</h4>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li>Driveways</li><li>Patios</li><li>Stamped &amp; decorative</li><li>Sidewalks</li><li>Steps &amp; stairs</li><li>Pads &amp; slabs</li>
-        </ul>
-      </div>
-      <div class="lg:col-span-3">
-        <h4 class="font-head font-semibold text-lg mb-4">Explore</h4>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li><a href="#services" class="hover:text-brand">What we pour</a></li>
-          <li><a href="#process" class="hover:text-brand">How it's poured</a></li>
-          <li><a href="#about" class="hover:text-brand">About</a></li>
-          <li><a href="#work" class="hover:text-brand">Our work</a></li>
-          <li><a href="#contact" class="hover:text-brand">Contact</a></li>
-        </ul>
-      </div>
-      <div class="lg:col-span-3">
-        <h4 class="font-head font-semibold text-lg mb-4">Contact</h4>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li><a href="tel:+14709422563" class="hover:text-brand">(470) 942-2563</a></li>
-          <li><a href="mailto:info@luckysconcrete.org" class="hover:text-brand break-words">info@luckysconcrete.org</a></li>
-          <li>Atlanta, GA</li>
-        </ul>
-      </div>
+<!-- Footer -->
+<footer class="bg-ink text-white/75 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/luckily-concrete-atlanta/21947/logo-0.png" alt="Luckily Concrete Atlanta" class="h-14 w-auto">
+      <p class="mt-5 max-w-sm leading-relaxed">Residential and light-commercial concrete. One company accountable from first call to final cure, serving Atlanta, GA and the surrounding area.</p>
     </div>
-    <div class="mt-16 pt-6 border-t border-white/15 text-xs text-white/55 space-y-1">
-      <p>Concept redesign by LumeaPixel. This is not the official Lucky's Concrete Atlanta website.</p>
-      <p>Some photos by Craftsman Concrete Floors, Dave Lowe, Ceba Solutions and web seo on Unsplash.</p>
+    <div class="md:col-span-3">
+      <h3 class="text-white font-semibold mb-4">Services</h3>
+      <ul class="space-y-2.5">
+        <li><a href="#services" class="hover:text-brand transition">Driveways</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Patios</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Stamped &amp; Decorative</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Sidewalks &amp; Walkways</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Steps &amp; Pads</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h3 class="text-white font-semibold mb-4">Contact</h3>
+      <ul class="space-y-2.5">
+        <li><a href="tel:+14709422563" class="hover:text-brand transition">(470) 942-2563</a></li>
+        <li><a href="mailto:info@luckysconcrete.org" class="hover:text-brand transition break-words">info@luckysconcrete.org</a></li>
+        <li>Atlanta, GA &amp; surrounding area</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-sm text-white/50 space-y-1">
+      <p>Concept redesign by LumeaPixel. This is not the official Luckily Concrete Atlanta website.</p>
+      <p>Some photos by Mélyna Côté on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -505,7 +565,7 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  document.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

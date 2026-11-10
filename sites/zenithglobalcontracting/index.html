@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Zenith Global Contracting | HVAC, Electrical, Painting & Drywall in Atlanta, GA</title>
+<title>Zenith Global Contracting | HVAC, Electrical, Drywall & Painting in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,67 +14,71 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        brand: '#1a7db5',
-        brandDeep: '#0b3a63',
-        ink: '#0a1622',
-        paper: '#f4f6f8'
+        brand: '#1b7db0',
+        brandDark: '#0c3a63',
+        ink: '#0b1620',
+        inkSoft: '#111f2b',
+        paper: '#f5f7f9'
       },
       fontFamily: {
-        head: ['Outfit', 'sans-serif'],
+        heading: ['Outfit', 'sans-serif'],
         body: ['Inter', 'sans-serif']
       },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '10px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #0a1622; }
-  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; line-height: 1.08; letter-spacing: -0.01em; }
+  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #1d2a35; background:#fff; }
+  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }
-  .cmp { position: relative; overflow: hidden; touch-action: none; user-select: none; }
-  .cmp img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .cmp .top { clip-path: inset(0 50% 0 0); }
-  .cmp .handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); }
-  .cmp .knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 9999px; background: #fff; transform: translate(-50%,-50%); display:flex; align-items:center; justify-content:center; color:#0a1622; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+  .tile-grad { background: linear-gradient(to top, rgba(11,22,32,.92) 0%, rgba(11,22,32,.35) 55%, rgba(11,22,32,0) 100%); }
+  .hero-shade { background: linear-gradient(100deg, rgba(11,22,32,.94) 0%, rgba(11,22,32,.78) 50%, rgba(11,22,32,.6) 100%); }
+  .dot { width:6px; height:6px; border-radius:9999px; background:#1b7db0; display:inline-block; flex:none; }
+  .cmp { position: relative; overflow: hidden; user-select: none; touch-action: pan-y; }
+  .cmp-top { position:absolute; inset:0; width:50%; overflow:hidden; }
+  .cmp-top img { position:absolute; top:0; left:0; height:100%; max-width:none; }
+  .cmp-handle { position:absolute; top:0; bottom:0; left:50%; width:2px; background:#fff; transform:translateX(-1px); pointer-events:none; }
+  .cmp-knob { position:absolute; top:50%; left:50%; width:44px; height:44px; margin:-22px 0 0 -22px; border-radius:9999px; background:#1b7db0; border:2px solid #fff; display:flex; align-items:center; justify-content:center; }
+  @media (prefers-reduced-motion: reduce) { .reveal { transition:none; opacity:1; transform:none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
 <body class="bg-white">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+<header class="sticky top-0 z-50 bg-ink border-b border-white/10">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/zenith-global-contracting/21927/logo-0.png" alt="Zenith Global Contracting LLC" class="h-14 w-auto"></a>
-    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#process" class="hover:text-brand">How it works</a>
-      <a href="#work" class="hover:text-brand">Our work</a>
-      <a href="#about" class="hover:text-brand">About</a>
-      <a href="#contact" class="hover:text-brand">Contact</a>
+    <a href="#top" class="flex-none">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/logo-0.png" alt="Zenith Global Contracting LLC" class="h-12 w-auto">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
+      <a href="#services" class="hover:text-white">Services</a>
+      <a href="#process" class="hover:text-white">Process</a>
+      <a href="#work" class="hover:text-white">Our work</a>
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="tel:+18665883152" class="hidden sm:inline-flex items-center gap-2 bg-brand text-white font-semibold px-5 py-3 rounded hover:bg-brandDeep transition">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+18665883152" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-[#166a97] text-white font-semibold text-sm px-5 py-3 rounded transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         (866) 588-3152
       </a>
-      <a href="tel:+18665883152" class="sm:hidden inline-flex items-center justify-center bg-brand text-white w-11 h-11 rounded" aria-label="Call">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      </a>
-      <button id="menuBtn" class="lg:hidden w-11 h-11 inline-flex items-center justify-center border border-black/10 rounded" aria-label="Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/5 bg-white">
-    <div class="px-5 py-4 flex flex-col gap-1 font-medium">
-      <a href="#services" class="py-3">Services</a>
-      <a href="#process" class="py-3">How it works</a>
-      <a href="#work" class="py-3">Our work</a>
-      <a href="#about" class="py-3">About</a>
-      <a href="#contact" class="py-3">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink border-t border-white/10">
+    <div class="px-5 py-5 flex flex-col gap-4 text-white/90 font-medium">
+      <a href="#services" class="mlink">Services</a>
+      <a href="#process" class="mlink">Process</a>
+      <a href="#work" class="mlink">Our work</a>
+      <a href="#about" class="mlink">About</a>
+      <a href="#contact" class="mlink">Contact</a>
+      <a href="tel:+18665883152" class="bg-brand text-white text-center font-semibold px-5 py-3 rounded">Call (866) 588-3152</a>
     </div>
   </div>
 </header>
@@ -82,92 +86,93 @@ tailwind.config = {
 <main id="top">
 
 <!-- HERO -->
-<section class="relative bg-ink text-white overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen renovation in progress" class="absolute inset-0 w-full h-full object-cover">
-  <div class="absolute inset-0 bg-ink/80"></div>
+<section class="relative bg-ink overflow-hidden">
+  <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-9.jpg" alt="Interior drywall project in progress" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-shade"></div>
   <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-7">
-      <p class="label text-white/70 mb-6">Atlanta, GA &middot; Residential &amp; commercial</p>
-      <h1 class="font-bold uppercase text-[42px] sm:text-6xl lg:text-7xl leading-[0.98]">Building comfort<br>and quality<br><span class="text-brand">that lasts.</span></h1>
-      <p class="mt-8 text-lg text-white/80 max-w-xl">Zenith Global Contracting handles HVAC, electrical, sheetrock and painting for homes and businesses. One team, one point of contact, from first estimate to final coat.</p>
-      <ul class="mt-8 space-y-3 text-[16px]">
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed and insured professionals</li>
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clear, upfront quotes with no hidden costs</li>
-        <li class="flex items-center gap-3"><svg class="text-brand shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>600+ projects completed</li>
+    <div class="lg:col-span-7 text-white">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/70 mb-5">General contractor &middot; Atlanta, GA</p>
+      <h1 class="font-heading font-bold uppercase text-[2.6rem] sm:text-6xl lg:text-7xl leading-[0.98] tracking-tight">
+        Heating.<br>Wiring.<br>Walls. Paint.
+      </h1>
+      <p class="mt-7 text-lg text-white/80 max-w-xl">Zenith Global Contracting delivers reliable residential and commercial renovation work. One team for HVAC, electrical, sheetrock and painting, from first estimate to final walkthrough.</p>
+      <ul class="mt-8 space-y-3 text-white/90">
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed professionals for residential and commercial jobs</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clear upfront quotes with no hidden costs</li>
+        <li class="flex items-start gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Four trades handled by one contractor</li>
       </ul>
       <div class="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="inline-flex justify-center items-center bg-brand hover:bg-white hover:text-ink text-white font-semibold px-8 py-4 rounded transition">Schedule a booking</a>
-        <a href="#work" class="inline-flex justify-center items-center border border-white/40 hover:bg-white hover:text-ink text-white font-semibold px-8 py-4 rounded transition">See our work</a>
+        <a href="#contact" class="bg-brand hover:bg-[#166a97] text-white font-semibold px-8 py-4 rounded text-center transition">Get a free estimate</a>
+        <a href="#services" class="border border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded text-center transition">See our services</a>
       </div>
     </div>
     <div class="lg:col-span-5">
-      <div class="bg-white text-ink rounded p-8 lg:p-10">
-        <p class="label text-brand mb-3">Free estimate</p>
-        <h2 class="text-3xl font-semibold">Get a free estimate</h2>
-        <p class="mt-3 text-slate-600">Tell us what you need done. We reply with a clear quote.</p>
-        <a href="tel:+18665883152" class="mt-7 flex items-center justify-center gap-3 bg-brand hover:bg-brandDeep text-white font-semibold px-6 py-4 rounded transition text-lg">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-          (866) 588-3152
-        </a>
-        <a href="mailto:info@zenithglobalcontracting.com" class="mt-3 flex items-center justify-center gap-3 border border-ink/15 hover:border-brand hover:text-brand font-semibold px-4 py-4 rounded transition text-[15px] text-center break-words">
-          <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          <span class="break-words min-w-0">info@zenithglobalcontracting.com</span>
-        </a>
+      <div class="bg-white rounded p-8 lg:p-9">
+        <h2 class="font-heading font-semibold text-2xl text-ink">Get a free estimate</h2>
+        <p class="mt-2 text-slate-600 text-base">Tell us about your project. We reply with a clear quote.</p>
+        <div class="mt-6 space-y-3">
+          <a href="tel:+18665883152" class="flex items-center justify-center gap-3 bg-brand hover:bg-[#166a97] text-white font-semibold px-5 py-4 rounded transition">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            (866) 588-3152
+          </a>
+          <a href="mailto:info@zenithglobalcontracting.com" class="flex items-center justify-center gap-3 border border-ink/20 hover:border-ink text-ink font-semibold px-4 py-4 rounded transition text-sm sm:text-base break-words text-center">
+            <svg class="flex-none" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span class="break-words min-w-0">info@zenithglobalcontracting.com</span>
+          </a>
+          <a href="#contact" class="block text-center text-brand font-semibold pt-2 hover:underline">Or send us a message</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE STRIP -->
-<section class="bg-ink border-t border-white/10 text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-head font-medium uppercase tracking-wider text-sm">
-    <span>HVAC</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Electrical</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Sheetrock &amp; Drywall</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Painting</span><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
-    <span>Residential &amp; Commercial</span>
+<!-- SERVICES STRIP -->
+<section class="bg-ink border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-white/85 font-heading font-medium uppercase tracking-wider text-sm">
+    <span>HVAC</span><span class="dot"></span>
+    <span>Electrical</span><span class="dot"></span>
+    <span>Sheetrock &amp; Drywall</span><span class="dot"></span>
+    <span>Painting</span><span class="dot"></span>
+    <span>Residential</span><span class="dot"></span>
+    <span>Commercial</span>
   </div>
 </section>
 
-<!-- SERVICES (brand section) -->
-<section id="services" class="bg-brand text-white py-24 lg:py-32">
+<!-- PLAN BUILD FINISH -> services cards -->
+<section id="services" class="bg-brand py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="label text-white/80 mb-4">Our services</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">Four trades. One contractor.</h2>
-      <p class="mt-5 text-white/90 text-lg">Improve comfort, safety and appearance without juggling separate crews. Every service is handled with skill and built to last.</p>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/75 mb-4">Our services</p>
+      <h2 class="font-heading font-bold uppercase text-4xl lg:text-5xl leading-[1.05] text-white">Four trades. One contractor.</h2>
+      <p class="mt-5 text-white/90 text-lg">Residential and commercial work designed to improve comfort, safety and appearance, handled with expert skill and built to last.</p>
     </div>
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <article class="bg-ink rounded overflow-hidden reveal flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/zenith-global-contracting/21927/photo-8.jpg" alt="Outdoor HVAC condenser units" class="w-full h-full object-cover"></div>
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-2xl font-semibold">HVAC</h3>
-          <p class="mt-3 text-white/70 text-[15px]">Installation, repair and maintenance for air conditioners, furnaces, heat pumps and ductless systems.</p>
-          <a href="#contact" class="mt-auto pt-5 inline-flex items-center gap-2 text-brand font-semibold hover:text-white">Request a quote <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-8.jpg" alt="Outdoor HVAC condenser units" class="w-full h-full object-cover"></div>
+        <div class="p-6 flex-1">
+          <h3 class="font-heading font-semibold text-xl text-white">HVAC</h3>
+          <p class="mt-2 text-white/70 text-base">Installation, repair and maintenance for air conditioners, furnaces, heat pumps and ductless systems.</p>
         </div>
       </article>
-      <article class="bg-ink rounded overflow-hidden reveal flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/zenith-global-contracting/21927/photo-10.jpg" alt="Electrician installing a light fixture" class="w-full h-full object-cover"></div>
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-2xl font-semibold">Electrical</h3>
-          <p class="mt-3 text-white/70 text-[15px]">Wiring, panel upgrades, lighting, outlets and safety inspections, all to local code.</p>
-          <a href="#contact" class="mt-auto pt-5 inline-flex items-center gap-2 text-brand font-semibold hover:text-white">Request a quote <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-10.jpg" alt="Electrician installing a light fixture" class="w-full h-full object-cover"></div>
+        <div class="p-6 flex-1">
+          <h3 class="font-heading font-semibold text-xl text-white">Electrical</h3>
+          <p class="mt-2 text-white/70 text-base">Wiring, panel upgrades, lighting, outlets and safety inspections that meet local codes.</p>
         </div>
       </article>
-      <article class="bg-ink rounded overflow-hidden reveal flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/zenith-global-contracting/21927/photo-9.jpg" alt="Hung drywall in a large room" class="w-full h-full object-cover"></div>
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-2xl font-semibold">Sheetrock &amp; Drywall</h3>
-          <p class="mt-3 text-white/70 text-[15px]">Installation, repair and finishing for new builds and remodels, ready for paint.</p>
-          <a href="#contact" class="mt-auto pt-5 inline-flex items-center gap-2 text-brand font-semibold hover:text-white">Request a quote <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-9.jpg" alt="Sheetrock walls and ceiling finished for paint" class="w-full h-full object-cover"></div>
+        <div class="p-6 flex-1">
+          <h3 class="font-heading font-semibold text-xl text-white">Sheetrock &amp; Drywall</h3>
+          <p class="mt-2 text-white/70 text-base">Installation, repair and finishing for new builds and remodels, ready for paint.</p>
         </div>
       </article>
-      <article class="bg-ink rounded overflow-hidden reveal flex flex-col">
-        <div class="aspect-[4/3]"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/zenith-global-contracting/21927/photo-1.jpg" alt="Freshly painted accent wall with taped edges" class="w-full h-full object-cover"></div>
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-2xl font-semibold">Painting</h3>
-          <p class="mt-3 text-white/70 text-[15px]">Interior and exterior painting with premium products and a clean, long-lasting finish.</p>
-          <a href="#contact" class="mt-auto pt-5 inline-flex items-center gap-2 text-brand font-semibold hover:text-white">Request a quote <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <article class="reveal bg-ink rounded overflow-hidden flex flex-col">
+        <div class="aspect-[4/3]"><img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-1.jpg" alt="Freshly painted accent wall with clean taped edges" class="w-full h-full object-cover"></div>
+        <div class="p-6 flex-1">
+          <h3 class="font-heading font-semibold text-xl text-white">Painting</h3>
+          <p class="mt-2 text-white/70 text-base">Interior and exterior painting with premium products and a clean, long-lasting finish.</p>
         </div>
       </article>
     </div>
@@ -175,189 +180,278 @@ tailwind.config = {
 </section>
 
 <!-- PROCESS -->
-<section id="process" class="py-24 lg:py-32 bg-white">
+<section id="process" class="bg-white py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="label text-brand mb-4">How it works</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">How your project runs</h2>
-      <p class="mt-5 text-slate-600 text-lg">From first call to finished work, the process is simple and transparent.</p>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Our process</p>
+      <h2 class="font-heading font-bold uppercase text-4xl lg:text-5xl leading-[1.05] text-ink">How your project runs</h2>
+      <p class="mt-5 text-slate-600 text-lg">From consultation to completion, simple, transparent and stress-free.</p>
     </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="reveal border border-black/10 rounded p-7">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-head font-bold text-2xl">1</div>
-        <h3 class="mt-6 text-2xl font-semibold">Share your project</h3>
-        <p class="mt-3 text-slate-600 text-[15px]">Tell us about your HVAC, electrical, painting or sheetrock needs.</p>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-heading font-bold text-xl text-ink">01</div>
+        <h3 class="mt-6 font-heading font-semibold text-xl text-ink">Share your project</h3>
+        <p class="mt-2 text-slate-600 text-base">Tell us about your HVAC, electrical, painting or sheetrock needs.</p>
       </div>
-      <div class="reveal border border-black/10 rounded p-7">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-head font-bold text-2xl">2</div>
-        <h3 class="mt-6 text-2xl font-semibold">Get your estimate</h3>
-        <p class="mt-3 text-slate-600 text-[15px]">Receive a clear, upfront quote with no hidden costs.</p>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-heading font-bold text-xl text-ink">02</div>
+        <h3 class="mt-6 font-heading font-semibold text-xl text-ink">Get your estimate</h3>
+        <p class="mt-2 text-slate-600 text-base">Receive a clear, upfront quote with no hidden costs.</p>
       </div>
-      <div class="reveal border border-black/10 rounded p-7">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-head font-bold text-2xl">3</div>
-        <h3 class="mt-6 text-2xl font-semibold">Schedule service</h3>
-        <p class="mt-3 text-slate-600 text-[15px]">Pick a time that works best for your home or business.</p>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-ink rounded flex items-center justify-center font-heading font-bold text-xl text-ink">03</div>
+        <h3 class="mt-6 font-heading font-semibold text-xl text-ink">Schedule service</h3>
+        <p class="mt-2 text-slate-600 text-base">Pick a time that works best for your home or business.</p>
       </div>
-      <div class="reveal border border-black/10 rounded p-7">
-        <div class="w-14 h-14 border-2 border-brand text-brand rounded flex items-center justify-center font-head font-bold text-2xl">4</div>
-        <h3 class="mt-6 text-2xl font-semibold">We get to work</h3>
-        <p class="mt-3 text-slate-600 text-[15px]">Our skilled team arrives on time and delivers quality results.</p>
+      <div class="reveal">
+        <div class="w-14 h-14 border-2 border-brand bg-brand rounded flex items-center justify-center font-heading font-bold text-xl text-white">04</div>
+        <h3 class="mt-6 font-heading font-semibold text-xl text-ink">We get to work</h3>
+        <p class="mt-2 text-slate-600 text-base">Our skilled team arrives on time and delivers quality results.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SIDE BY SIDE PHOTOS -->
-<section class="bg-ink text-white py-24 lg:py-32">
+<!-- BEFORE / SIDE BY SIDE -->
+<section class="bg-ink py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="label text-brand mb-4">From the job site</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">Rooms we have worked on</h2>
-      <p class="mt-5 text-white/70 text-lg">Interior painting and finishing on real Atlanta-area projects.</p>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/60 mb-4">From bare walls to finished rooms</p>
+      <h2 class="font-heading font-bold uppercase text-4xl lg:text-5xl leading-[1.05] text-white">Drywall to paint, done in-house</h2>
+      <p class="mt-5 text-white/70 text-lg">Because sheetrock and painting are handled by the same crew, the finish carries straight through from taped seams to the final coat.</p>
     </div>
     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure class="reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/zenith-global-contracting/21927/photo-1.jpg" alt="Accent wall painted and taped for a clean edge" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-white/70 text-[15px]">Accent wall, taped for crisp lines</figcaption>
+      <figure class="reveal relative rounded overflow-hidden aspect-[4/3]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-9.jpg" alt="Sheetrock installed and taped in a large room" class="w-full h-full object-cover">
+        <figcaption class="absolute left-4 bottom-4 bg-ink text-white text-sm font-semibold px-4 py-2 rounded">Sheetrock &amp; finishing</figcaption>
       </figure>
-      <figure class="reveal">
-        <div class="aspect-[4/3] rounded overflow-hidden"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/zenith-global-contracting/21927/photo-6.jpg" alt="Bedroom with freshly painted walls and white doors" class="w-full h-full object-cover"></div>
-        <figcaption class="mt-3 text-white/70 text-[15px]">Bedroom repaint with trim and doors</figcaption>
+      <figure class="reveal relative rounded overflow-hidden aspect-[4/3]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-1.jpg" alt="Painted wall with crisp taped edges" class="w-full h-full object-cover">
+        <figcaption class="absolute left-4 bottom-4 bg-brand text-white text-sm font-semibold px-4 py-2 rounded">Painting</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
 <!-- COMPARISON -->
-<section class="py-24 lg:py-32 bg-paper">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="label text-brand mb-4">Why one contractor</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">Separate trades vs one contractor</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white border border-black/10 rounded p-8 reveal">
-        <h3 class="text-2xl font-semibold">Hiring each trade yourself</h3>
-        <ul class="mt-6 space-y-4 text-slate-600">
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>Separate quotes from an HVAC, electrical, drywall and paint company</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>You coordinate the schedule between every crew</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>Several people to call when something needs fixing</li>
-          <li class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>Different standards of finish from job to job</li>
-        </ul>
-      </div>
-      <div class="bg-white border-2 border-brand rounded p-8 reveal">
-        <h3 class="text-2xl font-semibold">Zenith Global Contracting</h3>
-        <ul class="mt-6 space-y-4">
-          <li class="flex gap-3"><svg class="text-brand shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One clear quote, no hidden costs</li>
-          <li class="flex gap-3"><svg class="text-brand shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>HVAC, electrical, sheetrock and painting under one roof</li>
-          <li class="flex gap-3"><svg class="text-brand shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One team that arrives on time and communicates openly</li>
-          <li class="flex gap-3"><svg class="text-brand shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed and insured, one standard of finish</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK BENTO -->
-<section id="work" class="py-24 lg:py-32 bg-white">
+<section class="bg-paper py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="max-w-2xl reveal">
-      <p class="label text-brand mb-4">Our work</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">What we build and renovate</h2>
-      <p class="mt-5 text-slate-600 text-lg">Kitchens, interiors, additions and full-room renovations for homes and businesses.</p>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Why Zenith</p>
+      <h2 class="font-heading font-bold uppercase text-4xl lg:text-5xl leading-[1.05] text-ink">Juggling trades vs one contractor</h2>
     </div>
-    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 auto-rows-[260px]">
-      <figure class="relative rounded overflow-hidden sm:col-span-2 lg:col-span-2 lg:row-span-2 reveal">
-        <img src="https://images.unsplash.com/photo-1593786267440-550458cc882a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Nnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home extension under construction with scaffolding" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
-        <figcaption class="absolute bottom-0 p-6 text-white"><h3 class="text-2xl font-semibold">Additions &amp; extensions</h3></figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden reveal">
-        <img src="https://images.unsplash.com/photo-1768321902290-54497eeb9cf6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjd8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior framing with insulation and new window" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
-        <figcaption class="absolute bottom-0 p-5 text-white"><h3 class="text-xl font-semibold">Interior framing</h3></figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden reveal">
-        <img src="https://images.unsplash.com/photo-1652549884754-86bb2de48c69?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Room being renovated back to brick wall" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
-        <figcaption class="absolute bottom-0 p-5 text-white"><h3 class="text-xl font-semibold">Full-room renovations</h3></figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden reveal">
-        <img src="https://images.unsplash.com/photo-1632214532406-40287aced8d6?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTl8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Open renovation space with materials staged" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
-        <figcaption class="absolute bottom-0 p-5 text-white"><h3 class="text-xl font-semibold">Remodels</h3></figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden reveal">
-        <img src="https://images.unsplash.com/photo-1697967464378-1498c293e1aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Prep work and materials in a renovation space" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
-        <figcaption class="absolute bottom-0 p-5 text-white"><h3 class="text-xl font-semibold">Prep &amp; finishing</h3></figcaption>
-      </figure>
-      <figure class="relative rounded overflow-hidden sm:col-span-2 lg:col-span-2 reveal">
-        <img src="https://images.unsplash.com/photo-1783587616880-7e081f735a87?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Window replacement materials outside a home" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
-        <figcaption class="absolute bottom-0 p-6 text-white"><h3 class="text-2xl font-semibold">Exterior improvements</h3></figcaption>
-      </figure>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="reveal bg-white border border-slate-200 rounded p-8 lg:p-10">
+        <h3 class="font-heading font-semibold text-2xl text-ink">Hiring each trade separately</h3>
+        <ul class="mt-6 space-y-4 text-slate-600">
+          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-slate-300 flex-none"></span>Separate crews for HVAC, electrical, drywall and paint</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-slate-300 flex-none"></span>You coordinate schedules and handoffs yourself</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-slate-300 flex-none"></span>Several quotes to compare and keep track of</li>
+          <li class="flex gap-3"><span class="mt-2.5 w-2 h-2 rounded-full bg-slate-300 flex-none"></span>Nobody owns the result when trades overlap</li>
+        </ul>
+      </div>
+      <div class="reveal bg-white border-2 border-brand rounded p-8 lg:p-10">
+        <h3 class="font-heading font-semibold text-2xl text-ink">One contractor: Zenith</h3>
+        <ul class="mt-6 space-y-4 text-ink">
+          <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>HVAC, electrical, sheetrock and painting under one roof</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One point of contact from estimate to completion</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A clear, upfront quote with no hidden costs</li>
+          <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed team focused on on-time, quality results</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT SPLIT -->
-<section id="about" class="py-24 lg:py-32 bg-paper">
+<!-- WHAT WE BUILD / WORK -->
+<section id="work" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Our work</p>
+      <h2 class="font-heading font-bold uppercase text-4xl lg:text-5xl leading-[1.05] text-ink">What we do</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 lg:gap-5">
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] md:col-span-6 lg:col-span-7 lg:aspect-auto lg:min-h-[420px]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-8.jpg" alt="Row of outdoor HVAC condensers" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-2xl">HVAC systems</h3><p class="text-white/80 text-base">Install, repair, maintain</p></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] md:col-span-3 lg:col-span-5">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-10.jpg" alt="Installing a light fixture" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Lighting &amp; electrical</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] md:col-span-3 lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-1.jpg" alt="Painted accent wall" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Interior painting</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] md:col-span-3 lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-9.jpg" alt="Finished drywall in a commercial space" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Sheetrock &amp; drywall</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] md:col-span-3 lg:col-span-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-11.jpg" alt="Painters rolling fresh color onto a wall" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-xl">Fresh color, clean finish</h3></div>
+      </div>
+      <div class="reveal relative rounded overflow-hidden aspect-[4/3] md:col-span-6 lg:col-span-12 lg:aspect-[21/8]">
+        <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home extension under construction with scaffolding" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 tile-grad"></div>
+        <div class="absolute left-6 bottom-6 right-6 text-white"><h3 class="font-heading font-semibold text-2xl">Residential &amp; commercial renovation</h3><p class="text-white/80 text-base">Projects of every size</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-paper py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
     <div class="lg:col-span-6 reveal">
-      <p class="label text-brand mb-4">About us</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold">A dependable contractor for Atlanta homes and businesses</h2>
-      <p class="mt-6 text-slate-600">Every project deserves precision, dedication and care. We built Zenith Global Contracting to give residential and commercial clients one partner for HVAC, electrical, sheetrock and painting.</p>
-      <p class="mt-4 text-slate-600">We take the time to understand what you want, then deliver solutions that match it. Whatever the size of the job, the standard stays the same.</p>
-      <ul class="mt-7 space-y-3">
-        <li class="flex gap-3"><svg class="text-brand shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Skilled craftsmanship across four trades</li>
-        <li class="flex gap-3"><svg class="text-brand shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Open communication from start to finish</li>
-        <li class="flex gap-3"><svg class="text-brand shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Projects finished on time and within budget</li>
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">About us</p>
+      <h2 class="font-heading font-bold uppercase text-4xl lg:text-5xl leading-[1.05] text-ink">Your partner for precision and care</h2>
+      <p class="mt-6 text-slate-600">At Zenith Global Contracting, every project gets precision, dedication and care. We built the company on dependable solutions for residential and commercial clients, from HVAC installation and repair to electrical work, sheetrock and painting.</p>
+      <p class="mt-4 text-slate-600">We take the time to understand your vision and provide solutions that fit your exact requirements, whether that is a new heating and cooling system, updated electrical for safety and efficiency, or a polished new look with drywall and paint.</p>
+      <ul class="mt-8 space-y-3 text-ink">
+        <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Skilled craftsmanship across all four trades</li>
+        <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Open communication and transparency</li>
+        <li class="flex gap-3"><svg class="mt-1 flex-none text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Results built to stand the test of time</li>
       </ul>
-      <div class="mt-9 flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="inline-flex justify-center items-center bg-brand hover:bg-brandDeep text-white font-semibold px-8 py-4 rounded transition">Schedule a booking</a>
-        <a href="tel:+18665883152" class="inline-flex justify-center items-center border border-ink/20 hover:border-brand hover:text-brand font-semibold px-8 py-4 rounded transition">Call (866) 588-3152</a>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-brand hover:bg-[#166a97] text-white font-semibold px-8 py-4 rounded text-center transition">Request an estimate</a>
+        <a href="tel:+18665883152" class="border border-ink/25 hover:border-ink text-ink font-semibold px-8 py-4 rounded text-center transition">Call (866) 588-3152</a>
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] rounded overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen being prepared for renovation" class="w-full h-full object-cover">
+      <div class="rounded overflow-hidden aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5]">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/photo-10.jpg" alt="Zenith electrician at work" class="w-full h-full object-cover">
       </div>
     </div>
   </div>
 </section>
 
 <!-- SERVICE AREA -->
-<section class="py-20 lg:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 reveal">
-    <p class="label text-brand mb-4">Service area</p>
-    <h2 class="text-3xl lg:text-4xl font-semibold max-w-2xl">Serving Atlanta, GA</h2>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <span class="border border-black/15 rounded px-5 py-2.5 font-medium">Atlanta, GA</span>
-      <span class="border border-black/15 rounded px-5 py-2.5 font-medium">Residential</span>
-      <span class="border border-black/15 rounded px-5 py-2.5 font-medium">Commercial</span>
+<section class="bg-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-5 reveal">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand mb-4">Service area</p>
+      <h2 class="font-heading font-bold uppercase text-3xl lg:text-4xl leading-[1.05] text-ink">Serving Atlanta, GA</h2>
+      <p class="mt-4 text-slate-600">Residential and commercial projects in Atlanta. Call to confirm we cover your address.</p>
+    </div>
+    <div class="lg:col-span-7 reveal flex flex-wrap gap-3">
+      <span class="border border-slate-300 text-ink font-medium px-5 py-2.5 rounded">Atlanta, GA</span>
+      <span class="border border-slate-300 text-ink font-medium px-5 py-2.5 rounded">Residential</span>
+      <span class="border border-slate-300 text-ink font-medium px-5 py-2.5 rounded">Commercial</span>
     </div>
   </div>
 </section>
 
 <!-- CALL BAND -->
-<section class="bg-ink text-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<section class="bg-ink py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
     <div class="lg:col-span-7">
-      <h2 class="text-4xl lg:text-5xl font-semibold uppercase leading-[1.02]">Professional work, done right the first time.</h2>
+      <h2 class="font-heading font-bold uppercase text-3xl lg:text-5xl leading-[1.05] text-white">Professional work, done right the first time.</h2>
     </div>
     <div class="lg:col-span-5 flex flex-col gap-4">
-      <a href="tel:+18665883152" class="inline-flex justify-center items-center gap-3 bg-brand hover:bg-white hover:text-ink text-white font-semibold px-8 py-4 rounded transition text-lg">(866) 588-3152</a>
-      <a href="mailto:info@zenithglobalcontracting.com" class="inline-flex justify-center items-center border border-white/30 hover:bg-white hover:text-ink font-semibold px-5 py-4 rounded transition text-[15px] text-center break-words">info@zenithglobalcontracting.com</a>
+      <a href="tel:+18665883152" class="bg-brand hover:bg-[#166a97] text-white font-heading font-semibold text-xl text-center px-8 py-4 rounded transition">(866) 588-3152</a>
+      <a href="mailto:info@zenithglobalcontracting.com" class="border border-white/30 hover:border-white text-white text-center px-4 py-4 rounded transition text-sm sm:text-base break-words">info@zenithglobalcontracting.com</a>
     </div>
   </div>
 </section>
 
-<section id="contact" class="lp-contact" style="background:#0e202a;padding:clamp(80px,10vw,128px) 0">
+<!-- REVIEWS -->
+<section id="reviews" class="ti-reviews">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <style>
+    .ti-reviews{background:#fff;padding:88px 0;font-family:'Poppins','Inter',system-ui,sans-serif;color:#111}
+    .ti-reviews .ti-wrap{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:28px}
+    .ti-reviews .ti-sum{flex:none;width:230px;text-align:center}
+    .ti-reviews .ti-label{font-size:22px;font-weight:700;letter-spacing:.01em;margin-bottom:6px}
+    .ti-reviews .ti-based{font-size:15px;margin-top:6px;color:#111}
+    .ti-reviews .ti-google{display:block;margin-top:6px;font-size:40px;font-weight:500;letter-spacing:-1px;line-height:1.1;font-family:'Product Sans','Roboto','Poppins',Arial,sans-serif}
+    .ti-reviews .ti-stars{position:relative;display:inline-block;line-height:0}
+    .ti-reviews .ti-stars-fill{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap}
+    .ti-reviews .ti-slider{position:relative;flex:1;min-width:0}
+    .ti-reviews .ti-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:14px 4px 18px;scrollbar-width:none}
+    .ti-reviews .ti-track::-webkit-scrollbar{display:none}
+    .ti-reviews .ti-card{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;background:#fff;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.09);padding:20px 22px 18px;display:flex;flex-direction:column}
+    .ti-reviews .ti-head{display:flex;align-items:center;gap:12px}
+    .ti-reviews .ti-avatar{flex:none;width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}
+    .ti-reviews .ti-who{min-width:0;flex:1;display:flex;flex-direction:column}
+    .ti-reviews .ti-name{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ti-reviews .ti-date{font-size:13px;color:#8a8a8a}
+    .ti-reviews .ti-g{flex:none;align-self:flex-start}
+    .ti-reviews .ti-rate{display:flex;align-items:center;gap:6px;margin-top:12px}
+    .ti-reviews .ti-text{margin-top:10px;font-size:15px;line-height:1.5;color:#111;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+    .ti-reviews .ti-card.open .ti-text{-webkit-line-clamp:unset;display:block}
+    .ti-reviews .ti-more{margin-top:auto;padding-top:10px;align-self:flex-start;font-size:14px;color:#8a8a8a;background:none;border:0;cursor:pointer}
+    .ti-reviews .ti-more:hover{color:#111}
+    .ti-reviews .ti-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid #ddd;box-shadow:0 1px 4px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#555;z-index:2}
+    .ti-reviews .ti-prev{left:-14px}.ti-reviews .ti-next{right:-14px}
+    @media (max-width:1023px){.ti-reviews .ti-card{flex-basis:calc((100% - 16px)/2)}}
+    @media (max-width:767px){.ti-reviews{padding:64px 0}.ti-reviews .ti-wrap{flex-direction:column;gap:12px}.ti-reviews .ti-sum{width:auto}.ti-reviews .ti-slider{width:100%}.ti-reviews .ti-card{flex-basis:86%}.ti-reviews .ti-prev{left:-6px}.ti-reviews .ti-next{right:-6px}}
+  </style>
+  <div class="ti-wrap">
+        <div class="ti-sum">
+          <div class="ti-label">REVIEWS</div>
+          <div class="ti-based">What customers say about <b>Zenith Global Contracting</b></div>
+          
+        </div>
+    <div class="ti-slider">
+      <button type="button" class="ti-arrow ti-prev" aria-label="Previous reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="ti-track">
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#c2185b">M</span>
+            <span class="ti-who"><span class="ti-name">Michael T.</span></span>
+            
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span></div>
+          <p class="ti-text">We hired Zenith for electrical upgrades in our office, and they exceeded expectations. Everything was handled safely and efficiently, with zero downtime. Their professionalism and attention to detail were outstanding. I’ll be using them again for future projects.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#00897b">S</span>
+            <span class="ti-who"><span class="ti-name">Sarah W.</span></span>
+            
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span></div>
+          <p class="ti-text">I needed sheetrock repairs and interior painting, and Zenith Global Contracting delivered excellent results. The walls look brand new and the paint finish is flawless. The team was courteous, punctual, and tidy throughout the process. Highly recommended!</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#6d4c41">E</span>
+            <span class="ti-who"><span class="ti-name">Emily R.</span></span>
+            
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span></div>
+          <p class="ti-text">Amazing HVAC service! The team was professional, quick, and very knowledgeable. They explained everything clearly and completed the job on time. My home has never felt more comfortable. I’ll definitely recommend Zenith Global Contracting to friends and family.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+      </div>
+      <button type="button" class="ti-arrow ti-next" aria-label="Next reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <script>(function(){var s=document.currentScript.closest('section'),t=s.querySelector('.ti-track');
+  function step(d){var c=t.querySelector('.ti-card');t.scrollBy({left:d*(c?c.offsetWidth+16:300),behavior:'smooth'});}
+  s.querySelector('.ti-prev').onclick=function(){step(-1)};s.querySelector('.ti-next').onclick=function(){step(1)};
+  function arrows(){var max=t.scrollWidth-t.clientWidth-2;s.querySelector('.ti-prev').style.display=t.scrollLeft>12?'flex':'none';s.querySelector('.ti-next').style.display=t.scrollLeft<max-10?'flex':'none';}
+  t.addEventListener('scroll',arrows);window.addEventListener('resize',arrows);arrows();
+  s.querySelectorAll('.ti-card').forEach(function(c){var p=c.querySelector('.ti-text'),b=c.querySelector('.ti-more');
+    if(p.scrollHeight<=p.clientHeight+2){b.style.visibility='hidden';}
+    b.onclick=function(){c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Hide':'Read more';};});
+  })();</script>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="lp-contact" style="background:#0e2029;padding:clamp(80px,10vw,128px) 0">
   <style>
     .lp-contact{position:relative}
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(26,125,181,0.10);color:#1a7db5}
-    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#1a7db5}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(27,125,176,0.10);color:#1b7db0}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#1b7db0}
     .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
     .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
     .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
@@ -368,16 +462,16 @@ tailwind.config = {
     .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
     .lp-contact .lp-v-d{color:#fff}
     .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
     .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
     .lp-contact .lp-wide{grid-column:1/-1}
     @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
     .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:10px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
     .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
     .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#1a7db5;box-shadow:0 0 0 4px rgba(26,125,181,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:6px;background:#1a7db5;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-input:focus{outline:none;border-color:#1b7db0;box-shadow:0 0 0 4px rgba(27,125,176,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:10px;background:#1b7db0;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
     .lp-contact .lp-btn-full{width:100%}
     .lp-contact .lp-btn:hover{filter:brightness(.94)}
     .lp-contact .lp-btn:active{transform:translateY(1px)}
@@ -388,7 +482,7 @@ tailwind.config = {
     .lp-contact .lp-grid{display:grid;gap:48px;align-items:center}
     @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
   <div class="lp-in"><div class="lp-grid">
-    <div style="color:#fff"><p class="lp-kick" style="color:#1a7db5">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your project and we will get back to you with a clear, upfront quote.</p><ul class="lp-info">
+    <div style="color:#fff"><p class="lp-kick" style="color:#1b7db0">Contact</p><h2 class="lp-h" style="color:#fff">Request a free estimate</h2><p class="lp-p" style="color:rgba(255,255,255,.72)">Tell us about your HVAC, electrical, sheetrock or painting project and we will get back to you with a clear quote.</p><ul class="lp-info">
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
             <span><span class="lp-k lp-k-d">Call</span><a href="tel:+18665883152" class="lp-v lp-v-d">(866) 588-3152</a></span></li>
           <li><span class="lp-ic lp-ic-d"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
@@ -415,21 +509,24 @@ tailwind.config = {
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-ink text-white border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
-    <div class="md:col-span-5">
-      <div class="inline-block bg-white rounded p-3"><img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@d97bbd46a2be132e5fa4073c0ddacefb2b37ef8d/sites/zenith-global-contracting/21927/logo-0.png" alt="Zenith Global Contracting LLC" class="h-14 w-auto"></div>
-      <p class="mt-5 text-white/70 max-w-sm text-[15px]">Reliable residential and commercial renovations in Atlanta, GA. A skilled team and a commitment to quality on every project.</p>
+<footer class="bg-ink border-t border-white/10 text-white/70">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/zenith-global-contracting/21947/logo-0.png" alt="Zenith Global Contracting LLC" class="h-14 w-auto">
+      <p class="mt-5 max-w-sm text-base">Reliable residential and commercial renovations. A skilled team and a commitment to quality, bringing comfort, function and lasting value to every project.</p>
     </div>
-    <div class="md:col-span-3">
-      <h4 class="font-semibold text-lg">Services</h4>
-      <ul class="mt-4 space-y-2 text-white/70 text-[15px]">
-        <li>HVAC</li><li>Electrical</li><li>Sheetrock &amp; Drywall</li><li>Painting</li>
+    <div class="lg:col-span-3">
+      <h4 class="font-heading font-semibold text-white mb-4">Services</h4>
+      <ul class="space-y-2 text-base">
+        <li>HVAC</li>
+        <li>Electrical</li>
+        <li>Sheetrock &amp; Drywall</li>
+        <li>Painting</li>
       </ul>
     </div>
-    <div class="md:col-span-4">
-      <h4 class="font-semibold text-lg">Contact</h4>
-      <ul class="mt-4 space-y-2 text-white/70 text-[15px]">
+    <div class="lg:col-span-4">
+      <h4 class="font-heading font-semibold text-white mb-4">Contact</h4>
+      <ul class="space-y-2 text-base">
         <li><a href="tel:+18665883152" class="hover:text-white">(866) 588-3152</a></li>
         <li><a href="mailto:info@zenithglobalcontracting.com" class="hover:text-white break-words">info@zenithglobalcontracting.com</a></li>
         <li>Atlanta, GA</li>
@@ -437,9 +534,9 @@ tailwind.config = {
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-[13px] text-white/50 space-y-1">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-sm text-white/50 space-y-1">
       <p>Concept redesign by LumeaPixel. This is not the official Zenith Global Contracting website.</p>
-      <p>Some photos by immo RENOVATION, Olek Buzunov, Brett Jordan, Yauheni Flerman, Steffen Lemmerzahl and Annie Spratt on Unsplash.</p>
+      <p>Some photos by Annie Gray on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -448,7 +545,7 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  document.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });

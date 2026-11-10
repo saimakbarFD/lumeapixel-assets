@@ -7,70 +7,80 @@
 <title>Moquin Construction Company | Termite Damage Repair in Atlanta, GA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: { sans: ['Manrope', 'sans-serif'] },
       colors: {
-        brand: '#f5a623',
-        brandDark: '#2b1d08',
-        ink: '#141210',
-        cream: '#f7f3ec'
+        brand: '#f0b86e',
+        ink: '#111111',
+        sand: '#faf6f0',
+        bark: '#2a1f12'
       },
-      fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif']
-      },
-      borderRadius: { DEFAULT: '6px' }
+      borderRadius: { DEFAULT: '14px' }
     }
   }
 }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: #141210; background: #fff; }
-  h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.1; letter-spacing: -0.01em; }
+  body { font-family: 'Manrope', sans-serif; color: #111; -webkit-font-smoothing: antialiased; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
-  .tile img { transition: transform .6s ease; }
-  .tile:hover img { transform: scale(1.04); }
-  .rd { border-radius: 6px; }
+  .hero-shade { background: linear-gradient(90deg, rgba(10,8,5,.88) 0%, rgba(10,8,5,.62) 55%, rgba(10,8,5,.35) 100%); }
+  .card-img { transition: transform .6s ease; }
+  .svc:hover .card-img { transform: scale(1.04); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 <style>html,body{overflow-x:clip}</style></head>
-<body class="antialiased">
+<body class="bg-white">
+
+<!-- Top bar -->
+<div class="bg-brand text-ink text-[13px] font-semibold">
+  <div class="max-w-7xl mx-auto px-5 py-2 flex flex-col sm:flex-row sm:justify-between gap-1">
+    <span>Serving Atlanta, Georgia &amp; Tampa, Florida</span>
+    <a href="mailto:moquinconstruction@att.net" class="hover:underline break-words">moquinconstruction@att.net</a>
+  </div>
+</div>
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-white/95 border-b border-black/10 backdrop-blur-0">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="shrink-0">
-      <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/moquin-construction-company/21924/logo-0.png" alt="Moquin Construction Company termite repairs logo" class="h-10 sm:h-12 w-auto">
+<header class="sticky top-0 z-50 bg-ink text-white">
+  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
+    <a href="#top" class="shrink-0 flex items-center">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/moquin-construction-company/21947/logo-0.png" alt="Moquin Construction Company, termite repairs" class="h-12 w-auto bg-white rounded px-2 py-1">
     </a>
-    <nav class="hidden lg:flex items-center gap-8 font-heading font-medium text-[15px]">
-      <a href="#services" class="hover:text-brand transition-colors">Services</a>
-      <a href="#about" class="hover:text-brand transition-colors">About</a>
-      <a href="#difference" class="hover:text-brand transition-colors">The Moquin Difference</a>
-      <a href="#reviews" class="hover:text-brand transition-colors">Reviews</a>
-      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+      <a href="#difference" class="hover:text-brand transition">Why Moquin</a>
+      <a href="#services" class="hover:text-brand transition">Services</a>
+      <a href="#projects" class="hover:text-brand transition">Projects</a>
+      <a href="#contact" class="hover:text-brand transition">Contact</a>
     </nav>
-    <div class="flex items-center gap-3">
-      <a href="tel:+16784804597" class="inline-flex items-center gap-2 bg-brand text-ink font-heading font-semibold px-4 sm:px-5 py-2.5 rd hover:bg-ink hover:text-white transition-colors text-sm sm:text-base">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>(678) 480-4597</span>
+    <div class="hidden md:flex items-center gap-5">
+      <div class="text-right leading-tight">
+        <div class="text-[11px] uppercase tracking-widest text-white/60">Need help? Call us today</div>
+        <a href="tel:+16784804597" class="text-lg font-bold hover:text-brand transition">(678) 480-4597</a>
+      </div>
+      <a href="#contact" class="bg-brand text-ink font-bold text-sm px-5 py-3 rounded hover:bg-white transition">Free estimate</a>
+    </div>
+    <div class="flex items-center gap-3 md:hidden">
+      <a href="tel:+16784804597" class="bg-brand text-ink font-bold text-sm px-4 py-2.5 rounded flex items-center gap-2" aria-label="Call (678) 480-4597">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call
       </a>
-      <button id="menuBtn" class="lg:hidden p-2" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button id="menuBtn" class="p-2" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-white">
-    <div class="px-5 py-4 flex flex-col gap-4 font-heading font-medium">
-      <a href="#services" class="mlink">Services</a>
-      <a href="#about" class="mlink">About</a>
-      <a href="#difference" class="mlink">The Moquin Difference</a>
-      <a href="#reviews" class="mlink">Reviews</a>
-      <a href="#contact" class="mlink">Contact</a>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-ink">
+    <div class="px-5 py-4 flex flex-col gap-4 text-base font-semibold">
+      <a href="#difference" class="mnav">Why Moquin</a>
+      <a href="#services" class="mnav">Services</a>
+      <a href="#projects" class="mnav">Projects</a>
+      <a href="#contact" class="mnav">Contact</a>
     </div>
   </div>
 </header>
@@ -78,314 +88,343 @@ tailwind.config = {
 <main id="top">
 
 <!-- Hero -->
-<section class="relative">
-  <div class="relative min-h-[620px] lg:min-h-[720px] flex items-center">
-    <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/moquin-construction-company/21924/photo-1.jpg" alt="Contractor measuring and marking lumber in a framed attic" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-ink/70"></div>
-    <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center text-white pt-20 pb-40 lg:pb-48">
-      <p class="font-heading text-sm tracking-[0.2em] uppercase text-brand mb-5">Atlanta, Georgia &amp; Tampa, Florida</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-semibold">Termite damage repair,<br>done right in Atlanta.</h1>
-      <p class="mt-6 text-lg lg:text-xl text-white/85 max-w-2xl mx-auto">Moquin Construction Company has specialized in termite repairs since 2000, restoring the safety, function and look of your property.</p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#contact" class="bg-brand text-ink font-heading font-semibold px-8 py-3.5 rd hover:bg-white transition-colors">Request an estimate</a>
-        <a href="tel:+16784804597" class="border border-white text-white font-heading font-semibold px-8 py-3.5 rd hover:bg-white hover:text-ink transition-colors">Call (678) 480-4597</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Trust strip -->
-  <div class="relative max-w-6xl mx-auto px-5 lg:px-8 -mt-24 lg:-mt-20">
-    <div class="bg-white rd shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-black/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="p-6 flex items-start gap-4 border-b sm:border-r lg:border-b-0 border-black/10">
-        <svg class="shrink-0 mt-1 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><p class="font-heading font-semibold">Repairing termite damage since 2000</p></div>
-      </div>
-      <div class="p-6 flex items-start gap-4 border-b lg:border-b-0 lg:border-r border-black/10">
-        <svg class="shrink-0 mt-1 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><p class="font-heading font-semibold">Inspection and damage assessment</p></div>
-      </div>
-      <div class="p-6 flex items-start gap-4 border-b sm:border-b-0 sm:border-r border-black/10">
-        <svg class="shrink-0 mt-1 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><p class="font-heading font-semibold">Immediate phone assistance</p></div>
-      </div>
-      <div class="p-6 flex items-start gap-4">
-        <svg class="shrink-0 mt-1 text-brand" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><p class="font-heading font-semibold">Repair methods chosen for minimal environmental impact</p></div>
+<section class="relative min-h-[620px] lg:min-h-[720px] flex items-center bg-ink">
+  <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/moquin-construction-company/21947/photo-1.jpg" alt="Moquin contractor measuring and marking lumber for a structural repair" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-shade"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-20 w-full">
+    <div class="max-w-2xl">
+      <h1 class="text-white font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">Termite damage repair for Atlanta homes.</h1>
+      <p class="mt-6 text-lg text-white/85 leading-relaxed max-w-xl">Restoring the safety, function and look of your property after termite damage, since 2000. Serving Atlanta, Georgia and Tampa, Florida.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3">
+        <a href="tel:+16784804597" class="bg-brand text-ink font-bold px-7 py-4 rounded text-center hover:bg-white transition">Call (678) 480-4597</a>
+        <a href="#contact" class="bg-white text-ink font-bold px-7 py-4 rounded-full text-center hover:bg-brand transition">Request a free estimate</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services grid -->
-<section id="services" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="font-heading text-sm tracking-[0.2em] uppercase text-ink/60 mb-3">Services</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">What we repair in Atlanta</h2>
-      <p class="mt-5 text-ink/75">A full suite of termite repair services designed to protect and restore your property, from the first inspection to the finished repair.</p>
-    </div>
-
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-12 gap-5">
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1619191949276-8deafce6de19?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Exposed framing and block walls during structural repair" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <h3 class="absolute left-6 bottom-6 right-6 text-white text-2xl font-semibold">Termite Damage Repair</h3>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1673978484281-e9370ac3b81c?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTR8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Bare structural interior with supports ready for repair work" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <h3 class="absolute left-6 bottom-6 right-6 text-white text-2xl font-semibold">Termite Inspection &amp; Damage Assessment</h3>
-      </a>
-      <a href="tel:+16784804597" class="tile group relative block overflow-hidden rd md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1736182615481-3795ea557614?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior remodel with saw station and building materials" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <h3 class="absolute left-6 bottom-6 right-6 text-white text-2xl font-semibold">Immediate Phone Assistance</h3>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1652549884754-86bb2de48c69?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTV8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Brick wall and window stripped back for repair" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <h3 class="absolute left-6 bottom-6 right-6 text-white text-2xl font-semibold">Structural Restoration</h3>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-5 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Hallway with new wood trim being installed" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <h3 class="absolute left-6 bottom-6 right-6 text-white text-2xl font-semibold">Finish &amp; Trim Carpentry</h3>
-      </a>
-      <a href="#contact" class="tile group relative block overflow-hidden rd md:col-span-7 aspect-[4/3] md:aspect-auto md:h-[380px] reveal">
-        <img src="https://images.unsplash.com/photo-1593623671658-6b842c7f9697?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="House extension under construction with scaffolding" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"></div>
-        <h3 class="absolute left-6 bottom-6 right-6 text-white text-2xl font-semibold">Exterior &amp; Framing Repairs</h3>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Split: photo left -->
-<section id="about" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+<!-- The Moquin difference -->
+<section id="difference" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
     <div class="lg:col-span-6 reveal">
-      <div class="aspect-[4/5] overflow-hidden rd">
-        <img src="https://images.unsplash.com/photo-1601303981778-0f61e3d2da64?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Home under repair with scaffolding and a debris skip" class="w-full h-full object-cover">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-bark/70">The Moquin difference</p>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">Repairs done right, by neighbors who know termite damage.</h2>
+      <div class="mt-12 grid grid-cols-2 gap-4">
+        <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/moquin-construction-company/21947/photo-11.jpg" alt="Moquin team member talking with a homeowner outside their house" class="col-span-2 w-full aspect-[16/9] object-cover rounded">
+        <div class="bg-brand rounded p-6 flex items-center">
+          <p class="font-bold text-xl leading-snug text-ink">“Prompt professional service.”<span class="block mt-2 text-sm font-semibold text-ink/75">Specializing in termite repairs since 2000</span></p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8M3x8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Carpenter cutting lumber with a miter saw" class="w-full h-full min-h-[180px] object-cover rounded">
       </div>
     </div>
     <div class="lg:col-span-6 reveal">
-      <p class="font-heading text-sm tracking-[0.2em] uppercase text-ink/60 mb-3">About Moquin</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Termite repair specialists since 2000</h2>
-      <p class="mt-6 text-ink/75">Moquin Construction Company protects and restores properties across Atlanta, Georgia and Tampa, Florida. Our team specializes in termite repairs and brings a full restoration of your space after damage.</p>
-      <p class="mt-4 text-ink/75">Every job starts with a detailed inspection. We find the problem areas, assess how severe the damage is, and give you an accurate picture of the repairs needed before any work begins.</p>
-      <a href="#contact" class="inline-block mt-8 bg-brand text-ink font-heading font-semibold px-8 py-3.5 rd hover:bg-ink hover:text-white transition-colors">Request an estimate</a>
-    </div>
-  </div>
-</section>
-
-<!-- Reverse split -->
-<section id="difference" class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-6 order-2 lg:order-1 reveal">
-      <p class="font-heading text-sm tracking-[0.2em] uppercase text-ink/60 mb-3">Why Moquin</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">Experience the Moquin difference</h2>
-      <ul class="mt-8 space-y-6">
-        <li class="flex gap-4">
-          <svg class="shrink-0 mt-1.5 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <p class="text-ink/80"><strong class="font-heading text-ink">Your satisfaction is our promise.</strong> We are committed to making sure you are 100% delighted with our termite repair services.</p>
-        </li>
-        <li class="flex gap-4">
-          <svg class="shrink-0 mt-1.5 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <p class="text-ink/80"><strong class="font-heading text-ink">We are your neighbors.</strong> Our team is rooted in the community and understands the termite challenges unique to this area.</p>
-        </li>
-        <li class="flex gap-4">
-          <svg class="shrink-0 mt-1.5 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          <p class="text-ink/80"><strong class="font-heading text-ink">Safety comes first.</strong> Our repair methods are chosen for minimal environmental impact, keeping your family or customers safe.</p>
-        </li>
-      </ul>
-    </div>
-    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
-      <div class="aspect-[4/5] overflow-hidden rd">
-        <img src="https://images.unsplash.com/photo-1785484267229-a9ceb2eee58d?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjV8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Removed window frames and damaged timber cleared from a garden" class="w-full h-full object-cover">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-2xl reveal">
-      <p class="font-heading text-sm tracking-[0.2em] uppercase text-ink/60 mb-3">Work in progress</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold">On site, from teardown to finish</h2>
-    </div>
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
-      <div class="col-span-2 lg:col-span-6 aspect-[16/10] overflow-hidden rd reveal"><img src="https://images.unsplash.com/photo-1783587616880-7e081f735a87?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Old window frames stacked beside a stone wall" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden rd reveal"><img src="https://images.unsplash.com/photo-1786269691598-55b8b9fa0f33?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Demolition rubble cleared from an extension footprint" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden rd reveal"><img src="https://images.unsplash.com/photo-1674649207083-281c2517ab49?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8NXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Craftsman laying wood trim in a hallway" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden rd reveal"><img src="https://images.unsplash.com/photo-1619191949276-8deafce6de19?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Block and brick interior walls with exposed joists" class="w-full h-full object-cover"></div>
-      <div class="col-span-1 lg:col-span-3 aspect-[4/5] overflow-hidden rd reveal"><img src="https://images.unsplash.com/photo-1593623671658-6b842c7f9697?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Two-storey rear extension with scaffolding" class="w-full h-full object-cover"></div>
-      <div class="col-span-2 lg:col-span-6 aspect-[16/10] overflow-hidden rd reveal"><img src="https://images.unsplash.com/photo-1736182615481-3795ea557614?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTF8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Renovated room with mitre saw and sheet materials" class="w-full h-full object-cover"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Cream panel + review -->
-<section id="reviews" class="pb-24 lg:pb-32">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="bg-cream rd px-6 sm:px-12 py-16 lg:py-20 text-center reveal">
-      <p class="font-heading text-sm tracking-[0.2em] uppercase text-ink/60 mb-3">Latest reviews</p>
-      <h2 class="text-3xl sm:text-4xl font-semibold max-w-2xl mx-auto">Repair your home with the pros</h2>
-      <blockquote class="mt-8 max-w-3xl mx-auto text-lg lg:text-xl text-ink/85 leading-relaxed">
-        “Larry and his team did an amazing job at our house reparing for termite damage. He is very professional and we really appreciate his work. He fixed the house so well you cannot even tell it was damage. Great company will recommend them to work for you if you have any termite damage.”
-      </blockquote>
-      <p class="mt-5 font-heading font-semibold">Isatu Jalloh</p>
-      <a href="#contact" class="inline-block mt-9 bg-brand text-ink font-heading font-semibold px-8 py-3.5 rd hover:bg-ink hover:text-white transition-colors">Start your repair</a>
-    </div>
-    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <figure class="border border-black/10 rd p-8 reveal">
-        <blockquote class="text-ink/80">“It was great having professional company like Moquin Construction take on our project. They showed up on time each day and made us feel like we were important! Not only that, they are reasonably priced - we felt so comfortable and at ease with them. Thank you for guys.”</blockquote>
-        <figcaption class="mt-4 font-heading font-semibold">Channing Lee</figcaption>
-      </figure>
-      <figure class="border border-black/10 rd p-8 reveal">
-        <blockquote class="text-ink/80">“Because this fell under insurance, we were not able to choose the company who did the repairs for the termite damage. But after working with Larry and his team, I would choose this company every day of the week! It's refreshing to deal with people who not only offer the best in professionalism but are just super pleasant to talk to and coordinate with. This was the easiest process I've had in a long time. Great job. Excellent Service!.”</blockquote>
-        <figcaption class="mt-4 font-heading font-semibold">Janel Torres</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- Final call -->
-<section class="pb-24 lg:pb-32">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
-      <div class="lg:col-span-8 aspect-[4/3] lg:aspect-[16/10] overflow-hidden rd">
-        <img src="https://images.unsplash.com/photo-1601303981778-0f61e3d2da64?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Residential repair project with scaffolding on the front of the house" class="w-full h-full object-cover">
-      </div>
-      <div class="lg:col-span-4 bg-brand text-ink rd p-8 lg:p-10 -mt-12 mx-4 lg:mx-0 lg:mt-0 lg:-ml-24 relative">
-        <h2 class="text-3xl lg:text-4xl font-semibold">Speak with our team today</h2>
-        <p class="mt-4 text-ink/85">Call for immediate service or consultation, or send us a message and we will get back to you.</p>
-        <a href="tel:+16784804597" class="inline-block mt-7 bg-ink text-white font-heading font-semibold px-7 py-3.5 rd hover:bg-white hover:text-ink transition-colors">(678) 480-4597</a>
-        <p class="mt-5 text-sm break-words"><a href="mailto:moquinconstruction@att.net" class="underline">moquinconstruction@att.net</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="lp-contact py-24 md:py-32 bg-[#f6f5f2]">
-  <style>
-    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(245,166,35,0.10);color:#f5a623}
-    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 12px 32px -12px rgba(16,24,40,.10)}
-    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
-    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:6px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none}
-    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
-    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
-    .lp-contact .lp-input:focus{outline:none;border-color:#f5a623;box-shadow:0 0 0 4px rgba(245,166,35,0.10)}
-    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border-radius:6px;background:#f5a623;color:#111111;font-weight:600;font-size:16px;transition:filter .15s,transform .15s}
-    .lp-contact .lp-btn:hover{filter:brightness(.94)}
-    .lp-contact .lp-btn:active{transform:translateY(1px)}
-  </style>
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-      <div class="lg:col-span-5">
-        <p class="text-[13px] font-semibold uppercase tracking-[.16em]" style="color:#f5a623">Contact</p>
-        <h2 class="mt-4 text-4xl md:text-5xl font-semibold leading-[1.08] tracking-tight text-neutral-900">Request a termite repair estimate</h2>
-        <p class="mt-5 text-lg leading-relaxed text-neutral-600 max-w-md">Tell us about the damage and we will get back to you about inspection and repair.</p>
-        <ul class="mt-10 space-y-6">
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Call</span>
-            <a href="tel:+16784804597" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">(678) 480-4597</a></span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Email</span>
-            <a href="mailto:moquinconstruction@att.net" class="text-lg font-medium text-neutral-900 hover:underline underline-offset-4 break-words">moquinconstruction@att.net</a></span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
-            <span><span class="block text-[13px] uppercase tracking-[.12em] text-neutral-500">Service area</span>
-            <span class="text-lg font-medium text-neutral-900">Atlanta, GA</span></span>
-          </li>
-        </ul>
-      </div>
-      <div class="lg:col-span-7">
-        <div class="lp-card p-6 sm:p-8 md:p-10">
-          <form id="lp-form" novalidate class="grid sm:grid-cols-2 gap-x-5 gap-y-6">
-            <div class="">
-              <label for="lp-name" class="lp-label">Full name</label>
-              <input id="lp-name" name="name" type="text" required class="lp-input">
-            </div>
-            <div class="">
-              <label for="lp-phone" class="lp-label">Phone</label>
-              <input id="lp-phone" name="phone" type="tel" required class="lp-input">
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-email" class="lp-label">Email</label>
-              <input id="lp-email" name="email" type="email" required class="lp-input">
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-service" class="lp-label">Service you need</label>
-              <select id="lp-service" name="service" class="lp-input">
-                <option value="">Choose a service</option><option>Termite Damage Repair</option><option>Termite Inspection and Damage Assessment</option><option>Immediate Phone Assistance</option>
-                <option>Something else</option>
-              </select>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="lp-message" class="lp-label">Project details</label>
-              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea>
-            </div>
-            <div class="sm:col-span-2 pt-2">
-              <button type="submit" class="lp-btn w-full sm:w-auto">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button>
-            </div>
-          </form>
-          <div id="lp-thanks" class="hidden py-16 text-center">
-            <span class="lp-ic mx-auto" style="width:56px;height:56px"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span>
-            <p class="mt-5 text-2xl font-semibold text-neutral-900">Thanks, we'll be in touch soon.</p>
-          </div>
+      <p class="text-lg text-neutral-700 leading-relaxed">Trust us to deliver not only exceptional repair services but also a customer experience that sets us apart. Let's work together to bring your property back to its best condition.</p>
+      <div class="mt-10 space-y-8">
+        <div class="border-t border-neutral-200 pt-6">
+          <h3 class="text-xl font-bold">Your satisfaction is the promise</h3>
+          <p class="mt-2 text-neutral-600 leading-relaxed">We're committed to making sure you're 100% delighted with our termite repair services, because your peace of mind is our top priority.</p>
+        </div>
+        <div class="border-t border-neutral-200 pt-6">
+          <h3 class="text-xl font-bold">Your neighbors, not strangers</h3>
+          <p class="mt-2 text-neutral-600 leading-relaxed">Our team is rooted in the community and understands the termite challenges homes here face. We deliver solutions built to protect your property.</p>
+        </div>
+        <div class="border-t border-neutral-200 pt-6">
+          <h3 class="text-xl font-bold">Safety first, always</h3>
+          <p class="mt-2 text-neutral-600 leading-relaxed">Our repair methods are chosen for their minimal environmental impact, keeping the space safe for your family or your customers.</p>
         </div>
       </div>
+      <a href="tel:+16784804597" class="mt-10 inline-flex items-center gap-4 group">
+        <span class="w-14 h-14 rounded-full bg-brand flex items-center justify-center shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        </span>
+        <span>
+          <span class="block text-xs uppercase tracking-widest text-neutral-500 font-semibold">Speak with our team</span>
+          <span class="block text-2xl font-bold group-hover:text-bark transition">(678) 480-4597</span>
+        </span>
+      </a>
     </div>
   </div>
-  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('hidden');document.getElementById('lp-thanks').classList.remove('hidden');});</script>
+</section>
+
+<!-- Services -->
+<section id="services" class="relative pb-24 lg:pb-32">
+  <div class="absolute inset-x-0 top-0 h-[420px] lg:h-[400px] bg-brand"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-20 lg:pt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end reveal">
+      <div class="lg:col-span-7">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-ink/70">Termite repair services</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-ink">Everything to protect and restore your property.</h2>
+      </div>
+      <p class="lg:col-span-5 text-ink/80 text-lg leading-relaxed">A comprehensive suite of termite repair services, from the first inspection to the finished rebuild.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <a href="#contact" class="svc block bg-white rounded p-3 group reveal shadow-sm">
+        <div class="overflow-hidden rounded aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1619191949276-8deafce6de19?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjF8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Framing and masonry repair in progress" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="text-lg font-bold flex items-center justify-between gap-3">Termite Damage Repair <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+          <p class="mt-2 text-sm text-neutral-600 leading-relaxed">A complete restoration of the safety, function and appearance of your space after termite damage.</p>
+        </div>
+      </a>
+      <a href="#contact" class="svc block bg-white rounded p-3 group reveal shadow-sm">
+        <div class="overflow-hidden rounded aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1593012672105-42e6d13af5ac?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MjJ8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Structural steel and brickwork during a repair" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="text-lg font-bold flex items-center justify-between gap-3">Inspection &amp; Assessment <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+          <p class="mt-2 text-sm text-neutral-600 leading-relaxed">A detailed inspection that finds the damage and measures its severity, so you know exactly what repairs are needed.</p>
+        </div>
+      </a>
+      <a href="#contact" class="svc block bg-white rounded p-3 group reveal shadow-sm">
+        <div class="overflow-hidden rounded aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Interior renovation underway with crew at work" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="text-lg font-bold flex items-center justify-between gap-3">Restoration &amp; Rebuild <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+          <p class="mt-2 text-sm text-neutral-600 leading-relaxed">Damaged areas rebuilt so well you cannot tell there was ever a problem.</p>
+        </div>
+      </a>
+      <a href="tel:+16784804597" class="svc block bg-white rounded p-3 group reveal shadow-sm">
+        <div class="overflow-hidden rounded aspect-[4/3]">
+          <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/moquin-construction-company/21947/photo-11.jpg" alt="Moquin team member greeting a homeowner" class="card-img w-full h-full object-cover">
+        </div>
+        <div class="px-2 pt-5 pb-3">
+          <h3 class="text-lg font-bold flex items-center justify-between gap-3">Immediate Phone Assistance <svg class="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+          <p class="mt-2 text-sm text-neutral-600 leading-relaxed">Speak directly with our team for prompt, professional help or a consultation.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="pb-24 lg:pb-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="max-w-2xl reveal">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-bark/70">Recent work</p>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">On site across Atlanta.</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <img src="https://images.unsplash.com/photo-1601303981778-0f61e3d2da64?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Scaffolded house with a skip during repairs" class="reveal col-span-2 lg:col-span-2 w-full aspect-[16/9] lg:aspect-[16/8] object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1683372101362-2efc3e75650e?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MTN8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Skid steer clearing damaged structure beside a house" class="reveal col-span-1 lg:col-span-1 w-full aspect-square lg:aspect-auto lg:h-full object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1697967464378-1498c293e1aa?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8OXx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Ladder and materials inside a room being renovated" class="reveal col-span-1 w-full aspect-square lg:aspect-[4/3] object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mnx8aG9tZSUyMHJlbm92YXRpb24lMjBjb25zdHJ1Y3Rpb258ZW58MXwwfHx8MTc5NDIyMjQ4NXww&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Kitchen protected with sheeting during renovation" class="reveal col-span-1 w-full aspect-square lg:aspect-[4/3] object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1786269691598-55b8b9fa0f33?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8MzB8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Demolition rubble and boarded wall at a home" class="reveal col-span-1 w-full aspect-square lg:aspect-[4/3] object-cover rounded">
+      <img src="https://images.unsplash.com/photo-1783587616880-7e081f735a87?ixid=M3wxMTI4MjkzfDB8MXxzZWFyY2h8Mjh8fGhvbWUlMjByZW5vdmF0aW9uJTIwY29uc3RydWN0aW9ufGVufDF8MHx8fDE3OTQyMjI0ODV8MA&ixlib=rb-4.1.0&w=1600&q=80&fit=max&auto=format" alt="Removed window frames stacked beside a patio" class="reveal col-span-2 lg:col-span-3 w-full aspect-[16/9] lg:aspect-[16/6] object-cover rounded">
+    </div>
+  </div>
+</section>
+
+<!-- Affiliations -->
+<section class="pb-24 lg:pb-32 bg-white">
+  <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 border-t border-neutral-200 pt-14 reveal">
+    <div class="lg:col-span-4">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-bark/70">Affiliations and partnerships</p>
+      <h2 class="mt-4 text-2xl sm:text-3xl font-bold leading-tight tracking-tight">Active members of leading industry organizations.</h2>
+    </div>
+    <ul class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4 content-start">
+      <li class="flex gap-3 items-start text-neutral-800 font-semibold"><svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>American Safety Insurance</li>
+      <li class="flex gap-3 items-start text-neutral-800 font-semibold"><svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Florida Pest Control Management Association</li>
+      <li class="flex gap-3 items-start text-neutral-800 font-semibold"><svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Georgia Pest Control Association</li>
+      <li class="flex gap-3 items-start text-neutral-800 font-semibold"><svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Sedgwick Claims Management</li>
+      <li class="flex gap-3 items-start text-neutral-800 font-semibold"><svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>PestSure X</li>
+      <li class="flex gap-3 items-start text-neutral-800 font-semibold"><svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>National Association of Realtors</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="ti-reviews">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <style>
+    .ti-reviews{background:#fff;padding:88px 0;font-family:'Poppins','Inter',system-ui,sans-serif;color:#111}
+    .ti-reviews .ti-wrap{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:28px}
+    .ti-reviews .ti-sum{flex:none;width:230px;text-align:center}
+    .ti-reviews .ti-label{font-size:22px;font-weight:700;letter-spacing:.01em;margin-bottom:6px}
+    .ti-reviews .ti-based{font-size:15px;margin-top:6px;color:#111}
+    .ti-reviews .ti-google{display:block;margin-top:6px;font-size:40px;font-weight:500;letter-spacing:-1px;line-height:1.1;font-family:'Product Sans','Roboto','Poppins',Arial,sans-serif}
+    .ti-reviews .ti-stars{position:relative;display:inline-block;line-height:0}
+    .ti-reviews .ti-stars-fill{position:absolute;inset:0 auto 0 0;overflow:hidden;white-space:nowrap}
+    .ti-reviews .ti-slider{position:relative;flex:1;min-width:0}
+    .ti-reviews .ti-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:14px 4px 18px;scrollbar-width:none}
+    .ti-reviews .ti-track::-webkit-scrollbar{display:none}
+    .ti-reviews .ti-card{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;background:#fff;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.09);padding:20px 22px 18px;display:flex;flex-direction:column}
+    .ti-reviews .ti-head{display:flex;align-items:center;gap:12px}
+    .ti-reviews .ti-avatar{flex:none;width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}
+    .ti-reviews .ti-who{min-width:0;flex:1;display:flex;flex-direction:column}
+    .ti-reviews .ti-name{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ti-reviews .ti-date{font-size:13px;color:#8a8a8a}
+    .ti-reviews .ti-g{flex:none;align-self:flex-start}
+    .ti-reviews .ti-rate{display:flex;align-items:center;gap:6px;margin-top:12px}
+    .ti-reviews .ti-text{margin-top:10px;font-size:15px;line-height:1.5;color:#111;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+    .ti-reviews .ti-card.open .ti-text{-webkit-line-clamp:unset;display:block}
+    .ti-reviews .ti-more{margin-top:auto;padding-top:10px;align-self:flex-start;font-size:14px;color:#8a8a8a;background:none;border:0;cursor:pointer}
+    .ti-reviews .ti-more:hover{color:#111}
+    .ti-reviews .ti-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid #ddd;box-shadow:0 1px 4px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#555;z-index:2}
+    .ti-reviews .ti-prev{left:-14px}.ti-reviews .ti-next{right:-14px}
+    @media (max-width:1023px){.ti-reviews .ti-card{flex-basis:calc((100% - 16px)/2)}}
+    @media (max-width:767px){.ti-reviews{padding:64px 0}.ti-reviews .ti-wrap{flex-direction:column;gap:12px}.ti-reviews .ti-sum{width:auto}.ti-reviews .ti-slider{width:100%}.ti-reviews .ti-card{flex-basis:86%}.ti-reviews .ti-prev{left:-6px}.ti-reviews .ti-next{right:-6px}}
+  </style>
+  <div class="ti-wrap">
+        <div class="ti-sum">
+          <div class="ti-label">EXCELLENT</div>
+          <div><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span></div>
+          <div class="ti-based">Based on <b>43 reviews</b></div>
+          <span class="ti-google" aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+        </div>
+    <div class="ti-slider">
+      <button type="button" class="ti-arrow ti-prev" aria-label="Previous reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="ti-track">
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#1e88e5">I</span>
+            <span class="ti-who"><span class="ti-name">Isatu Jalloh</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="5 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:100%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Larry and his team did an amazing job at our house reparing for termite damage. He is very professional and we really appreciate his work. He fixed the house so well you cannot even tell it was damage. Great company will recommend them to work for you if you have any termite damage.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#1e88e5">C</span>
+            <span class="ti-who"><span class="ti-name">Channing Lee</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="4 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:80%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">It was great having professional company like Moquin Construction take on our project. They showed up on time each day and made us feel like we were important! Not only that, they are reasonably priced - we felt so comfortable and at ease with them. Thank you for guys.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+        <article class="ti-card">
+          <div class="ti-head">
+            <span class="ti-avatar" style="background:#1e88e5">J</span>
+            <span class="ti-who"><span class="ti-name">Janel Torres</span></span>
+            <span class="ti-g"><svg viewBox="0 0 48 48" width="22" height="22" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+          </div>
+          <div class="ti-rate"><span class="ti-stars" role="img" aria-label="4 out of 5 stars"><span><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#dcdcdc"/></svg></span></span><span class="ti-stars-fill" style="width:80%"><span style="display:inline-flex;gap:2px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l2.94 6.1 6.56.86-4.8 4.62 1.2 6.52L12 17.47 6.1 20.6l1.2-6.52-4.8-4.62 6.56-.86L12 2.5z" fill="#f6bb06"/></svg></span></span></span><svg viewBox="0 0 24 24" width="17" height="17" aria-label="Verified"><path fill="#4a8af4" d="M12 1.5l2.6 1.9 3.2-.2 1 3 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3 3.2.2z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 12.3l2.6 2.6L16.2 9.3"/></svg></div>
+          <p class="ti-text">Because this fell under insurance, we were not able to choose the company who did the repairs for the termite damage. But after working with Larry and his team, I would choose this company every day of the week! It's refreshing to deal with people who not only offer the best in professionalism but are just super pleasant to talk to and coordinate with. This was the easiest process I've had in a long time. Great job. Excellent Service!.</p>
+          <button type="button" class="ti-more">Read more</button>
+        </article>
+      </div>
+      <button type="button" class="ti-arrow ti-next" aria-label="Next reviews"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <script>(function(){var s=document.currentScript.closest('section'),t=s.querySelector('.ti-track');
+  function step(d){var c=t.querySelector('.ti-card');t.scrollBy({left:d*(c?c.offsetWidth+16:300),behavior:'smooth'});}
+  s.querySelector('.ti-prev').onclick=function(){step(-1)};s.querySelector('.ti-next').onclick=function(){step(1)};
+  function arrows(){var max=t.scrollWidth-t.clientWidth-2;s.querySelector('.ti-prev').style.display=t.scrollLeft>12?'flex':'none';s.querySelector('.ti-next').style.display=t.scrollLeft<max-10?'flex':'none';}
+  t.addEventListener('scroll',arrows);window.addEventListener('resize',arrows);arrows();
+  s.querySelectorAll('.ti-card').forEach(function(c){var p=c.querySelector('.ti-text'),b=c.querySelector('.ti-more');
+    if(p.scrollHeight<=p.clientHeight+2){b.style.visibility='hidden';}
+    b.onclick=function(){c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Hide':'Read more';};});
+  })();</script>
+</section>
+
+<!-- Call band -->
+<section class="bg-ink">
+  <div class="max-w-7xl mx-auto px-5 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-8">
+      <h2 class="text-brand text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">Repair your home with the pros.</h2>
+      <p class="mt-5 text-white/75 text-lg max-w-2xl leading-relaxed">Call Moquin Construction Company and bring your property back to its best condition.</p>
+    </div>
+    <div class="lg:col-span-4 flex lg:justify-end">
+      <a href="tel:+16784804597" class="bg-brand text-ink font-bold px-8 py-4 rounded text-center hover:bg-white transition w-full sm:w-auto">Call (678) 480-4597</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact placeholder -->
+<section id="contact" class="lp-contact" style="background:#f6f5f2;padding:clamp(80px,10vw,128px) 0">
+  <style>
+    .lp-contact{position:relative}
+    .lp-contact .lp-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:rgba(240,184,110,0.10);color:#f0b86e}
+    .lp-contact .lp-ic-d{background:rgba(255,255,255,.08);color:#f0b86e}
+    .lp-contact .lp-kick{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.16em}
+    .lp-contact .lp-h{margin-top:16px;font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+    .lp-contact .lp-p{margin-top:18px;font-size:18px;line-height:1.6;max-width:30rem}
+    .lp-contact .lp-info{margin-top:36px;display:grid;gap:22px;list-style:none;padding:0}
+    .lp-contact .lp-info li{display:flex;align-items:flex-start;gap:16px}
+    .lp-contact .lp-k{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#737373}
+    .lp-contact .lp-k-d{color:rgba(255,255,255,.55)}
+    .lp-contact .lp-v{font-size:18px;font-weight:500;color:#171717;overflow-wrap:anywhere;text-decoration:none}
+    .lp-contact .lp-v-d{color:#fff}
+    .lp-contact a.lp-v:hover{text-decoration:underline;text-underline-offset:4px}
+    .lp-contact .lp-card{background:#fff;border:1px solid #e7e5e0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 16px 40px -16px rgba(16,24,40,.18);padding:clamp(24px,4vw,40px)}
+    .lp-contact .lp-form{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+    .lp-contact .lp-wide{grid-column:1/-1}
+    @media (max-width:640px){.lp-contact .lp-form{grid-template-columns:1fr}}
+    .lp-contact .lp-label{display:block;font-size:14px;font-weight:500;color:#2b2b2b;margin-bottom:8px}
+    .lp-contact .lp-input{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #d9d7d1;border-radius:14px;background:#fff;font-size:16px;color:#111;transition:border-color .15s,box-shadow .15s;appearance:none;font-family:inherit}
+    .lp-contact textarea.lp-input{height:140px;padding:14px 16px;resize:vertical}
+    .lp-contact select.lp-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+    .lp-contact .lp-input:focus{outline:none;border-color:#f0b86e;box-shadow:0 0 0 4px rgba(240,184,110,0.10)}
+    .lp-contact .lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 32px;border:0;border-radius:14px;background:#f0b86e;color:#111111;font-weight:600;font-size:16px;cursor:pointer;transition:filter .15s,transform .15s;font-family:inherit}
+    .lp-contact .lp-btn-full{width:100%}
+    .lp-contact .lp-btn:hover{filter:brightness(.94)}
+    .lp-contact .lp-btn:active{transform:translateY(1px)}
+    .lp-contact .lp-thanks{display:none;padding:64px 0;text-align:center}
+    .lp-contact .lp-thanks p{margin-top:20px;font-size:24px;font-weight:600;color:#171717}
+    .lp-contact .lp-in{max-width:80rem;margin:0 auto;padding:0 20px}
+    @media (min-width:1024px){.lp-contact .lp-in{padding:0 32px}}
+    .lp-contact .lp-grid{display:grid;gap:48px;align-items:start}
+    @media (min-width:1024px){.lp-contact .lp-grid{grid-template-columns:5fr 7fr;gap:64px}}</style>
+  <div class="lp-in"><div class="lp-grid">
+    <div><p class="lp-kick" style="color:#f0b86e">Contact</p><h2 class="lp-h" style="color:#171717">Request a free estimate</h2><p class="lp-p" style="color:#525252">Tell us about the termite damage at your property and we will get back to you promptly.</p><ul class="lp-info">
+          <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></span>
+            <span><span class="lp-k">Call</span><a href="tel:+16784804597" class="lp-v">(678) 480-4597</a></span></li>
+          <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></span>
+            <span><span class="lp-k">Email</span><a href="mailto:moquinconstruction@att.net" class="lp-v">moquinconstruction@att.net</a></span></li>
+          <li><span class="lp-ic"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="20" height="20" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></span>
+            <span><span class="lp-k">Service area</span><span class="lp-v">Atlanta, GA</span></span></li>
+        </ul><div class="lp-sidephoto" style="margin-top:40px;aspect-ratio:4/3;border-radius:18px;background:#ddd url('https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/moquin-construction-company/21947/photo-11.jpg') center/cover no-repeat"></div></div>
+    <div class="lp-card">
+          <form id="lp-form" novalidate class="lp-form">
+            <div><label for="lp-name" class="lp-label">Full name</label><input id="lp-name" name="name" type="text" required class="lp-input"></div>
+            <div><label for="lp-phone" class="lp-label">Phone</label><input id="lp-phone" name="phone" type="tel" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-email" class="lp-label">Email</label><input id="lp-email" name="email" type="email" required class="lp-input"></div>
+            <div class="lp-wide"><label for="lp-service" class="lp-label">Service you need</label>
+              <select id="lp-service" name="service" class="lp-input"><option value="">Choose a service</option><option>Termite Damage Repair</option><option>Termite Inspection and Damage Assessment</option><option>Restoration and Rebuild</option><option>Phone Consultation</option><option>Something else</option></select></div>
+            <div class="lp-wide"><label for="lp-message" class="lp-label">Project details</label>
+              <textarea id="lp-message" name="message" class="lp-input" placeholder="Tell us what you have in mind"></textarea></div>
+            <div class="lp-wide" style="padding-top:4px"><button type="submit" class="lp-btn">Send request <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="18" height="18" aria-hidden="true"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button></div>
+          </form>
+          <div id="lp-thanks" class="lp-thanks"><span class="lp-ic" style="width:56px;height:56px;margin:0 auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" width="26" height="26" aria-hidden="true"><path d="m4.5 12.75 6 6 9-13.5"/></svg></span><p>Thanks, we'll be in touch soon.</p></div></div>
+  </div></div>
+  <script>document.getElementById('lp-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('lp-thanks').style.display='block';});</script>
 </section>
 
 </main>
 
 <!-- Footer -->
-<footer class="bg-brandDark text-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-    <div>
-      <div class="bg-white rd inline-block p-3">
-        <img src="https://cdn.jsdelivr.net/gh/saimakbarFD/lumeapixel-assets@2bb0711fa86800666253a4313af086b6fa1ada52/sites/moquin-construction-company/21924/logo-0.png" alt="Moquin Construction Company logo" class="h-10 w-auto">
-      </div>
-      <p class="mt-5 text-white/70 text-[15px]">Specializing in termite repairs since 2000, serving Atlanta, Georgia and Tampa, Florida.</p>
+<footer class="bg-ink text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <img src="https://lumea-redesigns-01.pages.dev/gh/a89dd24fd0f0df3dd863cea343deed4e87f01b84/sites/moquin-construction-company/21947/logo-0.png" alt="Moquin Construction Company, termite repairs" class="h-12 w-auto bg-white rounded px-2 py-1">
+      <p class="mt-6 text-white/65 leading-relaxed max-w-sm">Moquin Construction Company. Termite damage repair in Atlanta, Georgia and Tampa, Florida since 2000.</p>
     </div>
-    <div>
-      <h4 class="font-heading font-semibold text-lg mb-4">Services</h4>
-      <ul class="space-y-2 text-white/70 text-[15px]">
-        <li>Termite Damage Repair</li>
-        <li>Inspection &amp; Damage Assessment</li>
-        <li>Immediate Phone Assistance</li>
+    <div class="md:col-span-3">
+      <h3 class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Explore</h3>
+      <ul class="mt-5 space-y-3 text-white/80">
+        <li><a href="#difference" class="hover:text-brand transition">Why Moquin</a></li>
+        <li><a href="#services" class="hover:text-brand transition">Services</a></li>
+        <li><a href="#projects" class="hover:text-brand transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-brand transition">Contact</a></li>
       </ul>
     </div>
-    <div>
-      <h4 class="font-heading font-semibold text-lg mb-4">Company</h4>
-      <ul class="space-y-2 text-white/70 text-[15px]">
-        <li><a href="#about" class="hover:text-brand">About</a></li>
-        <li><a href="#difference" class="hover:text-brand">The Moquin Difference</a></li>
-        <li><a href="#reviews" class="hover:text-brand">Reviews</a></li>
-        <li><a href="#contact" class="hover:text-brand">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-heading font-semibold text-lg mb-4">Contact</h4>
-      <ul class="space-y-2 text-white/70 text-[15px]">
-        <li><a href="tel:+16784804597" class="hover:text-brand">(678) 480-4597</a></li>
-        <li class="break-words"><a href="mailto:moquinconstruction@att.net" class="hover:text-brand">moquinconstruction@att.net</a></li>
-        <li>Atlanta, GA</li>
+    <div class="md:col-span-4">
+      <h3 class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Contact</h3>
+      <ul class="mt-5 space-y-3 text-white/80">
+        <li><a href="tel:+16784804597" class="font-bold text-white text-lg hover:text-brand transition">(678) 480-4597</a></li>
+        <li><a href="mailto:moquinconstruction@att.net" class="hover:text-brand transition break-words text-sm sm:text-base">moquinconstruction@att.net</a></li>
+        <li>Atlanta, GA &amp; Tampa, FL</li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 text-xs text-white/55 space-y-1">
+    <div class="max-w-7xl mx-auto px-5 py-6 text-xs text-white/50 space-y-1.5">
       <p>Concept redesign by LumeaPixel. This is not the official Moquin Construction Company website.</p>
-      <p>Some photos by d c, Brett Jordan, Jessica Hearn, Annie Spratt and Yauheni Flerman on Unsplash.</p>
+      <p>Some photos by Brett Jordan, Milivoj Kuhar, Annie Spratt, Samuel Cruz, Steffen Lemmerzahl, immo RENOVATION and Annie Gray on Unsplash.</p>
     </div>
   </div>
 </footer>
@@ -394,8 +433,7 @@ tailwind.config = {
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  document.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
-
+  document.querySelectorAll('.mnav').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
